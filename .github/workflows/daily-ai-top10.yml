@@ -1,17 +1,10 @@
-name: Daily AI TOP10 Update
+name: Daily AI TOP10 Update (Manual Fallback)
 
 on:
-  schedule:
-    # GitHub Actions cron uses UTC. 21:00 UTC = 06:00 KST next day.
-    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
-
-concurrency:
-  group: daily-ai-top10
-  cancel-in-progress: false
 
 jobs:
   update:
@@ -43,5 +36,5 @@ jobs:
             echo "No data changes"
             exit 0
           fi
-          git commit -m "chore: daily AI TOP10 update $(date -u +'%Y-%m-%d')"
+          git commit -m "chore: manual AI TOP10 refresh"
           git push
