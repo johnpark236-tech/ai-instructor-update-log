@@ -1,0 +1,47 @@
+name: Daily AI TOP10 Update
+
+on:
+  schedule:
+    # GitHub Actions cron uses UTC. 21:00 UTC = 06:00 KST next day.
+    - cron: "0 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-ai-top10
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install OpenAI SDK
+        run: python -m pip install --upgrade openai
+
+      - name: Research AI updates and rebuild data
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-6-luna
+        run: python scripts/update_ai_daily.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "ai-daily-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ai-daily.json
+          if git diff --cached --quiet; then
+            echo "No data changes"
+            exit 0
+          fi
+          git commit -m "chore: daily AI TOP10 update $(date -u +'%Y-%m-%d')"
+          git push
