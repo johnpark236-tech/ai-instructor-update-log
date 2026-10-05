@@ -1,0 +1,13 @@
+{
+  "updated_at": "첫 자동 갱신 대기",
+  "update_status": "pending",
+  "categories": [
+    {"key":"추론","title":"추론 / LLM","items":[]},
+    {"key":"이미지","title":"이미지 생성","items":[]},
+    {"key":"영상","title":"영상 제작","items":[]},
+    {"key":"음성","title":"음성 / 보이스","items":[]},
+    {"key":"코딩","title":"코딩 AI","items":[]},
+    {"key":"에이전트","title":"AI 에이전트 / 자동화","items":[]},
+    {"key":"리서치","title":"검색 / 리서치 AI","items":[]}
+  ]
+}
