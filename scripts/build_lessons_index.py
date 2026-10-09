@@ -118,6 +118,26 @@ def check_lesson(path, d):
     need(e, is_list(ins.get("level_guide"), 2, {"level", "guide"}), "instructor.level_guide 2개 이상")
     need(e, is_list(ins.get("day_before")), "instructor.day_before 필요")
 
+    # 한눈에 보기(그림 우선 요약) — 짧게 유지하도록 글자 수 제한
+    g = d.get("glance") or {}
+    short = lambda v, n: isinstance(v, str) and 0 < len(v) <= n
+    need(e, short(g.get("emoji"), 4), "glance.emoji 필요 (이모지 1개)")
+    need(e, short(g.get("one_liner"), 30), "glance.one_liner 30자 이내")
+    cards = g.get("cards")
+    need(e, isinstance(cards, list) and 3 <= len(cards) <= 4 and all(
+        short(c.get("icon"), 4) and short(c.get("title"), 12) and short(c.get("text"), 25) for c in cards),
+        "glance.cards 3~4개 (icon, title 12자, text 25자 이내)")
+    dg = g.get("diagram") or {}
+    nodes = dg.get("nodes")
+    need(e, short(dg.get("title"), 30) and isinstance(nodes, list) and 3 <= len(nodes) <= 5 and all(
+        short(x.get("icon"), 4) and short(x.get("label"), 12) for x in nodes),
+        "glance.diagram title + nodes 3~5개 (icon, label 12자 이내)")
+    ba = g.get("before_after") or {}
+    need(e, all(short((ba.get(k) or {}).get("label"), 14) and short((ba.get(k) or {}).get("text"), 50) for k in ["before", "after"]),
+         "glance.before_after before/after {label 14자, text 50자 이내}")
+    cau = g.get("cautions")
+    need(e, isinstance(cau, list) and len(cau) == 3 and all(short(x, 25) for x in cau), "glance.cautions 3개 (25자 이내)")
+
     need(e, is_list(d.get("sources"), 1, {"title", "url"}) and all(str(x["url"]).startswith("http") for x in d["sources"]),
          "sources 1개 이상 (http 링크)")
     return [f"{path.name}: {x}" for x in e]
@@ -172,6 +192,8 @@ def main():
         item["access"] = d["pricing"]["access"]
         item["total_minutes"] = sum(d["minutes"].values())
         item["notice"] = d.get("notice") or ""
+        item["emoji"] = d["glance"]["emoji"]
+        item["one_liner"] = d["glance"]["one_liner"]
         lessons.append(item)
     res = check_releases(ids)
     if isinstance(res, list):

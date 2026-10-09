@@ -7,16 +7,100 @@
   "review_by": "2027-01-10",
   "title": "반복 업무를 슬래시 명령 하나로 — Gemini 스킬(Skills)로 '수업 자료 자동 변환 세트' 만들기",
   "summary": "Gemini에 '스킬'이 생겨 자주 쓰는 지시문을 저장해 /이름으로 부르고 여러 개를 이어 실행할 수 있습니다. 11월에 끝나는 Gems를 대신하는 기능으로, 쉬운 문장 변환 + 퀴즈 출제 스킬 세트를 만듭니다.",
+  "glance": {
+    "emoji": "🪄",
+    "one_liner": "자주 쓰는 지시를 /명령 하나로",
+    "cards": [
+      {
+        "icon": "💾",
+        "title": "지시문 저장",
+        "text": "한 번 만들면 계속 재사용"
+      },
+      {
+        "icon": "⌨️",
+        "title": "/로 실행",
+        "text": "입력창에 / 치고 고르기"
+      },
+      {
+        "icon": "🔗",
+        "title": "이어 붙이기",
+        "text": "스킬 여러 개를 순서대로 실행"
+      },
+      {
+        "icon": "📎",
+        "title": "참고 파일",
+        "text": "내 어휘 목록 PDF를 기준으로"
+      }
+    ],
+    "diagram": {
+      "title": "스킬은 이렇게 작동해요",
+      "nodes": [
+        {
+          "icon": "📝",
+          "label": "지시문 작성"
+        },
+        {
+          "icon": "💾",
+          "label": "스킬로 저장"
+        },
+        {
+          "icon": "⌨️",
+          "label": "/이름으로 호출"
+        },
+        {
+          "icon": "🔗",
+          "label": "여러 스킬 연결"
+        },
+        {
+          "icon": "📄",
+          "label": "수업 자료 완성"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "매번 손으로",
+        "text": "긴 지시문을 매번 복사해 붙여넣기"
+      },
+      "after": {
+        "label": "스킬 사용",
+        "text": "/easy-korean-rewrite /quiz-maker 한 줄로 끝"
+      }
+    },
+    "cautions": [
+      "자동 수정 결과는 반드시 검토",
+      "참고 파일에 학생 정보 넣지 않기",
+      "출판사 교재 본문 업로드 금지"
+    ]
+  },
   "tool": "Gemini",
   "feature": "스킬(Skills)",
   "company": "Google",
   "type": "update",
   "released": "2026-09-30",
-  "categories": ["CAT-02", "CAT-08"],
-  "jobs": ["JOB-EDU", "JOB-OFF", "JOB-MKT", "JOB-GLB"],
-  "learner_levels": ["초급", "중급"],
-  "instructor_levels": ["초보강사", "중급강사"],
-  "minutes": {"theory": 25, "practice": 45, "wrap": 10},
+  "categories": [
+    "CAT-02",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-EDU",
+    "JOB-OFF",
+    "JOB-MKT",
+    "JOB-GLB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 25,
+    "practice": 45,
+    "wrap": 10
+  },
   "prerequisites": [
     "만 18세 이상 개인 Google 계정 (Workspace 계정은 순차 제공 예정)",
     "PC 웹브라우저(gemini.google.com) 권장",
@@ -32,41 +116,108 @@
     "access": "free",
     "summary": "스킬 만들기·실행은 무료 계정으로도 가능합니다. 유료 구독은 사용 한도를 늘려 주고 Gmail·문서 속 Gemini 같은 혜택이 붙습니다.",
     "plans": [
-      {"name": "무료", "price": "0원", "features": "스킬 만들기·/실행·이어 붙이기 가능(만 18세 이상 개인 계정). Gemini 3.6 Flash, Deep Research, Canvas, 저장공간 15GB"},
-      {"name": "Google AI Plus", "price": "월 $4.99", "features": "사용 한도 무료의 2배, 동영상 생성, Gmail 등 구글 앱 속 Gemini, 저장공간 400GB"},
-      {"name": "Google AI Pro", "price": "월 $19.99", "features": "사용 한도 무료의 4배, 100만 토큰 문맥, Gmail·Docs 속 Gemini, YouTube Premium Lite, 저장공간 5TB"},
-      {"name": "Google AI Ultra", "price": "월 $99.99부터", "features": "사용 한도 Pro의 5~20배, Deep Think·Gemini Spark 우선 제공(일부 국가), 저장공간 20TB 이상"}
+      {
+        "name": "무료",
+        "price": "0원",
+        "features": "스킬 만들기·/실행·이어 붙이기 가능(만 18세 이상 개인 계정). Gemini 3.6 Flash, Deep Research, Canvas, 저장공간 15GB"
+      },
+      {
+        "name": "Google AI Plus",
+        "price": "월 $4.99",
+        "features": "사용 한도 무료의 2배, 동영상 생성, Gmail 등 구글 앱 속 Gemini, 저장공간 400GB"
+      },
+      {
+        "name": "Google AI Pro",
+        "price": "월 $19.99",
+        "features": "사용 한도 무료의 4배, 100만 토큰 문맥, Gmail·Docs 속 Gemini, YouTube Premium Lite, 저장공간 5TB"
+      },
+      {
+        "name": "Google AI Ultra",
+        "price": "월 $99.99부터",
+        "features": "사용 한도 Pro의 5~20배, Deep Think·Gemini Spark 우선 제공(일부 국가), 저장공간 20TB 이상"
+      }
     ],
     "note": "가격은 미국 요금 페이지 기준이며 한국 원화 가격은 다를 수 있습니다. 무료 계정 스킬 지원은 Google 도움말을 인용한 보도(findskill.ai) 기준이며, 9월 초에는 유료 전용이라는 보도도 있었습니다. 설정 → 스킬 메뉴에서 직접 확인하세요.",
     "checked": "2026-10-10",
     "sources": [
-      {"title": "Gemini 요금제 비교", "url": "https://gemini.google/subscriptions/"},
-      {"title": "findskill.ai – Gemini Gems become Skills", "url": "https://findskill.ai/blog/gemini-gems-become-skills-dates-setup-2026/"}
+      {
+        "title": "Gemini 요금제 비교",
+        "url": "https://gemini.google/subscriptions/"
+      },
+      {
+        "title": "findskill.ai – Gemini Gems become Skills",
+        "url": "https://findskill.ai/blog/gemini-gems-become-skills-dates-setup-2026/"
+      }
     ]
   },
   "timeline": [
-    {"date": "2026-09-30", "text": "Gemini 채팅에 스킬 출시(만 18세 이상부터), 대화에서 스킬 자동 생성·참고 파일 첨부 지원"},
-    {"date": "2026-11", "text": "[예정] 개인 계정 Gems 지원 종료 → 스킬로 자동 이전, Opal·Gems by Google Labs 종료(이전 안 됨)"},
-    {"date": "2027-03", "text": "[예정] Workspace 비즈니스·엔터프라이즈·비영리 Gems 종료"},
-    {"date": "2027-06", "text": "[예정] Workspace 교육용 Gems 종료"}
+    {
+      "date": "2026-09-30",
+      "text": "Gemini 채팅에 스킬 출시(만 18세 이상부터), 대화에서 스킬 자동 생성·참고 파일 첨부 지원"
+    },
+    {
+      "date": "2026-11",
+      "text": "[예정] 개인 계정 Gems 지원 종료 → 스킬로 자동 이전, Opal·Gems by Google Labs 종료(이전 안 됨)"
+    },
+    {
+      "date": "2027-03",
+      "text": "[예정] Workspace 비즈니스·엔터프라이즈·비영리 Gems 종료"
+    },
+    {
+      "date": "2027-06",
+      "text": "[예정] Workspace 교육용 Gems 종료"
+    }
   ],
   "theory": {
     "definition": "스킬(Skills)은 자주 쓰는 지시문을 이름 붙여 저장해 두고, /이름으로 불러 실행하는 Gemini의 재사용 지시문 기능입니다.",
     "analogy": "매번 손으로 쓰던 수업 지시사항을 도장으로 만들어 두는 것과 같습니다. 도장(스킬)을 여러 개 만들어 두면 필요한 순서대로 '쾅쾅' 찍어 결과물을 만들 수 있습니다.",
     "comparison": {
-      "headers": ["구분", "Gems (종료 예정)", "스킬 (현재)"],
+      "headers": [
+        "구분",
+        "Gems (종료 예정)",
+        "스킬 (현재)"
+      ],
       "rows": [
-        ["사용 방식", "Gem을 골라 그 안에서 대화", "아무 대화에서나 /이름으로 호출"],
-        ["여러 개 조합", "한 번에 하나", "여러 스킬을 한 프롬프트에서 이어 실행"],
-        ["자동 실행", "직접 선택", "프롬프트가 스킬과 맞으면 자동 실행 가능"],
-        ["만드는 법", "설정 화면", "대화로 요청하거나 설정에서 직접 작성"],
-        ["참고 자료", "파일 첨부", "텍스트·PDF·이미지 첨부 (Drive 연동은 추가 예정)"]
+        [
+          "사용 방식",
+          "Gem을 골라 그 안에서 대화",
+          "아무 대화에서나 /이름으로 호출"
+        ],
+        [
+          "여러 개 조합",
+          "한 번에 하나",
+          "여러 스킬을 한 프롬프트에서 이어 실행"
+        ],
+        [
+          "자동 실행",
+          "직접 선택",
+          "프롬프트가 스킬과 맞으면 자동 실행 가능"
+        ],
+        [
+          "만드는 법",
+          "설정 화면",
+          "대화로 요청하거나 설정에서 직접 작성"
+        ],
+        [
+          "참고 자료",
+          "파일 첨부",
+          "텍스트·PDF·이미지 첨부 (Drive 연동은 추가 예정)"
+        ]
       ]
     },
     "concepts": [
-      {"title": "두 가지 만드는 법", "body": "대화에서 'create a skill for me that does …'처럼 요청하면 Gemini가 지시문과 이름을 만들어 줍니다. 또는 설정 → 스킬(Skills) → Create Manually에서 이름·설명·지시문을 직접 씁니다. 이름은 공백 없이 하이픈으로 연결합니다."},
-      {"title": "슬래시로 부르기", "body": "입력창에 /를 치면 내 스킬 목록이 나옵니다. /easy-korean-rewrite처럼 직접 입력해도 됩니다. 스킬은 지금 대화의 내용을 바탕으로 동작합니다."},
-      {"title": "이어 붙이기(체이닝)", "body": "한 프롬프트에 스킬 두 개를 적으면 적은 순서대로 실행됩니다. 앞 스킬 결과를 뒤 스킬이 받아 처리하므로 순서가 바뀌면 결과도 바뀝니다."}
+      {
+        "title": "두 가지 만드는 법",
+        "body": "대화에서 'create a skill for me that does …'처럼 요청하면 Gemini가 지시문과 이름을 만들어 줍니다. 또는 설정 → 스킬(Skills) → Create Manually에서 이름·설명·지시문을 직접 씁니다. 이름은 공백 없이 하이픈으로 연결합니다."
+      },
+      {
+        "title": "슬래시로 부르기",
+        "body": "입력창에 /를 치면 내 스킬 목록이 나옵니다. /easy-korean-rewrite처럼 직접 입력해도 됩니다. 스킬은 지금 대화의 내용을 바탕으로 동작합니다."
+      },
+      {
+        "title": "이어 붙이기(체이닝)",
+        "body": "한 프롬프트에 스킬 두 개를 적으면 적은 순서대로 실행됩니다. 앞 스킬 결과를 뒤 스킬이 받아 처리하므로 순서가 바뀌면 결과도 바뀝니다."
+      }
     ],
     "can": [
       "반복하는 지시(문장 다듬기·퀴즈 출제 등)를 한 줄 명령으로 실행",
@@ -90,26 +241,100 @@
   "practice": {
     "preview": "뉴스 한 단락(예: '정부는 내년부터 외국인 근로자의 체류 기간을 연장하는 방안을 검토하고 있다고 밝혔다.')에 '/easy-korean-rewrite /quiz-maker'를 한 번 입력하면 → 초급 어휘로 바뀐 문장 + 바뀐 단어 표 + 내용 확인 퀴즈 3문항이 차례로 나옵니다.",
     "follow": [
-      {"title": "대화로 스킬 만들기", "minutes": 8, "do": "새 채팅에서 만들고 싶은 작업을 설명해 스킬을 만들어 달라고 요청합니다.", "prompt": "create a skill for me that does: 한국어 학습자용 문장을 초급 수준 어휘로 바꾸고, 바꾼 단어를 원래 단어와 함께 표로 정리한다. 스킬 이름은 easy-korean-rewrite 로 해 줘.", "expect": "Gemini가 상세 지시문과 이름을 붙인 스킬을 만들어 줍니다. 이름이 마음에 들지 않으면 바꿀 수 있습니다.", "note": ""},
-      {"title": "설정에서 직접 만들기", "minutes": 8, "do": "설정(Settings) → 스킬(Skills) → Create Manually로 들어가 이름·설명·지시문을 입력합니다.", "prompt": "이름: quiz-maker\n설명: 주어진 글로 초급 학습자용 내용 확인 퀴즈를 만든다\n지시문: 앞의 글을 읽고 객관식 3문항을 만든다. 각 문항은 보기 4개, 정답과 한 줄 해설을 포함한다. 어휘는 초급 수준으로 쓴다.", "expect": "스킬 페이지에 quiz-maker가 추천 스킬·기존 Gems와 함께 보입니다.", "note": "[확인 필요] 메뉴 이름(Settings > Skills > Create Manually)은 Android Authority 사용기 기준입니다. 강의 전날 실제 화면을 확인하세요."},
-      {"title": "슬래시로 실행하기", "minutes": 5, "do": "다듬을 글을 붙여 넣고 입력창에 /를 쳐서 목록에서 스킬을 고르거나 직접 입력합니다.", "prompt": "정부는 내년부터 외국인 근로자의 체류 기간을 연장하는 방안을 검토하고 있다고 밝혔다.\n/easy-korean-rewrite", "expect": "초급 어휘로 바뀐 문장과 바뀐 단어 표가 나옵니다.", "note": ""}
+      {
+        "title": "대화로 스킬 만들기",
+        "minutes": 8,
+        "do": "새 채팅에서 만들고 싶은 작업을 설명해 스킬을 만들어 달라고 요청합니다.",
+        "prompt": "create a skill for me that does: 한국어 학습자용 문장을 초급 수준 어휘로 바꾸고, 바꾼 단어를 원래 단어와 함께 표로 정리한다. 스킬 이름은 easy-korean-rewrite 로 해 줘.",
+        "expect": "Gemini가 상세 지시문과 이름을 붙인 스킬을 만들어 줍니다. 이름이 마음에 들지 않으면 바꿀 수 있습니다.",
+        "note": ""
+      },
+      {
+        "title": "설정에서 직접 만들기",
+        "minutes": 8,
+        "do": "설정(Settings) → 스킬(Skills) → Create Manually로 들어가 이름·설명·지시문을 입력합니다.",
+        "prompt": "이름: quiz-maker\n설명: 주어진 글로 초급 학습자용 내용 확인 퀴즈를 만든다\n지시문: 앞의 글을 읽고 객관식 3문항을 만든다. 각 문항은 보기 4개, 정답과 한 줄 해설을 포함한다. 어휘는 초급 수준으로 쓴다.",
+        "expect": "스킬 페이지에 quiz-maker가 추천 스킬·기존 Gems와 함께 보입니다.",
+        "note": "[확인 필요] 메뉴 이름(Settings > Skills > Create Manually)은 Android Authority 사용기 기준입니다. 강의 전날 실제 화면을 확인하세요."
+      },
+      {
+        "title": "슬래시로 실행하기",
+        "minutes": 5,
+        "do": "다듬을 글을 붙여 넣고 입력창에 /를 쳐서 목록에서 스킬을 고르거나 직접 입력합니다.",
+        "prompt": "정부는 내년부터 외국인 근로자의 체류 기간을 연장하는 방안을 검토하고 있다고 밝혔다.\n/easy-korean-rewrite",
+        "expect": "초급 어휘로 바뀐 문장과 바뀐 단어 표가 나옵니다.",
+        "note": ""
+      }
     ],
     "make_mine": [
-      {"title": "두 스킬 이어 붙이기", "minutes": 7, "do": "한 프롬프트에 두 스킬을 실행 순서대로 적습니다. 순서를 바꿔서 한 번 더 실행해 결과를 비교합니다.", "prompt": "[내 수업에 쓸 기사·글 한 단락]\n/easy-korean-rewrite /quiz-maker", "expect": "쉬운 문장 → 그 문장으로 만든 퀴즈가 차례로 나옵니다. 순서를 바꾸면 결과가 달라집니다.", "note": ""},
-      {"title": "참고 파일 붙여 기준 세우기", "minutes": 10, "do": "easy-korean-rewrite 스킬에 내가 직접 만든 초급 어휘 목록(텍스트·PDF)을 참고 파일로 붙이고 다시 실행합니다.", "prompt": "/easy-korean-rewrite 첨부한 어휘 목록 안의 단어만 써서 바꿔 줘.", "expect": "🎉 내 어휘 기준에 맞춘 수업용 읽기 자료 + 퀴즈 1세트 완성", "note": "결과를 직접 읽고 어색한 문장을 한 군데 이상 고칩니다."}
+      {
+        "title": "두 스킬 이어 붙이기",
+        "minutes": 7,
+        "do": "한 프롬프트에 두 스킬을 실행 순서대로 적습니다. 순서를 바꿔서 한 번 더 실행해 결과를 비교합니다.",
+        "prompt": "[내 수업에 쓸 기사·글 한 단락]\n/easy-korean-rewrite /quiz-maker",
+        "expect": "쉬운 문장 → 그 문장으로 만든 퀴즈가 차례로 나옵니다. 순서를 바꾸면 결과가 달라집니다.",
+        "note": ""
+      },
+      {
+        "title": "참고 파일 붙여 기준 세우기",
+        "minutes": 10,
+        "do": "easy-korean-rewrite 스킬에 내가 직접 만든 초급 어휘 목록(텍스트·PDF)을 참고 파일로 붙이고 다시 실행합니다.",
+        "prompt": "/easy-korean-rewrite 첨부한 어휘 목록 안의 단어만 써서 바꿔 줘.",
+        "expect": "🎉 내 어휘 기준에 맞춘 수업용 읽기 자료 + 퀴즈 1세트 완성",
+        "note": "결과를 직접 읽고 어색한 문장을 한 군데 이상 고칩니다."
+      }
     ],
     "challenges": [
-      {"level": "⭐", "mission": "학부모 안내문을 쉬운 한국어로 바꾸는 'parent-notice-easy' 스킬 하나 더 만들기"},
-      {"level": "⭐⭐", "mission": "스킬 3개(쉬운 문장 → 퀴즈 → 정답지 표)를 이어 '수업 자료 자동 변환 세트' 완성하기"},
-      {"level": "⭐⭐⭐", "mission": "기존 Gem 하나를 스킬로 옮겨 보고, 지시문을 더 짧고 재사용하기 좋게 다듬은 전후 비교표 만들기"}
+      {
+        "level": "⭐",
+        "mission": "학부모 안내문을 쉬운 한국어로 바꾸는 'parent-notice-easy' 스킬 하나 더 만들기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "스킬 3개(쉬운 문장 → 퀴즈 → 정답지 표)를 이어 '수업 자료 자동 변환 세트' 완성하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "기존 Gem 하나를 스킬로 옮겨 보고, 지시문을 더 짧고 재사용하기 좋게 다듬은 전후 비교표 만들기"
+      }
     ]
   },
   "wrap": {
     "share": "만든 스킬 이름과 지시문 첫 줄, 그리고 이어 붙인 결과물을 짝에게 보여 주고 '순서를 바꿨을 때 달라진 점'을 한 문장으로 발표합니다.",
     "quiz": [
-      {"q": "스킬을 실행하는 방법은?", "options": ["입력창에 / 를 치고 스킬을 고른다", "설정에서 매번 켠다", "Gem을 먼저 연다", "파일을 업로드한다"], "answer": 0, "explain": "입력창에 /를 쳐서 고르거나 /이름을 직접 입력합니다."},
-      {"q": "설정에서 직접 스킬 이름을 지을 때의 규칙은?", "options": ["한글만 가능", "공백 없이 하이픈으로 연결", "숫자로 시작", "10자 이내"], "answer": 1, "explain": "이름은 공백 없이 하이픈으로 단어를 연결합니다."},
-      {"q": "개인 계정의 Gems 지원이 끝나는 시점은?", "options": ["2026년 9월", "2026년 11월", "2027년 3월", "2027년 6월"], "answer": 1, "explain": "개인 계정은 2026년 11월에 끝나며 스킬로 자동 이전됩니다. 2027년 3월·6월은 Workspace 계정입니다."}
+      {
+        "q": "스킬을 실행하는 방법은?",
+        "options": [
+          "입력창에 / 를 치고 스킬을 고른다",
+          "설정에서 매번 켠다",
+          "Gem을 먼저 연다",
+          "파일을 업로드한다"
+        ],
+        "answer": 0,
+        "explain": "입력창에 /를 쳐서 고르거나 /이름을 직접 입력합니다."
+      },
+      {
+        "q": "설정에서 직접 스킬 이름을 지을 때의 규칙은?",
+        "options": [
+          "한글만 가능",
+          "공백 없이 하이픈으로 연결",
+          "숫자로 시작",
+          "10자 이내"
+        ],
+        "answer": 1,
+        "explain": "이름은 공백 없이 하이픈으로 단어를 연결합니다."
+      },
+      {
+        "q": "개인 계정의 Gems 지원이 끝나는 시점은?",
+        "options": [
+          "2026년 9월",
+          "2026년 11월",
+          "2027년 3월",
+          "2027년 6월"
+        ],
+        "answer": 1,
+        "explain": "개인 계정은 2026년 11월에 끝나며 스킬로 자동 이전됩니다. 2027년 3월·6월은 Workspace 계정입니다."
+      }
     ],
     "next": [
       "공통 기초 모듈: 좋은 프롬프트의 5요소 (CAT-02, 요청 시 제작)",
@@ -118,43 +343,130 @@
   },
   "instructor": {
     "timetable": [
-      {"time": "0~5분", "content": "오프닝, Gems 종료 일정", "note": "'도장' 비유"},
-      {"time": "5~30분", "content": "1부 이론", "note": "Gems와 비교표 중심"},
-      {"time": "30~46분", "content": "스킬 2개 만들기 (대화·설정)", "note": "이름 하이픈 규칙 강조"},
-      {"time": "46~51분", "content": "슬래시 실행", "note": ""},
-      {"time": "51~68분", "content": "이어 붙이기·참고 파일", "note": "순서 바꿔 두 번 실행"},
-      {"time": "68~80분", "content": "공유·퀴즈·마무리", "note": ""}
+      {
+        "time": "0~5분",
+        "content": "오프닝, Gems 종료 일정",
+        "note": "'도장' 비유"
+      },
+      {
+        "time": "5~30분",
+        "content": "1부 이론",
+        "note": "Gems와 비교표 중심"
+      },
+      {
+        "time": "30~46분",
+        "content": "스킬 2개 만들기 (대화·설정)",
+        "note": "이름 하이픈 규칙 강조"
+      },
+      {
+        "time": "46~51분",
+        "content": "슬래시 실행",
+        "note": ""
+      },
+      {
+        "time": "51~68분",
+        "content": "이어 붙이기·참고 파일",
+        "note": "순서 바꿔 두 번 실행"
+      },
+      {
+        "time": "68~80분",
+        "content": "공유·퀴즈·마무리",
+        "note": ""
+      }
     ],
     "script": [
-      {"label": "오프닝", "text": "Gems 쓰시던 분 계시죠? 11월이면 개인 계정 Gems가 끝납니다. 대신 나온 게 스킬입니다. 오늘은 매번 손으로 쓰던 지시를 도장으로 만들어서, 기사 한 단락을 수업 자료와 퀴즈로 한 번에 바꿔 보겠습니다."},
-      {"label": "체이닝 전환", "text": "도장 두 개를 순서대로 찍어 보겠습니다. 그리고 순서를 바꿔 다시 찍어 볼게요. 결과가 어떻게 달라지는지 보세요."},
-      {"label": "마무리", "text": "오늘 만든 스킬은 내일도, 다음 달에도 /이름 한 줄로 다시 쓸 수 있습니다. 대신 결과는 매번 검토하는 것, 잊지 마세요."}
+      {
+        "label": "오프닝",
+        "text": "Gems 쓰시던 분 계시죠? 11월이면 개인 계정 Gems가 끝납니다. 대신 나온 게 스킬입니다. 오늘은 매번 손으로 쓰던 지시를 도장으로 만들어서, 기사 한 단락을 수업 자료와 퀴즈로 한 번에 바꿔 보겠습니다."
+      },
+      {
+        "label": "체이닝 전환",
+        "text": "도장 두 개를 순서대로 찍어 보겠습니다. 그리고 순서를 바꿔 다시 찍어 볼게요. 결과가 어떻게 달라지는지 보세요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 스킬은 내일도, 다음 달에도 /이름 한 줄로 다시 쓸 수 있습니다. 대신 결과는 매번 검토하는 것, 잊지 마세요."
+      }
     ],
     "plan_b": [
-      {"situation": "스킬 메뉴가 안 보임 (계정 종류·연령·순차 제공)", "response": "강사 화면 시연으로 진행하고, 수강생은 같은 지시문을 일반 프롬프트로 붙여 넣어 결과만 체험"},
-      {"situation": "대화로 만든 스킬 이름이 이상함", "response": "이름 바꾸기를 시연하거나 설정에서 직접 만들기로 전환"},
-      {"situation": "서버 지연·오류", "response": "미리 만든 결과 캡처와 녹화 영상 사용"},
-      {"situation": "이어 붙였는데 하나만 실행됨", "response": "두 스킬을 줄을 나눠 차례로 실행하는 방법으로 대체하고, 순서 개념은 캡처로 설명"}
+      {
+        "situation": "스킬 메뉴가 안 보임 (계정 종류·연령·순차 제공)",
+        "response": "강사 화면 시연으로 진행하고, 수강생은 같은 지시문을 일반 프롬프트로 붙여 넣어 결과만 체험"
+      },
+      {
+        "situation": "대화로 만든 스킬 이름이 이상함",
+        "response": "이름 바꾸기를 시연하거나 설정에서 직접 만들기로 전환"
+      },
+      {
+        "situation": "서버 지연·오류",
+        "response": "미리 만든 결과 캡처와 녹화 영상 사용"
+      },
+      {
+        "situation": "이어 붙였는데 하나만 실행됨",
+        "response": "두 스킬을 줄을 나눠 차례로 실행하는 방법으로 대체하고, 순서 개념은 캡처로 설명"
+      }
     ],
     "stuck": [
-      {"issue": "Workspace(학교·회사) 계정이라 메뉴가 없음", "fix": "개인 Google 계정으로 로그인해 실습"},
-      {"issue": "스킬 이름에 공백을 넣어 저장 안 됨", "fix": "하이픈 규칙 안내 (예: easy-korean-rewrite)"},
-      {"issue": "/를 쳐도 목록이 안 뜸", "fix": "새로고침 후 다시 시도, 스킬 이름을 직접 입력"},
-      {"issue": "참고 파일 첨부 위치를 못 찾음", "fix": "스킬 편집 화면에서 함께 찾기, 강사 캡처 배포"},
-      {"issue": "결과가 너무 어렵게 나옴", "fix": "지시문에 '초급, 한 문장 15자 이내' 같은 기준을 추가하도록 안내"}
+      {
+        "issue": "Workspace(학교·회사) 계정이라 메뉴가 없음",
+        "fix": "개인 Google 계정으로 로그인해 실습"
+      },
+      {
+        "issue": "스킬 이름에 공백을 넣어 저장 안 됨",
+        "fix": "하이픈 규칙 안내 (예: easy-korean-rewrite)"
+      },
+      {
+        "issue": "/를 쳐도 목록이 안 뜸",
+        "fix": "새로고침 후 다시 시도, 스킬 이름을 직접 입력"
+      },
+      {
+        "issue": "참고 파일 첨부 위치를 못 찾음",
+        "fix": "스킬 편집 화면에서 함께 찾기, 강사 캡처 배포"
+      },
+      {
+        "issue": "결과가 너무 어렵게 나옴",
+        "fix": "지시문에 '초급, 한 문장 15자 이내' 같은 기준을 추가하도록 안내"
+      }
     ],
     "faq": [
-      {"q": "Gems는 이제 못 쓰나요?", "a": "개인 계정은 2026년 11월에 지원이 끝나고 스킬로 자동 이전됩니다. 그 전까지는 스킬 화면에서 기존 Gems도 함께 보입니다."},
-      {"q": "무료 계정도 되나요?", "a": "Google 도움말을 인용한 보도에 따르면 구독 없이도 쓸 수 있습니다. 다만 출시 직후 유료 전용이라는 보도도 있었으니 내 계정의 설정 → 스킬 메뉴에서 확인하세요."},
-      {"q": "만든 스킬을 동료에게 줄 수 있나요?", "a": "공유 기능은 '앞으로 몇 주 안에 추가될 예정'으로 발표되었습니다. 지금은 지시문을 복사해 전달하세요."},
-      {"q": "스킬이 제 마음대로 실행되기도 하나요?", "a": "프롬프트가 스킬 내용과 맞으면 Gemini가 자동으로 실행할 수 있습니다. 원하지 않으면 결과를 보고 다시 요청하세요."},
-      {"q": "Opal로 만든 것도 스킬로 옮겨지나요?", "a": "아닙니다. Opal과 Gems by Google Labs는 11월에 종료되며 스킬로 이전되지 않습니다. 필요한 내용은 미리 따로 저장하세요."}
+      {
+        "q": "Gems는 이제 못 쓰나요?",
+        "a": "개인 계정은 2026년 11월에 지원이 끝나고 스킬로 자동 이전됩니다. 그 전까지는 스킬 화면에서 기존 Gems도 함께 보입니다."
+      },
+      {
+        "q": "무료 계정도 되나요?",
+        "a": "Google 도움말을 인용한 보도에 따르면 구독 없이도 쓸 수 있습니다. 다만 출시 직후 유료 전용이라는 보도도 있었으니 내 계정의 설정 → 스킬 메뉴에서 확인하세요."
+      },
+      {
+        "q": "만든 스킬을 동료에게 줄 수 있나요?",
+        "a": "공유 기능은 '앞으로 몇 주 안에 추가될 예정'으로 발표되었습니다. 지금은 지시문을 복사해 전달하세요."
+      },
+      {
+        "q": "스킬이 제 마음대로 실행되기도 하나요?",
+        "a": "프롬프트가 스킬 내용과 맞으면 Gemini가 자동으로 실행할 수 있습니다. 원하지 않으면 결과를 보고 다시 요청하세요."
+      },
+      {
+        "q": "Opal로 만든 것도 스킬로 옮겨지나요?",
+        "a": "아닙니다. Opal과 Gems by Google Labs는 11월에 종료되며 스킬로 이전되지 않습니다. 필요한 내용은 미리 따로 저장하세요."
+      }
     ],
     "level_guide": [
-      {"level": "🟢 초급반", "guide": "대화로 스킬 만들기와 슬래시 실행까지만 진행하고, 이어 붙이기는 강사 시연으로 대신합니다."},
-      {"level": "🟡 중급반", "guide": "도전과제 ⭐⭐를 필수로 하고, 지시문을 짧게 다듬을수록 결과가 어떻게 바뀌는지 실험합니다."},
-      {"level": "한국어 교사 (JOB-EDU·JOB-GLB)", "guide": "뉴스 대신 수업 단원 본문(직접 작성)으로 바꾸고, 어휘 목록 PDF를 참고 파일로 붙이는 단계를 꼭 넣습니다."},
-      {"level": "사무·행정 (JOB-OFF)", "guide": "회의록 → 요약 → 할 일 표로 바꾸는 3단 스킬 세트로 변형합니다."}
+      {
+        "level": "🟢 초급반",
+        "guide": "대화로 스킬 만들기와 슬래시 실행까지만 진행하고, 이어 붙이기는 강사 시연으로 대신합니다."
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "도전과제 ⭐⭐를 필수로 하고, 지시문을 짧게 다듬을수록 결과가 어떻게 바뀌는지 실험합니다."
+      },
+      {
+        "level": "한국어 교사 (JOB-EDU·JOB-GLB)",
+        "guide": "뉴스 대신 수업 단원 본문(직접 작성)으로 바꾸고, 어휘 목록 PDF를 참고 파일로 붙이는 단계를 꼭 넣습니다."
+      },
+      {
+        "level": "사무·행정 (JOB-OFF)",
+        "guide": "회의록 → 요약 → 할 일 표로 바꾸는 3단 스킬 세트로 변형합니다."
+      }
     ],
     "pro_points": [
       "스킬은 '재사용 프롬프트 템플릿'을 제품 안으로 끌어온 것입니다. 프롬프트 엔지니어링 수업(CAT-02)에서 '좋은 지시문을 자산으로 만드는 법'으로 연결하세요.",
@@ -172,9 +484,25 @@
     "[확인 필요] 메뉴 이름(Settings > Skills > Create Manually)은 공식 블로그가 아닌 사용기(Android Authority) 기준입니다."
   ],
   "sources": [
-    {"title": "Google 공식 블로그 – Let skills in Gemini tackle your most repetitive tasks", "url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/", "checked": "2026-10-10"},
-    {"title": "Gemini 릴리스 노트 (2026.09.30)", "url": "https://gemini.google/release-notes/", "checked": "2026-10-10"},
-    {"title": "Android Authority – How to use Gemini Skills", "url": "https://www.androidauthority.com/how-to-use-gemini-skills-google-upgraded-gems-feature-3718807/", "checked": "2026-10-10"},
-    {"title": "Gemini 요금제 비교", "url": "https://gemini.google/subscriptions/", "checked": "2026-10-10"}
+    {
+      "title": "Google 공식 블로그 – Let skills in Gemini tackle your most repetitive tasks",
+      "url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/",
+      "checked": "2026-10-10"
+    },
+    {
+      "title": "Gemini 릴리스 노트 (2026.09.30)",
+      "url": "https://gemini.google/release-notes/",
+      "checked": "2026-10-10"
+    },
+    {
+      "title": "Android Authority – How to use Gemini Skills",
+      "url": "https://www.androidauthority.com/how-to-use-gemini-skills-google-upgraded-gems-feature-3718807/",
+      "checked": "2026-10-10"
+    },
+    {
+      "title": "Gemini 요금제 비교",
+      "url": "https://gemini.google/subscriptions/",
+      "checked": "2026-10-10"
+    }
   ]
 }

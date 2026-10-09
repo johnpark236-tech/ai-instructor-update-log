@@ -36,7 +36,9 @@
       "outcome": "① 나만의 AI 비서 '기억 카드'(메모리 항목 목록) ② 메모리를 반영한 맞춤형 주간 업무 플래너 1부",
       "access": "free",
       "total_minutes": 90,
-      "notice": ""
+      "notice": "",
+      "emoji": "🧠",
+      "one_liner": "한 번 알려 주면 계속 기억하는 AI 비서"
     },
     {
       "id": "AI-2026-10-CAT01-002",
@@ -72,7 +74,9 @@
       "outcome": "대화창 안에서 바로 풀 수 있는 수업용 5문항 문법 퀴즈 도구 1개 (+ 탭·표로 정리된 문법 설명)",
       "access": "free",
       "total_minutes": 80,
-      "notice": ""
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "글 대신 표·버튼·퀴즈로 답하는 ChatGPT"
     },
     {
       "id": "AI-2026-10-CAT02-001",
@@ -108,7 +112,9 @@
       "outcome": "'/easy-korean-rewrite'(쉬운 문장 변환)와 '/quiz-maker'(퀴즈 출제) 스킬 2개, 그리고 둘을 이어 실행해 만든 수업용 읽기 자료 + 퀴즈 1세트",
       "access": "free",
       "total_minutes": 80,
-      "notice": ""
+      "notice": "",
+      "emoji": "🪄",
+      "one_liner": "자주 쓰는 지시를 /명령 하나로"
     }
   ]
 }

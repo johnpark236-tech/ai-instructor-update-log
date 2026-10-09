@@ -58,6 +58,41 @@
     cover.addText(`${L.company} ${L.tool} — ${L.feature}  |  출시 ${L.released}  |  기준일 ${L.checked} · 재검토 ${L.review_by}  |  ${MT.totalMinutes(L)}분`, { x: 0.8, y: 6.3, w: 11.8, h: 0.4, fontFace: FONT, fontSize: 12, color: '91A6C2', margin: 0 });
     const op = takeScript(/오프닝/); note(cover, op && op.text);
 
+    // 한눈에 보기 (그림 우선 요약)
+    const G = L.glance;
+    if (G) {
+      let g = slide('⚡ 한눈에 보기');
+      g.addText(`${G.emoji}  ${G.one_liner}`, { x: 0.55, y: 1.15, w: 12.2, h: 0.75, fontFace: FONT, fontSize: 26, bold: true, color: C.text, margin: 0 });
+      box(g, '🎁 오늘 만들 작품: ' + L.outcome, 0.55, 2.0, 12.2, 0.85, C.greenBg, C.green, 15, true);
+      const cn = G.cards.length, cw2 = (12.2 - 0.25 * (cn - 1)) / cn;
+      G.cards.forEach((c, i) => {
+        const x = 0.55 + i * (cw2 + 0.25);
+        g.addShape(pptx.ShapeType.roundRect, { x, y: 3.1, w: cw2, h: 3.0, fill: { color: C.card }, line: { color: C.line }, rectRadius: 0.12 });
+        g.addText(c.icon, { x, y: 3.25, w: cw2, h: 1.0, fontSize: 40, align: 'center', margin: 0 });
+        g.addText(c.title, { x: x + 0.15, y: 4.3, w: cw2 - 0.3, h: 0.55, fontFace: FONT, fontSize: 18, bold: true, color: C.text, align: 'center', margin: 0 });
+        g.addText(c.text, { x: x + 0.15, y: 4.85, w: cw2 - 0.3, h: 1.1, fontFace: FONT, fontSize: 13, color: C.sub, align: 'center', valign: 'top', margin: 0 });
+      });
+      g.addText(`⏱ ${MT.totalMinutes(L)}분   💳 ${acc}   📅 출시 ${L.released}   🎯 ${MT.levelBadges(L).join(' ')}`, { x: 0.55, y: 6.35, w: 12.2, h: 0.45, fontFace: FONT, fontSize: 13, color: C.sub, margin: 0 });
+
+      g = slide('🔄 ' + G.diagram.title);
+      const nn = G.diagram.nodes.length, gap = 0.55, nw = (12.2 - gap * (nn - 1)) / nn;
+      G.diagram.nodes.forEach((nd, i) => {
+        const x = 0.55 + i * (nw + gap);
+        g.addShape(pptx.ShapeType.roundRect, { x, y: 1.3, w: nw, h: 1.9, fill: { color: 'E0F7FF' }, line: { color: C.cyan, width: 1.5 }, rectRadius: 0.12 });
+        g.addText(nd.icon, { x, y: 1.4, w: nw, h: 0.95, fontSize: 34, align: 'center', margin: 0 });
+        g.addText(nd.label, { x: x + 0.1, y: 2.35, w: nw - 0.2, h: 0.75, fontFace: FONT, fontSize: 15, bold: true, color: C.text, align: 'center', valign: 'middle', margin: 0 });
+        if (i < nn - 1) g.addShape(pptx.ShapeType.rightArrow, { x: x + nw + 0.08, y: 2.0, w: gap - 0.16, h: 0.45, fill: { color: C.cyan }, line: { color: C.cyan } });
+      });
+      const ba = G.before_after;
+      g.addShape(pptx.ShapeType.roundRect, { x: 0.55, y: 3.55, w: 5.7, h: 1.9, fill: { color: 'F4F1F8' }, line: { color: 'C4B5D9' }, rectRadius: 0.12 });
+      g.addText([{ text: '😐 ' + ba.before.label, options: { bold: true, fontSize: 16, breakLine: true } }, { text: ba.before.text, options: { fontSize: 14 } }], { x: 0.8, y: 3.65, w: 5.2, h: 1.7, fontFace: FONT, color: C.text, valign: 'middle', margin: 0 });
+      g.addShape(pptx.ShapeType.rightArrow, { x: 6.4, y: 4.25, w: 0.55, h: 0.5, fill: { color: C.cyan }, line: { color: C.cyan } });
+      g.addShape(pptx.ShapeType.roundRect, { x: 7.05, y: 3.55, w: 5.7, h: 1.9, fill: { color: C.greenBg }, line: { color: '6EE7B7' }, rectRadius: 0.12 });
+      g.addText([{ text: '😀 ' + ba.after.label, options: { bold: true, fontSize: 16, breakLine: true } }, { text: ba.after.text, options: { fontSize: 14 } }], { x: 7.3, y: 3.65, w: 5.2, h: 1.7, fontFace: FONT, color: C.green, valign: 'middle', margin: 0 });
+      const cw3 = (12.2 - 0.25 * 2) / 3;
+      G.cautions.forEach((c, i) => box(g, '⚠️ ' + c, 0.55 + i * (cw3 + 0.25), 5.75, cw3, 0.9, C.warnBg, C.warn, 13, true));
+    }
+
     // 메타정보
     let s = slide('📋 교안 메타정보');
     table(s, ['항목', '내용'], [

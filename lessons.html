@@ -13,6 +13,28 @@ header{position:sticky;top:0;z-index:3;background:#07111fdd;backdrop-filter:blur
 h1{font-size:clamp(30px,6vw,54px);line-height:1.08;letter-spacing:-.03em;margin:10px 0}.lead{color:#b7c6da;max-width:780px}
 h2{font-size:22px;margin:34px 0 10px}h3{font-size:17px;margin:20px 0 8px;color:#cfe0f5}
 .card{background:linear-gradient(180deg,#102039,#0c182a);border:1px solid #ffffff12;border-radius:16px;padding:16px;margin-bottom:12px}
+h2 small{color:var(--m);font-size:13px;font-weight:600;margin-left:6px}
+.glance{background:linear-gradient(160deg,#0f2742,#0b1626 60%);border:1px solid #23466a;border-radius:20px;padding:18px;margin:10px 0 6px}
+.gl-hero{display:flex;gap:14px;align-items:center}.gl-emoji{font-size:44px;line-height:1;flex:none;width:64px;height:64px;display:grid;place-items:center;background:#0b1728;border-radius:18px;border:1px solid #2b4e72}.gl-one{font-size:clamp(19px,3.4vw,26px);font-weight:900;line-height:1.35}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}.chips span{font-size:12.5px;background:#0b1728;border:1px solid #2b4e72;border-radius:999px;padding:4px 10px;color:#d6e6f7}
+.gift{display:flex;gap:12px;align-items:center;background:#0f2a1f;border:1px solid #2d6b4c;border-radius:14px;padding:12px 14px}.gi{font-size:28px}.gk{font-size:12px;color:var(--g);font-weight:800}.gv{font-weight:700;font-size:15px}
+.gcards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}@media(max-width:760px){.gcards{grid-template-columns:1fr 1fr}}
+.gcard{background:#0b1728;border:1px solid #27466a;border-radius:14px;padding:12px;text-align:center}.gic{font-size:30px;line-height:1.2}.gt{font-weight:900;margin-top:4px}.gx{font-size:13px;color:#b8c9de;margin-top:2px;line-height:1.45}
+.diag{background:#0b1728;border:1px solid #27466a;border-radius:14px;padding:14px}.dt{font-size:13px;color:var(--a);font-weight:800;margin-bottom:10px}
+.flow{display:flex;align-items:stretch;gap:0}.node{flex:1;min-width:0;text-align:center;background:#11243b;border:1px solid #33597f;border-radius:12px;padding:10px 6px}.ni{font-size:26px;line-height:1.2}.nl{font-size:13px;font-weight:700;margin-top:4px;line-height:1.35;word-break:keep-all}
+.arr{flex:none;width:22px;position:relative}.arr:after{content:"";position:absolute;top:50%;left:4px;width:14px;height:2px;background:var(--a)}.arr:before{content:"";position:absolute;top:calc(50% - 5px);right:2px;border:6px solid transparent;border-left-color:var(--a);border-right:0}
+@media(max-width:560px){.flow{flex-direction:column}.arr{width:auto;height:20px}.arr:after{left:50%;top:2px;width:2px;height:12px}.arr:before{top:auto;bottom:0;right:auto;left:calc(50% - 5px);border:6px solid transparent;border-top-color:var(--a);border-bottom:0}.node{display:flex;align-items:center;gap:10px;text-align:left;padding:8px 12px}.nl{margin:0}}
+.ba{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:stretch;margin:14px 0}.bb{border-radius:14px;padding:12px}.before{background:#1d1a24;border:1px solid #4a3f57}.after{background:#0f2a1f;border:1px solid #2d6b4c}.bl{font-weight:900;font-size:14px}.bt{font-size:14px;color:#d3dfec;margin-top:4px}.bx{align-self:center;color:var(--a);font-size:20px}
+@media(max-width:560px){.ba{grid-template-columns:1fr}.bx{transform:rotate(90deg);justify-self:center}}
+.caut{display:flex;flex-wrap:wrap;gap:6px}.caut span{font-size:13px;background:#2a2210;border:1px solid #6b5520;color:#ffe2a8;border-radius:10px;padding:5px 10px}
+.vlink{display:inline-block;margin-top:12px;font-size:13px}
+.rail{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:thin}.rail a{flex:none;display:flex;align-items:center;gap:6px;text-decoration:none;color:#d6e6f7;background:#0b1728;border:1px solid #2b4e72;border-radius:999px;padding:5px 12px 5px 5px;font-size:13px;white-space:nowrap}.rail a span{width:22px;height:22px;border-radius:50%;background:var(--a);color:#03222d;font-weight:900;display:grid;place-items:center;font-size:12px}
+.phase{font-size:12px;font-weight:900;color:var(--a);letter-spacing:.08em;margin:14px 0 6px}
+.step .sh{display:flex;align-items:center;gap:8px}.sn1{width:26px;height:26px;flex:none;border-radius:50%;background:#16304f;color:var(--a);font-weight:900;display:grid;place-items:center;font-size:13px}.step .sh em{margin-left:auto;font-style:normal;color:var(--m);font-size:12px;white-space:nowrap}
+details.how{margin-top:8px}details.how summary{cursor:pointer;font-size:13px;color:#9fe9ff}details.how p{margin:6px 0 0;font-size:14px;color:#c9d6e6}
+.chal{display:grid;gap:8px}.chal .card{margin:0;padding:12px;font-size:14px}
+details.more{background:#0e1b2e;border:1px solid #ffffff14;border-radius:14px;margin-bottom:8px}details.more>summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:800;display:flex;justify-content:space-between;align-items:center}details.more>summary::-webkit-details-marker{display:none}details.more>summary:after{content:"＋";color:var(--a);font-weight:900}details.more[open]>summary:after{content:"－"}.mb{padding:0 16px 14px;font-size:14px}.mb p{margin:8px 0}
+.lrow{display:flex;gap:12px;align-items:flex-start}.lemo{font-size:30px;line-height:1;flex:none;width:48px;height:48px;display:grid;place-items:center;background:#0b1728;border-radius:14px;border:1px solid #2b4e72}.lone{color:#bfe9ff;font-weight:700;font-size:14px;margin-top:4px}
 .tabs{display:flex;gap:8px;margin:6px 0}.tab{cursor:pointer;flex:1;max-width:220px;background:#0b1728;color:#bed0e8;border:1px solid #294563;border-radius:12px;padding:10px;font-size:14px}.tab.on{border-color:var(--a);color:#fff;background:#10243d}.tab b{color:var(--a);margin-left:4px}
 .tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tools input,.tools select{flex:1;min-width:150px;background:#0b1728;border:1px solid var(--l);color:#fff;border-radius:12px;padding:10px;font-size:14px}
 .chip{cursor:pointer;background:#0f2038;color:#bed0e8;border:1px solid #294563;padding:8px 12px;border-radius:999px;font-size:13px}.chip.on{border-color:var(--a);color:#fff}
@@ -34,7 +56,7 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{border-bottom:1px
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:700px){.grid2{grid-template-columns:1fr}}
 ul.plain{margin:0;padding-left:20px}ul.ok li::marker{color:var(--g)}ul.bad li::marker{color:var(--r)}ul.warn li::marker{color:var(--w)}
 .step{padding:14px 16px}.sh{display:flex;justify-content:space-between;gap:8px;font-weight:800}.sh span{color:var(--m);font-weight:600;font-size:13px;white-space:nowrap}
-.prompt{position:relative;background:#06101d;border:1px solid #284866;border-radius:10px;padding:12px 56px 12px 12px;margin:8px 0;font-size:14px;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,"Noto Sans KR",monospace}
+.prompt{position:relative;background:#06101d;border:1px solid #284866;border-radius:10px;padding:12px 56px 12px 12px;margin:8px 0;font-size:14px;white-space:pre-wrap;font-family:inherit;line-height:1.55}
 .cp{position:absolute;top:6px;right:6px;cursor:pointer;background:#123456;color:#cfefff;border:1px solid #2f5577;border-radius:8px;font-size:12px;padding:3px 8px;font-family:inherit}
 .ex{color:var(--g);font-size:14px}.ex:before{content:"결과 → "}.sn{color:var(--w);font-size:13px;margin-top:4px}
 .q{padding:12px 0;border-top:1px solid #ffffff12}.q:first-child{border-top:0}.opts{display:grid;gap:6px;margin-top:8px}.opt{cursor:pointer;text-align:left;background:#0b1728;color:#dbe7f5;border:1px solid #284866;border-radius:10px;padding:8px 10px;font-size:14px}.opt.right{border-color:var(--g);background:#0f2a1f}.opt.wrong{border-color:var(--r);background:#2a1218}.qe{display:none;font-size:14px;color:var(--g);margin-top:6px}.q.done .qe{display:block}
@@ -44,7 +66,7 @@ label.ck{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:point
 .sync{margin:22px 0 0;font-size:12px;color:var(--m)}.linkbtn{background:none;border:0;color:#9fe9ff;text-decoration:underline;cursor:pointer;font-size:12px;padding:0}
 .empty{padding:26px;border:1px dashed #34516f;border-radius:16px;color:var(--m);text-align:center}
 footer{padding:44px 0;color:#6f87a6;font-size:12px}
-@media print{body{background:#fff;color:#000}header,.tools,.tabs,.sync,.mk,.bar,footer,.cp{display:none}.card,.ins{background:#fff;border-color:#ccc}.ex,.qe{color:#060}.q .qe{display:block}}
+@media print{details{display:block}details>*{display:block}body{background:#fff;color:#000}header,.tools,.tabs,.sync,.mk,.bar,footer,.cp{display:none}.card,.ins{background:#fff;border-color:#ccc}.ex,.qe{color:#060}.q .qe{display:block}}
 </style>
 </head>
 <body>
@@ -84,11 +106,11 @@ function listView(){
   <select id="fj">${opt('','직업군 전체',f.job)}${Object.entries(M.JOB).map(([k,v])=>opt(k,v,f.job)).join('')}</select>
   <input id="q" placeholder="AI 이름·기능 검색" value="${esc(f.q)}"></div>
   <div class="list">${items.length?items.map(l=>`<div class="card item"><a class="go" href="#${esc(l.id)}">
-   <div class="ttl"><span class="no">#${l.no}</span>${kindB(l.type)}${accB(l.access)}${esc(l.title)}</div>
+   <div class="lrow"><div class="lemo">${esc(l.emoji||"📘")}</div><div><div class="ttl"><span class="no">#${l.no}</span>${kindB(l.type)}${accB(l.access)}${esc(l.title)}</div><div class="lone">${esc(l.one_liner||"")}</div></div></div>
    ${l.notice?`<div class="call warn">⚠️ ${esc(l.notice)}</div>`:''}
    <div class="meta"><span>${esc(l.tool)} · ${esc(l.feature)}</span><span>출시 ${esc(l.released)}</span><span>${l.total_minutes}분</span><span>재검토 ${esc(l.review_by)}</span>${done[l.id]?`<span>완료 ${esc(String(done[l.id]).slice(0,10))}</span>`:''}</div>
    <div class="meta">${l.categories.map(c=>`<span class="pill">${c} ${M.CAT[c]}</span>`).join('')}${M.levelBadges(l).map(b=>`<span class="pill">${b}</span>`).join('')}</div>
-   <p class="desc">${esc(l.summary)}</p></a>
+</a>
    ${tab==='done'?`<button class="mk undo" data-id="${esc(l.id)}">↩ 다시 학습하기</button>`:`<button class="mk" data-id="${esc(l.id)}">✓ 완료</button>`}</div>`).join('')
    :`<div class="empty">${tab==='done'?'아직 완료한 교안이 없습니다.':(all.length-doneN?'조건에 맞는 교안이 없습니다.':'🎉 모든 교안을 완료했습니다. 새 교안은 매시간 추가됩니다.')}</div>`}</div>
   <div class="sync">완료 기록은 이 기기의 브라우저에 저장됩니다. <button class="linkbtn" id="sync">다른 기기로 완료 기록 옮기기</button></div>`;
@@ -116,62 +138,72 @@ const steps=(arr,start)=>arr.map((s,i)=>`<div class="card step"><div class="sh">
 async function lessonView(id){
   app.innerHTML='<div class="empty">불러오는 중…</div>';
   let L;try{const r=await fetch(`./lessons/${encodeURIComponent(id)}.json?${Date.now()}`);if(!r.ok)throw 0;L=await r.json()}catch(e){app.innerHTML='<div class="empty">교안을 찾을 수 없습니다. <a href="#">목록으로</a></div>';return}
-  const meta=ordered().find(l=>l.id===L.id),isDone=!!getDone()[L.id],ins=view==='instructor',P=L.pricing,th=L.theory,pc=L.practice,wr=L.wrap,I=L.instructor;
-  const mn=L.minutes,tot=M.totalMinutes(L),ck=store.get('db:'+L.id)||[];
+  const meta=ordered().find(l=>l.id===L.id),isDone=!!getDone()[L.id],ins=view==='instructor',P=L.pricing,th=L.theory,pc=L.practice,wr=L.wrap,I=L.instructor,G=L.glance||null;
+  const mn=L.minutes,tot=M.totalMinutes(L),ck=store.get('db:'+L.id)||[],allSteps=[...pc.follow,...pc.make_mine];
+  const D=(title,body,open)=>`<details class="more"${open?' open':''}><summary>${title}</summary><div class="mb">${body}</div></details>`;
+  const lv=[...L.learner_levels.map(x=>M.LEVEL[x]+x),...L.instructor_levels.map(x=>M.LEVEL[x]+x)].join(' ');
   const bar=`<div class="bar"><a href="#">← 교안 목록</a><div class="btns"><div class="seg"><button data-v="learner" class="${ins?'':'on'}">학습자용</button><button data-v="instructor" class="${ins?'on':''}">강사용 완전본</button></div>
    <button class="btn pri dl" data-m="learner" type="button">⬇ PPT 학습자용</button><button class="btn pri dl" data-m="instructor" type="button">⬇ PPT 강사용</button><button class="btn pt" type="button">⬇ 프롬프트 모음</button></div></div>`;
+  const glance=G?`<section class="glance">
+    <div class="gl-hero"><div class="gl-emoji">${esc(G.emoji)}</div><div class="gl-one">${esc(G.one_liner)}</div></div>
+    <div class="chips"><span>⏱ ${tot}분</span><span>💳 ${M.ACCESS[P.access]}</span><span>📅 출시 ${esc(L.released)}</span><span>🎯 ${esc(lv)}</span></div>
+    <div class="gift"><div class="gi">🎁</div><div><div class="gk">오늘 만들 작품</div><div class="gv">${esc(L.outcome)}</div></div></div>
+    <div class="gcards">${G.cards.map(c=>`<div class="gcard"><div class="gic">${esc(c.icon)}</div><div class="gt">${esc(c.title)}</div><div class="gx">${esc(c.text)}</div></div>`).join('')}</div>
+    <div class="diag"><div class="dt">${esc(G.diagram.title)}</div><div class="flow">${G.diagram.nodes.map((nd,i)=>`${i?'<div class="arr" aria-hidden="true"></div>':''}<div class="node"><div class="ni">${esc(nd.icon)}</div><div class="nl">${esc(nd.label)}</div></div>`).join('')}</div></div>
+    <div class="ba"><div class="bb before"><div class="bl">😐 ${esc(G.before_after.before.label)}</div><div class="bt">${esc(G.before_after.before.text)}</div></div><div class="bx" aria-hidden="true">➜</div><div class="bb after"><div class="bl">😀 ${esc(G.before_after.after.label)}</div><div class="bt">${esc(G.before_after.after.text)}</div></div></div>
+    <div class="caut">${G.cautions.map(c=>`<span>⚠️ ${esc(c)}</span>`).join('')}</div>
+    ${(L.verification||[]).length?`<a class="vlink" href="#" data-open="verify">🔎 강의 전 확인할 점 ${L.verification.length}개 → 자세히 보기</a>`:''}
+  </section>`:`<p class="lead">${esc(L.summary)}</p>`;
+  const stepCard=(s,i)=>`<div class="card step" id="st${i+1}"><div class="sh"><span class="sn1">${i+1}</span><b>${esc(s.title)}</b>${s.minutes?`<em>${s.minutes}분</em>`:''}</div>
+    ${s.prompt?`<div class="prompt"><button class="cp" type="button">복사</button><span class="pv">${esc(s.prompt)}</span></div>`:''}
+    <div class="ex">${esc(s.expect)}</div>
+    <details class="how"><summary>방법 자세히</summary><p>${esc(s.do)}</p>${s.note?`<div class="sn">⚠️ ${esc(s.note)}</div>`:''}</details></div>`;
+  const insBody=`<div class="ins"><h2>👨‍🏫 강사용 지도 노트</h2>
+    ${D(`⏰ 차시별 시간표 (${tot}분)`,T(['시간','내용','비고'],I.timetable.map(t=>[t.time,t.content,t.note||''])),1)}
+    ${D('🎤 그대로 읽어도 되는 멘트',I.script.map(s=>`<p><b>${esc(s.label)}</b><br>“${esc(s.text)}”</p>`).join(''),1)}
+    ${D('🛟 시연 실패 대비 Plan B',T(['상황','대응'],I.plan_b.map(p=>[p.situation,p.response])))}
+    ${D('🚧 수강생이 자주 막히는 지점',T(['막히는 지점','해결법'],I.stuck.map(p=>[p.issue,p.fix])))}
+    ${D(`💬 예상 질문 & 모범 답변 (${I.faq.length})`,T(['질문','답변'],I.faq.map(p=>[p.q,p.a])))}
+    ${D('🎚 레벨별 변형 가이드',I.level_guide.map(g=>`<p><b>${esc(g.level)}</b><br>${esc(g.guide)}</p>`).join(''))}
+    ${(I.pro_points||[]).length?D('🧭 중·고급강사 응용 포인트',UL(I.pro_points)):''}
+    ${D('✅ 강의 전날 체크리스트',I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span>${esc(c)}</span></label>`).join(''),1)}</div>`;
   app.innerHTML=`${bar}
-  <section class="hero" style="padding-top:18px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)} · 📘 표준 교안${isDone?' · ✅ 완료':''}</div>
-  <h1 style="font-size:clamp(24px,4.2vw,38px)">${kindB(L.type)}${accB(P.access)}${esc(L.title)}</h1><p class="lead">${esc(L.summary)}</p></section>
+  <section class="hero" style="padding:16px 0 4px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)}${isDone?' · ✅ 완료':''}</div>
+  <h1 style="font-size:clamp(22px,4vw,34px)">${kindB(L.type)}${accB(P.access)}${esc(L.title)}</h1></section>
   ${L.notice?`<div class="call warn">⚠️ 변경 공지: ${esc(L.notice)}</div>`:''}
-  ${(L.verification||[]).length?`<div class="call note"><b>확인 메모</b>${UL(L.verification)}</div>`:''}
-  <h2>📋 교안 메타정보</h2><div class="card"><div class="tw"><table class="meta-t"><tbody>
-   ${[['교안 ID / 버전',`${L.id} / ${L.version}`],['대상 배지',M.levelBadges(L).join('  ')],['직업군',L.jobs.map(j=>`${j}(${M.JOB[j]})`).join(', ')],['카테고리',L.categories.map(c=>`${c} ${M.CAT[c]}`).join(' · ')],
-     ['다루는 AI/기능',`${L.company} ${L.tool} — ${L.feature}`],['기능 출시일',L.released],['교안 기준일 / 재검토',`${L.checked} / ${L.review_by}`],['필요 요금제',`${M.ACCESS[P.access]} — ${P.summary}`],
-     ['소요 시간',`이론 ${mn.theory}분 + 실습 ${mn.practice}분 + 정리 ${mn.wrap}분 = ${tot}분`],['준비물',L.prerequisites.join(' / ')],['최종 결과물',L.outcome],['공식 출처',L.sources.map(s=>s.title).join(' · ')+` (확인일 ${L.checked})`]]
-     .map(([a,b])=>`<tr><th>${esc(a)}</th><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div></div>
-  <h2>🗓️ 기능 출시 타임라인</h2><div class="card">${T(['날짜','업데이트 내용'],L.timeline.map(t=>[t.date,t.text]))}<p class="pnote">전체 출시 기록은 <a href="./releases.html">AI 릴리즈 노트</a>에서 볼 수 있습니다.</p></div>
-  <h2>🎯 학습 목표</h2><div class="card"><ol style="margin:0;padding-left:20px">${L.objectives.map(o=>`<li>${esc(o)}</li>`).join('')}</ol></div>
+  ${glance}
 
-  <h2>1부. 이론 <small style="color:var(--m);font-size:14px">${mn.theory}분</small></h2>
-  <h3>1-1. 한 문장 정의</h3><div class="card"><b>${esc(th.definition)}</b><div class="call">🧠 비유: ${esc(th.analogy)}</div></div>
-  <h3>1-2. 이전 방식과 비교</h3><div class="card">${T(th.comparison.headers,th.comparison.rows)}</div>
-  <h3>1-3. 핵심 개념</h3>${th.concepts.map((c,i)=>`<div class="card"><b>${['①','②','③','④','⑤'][i]||'•'} ${esc(c.title)}</b><p class="desc">${esc(c.body)}</p></div>`).join('')}
-  <h3>1-4. 할 수 있는 것 / 할 수 없는 것</h3><div class="grid2"><div class="card"><b>✅ 할 수 있는 것</b>${UL(th.can,'ok')}</div><div class="card"><b>❌ 한계·주의</b>${UL(th.cannot,'bad')}</div></div>
-  <h3>1-5. 비용·요금제 (확인일 ${esc(P.checked)})</h3><div class="card"><p style="margin-top:0">${accB(P.access)}${esc(P.summary)}</p><div class="plans">${P.plans.map(x=>`<div class="plan"><div class="pn">${esc(x.name)}<span>${esc(x.price)}</span></div><div class="pf">${esc(x.features)}</div></div>`).join('')}</div>
-   <p class="pnote">${esc(P.note||'')} ${(P.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ')}</p></div>
-  <h3>1-6. 윤리·저작권·보안</h3><div class="card">${UL(th.safety,'warn')}</div>
+  <h2>🛠 바로 실습 <small>${mn.practice}분 · ${allSteps.length}단계</small></h2>
+  <div class="rail">${allSteps.map((s,i)=>`<a href="#" data-st="${i+1}"><span>${i+1}</span>${esc(s.title)}</a>`).join('')}</div>
+  <div class="phase">따라하기</div>${pc.follow.map((s,i)=>stepCard(s,i)).join('')}
+  <div class="phase">내 것으로 만들기</div>${pc.make_mine.map((s,i)=>stepCard(s,pc.follow.length+i)).join('')}
+  <div class="phase">도전 과제 (빨리 끝낸 분)</div><div class="chal">${pc.challenges.map(c=>`<div class="card"><b>${esc(c.level)}</b> ${esc(c.mission)}</div>`).join('')}</div>
 
-  <h2>2부. 실습 <small style="color:var(--m);font-size:14px">${mn.practice}분</small></h2>
-  <h3>2-0. 완성 작품 미리보기</h3><div class="card"><div class="call">${esc(pc.preview)}</div><p class="pnote">최종 결과물: ${esc(L.outcome)}</p></div>
-  <h3>2-1. 따라하기</h3>${steps(pc.follow,1)}
-  <h3>2-2. 내 것으로 만들기</h3>${steps(pc.make_mine,pc.follow.length+1)}
-  <h3>2-3. 도전 과제</h3><div class="card">${T(['난이도','미션'],pc.challenges.map(c=>[c.level,c.mission]))}</div>
+  <h2>✅ 3문제로 확인</h2><div class="card">${wr.quiz.map((q,i)=>`<div class="q" data-a="${q.answer}"><b>Q${i+1}. ${esc(q.q)}</b><div class="opts">${q.options.map((o,j)=>`<button class="opt" type="button" data-j="${j}">${'①②③④'[j]} ${esc(o)}</button>`).join('')}</div><div class="qe">정답 ${'①②③④'[q.answer]} — ${esc(q.explain)}</div></div>`).join('')}</div>
 
-  <h2>3부. 정리·평가 <small style="color:var(--m);font-size:14px">${mn.wrap}분</small></h2>
-  <h3>3-1. 작품 공유</h3><div class="card">${esc(wr.share)}</div>
-  <h3>3-2. 확인 퀴즈</h3><div class="card">${wr.quiz.map((q,i)=>`<div class="q" data-a="${q.answer}"><b>Q${i+1}. ${esc(q.q)}</b><div class="opts">${q.options.map((o,j)=>`<button class="opt" type="button" data-j="${j}">${'①②③④'[j]} ${esc(o)}</button>`).join('')}</div><div class="qe">정답 ${'①②③④'[q.answer]} — ${esc(q.explain)}</div></div>`).join('')}</div>
-  <h3>3-3. 평가 루브릭</h3><div class="card">${T(['기준','상 (3점)','중 (2점)','하 (1점)'],(wr.rubric||M.RUBRIC).map(r=>[r.criterion,r.high,r.mid,r.low]))}</div>
-  <h3>3-4. 다음에 배울 것</h3><div class="card">${UL(wr.next||[])}</div>
+  <h2>📖 자세히 보기 <small>필요한 부분만 펼쳐 보세요</small></h2>
+  ${D('📋 교안 메타정보',`<div class="tw"><table class="meta-t"><tbody>${[['교안 ID / 버전',`${L.id} / ${L.version}`],['대상 배지',M.levelBadges(L).join('  ')],['직업군',L.jobs.map(j=>`${j}(${M.JOB[j]})`).join(', ')],['카테고리',L.categories.map(c=>`${c} ${M.CAT[c]}`).join(' · ')],['다루는 AI/기능',`${L.company} ${L.tool} — ${L.feature}`],['기능 출시일',L.released],['교안 기준일 / 재검토',`${L.checked} / ${L.review_by}`],['소요 시간',`이론 ${mn.theory}분 + 실습 ${mn.practice}분 + 정리 ${mn.wrap}분 = ${tot}분`],['준비물',L.prerequisites.join(' / ')]].map(([a,b])=>`<tr><th>${esc(a)}</th><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div>`)}
+  ${D('📝 이 교안 요약',`<p>${esc(L.summary)}</p><p class="pnote">완성 예시: ${esc(pc.preview)}</p>`)}
+  ${D('🎯 학습 목표',`<ol style="margin:0;padding-left:20px">${L.objectives.map(o=>`<li>${esc(o)}</li>`).join('')}</ol>`)}
+  ${D('🗓️ 기능 출시 타임라인',T(['날짜','업데이트 내용'],L.timeline.map(t=>[t.date,t.text]))+'<p class="pnote">전체 기록은 <a href="./releases.html">AI 릴리즈 노트</a>에서 볼 수 있습니다.</p>')}
+  ${D('💡 개념 설명 (정의·비유·핵심 개념)',`<p><b>${esc(th.definition)}</b></p><div class="call">🧠 ${esc(th.analogy)}</div>${th.concepts.map((c,i)=>`<p><b>${'①②③④⑤'[i]||'•'} ${esc(c.title)}</b><br>${esc(c.body)}</p>`).join('')}`)}
+  ${D('🆚 이전 방식과 비교',T(th.comparison.headers,th.comparison.rows))}
+  ${D('✅❌ 할 수 있는 것 / 할 수 없는 것',`<div class="grid2"><div><b>✅ 할 수 있는 것</b>${UL(th.can,'ok')}</div><div><b>❌ 한계·주의</b>${UL(th.cannot,'bad')}</div></div>`)}
+  ${D(`💳 요금제별 기능 (확인 ${esc(P.checked)})`,`<p style="margin-top:0">${accB(P.access)}${esc(P.summary)}</p><div class="plans">${P.plans.map(x=>`<div class="plan"><div class="pn">${esc(x.name)}<span>${esc(x.price)}</span></div><div class="pf">${esc(x.features)}</div></div>`).join('')}</div><p class="pnote">${esc(P.note||'')} ${(P.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ')}</p>`)}
+  ${D('🔐 윤리·저작권·보안 (전체)',UL(th.safety,'warn'))}
+  ${D('🏁 정리·평가 (공유 방법·루브릭·다음 교안)',`<p><b>작품 공유</b><br>${esc(wr.share)}</p>${T(['기준','상 (3점)','중 (2점)','하 (1점)'],(wr.rubric||M.RUBRIC).map(r=>[r.criterion,r.high,r.mid,r.low]))}<p><b>다음에 배울 것</b></p>${UL(wr.next||[])}`)}
+  ${(L.verification||[]).length?`<div id="verify">${D('🔎 강의 전 확인할 점',UL(L.verification))}</div>`:''}
+  ${D('📚 출처',`<ul class="plain">${L.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> <span class="pnote">확인 ${esc(s.checked||L.checked)}</span></li>`).join('')}</ul>`)}
 
-  ${ins?`<div class="ins"><h2>👨‍🏫 강사용 지도 노트</h2>
-   <h3>A. 차시별 시간표 (${tot}분)</h3><div class="card">${T(['시간','내용','비고'],I.timetable.map(t=>[t.time,t.content,t.note||'']))}</div>
-   <h3>B. 그대로 읽어도 되는 멘트</h3>${I.script.map(s=>`<div class="card"><b>${esc(s.label)}</b><p class="desc">“${esc(s.text)}”</p></div>`).join('')}
-   <h3>C. 시연 실패 대비 Plan B</h3><div class="card">${T(['상황','대응'],I.plan_b.map(p=>[p.situation,p.response]))}</div>
-   <h3>D. 수강생이 자주 막히는 지점</h3><div class="card">${T(['막히는 지점','해결법'],I.stuck.map(p=>[p.issue,p.fix]))}</div>
-   <h3>E. 예상 질문 & 모범 답변</h3><div class="card">${T(['질문','답변'],I.faq.map(p=>[p.q,p.a]))}</div>
-   <h3>F. 레벨별 변형 가이드</h3>${I.level_guide.map(g=>`<div class="card"><b>${esc(g.level)}</b><p class="desc">${esc(g.guide)}</p></div>`).join('')}
-   ${(I.pro_points||[]).length?`<h3>G. 중·고급강사 응용 포인트</h3><div class="card">${UL(I.pro_points)}</div>`:''}
-   <h3>H. 강의 전날 체크리스트</h3><div class="card">${I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span>${esc(c)}</span></label>`).join('')}</div></div>`
-   :`<div class="call note">👨‍🏫 강사용 지도 노트(시간표·멘트·Plan B·FAQ·레벨별 변형)는 위의 <b>강사용 완전본</b>을 누르면 보입니다.</div>`}
-
-  <h2>📚 출처</h2><div class="card"><ul class="plain">${L.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> <span style="color:var(--m);font-size:12px">확인 ${esc(s.checked||L.checked)}</span></li>`).join('')}</ul></div>
+  ${ins?insBody:`<div class="call note">👨‍🏫 강사용 지도 노트(시간표·멘트·Plan B·FAQ)는 위의 <b>강사용 완전본</b>을 누르면 보입니다.</div>`}
   <button class="mk big ${isDone?'undo':''}" type="button">${isDone?'↩ 완료 취소 (다시 목록에 표시)':'✓ 학습 완료 — 목록에서 숨기고 다음 교안으로'}</button>
   ${bar}`;
   app.querySelectorAll('.seg button').forEach(b=>b.onclick=async()=>{if(b.dataset.v===view)return;view=b.dataset.v;store.set('view',view);const y=scrollY;await lessonView(L.id);scrollTo(0,y)});
   app.querySelectorAll('.dl').forEach(b=>b.onclick=()=>window.downloadLessonPptx(L,b,b.dataset.m));
   app.querySelectorAll('.pt').forEach(b=>b.onclick=()=>{const blob=new Blob([M.promptText(L)],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`${L.id}-prompts.txt`;document.body.appendChild(a);a.click();a.remove()});
   app.querySelectorAll('.cp').forEach(b=>b.onclick=async()=>{const t=b.parentElement.querySelector('.pv').textContent;try{await navigator.clipboard.writeText(t);b.textContent='복사됨'}catch(e){b.textContent='복사 실패'}setTimeout(()=>b.textContent='복사',1500)});
+  app.querySelectorAll('.rail a').forEach(a=>a.onclick=e=>{e.preventDefault();document.getElementById('st'+a.dataset.st).scrollIntoView({behavior:'smooth',block:'start'})});
+  app.querySelectorAll('.vlink').forEach(a=>a.onclick=e=>{e.preventDefault();const d=document.querySelector('#verify details');d.open=true;d.scrollIntoView({behavior:'smooth'})});
   app.querySelectorAll('.q').forEach(q=>q.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{const a=+q.dataset.a,j=+o.dataset.j;q.querySelectorAll('.opt').forEach(x=>x.classList.remove('right','wrong'));o.classList.add(j===a?'right':'wrong');q.querySelector(`.opt[data-j="${a}"]`).classList.add('right');q.classList.add('done')}));
   app.querySelectorAll('label.ck input').forEach(b=>b.onchange=()=>store.set('db:'+L.id,[...app.querySelectorAll('label.ck input')].map(x=>x.checked)));
   app.querySelector('.mk.big').onclick=()=>{if(isDone){setDone(L.id,false);lessonView(L.id);return}setDone(L.id,true);const n=nextTodo(L.id);if(n)location.hash=n.id;else{tab='todo';location.hash=''}};
