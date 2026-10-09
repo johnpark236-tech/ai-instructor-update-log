@@ -63,6 +63,21 @@
       "lesson_id": "AI-2026-10-CAT01-002"
     },
     {
+      "id": "playground-2026-10-07-launch",
+      "date": "2026-10-07",
+      "tool": "Playground",
+      "company": "Google",
+      "type": "new",
+      "title": "Playground — 대화로 게임 만들기",
+      "summary": "말로 설명해 브라우저 게임을 만들고 공유하는 실험적 플랫폼 (미국·18세 이상, 국내 미출시)",
+      "source": {
+        "title": "Google 블로그 – Playground",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
       "id": "chatgpt-2026-10-06-8",
       "date": "2026-10-06",
       "tool": "ChatGPT",
@@ -73,6 +88,21 @@
       "source": {
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "perplexity-2026-10-05-automations",
+      "date": "2026-10-05",
+      "tool": "Perplexity",
+      "company": "Perplexity",
+      "type": "update",
+      "title": "Computer 자동화(Automations)·인라인 시각화",
+      "summary": "웹 Computer에서 일정·앱 이벤트에 따라 반복 작업을 돌리는 자동화, 대화 안 인터랙티브 차트, GPT-6.1 Sol·Claude Opus 5.5 추가",
+      "source": {
+        "title": "Perplexity 체인지로그 – Automations, inline visualizations, and GPT-6.1 Sol",
+        "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol"
       },
       "checked": "2026-10-10",
       "lesson_id": null
@@ -198,6 +228,21 @@
       "lesson_id": null
     },
     {
+      "id": "perplexity-2026-09-21-effort-skills",
+      "date": "2026-09-21",
+      "tool": "Perplexity",
+      "company": "Perplexity",
+      "type": "update",
+      "title": "Effort 모드·스킬 마켓플레이스·사이드 챗",
+      "summary": "Light~Ultra 단계로 추론 깊이를 고르는 Effort 모드(웹), 공개 스킬 마켓플레이스, 작업 중 따로 묻는 사이드 챗 추가",
+      "source": {
+        "title": "Perplexity 체인지로그 – Effort Mode, GPT-6 Astra, and Skills Marketplace",
+        "url": "https://www.perplexity.ai/changelog/effort-mode-gpt-6-astra-and-skills-marketplace"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
       "id": "chatgpt-2026-09-17-3",
       "date": "2026-09-17",
       "tool": "ChatGPT",
@@ -285,6 +330,21 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT04-001"
+    },
+    {
+      "id": "chatgpt-2026-08-31-stickers",
+      "date": "2026-08-31",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "스티커 팩 만들기",
+      "summary": "아이디어나 사진으로 스티커 세트를 만들어 메신저로 공유 (모바일 전체 사용자)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
       "lesson_id": null
     },
     {
@@ -340,6 +400,21 @@
       "type": "update",
       "title": "인터랙티브 퀴즈",
       "summary": "대화 안에서 바로 답을 고르는 인터랙티브 퀴즈 도입",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-07-31-dalle-gpt-retire",
+      "date": "2026-07-31",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "DALL·E GPT 종료 예고",
+      "summary": "공식 DALL·E GPT를 8월 30일 종료하고 ChatGPT Images로 대체한다고 안내",
       "source": {
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"

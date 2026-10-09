@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 3,
+  "count": 4,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-001",
+      "version": "v1.0",
+      "created_at": "2026-10-10 03:17 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "수업용 그림 단어 카드·안내 포스터 만들기 — ChatGPT Images 2.5 템플릿과 부분 수정 실습",
+      "summary": "ChatGPT Images 2.5로 이미지가 더 선명해지고 고치기가 정교해졌으며, 템플릿·스케치·프롬프트 공유가 생겼습니다. 무료 계정으로 템플릿에서 시작해 원하는 부분만 고치며 수업용 그림 단어 카드와 안내 포스터를 완성합니다.",
+      "tool": "ChatGPT",
+      "feature": "ChatGPT Images 2.5 (Templates · Select 편집 · Sketch · Prompt template 공유)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-09-08",
+      "categories": [
+        "CAT-04",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-GLB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 한글 단어가 들어간 '그림 단어 카드 6장' 포스터 1장 ② 교실·센터 게시용 안내 포스터 1장 (둘 다 PNG로 저장)",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🖼️",
+      "one_liner": "템플릿 고르고 말로 고치는 수업 그림"
+    },
     {
       "id": "AI-2026-10-CAT01-001",
       "version": "v1.0",
