@@ -61,3 +61,7 @@ API key는 코드나 JSON에 직접 저장하지 마세요.
 - `TELEGRAM_CHAT_ID`: 봇에게 아무 메시지나 보낸 뒤 `https://api.telegram.org/bot<토큰>/getUpdates` 에서 확인한 `chat.id`
 
 Secret 이 없으면 알림만 건너뛰고 다른 작업은 그대로 진행됩니다.
+
+## 카카오톡 알림 (기본)
+
+매시간 교안 작성 예약 작업(Claude)이 push 에 성공하면 카카오톡 "나에게 보내기"(PlayMCP 커넥터)로 200자 이내 요약과 교안 링크를 보냅니다. 별도 설정은 필요 없습니다. 위의 텔레그램 알림은 Secret 을 등록했을 때만 함께 동작하는 선택 사항입니다.
