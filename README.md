@@ -47,3 +47,7 @@ API key는 코드나 JSON에 직접 저장하지 마세요.
 - 중복 방지: 이미 `lessons.json`에 있는 도구·기능은 다시 다루지 않음
 
 교안 JSON 필드: `id, created_at, title, tool, company, category(추론/이미지/영상/음성/코딩/에이전트/리서치), type(new/update), released, level, minutes, summary, why, prerequisites[], steps[{title,do,expect}], practice{task,sample_input,checklist[]}, teaching_tips[], pitfalls[], quiz[{q,a}], sources[{title,url}]`
+
+### PPT 다운로드
+
+교안 화면 위·아래의 **⬇ PPT로 다운로드** 버튼을 누르면 그 교안이 16:9 PowerPoint 파일(.pptx)로 저장됩니다. 표지, 준비물, 단계별 1장씩, 실습 과제, 체크리스트, 수업 팁, 퀴즈·정답, 출처 순서로 구성됩니다. 변환은 브라우저에서 이루어지며(`lesson-pptx.js`, 라이브러리 `vendor/pptxgen.bundle.js`, MIT), 새 교안에도 자동으로 적용됩니다.

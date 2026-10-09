@@ -25,15 +25,16 @@ ol.steps li{counter-increment:s;position:relative;padding:16px 16px 16px 58px}ol
 label.ck{display:flex;gap:10px;align-items:flex-start;padding:6px 0;cursor:pointer}label.ck input{margin-top:5px;width:18px;height:18px}
 ul.plain{margin:0;padding-left:20px}.warn li::marker{color:var(--w)}
 details{border-top:1px solid #ffffff12;padding:10px 0}summary{cursor:pointer;font-weight:700}details p{margin:6px 0 0;color:var(--g)}
-.back{display:inline-block;margin:24px 0 0;font-size:14px}.empty{padding:28px;border:1px dashed #34516f;border-radius:16px;color:var(--m);text-align:center}
+.back{display:inline-block;margin:24px 0 0;font-size:14px}.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.dl{cursor:pointer;margin-top:24px;background:linear-gradient(90deg,#0891b2,#6366f1);color:#fff;border:0;border-radius:12px;padding:11px 16px;font-weight:800;font-size:14px}.dl:disabled{opacity:.6;cursor:wait}.empty{padding:28px;border:1px dashed #34516f;border-radius:16px;color:var(--m);text-align:center}
 footer{padding:48px 0;color:#6f87a6;font-size:12px}
-@media print{body{background:#fff;color:#000}header,.tools,.back,footer{display:none}.card{background:#fff;border-color:#ccc}.ex,details p{color:#060}}
+@media print{body{background:#fff;color:#000}header,.tools,.back,.dl,footer{display:none}.card{background:#fff;border-color:#ccc}.ex,details p{color:#060}}
 </style>
 </head>
 <body>
 <header><div class="w nav"><div class="brand">AI 실습 교안</div><a href="./index.html">AI DAILY TOP10 →</a></div></header>
 <main class="w" id="app"></main>
 <footer class="w">매시간 새 AI 기능 하나를 조사해 30분 안에 따라 할 수 있는 교안으로 정리합니다. 모든 교안 하단에 공식 출처가 있습니다.</footer>
+<script src="./lesson-pptx.js"></script>
 <script>
 const app=document.getElementById('app');
 const CATS=['전체','추론','이미지','영상','음성','코딩','에이전트','리서치'];
@@ -59,7 +60,7 @@ async function lessonView(id){
   app.innerHTML='<div class="empty">불러오는 중…</div>';
   let L;try{L=await (await fetch(`./lessons/${encodeURIComponent(id)}.json?${Date.now()}`)).json()}catch(e){app.innerHTML='<div class="empty">교안을 찾을 수 없습니다. <a href="#">목록으로</a></div>';return}
   const key='ck:'+L.id,ck=store.get(key)||[];
-  app.innerHTML=`<a class="back" href="#">← 교안 목록</a>
+  app.innerHTML=`<div class="bar"><a class="back" href="#">← 교안 목록</a><button class="dl" type="button">⬇ PPT로 다운로드</button></div>
   <section class="hero" style="padding-top:20px"><div class="ey">${esc(L.category)} · ${esc(L.tool)}</div><h1 style="font-size:clamp(26px,4.5vw,42px)">${esc(L.title)}</h1>
   <div class="meta">${badge(L.type)}<span>${esc(L.company)}</span><span>${esc(L.level)} · 약 ${L.minutes}분</span><span>발표 ${esc(L.released)}</span><span>작성 ${esc(L.created_at)}</span></div>
   <p class="lead">${esc(L.summary)}</p></section>
@@ -72,8 +73,9 @@ async function lessonView(id){
   <h2>주의할 점</h2><div class="card"><ul class="plain warn">${L.pitfalls.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>
   <h2>확인 퀴즈</h2><div class="card">${L.quiz.map(q=>`<details><summary>${esc(q.q)}</summary><p>${esc(q.a)}</p></details>`).join('')}</div>
   <h2>출처</h2><div class="card"><ul class="plain">${L.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></li>`).join('')}</ul></div>
-  <a class="back" href="#">← 교안 목록</a>`;
+  <div class="bar"><a class="back" href="#">← 교안 목록</a><button class="dl" type="button">⬇ PPT로 다운로드</button></div>`;
   app.querySelectorAll('label.ck input').forEach(b=>b.onchange=()=>{const v=[...app.querySelectorAll('label.ck input')].map(x=>x.checked);store.set(key,v);const d=store.get('done')||{};if(v.every(Boolean))d[L.id]=1;else delete d[L.id];store.set('done',d)});
+  app.querySelectorAll('.dl').forEach(b=>b.onclick=()=>window.downloadLessonPptx(L,b));
   window.scrollTo(0,0);
 }
 
