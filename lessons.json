@@ -1,0 +1,18 @@
+{
+  "count": 1,
+  "lessons": [
+    {
+      "id": "2026-10-09-2349-gemini-skills",
+      "created_at": "2026-10-09 23:49 KST",
+      "title": "Gemini 스킬(Skills): 반복 작업을 슬래시 명령 하나로",
+      "tool": "Gemini",
+      "company": "Google",
+      "category": "에이전트",
+      "type": "update",
+      "released": "2026-09-30",
+      "level": "입문",
+      "minutes": 30,
+      "summary": "Gemini에 '스킬'이 추가되어, 자주 쓰는 지시문을 한 번 저장해 두고 /이름 으로 불러 쓰거나 여러 개를 이어 붙여 실행할 수 있습니다. 기존 Gems를 대체하는 기능입니다."
+    }
+  ]
+}

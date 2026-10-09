@@ -37,3 +37,13 @@ API key는 코드나 JSON에 직접 저장하지 마세요.
 ## 자동 반영 흐름
 
 `매일 06:00 KST 조사` → `ai-daily.json 갱신` → `main 커밋` → `GitHub Pages 자동 재배포`
+
+## 실습 교안 (매시간 자동 추가)
+
+- 페이지: `lessons.html` (목록·검색·분야 필터, 교안별 체크리스트와 퀴즈)
+- 교안 파일: `lessons/<YYYY-MM-DD-HHMM-slug>.json` — 교안 1개당 파일 1개
+- 인덱스: `lessons.json` — `python scripts/build_lessons_index.py`가 교안 파일을 검증하고 다시 만듦
+- 갱신: Claude 예약 작업이 1시간마다 새 AI 서비스/신기능 1개를 공식 출처로 조사 → 교안 JSON 작성 → 인덱스 재생성 → main 커밋 → Pages 자동 재배포
+- 중복 방지: 이미 `lessons.json`에 있는 도구·기능은 다시 다루지 않음
+
+교안 JSON 필드: `id, created_at, title, tool, company, category(추론/이미지/영상/음성/코딩/에이전트/리서치), type(new/update), released, level, minutes, summary, why, prerequisites[], steps[{title,do,expect}], practice{task,sample_input,checklist[]}, teaching_tips[], pitfalls[], quiz[{q,a}], sources[{title,url}]`
