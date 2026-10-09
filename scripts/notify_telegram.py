@@ -34,6 +34,8 @@ def compose(lesson, base):
         "",
         f"📝 <b>요약</b>\n{e(lesson['summary'])}",
         "",
+        f"💳 <b>요금</b>\n{e(lesson['pricing']['summary'])}\n" + "\n".join(f"· {e(x['name'])} ({e(x['price'])})" for x in lesson['pricing']['plans']) if lesson.get('pricing') else "",
+        "",
         f"🧭 <b>따라 하기</b>\n{steps}",
         "",
         f"🛠 <b>실습 과제</b>\n{e(lesson['practice']['task'])}",

@@ -15,12 +15,13 @@ CATEGORIES = {"추론", "이미지", "영상", "음성", "코딩", "에이전트
 REQUIRED = {
     "id": str, "created_at": str, "title": str, "tool": str, "company": str,
     "category": str, "type": str, "released": str, "level": str, "minutes": int,
-    "summary": str, "why": str, "prerequisites": list, "steps": list,
+    "summary": str, "why": str, "prerequisites": list, "pricing": dict, "steps": list,
     "practice": dict, "teaching_tips": list, "pitfalls": list, "quiz": list,
     "sources": list,
 }
 INDEX_FIELDS = ["id", "created_at", "title", "tool", "company", "category",
                 "type", "released", "level", "minutes", "summary"]
+ACCESS = {"free", "freemium", "paid"}
 
 
 def check(path, data):
@@ -44,6 +45,14 @@ def check(path, data):
         if not {"title", "do", "expect"} <= set(s):
             errs.append("steps 항목에 title/do/expect 필요")
             break
+    pr = data["pricing"]
+    if pr.get("access") not in ACCESS:
+        errs.append("pricing.access는 free/freemium/paid 중 하나")
+    plans = pr.get("plans")
+    if not isinstance(plans, list) or not plans or not all({"name", "price", "features"} <= set(x) for x in plans):
+        errs.append("pricing.plans에 name/price/features 항목 1개 이상 필요")
+    if not pr.get("summary") or not pr.get("checked"):
+        errs.append("pricing에 summary/checked 필요")
     if not {"task", "checklist"} <= set(data["practice"]):
         errs.append("practice에 task/checklist 필요")
     if not data["sources"] or not all(str(s.get("url", "")).startswith("http") for s in data["sources"]):
@@ -63,7 +72,9 @@ def main():
         if errs:
             errors.extend(errs)
             continue
-        lessons.append({k: data[k] for k in INDEX_FIELDS})
+        item = {k: data[k] for k in INDEX_FIELDS}
+        item["access"] = data["pricing"]["access"]
+        lessons.append(item)
     if errors:
         print("\n".join(errors))
         sys.exit(1)

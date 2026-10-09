@@ -16,6 +16,48 @@
     "웹 브라우저(chatgpt.com) 또는 ChatGPT 모바일 앱",
     "수업에서 쓰는 문법 항목 1개 (예: -아서/어서 vs -니까)"
   ],
+  "pricing": {
+    "access": "free",
+    "summary": "인텔리전트 UI는 무료를 포함한 모든 개인 요금제에서 쓸 수 있습니다. 요금제에 따라 들어가는 GPT-6 모델과 사용 한도가 다릅니다.",
+    "plans": [
+      {
+        "name": "무료",
+        "price": "0원",
+        "features": "GPT-6 Luna + 인텔리전트 UI, 텍스트 대화 무제한(남용 방지 한도), 파일 업로드·이미지 생성·딥리서치는 제한, 일부 국가 광고"
+      },
+      {
+        "name": "Go",
+        "price": "월 약 $8",
+        "features": "GPT-6 Luna, 도구 사용 메시지와 이미지 생성이 무료보다 많음, 광고 포함"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $20",
+        "features": "GPT-6 Sol(고급 추론), 메시지·업로드 확장, 더 정교한 이미지 생성, 딥리서치 확장, 예약 작업·맞춤 GPT"
+      },
+      {
+        "name": "Pro",
+        "price": "월 $100~$200",
+        "features": "무제한 대화·이미지, 딥리서치 최대, 상시 에이전트 Dot, Pro 추론(GPT-6 Astra) — 단, Pro 추론 모드에서는 인텔리전트 UI 미지원"
+      }
+    ],
+    "note": "Free·Go는 GPT-6 출시 다음 날부터 적용됐습니다. 가격은 미국 달러 기준(Go 가격은 외부 비교 기사 기준)이며 한국 가격은 다를 수 있습니다.",
+    "checked": "2026-10-10",
+    "sources": [
+      {
+        "title": "ChatGPT 요금제 (chatgpt.com/pricing)",
+        "url": "https://chatgpt.com/pricing"
+      },
+      {
+        "title": "OpenAI – GPT-6 for everyone",
+        "url": "https://openai.com/index/gpt-6-for-everyone/"
+      },
+      {
+        "title": "CometAPI – ChatGPT Pricing 2026",
+        "url": "https://www.cometapi.com/chatgpt-pricing-2026-free-vs-go-vs-plus-vs-pro/"
+      }
+    ]
+  },
   "steps": [
     {
       "title": "Chat 탭에서 새 대화 열기",
@@ -65,13 +107,31 @@
     "퀴즈의 정답과 한국어 예문이 틀릴 수 있으니 수업 전에 반드시 직접 풀어 보고 확인하세요."
   ],
   "quiz": [
-    {"q": "인텔리전트 UI가 동작하는 ChatGPT 화면은?", "a": "Chat 탭 (Work·Codex는 해당 없음)"},
-    {"q": "무료(Free·Go) 사용자에게 응답하는 GPT-6 모델 이름은?", "a": "GPT-6 Luna (유료 개인 요금제는 GPT-6 Sol)"},
-    {"q": "계산기나 퀴즈 게임 같은 도구를 얻으려면 어떻게 해야 하나요?", "a": "대화에서 그 도구를 만들어 달라고 직접 요청한다"}
+    {
+      "q": "인텔리전트 UI가 동작하는 ChatGPT 화면은?",
+      "a": "Chat 탭 (Work·Codex는 해당 없음)"
+    },
+    {
+      "q": "무료(Free·Go) 사용자에게 응답하는 GPT-6 모델 이름은?",
+      "a": "GPT-6 Luna (유료 개인 요금제는 GPT-6 Sol)"
+    },
+    {
+      "q": "계산기나 퀴즈 게임 같은 도구를 얻으려면 어떻게 해야 하나요?",
+      "a": "대화에서 그 도구를 만들어 달라고 직접 요청한다"
+    }
   ],
   "sources": [
-    {"title": "OpenAI – GPT-6 for everyone (Intelligent UI 발표)", "url": "https://openai.com/index/gpt-6-for-everyone/"},
-    {"title": "OpenAI 도움말 – ChatGPT 릴리스 노트 (2026.10.07)", "url": "https://help.openai.com/chatgpt-release-notes"},
-    {"title": "MacRumors – ChatGPT Gets GPT-6 and New Intelligent UI", "url": "https://macrumors.com/2026/10/07/chatgpt-intelligent-ui"}
+    {
+      "title": "OpenAI – GPT-6 for everyone (Intelligent UI 발표)",
+      "url": "https://openai.com/index/gpt-6-for-everyone/"
+    },
+    {
+      "title": "OpenAI 도움말 – ChatGPT 릴리스 노트 (2026.10.07)",
+      "url": "https://help.openai.com/chatgpt-release-notes"
+    },
+    {
+      "title": "MacRumors – ChatGPT Gets GPT-6 and New Intelligent UI",
+      "url": "https://macrumors.com/2026/10/07/chatgpt-intelligent-ui"
+    }
   ]
 }

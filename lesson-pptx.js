@@ -56,6 +56,17 @@
     s.addText('준비물', { x: 7.3, y: 1.6, w: 5.1, h: 0.5, fontFace: FONT, fontSize: 18, bold: true, color: C.cyan, margin: 0 });
     s.addText(bullets(L.prerequisites, 19), { x: 7.3, y: 2.2, w: 5.1, h: 4.3, valign: 'top', margin: 0 });
 
+    // 2-1. 요금제별 기능
+    if (L.pricing && L.pricing.plans && L.pricing.plans.length) {
+      const P = L.pricing, acc = { free: '무료', freemium: '무료+유료', paid: '유료' }[P.access] || '';
+      s = header(pptx, L, `요금제별 기능 · 혜택${acc ? ' (' + acc + ')' : ''}`, ++n);
+      s.addText(P.summary, { x: 0.6, y: 1.25, w: 12.1, h: 0.9, fontFace: FONT, fontSize: 17, bold: true, color: C.text, valign: 'top', margin: 0 });
+      const rows = [[{ text: '요금제', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }, { text: '가격', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }, { text: '기능 · 혜택', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }]]
+        .concat(P.plans.map((x, i) => [{ text: x.name, options: { bold: true } }, { text: x.price }, { text: x.features }].map(c => ({ text: c.text, options: Object.assign({ fill: { color: i % 2 ? 'FFFFFF' : C.card } }, c.options || {}) }))));
+      s.addTable(rows, { x: 0.6, y: 2.2, w: 12.1, colW: [2.4, 1.9, 7.8], fontFace: FONT, fontSize: 13, color: C.text, border: { type: 'solid', pt: 0.75, color: C.line }, valign: 'middle', margin: 0.08 });
+      s.addText(`${P.note || ''} (확인일 ${P.checked})`, { x: 0.6, y: 6.75, w: 11.5, h: 0.4, fontFace: FONT, fontSize: 10, color: C.sub, margin: 0 });
+    }
+
     // 3. 단계별 따라 하기 (한 장에 한 단계)
     L.steps.forEach((st, i) => {
       s = header(pptx, L, `따라 하기 ${i + 1}/${L.steps.length} — ${st.title}`, ++n);

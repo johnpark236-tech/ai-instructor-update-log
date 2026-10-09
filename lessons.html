@@ -26,6 +26,8 @@ label.ck{display:flex;gap:10px;align-items:flex-start;padding:6px 0;cursor:point
 ul.plain{margin:0;padding-left:20px}.warn li::marker{color:var(--w)}
 details{border-top:1px solid #ffffff12;padding:10px 0}summary{cursor:pointer;font-weight:700}details p{margin:6px 0 0;color:var(--g)}
 .back{display:inline-block;margin:24px 0 0;font-size:14px}.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.dl{cursor:pointer;margin-top:24px;background:linear-gradient(90deg,#0891b2,#6366f1);color:#fff;border:0;border-radius:12px;padding:11px 16px;font-weight:800;font-size:14px}.dl:disabled{opacity:.6;cursor:wait}.kind{display:inline-block;vertical-align:middle;font-size:.62em;font-weight:900;padding:3px 9px;border-radius:8px;margin-right:8px;position:relative;top:-2px;letter-spacing:0}.kind.kn{background:#70e1a1;color:#04261a}.kind.ku{background:#6ee7ff;color:#03222d}h1 .kind{font-size:.45em;top:-6px}
+.acc{display:inline-block;vertical-align:middle;font-size:.62em;font-weight:900;padding:3px 9px;border-radius:8px;margin-right:8px;position:relative;top:-2px;border:1.5px solid}.acc.af{color:#70e1a1;border-color:#70e1a1}.acc.am{color:#ffcf70;border-color:#ffcf70}.acc.ap{color:#ff8fa3;border-color:#ff8fa3}h1 .acc{font-size:.45em;top:-6px}p .acc{font-size:12px;top:-1px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.plan{background:#0b1728;border:1px solid var(--l);border-radius:12px;padding:12px}.pn{font-weight:800;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.pn span{color:var(--a);font-weight:700;font-size:14px}.pf{font-size:14px;color:#c0cde0;margin-top:6px}.pnote{font-size:12px;color:var(--m);margin:12px 0 0}
 .tabs{display:flex;gap:8px;margin:6px 0 4px}.tab{cursor:pointer;flex:1;max-width:220px;background:#0b1728;color:#bed0e8;border:1px solid #294563;border-radius:12px;padding:11px;font-size:14px}.tab.on{border-color:var(--a);color:#fff;background:#10243d}.tab b{color:var(--a);margin-left:4px}
 .item{position:relative;padding:0}.item .go{display:block;color:inherit;text-decoration:none;padding:18px 18px 52px}.item:hover{border-color:#3a6a90}.no{color:var(--a);font-weight:900;margin-right:8px}
 .mk{cursor:pointer;background:#123326;color:var(--g);border:1px solid #2d6b4c;border-radius:10px;padding:7px 12px;font-weight:800;font-size:13px}.item .mk{position:absolute;right:14px;bottom:12px}.mk.undo{background:#1a2638;color:#bed0e8;border-color:#3a5473}.mk.big{display:block;width:100%;margin:28px 0 0;padding:15px;font-size:16px}
@@ -48,6 +50,8 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const KIND=t=>t==='new'?'신규 AI':'기존 AI';
 const badge=t=>`<span class="kind ${t==='new'?'kn':'ku'}">${KIND(t)}</span>`;
+const ACC={free:['무료','af'],freemium:['무료+유료','am'],paid:['유료','ap']};
+const accBadge=a=>ACC[a]?`<span class="acc ${ACC[a][1]}">${ACC[a][0]}</span>`:'';
 const KINDS=[['all','전체'],['new','신규 AI'],['update','기존 AI']];let kind='all';
 const getDone=()=>store.get('done')||{};
 function setDone(id,on){const d=getDone();if(on)d[id]=new Date().toISOString();else delete d[id];store.set('done',d)}
@@ -63,7 +67,7 @@ function listView(){
   <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${todoN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
   <div class="tools">${KINDS.map(([k,t])=>`<button class="chip kc ${k===kind?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
   <div class="tools"><input id="q" placeholder="AI 이름·기능 검색" value="${esc(query)}">${CATS.map(c=>`<button class="chip ${c===filter?'on':''}" data-c="${c}">${c}</button>`).join('')}</div>
-  <div class="list">${items.length?items.map(l=>`<div class="card item"><a class="go" href="#${esc(l.id)}"><div class="ttl"><span class="no">#${l.no}</span>${badge(l.type)}${esc(l.title)}</div>
+  <div class="list">${items.length?items.map(l=>`<div class="card item"><a class="go" href="#${esc(l.id)}"><div class="ttl"><span class="no">#${l.no}</span>${badge(l.type)}${accBadge(l.access)}${esc(l.title)}</div>
   <div class="meta"><span>${esc(l.tool)} · ${esc(l.company)}</span><span>${esc(l.category)}</span><span>${esc(l.level)} · ${l.minutes}분</span><span>작성 ${esc(l.created_at)}</span>${done[l.id]?`<span>완료 ${esc(String(done[l.id]).slice(0,10))}</span>`:''}</div>
   <p class="desc">${esc(l.summary)}</p></a>
   ${tab==='done'?`<button class="mk undo" data-id="${esc(l.id)}">↩ 다시 학습하기</button>`:`<button class="mk" data-id="${esc(l.id)}">✓ 완료</button>`}</div>`).join('')
@@ -95,11 +99,14 @@ async function lessonView(id){
   const key='ck:'+L.id,ck=store.get(key)||[],meta=ordered().find(l=>l.id===L.id),isDone=!!getDone()[L.id];
   const doneBtn=isDone?`<button class="mk big undo" type="button">↩ 완료 취소 (다시 목록에 표시)</button>`:`<button class="mk big" type="button">✓ 학습 완료 — 목록에서 숨기고 다음 교안으로</button>`;
   app.innerHTML=`<div class="bar"><a class="back" href="#">← 교안 목록</a><button class="dl" type="button">⬇ PPT로 다운로드</button></div>
-  <section class="hero" style="padding-top:20px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.category)} · ${esc(L.tool)}${isDone?' · ✅ 완료한 교안':''}</div><h1 style="font-size:clamp(26px,4.5vw,42px)">${badge(L.type)}${esc(L.title)}</h1>
+  <section class="hero" style="padding-top:20px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.category)} · ${esc(L.tool)}${isDone?' · ✅ 완료한 교안':''}</div><h1 style="font-size:clamp(26px,4.5vw,42px)">${badge(L.type)}${L.pricing?accBadge(L.pricing.access):''}${esc(L.title)}</h1>
   <div class="meta"><span>${esc(L.company)}</span><span>${esc(L.level)} · 약 ${L.minutes}분</span><span>발표 ${esc(L.released)}</span><span>작성 ${esc(L.created_at)}</span></div>
   <p class="lead">${esc(L.summary)}</p></section>
   <div class="card"><b>왜 지금 배우나</b><p class="desc">${esc(L.why)}</p></div>
   <h2>준비물</h2><div class="card"><ul class="plain">${L.prerequisites.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>
+  ${L.pricing?`<h2>요금제별 기능 · 혜택</h2><div class="card"><p style="margin-top:0">${accBadge(L.pricing.access)}${esc(L.pricing.summary)}</p>
+  <div class="plans">${L.pricing.plans.map(x=>`<div class="plan"><div class="pn">${esc(x.name)}<span>${esc(x.price)}</span></div><div class="pf">${esc(x.features)}</div></div>`).join('')}</div>
+  <p class="pnote">${L.pricing.note?esc(L.pricing.note)+' ':''}(확인일 ${esc(L.pricing.checked)}${(L.pricing.sources||[]).map(x=>` · <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`).join('')})</p></div>`:''}
   <h2>따라 하기</h2><ol class="steps">${L.steps.map(s=>`<li class="card"><b>${esc(s.title)}</b><p class="do">${esc(s.do)}</p><div class="ex">${esc(s.expect)}</div></li>`).join('')}</ol>
   <h2>실습 과제</h2><div class="card"><p style="margin-top:0">${esc(L.practice.task)}</p>${L.practice.sample_input?`<div class="sample">${esc(L.practice.sample_input)}</div>`:''}
   <div style="margin-top:12px">${L.practice.checklist.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span>${esc(c)}</span></label>`).join('')}</div></div>

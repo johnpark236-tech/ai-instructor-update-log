@@ -46,7 +46,7 @@ API key는 코드나 JSON에 직접 저장하지 마세요.
 - 갱신: Claude 예약 작업이 1시간마다 새 AI 서비스/신기능 1개를 공식 출처로 조사 → 교안 JSON 작성 → 인덱스 재생성 → main 커밋 → Pages 자동 재배포
 - 중복 방지: 이미 `lessons.json`에 있는 도구·기능은 다시 다루지 않음
 
-교안 JSON 필드: `id, created_at, title, tool, company, category(추론/이미지/영상/음성/코딩/에이전트/리서치), type(new=신규 AI 서비스 / update=기존 AI의 새 기능), released, level, minutes, summary, why, prerequisites[], steps[{title,do,expect}], practice{task,sample_input,checklist[]}, teaching_tips[], pitfalls[], quiz[{q,a}], sources[{title,url}]`
+교안 JSON 필드: `id, created_at, title, tool, company, category(추론/이미지/영상/음성/코딩/에이전트/리서치), type(new=신규 AI 서비스 / update=기존 AI의 새 기능), released, level, minutes, summary, why, prerequisites[], pricing{access(free/freemium/paid), summary, plans[{name,price,features}], note, checked, sources[]}, steps[{title,do,expect}], practice{task,sample_input,checklist[]}, teaching_tips[], pitfalls[], quiz[{q,a}], sources[{title,url}]`
 
 ### PPT 다운로드
 

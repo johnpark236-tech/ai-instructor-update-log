@@ -16,6 +16,44 @@
     "웹 브라우저에서 gemini.google.com 접속",
     "연습용 텍스트 한 단락 (평소 쓰는 글이면 더 좋음)"
   ],
+  "pricing": {
+    "access": "free",
+    "summary": "스킬 만들기·실행은 무료 계정으로도 가능합니다. 유료 구독은 사용 한도를 늘려 주고 Gmail·문서 속 Gemini 같은 혜택이 붙습니다.",
+    "plans": [
+      {
+        "name": "무료",
+        "price": "0원",
+        "features": "스킬 만들기·/실행·이어 붙이기 가능(만 18세 이상 개인 계정). Gemini 3.6 Flash, Deep Research, Canvas, 저장공간 15GB"
+      },
+      {
+        "name": "Google AI Plus",
+        "price": "월 $4.99",
+        "features": "사용 한도 무료의 2배, 동영상 생성, Gmail 등 구글 앱 속 Gemini, 저장공간 400GB"
+      },
+      {
+        "name": "Google AI Pro",
+        "price": "월 $19.99",
+        "features": "사용 한도 무료의 4배, 100만 토큰 문맥, Gmail·Docs 속 Gemini, YouTube Premium Lite, 저장공간 5TB"
+      },
+      {
+        "name": "Google AI Ultra",
+        "price": "월 $99.99부터",
+        "features": "사용 한도 Pro의 5~20배, Deep Think·Gemini Spark(스킬 자동 실행) 우선 제공(일부 국가), 저장공간 20TB 이상"
+      }
+    ],
+    "note": "가격은 미국 요금 페이지 기준이며 한국 원화 가격은 다를 수 있습니다. 무료 계정 스킬 지원은 Google 도움말 내용을 인용한 보도 기준이니 설정 → 스킬 메뉴에서 직접 확인하세요.",
+    "checked": "2026-10-10",
+    "sources": [
+      {
+        "title": "Gemini 요금제 비교 (gemini.google/subscriptions)",
+        "url": "https://gemini.google/subscriptions/"
+      },
+      {
+        "title": "findskill.ai – Gemini Gems become Skills",
+        "url": "https://findskill.ai/blog/gemini-gems-become-skills-dates-setup-2026/"
+      }
+    ]
+  },
   "steps": [
     {
       "title": "대화로 스킬 만들기",
@@ -64,13 +102,31 @@
     "Google Labs의 Gems 실험 기능과 Opal은 11월에 종료되며 스킬로 이전되지 않습니다."
   ],
   "quiz": [
-    {"q": "스킬을 실행하는 입력 방법은?", "a": "입력창에 / 를 친 뒤 스킬 이름을 고르거나 직접 입력"},
-    {"q": "수동으로 스킬 이름을 지을 때의 규칙은?", "a": "공백 없이 하이픈으로만 단어를 연결"},
-    {"q": "개인 계정의 Gems 지원이 끝나는 시점은?", "a": "2026년 11월 (스킬로 자동 이전)"}
+    {
+      "q": "스킬을 실행하는 입력 방법은?",
+      "a": "입력창에 / 를 친 뒤 스킬 이름을 고르거나 직접 입력"
+    },
+    {
+      "q": "수동으로 스킬 이름을 지을 때의 규칙은?",
+      "a": "공백 없이 하이픈으로만 단어를 연결"
+    },
+    {
+      "q": "개인 계정의 Gems 지원이 끝나는 시점은?",
+      "a": "2026년 11월 (스킬로 자동 이전)"
+    }
   ],
   "sources": [
-    {"title": "Google 공식 블로그 – Let skills in Gemini tackle your most repetitive tasks", "url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/"},
-    {"title": "Gemini 릴리스 노트 (2026.09.30)", "url": "https://gemini.google/release-notes/"},
-    {"title": "Android Authority – How to use Gemini Skills", "url": "https://www.androidauthority.com/how-to-use-gemini-skills-google-upgraded-gems-feature-3718807/"}
+    {
+      "title": "Google 공식 블로그 – Let skills in Gemini tackle your most repetitive tasks",
+      "url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/"
+    },
+    {
+      "title": "Gemini 릴리스 노트 (2026.09.30)",
+      "url": "https://gemini.google/release-notes/"
+    },
+    {
+      "title": "Android Authority – How to use Gemini Skills",
+      "url": "https://www.androidauthority.com/how-to-use-gemini-skills-google-upgraded-gems-feature-3718807/"
+    }
   ]
 }
