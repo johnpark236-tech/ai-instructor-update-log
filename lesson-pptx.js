@@ -42,10 +42,12 @@
     // 1. 표지
     const cover = pptx.addSlide();
     cover.background = { color: C.navy };
+    cover.addShape(pptx.ShapeType.roundRect, { x: 0.8, y: 0.55, w: 1.9, h: 0.5, fill: { color: L.type === 'new' ? '70E1A1' : '6EE7FF' }, rectRadius: 0.08 });
+    cover.addText(L.type === 'new' ? '신규 AI' : '기존 AI', { x: 0.8, y: 0.55, w: 1.9, h: 0.5, fontFace: FONT, fontSize: 18, bold: true, color: '07111F', align: 'center', valign: 'middle', margin: 0 });
     cover.addText(`${L.category} · ${L.tool} · ${L.company}`, { x: 0.8, y: 1.2, w: 11.7, h: 0.5, fontFace: FONT, fontSize: 16, bold: true, color: C.cyanL, charSpacing: 2, margin: 0 });
     cover.addText(L.title, { x: 0.8, y: 1.9, w: 11.7, h: 2.0, fontFace: FONT, fontSize: 40, bold: true, color: 'FFFFFF', valign: 'top', margin: 0 });
     cover.addText(L.summary, { x: 0.8, y: 4.1, w: 11.0, h: 1.4, fontFace: FONT, fontSize: 20, color: 'C0CDE0', valign: 'top', margin: 0 });
-    cover.addText(`${L.type === 'new' ? '신규 서비스' : '새 기능'}   |   ${L.level} · 약 ${L.minutes}분   |   발표 ${L.released}   |   작성 ${L.created_at}`, { x: 0.8, y: 6.3, w: 11.7, h: 0.4, fontFace: FONT, fontSize: 13, color: '91A6C2', margin: 0 });
+    cover.addText(`${L.type === 'new' ? '신규 AI' : '기존 AI 새 기능'}   |   ${L.level} · 약 ${L.minutes}분   |   발표 ${L.released}   |   작성 ${L.created_at}`, { x: 0.8, y: 6.3, w: 11.7, h: 0.4, fontFace: FONT, fontSize: 13, color: '91A6C2', margin: 0 });
 
     // 2. 왜 지금 + 준비물
     let s = header(pptx, L, '왜 지금 배우나 · 준비물', ++n);

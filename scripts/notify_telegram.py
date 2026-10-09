@@ -24,12 +24,12 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 def compose(lesson, base):
     e = lambda s: html.escape(str(s), quote=False)
     link = f"{base}/lessons.html#{urllib.parse.quote(lesson['id'])}"
-    kind = "신규 서비스" if lesson.get("type") == "new" else "새 기능"
+    kind = "신규 AI" if lesson.get("type") == "new" else "기존 AI"
     steps = "\n".join(f"{i}. {e(s['title'])}" for i, s in enumerate(lesson["steps"], 1))
     lines = [
         f"📘 <b>새 AI 실습 교안</b>  ({e(lesson['created_at'])})",
         "",
-        f"<b>{e(lesson['title'])}</b>",
+        f"<b>[{kind}] {e(lesson['title'])}</b>",
         f"{e(lesson['tool'])} · {e(lesson['company'])} | {e(lesson['category'])} | {kind} | {e(lesson['level'])} {lesson['minutes']}분",
         "",
         f"📝 <b>요약</b>\n{e(lesson['summary'])}",
