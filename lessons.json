@@ -1,6 +1,19 @@
 {
-  "count": 1,
+  "count": 2,
   "lessons": [
+    {
+      "id": "2026-10-10-0100-chatgpt-intelligent-ui",
+      "created_at": "2026-10-10 01:00 KST",
+      "title": "ChatGPT 인텔리전트 UI: 글 대신 '눌러 보는 답'과 즉석 도구 만들기",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "category": "추론",
+      "type": "update",
+      "released": "2026-10-07",
+      "level": "입문",
+      "minutes": 30,
+      "summary": "GPT-6가 들어간 ChatGPT는 질문에 따라 답을 글만이 아니라 도표·버튼·탭·양식·인터랙티브 도식으로 구성하고, 요청하면 계산기나 퀴즈 게임 같은 작은 도구를 대화 안에서 바로 만들어 줍니다."
+    },
     {
       "id": "2026-10-09-2349-gemini-skills",
       "created_at": "2026-10-09 23:49 KST",
