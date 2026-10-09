@@ -51,3 +51,13 @@ API key는 코드나 JSON에 직접 저장하지 마세요.
 ### PPT 다운로드
 
 교안 화면 위·아래의 **⬇ PPT로 다운로드** 버튼을 누르면 그 교안이 16:9 PowerPoint 파일(.pptx)로 저장됩니다. 표지, 준비물, 단계별 1장씩, 실습 과제, 체크리스트, 수업 팁, 퀴즈·정답, 출처 순서로 구성됩니다. 변환은 브라우저에서 이루어지며(`lesson-pptx.js`, 라이브러리 `vendor/pptxgen.bundle.js`, MIT), 새 교안에도 자동으로 적용됩니다.
+
+## 텔레그램 알림 (새 교안마다)
+
+새 교안(`lessons/*.json`)이 main 에 올라오면 `.github/workflows/telegram-notify.yml` 이 제목·요약·따라 하기 단계·실습 과제·교안 링크를 텔레그램으로 보냅니다. Actions 탭에서 이 워크플로를 **Run workflow** 하면 가장 최근 교안으로 테스트 메시지를 보냅니다.
+
+필요한 Repository secret (Settings → Secrets and variables → Actions):
+- `TELEGRAM_BOT_TOKEN`: 텔레그램 @BotFather 에서 `/newbot` 으로 만든 봇 토큰
+- `TELEGRAM_CHAT_ID`: 봇에게 아무 메시지나 보낸 뒤 `https://api.telegram.org/bot<토큰>/getUpdates` 에서 확인한 `chat.id`
+
+Secret 이 없으면 알림만 건너뛰고 다른 작업은 그대로 진행됩니다.
