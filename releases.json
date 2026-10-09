@@ -3,6 +3,21 @@
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
+      "id": "chatgpt-2026-10-09-composer-predictions",
+      "date": "2026-10-09",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Codex 다음 메시지 추천(베타)",
+      "summary": "Codex 데스크톱에서 대화 흐름을 보고 다음에 보낼 메시지를 제안, Tab으로 받아 고친 뒤 전송 (개인 Pro)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
       "id": "chatgpt-2026-10-08-10",
       "date": "2026-10-08",
       "tool": "ChatGPT",
@@ -168,6 +183,21 @@
       "lesson_id": null
     },
     {
+      "id": "elevenlabs-2026-09-28-eleven-v4",
+      "date": "2026-09-28",
+      "tool": "ElevenLabs",
+      "company": "ElevenLabs",
+      "type": "update",
+      "title": "Eleven v4·v4 Turbo 음성 모델",
+      "summary": "오디오 태그로 감정·말투를 더 정확히 연출하는 음성 합성 모델, 한국어 포함 90개 이상 언어, 한 번에 1만 자",
+      "source": {
+        "title": "ElevenLabs 블로그 – Eleven v4",
+        "url": "https://elevenlabs.io/blog/eleven-v4"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT05-001"
+    },
+    {
       "id": "claude-2026-09-28-13",
       "date": "2026-09-28",
       "tool": "Claude",
@@ -178,6 +208,21 @@
       "source": {
         "title": "Claude 릴리스 노트",
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "copilot-2026-09-25-home-code-autopilot",
+      "date": "2026-09-25",
+      "tool": "Microsoft 365 Copilot",
+      "company": "Microsoft",
+      "type": "update",
+      "title": "새 Copilot: Home·Code·Autopilot",
+      "summary": "채팅과 Cowork를 묶은 Home, 말로 앱·자동화를 만드는 Code, 자리를 비워도 일하는 Autopilot 공개 (Frontier 프로그램부터 순차)",
+      "source": {
+        "title": "Microsoft Source EMEA – New Microsoft Copilot",
+        "url": "https://news.microsoft.com/source/emea/2026/09/new-microsoft-copilot-brings-home-code-and-autopilot-together/"
       },
       "checked": "2026-10-10",
       "lesson_id": null

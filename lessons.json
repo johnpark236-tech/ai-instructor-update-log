@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 4,
+  "count": 5,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-001",
+      "version": "v1.0",
+      "created_at": "2026-10-10 05:20 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "감정이 살아 있는 한국어 듣기 자료 만들기 — ElevenLabs Eleven v4 오디오 태그로 대화 MP3 완성하기",
+      "summary": "ElevenLabs의 새 음성 모델 Eleven v4는 대본 속 [excited], [whispers] 같은 오디오 태그를 더 정확히 따라 말투와 감정을 연출합니다. 한국어를 포함한 90개 이상 언어를 지원하며, 무료 계정으로 감정이 담긴 수업용 듣기 대화 MP3를 만듭니다.",
+      "tool": "ElevenLabs",
+      "feature": "Eleven v4 (Text to Speech · Audio Tags)",
+      "company": "ElevenLabs",
+      "type": "update",
+      "released": "2026-09-28",
+      "categories": [
+        "CAT-05",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-CRE",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "감정이 살아 있는 한국어 듣기 대화 MP3 1개 (2인 대화 6줄 내외) + 오디오 태그가 들어간 대본 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "대본에 감정 태그만 넣으면 실감 나는 음성"
+    },
     {
       "id": "AI-2026-10-CAT04-001",
       "version": "v1.0",
