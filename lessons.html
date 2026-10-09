@@ -4,131 +4,183 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI 실습 교안</title>
 <style>
-:root{--bg:#07111f;--p:#0e1b2e;--l:#203552;--t:#edf5ff;--m:#91a6c2;--a:#6ee7ff;--g:#70e1a1;--w:#ffcf70}
+:root{--bg:#07111f;--p:#0e1b2e;--l:#203552;--t:#edf5ff;--m:#91a6c2;--a:#6ee7ff;--g:#70e1a1;--w:#ffcf70;--r:#ff8fa3}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#0d2941 0,transparent 34%),var(--bg);color:var(--t);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;line-height:1.6}
-a{color:#9fe9ff}.w{width:min(980px,calc(100% - 32px));margin:auto}
+a{color:#9fe9ff}.w{width:min(1000px,calc(100% - 32px));margin:auto}
 header{position:sticky;top:0;z-index:3;background:#07111fdd;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff12}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}.brand{font-weight:900}.nav a{font-size:13px;text-decoration:none}
-.hero{padding:48px 0 18px}.ey{font-size:12px;color:var(--a);font-weight:800;letter-spacing:.18em}
-h1{font-size:clamp(32px,6vw,58px);line-height:1.05;letter-spacing:-.04em;margin:12px 0}.lead{color:#b7c6da;max-width:760px}
-.tools{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.tools input{flex:1;min-width:200px;background:#0b1728;border:1px solid var(--l);color:#fff;border-radius:12px;padding:11px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;gap:12px}.brand{font-weight:900}.links{display:flex;gap:14px;font-size:13px}.links a{text-decoration:none}.links a.on{color:#fff;font-weight:800}
+.hero{padding:40px 0 14px}.ey{font-size:12px;color:var(--a);font-weight:800;letter-spacing:.14em}
+h1{font-size:clamp(30px,6vw,54px);line-height:1.08;letter-spacing:-.03em;margin:10px 0}.lead{color:#b7c6da;max-width:780px}
+h2{font-size:22px;margin:34px 0 10px}h3{font-size:17px;margin:20px 0 8px;color:#cfe0f5}
+.card{background:linear-gradient(180deg,#102039,#0c182a);border:1px solid #ffffff12;border-radius:16px;padding:16px;margin-bottom:12px}
+.tabs{display:flex;gap:8px;margin:6px 0}.tab{cursor:pointer;flex:1;max-width:220px;background:#0b1728;color:#bed0e8;border:1px solid #294563;border-radius:12px;padding:10px;font-size:14px}.tab.on{border-color:var(--a);color:#fff;background:#10243d}.tab b{color:var(--a);margin-left:4px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tools input,.tools select{flex:1;min-width:150px;background:#0b1728;border:1px solid var(--l);color:#fff;border-radius:12px;padding:10px;font-size:14px}
 .chip{cursor:pointer;background:#0f2038;color:#bed0e8;border:1px solid #294563;padding:8px 12px;border-radius:999px;font-size:13px}.chip.on{border-color:var(--a);color:#fff}
-.card{background:linear-gradient(180deg,#102039,#0c182a);border:1px solid #ffffff12;border-radius:18px;padding:18px;margin-bottom:12px}
-
-.ttl{font-weight:850;font-size:18px}.meta{font-size:12px;color:#7f96b4;display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.badge{font-size:11px;padding:2px 8px;border:1px solid #3a5473;border-radius:999px;color:#bdd0e7}.badge.new{border-color:var(--g);color:var(--g)}.badge.update{border-color:var(--a);color:var(--a)}
+.kind,.acc{display:inline-block;vertical-align:middle;font-size:12px;font-weight:900;padding:2px 8px;border-radius:7px;margin-right:6px;position:relative;top:-2px;white-space:nowrap}
+.kind.kn{background:#70e1a1;color:#04261a}.kind.ku{background:#6ee7ff;color:#03222d}
+.acc{border:1.5px solid}.acc.af{color:var(--g)}.acc.am{color:var(--w)}.acc.ap{color:var(--r)}
+h1 .kind,h1 .acc{font-size:15px;top:-8px}
+.item{position:relative;padding:0}.item .go{display:block;color:inherit;text-decoration:none;padding:16px 16px 52px}.item:hover{border-color:#3a6a90}.no{color:var(--a);font-weight:900;margin-right:6px}
+.ttl{font-weight:850;font-size:17px;line-height:1.45}.meta{font-size:12px;color:#8fa6c3;display:flex;gap:6px 10px;flex-wrap:wrap;margin-top:6px}
+.pill{font-size:11px;border:1px solid #2c4867;border-radius:999px;padding:1px 8px;color:#bcd0e8}
 .desc{color:#c0cde0;font-size:14px;margin:8px 0 0}
-h2{font-size:20px;margin:28px 0 10px}ol.steps{list-style:none;padding:0;margin:0;counter-reset:s}
-ol.steps li{counter-increment:s;position:relative;padding:16px 16px 16px 58px}ol.steps li:before{content:counter(s);position:absolute;left:16px;top:14px;width:30px;height:30px;border-radius:50%;background:#16304f;color:var(--a);display:grid;place-items:center;font-weight:900}
-.do{margin:4px 0}.ex{color:var(--g);font-size:14px}.ex:before{content:"결과 → "}
-.sample{background:#0b1728;border:1px solid var(--l);border-radius:12px;padding:12px;font-size:14px;white-space:pre-wrap}
-label.ck{display:flex;gap:10px;align-items:flex-start;padding:6px 0;cursor:pointer}label.ck input{margin-top:5px;width:18px;height:18px}
-ul.plain{margin:0;padding-left:20px}.warn li::marker{color:var(--w)}
-details{border-top:1px solid #ffffff12;padding:10px 0}summary{cursor:pointer;font-weight:700}details p{margin:6px 0 0;color:var(--g)}
-.back{display:inline-block;margin:24px 0 0;font-size:14px}.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.dl{cursor:pointer;margin-top:24px;background:linear-gradient(90deg,#0891b2,#6366f1);color:#fff;border:0;border-radius:12px;padding:11px 16px;font-weight:800;font-size:14px}.dl:disabled{opacity:.6;cursor:wait}.kind{display:inline-block;vertical-align:middle;font-size:.62em;font-weight:900;padding:3px 9px;border-radius:8px;margin-right:8px;position:relative;top:-2px;letter-spacing:0}.kind.kn{background:#70e1a1;color:#04261a}.kind.ku{background:#6ee7ff;color:#03222d}h1 .kind{font-size:.45em;top:-6px}
-.acc{display:inline-block;vertical-align:middle;font-size:.62em;font-weight:900;padding:3px 9px;border-radius:8px;margin-right:8px;position:relative;top:-2px;border:1.5px solid}.acc.af{color:#70e1a1;border-color:#70e1a1}.acc.am{color:#ffcf70;border-color:#ffcf70}.acc.ap{color:#ff8fa3;border-color:#ff8fa3}h1 .acc{font-size:.45em;top:-6px}p .acc{font-size:12px;top:-1px}
-.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.plan{background:#0b1728;border:1px solid var(--l);border-radius:12px;padding:12px}.pn{font-weight:800;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.pn span{color:var(--a);font-weight:700;font-size:14px}.pf{font-size:14px;color:#c0cde0;margin-top:6px}.pnote{font-size:12px;color:var(--m);margin:12px 0 0}
-.tabs{display:flex;gap:8px;margin:6px 0 4px}.tab{cursor:pointer;flex:1;max-width:220px;background:#0b1728;color:#bed0e8;border:1px solid #294563;border-radius:12px;padding:11px;font-size:14px}.tab.on{border-color:var(--a);color:#fff;background:#10243d}.tab b{color:var(--a);margin-left:4px}
-.item{position:relative;padding:0}.item .go{display:block;color:inherit;text-decoration:none;padding:18px 18px 52px}.item:hover{border-color:#3a6a90}.no{color:var(--a);font-weight:900;margin-right:8px}
 .mk{cursor:pointer;background:#123326;color:var(--g);border:1px solid #2d6b4c;border-radius:10px;padding:7px 12px;font-weight:800;font-size:13px}.item .mk{position:absolute;right:14px;bottom:12px}.mk.undo{background:#1a2638;color:#bed0e8;border-color:#3a5473}.mk.big{display:block;width:100%;margin:28px 0 0;padding:15px;font-size:16px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{cursor:pointer;background:#10243d;color:#dff3ff;border:1px solid #2f5577;border-radius:10px;padding:9px 12px;font-weight:800;font-size:13px}.btn.pri{background:linear-gradient(90deg,#0891b2,#6366f1);border:0;color:#fff}.btn:disabled{opacity:.6;cursor:wait}
+.seg{display:inline-flex;border:1px solid #2f5577;border-radius:10px;overflow:hidden}.seg button{cursor:pointer;background:#0b1728;color:#bed0e8;border:0;padding:9px 12px;font-size:13px;font-weight:700}.seg button.on{background:#1b3a5c;color:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border-bottom:1px solid #ffffff14;padding:8px 8px;text-align:left;vertical-align:top}th{color:#9fc3e6;font-size:13px;white-space:nowrap}
+.tw{overflow-x:auto}.tw table.wide{min-width:620px}td:first-child{min-width:64px}.meta-t th{width:28%;white-space:normal}
+.call{border-left:4px solid var(--a);background:#0d1f35;padding:10px 14px;border-radius:8px;margin:10px 0;font-size:14px}.call.warn{border-color:var(--w);background:#2a2210}.call.note{border-color:#8b9dff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+ul.plain{margin:0;padding-left:20px}ul.ok li::marker{color:var(--g)}ul.bad li::marker{color:var(--r)}ul.warn li::marker{color:var(--w)}
+.step{padding:14px 16px}.sh{display:flex;justify-content:space-between;gap:8px;font-weight:800}.sh span{color:var(--m);font-weight:600;font-size:13px;white-space:nowrap}
+.prompt{position:relative;background:#06101d;border:1px solid #284866;border-radius:10px;padding:12px 56px 12px 12px;margin:8px 0;font-size:14px;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,"Noto Sans KR",monospace}
+.cp{position:absolute;top:6px;right:6px;cursor:pointer;background:#123456;color:#cfefff;border:1px solid #2f5577;border-radius:8px;font-size:12px;padding:3px 8px;font-family:inherit}
+.ex{color:var(--g);font-size:14px}.ex:before{content:"결과 → "}.sn{color:var(--w);font-size:13px;margin-top:4px}
+.q{padding:12px 0;border-top:1px solid #ffffff12}.q:first-child{border-top:0}.opts{display:grid;gap:6px;margin-top:8px}.opt{cursor:pointer;text-align:left;background:#0b1728;color:#dbe7f5;border:1px solid #284866;border-radius:10px;padding:8px 10px;font-size:14px}.opt.right{border-color:var(--g);background:#0f2a1f}.opt.wrong{border-color:var(--r);background:#2a1218}.qe{display:none;font-size:14px;color:var(--g);margin-top:6px}.q.done .qe{display:block}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.plan{background:#0b1728;border:1px solid var(--l);border-radius:12px;padding:12px}.pn{font-weight:800;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.pn span{color:var(--a);font-weight:700;font-size:14px}.pf{font-size:14px;color:#c0cde0;margin-top:6px}.pnote{font-size:12px;color:var(--m);margin:10px 0 0}
+.ins{border:1px dashed #6b5cff;border-radius:18px;padding:4px 16px 16px;margin-top:34px;background:#0d0f2a}
+label.ck{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}label.ck input{margin-top:5px;width:18px;height:18px}
 .sync{margin:22px 0 0;font-size:12px;color:var(--m)}.linkbtn{background:none;border:0;color:#9fe9ff;text-decoration:underline;cursor:pointer;font-size:12px;padding:0}
-.empty{padding:28px;border:1px dashed #34516f;border-radius:16px;color:var(--m);text-align:center}
-footer{padding:48px 0;color:#6f87a6;font-size:12px}
-@media print{body{background:#fff;color:#000}header,.tools,.tabs,.sync,.mk,.back,.dl,footer{display:none}.card{background:#fff;border-color:#ccc}.ex,details p{color:#060}}
+.empty{padding:26px;border:1px dashed #34516f;border-radius:16px;color:var(--m);text-align:center}
+footer{padding:44px 0;color:#6f87a6;font-size:12px}
+@media print{body{background:#fff;color:#000}header,.tools,.tabs,.sync,.mk,.bar,footer,.cp{display:none}.card,.ins{background:#fff;border-color:#ccc}.ex,.qe{color:#060}.q .qe{display:block}}
 </style>
 </head>
 <body>
-<header><div class="w nav"><div class="brand">AI 실습 교안</div><a href="./index.html">AI DAILY TOP10 →</a></div></header>
+<header><div class="w nav"><div class="brand">AI 실습 교안</div><div class="links"><a class="on" href="./lessons.html">교안</a><a href="./releases.html">릴리즈 노트</a><a href="./index.html">TOP10</a></div></div></header>
 <main class="w" id="app"></main>
-<footer class="w">매시간 새 AI 기능 하나를 조사해 30분 안에 따라 할 수 있는 교안으로 정리합니다. 모든 교안 하단에 공식 출처가 있습니다.</footer>
+<footer class="w">교안 작성 기준 v2.0 — 모든 사실 정보는 공식 출처와 확인일을 표기합니다. [확인 필요]·[미검증] 표시는 강의 전 실제 화면으로 확인하세요.</footer>
+<script src="./lesson-meta.js"></script>
 <script src="./lesson-pptx.js"></script>
 <script>
-const app=document.getElementById('app');
-const CATS=['전체','추론','이미지','영상','음성','코딩','에이전트','리서치'];
-let INDEX={lessons:[]},filter='전체',query='',tab='todo';
+const M=window.LESSON_META,app=document.getElementById('app');
+let INDEX={lessons:[]},tab='todo',f={kind:'all',cat:'',lvl:'',job:'',q:''},view='learner';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-const KIND=t=>t==='new'?'신규 AI':'기존 AI';
-const badge=t=>`<span class="kind ${t==='new'?'kn':'ku'}">${KIND(t)}</span>`;
-const ACC={free:['무료','af'],freemium:['무료+유료','am'],paid:['유료','ap']};
-const accBadge=a=>ACC[a]?`<span class="acc ${ACC[a][1]}">${ACC[a][0]}</span>`:'';
-const KINDS=[['all','전체'],['new','신규 AI'],['update','기존 AI']];let kind='all';
+view=store.get('view')||'learner';
+const kindB=t=>`<span class="kind ${t==='new'?'kn':'ku'}">${M.KIND[t]||''}</span>`;
+const accB=a=>M.ACCESS[a]?`<span class="acc ${{free:'af',freemium:'am',paid:'ap'}[a]}">${M.ACCESS[a]}</span>`:'';
 const getDone=()=>store.get('done')||{};
 function setDone(id,on){const d=getDone();if(on)d[id]=new Date().toISOString();else delete d[id];store.set('done',d)}
-// 오래된 교안부터 순서대로 번호를 붙인다
+// 예전(v1) 교안 ID로 남은 완료 기록을 새 ID로 옮김
+(function(){const d=getDone();let ch=0;for(const[o,n]of Object.entries(M.LEGACY)){if(d[o]){d[n]=d[o];delete d[o];ch=1}}if(ch)store.set('done',d)})();
 function ordered(){return [...INDEX.lessons].sort((a,b)=>(a.created_at+a.id).localeCompare(b.created_at+b.id)).map((l,i)=>({...l,no:i+1}))}
-function nextTodo(afterId){const d=getDone(),all=ordered(),i=all.findIndex(l=>l.id===afterId);return all.slice(i+1).find(l=>!d[l.id])||all.find(l=>!d[l.id]&&l.id!==afterId)}
+function nextTodo(id){const d=getDone(),all=ordered(),i=all.findIndex(l=>l.id===id);return all.slice(i+1).find(l=>!d[l.id])||all.find(l=>!d[l.id]&&l.id!==id)}
+const opt=(v,t,cur)=>`<option value="${v}" ${v===cur?'selected':''}>${t}</option>`;
 
 function listView(){
-  const done=getDone(),all=ordered(),doneN=all.filter(l=>done[l.id]).length,todoN=all.length-doneN;
-  const items=all.filter(l=>(tab==='done')===!!done[l.id]).filter(l=>(kind==='all'||l.type===kind)&&(filter==='전체'||l.category===filter)&&(!query||JSON.stringify(l).toLowerCase().includes(query.toLowerCase())));
-  app.innerHTML=`<section class="hero"><div class="ey">HOURLY AI PRACTICE</div><h1>새 AI 기능,<br>바로 따라 하는 교안.</h1>
-  <p class="lead">오래된 교안부터 순서대로 배우세요. 다 배운 교안은 <b>완료</b>를 누르면 목록에서 사라지고, 완료 탭에 그대로 보관됩니다.</p></section>
-  <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${todoN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
-  <div class="tools">${KINDS.map(([k,t])=>`<button class="chip kc ${k===kind?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
-  <div class="tools"><input id="q" placeholder="AI 이름·기능 검색" value="${esc(query)}">${CATS.map(c=>`<button class="chip ${c===filter?'on':''}" data-c="${c}">${c}</button>`).join('')}</div>
-  <div class="list">${items.length?items.map(l=>`<div class="card item"><a class="go" href="#${esc(l.id)}"><div class="ttl"><span class="no">#${l.no}</span>${badge(l.type)}${accBadge(l.access)}${esc(l.title)}</div>
-  <div class="meta"><span>${esc(l.tool)} · ${esc(l.company)}</span><span>${esc(l.category)}</span><span>${esc(l.level)} · ${l.minutes}분</span><span>작성 ${esc(l.created_at)}</span>${done[l.id]?`<span>완료 ${esc(String(done[l.id]).slice(0,10))}</span>`:''}</div>
-  <p class="desc">${esc(l.summary)}</p></a>
-  ${tab==='done'?`<button class="mk undo" data-id="${esc(l.id)}">↩ 다시 학습하기</button>`:`<button class="mk" data-id="${esc(l.id)}">✓ 완료</button>`}</div>`).join('')
-  :`<div class="empty">${tab==='done'?'아직 완료한 교안이 없습니다.':(todoN?'조건에 맞는 교안이 없습니다.':'🎉 모든 교안을 완료했습니다. 새 교안은 매시간 추가됩니다.')}</div>`}</div>
+  const done=getDone(),all=ordered(),doneN=all.filter(l=>done[l.id]).length;
+  const items=all.filter(l=>(tab==='done')===!!done[l.id]).filter(l=>
+    (f.kind==='all'||l.type===f.kind)&&(!f.cat||l.categories.includes(f.cat))&&
+    (!f.lvl||l.learner_levels.includes(f.lvl)||l.instructor_levels.includes(f.lvl))&&(!f.job||l.jobs.includes(f.job))&&
+    (!f.q||JSON.stringify(l).toLowerCase().includes(f.q.toLowerCase())));
+  app.innerHTML=`<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.0</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
+  <p class="lead">신규 AI와 기존 AI의 새 기능을 이론 → 실습 → 결과물로 정리합니다. 오래된 교안부터 순서대로 배우고, 다 배우면 <b>완료</b>를 눌러 숨기세요. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>에서 볼 수 있습니다.</p></section>
+  <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
+  <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
+  <div class="tools"><select id="fc">${opt('','카테고리 전체',f.cat)}${Object.entries(M.CAT).map(([k,v])=>opt(k,`${k} ${v}`,f.cat)).join('')}</select>
+  <select id="fl">${opt('','대상 전체',f.lvl)}${Object.keys(M.LEVEL).map(k=>opt(k,`${M.LEVEL[k]} ${k.includes('강사')?k:'학습자-'+k}`,f.lvl)).join('')}</select>
+  <select id="fj">${opt('','직업군 전체',f.job)}${Object.entries(M.JOB).map(([k,v])=>opt(k,v,f.job)).join('')}</select>
+  <input id="q" placeholder="AI 이름·기능 검색" value="${esc(f.q)}"></div>
+  <div class="list">${items.length?items.map(l=>`<div class="card item"><a class="go" href="#${esc(l.id)}">
+   <div class="ttl"><span class="no">#${l.no}</span>${kindB(l.type)}${accB(l.access)}${esc(l.title)}</div>
+   ${l.notice?`<div class="call warn">⚠️ ${esc(l.notice)}</div>`:''}
+   <div class="meta"><span>${esc(l.tool)} · ${esc(l.feature)}</span><span>출시 ${esc(l.released)}</span><span>${l.total_minutes}분</span><span>재검토 ${esc(l.review_by)}</span>${done[l.id]?`<span>완료 ${esc(String(done[l.id]).slice(0,10))}</span>`:''}</div>
+   <div class="meta">${l.categories.map(c=>`<span class="pill">${c} ${M.CAT[c]}</span>`).join('')}${M.levelBadges(l).map(b=>`<span class="pill">${b}</span>`).join('')}</div>
+   <p class="desc">${esc(l.summary)}</p></a>
+   ${tab==='done'?`<button class="mk undo" data-id="${esc(l.id)}">↩ 다시 학습하기</button>`:`<button class="mk" data-id="${esc(l.id)}">✓ 완료</button>`}</div>`).join('')
+   :`<div class="empty">${tab==='done'?'아직 완료한 교안이 없습니다.':(all.length-doneN?'조건에 맞는 교안이 없습니다.':'🎉 모든 교안을 완료했습니다. 새 교안은 매시간 추가됩니다.')}</div>`}</div>
   <div class="sync">완료 기록은 이 기기의 브라우저에 저장됩니다. <button class="linkbtn" id="sync">다른 기기로 완료 기록 옮기기</button></div>`;
-  const q=document.getElementById('q');q.oninput=()=>{query=q.value;const p=q.selectionStart;listView();const n=document.getElementById('q');n.focus();n.setSelectionRange(p,p)};
-  document.querySelectorAll('.chip[data-c]').forEach(b=>b.onclick=()=>{filter=b.dataset.c;listView()});
-  document.querySelectorAll('.chip[data-k]').forEach(b=>b.onclick=()=>{kind=b.dataset.k;listView()});
+  const q=document.getElementById('q');q.oninput=()=>{f.q=q.value;const p=q.selectionStart;listView();const n=document.getElementById('q');n.focus();n.setSelectionRange(p,p)};
+  document.getElementById('fc').onchange=e=>{f.cat=e.target.value;listView()};
+  document.getElementById('fl').onchange=e=>{f.lvl=e.target.value;listView()};
+  document.getElementById('fj').onchange=e=>{f.job=e.target.value;listView()};
+  document.querySelectorAll('.chip[data-k]').forEach(b=>b.onclick=()=>{f.kind=b.dataset.k;listView()});
   document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{tab=b.dataset.t;listView()});
-  document.querySelectorAll('.mk').forEach(b=>b.onclick=()=>{setDone(b.dataset.id,!b.classList.contains('undo'));listView()});
+  document.querySelectorAll('.item .mk').forEach(b=>b.onclick=()=>{setDone(b.dataset.id,!b.classList.contains('undo'));listView()});
   document.getElementById('sync').onclick=shareSync;
 }
 
 async function shareSync(){
-  const ids=Object.keys(getDone());
-  const url=location.href.split('#')[0]+'#import='+encodeURIComponent(ids.join(','));
+  const url=location.href.split('#')[0]+'#import='+encodeURIComponent(Object.keys(getDone()).join(','));
   try{if(navigator.share){await navigator.share({title:'AI 실습 교안 완료 기록',url});return}}catch(e){return}
-  try{await navigator.clipboard.writeText(url);alert('링크를 복사했습니다. 다른 기기(휴대폰 등)에서 이 링크를 열면 완료 기록이 합쳐집니다.')}catch(e){prompt('이 링크를 다른 기기에서 여세요',url)}
+  try{await navigator.clipboard.writeText(url);alert('링크를 복사했습니다. 다른 기기에서 이 링크를 열면 완료 기록이 합쳐집니다.')}catch(e){prompt('이 링크를 다른 기기에서 여세요',url)}
 }
-function importSync(raw){
-  const ids=decodeURIComponent(raw).split(',').filter(Boolean),d=getDone();let n=0;
-  ids.forEach(id=>{if(!d[id]){d[id]=new Date().toISOString();n++}});store.set('done',d);
-  history.replaceState(null,'',location.pathname);alert(`완료 기록 ${n}개를 가져왔습니다.`);tab='todo';listView();
-}
+function importSync(raw){const d=getDone();let n=0;decodeURIComponent(raw).split(',').filter(Boolean).map(i=>M.LEGACY[i]||i).forEach(i=>{if(!d[i]){d[i]=new Date().toISOString();n++}});store.set('done',d);history.replaceState(null,'',location.pathname);alert(`완료 기록 ${n}개를 가져왔습니다.`);tab='todo';listView()}
+
+const T=(h,rows)=>`<div class="tw"><table class="${h.length>=3?'wide':''}"><thead><tr>${h.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+const UL=(a,c='')=>`<ul class="plain ${c}">${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+const steps=(arr,start)=>arr.map((s,i)=>`<div class="card step"><div class="sh">STEP ${start+i}. ${esc(s.title)}${s.minutes?`<span>${s.minutes}분</span>`:''}</div><p style="margin:6px 0">${esc(s.do)}</p>${s.prompt?`<div class="prompt"><button class="cp" type="button">복사</button><span class="pv">${esc(s.prompt)}</span></div>`:''}<div class="ex">${esc(s.expect)}</div>${s.note?`<div class="sn">⚠️ ${esc(s.note)}</div>`:''}</div>`).join('');
 
 async function lessonView(id){
   app.innerHTML='<div class="empty">불러오는 중…</div>';
-  let L;try{L=await (await fetch(`./lessons/${encodeURIComponent(id)}.json?${Date.now()}`)).json()}catch(e){app.innerHTML='<div class="empty">교안을 찾을 수 없습니다. <a href="#">목록으로</a></div>';return}
-  const key='ck:'+L.id,ck=store.get(key)||[],meta=ordered().find(l=>l.id===L.id),isDone=!!getDone()[L.id];
-  const doneBtn=isDone?`<button class="mk big undo" type="button">↩ 완료 취소 (다시 목록에 표시)</button>`:`<button class="mk big" type="button">✓ 학습 완료 — 목록에서 숨기고 다음 교안으로</button>`;
-  app.innerHTML=`<div class="bar"><a class="back" href="#">← 교안 목록</a><button class="dl" type="button">⬇ PPT로 다운로드</button></div>
-  <section class="hero" style="padding-top:20px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.category)} · ${esc(L.tool)}${isDone?' · ✅ 완료한 교안':''}</div><h1 style="font-size:clamp(26px,4.5vw,42px)">${badge(L.type)}${L.pricing?accBadge(L.pricing.access):''}${esc(L.title)}</h1>
-  <div class="meta"><span>${esc(L.company)}</span><span>${esc(L.level)} · 약 ${L.minutes}분</span><span>발표 ${esc(L.released)}</span><span>작성 ${esc(L.created_at)}</span></div>
-  <p class="lead">${esc(L.summary)}</p></section>
-  <div class="card"><b>왜 지금 배우나</b><p class="desc">${esc(L.why)}</p></div>
-  <h2>준비물</h2><div class="card"><ul class="plain">${L.prerequisites.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>
-  ${L.pricing?`<h2>요금제별 기능 · 혜택</h2><div class="card"><p style="margin-top:0">${accBadge(L.pricing.access)}${esc(L.pricing.summary)}</p>
-  <div class="plans">${L.pricing.plans.map(x=>`<div class="plan"><div class="pn">${esc(x.name)}<span>${esc(x.price)}</span></div><div class="pf">${esc(x.features)}</div></div>`).join('')}</div>
-  <p class="pnote">${L.pricing.note?esc(L.pricing.note)+' ':''}(확인일 ${esc(L.pricing.checked)}${(L.pricing.sources||[]).map(x=>` · <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`).join('')})</p></div>`:''}
-  <h2>따라 하기</h2><ol class="steps">${L.steps.map(s=>`<li class="card"><b>${esc(s.title)}</b><p class="do">${esc(s.do)}</p><div class="ex">${esc(s.expect)}</div></li>`).join('')}</ol>
-  <h2>실습 과제</h2><div class="card"><p style="margin-top:0">${esc(L.practice.task)}</p>${L.practice.sample_input?`<div class="sample">${esc(L.practice.sample_input)}</div>`:''}
-  <div style="margin-top:12px">${L.practice.checklist.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span>${esc(c)}</span></label>`).join('')}</div></div>
-  ${L.teaching_tips.length?`<h2>수업에 쓸 때</h2><div class="card"><ul class="plain">${L.teaching_tips.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>`:''}
-  <h2>주의할 점</h2><div class="card"><ul class="plain warn">${L.pitfalls.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>
-  <h2>확인 퀴즈</h2><div class="card">${L.quiz.map(q=>`<details><summary>${esc(q.q)}</summary><p>${esc(q.a)}</p></details>`).join('')}</div>
-  <h2>출처</h2><div class="card"><ul class="plain">${L.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></li>`).join('')}</ul></div>
-  ${doneBtn}
-  <div class="bar"><a class="back" href="#">← 교안 목록</a><button class="dl" type="button">⬇ PPT로 다운로드</button></div>`;
-  app.querySelectorAll('label.ck input').forEach(b=>b.onchange=()=>store.set(key,[...app.querySelectorAll('label.ck input')].map(x=>x.checked)));
-  app.querySelectorAll('.dl').forEach(b=>b.onclick=()=>window.downloadLessonPptx(L,b));
-  app.querySelector('.mk.big').onclick=()=>{
-    if(isDone){setDone(L.id,false);lessonView(L.id);return}
-    setDone(L.id,true);const n=nextTodo(L.id);
-    if(n){location.hash=n.id}else{tab='todo';location.hash='';listView();window.scrollTo(0,0)}
-  };
-  window.scrollTo(0,0);
+  let L;try{const r=await fetch(`./lessons/${encodeURIComponent(id)}.json?${Date.now()}`);if(!r.ok)throw 0;L=await r.json()}catch(e){app.innerHTML='<div class="empty">교안을 찾을 수 없습니다. <a href="#">목록으로</a></div>';return}
+  const meta=ordered().find(l=>l.id===L.id),isDone=!!getDone()[L.id],ins=view==='instructor',P=L.pricing,th=L.theory,pc=L.practice,wr=L.wrap,I=L.instructor;
+  const mn=L.minutes,tot=M.totalMinutes(L),ck=store.get('db:'+L.id)||[];
+  const bar=`<div class="bar"><a href="#">← 교안 목록</a><div class="btns"><div class="seg"><button data-v="learner" class="${ins?'':'on'}">학습자용</button><button data-v="instructor" class="${ins?'on':''}">강사용 완전본</button></div>
+   <button class="btn pri dl" data-m="learner" type="button">⬇ PPT 학습자용</button><button class="btn pri dl" data-m="instructor" type="button">⬇ PPT 강사용</button><button class="btn pt" type="button">⬇ 프롬프트 모음</button></div></div>`;
+  app.innerHTML=`${bar}
+  <section class="hero" style="padding-top:18px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)} · 📘 표준 교안${isDone?' · ✅ 완료':''}</div>
+  <h1 style="font-size:clamp(24px,4.2vw,38px)">${kindB(L.type)}${accB(P.access)}${esc(L.title)}</h1><p class="lead">${esc(L.summary)}</p></section>
+  ${L.notice?`<div class="call warn">⚠️ 변경 공지: ${esc(L.notice)}</div>`:''}
+  ${(L.verification||[]).length?`<div class="call note"><b>확인 메모</b>${UL(L.verification)}</div>`:''}
+  <h2>📋 교안 메타정보</h2><div class="card"><div class="tw"><table class="meta-t"><tbody>
+   ${[['교안 ID / 버전',`${L.id} / ${L.version}`],['대상 배지',M.levelBadges(L).join('  ')],['직업군',L.jobs.map(j=>`${j}(${M.JOB[j]})`).join(', ')],['카테고리',L.categories.map(c=>`${c} ${M.CAT[c]}`).join(' · ')],
+     ['다루는 AI/기능',`${L.company} ${L.tool} — ${L.feature}`],['기능 출시일',L.released],['교안 기준일 / 재검토',`${L.checked} / ${L.review_by}`],['필요 요금제',`${M.ACCESS[P.access]} — ${P.summary}`],
+     ['소요 시간',`이론 ${mn.theory}분 + 실습 ${mn.practice}분 + 정리 ${mn.wrap}분 = ${tot}분`],['준비물',L.prerequisites.join(' / ')],['최종 결과물',L.outcome],['공식 출처',L.sources.map(s=>s.title).join(' · ')+` (확인일 ${L.checked})`]]
+     .map(([a,b])=>`<tr><th>${esc(a)}</th><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div></div>
+  <h2>🗓️ 기능 출시 타임라인</h2><div class="card">${T(['날짜','업데이트 내용'],L.timeline.map(t=>[t.date,t.text]))}<p class="pnote">전체 출시 기록은 <a href="./releases.html">AI 릴리즈 노트</a>에서 볼 수 있습니다.</p></div>
+  <h2>🎯 학습 목표</h2><div class="card"><ol style="margin:0;padding-left:20px">${L.objectives.map(o=>`<li>${esc(o)}</li>`).join('')}</ol></div>
+
+  <h2>1부. 이론 <small style="color:var(--m);font-size:14px">${mn.theory}분</small></h2>
+  <h3>1-1. 한 문장 정의</h3><div class="card"><b>${esc(th.definition)}</b><div class="call">🧠 비유: ${esc(th.analogy)}</div></div>
+  <h3>1-2. 이전 방식과 비교</h3><div class="card">${T(th.comparison.headers,th.comparison.rows)}</div>
+  <h3>1-3. 핵심 개념</h3>${th.concepts.map((c,i)=>`<div class="card"><b>${['①','②','③','④','⑤'][i]||'•'} ${esc(c.title)}</b><p class="desc">${esc(c.body)}</p></div>`).join('')}
+  <h3>1-4. 할 수 있는 것 / 할 수 없는 것</h3><div class="grid2"><div class="card"><b>✅ 할 수 있는 것</b>${UL(th.can,'ok')}</div><div class="card"><b>❌ 한계·주의</b>${UL(th.cannot,'bad')}</div></div>
+  <h3>1-5. 비용·요금제 (확인일 ${esc(P.checked)})</h3><div class="card"><p style="margin-top:0">${accB(P.access)}${esc(P.summary)}</p><div class="plans">${P.plans.map(x=>`<div class="plan"><div class="pn">${esc(x.name)}<span>${esc(x.price)}</span></div><div class="pf">${esc(x.features)}</div></div>`).join('')}</div>
+   <p class="pnote">${esc(P.note||'')} ${(P.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ')}</p></div>
+  <h3>1-6. 윤리·저작권·보안</h3><div class="card">${UL(th.safety,'warn')}</div>
+
+  <h2>2부. 실습 <small style="color:var(--m);font-size:14px">${mn.practice}분</small></h2>
+  <h3>2-0. 완성 작품 미리보기</h3><div class="card"><div class="call">${esc(pc.preview)}</div><p class="pnote">최종 결과물: ${esc(L.outcome)}</p></div>
+  <h3>2-1. 따라하기</h3>${steps(pc.follow,1)}
+  <h3>2-2. 내 것으로 만들기</h3>${steps(pc.make_mine,pc.follow.length+1)}
+  <h3>2-3. 도전 과제</h3><div class="card">${T(['난이도','미션'],pc.challenges.map(c=>[c.level,c.mission]))}</div>
+
+  <h2>3부. 정리·평가 <small style="color:var(--m);font-size:14px">${mn.wrap}분</small></h2>
+  <h3>3-1. 작품 공유</h3><div class="card">${esc(wr.share)}</div>
+  <h3>3-2. 확인 퀴즈</h3><div class="card">${wr.quiz.map((q,i)=>`<div class="q" data-a="${q.answer}"><b>Q${i+1}. ${esc(q.q)}</b><div class="opts">${q.options.map((o,j)=>`<button class="opt" type="button" data-j="${j}">${'①②③④'[j]} ${esc(o)}</button>`).join('')}</div><div class="qe">정답 ${'①②③④'[q.answer]} — ${esc(q.explain)}</div></div>`).join('')}</div>
+  <h3>3-3. 평가 루브릭</h3><div class="card">${T(['기준','상 (3점)','중 (2점)','하 (1점)'],(wr.rubric||M.RUBRIC).map(r=>[r.criterion,r.high,r.mid,r.low]))}</div>
+  <h3>3-4. 다음에 배울 것</h3><div class="card">${UL(wr.next||[])}</div>
+
+  ${ins?`<div class="ins"><h2>👨‍🏫 강사용 지도 노트</h2>
+   <h3>A. 차시별 시간표 (${tot}분)</h3><div class="card">${T(['시간','내용','비고'],I.timetable.map(t=>[t.time,t.content,t.note||'']))}</div>
+   <h3>B. 그대로 읽어도 되는 멘트</h3>${I.script.map(s=>`<div class="card"><b>${esc(s.label)}</b><p class="desc">“${esc(s.text)}”</p></div>`).join('')}
+   <h3>C. 시연 실패 대비 Plan B</h3><div class="card">${T(['상황','대응'],I.plan_b.map(p=>[p.situation,p.response]))}</div>
+   <h3>D. 수강생이 자주 막히는 지점</h3><div class="card">${T(['막히는 지점','해결법'],I.stuck.map(p=>[p.issue,p.fix]))}</div>
+   <h3>E. 예상 질문 & 모범 답변</h3><div class="card">${T(['질문','답변'],I.faq.map(p=>[p.q,p.a]))}</div>
+   <h3>F. 레벨별 변형 가이드</h3>${I.level_guide.map(g=>`<div class="card"><b>${esc(g.level)}</b><p class="desc">${esc(g.guide)}</p></div>`).join('')}
+   ${(I.pro_points||[]).length?`<h3>G. 중·고급강사 응용 포인트</h3><div class="card">${UL(I.pro_points)}</div>`:''}
+   <h3>H. 강의 전날 체크리스트</h3><div class="card">${I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span>${esc(c)}</span></label>`).join('')}</div></div>`
+   :`<div class="call note">👨‍🏫 강사용 지도 노트(시간표·멘트·Plan B·FAQ·레벨별 변형)는 위의 <b>강사용 완전본</b>을 누르면 보입니다.</div>`}
+
+  <h2>📚 출처</h2><div class="card"><ul class="plain">${L.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> <span style="color:var(--m);font-size:12px">확인 ${esc(s.checked||L.checked)}</span></li>`).join('')}</ul></div>
+  <button class="mk big ${isDone?'undo':''}" type="button">${isDone?'↩ 완료 취소 (다시 목록에 표시)':'✓ 학습 완료 — 목록에서 숨기고 다음 교안으로'}</button>
+  ${bar}`;
+  app.querySelectorAll('.seg button').forEach(b=>b.onclick=async()=>{if(b.dataset.v===view)return;view=b.dataset.v;store.set('view',view);const y=scrollY;await lessonView(L.id);scrollTo(0,y)});
+  app.querySelectorAll('.dl').forEach(b=>b.onclick=()=>window.downloadLessonPptx(L,b,b.dataset.m));
+  app.querySelectorAll('.pt').forEach(b=>b.onclick=()=>{const blob=new Blob([M.promptText(L)],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`${L.id}-prompts.txt`;document.body.appendChild(a);a.click();a.remove()});
+  app.querySelectorAll('.cp').forEach(b=>b.onclick=async()=>{const t=b.parentElement.querySelector('.pv').textContent;try{await navigator.clipboard.writeText(t);b.textContent='복사됨'}catch(e){b.textContent='복사 실패'}setTimeout(()=>b.textContent='복사',1500)});
+  app.querySelectorAll('.q').forEach(q=>q.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{const a=+q.dataset.a,j=+o.dataset.j;q.querySelectorAll('.opt').forEach(x=>x.classList.remove('right','wrong'));o.classList.add(j===a?'right':'wrong');q.querySelector(`.opt[data-j="${a}"]`).classList.add('right');q.classList.add('done')}));
+  app.querySelectorAll('label.ck input').forEach(b=>b.onchange=()=>store.set('db:'+L.id,[...app.querySelectorAll('label.ck input')].map(x=>x.checked)));
+  app.querySelector('.mk.big').onclick=()=>{if(isDone){setDone(L.id,false);lessonView(L.id);return}setDone(L.id,true);const n=nextTodo(L.id);if(n)location.hash=n.id;else{tab='todo';location.hash=''}};
+  scrollTo(0,0);
 }
 
-function route(){const h=location.hash.slice(1);if(h.startsWith('import='))return importSync(h.slice(7));const id=decodeURIComponent(h);id?lessonView(id):listView()}
+function route(){const h=location.hash.slice(1);if(h.startsWith('import='))return importSync(h.slice(7));let id=decodeURIComponent(h);if(M.LEGACY[id]){history.replaceState(null,'','#'+M.LEGACY[id]);id=M.LEGACY[id]}id?lessonView(id):listView()}
 window.addEventListener('hashchange',route);
-fetch('./lessons.json?'+Date.now()).then(r=>r.json()).then(x=>{INDEX=x;route()}).catch(()=>{route()});
+fetch('./lessons.json?'+Date.now()).then(r=>r.json()).then(x=>{INDEX=x;route()}).catch(()=>route());
 </script>
 </body>
 </html>

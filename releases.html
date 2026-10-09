@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 릴리즈 노트</title>
+<style>
+:root{--bg:#07111f;--l:#203552;--t:#edf5ff;--m:#91a6c2;--a:#6ee7ff;--g:#70e1a1;--w:#ffcf70}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#0d2941 0,transparent 34%),var(--bg);color:var(--t);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;line-height:1.6}
+a{color:#9fe9ff}.w{width:min(1000px,calc(100% - 32px));margin:auto}
+header{position:sticky;top:0;z-index:3;background:#07111fdd;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff12}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;gap:12px}.brand{font-weight:900}.links{display:flex;gap:14px;font-size:13px}.links a{text-decoration:none}.links a.on{color:#fff;font-weight:800}
+.hero{padding:40px 0 10px}.ey{font-size:12px;color:var(--a);font-weight:800;letter-spacing:.14em}h1{font-size:clamp(30px,6vw,52px);line-height:1.08;letter-spacing:-.03em;margin:10px 0}.lead{color:#b7c6da;max-width:760px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.s{background:#0e1b2e;border:1px solid #ffffff12;border-radius:14px;padding:12px}.s b{display:block;font-size:22px}.s span{font-size:12px;color:var(--m)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tools input,.tools select{flex:1;min-width:150px;background:#0b1728;border:1px solid var(--l);color:#fff;border-radius:12px;padding:10px;font-size:14px}
+.chip{cursor:pointer;background:#0f2038;color:#bed0e8;border:1px solid #294563;padding:8px 12px;border-radius:999px;font-size:13px}.chip.on{border-color:var(--a);color:#fff}
+h2{font-size:18px;margin:28px 0 8px;color:#cfe0f5;border-bottom:1px solid #ffffff14;padding-bottom:6px}
+.r{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid #ffffff0d}.d{font-variant-numeric:tabular-nums;color:var(--m);font-size:13px;padding-top:2px}
+.rt{font-weight:800}.tool{display:inline-block;font-size:12px;font-weight:800;border:1px solid #2f5577;border-radius:7px;padding:1px 7px;margin-right:6px;color:#cfe5ff}
+.kind{display:inline-block;font-size:11px;font-weight:900;padding:1px 7px;border-radius:6px;margin-right:6px}.kind.kn{background:#70e1a1;color:#04261a}.kind.ku{background:#6ee7ff;color:#03222d}
+.rs{color:#c0cde0;font-size:14px;margin:2px 0}.rl{font-size:12px;color:var(--m);display:flex;gap:12px;flex-wrap:wrap}
+.has{color:var(--g);font-weight:800;text-decoration:none}.wait{color:var(--w)}
+.empty{padding:26px;border:1px dashed #34516f;border-radius:16px;color:var(--m);text-align:center}footer{padding:44px 0;color:#6f87a6;font-size:12px}
+@media(max-width:560px){.r{grid-template-columns:1fr;gap:2px}.stats{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="w nav"><div class="brand">AI 릴리즈 노트</div><div class="links"><a href="./lessons.html">교안</a><a class="on" href="./releases.html">릴리즈 노트</a><a href="./index.html">TOP10</a></div></div></header>
+<main class="w" id="app"><div class="empty">불러오는 중…</div></main>
+<footer class="w">공식 릴리스 노트·공식 블로그에서 확인한 항목만 기록합니다. 날짜는 공식 발표일(순차 출시는 첫 공개일) 기준이며, 매시간 교안 작업 때 함께 갱신됩니다.</footer>
+<script src="./lesson-meta.js"></script>
+<script>
+const M=window.LESSON_META,app=document.getElementById('app');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let D={items:[]},f={tool:'',kind:'all',lesson:'all',q:''};
+function render(){
+  const all=D.items,tools=[...new Set(all.map(r=>r.tool))].sort();
+  const items=all.filter(r=>(!f.tool||r.tool===f.tool)&&(f.kind==='all'||r.type===f.kind)&&(f.lesson==='all'||(f.lesson==='has')===!!r.lesson_id)&&(!f.q||JSON.stringify(r).toLowerCase().includes(f.q.toLowerCase())))
+    .sort((a,b)=>(b.date+b.id).localeCompare(a.date+a.id));
+  const months={};items.forEach(r=>{(months[r.date.slice(0,7)]=months[r.date.slice(0,7)]||[]).push(r)});
+  const withL=all.filter(r=>r.lesson_id).length;
+  app.innerHTML=`<section class="hero"><div class="ey">AI RELEASE NOTES</div><h1>언제, 무엇이 나왔나.</h1>
+  <p class="lead">신규 AI 출시와 기존 AI의 새 기능을 출시일 순으로 기록합니다. 교안이 있는 항목은 바로 교안으로 이동하고, 아직 없는 항목은 <span class="wait">교안 대기</span>로 표시됩니다.</p>
+  <div class="stats"><div class="s"><b>${all.length}</b><span>기록된 출시</span></div><div class="s"><b>${withL}</b><span>교안 있음</span></div><div class="s"><b>${all.length-withL}</b><span>교안 대기</span></div></div>
+  <div style="font-size:12px;color:var(--m)">마지막 갱신 ${esc(D.updated_at||'')}</div></section>
+  <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}
+   ${[['all','교안 전체'],['has','교안 있음'],['wait','교안 대기']].map(([k,t])=>`<button class="chip ${f.lesson===k?'on':''}" data-l="${k}">${t}</button>`).join('')}</div>
+  <div class="tools"><select id="ft"><option value="">서비스 전체</option>${tools.map(t=>`<option ${t===f.tool?'selected':''}>${esc(t)}</option>`).join('')}</select><input id="q" placeholder="기능·키워드 검색" value="${esc(f.q)}"></div>
+  ${Object.keys(months).length?Object.entries(months).map(([m,rs])=>`<h2>${m.slice(0,4)}년 ${+m.slice(5)}월 <span style="color:var(--m);font-size:13px">${rs.length}건</span></h2>${rs.map(r=>`<div class="r"><div class="d">${esc(r.date)}</div><div>
+   <div class="rt"><span class="tool">${esc(r.tool)}</span><span class="kind ${r.type==='new'?'kn':'ku'}">${M.KIND[r.type]}</span>${esc(r.title)}</div>
+   <div class="rs">${esc(r.summary)}</div>
+   <div class="rl"><a href="${esc(r.source.url)}" target="_blank" rel="noopener">${esc(r.source.title)}</a><span>확인 ${esc(r.checked)}</span>${r.lesson_id?`<a class="has" href="./lessons.html#${esc(r.lesson_id)}">📘 교안 보기 (${esc(r.lesson_id)})</a>`:'<span class="wait">교안 대기</span>'}</div></div></div>`).join('')}`).join(''):'<div class="empty">조건에 맞는 기록이 없습니다.</div>'}`;
+  document.querySelectorAll('.chip[data-k]').forEach(b=>b.onclick=()=>{f.kind=b.dataset.k;render()});
+  document.querySelectorAll('.chip[data-l]').forEach(b=>b.onclick=()=>{f.lesson=b.dataset.l;render()});
+  document.getElementById('ft').onchange=e=>{f.tool=e.target.value;render()};
+  const q=document.getElementById('q');q.oninput=()=>{f.q=q.value;const p=q.selectionStart;render();const n=document.getElementById('q');n.focus();n.setSelectionRange(p,p)};
+}
+fetch('./releases.json?'+Date.now()).then(r=>r.json()).then(x=>{D=x;render()}).catch(()=>{app.innerHTML='<div class="empty">릴리즈 노트를 불러오지 못했습니다.</div>'});
+</script>
+</body>
+</html>

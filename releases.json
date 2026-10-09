@@ -1,0 +1,486 @@
+{
+  "updated_at": "2026-10-10 KST",
+  "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
+  "items": [
+    {
+      "id": "chatgpt-2026-10-08-10",
+      "date": "2026-10-08",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Codex 데스크톱 빠른 방향 전환",
+      "summary": "실행 중인 Codex 작업을 후속 메시지로 더 빨리 바꿀 수 있게 개선",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-10-07-15",
+      "date": "2026-10-07",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Max·Team 월간 API 크레딧",
+      "summary": "Max·Team 요금제에 Console 조직 연결 시 받는 월간 API 크레딧 포함",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-10-07-14",
+      "date": "2026-10-07",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude Haiku 5.5",
+      "summary": "지금까지 가장 저렴하고 빠른 소형 모델 Haiku 5.5 출시",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-10-07-9",
+      "date": "2026-10-07",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "GPT-6 + 인텔리전트 UI",
+      "summary": "Chat 탭에 GPT-6 출시, 답을 비교표·도식·버튼·작은 도구로 구성 (Plus 이상 당일, Free·Go 다음 날)",
+      "source": {
+        "title": "OpenAI – GPT-6 for everyone",
+        "url": "https://openai.com/index/gpt-6-for-everyone/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT01-002"
+    },
+    {
+      "id": "chatgpt-2026-10-06-8",
+      "date": "2026-10-06",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "오디오 파일 업로드",
+      "summary": "유료 요금제에서 오디오 파일 전사·요약·질문 가능",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-10-02-7",
+      "date": "2026-10-02",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Finances 무료 확대(미국)",
+      "summary": "가계 관리 Finances를 미국 Free·Go 사용자에게 확대",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-10-01-6",
+      "date": "2026-10-01",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "쇼핑 가상 피팅·여러 장 스캔",
+      "summary": "쇼핑의 가상 피팅·즐겨찾기, iOS 카메라로 여러 페이지를 한 PDF로 스캔",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-09-30-4",
+      "date": "2026-09-30",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 스킬(Skills)",
+      "summary": "자주 쓰는 지시문을 /이름으로 실행·이어 붙이는 스킬 출시, Gems 대체",
+      "source": {
+        "title": "Google 블로그 – Skills in Gemini",
+        "url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT02-001"
+    },
+    {
+      "id": "chatgpt-2026-09-29-5",
+      "date": "2026-09-29",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Pro 500·dots·Pages 등",
+      "summary": "Pro 500 요금제, 상시 에이전트 dots, Pages, Codex Cloud 등 대규모 업데이트",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-09-28-13",
+      "date": "2026-09-28",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude Sonnet 5.5",
+      "summary": "Opus 5.5를 보완하는 더 빠르고 저렴한 Sonnet 5.5 출시",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-09-25-12",
+      "date": "2026-09-25",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "플러그인 개발자 포털",
+      "summary": "Claude 디렉터리에 플러그인을 제출하고 사용량을 볼 수 있는 개발자 포털 공개",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-09-22-11",
+      "date": "2026-09-22",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude Opus 5.5",
+      "summary": "5.5 제품군 첫 모델 Opus 5.5 출시",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-09-22-4",
+      "date": "2026-09-22",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "인터랙티브 플래시카드",
+      "summary": "뒤집고 표시하고 섞을 수 있는 플래시카드, Work·Codex에 GPT-6 Sol·Luna 적용",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-09-17-3",
+      "date": "2026-09-17",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "ChatGPT for Word",
+      "summary": "Word 안에서 ChatGPT 사용, 플러그인당 여러 계정 연결",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-09-16-9",
+      "date": "2026-09-16",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude Design·Slides·Docs",
+      "summary": "어느 대화에서나 디자인·슬라이드·문서를 만들 수 있게 됨",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-09-16-10",
+      "date": "2026-09-16",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Cowork 기능 전 대화 확대",
+      "summary": "Cowork 기능을 어느 대화에서나 사용 (Pro·Max 순차 적용)",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-09-15-8",
+      "date": "2026-09-15",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Salesforce in Claude 베타",
+      "summary": "승인된 조직의 유료 요금제에서 Salesforce 연동 베타",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-09-10-3",
+      "date": "2026-09-10",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Windows용 Gemini 앱",
+      "summary": "Alt + Space로 어디서나 여는 Windows 데스크톱 앱 (Windows 10 이상)",
+      "source": {
+        "title": "Gemini 릴리스 노트",
+        "url": "https://gemini.google/release-notes/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-09-08-2",
+      "date": "2026-09-08",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "ChatGPT Images 2.5",
+      "summary": "템플릿, 스케치→이미지, 프롬프트 공유를 갖춘 이미지 생성 업데이트",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-08-25-7",
+      "date": "2026-08-25",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "메모리 주제별 편집·민감 주제·Cowork",
+      "summary": "설정 > 메모리의 주제(Topics)에서 항목별 편집·삭제, 민감 주제 포함 설정 신설, Cowork에서도 메모리 작동",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT01-001"
+    },
+    {
+      "id": "chatgpt-2026-08-21-1",
+      "date": "2026-08-21",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "인터랙티브 콘텐츠 즉시 표시",
+      "summary": "웹에서 인터랙티브 콘텐츠가 생성되는 대로 바로 보이도록 개선",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-08-19-2",
+      "date": "2026-08-19",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "학생 허브·모바일 학습 노트",
+      "summary": "학생 허브와 모바일 학습 노트북, 미국 대학생 대상 혜택",
+      "source": {
+        "title": "Gemini 릴리스 노트",
+        "url": "https://gemini.google/release-notes/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-08-14-0",
+      "date": "2026-08-14",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "인터랙티브 퀴즈",
+      "summary": "대화 안에서 바로 답을 고르는 인터랙티브 퀴즈 도입",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-07-29-1",
+      "date": "2026-07-29",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "macOS 음성 받아쓰기",
+      "summary": "Fn 키를 눌러 어느 창에서나 받아쓰기, 화면 맥락을 활용한 다시 쓰기 (영어)",
+      "source": {
+        "title": "Gemini 릴리스 노트",
+        "url": "https://gemini.google/release-notes/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-07-21-0",
+      "date": "2026-07-21",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 3.6 Flash",
+      "summary": "문서 여러 개 분석·Canvas 프로토타입 등 일상 작업용 Flash 모델 업그레이드 (전체 사용자)",
+      "source": {
+        "title": "Gemini 릴리스 노트",
+        "url": "https://gemini.google/release-notes/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-07-10-6",
+      "date": "2026-07-10",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "메모리 항목형 개편",
+      "summary": "하루 1회 요약 대신 분류된 개별 항목으로 기억하고 대화 중 직접 읽고 갱신",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-07-09-5",
+      "date": "2026-07-09",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "월간 회고(Reflect) 베타",
+      "summary": "설정의 Reflect에서 한 달 사용 회고를 보여 주는 기능 베타 (메모리 켜짐 필요, Free·Pro·Max 웹·데스크톱)",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-03-02-4",
+      "date": "2026-03-02",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "무료 사용자 메모리",
+      "summary": "무료 사용자를 포함한 모든 사용자가 대화 기록 기반 메모리를 사용 가능",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2025-10-23-3",
+      "date": "2025-10-23",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Pro·Max 메모리",
+      "summary": "Max에 먼저, 이어서 약 2주에 걸쳐 Pro로 메모리 확대",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2025-09-18-2",
+      "date": "2025-09-18",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Enterprise 메모리",
+      "summary": "Enterprise 요금제로 메모리 확대 (시크릿 채팅은 기억에서 제외)",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2025-09-11-1",
+      "date": "2025-09-11",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Team 메모리·시크릿 채팅",
+      "summary": "Team 요금제에 메모리 도입, 기억과 기록에 남지 않는 시크릿 채팅이 Free·Pro·Max·Team에 추가",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2025-08-11-0",
+      "date": "2025-08-11",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "과거 대화 검색",
+      "summary": "Max·Team·Enterprise에서 Claude에게 지난 대화를 찾아 참고하도록 요청할 수 있게 됨",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    }
+  ]
+}

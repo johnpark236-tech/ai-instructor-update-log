@@ -4,11 +4,11 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "index.html"
-      - "ai-daily.json"
-      - "lessons.html"
-      - "lessons.json"
+      - "*.html"
+      - "*.js"
+      - "*.json"
       - "lessons/**"
+      - "vendor/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 

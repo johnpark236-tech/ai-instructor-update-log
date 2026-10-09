@@ -38,30 +38,21 @@ API key는 코드나 JSON에 직접 저장하지 마세요.
 
 `매일 06:00 KST 조사` → `ai-daily.json 갱신` → `main 커밋` → `GitHub Pages 자동 재배포`
 
-## 실습 교안 (매시간 자동 추가)
+## 실습 교안 (기준 v2.0, 매시간 자동 추가)
 
-- 페이지: `lessons.html` (목록·검색·분야 필터, 교안별 체크리스트와 퀴즈)
-- 교안 파일: `lessons/<YYYY-MM-DD-HHMM-slug>.json` — 교안 1개당 파일 1개
-- 인덱스: `lessons.json` — `python scripts/build_lessons_index.py`가 교안 파일을 검증하고 다시 만듦
-- 갱신: Claude 예약 작업이 1시간마다 새 AI 서비스/신기능 1개를 공식 출처로 조사 → 교안 JSON 작성 → 인덱스 재생성 → main 커밋 → Pages 자동 재배포
-- 중복 방지: 이미 `lessons.json`에 있는 도구·기능은 다시 다루지 않음
+- 작성 기준: [`docs/lesson-standard-v2.md`](docs/lesson-standard-v2.md) — 교안 ID(AI-YYYY-MM-CATxx-NNN), 대상 배지, 직업군 JOB 코드, 카테고리 CAT-01~12, 이론·실습·정리 3부 구성, 강사용 지도 노트, 유효기간
+- 페이지: `lessons.html` — 순서 번호, 완료하면 숨김(완료 탭 보관), 신규/기존 AI·카테고리·대상·직업군 필터, 학습자용/강사용 보기 전환, 인터랙티브 퀴즈
+- 내려받기: PPT 학습자용 / PPT 강사용(지도 노트 슬라이드 + 발표자 노트에 멘트) / 복붙 프롬프트 모음 .txt
+- 교안 파일: `lessons/<교안 ID>.json`, 인덱스 `lessons.json`
+- 검증: `python scripts/build_lessons_index.py` (교안과 릴리즈 노트를 함께 검사)
 
-교안 JSON 필드: `id, created_at, title, tool, company, category(추론/이미지/영상/음성/코딩/에이전트/리서치), type(new=신규 AI 서비스 / update=기존 AI의 새 기능), released, level, minutes, summary, why, prerequisites[], pricing{access(free/freemium/paid), summary, plans[{name,price,features}], note, checked, sources[]}, steps[{title,do,expect}], practice{task,sample_input,checklist[]}, teaching_tips[], pitfalls[], quiz[{q,a}], sources[{title,url}]`
+## AI 릴리즈 노트 (출시일 관리)
 
-### PPT 다운로드
+- 데이터: `releases.json` — 공식 릴리스 노트에서 확인한 출시·신기능 1건당 1줄, 교안이 있으면 `lesson_id`로 연결
+- 페이지: `releases.html` — 월별 출시 기록, 서비스·신규/기존·교안 있음/대기 필터
+- 매시간 예약 작업이 주요 AI 서비스의 공식 릴리스 노트를 확인해 새 항목을 추가하고, 교안이 없는 항목 중 하나로 교안을 작성
 
-교안 화면 위·아래의 **⬇ PPT로 다운로드** 버튼을 누르면 그 교안이 16:9 PowerPoint 파일(.pptx)로 저장됩니다. 표지, 준비물, 단계별 1장씩, 실습 과제, 체크리스트, 수업 팁, 퀴즈·정답, 출처 순서로 구성됩니다. 변환은 브라우저에서 이루어지며(`lesson-pptx.js`, 라이브러리 `vendor/pptxgen.bundle.js`, MIT), 새 교안에도 자동으로 적용됩니다.
+## 알림
 
-## 텔레그램 알림 (새 교안마다)
-
-새 교안(`lessons/*.json`)이 main 에 올라오면 `.github/workflows/telegram-notify.yml` 이 제목·요약·따라 하기 단계·실습 과제·교안 링크를 텔레그램으로 보냅니다. Actions 탭에서 이 워크플로를 **Run workflow** 하면 가장 최근 교안으로 테스트 메시지를 보냅니다.
-
-필요한 Repository secret (Settings → Secrets and variables → Actions):
-- `TELEGRAM_BOT_TOKEN`: 텔레그램 @BotFather 에서 `/newbot` 으로 만든 봇 토큰
-- `TELEGRAM_CHAT_ID`: 봇에게 아무 메시지나 보낸 뒤 `https://api.telegram.org/bot<토큰>/getUpdates` 에서 확인한 `chat.id`
-
-Secret 이 없으면 알림만 건너뛰고 다른 작업은 그대로 진행됩니다.
-
-## 카카오톡 알림 (기본)
-
-매시간 교안 작성 예약 작업(Claude)이 push 에 성공하면 카카오톡 "나에게 보내기"(PlayMCP 커넥터)로 200자 이내 요약과 교안 링크를 보냅니다. 별도 설정은 필요 없습니다. 위의 텔레그램 알림은 Secret 을 등록했을 때만 함께 동작하는 선택 사항입니다.
+- 카카오톡: 매시간 예약 작업이 교안을 올린 뒤 "나에게 보내기"로 200자 요약 + 링크 전송
+- 텔레그램(선택): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` Secret 등록 시 `.github/workflows/telegram-notify.yml`이 새 교안마다 발송

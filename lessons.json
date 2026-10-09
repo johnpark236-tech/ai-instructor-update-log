@@ -1,33 +1,114 @@
 {
-  "count": 2,
+  "standard": "v2.0",
+  "count": 3,
   "lessons": [
     {
-      "id": "2026-10-10-0100-chatgpt-intelligent-ui",
-      "created_at": "2026-10-10 01:00 KST",
-      "title": "ChatGPT 인텔리전트 UI: 글 대신 '눌러 보는 답'과 즉석 도구 만들기",
-      "tool": "ChatGPT",
-      "company": "OpenAI",
-      "category": "추론",
+      "id": "AI-2026-10-CAT01-001",
+      "version": "v1.0",
+      "created_at": "2026-10-10 01:50 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "나를 기억하는 AI 비서 만들기 — Claude 메모리로 맞춤형 주간 업무 플래너 완성하기",
+      "summary": "Claude가 대화를 넘나들며 내 업무 맥락을 기억하고, 그 기억을 주제별로 직접 보고 고칠 수 있게 되었습니다. 메모리를 길들여 '한 마디로 나오는' 맞춤 주간 플래너를 만듭니다.",
+      "tool": "Claude",
+      "feature": "메모리(Memory) — 주제별 편집·민감 주제 설정·Cowork 메모리",
+      "company": "Anthropic",
       "type": "update",
-      "released": "2026-10-07",
-      "level": "입문",
-      "minutes": 30,
-      "summary": "GPT-6가 들어간 ChatGPT는 질문에 따라 답을 글만이 아니라 도표·버튼·탭·양식·인터랙티브 도식으로 구성하고, 요청하면 계산기나 퀴즈 게임 같은 작은 도구를 대화 안에서 바로 만들어 줍니다.",
-      "access": "free"
+      "released": "2026-08-25",
+      "categories": [
+        "CAT-01",
+        "CAT-09"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 나만의 AI 비서 '기억 카드'(메모리 항목 목록) ② 메모리를 반영한 맞춤형 주간 업무 플래너 1부",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": ""
     },
     {
-      "id": "2026-10-09-2349-gemini-skills",
+      "id": "AI-2026-10-CAT01-002",
+      "version": "v2.0",
+      "created_at": "2026-10-10 01:00 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "대화창에서 바로 푸는 문법 퀴즈 만들기 — ChatGPT 인텔리전트 UI(GPT-6) 실습",
+      "summary": "GPT-6가 들어간 ChatGPT는 답을 글만이 아니라 비교표·도식·버튼·퀴즈 같은 '눌러 보는 화면'으로 만들고, 요청하면 작은 도구를 대화 안에서 바로 만들어 줍니다. 무료 계정으로 수업용 문법 퀴즈 도구를 완성합니다.",
+      "tool": "ChatGPT",
+      "feature": "Intelligent UI (GPT-6)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-07",
+      "categories": [
+        "CAT-01",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-STU",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "대화창 안에서 바로 풀 수 있는 수업용 5문항 문법 퀴즈 도구 1개 (+ 탭·표로 정리된 문법 설명)",
+      "access": "free",
+      "total_minutes": 80,
+      "notice": ""
+    },
+    {
+      "id": "AI-2026-10-CAT02-001",
+      "version": "v2.0",
       "created_at": "2026-10-09 23:49 KST",
-      "title": "Gemini 스킬(Skills): 반복 작업을 슬래시 명령 하나로",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "반복 업무를 슬래시 명령 하나로 — Gemini 스킬(Skills)로 '수업 자료 자동 변환 세트' 만들기",
+      "summary": "Gemini에 '스킬'이 생겨 자주 쓰는 지시문을 저장해 /이름으로 부르고 여러 개를 이어 실행할 수 있습니다. 11월에 끝나는 Gems를 대신하는 기능으로, 쉬운 문장 변환 + 퀴즈 출제 스킬 세트를 만듭니다.",
       "tool": "Gemini",
+      "feature": "스킬(Skills)",
       "company": "Google",
-      "category": "에이전트",
       "type": "update",
       "released": "2026-09-30",
-      "level": "입문",
-      "minutes": 30,
-      "summary": "Gemini에 '스킬'이 추가되어, 자주 쓰는 지시문을 한 번 저장해 두고 /이름 으로 불러 쓰거나 여러 개를 이어 붙여 실행할 수 있습니다. 기존 Gems를 대체하는 기능입니다.",
-      "access": "free"
+      "categories": [
+        "CAT-02",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-MKT",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "'/easy-korean-rewrite'(쉬운 문장 변환)와 '/quiz-maker'(퀴즈 출제) 스킬 2개, 그리고 둘을 이어 실행해 만든 수업용 읽기 자료 + 퀴즈 1세트",
+      "access": "free",
+      "total_minutes": 80,
+      "notice": ""
     }
   ]
 }

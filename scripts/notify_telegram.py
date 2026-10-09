@@ -25,26 +25,27 @@ def compose(lesson, base):
     e = lambda s: html.escape(str(s), quote=False)
     link = f"{base}/lessons.html#{urllib.parse.quote(lesson['id'])}"
     kind = "신규 AI" if lesson.get("type") == "new" else "기존 AI"
-    steps = "\n".join(f"{i}. {e(s['title'])}" for i, s in enumerate(lesson["steps"], 1))
+    acc = {"free": "무료", "freemium": "무료+유료", "paid": "유료"}.get(lesson["pricing"]["access"], "")
+    steps = lesson["practice"]["follow"] + lesson["practice"]["make_mine"]
+    m = lesson["minutes"]
     lines = [
-        f"📘 <b>새 AI 실습 교안</b>  ({e(lesson['created_at'])})",
+        f"📘 <b>새 AI 실습 교안</b>  {e(lesson['id'])} ({e(lesson['created_at'])})",
         "",
-        f"<b>[{kind}] {e(lesson['title'])}</b>",
-        f"{e(lesson['tool'])} · {e(lesson['company'])} | {e(lesson['category'])} | {kind} | {e(lesson['level'])} {lesson['minutes']}분",
+        f"<b>[{kind}·{acc}] {e(lesson['title'])}</b>",
+        f"{e(lesson['tool'])} · {e(lesson['feature'])} | 출시 {e(lesson['released'])} | {sum(m.values())}분",
         "",
         f"📝 <b>요약</b>\n{e(lesson['summary'])}",
         "",
-        f"💳 <b>요금</b>\n{e(lesson['pricing']['summary'])}\n" + "\n".join(f"· {e(x['name'])} ({e(x['price'])})" for x in lesson['pricing']['plans']) if lesson.get('pricing') else "",
+        f"🎁 <b>결과물</b>\n{e(lesson['outcome'])}",
         "",
-        f"🧭 <b>따라 하기</b>\n{steps}",
+        f"💳 <b>요금</b>\n{e(lesson['pricing']['summary'])}\n" + "\n".join(f"· {e(x['name'])} ({e(x['price'])})" for x in lesson['pricing']['plans']),
         "",
-        f"🛠 <b>실습 과제</b>\n{e(lesson['practice']['task'])}",
+        "🧭 <b>실습 단계</b>\n" + "\n".join(f"{i}. {e(s['title'])}" for i, s in enumerate(steps, 1)),
         "",
         f"👉 <a href=\"{html.escape(link)}\">교안 열기 · PPT 다운로드</a>",
         e(link),
     ]
-    text = "\n".join(lines)
-    return text[:4000]
+    return "\n".join(lines)[:4000]
 
 
 def send(token, chat_id, text):
