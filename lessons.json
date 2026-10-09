@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 5,
+  "count": 6,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT10-001",
+      "version": "v1.0",
+      "created_at": "2026-10-10 07:20 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "내 수업 자료로 퀴즈·단어 카드 세트 만들기 — Gemini Notebook 학습 도구(퀴즈·플래시카드·학습 개요) 실습",
+      "summary": "NotebookLM에서 이름이 바뀐 Gemini Notebook은 올린 자료만 근거로 퀴즈·플래시카드·학습 개요를 만들어 줍니다. 9월 업데이트로 학습 도구가 강화되었고, 무료 Google 계정으로 내가 쓴 수업 글 하나에서 복습 퀴즈와 단어 카드 세트를 완성합니다.",
+      "tool": "Gemini Notebook (구 NotebookLM)",
+      "feature": "스튜디오(Studio) 학습 도구 — 퀴즈(Quizzes)·플래시카드(Flashcards)·인터랙티브 학습 개요(Learning Overview)",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-09-15",
+      "categories": [
+        "CAT-10",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-STU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 수업 글로 만든 복습 퀴즈 1세트 ② 단어 플래시카드 1세트(CSV 저장) ③ 요약·퀴즈·카드가 들어간 인터랙티브 학습 개요 1부",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🃏",
+      "one_liner": "내 수업 자료가 퀴즈·단어 카드로 변신"
+    },
     {
       "id": "AI-2026-10-CAT05-001",
       "version": "v1.0",

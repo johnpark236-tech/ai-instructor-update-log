@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 KST",
+  "updated_at": "2026-10-10 07:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -303,6 +303,21 @@
       "lesson_id": null
     },
     {
+      "id": "gemininotebook-2026-09-17-expert-intelligence",
+      "date": "2026-09-17",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "Expert Intelligence — 전자책을 자료로",
+      "summary": "구매한 Google Play 북 전자책을 노트북 자료로 넣어 질문하고 퀴즈·인포그래픽·오디오 개요를 만듦",
+      "source": {
+        "title": "Google Workspace Updates – Introducing Expert Intelligence in Gemini Notebook",
+        "url": "https://workspaceupdates.googleblog.com/2026/09/introducing-expert-intelligence-in-Gemini-Notebook.html"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
       "id": "claude-2026-09-16-9",
       "date": "2026-09-16",
       "tool": "Claude",
@@ -348,6 +363,21 @@
       "lesson_id": null
     },
     {
+      "id": "gemininotebook-2026-09-15-study-tools",
+      "date": "2026-09-15",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "학습 도구 강화(학습 개요·새 퀴즈 형식)",
+      "summary": "요약에 퀴즈·카드를 끼운 인터랙티브 학습 개요, 단답·빈칸 퀴즈, 문항 편집, 60초 짧은 동영상 개요, 모바일 녹음·실시간 음성 대화 추가",
+      "source": {
+        "title": "Google 블로그 – Sharpen your study routine with new Gemini Notebook tools",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT10-001"
+    },
+    {
       "id": "gemini-2026-09-10-3",
       "date": "2026-09-10",
       "tool": "Gemini",
@@ -388,6 +418,21 @@
       "source": {
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemininotebook-2026-08-28-usage-limits",
+      "date": "2026-08-28",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "5시간 단위 사용 한도·나중에 생성",
+      "summary": "한도를 하루 단위에서 5시간마다 충전으로 바꾸고, 한도를 넘으면 동영상 개요 등을 나중에 자동 생성하도록 예약 (9월 2일부터)",
+      "source": {
+        "title": "Google 블로그 – New flexible usage limits for Gemini Notebook",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/"
       },
       "checked": "2026-10-10",
       "lesson_id": null
@@ -493,6 +538,21 @@
       "source": {
         "title": "Gemini 릴리스 노트",
         "url": "https://gemini.google/release-notes/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemininotebook-2026-07-16-rename",
+      "date": "2026-07-16",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "NotebookLM → Gemini Notebook 이름 변경",
+      "summary": "NotebookLM이 Gemini Notebook으로 이름과 로고를 바꿈, 기존 노트북·공유 링크는 자동 연결",
+      "source": {
+        "title": "Google Workspace Updates – NotebookLM is now Gemini Notebook",
+        "url": "https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html"
       },
       "checked": "2026-10-10",
       "lesson_id": null
