@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 21:07 KST",
+  "updated_at": "2026-10-10 22:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -163,6 +163,36 @@
       "source": {
         "title": "Cursor Changelog – Remote control for local agents",
         "url": "https://cursor.com/changelog"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-10-06-google-workspace-addon",
+      "date": "2026-10-06",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Google Docs·Sheets·Slides용 Claude 부가기능(베타)",
+      "summary": "구글 문서·시트·슬라이드 옆 사이드바에서 Claude가 열린 파일을 읽고 바로 고치는 부가기능과, 채팅에서 구글 파일을 만들고 고치는 커넥터를 유료 요금제 베타로 공개",
+      "source": {
+        "title": "Claude 블로그 – Claude now works in Google Docs, Sheets, and Slides",
+        "url": "https://claude.com/blog/claude-now-works-in-google-docs-sheets-and-slides"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT06-001"
+    },
+    {
+      "id": "copilot-2026-10-06-ppt-skills-search-chat",
+      "date": "2026-10-06",
+      "tool": "Microsoft 365 Copilot",
+      "company": "Microsoft",
+      "type": "update",
+      "title": "PowerPoint 사용자 지정 스킬·검색 속 대화",
+      "summary": "Windows PowerPoint의 Copilot 창에서 나만의 명령(스킬)을 만들고, Copilot 검색 결과에서 바로 이어 묻는 대화가 붙음. 웹에서는 답변 다시 생성·모델 바꾸기 추가",
+      "source": {
+        "title": "Microsoft 365 Copilot 릴리스 노트",
+        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
       },
       "checked": "2026-10-10",
       "lesson_id": null
