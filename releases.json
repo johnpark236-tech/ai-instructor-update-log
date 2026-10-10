@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 13:10 KST",
+  "updated_at": "2026-10-10 14:07 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -183,6 +183,21 @@
       "lesson_id": null
     },
     {
+      "id": "runway-2026-10-02-seedance-draft",
+      "date": "2026-10-02",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "Agent의 Seedance 2.5 초안 모드",
+      "summary": "Runway Agent가 480p 초안 영상을 빠르게 만든 뒤 화질 보정을 더하는 초안 모드, 자동 제안·켜고 끄기 가능 (전 요금제)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/ko/changelog"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
       "id": "chatgpt-2026-10-01-6",
       "date": "2026-10-01",
       "tool": "ChatGPT",
@@ -313,6 +328,21 @@
       "source": {
         "title": "Cursor Changelog – Rollouts and Security Review",
         "url": "https://cursor.com/changelog"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "runway-2026-09-23-davinci-plugin",
+      "date": "2026-09-23",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "DaVinci Resolve 플러그인",
+      "summary": "편집 프로그램 DaVinci Resolve 안에서 Runway 생성 도구를 바로 쓰는 플러그인 (유료 요금제)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/ko/changelog"
       },
       "checked": "2026-10-10",
       "lesson_id": null
@@ -476,11 +506,11 @@
       "title": "Windows용 Gemini 앱",
       "summary": "Alt + Space로 어디서나 여는 Windows 데스크톱 앱 (Windows 10 이상)",
       "source": {
-        "title": "Gemini 릴리스 노트",
-        "url": "https://gemini.google/release-notes/"
+        "title": "Google 블로그 – Gemini 앱 Windows 출시",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/"
       },
       "checked": "2026-10-10",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT01-003"
     },
     {
       "id": "chatgpt-2026-09-08-2",

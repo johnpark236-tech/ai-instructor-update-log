@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 9,
+  "count": 10,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT01-003",
+      "version": "v1.0",
+      "created_at": "2026-10-10 14:07 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "창을 바꾸지 않고 바로 묻는 PC 비서 만들기 — Windows용 Gemini 앱으로 '즉석 업무 도우미 카드' 완성하기",
+      "summary": "Windows용 Gemini 앱이 나와 Alt + Space 한 번으로 하던 일 위에 Gemini를 불러낼 수 있게 되었습니다. 문서 작업 중 창을 오가지 않고 문장 다듬기·요약·답장 초안을 처리하는 나만의 '즉석 업무 도우미 카드'를 만듭니다.",
+      "tool": "Gemini",
+      "feature": "Gemini 앱 Windows용 데스크톱 앱 (Gemini for desktop)",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-09-10",
+      "categories": [
+        "CAT-01",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-SEN",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 업무에 맞춘 '즉석 업무 도우미 카드'(Alt+Space로 바로 쓰는 복붙 프롬프트 5종) ② 그 카드로 다듬은 공지문·안내문 1편",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "💻",
+      "one_liner": "Alt+Space 한 번에 부르는 PC 속 AI 비서"
+    },
     {
       "id": "AI-2026-10-CAT09-001",
       "version": "v1.0",
