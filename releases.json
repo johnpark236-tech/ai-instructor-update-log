@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 20:07 KST",
+  "updated_at": "2026-10-10 21:07 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -150,7 +150,7 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-10",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT05-002"
     },
     {
       "id": "cursor-2026-10-06-remote-control",
@@ -163,6 +163,21 @@
       "source": {
         "title": "Cursor Changelog – Remote control for local agents",
         "url": "https://cursor.com/changelog"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "elevenlabs-2026-10-05-agents-procedures-merge",
+      "date": "2026-10-05",
+      "tool": "ElevenLabs",
+      "company": "ElevenLabs",
+      "type": "update",
+      "title": "에이전트 절차 자동 컴파일·병합 제안(알파)",
+      "summary": "음성 에이전트의 구조화 절차를 저장·게시할 때 자동으로 점검하고, 팀이 에이전트 변경을 검토·승인한 뒤 합치는 병합 제안을 알파로 시험",
+      "source": {
+        "title": "ElevenLabs 체인지로그",
+        "url": "https://elevenlabs.io/docs/fr/changelog"
       },
       "checked": "2026-10-10",
       "lesson_id": null

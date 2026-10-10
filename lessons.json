@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 13,
+  "count": 14,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-002",
+      "version": "v1.0",
+      "created_at": "2026-10-10 21:07 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "녹음 파일 하나로 회의록과 듣기 학습지까지 — ChatGPT 오디오 업로드로 받아쓰기·요약·문제 만들기",
+      "summary": "ChatGPT 유료 요금제에서 녹음 파일을 올리면 받아쓰기(전사), 요약, 질문 답변을 해 줍니다. 짧은 회의 녹음 하나로 원문 전사본, 결정·할 일 요약 노트, 한국어 듣기 학습지를 만듭니다.",
+      "tool": "ChatGPT",
+      "feature": "오디오 업로드(Audio uploads) — 녹음 파일 전사·요약·질문",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-06",
+      "categories": [
+        "CAT-05",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 2분 회의 녹음의 전사본 ② 결정·할 일·남은 질문 요약 노트 ③ 같은 녹음으로 만든 빈칸 받아쓰기 듣기 학습지 1장",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "녹음 파일을 올리면 글과 요약이 된다"
+    },
     {
       "id": "AI-2026-10-CAT09-002",
       "version": "v1.0",
