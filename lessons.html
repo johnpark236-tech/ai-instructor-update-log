@@ -88,17 +88,18 @@ function setDone(id,on){const d=getDone();if(on)d[id]=new Date().toISOString();e
 // 예전(v1) 교안 ID로 남은 완료 기록을 새 ID로 옮김
 (function(){const d=getDone();let ch=0;for(const[o,n]of Object.entries(M.LEGACY)){if(d[o]){d[n]=d[o];delete d[o];ch=1}}if(ch)store.set('done',d)})();
 function ordered(){return [...INDEX.lessons].sort((a,b)=>(a.created_at+a.id).localeCompare(b.created_at+b.id)).map((l,i)=>({...l,no:i+1}))}
-function nextTodo(id){const d=getDone(),all=ordered(),i=all.findIndex(l=>l.id===id);return all.slice(i+1).find(l=>!d[l.id])||all.find(l=>!d[l.id]&&l.id!==id)}
+function newestFirst(){return ordered().reverse()}
+function nextTodo(id){const d=getDone(),all=newestFirst(),i=all.findIndex(l=>l.id===id);return all.slice(i+1).find(l=>!d[l.id])||all.find(l=>!d[l.id]&&l.id!==id)}
 const opt=(v,t,cur)=>`<option value="${v}" ${v===cur?'selected':''}>${t}</option>`;
 
 function listView(){
   const done=getDone(),all=ordered(),doneN=all.filter(l=>done[l.id]).length;
-  const items=all.filter(l=>(tab==='done')===!!done[l.id]).filter(l=>
+  const items=newestFirst().filter(l=>(tab==='done')===!!done[l.id]).filter(l=>
     (f.kind==='all'||l.type===f.kind)&&(!f.cat||l.categories.includes(f.cat))&&
     (!f.lvl||l.learner_levels.includes(f.lvl)||l.instructor_levels.includes(f.lvl))&&(!f.job||l.jobs.includes(f.job))&&
     (!f.q||JSON.stringify(l).toLowerCase().includes(f.q.toLowerCase())));
   app.innerHTML=`<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.0</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
-  <p class="lead">신규 AI와 기존 AI의 새 기능을 이론 → 실습 → 결과물로 정리합니다. 오래된 교안부터 순서대로 배우고, 다 배우면 <b>완료</b>를 눌러 숨기세요. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>에서 볼 수 있습니다.</p></section>
+  <p class="lead">신규 AI와 기존 AI의 새 기능을 이론 → 실습 → 결과물로 정리합니다. 새 교안이 맨 위에 올라옵니다. 하나씩 배우고, 다 배우면 <b>완료</b>를 눌러 숨기세요. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>에서 볼 수 있습니다.</p></section>
   <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
   <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
   <div class="tools"><select id="fc">${opt('','카테고리 전체',f.cat)}${Object.entries(M.CAT).map(([k,v])=>opt(k,`${k} ${v}`,f.cat)).join('')}</select>
