@@ -1,7 +1,44 @@
 {
   "standard": "v2.0",
-  "count": 15,
+  "count": 16,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT01-004",
+      "version": "v1.0",
+      "created_at": "2026-10-11 04:14 KST",
+      "checked": "2026-10-11",
+      "review_by": "2027-01-11",
+      "title": "모르는 것만 다시 외우는 나만의 암기장 — ChatGPT 플래시카드로 생활 용어 카드 15장과 복습 루틴 만들기",
+      "summary": "ChatGPT 대화 안에서 뒤집고(탭), 아는 카드·모르는 카드를 표시하고(✔️·❌), 섞어서 다시 보는 플래시카드를 만들 수 있게 되었습니다. 무료 계정으로 내 공부 주제의 카드 덱을 만들고, 틀린 카드만 골라 다시 익히는 복습 루틴까지 완성합니다.",
+      "tool": "ChatGPT",
+      "feature": "플래시카드(Flashcards in ChatGPT)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-09-22",
+      "categories": [
+        "CAT-01",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-GLB",
+        "JOB-STU",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 공부 주제로 만든 플래시카드 덱 1개(15장 안팎, 라이브러리 저장) ② ❌ 표시한 카드만 다시 보는 '나의 복습 루틴' 메모 1장",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🃏",
+      "one_liner": "말 한마디로 뒤집는 암기 카드 완성"
+    },
     {
       "id": "AI-2026-10-CAT06-001",
       "version": "v1.0",

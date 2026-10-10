@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 22:10 KST",
+  "updated_at": "2026-10-11 04:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -494,8 +494,8 @@
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-11",
+      "lesson_id": "AI-2026-10-CAT01-004"
     },
     {
       "id": "perplexity-2026-09-21-effort-skills",
@@ -661,6 +661,21 @@
       },
       "checked": "2026-10-10",
       "lesson_id": "AI-2026-10-CAT04-001"
+    },
+    {
+      "id": "muse-2026-09-08-launch",
+      "date": "2026-09-08",
+      "tool": "Muse",
+      "company": "Meta",
+      "type": "new",
+      "title": "Muse — 대신 일해 주는 개인 AI 에이전트",
+      "summary": "메일 보내기·여행 예약·양식 작성 등을 승인받고 대신 처리하는 Meta의 개인 에이전트, 앱·muse.ai·WhatsApp에서 사용 (미국부터 순차, 국내 미출시)",
+      "source": {
+        "title": "Meta 뉴스룸 – Introducing Muse",
+        "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": null
     },
     {
       "id": "chatgpt-2026-08-31-stickers",
