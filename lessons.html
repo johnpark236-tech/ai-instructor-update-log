@@ -35,6 +35,8 @@ details.how{margin-top:8px}details.how summary{cursor:pointer;font-size:13px;col
 .chal{display:grid;gap:8px}.chal .card{margin:0;padding:12px;font-size:14px}
 details.more{background:#0e1b2e;border:1px solid #ffffff14;border-radius:14px;margin-bottom:8px}details.more>summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:800;display:flex;justify-content:space-between;align-items:center}details.more>summary::-webkit-details-marker{display:none}details.more>summary:after{content:"＋";color:var(--a);font-weight:900}details.more[open]>summary:after{content:"－"}.mb{padding:0 16px 14px;font-size:14px}.mb p{margin:8px 0}
 .lrow{display:flex;gap:12px;align-items:flex-start}.lemo{font-size:30px;line-height:1;flex:none;width:48px;height:48px;display:grid;place-items:center;background:#0b1728;border-radius:14px;border:1px solid #2b4e72}.lone{color:#bfe9ff;font-weight:700;font-size:14px;margin-top:4px}
+.inapp{margin-top:12px}.inapp .btn{padding:6px 10px;margin-left:6px}
+a.btn{text-decoration:none;display:inline-block}
 .tabs{display:flex;gap:8px;margin:6px 0}.tab{cursor:pointer;flex:1;max-width:220px;background:#0b1728;color:#bed0e8;border:1px solid #294563;border-radius:12px;padding:10px;font-size:14px}.tab.on{border-color:var(--a);color:#fff;background:#10243d}.tab b{color:var(--a);margin-left:4px}
 .tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tools input,.tools select{flex:1;min-width:150px;background:#0b1728;border:1px solid var(--l);color:#fff;border-radius:12px;padding:10px;font-size:14px}
 .chip{cursor:pointer;background:#0f2038;color:#bed0e8;border:1px solid #294563;padding:8px 12px;border-radius:999px;font-size:13px}.chip.on{border-color:var(--a);color:#fff}
@@ -77,6 +79,14 @@ footer{padding:44px 0;color:#6f87a6;font-size:12px}
 <script src="./lesson-pptx.js"></script>
 <script>
 const M=window.LESSON_META,app=document.getElementById('app');
+// 카카오톡 등 앱 안의 브라우저는 파일 다운로드가 막혀 있어 외부 브라우저(크롬·사파리)로 넘긴다
+const UA=navigator.userAgent||'',IS_KAKAO=/KAKAOTALK/i.test(UA),IN_APP=IS_KAKAO||/(NAVER\(inapp|Instagram|FBAN|FBAV|Line\/|; wv\))/i.test(UA);
+function openExternal(url){
+  if(IS_KAKAO){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(url);return}
+  if(/Android/i.test(UA)){location.href='intent://'+url.replace(/^https?:\/\//,'')+'#Intent;scheme=https;package=com.android.chrome;end';return}
+  alert('다운로드는 사파리·크롬에서 됩니다. 오른쪽 위 메뉴에서 "다른 브라우저로 열기"를 눌러 주세요.');
+}
+function inAppBanner(){return IN_APP?`<div class="call warn inapp">📥 지금은 <b>${IS_KAKAO?'카카오톡':'앱'} 안의 브라우저</b>라 파일 다운로드가 안 될 수 있어요. <button class="btn" type="button" id="goExt">크롬으로 열기</button></div>`:''}
 let INDEX={lessons:[]},tab='todo',f={kind:'all',cat:'',lvl:'',job:'',q:''},view='learner';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
@@ -98,7 +108,7 @@ function listView(){
     (f.kind==='all'||l.type===f.kind)&&(!f.cat||l.categories.includes(f.cat))&&
     (!f.lvl||l.learner_levels.includes(f.lvl)||l.instructor_levels.includes(f.lvl))&&(!f.job||l.jobs.includes(f.job))&&
     (!f.q||JSON.stringify(l).toLowerCase().includes(f.q.toLowerCase())));
-  app.innerHTML=`<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.0</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
+  app.innerHTML=`${inAppBanner()}<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.0</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
   <p class="lead">신규 AI와 기존 AI의 새 기능을 이론 → 실습 → 결과물로 정리합니다. 새 교안이 맨 위에 올라옵니다. 하나씩 배우고, 다 배우면 <b>완료</b>를 눌러 숨기세요. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>에서 볼 수 있습니다.</p></section>
   <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
   <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
@@ -144,7 +154,7 @@ async function lessonView(id){
   const D=(title,body,open)=>`<details class="more"${open?' open':''}><summary>${title}</summary><div class="mb">${body}</div></details>`;
   const lv=[...L.learner_levels.map(x=>M.LEVEL[x]+x),...L.instructor_levels.map(x=>M.LEVEL[x]+x)].join(' ');
   const bar=`<div class="bar"><a href="#">← 교안 목록</a><div class="btns"><div class="seg"><button data-v="learner" class="${ins?'':'on'}">학습자용</button><button data-v="instructor" class="${ins?'on':''}">강사용 완전본</button></div>
-   <button class="btn pri dl" data-m="learner" type="button">⬇ PPT 학습자용</button><button class="btn pri dl" data-m="instructor" type="button">⬇ PPT 강사용</button><button class="btn pt" type="button">⬇ 프롬프트 모음</button></div></div>`;
+   <a class="btn pri dl" href="./downloads/${esc(L.id)}-learner.pptx" download="${esc(L.id)}-학습자용.pptx">⬇ PPT 학습자용</a><a class="btn pri dl" href="./downloads/${esc(L.id)}-instructor.pptx" download="${esc(L.id)}-강사용.pptx">⬇ PPT 강사용</a><a class="btn dl" href="./downloads/${esc(L.id)}-prompts.txt" download="${esc(L.id)}-prompts.txt">⬇ 프롬프트 모음</a></div></div>`;
   const glance=G?`<section class="glance">
     <div class="gl-hero"><div class="gl-emoji">${esc(G.emoji)}</div><div class="gl-one">${esc(G.one_liner)}</div></div>
     <div class="chips"><span>⏱ ${tot}분</span><span>💳 ${M.ACCESS[P.access]}</span><span>📅 출시 ${esc(L.released)}</span><span>🎯 ${esc(lv)}</span></div>
@@ -168,7 +178,7 @@ async function lessonView(id){
     ${D('🎚 레벨별 변형 가이드',I.level_guide.map(g=>`<p><b>${esc(g.level)}</b><br>${esc(g.guide)}</p>`).join(''))}
     ${(I.pro_points||[]).length?D('🧭 중·고급강사 응용 포인트',UL(I.pro_points)):''}
     ${D('✅ 강의 전날 체크리스트',I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span>${esc(c)}</span></label>`).join(''),1)}</div>`;
-  app.innerHTML=`${bar}
+  app.innerHTML=`${inAppBanner()}${bar}
   <section class="hero" style="padding:16px 0 4px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)}${isDone?' · ✅ 완료':''}</div>
   <h1 style="font-size:clamp(22px,4vw,34px)">${kindB(L.type)}${accB(P.access)}${esc(L.title)}</h1></section>
   ${L.notice?`<div class="call warn">⚠️ 변경 공지: ${esc(L.notice)}</div>`:''}
@@ -200,8 +210,7 @@ async function lessonView(id){
   <button class="mk big ${isDone?'undo':''}" type="button">${isDone?'↩ 완료 취소 (다시 목록에 표시)':'✓ 학습 완료 — 목록에서 숨기고 다음 교안으로'}</button>
   ${bar}`;
   app.querySelectorAll('.seg button').forEach(b=>b.onclick=async()=>{if(b.dataset.v===view)return;view=b.dataset.v;store.set('view',view);const y=scrollY;await lessonView(L.id);scrollTo(0,y)});
-  app.querySelectorAll('.dl').forEach(b=>b.onclick=()=>window.downloadLessonPptx(L,b,b.dataset.m));
-  app.querySelectorAll('.pt').forEach(b=>b.onclick=()=>{const blob=new Blob([M.promptText(L)],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`${L.id}-prompts.txt`;document.body.appendChild(a);a.click();a.remove()});
+  app.querySelectorAll('.dl').forEach(b=>b.onclick=e=>{if(IN_APP){e.preventDefault();openExternal(new URL(b.getAttribute('href'),location.href).href)}});
   app.querySelectorAll('.cp').forEach(b=>b.onclick=async()=>{const t=b.parentElement.querySelector('.pv').textContent;try{await navigator.clipboard.writeText(t);b.textContent='복사됨'}catch(e){b.textContent='복사 실패'}setTimeout(()=>b.textContent='복사',1500)});
   app.querySelectorAll('.rail a').forEach(a=>a.onclick=e=>{e.preventDefault();document.getElementById('st'+a.dataset.st).scrollIntoView({behavior:'smooth',block:'start'})});
   app.querySelectorAll('.vlink').forEach(a=>a.onclick=e=>{e.preventDefault();const d=document.querySelector('#verify details');d.open=true;d.scrollIntoView({behavior:'smooth'})});
@@ -212,6 +221,7 @@ async function lessonView(id){
 }
 
 function route(){const h=location.hash.slice(1);if(h.startsWith('import='))return importSync(h.slice(7));let id=decodeURIComponent(h);if(M.LEGACY[id]){history.replaceState(null,'','#'+M.LEGACY[id]);id=M.LEGACY[id]}id?lessonView(id):listView()}
+document.addEventListener('click',e=>{if(e.target&&e.target.id==='goExt')openExternal(location.href)});
 window.addEventListener('hashchange',route);
 fetch('./lessons.json?'+Date.now()).then(r=>r.json()).then(x=>{INDEX=x;route()}).catch(()=>route());
 </script>

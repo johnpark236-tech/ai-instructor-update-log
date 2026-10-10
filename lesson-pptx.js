@@ -201,6 +201,9 @@
     return pptx;
   }
 
+  // 서버(배포 단계)에서도 같은 함수로 PPT를 미리 만든다: scripts/build_downloads.js
+  window.buildLessonPptx = build;
+
   window.downloadLessonPptx = async function (L, btn, mode) {
     mode = mode === 'instructor' ? 'instructor' : 'learner';
     const label = btn && btn.textContent;

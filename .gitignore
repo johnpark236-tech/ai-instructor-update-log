@@ -1,3 +1,5 @@
 .env
 *.tmp
 __pycache__/
+downloads/
+node_modules/
