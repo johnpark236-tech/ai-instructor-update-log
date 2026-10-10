@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 11,
+  "count": 12,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-002",
+      "version": "v1.0",
+      "created_at": "2026-10-10 19:03 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "메모 한 장이 안내문이 되는 Word — ChatGPT for Word로 수업 안내문과 쉬운 한국어 버전 완성하기",
+      "summary": "ChatGPT가 Microsoft Word 오른쪽 사이드바로 들어왔습니다. 복사·붙여넣기 왕복 없이 Word 안에서 메모를 초안으로 바꾸고, 고칠 문장만 골라 다듬고, 제목·서식까지 정리해 '바로 배포할 수 있는 안내문 1장'을 만듭니다.",
+      "tool": "ChatGPT",
+      "feature": "ChatGPT for Word (Microsoft Word용 ChatGPT 추가 기능)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-09-17",
+      "categories": [
+        "CAT-03",
+        "CAT-02"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 메모로 만든 '수업·행사 안내문' Word 문서 1장 ② 같은 내용을 쉬운 한국어로 바꾼 버전 1장",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📝",
+      "one_liner": "Word 안에서 메모가 안내문으로"
+    },
     {
       "id": "AI-2026-10-CAT10-002",
       "version": "v1.0",
