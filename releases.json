@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11 04:20 KST",
+  "updated_at": "2026-10-11 05:11 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -228,6 +228,21 @@
       "lesson_id": null
     },
     {
+      "id": "perplexity-2026-10-05-wiley",
+      "date": "2026-10-05",
+      "tool": "Perplexity",
+      "company": "Perplexity",
+      "type": "update",
+      "title": "Wiley 학술지·도서 검색·인용",
+      "summary": "Perplexity와 Computer에서 Wiley 학술지와 책을 찾아 인용할 수 있게 됨 (모든 요금제, 프리미엄 한도는 요금제별 차등)",
+      "source": {
+        "title": "Perplexity 변경 기록 – Automations, inline visualizations, and GPT-6.1 Sol",
+        "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": null
+    },
+    {
       "id": "chatgpt-2026-10-02-7",
       "date": "2026-10-02",
       "tool": "ChatGPT",
@@ -360,6 +375,21 @@
         "url": "https://elevenlabs.io/docs/changelog"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-09-28-health-summaries",
+      "date": "2026-09-28",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "건강 데이터 맞춤 설명",
+      "summary": "Health 탭에서 차트·수치·기록을 골라 나에게 맞춘 설명을 받는 기능 (대상 요금제·국가는 공식 노트에 미기재)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-11",
       "lesson_id": null
     },
     {
@@ -526,6 +556,21 @@
       },
       "checked": "2026-10-10",
       "lesson_id": "AI-2026-10-CAT09-002"
+    },
+    {
+      "id": "chatgpt-2026-09-21-credit-scores",
+      "date": "2026-09-21",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Finances 신용점수 연결",
+      "summary": "Finances에 Experian 신용 보고서와 점수를 연결해 매달 변화와 해설을 받는 기능 (미국 Plus·Pro부터, 국내 미제공)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": null
     },
     {
       "id": "chatgpt-2026-09-17-3",
@@ -854,8 +899,8 @@
         "title": "Claude 릴리스 노트",
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-11",
+      "lesson_id": "AI-2026-10-CAT10-003"
     },
     {
       "id": "claude-2026-03-02-4",

@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 16,
+  "count": 17,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT10-003",
+      "version": "v1.0",
+      "created_at": "2026-10-11 05:11 KST",
+      "checked": "2026-10-11",
+      "review_by": "2027-01-11",
+      "title": "한 달 동안 AI를 어떻게 썼는지 돌아보기 — Claude 월간 회고(Reflect)로 '나의 AI 활용 성적표'와 다음 달 실천 카드 만들기",
+      "summary": "Claude 설정의 Reflect(월간 회고)는 한 달 동안 어떤 주제로, 언제, 얼마나 Claude를 썼는지 보여 주고 AI 활용 능력 4D 관점의 다음 단계를 제안합니다. 회고를 읽고 휴식 알림까지 설정해 '다음 달 AI 실천 카드' 1장을 만듭니다.",
+      "tool": "Claude",
+      "feature": "월간 회고(Monthly recap, 설정 > Reflect) · 시간과 집중(Time and focus) [실험 기능]",
+      "company": "Anthropic",
+      "type": "update",
+      "released": "2026-07-09",
+      "categories": [
+        "CAT-10",
+        "CAT-09"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-STU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 나의 AI 활용 성적표(주제 비율·사용 시간·잘한 점·놓친 점) ② 4D 기준 '다음 달 AI 실천 카드' 1장 ③ 내게 맞는 휴식 알림·조용한 시간 설정",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🪞",
+      "one_liner": "내 AI 사용 습관을 한 장으로 돌아보기"
+    },
     {
       "id": "AI-2026-10-CAT01-004",
       "version": "v1.0",
