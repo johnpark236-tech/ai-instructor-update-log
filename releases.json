@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 11:30 KST",
+  "updated_at": "2026-10-10 12:22 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -88,6 +88,21 @@
       "source": {
         "title": "Google 블로그 – Playground",
         "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-10-07-teens-study",
+      "date": "2026-10-07",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "청소년용 퀴즈·플래시카드·대학 준비 도구",
+      "summary": "ChatGPT for Teens에 노트로 만드는 퀴즈(바로 제공)와 플래시카드(추가 중)를 넣고, 미국 고교생용 대학 지원 플래너는 곧 공개한다고 발표",
+      "source": {
+        "title": "OpenAI – Helping teens learn, plan, and shape the future of AI",
+        "url": "https://openai.com/index/teens-learn-and-plan/"
       },
       "checked": "2026-10-10",
       "lesson_id": null
@@ -450,7 +465,7 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-10",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT04-002"
     },
     {
       "id": "gemininotebook-2026-08-28-usage-limits",
