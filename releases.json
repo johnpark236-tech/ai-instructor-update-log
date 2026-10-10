@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 14:07 KST",
+  "updated_at": "2026-10-10 16:23 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -778,6 +778,36 @@
       "source": {
         "title": "Claude 릴리스 노트",
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-10-01-student-hub-expand",
+      "date": "2026-10-01",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "학생 허브 전체 개인 계정·Workspace로 확대",
+      "summary": "학습 노트북·플래시카드·연습 퀴즈를 모은 학생 허브를 전 세계 개인 계정과 모든 연령 교육용 Workspace(EEA 밖 일반 Workspace 포함)로 넓힘",
+      "source": {
+        "title": "Google Workspace Updates — 학생 허브",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/find-your-learning-tools-all-in-one-place-with-the-student-hub-in-Gemini.html"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT10-002"
+    },
+    {
+      "id": "midjourney-2026-10-08-thinking-shared-folders",
+      "date": "2026-10-08",
+      "tool": "Midjourney",
+      "company": "Midjourney",
+      "type": "update",
+      "title": "Thinking 모드·공유 폴더 시험(알파)",
+      "summary": "알파 사이트에서 V8.2 작업을 'Rerun (Thinking)'으로 다시 돌려 프롬프트 정확도·글자 표현을 높이는 모드와, 공동 작업자·보기 권한으로 나누는 공유 폴더를 초기 버전으로 시험",
+      "source": {
+        "title": "Midjourney Alpha Changelog 10/7/26",
+        "url": "https://updates.midjourney.com/alpha-changelog-10-7-26/"
       },
       "checked": "2026-10-10",
       "lesson_id": null

@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 10,
+  "count": 11,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT10-002",
+      "version": "v1.0",
+      "created_at": "2026-10-10 16:23 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "내 수업 자료로 5분 만에 복습 세트 만들기 — Gemini 플래시카드·퀴즈로 어휘 카드와 공유 퀴즈 완성하기",
+      "summary": "Gemini 학생 허브가 2026년 10월 1일 개인 Google 계정 전체로 확대되었습니다. 무료 계정에서도 되는 플래시카드·퀴즈 기능으로 내 수업 자료를 넣어 뒤집는 어휘 카드와 링크로 나눠 주는 복습 퀴즈를 만듭니다.",
+      "tool": "Gemini",
+      "feature": "Gemini 앱 학생 허브(student hub) — 퀴즈·플래시카드·학습 가이드",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-01",
+      "categories": [
+        "CAT-10",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-STU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 수업 어휘로 만든 플래시카드 덱 1개 ② 학생에게 링크로 나눠 줄 복습 퀴즈 1개(공유 링크)",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🃏",
+      "one_liner": "수업 자료 한 장이 뒤집는 카드·퀴즈로"
+    },
     {
       "id": "AI-2026-10-CAT01-003",
       "version": "v1.0",
