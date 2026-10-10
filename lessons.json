@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 6,
+  "count": 7,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-001",
+      "version": "v1.0",
+      "created_at": "2026-10-10 11:17 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "메모 한 장으로 안내문과 발표 슬라이드까지 — Claude Docs·Slides로 수업 안내 세트 만들기",
+      "summary": "2026년 9월 16일부터 Claude의 어느 대화에서나 문서(Docs)·슬라이드(Slides)·디자인(Design)을 무료로 만들 수 있게 되었습니다. 흩어진 메모로 '이번 달 수업 안내문'을 문서로 만들고, 그 문서를 그대로 오리엔테이션 슬라이드로 바꿔 Word·PDF·PowerPoint로 내려받습니다.",
+      "tool": "Claude",
+      "feature": "Claude Docs · Claude Slides (어느 대화에서나 문서·슬라이드·디자인 만들기)",
+      "company": "Anthropic",
+      "type": "update",
+      "released": "2026-09-16",
+      "categories": [
+        "CAT-03",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① '이번 달 한국어 수업 안내문' Claude 문서 1개(Word·PDF로 내려받기) ② 같은 내용의 오리엔테이션 슬라이드 5장(PowerPoint·PDF로 내려받기)",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📑",
+      "one_liner": "메모 → 안내문 → 슬라이드, 대화 하나로"
+    },
     {
       "id": "AI-2026-10-CAT10-001",
       "version": "v1.0",

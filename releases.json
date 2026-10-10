@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 07:25 KST",
+  "updated_at": "2026-10-10 11:30 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -243,6 +243,21 @@
       "lesson_id": null
     },
     {
+      "id": "midjourney-2026-09-23-korean-ui",
+      "date": "2026-09-23",
+      "tool": "Midjourney",
+      "company": "Midjourney",
+      "type": "update",
+      "title": "웹 한국어 지원·스타일 미리보기(알파)",
+      "summary": "midjourney.com 화면을 한국어로 모든 사용자에게 제공, 알파 사이트에서 스타일 실시간 미리보기·기본 설정 저장·새 피드 시험",
+      "source": {
+        "title": "Midjourney 업데이트 – Alpha Changelog 9/23/26",
+        "url": "https://updates.midjourney.com/alpha-changelog-9-23-26/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
       "id": "claude-2026-09-22-11",
       "date": "2026-09-22",
       "tool": "Claude",
@@ -330,7 +345,7 @@
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
       },
       "checked": "2026-10-10",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT03-001"
     },
     {
       "id": "claude-2026-09-16-10",
@@ -376,6 +391,21 @@
       },
       "checked": "2026-10-10",
       "lesson_id": "AI-2026-10-CAT10-001"
+    },
+    {
+      "id": "siri-2026-09-14-siri-ai",
+      "date": "2026-09-14",
+      "tool": "Siri",
+      "company": "Apple",
+      "type": "update",
+      "title": "Siri AI 베타(전용 앱)",
+      "summary": "개인 맥락을 이해하고 앱 안에서 대신 행동하는 새 Siri를 베타로 출시, 출시 때는 영어만 지원하고 한국어 등 5개 언어는 10월 추가 예정",
+      "source": {
+        "title": "Apple 뉴스룸 – Siri AI is here",
+        "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
     },
     {
       "id": "gemini-2026-09-10-3",
