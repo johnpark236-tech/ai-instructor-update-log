@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 12:22 KST",
+  "updated_at": "2026-10-10 13:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -108,6 +108,21 @@
       "lesson_id": null
     },
     {
+      "id": "synthid-2026-10-07-detector-public",
+      "date": "2026-10-07",
+      "tool": "SynthID Detector",
+      "company": "Google DeepMind",
+      "type": "new",
+      "title": "SynthID Detector 전체 공개",
+      "summary": "이미지·영상·오디오를 올리면 Google과 파트너(OpenAI·NVIDIA·카카오) AI로 만든 표시(워터마크)가 있는지 알려 주는 무료 웹사이트를 누구에게나 공개 (첫 공개는 영어)",
+      "source": {
+        "title": "Google 블로그 – Google expands SynthID Detector for AI content",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": "AI-2026-10-CAT09-001"
+    },
+    {
       "id": "chatgpt-2026-10-06-8",
       "date": "2026-10-06",
       "tool": "ChatGPT",
@@ -118,6 +133,21 @@
       "source": {
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "cursor-2026-10-06-remote-control",
+      "date": "2026-10-06",
+      "tool": "Cursor",
+      "company": "Anysphere",
+      "type": "update",
+      "title": "iOS 앱에서 로컬 에이전트 원격 조작",
+      "summary": "내 컴퓨터에서 돌아가는 Cursor 에이전트를 아이폰 앱으로 보고 답할 수 있게 됨 (Enterprise 외 기본 켜짐)",
+      "source": {
+        "title": "Cursor Changelog – Remote control for local agents",
+        "url": "https://cursor.com/changelog"
       },
       "checked": "2026-10-10",
       "lesson_id": null
@@ -268,6 +298,21 @@
       "source": {
         "title": "Midjourney 업데이트 – Alpha Changelog 9/23/26",
         "url": "https://updates.midjourney.com/alpha-changelog-9-23-26/"
+      },
+      "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "cursor-2026-09-23-rollouts-security-review",
+      "date": "2026-09-23",
+      "tool": "Cursor",
+      "company": "Anysphere",
+      "type": "update",
+      "title": "Rollouts·Security Review 봇",
+      "summary": "배포 중인 PR의 상태를 환경별로 알려 주는 Rollouts와 PR마다 보안 취약점을 검토하는 Security Review 봇 추가 (Teams·Enterprise)",
+      "source": {
+        "title": "Cursor Changelog – Rollouts and Security Review",
+        "url": "https://cursor.com/changelog"
       },
       "checked": "2026-10-10",
       "lesson_id": null

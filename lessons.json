@@ -1,7 +1,44 @@
 {
   "standard": "v2.0",
-  "count": 8,
+  "count": 9,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT09-001",
+      "version": "v1.0",
+      "created_at": "2026-10-10 13:15 KST",
+      "checked": "2026-10-10",
+      "review_by": "2027-01-10",
+      "title": "이 사진, AI가 만들었을까? — SynthID Detector로 확인하고 우리 반 'AI 사진 확인 카드' 만들기",
+      "summary": "2026년 10월 7일 Google이 SynthID Detector를 누구나 쓸 수 있게 공개했습니다. 사진·영상·소리 파일을 올리면 Google과 파트너(OpenAI·NVIDIA·카카오) AI가 넣은 보이지 않는 표시가 있는지 알려 줍니다. 직접 AI 그림과 내 사진을 확인해 보고, 결과를 바르게 읽는 법을 담은 'AI 사진 확인 카드'를 만듭니다.",
+      "tool": "SynthID Detector",
+      "feature": "SynthID Detector (AI 생성 콘텐츠 워터마크 확인 플랫폼, 일반 공개)",
+      "company": "Google DeepMind",
+      "type": "new",
+      "released": "2026-10-07",
+      "categories": [
+        "CAT-09",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-SEN",
+        "JOB-GLB",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "우리 반 'AI 사진 확인 카드' 1장 — 확인 3단계와 내가 직접 해 본 결과 기록표(AI 그림 1장 + 내 사진 1장)가 들어간 A4 한 장 안내문",
+      "access": "free",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🔍",
+      "one_liner": "파일을 올리면 AI 표시가 있는지 알려 줘요"
+    },
     {
       "id": "AI-2026-10-CAT04-002",
       "version": "v1.0",
