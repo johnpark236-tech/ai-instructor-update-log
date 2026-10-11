@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 22,
+  "count": 23,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-001",
+      "version": "v1.0",
+      "created_at": "2026-10-11 21:20 KST",
+      "checked": "2026-10-11",
+      "review_by": "2027-01-11",
+      "title": "말 한마디로 수업 준비 꾸러미 받기 — Claude Cowork로 엑셀 과제표·슬라이드 만들고 매주 월요일 자동 브리핑 예약하기",
+      "summary": "2026년 9월 16일부터 Claude의 Cowork 기능이 어느 대화에서나 쓰이도록 Pro·Max에 순차 적용되고 있습니다. 대화로 일을 맡기면 Claude가 계획을 세워 수식이 든 엑셀·발표 슬라이드 같은 '파일'로 돌려주고, 같은 일을 매주 정해진 시간에 자동으로 돌리게 할 수도 있습니다.",
+      "tool": "Claude",
+      "feature": "Claude Cowork — 모든 대화에서 사용(새 Claude 경험)·예약 작업(Scheduled tasks)",
+      "company": "Anthropic",
+      "type": "update",
+      "released": "2026-09-16",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 출석률·과제 완료율이 수식으로 계산되는 '주간 수업 관리 엑셀' 1개 ② 다음 수업용 발표 슬라이드 5장 ③ 매주 월요일 아침 자동으로 오는 '이번 주 수업 준비 브리핑' 예약 작업 1개",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧑‍💼",
+      "one_liner": "말로 맡기면 파일로 돌려주는 AI 동료"
+    },
     {
       "id": "AI-2026-10-CAT07-001",
       "version": "v1.0",
