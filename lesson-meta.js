@@ -28,6 +28,11 @@ window.LESSON_META = {
   levelBadges(L) {
     return [...(L.learner_levels || []).map(x => `${this.LEVEL[x]}학습자-${x}`), ...(L.instructor_levels || []).map(x => `${this.LEVEL[x]}${x}`)];
   },
+  // 출시 후 14일이 지나서 만든 교안 = 지난 기능 다시 보기
+  isPast(L) {
+    const c = Date.parse(String(L.created_at || '').slice(0, 10)), r = Date.parse(L.released || '');
+    return !isNaN(c) && !isNaN(r) && (c - r) / 86400000 > 14;
+  },
   totalMinutes(L) { const m = L.minutes || {}; return (m.theory || 0) + (m.practice || 0) + (m.wrap || 0); },
   promptText(L) {
     const out = [`# ${L.title}`, `교안 ID: ${L.id} (${L.version}) · 기준일 ${L.checked}`, ''];

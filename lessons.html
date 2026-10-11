@@ -37,6 +37,7 @@ details.more{background:#0e1b2e;border:1px solid #ffffff14;border-radius:14px;ma
 .lrow{display:flex;gap:12px;align-items:flex-start}.lemo{font-size:30px;line-height:1;flex:none;width:48px;height:48px;display:grid;place-items:center;background:#0b1728;border-radius:14px;border:1px solid #2b4e72}.lone{color:#bfe9ff;font-weight:700;font-size:14px;margin-top:4px}
 .inapp{margin-top:12px}.inapp .btn{padding:6px 10px;margin-left:6px}
 a.btn{text-decoration:none;display:inline-block}
+.past{display:inline-block;vertical-align:middle;font-size:12px;font-weight:900;padding:2px 8px;border-radius:7px;margin-right:6px;position:relative;top:-2px;background:#2b2140;color:#d9c8ff;border:1px solid #6b5cff;white-space:nowrap}h1 .past{font-size:15px;top:-8px}
 .tabs{display:flex;gap:8px;margin:6px 0}.tab{cursor:pointer;flex:1;max-width:220px;background:#0b1728;color:#bed0e8;border:1px solid #294563;border-radius:12px;padding:10px;font-size:14px}.tab.on{border-color:var(--a);color:#fff;background:#10243d}.tab b{color:var(--a);margin-left:4px}
 .tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tools input,.tools select{flex:1;min-width:150px;background:#0b1728;border:1px solid var(--l);color:#fff;border-radius:12px;padding:10px;font-size:14px}
 .chip{cursor:pointer;background:#0f2038;color:#bed0e8;border:1px solid #294563;padding:8px 12px;border-radius:999px;font-size:13px}.chip.on{border-color:var(--a);color:#fff}
@@ -92,6 +93,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 view=store.get('view')||'learner';
 const kindB=t=>`<span class="kind ${t==='new'?'kn':'ku'}">${M.KIND[t]||''}</span>`;
+const pastB=L=>M.isPast(L)?'<span class="past">📚 지난 기능</span>':'';
 const accB=a=>M.ACCESS[a]?`<span class="acc ${{free:'af',freemium:'am',paid:'ap'}[a]}">${M.ACCESS[a]}</span>`:'';
 const getDone=()=>store.get('done')||{};
 function setDone(id,on){const d=getDone();if(on)d[id]=new Date().toISOString();else delete d[id];store.set('done',d)}
@@ -105,19 +107,19 @@ const opt=(v,t,cur)=>`<option value="${v}" ${v===cur?'selected':''}>${t}</option
 function listView(){
   const done=getDone(),all=ordered(),doneN=all.filter(l=>done[l.id]).length;
   const items=newestFirst().filter(l=>(tab==='done')===!!done[l.id]).filter(l=>
-    (f.kind==='all'||l.type===f.kind)&&(!f.cat||l.categories.includes(f.cat))&&
+    (f.kind==='all'||(f.kind==='past'?M.isPast(l):l.type===f.kind))&&(!f.cat||l.categories.includes(f.cat))&&
     (!f.lvl||l.learner_levels.includes(f.lvl)||l.instructor_levels.includes(f.lvl))&&(!f.job||l.jobs.includes(f.job))&&
     (!f.q||JSON.stringify(l).toLowerCase().includes(f.q.toLowerCase())));
   app.innerHTML=`${inAppBanner()}<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.0</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
   <p class="lead">신규 AI와 기존 AI의 새 기능을 이론 → 실습 → 결과물로 정리합니다. 새 교안이 맨 위에 올라옵니다. 하나씩 배우고, 다 배우면 <b>완료</b>를 눌러 숨기세요. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>에서 볼 수 있습니다.</p></section>
   <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
-  <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
+  <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI'],['past','📚 지난 기능']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
   <div class="tools"><select id="fc">${opt('','카테고리 전체',f.cat)}${Object.entries(M.CAT).map(([k,v])=>opt(k,`${k} ${v}`,f.cat)).join('')}</select>
   <select id="fl">${opt('','대상 전체',f.lvl)}${Object.keys(M.LEVEL).map(k=>opt(k,`${M.LEVEL[k]} ${k.includes('강사')?k:'학습자-'+k}`,f.lvl)).join('')}</select>
   <select id="fj">${opt('','직업군 전체',f.job)}${Object.entries(M.JOB).map(([k,v])=>opt(k,v,f.job)).join('')}</select>
   <input id="q" placeholder="AI 이름·기능 검색" value="${esc(f.q)}"></div>
   <div class="list">${items.length?items.map(l=>`<div class="card item"><a class="go" href="#${esc(l.id)}">
-   <div class="lrow"><div class="lemo">${esc(l.emoji||"📘")}</div><div><div class="ttl"><span class="no">#${l.no}</span>${kindB(l.type)}${accB(l.access)}${esc(l.title)}</div><div class="lone">${esc(l.one_liner||"")}</div></div></div>
+   <div class="lrow"><div class="lemo">${esc(l.emoji||"📘")}</div><div><div class="ttl"><span class="no">#${l.no}</span>${kindB(l.type)}${pastB(l)}${accB(l.access)}${esc(l.title)}</div><div class="lone">${esc(l.one_liner||"")}</div></div></div>
    ${l.notice?`<div class="call warn">⚠️ ${esc(l.notice)}</div>`:''}
    <div class="meta"><span>${esc(l.tool)} · ${esc(l.feature)}</span><span>출시 ${esc(l.released)}</span><span>${l.total_minutes}분</span><span>재검토 ${esc(l.review_by)}</span>${done[l.id]?`<span>완료 ${esc(String(done[l.id]).slice(0,10))}</span>`:''}</div>
    <div class="meta">${l.categories.map(c=>`<span class="pill">${c} ${M.CAT[c]}</span>`).join('')}${M.levelBadges(l).map(b=>`<span class="pill">${b}</span>`).join('')}</div>
@@ -180,7 +182,7 @@ async function lessonView(id){
     ${D('✅ 강의 전날 체크리스트',I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span>${esc(c)}</span></label>`).join(''),1)}</div>`;
   app.innerHTML=`${inAppBanner()}${bar}
   <section class="hero" style="padding:16px 0 4px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)}${isDone?' · ✅ 완료':''}</div>
-  <h1 style="font-size:clamp(22px,4vw,34px)">${kindB(L.type)}${accB(P.access)}${esc(L.title)}</h1></section>
+  <h1 style="font-size:clamp(22px,4vw,34px)">${kindB(L.type)}${pastB(L)}${accB(P.access)}${esc(L.title)}</h1></section>
   ${L.notice?`<div class="call warn">⚠️ 변경 공지: ${esc(L.notice)}</div>`:''}
   ${glance}
 
