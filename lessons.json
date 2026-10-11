@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 18,
+  "count": 19,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-003",
+      "version": "v1.0",
+      "created_at": "2026-10-11 12:04 KST",
+      "checked": "2026-10-11",
+      "review_by": "2027-01-11",
+      "title": "종이 안내문 3장을 PDF 1개로 — ChatGPT 카메라 스캔으로 '쉬운 한국어 요약 카드' 만들기",
+      "summary": "ChatGPT iOS 앱 카메라에 여러 쪽을 연달아 찍어 PDF 하나로 묶는 '스캔'이 생겼습니다. 종이 안내문을 스캔해 원문 확인 → 요약 카드 → 쉬운 한국어판까지 만들고, 날짜·금액은 원문과 대조하는 습관을 익힙니다.",
+      "tool": "ChatGPT",
+      "feature": "ChatGPT 카메라 여러 쪽 스캔(Multi-page scanning) — iOS",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-01",
+      "categories": [
+        "CAT-03",
+        "CAT-09"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 종이 안내문 3쪽을 묶은 PDF 1개 ② '언제·어디서·준비물·신청·할 일'을 담은 요약 카드 1장 ③ 같은 내용의 쉬운 한국어판(또는 모국어 병기판) 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📄",
+      "one_liner": "종이 여러 장을 찍으면 PDF 하나로 묶어 줘요"
+    },
     {
       "id": "AI-2026-10-CAT06-002",
       "version": "v1.0",
