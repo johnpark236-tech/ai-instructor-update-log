@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11 17:20 KST",
+  "updated_at": "2026-10-11 18:16 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -554,8 +554,8 @@
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-11",
+      "lesson_id": "AI-2026-10-CAT05-003"
     },
     {
       "id": "claude-2026-09-22-11",
@@ -783,6 +783,36 @@
       "lesson_id": "AI-2026-10-CAT01-003"
     },
     {
+      "id": "chatgpt-2026-09-09-voice-limits",
+      "date": "2026-09-09",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "음성 한도 단순화·상위 모델 활용",
+      "summary": "어려운 질문은 음성 중에도 상위 모델을 쓰고, 요금제별 하루 음성 한도를 단순화, 음성 지능 단계 선택은 종료",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-09-09-workspace-cross-app",
+      "date": "2026-09-09",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Workspace 앱 어디서나 문서·메일·일정 처리",
+      "summary": "Gmail·Docs·Drive·Chat 등 어느 앱에서든 Gemini에게 문서 생성·메일 작성·회의 예약·할 일 추가를 맡기고, 보내기 전 미리보기로 확인 (Google AI Pro·Ultra 등, 출시 때 영어만)",
+      "source": {
+        "title": "Google Workspace 업데이트 블로그",
+        "url": "https://workspaceupdates.googleblog.com/2026/09/create-content-schedule-events-and-coordinate-tasks-across-Workspace-regardless-of-what-app-you-are-in.html"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": null
+    },
+    {
       "id": "chatgpt-2026-09-08-2",
       "date": "2026-09-08",
       "tool": "ChatGPT",
@@ -1006,6 +1036,21 @@
       },
       "checked": "2026-10-11",
       "lesson_id": "AI-2026-10-CAT10-003"
+    },
+    {
+      "id": "chatgpt-2026-07-08-gpt-live",
+      "date": "2026-07-08",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "음성이 GPT-Live-1로 전환",
+      "summary": "음성 대화가 유료는 GPT-Live-1, 무료는 GPT-Live-1 mini로 바뀌어 듣는 동시에 말하고 끼어들기가 자연스러워짐",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": "AI-2026-10-CAT05-003"
     },
     {
       "id": "claude-2026-03-02-4",

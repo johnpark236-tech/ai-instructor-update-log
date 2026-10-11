@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 20,
+  "count": 21,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-003",
+      "version": "v1.0",
+      "created_at": "2026-10-11 18:16 KST",
+      "checked": "2026-10-11",
+      "review_by": "2027-01-11",
+      "title": "말로 연습하는 AI 회화 짝꿍 — ChatGPT 음성(Live)으로 상황 롤플레이하고 표현 복습 카드 만들기",
+      "summary": "ChatGPT 음성이 듣는 동시에 말하는 Live 방식으로 바뀌고, 9월에는 통화 중 플러그인까지 쓸 수 있게 되었습니다. 역할 카드 한 장으로 AI를 '천천히 말하는 회화 짝꿍'으로 만들고, 통화 기록에서 내 표현 복습 카드를 뽑아냅니다.",
+      "tool": "ChatGPT",
+      "feature": "ChatGPT Voice — Live(GPT-Live-1)·음성 중 플러그인",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-09-23",
+      "categories": [
+        "CAT-05",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-SEN",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 역할 카드로 설정한 상황 롤플레이 음성 대화 1회와 그 대화 기록 ② 내가 막힌 표현 5개를 '더 자연스러운 말'로 고친 표현 복습 카드 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "말로 연습하는 AI 회화 짝꿍"
+    },
     {
       "id": "AI-2026-10-CAT04-003",
       "version": "v1.0",
