@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 19,
+  "count": 20,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-003",
+      "version": "v1.0",
+      "created_at": "2026-10-11 17:20 KST",
+      "checked": "2026-10-11",
+      "review_by": "2027-01-11",
+      "title": "한국어 화면으로 미드저니 시작하기 — 같은 그림체 어휘 그림 카드 4장 만들기",
+      "summary": "Midjourney 웹사이트(midjourney.com)가 한국어 화면을 모든 사용자에게 열었습니다. 메뉴를 한국어로 보며 스타일 참조(Style Reference)로 그림체를 통일해, 수업에 바로 쓰는 어휘 그림 카드 4장을 만듭니다.",
+      "tool": "Midjourney",
+      "feature": "Midjourney 웹 한국어 지원(Korean) · 스타일 참조(Style Reference)",
+      "company": "Midjourney",
+      "type": "update",
+      "released": "2026-09-23",
+      "categories": [
+        "CAT-04",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "같은 그림체로 통일된 어휘 그림 카드 4장 (세로 3:4, 한글 낱말은 PPT에서 붙인 완성본) + 다시 쓸 수 있는 '내 카드 프롬프트 틀' 1개",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎨",
+      "one_liner": "한국어 화면에서 같은 그림체 카드 만들기"
+    },
     {
       "id": "AI-2026-10-CAT03-003",
       "version": "v1.0",

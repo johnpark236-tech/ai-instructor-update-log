@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11 12:04 KST",
+  "updated_at": "2026-10-11 17:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -509,8 +509,8 @@
         "title": "Midjourney 업데이트 – Alpha Changelog 9/23/26",
         "url": "https://updates.midjourney.com/alpha-changelog-9-23-26/"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-11",
+      "lesson_id": "AI-2026-10-CAT04-003"
     },
     {
       "id": "cursor-2026-09-23-rollouts-security-review",
@@ -706,6 +706,21 @@
       },
       "checked": "2026-10-10",
       "lesson_id": null
+    },
+    {
+      "id": "midjourney-2026-09-16-korean-alpha",
+      "date": "2026-09-16",
+      "tool": "Midjourney",
+      "company": "Midjourney",
+      "type": "update",
+      "title": "알파 사이트 한국어 먼저 도입",
+      "summary": "전체 공개 일주일 전, 알파 사이트에 한국어 화면을 먼저 넣고 편집기·모바일 화면도 손봄",
+      "source": {
+        "title": "Midjourney Alpha Changelog 9/16/26",
+        "url": "https://updates.midjourney.com/alpha-changelog-9-16-26/"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": "AI-2026-10-CAT04-003"
     },
     {
       "id": "claude-2026-09-15-8",
@@ -915,6 +930,21 @@
         "url": "https://gemini.google/release-notes/"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "midjourney-2026-07-24-v8-2",
+      "date": "2026-07-24",
+      "tool": "Midjourney",
+      "company": "Midjourney",
+      "type": "update",
+      "title": "V8.2 기본 모델 출시",
+      "summary": "그림의 미적 품질과 내 취향 학습(개인화)을 강화한 V8.2가 기본 모델이 됨",
+      "source": {
+        "title": "Midjourney 버전 안내",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+      },
+      "checked": "2026-10-11",
       "lesson_id": null
     },
     {
