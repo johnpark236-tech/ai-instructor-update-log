@@ -1,7 +1,44 @@
 {
   "standard": "v2.0",
-  "count": 23,
+  "count": 24,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT01-005",
+      "version": "v1.0",
+      "created_at": "2026-10-11 23:15 KST",
+      "checked": "2026-10-11",
+      "review_by": "2027-01-11",
+      "title": "말로 안내받으며 생활 글씨 읽기 — Gemini Live 가이드 비전으로 '우리 집 라벨 읽기 질문 카드' 만들기",
+      "summary": "Gemini Live에 카메라를 비추면 보이는 것을 말로 설명해 주고, 화면이 어긋나면 카메라를 어떻게 움직일지 음성으로 알려 주는 가이드 비전(Guided Vision)이 나왔습니다. 과자 봉지·가전 다이얼·옷 색깔을 직접 비춰 보며, 수강생이 집에서 혼자 쓸 수 있는 '라벨 읽기 질문 카드'를 만듭니다.",
+      "tool": "Gemini",
+      "feature": "Gemini Live 가이드 비전(Guided Vision)",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-01",
+      "categories": [
+        "CAT-01",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-GLB",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "'우리 집 라벨 읽기 질문 카드' 1장 — 내가 자주 확인할 물건 3가지와, 가이드 비전에 바로 말할 질문 문장 3개, 답을 다시 확인할 방법을 적은 휴대용 카드",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🦯",
+      "one_liner": "카메라를 비추면 말로 읽어 주고 안내해요"
+    },
     {
       "id": "AI-2026-10-CAT08-001",
       "version": "v1.0",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11 21:20 KST",
+  "updated_at": "2026-10-11 23:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -15,6 +15,21 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "workspacestudio-2026-10-09-logic-search-steps",
+      "date": "2026-10-09",
+      "tool": "Google Workspace Studio",
+      "company": "Google",
+      "type": "update",
+      "title": "Workspace Studio 조건 분기·Drive 검색 단계",
+      "summary": "자동화 흐름에 중첩 조건문, Drive 문서 검색 단계, Gmail 후속 답장 건너뛰기, Meet 캘린더 출력 확장을 추가 (Workspace 고객·Workspace Individual, 10월 13일부터 순차)",
+      "source": {
+        "title": "Google Workspace Updates – Workspace Studio 새 단계",
+        "url": "http://workspaceupdates.googleblog.com/2026/10/new-logic-and-search-steps-in-workspace-Studio-help-expand-automation-capabilities.html"
+      },
+      "checked": "2026-10-11",
       "lesson_id": null
     },
     {
@@ -213,6 +228,21 @@
       "lesson_id": null
     },
     {
+      "id": "copilot-2026-10-06-ppt-mac-file-reference",
+      "date": "2026-10-06",
+      "tool": "Microsoft 365 Copilot",
+      "company": "Microsoft",
+      "type": "update",
+      "title": "Mac PowerPoint에서 파일 이름으로 자료 불러오기",
+      "summary": "Mac용 PowerPoint의 Copilot으로 발표 자료를 만들 때 SharePoint·OneDrive 파일을 이름만 말해도 찾아서 내용 근거로 씀",
+      "source": {
+        "title": "Microsoft 365 Copilot 릴리스 노트",
+        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": null
+    },
+    {
       "id": "elevenlabs-2026-10-05-agents-procedures-merge",
       "date": "2026-10-05",
       "tool": "ElevenLabs",
@@ -346,6 +376,21 @@
       },
       "checked": "2026-10-11",
       "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-10-01-guided-vision",
+      "date": "2026-10-01",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini Live 가이드 비전(Guided Vision)",
+      "summary": "Gemini Live에서 카메라를 비추면 보이는 것을 말로 설명하고, 화면이 어긋나면 '왼쪽으로', '조금 뒤로'처럼 카메라 움직임을 음성으로 안내 (Android 9 이상)",
+      "source": {
+        "title": "Google 블로그 – Guided Vision in Gemini Live",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": "AI-2026-10-CAT01-005"
     },
     {
       "id": "gemini-2026-09-30-4",
@@ -556,6 +601,21 @@
       },
       "checked": "2026-10-11",
       "lesson_id": "AI-2026-10-CAT05-003"
+    },
+    {
+      "id": "gemini-2026-09-23-connected-apps-wave",
+      "date": "2026-09-23",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 연결 앱 대거 추가",
+      "summary": "Adobe·Picsart·Airtable·monday.com·Zoho 등 14개 외부 앱을 Gemini에 연결해 대화로 디자인·프로젝트 관리·웹사이트 작업을 시킬 수 있게 됨 (국가·요금제는 발표문에 없음)",
+      "source": {
+        "title": "Google 블로그 – New Connected Apps in Gemini",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": null
     },
     {
       "id": "claude-2026-09-22-11",
@@ -1125,21 +1185,6 @@
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
       },
       "checked": "2026-10-10",
-      "lesson_id": null
-    },
-    {
-      "id": "copilot-2026-10-06-ppt-mac-file-reference",
-      "date": "2026-10-06",
-      "tool": "Microsoft 365 Copilot",
-      "company": "Microsoft",
-      "type": "update",
-      "title": "Mac PowerPoint에서 파일 이름으로 자료 불러오기",
-      "summary": "Mac용 PowerPoint의 Copilot으로 발표 자료를 만들 때 SharePoint·OneDrive 파일을 이름만 말해도 찾아서 내용 근거로 씀",
-      "source": {
-        "title": "Microsoft 365 Copilot 릴리스 노트",
-        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
-      },
-      "checked": "2026-10-11",
       "lesson_id": null
     }
   ]
