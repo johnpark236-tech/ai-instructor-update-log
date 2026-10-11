@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 24,
+  "count": 25,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT11-001",
+      "version": "v1.0",
+      "created_at": "2026-10-12 01:15 KST",
+      "checked": "2026-10-12",
+      "review_by": "2027-01-12",
+      "title": "말로 설명해 우리 교실·가게 홈페이지 만들기 — ChatGPT Sites로 한 장짜리 안내 웹사이트를 만들고 링크로 공유하기",
+      "summary": "ChatGPT에 '이런 웹사이트를 만들어 줘'라고 설명하면 미리보기 웹사이트가 만들어지고, 점검한 뒤 링크로 게시할 수 있습니다. 수업 안내·가게 소개용 한 장짜리 사이트를 만들어 공유 링크까지 받아 갑니다.",
+      "tool": "ChatGPT",
+      "feature": "ChatGPT Sites (공개 베타)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-07-09",
+      "categories": [
+        "CAT-11",
+        "CAT-07"
+      ],
+      "jobs": [
+        "JOB-MKT",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 우리 교실(또는 가게) 한 장짜리 안내 웹사이트 1개 — 소개·시간표·오시는 길·자주 묻는 질문·쉬운 한국어 안내 포함 ② 공개 범위를 정해 게시한 공유 링크 1개",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🌐",
+      "one_liner": "말로 설명하면 홈페이지가 뚝딱"
+    },
     {
       "id": "AI-2026-10-CAT01-005",
       "version": "v1.0",

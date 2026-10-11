@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11 23:10 KST",
+  "updated_at": "2026-10-12 01:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -903,6 +903,21 @@
       "lesson_id": null
     },
     {
+      "id": "chatgpt-2026-09-03-sites-external-share",
+      "date": "2026-09-03",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Sites 외부인과 공유",
+      "summary": "Site를 전체 공개하지 않고도 워크스페이스 밖의 특정 사람에게 이메일로 보기 권한을 줄 수 있음 (보기만 가능, 편집·게시 불가)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": null
+    },
+    {
       "id": "chatgpt-2026-08-31-stickers",
       "date": "2026-08-31",
       "tool": "ChatGPT",
@@ -918,6 +933,21 @@
       "lesson_id": "AI-2026-10-CAT04-002"
     },
     {
+      "id": "chatgpt-2026-08-31-pronunciation",
+      "date": "2026-08-31",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "발음 도움 개선",
+      "summary": "단어·문장 발음을 물으면 눌러서 소리를 듣고 발음 기호식 풀이를 함께 볼 수 있음 (요금제·언어 범위 미공개)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": null
+    },
+    {
       "id": "gemininotebook-2026-08-28-usage-limits",
       "date": "2026-08-28",
       "tool": "Gemini Notebook",
@@ -930,6 +960,21 @@
         "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-08-27-temporary-chat-controls",
+      "date": "2026-08-27",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "임시 채팅 개인화 선택",
+      "summary": "임시 채팅을 시작할 때 메모리·맞춤 지침·플러그인을 쓸지 고를 수 있고, 필요하면 대화 기록에 저장 가능 (기본값은 개인화 없음)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-12",
       "lesson_id": null
     },
     {
@@ -963,6 +1008,21 @@
       "lesson_id": null
     },
     {
+      "id": "chatgpt-2026-08-20-sites-url",
+      "date": "2026-08-20",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Sites 주소 바꾸기",
+      "summary": "Plus·Pro 소유자가 ChatGPT가 호스팅하는 Site 주소를 새로 정할 수 있고, 옛 주소는 새 주소로 자동 연결",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": null
+    },
+    {
       "id": "gemini-2026-08-19-2",
       "date": "2026-08-19",
       "tool": "Gemini",
@@ -990,6 +1050,21 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-08-10-restaurant-reservations",
+      "date": "2026-08-10",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "식당 예약 찾기",
+      "summary": "지역·시간·인원·취향을 말하면 OpenTable·Resy·Yelp에서 빈 예약 시간을 찾아 보여 주고 예약까지 이어 줌 (전 요금제 순차, Resy·Yelp는 북미)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-12",
       "lesson_id": null
     },
     {
@@ -1068,6 +1143,21 @@
       "lesson_id": null
     },
     {
+      "id": "chatgpt-2026-07-15-custom-instructions-5000",
+      "date": "2026-07-15",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "맞춤 지침 5,000자로 확대",
+      "summary": "맞춤 지침(Custom instructions) 글자 수 한도를 1,500자에서 5,000자로 늘림 (Plus·Pro·Business·Enterprise·Edu)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": null
+    },
+    {
       "id": "claude-2026-07-10-6",
       "date": "2026-07-10",
       "tool": "Claude",
@@ -1096,6 +1186,21 @@
       },
       "checked": "2026-10-11",
       "lesson_id": "AI-2026-10-CAT10-003"
+    },
+    {
+      "id": "chatgpt-2026-07-09-sites",
+      "date": "2026-07-09",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "ChatGPT Sites 공개 베타",
+      "summary": "말로 설명하면 대화형 웹사이트·간단한 앱을 만들어 미리 보고 링크로 게시 (Business·Enterprise·Pro·Edu에 이어 Plus, 무료·Go 제외, 유럽·영국·스위스는 출시 시 제외)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": "AI-2026-10-CAT11-001"
     },
     {
       "id": "chatgpt-2026-07-08-gpt-live",
