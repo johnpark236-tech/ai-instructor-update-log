@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11 18:16 KST",
+  "updated_at": "2026-10-11 19:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -989,8 +989,8 @@
         "title": "Gemini 릴리스 노트",
         "url": "https://gemini.google/release-notes/"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-11",
+      "lesson_id": "AI-2026-10-CAT07-001"
     },
     {
       "id": "gemininotebook-2026-07-16-rename",
