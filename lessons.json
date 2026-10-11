@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 25,
+  "count": 26,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT02-002",
+      "version": "v1.0",
+      "created_at": "2026-10-12 07:15 KST",
+      "checked": "2026-10-12",
+      "review_by": "2027-01-12",
+      "title": "한 마디면 내 수업 자료가 나오는 ChatGPT — 맞춤 지침(Custom Instructions)으로 '나만의 수업 도우미 설정 카드' 만들기",
+      "summary": "ChatGPT 맞춤 지침에 '나는 누구이고, 누구를 가르치며, 어떤 형식을 원하는지'를 한 번 적어 두면 새 대화마다 그 기준으로 답합니다. 무료 요금제(1,500자)로 내 지침 카드를 만들고, 같은 한 마디가 비포·애프터로 어떻게 달라지는지 확인합니다.",
+      "tool": "ChatGPT",
+      "feature": "맞춤 지침(Custom Instructions) — 유료 5,000자 확대·임시 채팅 개인화 선택",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-07-15",
+      "categories": [
+        "CAT-02",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-GLB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 나만의 수업 도우미 '맞춤 지침 카드'(1,500자 이내) ② 지침이 반영된 초급반 어휘 활동지 1부와 비포·애프터 비교 캡처",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📝",
+      "one_liner": "한 번 써 두면 늘 내 방식대로 답해요"
+    },
     {
       "id": "AI-2026-10-CAT11-001",
       "version": "v1.0",

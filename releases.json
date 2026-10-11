@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 01:20 KST",
+  "updated_at": "2026-10-12 07:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -14,7 +14,7 @@
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
-      "checked": "2026-10-10",
+      "checked": "2026-10-12",
       "lesson_id": null
     },
     {
@@ -44,7 +44,7 @@
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
-      "checked": "2026-10-10",
+      "checked": "2026-10-12",
       "lesson_id": null
     },
     {
@@ -89,7 +89,7 @@
         "title": "Claude 릴리스 노트",
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
       },
-      "checked": "2026-10-10",
+      "checked": "2026-10-12",
       "lesson_id": null
     },
     {
@@ -104,7 +104,7 @@
         "title": "Claude 릴리스 노트",
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
       },
-      "checked": "2026-10-10",
+      "checked": "2026-10-12",
       "lesson_id": null
     },
     {
@@ -975,7 +975,7 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-12",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT02-002"
     },
     {
       "id": "claude-2026-08-25-7",
@@ -1155,7 +1155,7 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-12",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT02-002"
     },
     {
       "id": "claude-2026-07-10-6",
