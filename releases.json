@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11 05:11 KST",
+  "updated_at": "2026-10-11 10:18 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -240,7 +240,7 @@
         "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol"
       },
       "checked": "2026-10-11",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT06-002"
     },
     {
       "id": "chatgpt-2026-10-02-7",
@@ -270,6 +270,21 @@
         "url": "https://runway.com/ko/changelog"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "midjourney-2026-10-02-folder-defaults",
+      "date": "2026-10-02",
+      "tool": "Midjourney",
+      "company": "Midjourney",
+      "type": "update",
+      "title": "폴더별 기본 설정·스타일 참조 묶음(알파)",
+      "summary": "알파 사이트에서 폴더마다 기본 파라미터(--exp 포함)를 정해 두고, 여러 스타일 참조(sref)를 썸네일 묶음 하나로 보여 주며, 이미지를 끌어다 '스타일 참조'로 붙이는 기능 추가",
+      "source": {
+        "title": "Midjourney Alpha Changelog 10/1/26",
+        "url": "https://updates.midjourney.com/alpha-changelog-10-1-26/"
+      },
+      "checked": "2026-10-11",
       "lesson_id": null
     },
     {
@@ -303,6 +318,21 @@
       "lesson_id": "AI-2026-10-CAT10-002"
     },
     {
+      "id": "runway-2026-10-01-openai-dots",
+      "date": "2026-10-01",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "OpenAI Dots에서 Runway 사용",
+      "summary": "OpenAI의 Dots에서 기획안을 장면별로 나누면 Runway가 각 장면 영상을 만들어 주는 연동 (전 요금제)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/changelog"
+      },
+      "checked": "2026-10-11",
+      "lesson_id": null
+    },
+    {
       "id": "gemini-2026-09-30-4",
       "date": "2026-09-30",
       "tool": "Gemini",
@@ -330,6 +360,21 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "runway-2026-09-29-elevenlabs-v4",
+      "date": "2026-09-29",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "Runway에 ElevenLabs V4 음성 모델",
+      "summary": "Runway 안에서 ElevenLabs V4 모델로 음성·오디오를 만들 수 있게 됨 (유료 요금제)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/changelog"
+      },
+      "checked": "2026-10-11",
       "lesson_id": null
     },
     {

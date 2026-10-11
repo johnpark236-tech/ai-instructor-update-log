@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 17,
+  "count": 18,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-002",
+      "version": "v1.0",
+      "created_at": "2026-10-11 10:18 KST",
+      "checked": "2026-10-11",
+      "review_by": "2027-01-11",
+      "title": "근거가 붙은 수업 자료 만들기 — Perplexity의 Wiley 학술 자료로 '교사용 근거 카드' 완성하기",
+      "summary": "Perplexity에서 Wiley 학술지·전공서를 별도 구독 없이 찾아 인용할 수 있게 되었습니다. 일반 웹 검색 답과 학술 자료 답을 비교하고, 인용을 원문과 대조해 출처가 붙은 '교사용 근거 카드' 1장을 만듭니다.",
+      "tool": "Perplexity",
+      "feature": "Wiley 학술지·도서 검색과 인용 (Premium Data Sources)",
+      "company": "Perplexity",
+      "type": "update",
+      "released": "2026-10-05",
+      "categories": [
+        "CAT-06",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-STU",
+        "JOB-DAT",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "내 수업 질문 1개에 대한 '교사용 근거 카드' 1장 — 핵심 주장 3줄, 학술 출처 3개(제목·학술지/책·연도), 원문 대조 체크 표시, 수업 적용 팁 2개, 학습자·학부모용 쉬운 설명 3문장",
+      "access": "freemium",
+      "total_minutes": 86,
+      "notice": "",
+      "emoji": "📚",
+      "one_liner": "학술지·전공서 근거가 붙은 답 받기"
+    },
     {
       "id": "AI-2026-10-CAT10-003",
       "version": "v1.0",
