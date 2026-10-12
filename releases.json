@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 00:20 KST",
+  "updated_at": "2026-10-13 01:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1216,6 +1216,21 @@
       },
       "checked": "2026-10-11",
       "lesson_id": "AI-2026-10-CAT05-003"
+    },
+    {
+      "id": "chatgpt-2026-07-06-powerpoint-ga",
+      "date": "2026-07-06",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "ChatGPT for PowerPoint 정식 출시",
+      "summary": "PowerPoint 사이드바에서 말로 슬라이드·덱을 만들고 기존 발표를 고치거나 흐름을 물을 수 있는 추가 기능이 전 세계 정식 제공 (Free 포함 전 요금제, Free·Go는 사용량 제한)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT10-005"
     },
     {
       "id": "chatgpt-2026-06-18-pronunciation",

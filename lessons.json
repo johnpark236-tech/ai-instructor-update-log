@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 33,
+  "count": 34,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT10-005",
+      "version": "v1.0",
+      "created_at": "2026-10-13 01:20 KST",
+      "checked": "2026-10-13",
+      "review_by": "2027-01-13",
+      "title": "수업 메모가 슬라이드가 되는 PowerPoint — ChatGPT for PowerPoint로 한국어 수업 슬라이드 6장과 쉬운 버전 완성하기",
+      "summary": "PowerPoint 안 오른쪽 사이드바에서 ChatGPT에게 말로 부탁하면 수업 메모가 편집 가능한 슬라이드로 바뀝니다. 무료 계정으로 '오늘의 한국어' 수업 슬라이드 6장을 만들고, 한 장만 골라 고치기와 학습자 수준 맞추기까지 해 봅니다.",
+      "tool": "ChatGPT",
+      "feature": "ChatGPT for PowerPoint (Microsoft PowerPoint용 ChatGPT 추가 기능)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-07-06",
+      "categories": [
+        "CAT-10",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① '오늘의 한국어' 수업 슬라이드 6장(제목·어휘·예문·연습·정리) .pptx 파일 ② 같은 덱을 더 쉬운 한국어로 바꾼 학습자 맞춤 버전 1부",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "PowerPoint 안에서 메모가 수업 슬라이드로"
+    },
     {
       "id": "AI-2026-10-CAT09-003",
       "version": "v1.0",
