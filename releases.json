@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 09:25 KST",
+  "updated_at": "2026-10-12 10:08 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -945,7 +945,7 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-12",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT10-004"
     },
     {
       "id": "gemininotebook-2026-08-28-usage-limits",
@@ -1216,6 +1216,21 @@
       },
       "checked": "2026-10-11",
       "lesson_id": "AI-2026-10-CAT05-003"
+    },
+    {
+      "id": "chatgpt-2026-06-18-pronunciation",
+      "date": "2026-06-18",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "발음 도움 첫 도입",
+      "summary": "단어 발음을 물으면 60개 이상 언어에서 글 설명과 소리로 함께 알려 줌 (웹·iOS·Android, 요금제 미기재)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": "AI-2026-10-CAT10-004"
     },
     {
       "id": "claude-2026-03-02-4",

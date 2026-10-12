@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 27,
+  "count": 28,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT10-004",
+      "version": "v1.0",
+      "created_at": "2026-10-12 10:08 KST",
+      "checked": "2026-10-12",
+      "review_by": "2027-01-12",
+      "title": "소리까지 들려주는 발음 카드 만들기 — ChatGPT 발음 도움으로 '우리 반 한국어 발음 카드' 완성하기",
+      "summary": "ChatGPT에 '이 단어 어떻게 발음해?'라고 물으면 눌러서 소리를 듣고 발음 풀이를 함께 볼 수 있게 되었습니다. 이 기능으로 헷갈리는 한국어 발음을 확인하고, 사전과 대조해 수업에 바로 쓰는 발음 카드 6장을 만듭니다.",
+      "tool": "ChatGPT",
+      "feature": "발음 도움(Improved pronunciation help) — 눌러서 듣기·발음 풀이",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-08-31",
+      "categories": [
+        "CAT-10",
+        "CAT-05"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-PUB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 소리로 확인한 '우리 반 한국어 발음 카드' 6장(단어·실제 소리·규칙·쉬운 예문) ② 학습자 모국어로 건네는 인사말 발음 메모 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🗣️",
+      "one_liner": "물어보면 소리와 발음 풀이가 함께 나와요"
+    },
     {
       "id": "AI-2026-10-CAT05-004",
       "version": "v1.0",
