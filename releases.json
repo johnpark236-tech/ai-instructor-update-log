@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 01:25 KST",
+  "updated_at": "2026-10-13 07:13 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -993,6 +993,21 @@
       "lesson_id": "AI-2026-10-CAT01-001"
     },
     {
+      "id": "chatgpt-2026-08-25-scheduled-tasks-share",
+      "date": "2026-08-25",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "예약 작업 공유·앱 변화에 반응·Free 3개",
+      "summary": "예약 작업을 링크로 공유해 받은 사람이 복사본을 만들고, Plus·Pro는 Gmail·Slack·GitHub 변화로 작업을 시작. Free도 활성 작업 3개(하루 1회 이하)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT08-002"
+    },
+    {
       "id": "chatgpt-2026-08-21-1",
       "date": "2026-08-21",
       "tool": "ChatGPT",
@@ -1246,6 +1261,21 @@
       },
       "checked": "2026-10-12",
       "lesson_id": "AI-2026-10-CAT10-004"
+    },
+    {
+      "id": "chatgpt-2026-06-17-scheduled-tasks",
+      "date": "2026-06-17",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "예약 작업(Scheduled tasks)·Scheduled 페이지",
+      "summary": "할 일과 때를 말해 두면 정한 때에 ChatGPT가 스스로 실행하고, 사이드바 Scheduled에서 일시정지·수정·삭제 (Plus·Pro·Business·Enterprise부터, Pulse는 종료 예고)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT08-002"
     },
     {
       "id": "gemini-2026-04-08-notebooks",

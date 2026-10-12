@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 34,
+  "count": 35,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-002",
+      "version": "v1.0",
+      "created_at": "2026-10-13 07:13 KST",
+      "checked": "2026-10-13",
+      "review_by": "2027-01-13",
+      "title": "말 한마디로 매일 아침 수업 자료가 도착 — ChatGPT 예약 작업으로 '오늘의 한국어' 알림과 주간 수업 아이디어 받기",
+      "summary": "ChatGPT에게 '매일 아침 ~해 줘'라고 말하면 예약 작업(Scheduled tasks)이 만들어져 정해진 때에 알아서 답을 보내 줍니다. 무료 계정(활성 작업 3개)으로 매일 아침 '오늘의 한국어 표현' 카드와 매주 수업 아이디어 알림을 만들고, 동료 교사에게 작업을 공유하는 링크까지 만들어 봅니다.",
+      "tool": "ChatGPT",
+      "feature": "예약 작업(Scheduled tasks) — Scheduled 페이지·작업 공유(Share task)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-06-17",
+      "categories": [
+        "CAT-08",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 매일 아침 '오늘의 한국어 표현 1개 + 예문 2개 + 쉬운 설명' 예약 작업 ② 매주 월요일 '이번 주 수업 활동 아이디어 3개' 예약 작업 ③ 동료 교사에게 보낼 작업 공유 링크 1개",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "⏰",
+      "one_liner": "말 한마디로 매일 아침 수업 자료 받기"
+    },
     {
       "id": "AI-2026-10-CAT10-005",
       "version": "v1.0",
