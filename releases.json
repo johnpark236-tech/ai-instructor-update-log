@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 07:13 KST",
+  "updated_at": "2026-10-13 08:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -616,6 +616,51 @@
       },
       "checked": "2026-10-11",
       "lesson_id": "AI-2026-10-CAT04-004"
+    },
+    {
+      "id": "copilot-2026-09-23-forms-chat-pane",
+      "date": "2026-09-23",
+      "tool": "Microsoft 365 Copilot",
+      "company": "Microsoft",
+      "type": "update",
+      "title": "Microsoft Forms에 Copilot 채팅 창",
+      "summary": "웹 Forms 안에서 Copilot에게 설문·퀴즈 개선 제안, 초대 문구 작성·발송, 응답 분석을 대화로 맡김 (Microsoft 365 Copilot 라이선스 업무 계정)",
+      "source": {
+        "title": "Microsoft 365 Copilot 릴리스 노트 (2026-09-23 항목)",
+        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
+      "id": "copilot-2026-09-23-planner-agent-chat",
+      "date": "2026-09-23",
+      "tool": "Microsoft 365 Copilot",
+      "company": "Microsoft",
+      "type": "update",
+      "title": "Planner 에이전트 채팅",
+      "summary": "Planner 오른쪽 아래 Copilot 아이콘으로 '이번 주 마감 작업 보여줘'처럼 묻고, 대화로 작업 상태를 바꾸거나 걸러 봄 (Windows·웹)",
+      "source": {
+        "title": "Microsoft 365 Copilot 릴리스 노트 (2026-09-23 항목)",
+        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
+      "id": "copilot-2026-09-23-vision-screen-camera",
+      "date": "2026-09-23",
+      "tool": "Microsoft 365 Copilot",
+      "company": "Microsoft",
+      "type": "update",
+      "title": "화면 공유·카메라로 보여 주고 묻기(Vision)",
+      "summary": "PC 화면을 공유하거나 모바일 음성 대화 중 카메라를 비추면 Copilot이 실시간으로 보고 업무·웹 자료를 근거로 말로 답함",
+      "source": {
+        "title": "Microsoft 365 Copilot 릴리스 노트 (2026-09-23 항목)",
+        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
     },
     {
       "id": "claude-2026-09-22-11",
