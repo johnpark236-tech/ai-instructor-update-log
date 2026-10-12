@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 17:20 KST",
+  "updated_at": "2026-10-12 19:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1363,6 +1363,66 @@
       "source": {
         "title": "Adobe 블로그 – Adobe comes to Gemini and expands what you can do in Claude",
         "url": "https://blog.adobe.com/en/publish/2026/09/24/adobe-comes-to-gemini-expands-what-you-can-do-in-claude"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-04-17-claude-design",
+      "date": "2026-04-17",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude Design (Anthropic Labs)",
+      "summary": "대화로 디자인·시제품·원페이저·슬라이드 같은 시각 결과물을 만드는 Anthropic Labs 제품 공개 (Opus 4.7과 함께)",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": "AI-2026-10-CAT03-004"
+    },
+    {
+      "id": "claude-2026-08-06-plugin-security-scan",
+      "date": "2026-08-06",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "스킬·플러그인 보안 검사(베타)",
+      "summary": "Enterprise 관리자가 켜면 외부 스킬·플러그인을 올리거나 고칠 때 악성 내용이 있는지 자동으로 검사함",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-09-01-fable-mythos-5-1",
+      "date": "2026-09-01",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude Fable 5.1·Mythos 5.1",
+      "summary": "코딩과 지식 업무용 상위 모델 Claude Fable 5.1과 Claude Mythos 5.1 출시",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-09-10-smart-reports",
+      "date": "2026-09-10",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "스마트 리포트(베타)",
+      "summary": "팀이 Claude로 한 일·비용·막힌 지점·스킬로 묶을 만한 반복 작업을 분석해 보여 주는 보고서 (Enterprise)",
+      "source": {
+        "title": "Claude 릴리스 노트",
+        "url": "https://support.claude.com/en/articles/12138966-release-notes"
       },
       "checked": "2026-10-12",
       "lesson_id": null

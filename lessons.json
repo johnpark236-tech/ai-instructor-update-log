@@ -1,7 +1,46 @@
 {
   "standard": "v2.0",
-  "count": 31,
+  "count": 32,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-004",
+      "version": "v1.0",
+      "created_at": "2026-10-12 19:20 KST",
+      "checked": "2026-10-12",
+      "review_by": "2027-01-12",
+      "title": "말로 주문하고 손으로 다듬는 '강사 소개 한 장' — Claude Design으로 기관 제출용 원페이저 PDF 만들기",
+      "summary": "Claude Design은 대화로 원페이저·시제품 같은 시각 결과물을 만들고, 캔버스에서 끌어 옮기거나 부분 댓글로 고친 뒤 PDF·PowerPoint로 내보내는 기능입니다. 강의 제안 때 보낼 '강사 소개 한 장'을 30분 안에 완성합니다.",
+      "tool": "Claude",
+      "feature": "Claude Design (디자인 템플릿 — 캔버스 직접 편집·인라인 댓글·내보내기)",
+      "company": "Anthropic",
+      "type": "update",
+      "released": "2026-04-17",
+      "categories": [
+        "CAT-03",
+        "CAT-04",
+        "CAT-11"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-MKT",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "기관 담당자에게 보낼 '강사 소개 원페이저' 1장 (PDF) + 같은 내용의 PowerPoint 1장",
+      "access": "free",
+      "total_minutes": 58,
+      "notice": "",
+      "emoji": "🎨",
+      "one_liner": "말로 주문하고 캔버스에서 다듬는 한 장 디자인"
+    },
     {
       "id": "AI-2026-10-CAT04-004",
       "version": "v1.0",
