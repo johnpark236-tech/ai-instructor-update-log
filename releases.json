@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 13:20 KST",
+  "updated_at": "2026-10-12 14:18 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1231,6 +1231,21 @@
       },
       "checked": "2026-10-12",
       "lesson_id": "AI-2026-10-CAT10-004"
+    },
+    {
+      "id": "gemini-2026-04-08-notebooks",
+      "date": "2026-04-08",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 노트북(Notebooks) — 프로젝트별 자료·채팅 모음",
+      "summary": "Gemini 앱 사이드바에서 노트북을 만들어 관련 채팅·파일·지침을 한곳에 모으고, 같은 자료를 Gemini Notebook(구 NotebookLM)과 자동으로 함께 씀 (웹부터, 유료 요금제 먼저·무료는 순차)",
+      "source": {
+        "title": "Google 블로그 – Notebooks in Gemini",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm/"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": "AI-2026-10-CAT06-003"
     },
     {
       "id": "gemini-2026-03-26-import-memory",

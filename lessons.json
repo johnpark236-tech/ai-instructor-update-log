@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 29,
+  "count": 30,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-003",
+      "version": "v1.0",
+      "created_at": "2026-10-12 14:18 KST",
+      "checked": "2026-10-12",
+      "review_by": "2027-01-12",
+      "title": "내 자료만 보는 AI 수업 준비함 만들기 — Gemini 노트북으로 단원별 '수업 준비 노트북' 완성하기",
+      "summary": "Gemini 앱에서 노트북(Notebooks)을 만들어 수업 자료·관련 채팅·지침을 한곳에 모으면, 매번 파일을 다시 올리지 않아도 내 자료를 근거로 답합니다. 한 단원의 수업 준비 노트북과 활동지 초안 1장을 만듭니다.",
+      "tool": "Gemini",
+      "feature": "노트북(Notebooks in Gemini)",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-04-08",
+      "categories": [
+        "CAT-06",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-STU",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 한 단원 전용 '수업 준비 노트북'(자료 소스 3개 + 노트북 지침) ② 그 노트북에서 뽑은 쉬운 한국어 활동지 초안 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "자료·채팅·지침을 한 상자에 담는 Gemini"
+    },
     {
       "id": "AI-2026-10-CAT01-006",
       "version": "v1.0",
