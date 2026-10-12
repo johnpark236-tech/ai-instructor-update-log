@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 14:18 KST",
+  "updated_at": "2026-10-12 17:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -615,7 +615,7 @@
         "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/"
       },
       "checked": "2026-10-11",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT04-004"
     },
     {
       "id": "claude-2026-09-22-11",
@@ -1335,6 +1335,36 @@
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-09-24-adobe-connected-app",
+      "date": "2026-09-24",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 속 Adobe(연결 앱) 전 세계 제공",
+      "summary": "Gemini 채팅에서 @Adobe로 Express 템플릿 디자인·SNS 크기 변환·사진 일괄 보정을 시킬 수 있게 됨 (모든 Gemini 요금제, 영어 요청만, 무료 Adobe 계정 가능)",
+      "source": {
+        "title": "Adobe 블로그 – Adobe comes to Gemini and expands what you can do in Claude",
+        "url": "https://blog.adobe.com/en/publish/2026/09/24/adobe-comes-to-gemini-expands-what-you-can-do-in-claude"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": "AI-2026-10-CAT04-004"
+    },
+    {
+      "id": "claude-2026-09-24-adobe-plugin-expand",
+      "date": "2026-09-24",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude용 Adobe 플러그인 확장",
+      "summary": "Claude의 Adobe 플러그인에 Acrobat PDF 도구(합치기·나누기·가리기·변환)와 Express 레이어 편집기가 들어와 80개 이상 도구로 늘어남 (게스트로 시작 가능)",
+      "source": {
+        "title": "Adobe 블로그 – Adobe comes to Gemini and expands what you can do in Claude",
+        "url": "https://blog.adobe.com/en/publish/2026/09/24/adobe-comes-to-gemini-expands-what-you-can-do-in-claude"
+      },
+      "checked": "2026-10-12",
       "lesson_id": null
     }
   ]

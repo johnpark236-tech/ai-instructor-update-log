@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 30,
+  "count": 31,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-004",
+      "version": "v1.0",
+      "created_at": "2026-10-12 17:20 KST",
+      "checked": "2026-10-12",
+      "review_by": "2027-01-12",
+      "title": "채팅 한 줄로 행사 전단과 SNS 홍보물까지 — Gemini 속 Adobe로 '우리 교실 행사 홍보 세트' 만들기",
+      "summary": "Gemini에 Adobe가 연결 앱으로 들어와, 디자인 앱을 따로 열지 않고 채팅으로 Adobe Express 템플릿 전단을 만들고 SNS 크기 버전까지 받을 수 있게 되었습니다. 영어로만 요청할 수 있으므로 'Gemini에게 영어 요청문 쓰게 하기'까지 함께 익힙니다.",
+      "tool": "Gemini",
+      "feature": "연결 앱(Connected Apps) — Adobe (Adobe for Google Gemini)",
+      "company": "Google · Adobe",
+      "type": "update",
+      "released": "2026-09-23",
+      "categories": [
+        "CAT-04",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-PUB",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "우리 교실 행사 홍보 세트 — ① Adobe Express 템플릿으로 만든 A4 안내 전단(PDF) 1장 ② 같은 디자인의 인스타그램 게시물·스토리 크기 버전 ③ 다음에도 쓸 영어 요청문 카드 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎨",
+      "one_liner": "채팅 한 줄로 만드는 행사 전단·SNS 홍보물"
+    },
     {
       "id": "AI-2026-10-CAT06-003",
       "version": "v1.0",

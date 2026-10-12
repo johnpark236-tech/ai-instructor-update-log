@@ -1,0 +1,598 @@
+{
+  "id": "AI-2026-10-CAT04-004",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-12 17:20 KST",
+  "checked": "2026-10-12",
+  "review_by": "2027-01-12",
+  "title": "채팅 한 줄로 행사 전단과 SNS 홍보물까지 — Gemini 속 Adobe로 '우리 교실 행사 홍보 세트' 만들기",
+  "summary": "Gemini에 Adobe가 연결 앱으로 들어와, 디자인 앱을 따로 열지 않고 채팅으로 Adobe Express 템플릿 전단을 만들고 SNS 크기 버전까지 받을 수 있게 되었습니다. 영어로만 요청할 수 있으므로 'Gemini에게 영어 요청문 쓰게 하기'까지 함께 익힙니다.",
+  "glance": {
+    "emoji": "🎨",
+    "one_liner": "채팅 한 줄로 만드는 행사 전단·SNS 홍보물",
+    "cards": [
+      {
+        "icon": "🔌",
+        "title": "@Adobe 호출",
+        "text": "채팅창에 @Adobe 치고 말로 요청"
+      },
+      {
+        "icon": "📄",
+        "title": "Express 템플릿",
+        "text": "글·색만 바꿔 전단 완성"
+      },
+      {
+        "icon": "📐",
+        "title": "SNS 크기 변환",
+        "text": "인스타 게시물·스토리 크기로"
+      },
+      {
+        "icon": "🆓",
+        "title": "무료로 시작",
+        "text": "Gemini 무료 + Adobe 무료 계정"
+      }
+    ],
+    "diagram": {
+      "title": "Gemini 속 Adobe는 이렇게 작동해요",
+      "nodes": [
+        {
+          "icon": "💬",
+          "label": "영어로 요청"
+        },
+        {
+          "icon": "🔌",
+          "label": "@Adobe 호출"
+        },
+        {
+          "icon": "🎨",
+          "label": "템플릿 디자인"
+        },
+        {
+          "icon": "📐",
+          "label": "크기별 변환"
+        },
+        {
+          "icon": "📥",
+          "label": "내려받기"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Adobe 연결 전",
+        "text": "디자인 앱을 따로 열고 템플릿을 찾아 글자를 하나씩 고치기"
+      },
+      "after": {
+        "label": "@Adobe 연결 뒤",
+        "text": "채팅으로 요청 → 템플릿 전단과 SNS 크기 버전을 받아 고치기"
+      }
+    },
+    "cautions": [
+      "학생 얼굴·실명 사진은 올리지 않기",
+      "저작권 캐릭터·남의 로고 쓰지 않기",
+      "날짜·장소·연락처는 직접 재확인"
+    ]
+  },
+  "tool": "Gemini",
+  "feature": "연결 앱(Connected Apps) — Adobe (Adobe for Google Gemini)",
+  "company": "Google · Adobe",
+  "type": "update",
+  "released": "2026-09-23",
+  "categories": [
+    "CAT-04",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-EDU",
+    "JOB-MKT",
+    "JOB-PUB",
+    "JOB-OFF"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Google 개인 계정 (만 18세 이상, Gemini 무료 가능)",
+    "Adobe 계정 (무료 가입 가능)",
+    "PC 크롬 143 이상 또는 엣지 143 이상 (Adobe 안내 기준)",
+    "행사 정보 메모 1장 (행사명·날짜·시간·장소·대상)"
+  ],
+  "outcome": "우리 교실 행사 홍보 세트 — ① Adobe Express 템플릿으로 만든 A4 안내 전단(PDF) 1장 ② 같은 디자인의 인스타그램 게시물·스토리 크기 버전 ③ 다음에도 쓸 영어 요청문 카드 1장",
+  "objectives": [
+    "Gemini 연결 앱으로 Adobe를 켜고 @Adobe로 불러 쓸 수 있다.",
+    "영어 요청문을 Gemini로 만들어 Adobe Express 템플릿 전단을 완성할 수 있다.",
+    "한 디자인을 SNS 크기별 버전으로 바꾸고, 결과물의 사실·저작권·개인정보를 점검할 수 있다."
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Adobe 블로그는 Gemini의 모든 요금제(무료 포함)에서 Adobe를 쓸 수 있다고 밝혔습니다. 로그인 없이도 일부 도구가 되고, 무료 Adobe 계정으로 로그인하면 생성형 AI 작업과 Creative Cloud 저장이 열립니다. 일부 도구는 유료 Adobe 요금제가 필요하지만 어떤 도구인지는 공식 페이지에 나와 있지 않습니다.",
+    "plans": [
+      {
+        "name": "Gemini 무료 + Adobe 로그인 없음",
+        "price": "0원",
+        "features": "일부 Adobe 도구 사용 가능 (Adobe 안내 기준)"
+      },
+      {
+        "name": "Gemini 무료 + Adobe 무료 계정",
+        "price": "0원",
+        "features": "생성형 AI 작업·Creative Cloud 저장 추가. Express 무료 플랜: 템플릿 10만 개 이상, 저장 공간 5GB, 매일 무료 생성"
+      },
+      {
+        "name": "Adobe Express Premium",
+        "price": "£9.98/월 (영국 요금 페이지 표기, 국가별 다름)",
+        "features": "프리미엄 템플릿 전체, 생성형 크레딧 월 250, 원클릭 크기 조절, 브랜드 키트"
+      },
+      {
+        "name": "Adobe Firefly Pro",
+        "price": "£19.99/월 (영국 요금 페이지 표기)",
+        "features": "Premium 기능 + 웹·모바일 Photoshop, 생성형 크레딧 월 4,000"
+      }
+    ],
+    "note": "이번 확인에서 Adobe 요금 페이지는 영국 파운드(부가세 포함)로만 표시되었습니다. 한국 원화 가격은 확인하지 못했으니 강의 전 adobe.com 한국 페이지에서 확인하세요. Gemini 쪽 요금 차이는 공식 발표에 없습니다.",
+    "checked": "2026-10-12",
+    "sources": [
+      {
+        "title": "Adobe 블로그 – Adobe comes to Gemini (2026-09-24)",
+        "url": "https://blog.adobe.com/en/publish/2026/09/24/adobe-comes-to-gemini-expands-what-you-can-do-in-claude"
+      },
+      {
+        "title": "Adobe for Google Gemini 소개 페이지",
+        "url": "https://www.adobe.com/adobe-connectors/adobe-for-gemini.html"
+      },
+      {
+        "title": "Adobe Express 요금제",
+        "url": "https://www.adobe.com/express/pricing"
+      },
+      {
+        "title": "Adobe Express 무료 플랜 도움말",
+        "url": "https://helpx.adobe.com/express/web/adobe-express-subscription/free.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-19",
+      "text": "Adobe, Google I/O에서 Gemini용 Adobe 커넥터를 '몇 주 안에' 내놓겠다고 예고"
+    },
+    {
+      "date": "2026-09-23",
+      "text": "Google, Gemini 연결 앱 14종 추가 발표 — Adobe·Picsart·Squarespace·Webflow 등 (같은 날부터 순차 제공)"
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Adobe, Gemini 속 Adobe를 전 세계 순차 제공 시작, 모든 Gemini 요금제 대상. 같은 날 Claude용 Adobe 플러그인도 Acrobat·Express 레이어 편집으로 확장"
+    }
+  ],
+  "theory": {
+    "definition": "연결 앱(Connected Apps)은 Gemini 대화창에서 다른 회사의 서비스를 불러 대신 일을 시키는 기능입니다. Adobe를 연결하면 Photoshop·Lightroom·Express·Firefly의 일부 도구를 채팅으로 쓸 수 있습니다.",
+    "analogy": "예전에는 디자인 사무실(Adobe 앱)에 직접 찾아가 프로그램을 배워야 했다면, 이제는 비서(Gemini)에게 '@Adobe, 이런 전단 하나 부탁해'라고 말하면 비서가 디자이너에게 전달해 시안을 받아 오는 셈입니다. 다만 이 디자이너는 아직 영어로만 주문을 받습니다.",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Adobe Express 직접 사용",
+        "Gemini 기본 이미지 생성",
+        "Gemini + @Adobe"
+      ],
+      "rows": [
+        [
+          "시작 방법",
+          "Express 사이트·앱 열기",
+          "Gemini에 한국어로 요청",
+          "Gemini에서 @Adobe + 영어 요청"
+        ],
+        [
+          "결과물",
+          "내가 고른 템플릿 디자인",
+          "생성된 그림",
+          "Express 템플릿 기반 디자인·크기별 버전"
+        ],
+        [
+          "요청 언어",
+          "한국어 화면 [확인 필요]",
+          "한국어 가능",
+          "영어만 (Adobe 안내)"
+        ],
+        [
+          "이어서 고치기",
+          "Express 편집기",
+          "다시 요청",
+          "로그인 시 Creative Cloud에 저장해 Adobe 앱에서 이어서 편집"
+        ],
+        [
+          "비용",
+          "무료 플랜 있음",
+          "Gemini 요금제 한도 내",
+          "모든 Gemini 요금제, 일부 도구는 유료 Adobe 필요"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "연결 앱 켜기와 @ 호출",
+        "body": "Gemini 설정의 연결 앱 목록에서 Adobe를 켜고 Adobe 계정으로 로그인합니다. 그 뒤 입력창에 @를 치고 Adobe를 고르면 그 대화에서 Adobe가 일합니다. 연결하지 않은 상태에서 @Adobe를 부르면 Gemini가 연결 권한을 묻습니다."
+      },
+      {
+        "title": "Adobe가 해 주는 일 (공식 안내 기준)",
+        "body": "① Express 템플릿을 골라 글·색·이미지를 바꾸고 PDF로 내보내거나 SNS용으로 움직이게 만들기 ② 한 디자인·사진을 인스타그램·페이스북·링크드인 등 크기별로 바꾸기 ③ 여러 사진의 밝기·색·자르기를 한꺼번에 맞추기 ④ 로그인 시 Creative Cloud 자료 찾기·정리. Adobe는 도구를 계속 늘리겠다고 밝혔습니다."
+      },
+      {
+        "title": "조건과 한계",
+        "body": "Google 연결 앱 표 기준 Adobe는 만 18세 이상, Google 개인 계정, 영어 요청만 지원하며, Gemini와 Adobe가 모두 서비스되는 곳에서 쓸 수 있습니다(Adobe 무역 규제 지역 제외). 회사·학교 Google 계정은 별도 안내를 따릅니다. 국내에서 실제 메뉴가 보이는지는 [확인 필요]입니다."
+      }
+    ],
+    "can": [
+      "채팅으로 Express 템플릿 전단·포스터 만들기",
+      "한 디자인을 SNS 크기별 버전으로 바꾸기",
+      "여러 사진의 밝기·색·자르기를 한꺼번에 맞추기",
+      "로그인 시 Creative Cloud에 저장하고 Adobe 앱에서 이어서 고치기"
+    ],
+    "cannot": [
+      "한국어로 요청하기 (영어만 지원)",
+      "Adobe 앱의 모든 기능 쓰기 (일부 도구만 제공)",
+      "만 18세 미만 계정·회사/학교 계정에서 개인용과 똑같이 쓰기",
+      "결과물 속 날짜·장소 같은 사실을 대신 보증하기"
+    ],
+    "safety": [
+      "학생·수강생 얼굴이 나온 사진, 실명·연락처가 담긴 자료는 올리지 않습니다. 연결 앱을 쓰면 요청과 첨부 자료가 Adobe 서비스로 넘어간다는 점을 기억하세요.",
+      "저작권 있는 캐릭터, 다른 기관·브랜드 로고, 출처를 모르는 인터넷 사진은 넣지 않습니다. Adobe Stock 자산도 무료에서 유료로 바뀔 수 있으니 무료 표시를 확인합니다.",
+      "AI가 만든 전단의 날짜·시간·장소·문의처는 반드시 사람이 원본 메모와 대조합니다. 한 글자 틀린 전단이 가장 큰 사고입니다.",
+      "기관 이름으로 배포할 홍보물은 기관의 홍보·디자인 지침과 승인 절차를 먼저 따릅니다.",
+      "실습이 끝나면 공용 PC에서 Google·Adobe 둘 다 로그아웃하고, 필요 없으면 설정에서 Adobe 연결을 끕니다."
+    ]
+  },
+  "practice": {
+    "preview": "완성 예시 — '한국어 교실 문화 체험의 날' 홍보 세트: ① A4 전단: 가을빛 주황·남색 템플릿에 큰 제목 '한국어 교실 문화 체험의 날', 11월 14일(토) 오후 2시, ○○센터 2층 강의실, 대상: 한국어 교실 수강생과 가족, 준비물 없음 ② 같은 디자인의 인스타그램 정사각형 게시물과 세로형 스토리 ③ 다음 행사에 다시 쓰는 영어 요청문 카드. 수강생은 디자인 앱을 따로 열지 않고 Gemini 채팅으로 이 세트를 받아 직접 다듬습니다.",
+    "follow": [
+      {
+        "title": "Adobe 연결하기",
+        "minutes": 5,
+        "do": "gemini.google.com 에 로그인 → 왼쪽 아래 설정(톱니) → Personal Intelligence → 연결 앱(Connected Apps)에서 Adobe를 켭니다. 안내에 따라 Adobe 계정으로 로그인하거나 무료로 가입합니다.",
+        "prompt": "",
+        "expect": "연결 앱 목록에서 Adobe가 켜집니다.",
+        "note": "[확인 필요] Adobe 소개 페이지는 '설정 > Personal Intelligence > Connected Apps', Google 도움말은 '설정 및 도움말 > 연결 앱(안 보이면 Personal Intelligence 먼저)', Adobe 도움말은 gemini.google.com/apps 에서 Adobe 검색으로 안내합니다. 강의 전날 실제 화면으로 확인하세요."
+      },
+      {
+        "title": "무엇을 할 수 있는지 묻기",
+        "minutes": 5,
+        "do": "새 채팅에서 @를 치고 Adobe를 고른 뒤 아래 문장을 보냅니다. Adobe 도움말이 첫 질문으로 권하는 문장입니다. 답변에서 오늘 쓸 기능(템플릿 디자인·크기 변환)을 찾아 표시합니다.",
+        "prompt": "@Adobe What can Adobe help me with?",
+        "expect": "Adobe가 할 수 있는 작업 목록이 나옵니다.",
+        "note": "영어로만 요청할 수 있습니다. 답도 영어로 나오면 '방금 답을 한국어로 요약해줘'라고 다시 물어봅니다."
+      },
+      {
+        "title": "비포 — Adobe 없이 요청하기",
+        "minutes": 5,
+        "do": "새 채팅에서 @Adobe 없이 아래처럼 한국어로 요청하고 결과를 캡처해 둡니다. 애프터와 비교할 자료입니다.",
+        "prompt": "한국어 교실 문화 체험의 날 행사 전단 만들어줘. 11월 14일(토) 오후 2시, ○○센터 2층 강의실.",
+        "expect": "Gemini 기본 답변(문구 또는 그림)이 나옵니다.",
+        "note": ""
+      },
+      {
+        "title": "@Adobe로 전단 만들기",
+        "minutes": 10,
+        "do": "아래 요청문을 그대로 붙여 넣습니다. 글자 내용은 따옴표 안에 한국어로 넣었습니다. 결과가 나오면 날짜·시간·장소가 맞는지 먼저 확인합니다.",
+        "prompt": "@Adobe Create a printable A4 flyer using an Adobe Express template for a community Korean class event.\nTitle: \"한국어 교실 문화 체험의 날\"\nDate and time: \"11월 14일(토) 오후 2시\"\nPlace: \"○○센터 2층 강의실\"\nFor: \"한국어 교실 수강생과 가족\"\nStyle: warm autumn colors (orange and navy), large easy-to-read text, friendly and simple.\nPlease export it as a PDF.",
+        "expect": "Express 템플릿을 쓴 전단 시안이 나옵니다.",
+        "note": "[확인 필요] 템플릿 안의 한글 글꼴 표시는 공식 문서에서 확인하지 못했습니다. 한글이 깨지면 영어 글자로 만든 뒤 'Open in Adobe Express' 등으로 Express 편집기에서 글자만 한국어로 바꿉니다(버튼 이름 [확인 필요])."
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 행사 요청문을 Gemini에게 쓰게 하기",
+        "minutes": 10,
+        "do": "새 채팅에서 내 행사 정보를 한국어로 적고 영어 요청문으로 바꿔 달라고 합니다. 받은 요청문을 복사해 @Adobe 채팅에 붙여 넣어 내 전단을 만듭니다. 이 요청문이 오늘의 '영어 요청문 카드'입니다.",
+        "prompt": "아래 행사 정보로 Adobe Express 템플릿 전단을 만들어 달라는 영어 요청문을 써줘. 전단에 들어갈 글자는 한국어 그대로 따옴표 안에 넣고, 색과 분위기 요청도 영어로 넣어줘.\n- 행사명: [예: 학부모 공개 수업 / 카페 가을 신메뉴 시식회 / 경로당 스마트폰 교실]\n- 날짜·시간: \n- 장소: \n- 대상: \n- 분위기·색: [예: 밝고 따뜻하게, 초록색]",
+        "expect": "Adobe에 붙여 넣을 영어 요청문이 나옵니다.",
+        "note": "실제 개인 전화번호 대신 기관 대표 번호나 '문의: 담당 선생님'처럼 씁니다."
+      },
+      {
+        "title": "SNS 크기 버전 만들기",
+        "minutes": 10,
+        "do": "전단이 나온 같은 대화에서 아래 문장을 보냅니다. 크기별 결과를 비포 캡처와 나란히 놓고 달라진 점을 적습니다.",
+        "prompt": "@Adobe Create an Instagram post (square) and an Instagram Story (vertical) version of this flyer. Keep the same colors, title, date, and place.",
+        "expect": "같은 디자인의 정사각형·세로형 버전이 나옵니다.",
+        "note": "Express 무료 플랜에서는 원클릭 크기 조절이 Premium 기능으로 표시되어 있습니다. Gemini 안 크기 변환이 무료 계정에서 되는지는 [확인 필요]입니다."
+      },
+      {
+        "title": "고치고 내려받기",
+        "minutes": 5,
+        "do": "마지막으로 색이나 문구를 한 번 더 고치게 한 뒤 PDF·이미지로 내려받거나 Creative Cloud에 저장합니다. 날짜·장소·문의처를 원본 메모와 한 줄씩 대조합니다.",
+        "prompt": "@Adobe Make the title bigger and change the main color to dark green. Then give me the final files to download.",
+        "expect": "🎉 우리 교실 행사 홍보 세트 완성",
+        "note": ""
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 행사로 '쉬운 한국어판' 전단 만들기: 문장을 짧게 바꾸고 그림 아이콘을 넣어 한국어 학습자가 읽기 쉽게 하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "얼굴이 나오지 않은 수업 자료 사진 4장(교재·칠판·간식 등)을 올려 밝기·색·자르기를 한꺼번에 맞추고 앨범 표지로 만들기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "같은 요청문으로 Claude의 Adobe 플러그인 결과와 비교해 '도구 선택 기준표' 만들기 (각 서비스 공식 안내로 확인한 기능만 적기)"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 비포(Adobe 없이)와 애프터(전단+SNS 버전)를 나란히 보여 주고, '가장 시간이 줄어든 부분 1가지'와 '사람이 꼭 다시 확인한 정보 1가지'를 발표합니다.",
+    "quiz": [
+      {
+        "q": "Gemini에서 Adobe를 불러 쓰는 방법으로 맞는 것은?",
+        "options": [
+          "Adobe 앱을 설치해야만 한다",
+          "입력창에 @를 치고 Adobe를 고른다",
+          "Gemini 유료 요금제에서만 메뉴가 보인다",
+          "크롬 확장 프로그램을 설치한다"
+        ],
+        "answer": 1,
+        "explain": "연결 앱에서 Adobe를 켠 뒤 입력창에 @Adobe로 부릅니다. Adobe는 모든 Gemini 요금제에서 쓸 수 있다고 밝혔습니다."
+      },
+      {
+        "q": "Gemini 속 Adobe에 요청할 때 공식 안내 기준으로 지원하는 언어는?",
+        "options": [
+          "한국어",
+          "영어",
+          "한국어와 영어 모두",
+          "모든 언어"
+        ],
+        "answer": 1,
+        "explain": "Adobe 도움말과 Google 연결 앱 표 모두 영어만 지원한다고 안내합니다. 그래서 Gemini에게 영어 요청문을 먼저 쓰게 합니다."
+      },
+      {
+        "q": "AI로 만든 행사 전단을 배포하기 전에 가장 먼저 할 일은?",
+        "options": [
+          "색을 더 화려하게 바꾼다",
+          "날짜·시간·장소·문의처를 원본과 대조한다",
+          "유명 캐릭터를 넣는다",
+          "학생 얼굴 사진을 추가한다"
+        ],
+        "answer": 1,
+        "explain": "AI는 사실을 보증하지 않습니다. 정보 대조가 먼저이고, 캐릭터·얼굴 사진은 저작권·개인정보 문제로 넣지 않습니다."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "완성도",
+        "high": "전단 PDF + SNS 2종 완성",
+        "mid": "전단만 완성",
+        "low": "미완성"
+      },
+      {
+        "criterion": "응용력",
+        "high": "내 행사로 요청문을 새로 만듦",
+        "mid": "예시 요청문 일부 수정",
+        "low": "예시 그대로"
+      },
+      {
+        "criterion": "검증 습관",
+        "high": "정보를 원본과 한 줄씩 대조",
+        "mid": "눈으로 훑어봄",
+        "low": "확인 안 함"
+      },
+      {
+        "criterion": "윤리·안전",
+        "high": "얼굴·로고·캐릭터 없이 제작하고 이유 설명",
+        "mid": "부분적 인지",
+        "low": "인지 없음"
+      }
+    ],
+    "next": [
+      "Gemini 스킬(Skills)로 '행사 홍보 요청문'을 저장해 한 마디로 다시 쓰기 (CAT-02)",
+      "AI 이미지와 저작권 — 무엇을 넣으면 안 되는가 (CAT-09)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 출시 타임라인",
+        "note": "'비서가 디자이너에게 전달' 비유"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론 — 연결 앱·할 수 있는 일·조건",
+        "note": "영어만 지원·18세 이상 조건을 먼저 말하기"
+      },
+      {
+        "time": "35~45분",
+        "content": "Adobe 연결·기능 묻기",
+        "note": "Adobe 가입에서 가장 많이 지체"
+      },
+      {
+        "time": "45~60분",
+        "content": "비포 확보·@Adobe 전단",
+        "note": "한글 표시 확인, 깨지면 Plan B"
+      },
+      {
+        "time": "60~80분",
+        "content": "내 요청문·SNS 버전·내려받기",
+        "note": "빠른 학습자에게 도전과제"
+      },
+      {
+        "time": "80~90분",
+        "content": "발표·퀴즈·마무리",
+        "note": "정보 대조 습관 강조"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "행사 전단 하나 만들려고 디자인 프로그램 켜고, 템플릿 찾고, 글자 하나하나 바꾸느라 한 시간 쓴 적 있으시죠? 오늘은 Gemini 채팅창에 '@Adobe' 한 번 부르고 말로 주문해서, 전단과 인스타그램용 버전까지 받아 보겠습니다."
+      },
+      {
+        "label": "조건 안내 전환",
+        "text": "시작 전에 꼭 알아야 할 조건이 있습니다. 이 Adobe 디자이너는 아직 영어로만 주문을 받습니다. 그런데 걱정 마세요. 영어 주문서는 Gemini가 대신 써 줍니다."
+      },
+      {
+        "label": "비포·애프터 비교",
+        "text": "같은 행사인데 결과가 다르죠? 바뀐 건 제 디자인 실력이 아니라 누구에게 일을 맡겼느냐입니다."
+      },
+      {
+        "label": "안전 전환",
+        "text": "이제 가장 중요한 2분입니다. 이 전단, 날짜 하나 틀리면 아무리 예뻐도 쓸 수 없습니다. 원본 메모 옆에 놓고 한 줄씩 짚어 봅시다."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 영어 요청문 카드는 다음 행사 때 행사명과 날짜만 바꾸면 됩니다. 디자인은 AI에게, 확인은 사람이 — 이것만 기억하세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "국내 계정에서 Adobe 연결 앱이 안 보임",
+        "response": "Adobe Express 웹사이트에서 템플릿으로 같은 전단을 만들고, Gemini는 영어·한국어 문구 작성 도우미로만 사용"
+      },
+      {
+        "situation": "한글 글자가 깨지거나 엉뚱한 글꼴",
+        "response": "영어 글자로 시안을 받은 뒤 Express 편집기에서 글자만 한국어로 바꾸기"
+      },
+      {
+        "situation": "Adobe 가입·로그인 지연",
+        "response": "로그인 없이 되는 도구로 먼저 진행(Adobe 안내상 일부 도구는 로그인 없이 사용 가능), 쉬는 시간에 가입"
+      },
+      {
+        "situation": "서버 지연·오류",
+        "response": "강사가 미리 만든 전단·SNS 버전 캡처로 설명하고 요청문 작성 실습으로 전환"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "연결 앱 메뉴를 못 찾음",
+        "fix": "설정에서 Personal Intelligence를 먼저 누르도록 안내, 캡처 배포"
+      },
+      {
+        "issue": "Adobe 로그인 창이 팝업 차단됨",
+        "fix": "브라우저 팝업 허용 후 다시 연결"
+      },
+      {
+        "issue": "한국어로 요청해서 Adobe가 엉뚱하게 동작",
+        "fix": "Gemini에게 영어 요청문을 먼저 쓰게 한 뒤 붙여 넣기"
+      },
+      {
+        "issue": "만 18세 미만이거나 학교 계정이라 안 됨",
+        "fix": "개인 Google 계정(18세 이상)으로 실습하거나 짝 실습"
+      },
+      {
+        "issue": "결과 파일을 어디서 받는지 모름",
+        "fix": "결과 카드의 다운로드·Express에서 열기 버튼 위치를 화면 공유로 보여 주기 [확인 필요]"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Gemini 무료 계정으로도 되나요?",
+        "a": "Adobe 블로그는 모든 Gemini 요금제에서 쓸 수 있다고 밝혔습니다. 다만 일부 Adobe 도구는 유료 Adobe 요금제가 필요할 수 있습니다."
+      },
+      {
+        "q": "Adobe 유료 구독이 꼭 필요한가요?",
+        "a": "아닙니다. 로그인 없이 일부 도구가 되고, 무료 Adobe 계정으로 로그인하면 생성형 AI 작업과 저장이 추가됩니다. 어떤 도구가 유료인지는 공식 페이지에 명시되어 있지 않습니다."
+      },
+      {
+        "q": "왜 영어로만 요청해야 하나요?",
+        "a": "현재 Adobe 도움말과 Google 연결 앱 표가 영어만 지원한다고 안내하기 때문입니다. 전단 안에 들어갈 글자는 따옴표로 한국어를 넣어 보세요(한글 표시는 [확인 필요])."
+      },
+      {
+        "q": "만든 디자인은 어디에 저장되나요?",
+        "a": "로그인한 경우 지원되는 작업은 Creative Cloud에 저장되어 Adobe 앱에서 이어서 편집할 수 있습니다."
+      },
+      {
+        "q": "Canva도 Gemini에서 되나요?",
+        "a": "Google 연결 앱 표에 Canva도 있습니다(만 13세 이상, 영어). 이번 교안은 9월에 새로 들어온 Adobe를 다룹니다."
+      },
+      {
+        "q": "Claude에서도 Adobe를 쓸 수 있나요?",
+        "a": "Adobe는 같은 날 Claude용 Adobe 플러그인을 Acrobat 도구·Express 레이어 편집까지 확장했다고 밝혔습니다. 도전과제 ⭐⭐⭐에서 비교해 보세요."
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "요청문은 강사가 미리 만든 영어 카드를 복사해 쓰고, 행사명·날짜만 바꿉니다. 결과물을 '경로당 모임 안내문' 한 장으로 줄이고 SNS 버전은 생략합니다. 큰 글씨 화면으로 진행합니다."
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "내 요청문 만들기를 필수로 하고 도전과제 ⭐⭐(사진 한꺼번에 보정)까지 진행합니다."
+      },
+      {
+        "level": "소상공인 (JOB-MKT)",
+        "guide": "최종 작품을 '가게 이벤트 전단 + 인스타 게시물'로 바꾸고, 메뉴 사진 여러 장의 색 맞추기를 함께 실습합니다."
+      },
+      {
+        "level": "한국어 학습자·다문화 (JOB-GLB)",
+        "guide": "영어 요청이 부담되면 모국어로 행사 정보를 쓰고 Gemini에게 영어 요청문으로 바꾸게 합니다. 전단 글자는 쉬운 한국어로, 모국어 한 줄을 함께 넣은 2개 언어 전단을 만들어 '내 나라 문화 소개의 날' 홍보물로 바꿉니다."
+      }
+    ],
+    "pro_points": [
+      "'요청문 카드' 자체를 수업 결과물로 삼으세요. 행사마다 바꿔 쓸 수 있어 수강생 만족도가 높고, 영어 요청이라는 약점을 장점(재사용 템플릿)으로 바꿉니다.",
+      "같은 전단을 Gemini+Adobe, Express 직접 사용, Claude+Adobe 세 경로로 만들어 시간을 재 보는 시연은 기관 연수에서 설득력이 큽니다. 각 경로의 기능은 공식 안내로 확인한 것만 말하세요."
+    ],
+    "day_before": [
+      "국내 개인 계정에서 Gemini 연결 앱에 Adobe가 보이는지, 메뉴 경로를 실제 화면으로 확인하고 캡처했다",
+      "@Adobe 전단 요청을 미리 해 보고 한글 표시 여부를 확인했다 (깨지면 Plan B 준비)",
+      "Gemini 안 SNS 크기 변환이 무료 Adobe 계정에서 되는지 확인했다",
+      "Adobe Express 한국 원화 요금을 확인했다",
+      "수강생에게 'Google 개인 계정(18세 이상)·Adobe 무료 가입' 사전 안내를 보냈다"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 연결 메뉴 경로가 Adobe 소개 페이지·Adobe 도움말·Google 도움말마다 다르게 안내됩니다.",
+    "[확인 필요] Express 템플릿 안 한글 글꼴 표시, 결과 카드의 다운로드·'Express에서 열기' 버튼 이름은 공식 문서에서 확인하지 못했습니다.",
+    "[확인 필요] 국내 사용: Adobe는 무역 규제 지역을 뺀 전 세계 제공, Google은 'Gemini와 Adobe가 모두 지원되는 곳'이라고 안내하지만 한국 계정에서의 실제 노출은 직접 확인하지 못했습니다.",
+    "[확인 필요] 무료 Adobe 계정에서 어떤 도구가 막히는지(유료 필요 도구 목록)는 공식 페이지에 없습니다.",
+    "Gemini 공식 릴리스 노트(gemini.google/release-notes)에는 이 항목이 따로 없고, Google 블로그 발표(2026-09-23)와 Adobe 블로그(2026-09-24)를 근거로 했습니다."
+  ],
+  "sources": [
+    {
+      "title": "Google 블로그 – A new wave of Connected Apps is rolling out to Gemini",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Gemini 도움말 – 연결 앱 사용·관리 (컴퓨터)",
+      "url": "https://support.google.com/gemini/answer/13695044?hl=en&co=GENIE.Platform%3DDesktop",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Gemini 도움말 – 연결 앱 목록 표",
+      "url": "https://support.google.com/gemini/table/17434654",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Adobe 도움말 – Adobe for Google Gemini overview",
+      "url": "https://helpx.adobe.com/creative-cloud/apps/integration-with-other-apps/adobe-connectors/adobe-for-gemini.html",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Adobe for Google Gemini 소개 페이지",
+      "url": "https://www.adobe.com/adobe-connectors/adobe-for-gemini.html",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Adobe 블로그 – Adobe comes to Gemini and expands what you can do in Claude",
+      "url": "https://blog.adobe.com/en/publish/2026/09/24/adobe-comes-to-gemini-expands-what-you-can-do-in-claude",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Adobe 블로그 – Adobe for creativity connector is coming soon to Google Gemini",
+      "url": "https://blog.adobe.com/en/publish/2026/05/19/adobe-creativity-connector-coming-google-gemini",
+      "checked": "2026-10-12"
+    },
+    {
+      "title": "Adobe Express 요금제",
+      "url": "https://www.adobe.com/express/pricing",
+      "checked": "2026-10-12"
+    }
+  ]
+}
