@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 10:08 KST",
+  "updated_at": "2026-10-12 13:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1231,6 +1231,21 @@
       },
       "checked": "2026-10-12",
       "lesson_id": "AI-2026-10-CAT10-004"
+    },
+    {
+      "id": "gemini-2026-03-26-import-memory",
+      "date": "2026-03-26",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "다른 AI의 메모리·채팅 기록 가져오기",
+      "summary": "ChatGPT·Claude 등이 쓴 나에 대한 요약을 붙여 넣거나 대화 기록 ZIP을 올려 Gemini로 옮김 (만 18세 이상 개인 계정, EEA·스위스·영국 제외)",
+      "source": {
+        "title": "Gemini 릴리스 노트",
+        "url": "https://gemini.google/release-notes/"
+      },
+      "checked": "2026-10-12",
+      "lesson_id": "AI-2026-10-CAT01-006"
     },
     {
       "id": "claude-2026-03-02-4",

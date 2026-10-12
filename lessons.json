@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 28,
+  "count": 29,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT01-006",
+      "version": "v1.0",
+      "created_at": "2026-10-12 13:20 KST",
+      "checked": "2026-10-12",
+      "review_by": "2027-01-12",
+      "title": "AI 갈아타기 이삿짐 싸기 — Gemini 메모리 가져오기로 ChatGPT·Claude 속 '나'를 옮기고 맞춤 답변 받기",
+      "summary": "다른 AI가 알고 있는 내 정보(선호·말투·업무 맥락)를 요약해 Gemini에 붙여 넣고, 대화 기록 ZIP까지 옮길 수 있습니다. 옮기기 전에 '이삿짐 검사'로 민감한 정보를 빼고, 옮긴 뒤 맞춤 답변이 달라졌는지 비교합니다.",
+      "tool": "Gemini",
+      "feature": "메모리 가져오기(Import memory to Gemini) — 메모리·채팅 기록 가져오기",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-03-26",
+      "categories": [
+        "CAT-01",
+        "CAT-09"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 민감 정보를 걸러 낸 '내 AI 이삿짐 카드'(다른 AI가 만든 나에 대한 요약) ② 그 카드를 넣은 뒤 Gemini가 만든 맞춤형 '이번 주 수업(업무) 준비 목록' 1부와 비포/애프터 비교 캡처",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📦",
+      "one_liner": "다른 AI 속 '나'를 Gemini로 이사"
+    },
     {
       "id": "AI-2026-10-CAT10-004",
       "version": "v1.0",
