@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 19:20 KST",
+  "updated_at": "2026-10-13 00:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1364,8 +1364,8 @@
         "title": "Adobe 블로그 – Adobe comes to Gemini and expands what you can do in Claude",
         "url": "https://blog.adobe.com/en/publish/2026/09/24/adobe-comes-to-gemini-expands-what-you-can-do-in-claude"
       },
-      "checked": "2026-10-12",
-      "lesson_id": null
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT09-003"
     },
     {
       "id": "claude-2026-04-17-claude-design",
@@ -1426,6 +1426,66 @@
       },
       "checked": "2026-10-12",
       "lesson_id": null
+    },
+    {
+      "id": "manus-2026-09-28-manus-2",
+      "date": "2026-09-28",
+      "tool": "Manus",
+      "company": "Manus",
+      "type": "update",
+      "title": "Manus 2.0 — 새 구조·Studio·자동화",
+      "summary": "필요한 능력만 불러 쓰는 새 에이전트 구조(Cascade), 문서·슬라이드·웹·영상을 한곳에서 만드는 데스크톱 앱 Manus Studio, 메일·일정 같은 이벤트로 시작하는 자동화, 상시 실행용 클라우드 컴퓨터를 공개 (웹·데스크톱·모바일)",
+      "source": {
+        "title": "Manus 블로그 – Introducing Manus 2.0",
+        "url": "https://manus.im/blog/introducing-manus-2-0"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
+      "id": "cue-2026-09-28-launch",
+      "date": "2026-09-28",
+      "tool": "Cue",
+      "company": "Manus",
+      "type": "new",
+      "title": "Cue — 개인 에이전트 전용 앱(초기 이용)",
+      "summary": "에이전트마다 메일·전화번호·지갑·컴퓨터를 주고 단체 대화에서 서로 협업하게 하는 Manus의 별도 앱, 초대 코드로 무료 초기 이용 (iOS는 심사 후 제공)",
+      "source": {
+        "title": "Manus 블로그 – Introducing Manus 2.0",
+        "url": "https://manus.im/blog/introducing-manus-2-0"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
+      "id": "manus-2026-10-01-video-editor",
+      "date": "2026-10-01",
+      "tool": "Manus",
+      "company": "Manus",
+      "type": "update",
+      "title": "Manus Studio 영상 편집기",
+      "summary": "한 문장으로 만든 영상을 장면·자막·음성·음악이 트랙별로 나뉜 타임라인으로 열어 끌어 자르거나 채팅으로 고침, 내 영상 가져오기 가능 (macOS·Windows 데스크톱 앱)",
+      "source": {
+        "title": "Manus 블로그 – Introducing Video Editor in Manus 2.0",
+        "url": "https://manus.im/blog/introducing-video-editor"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-04-28-adobe-creativity-connector",
+      "date": "2026-04-28",
+      "tool": "Claude",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Claude용 Adobe for creativity 커넥터",
+      "summary": "Photoshop·Illustrator·Express·Premiere·Lightroom 등 Adobe 도구 50여 개를 Claude 대화 안에서 쓰는 커넥터를 전 세계에 공개 (Adobe 로그인 시 한도·도구 확대)",
+      "source": {
+        "title": "Adobe 블로그 – Adobe for creativity, now in Claude",
+        "url": "https://blog.adobe.com/en/publish/2026/04/28/adobe-for-creativity-connector"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT09-003"
     }
   ]
 }

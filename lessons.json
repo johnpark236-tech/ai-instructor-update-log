@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 32,
+  "count": 33,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT09-003",
+      "version": "v1.0",
+      "created_at": "2026-10-13 00:20 KST",
+      "checked": "2026-10-13",
+      "review_by": "2027-01-13",
+      "title": "이름은 지우고 자료만 나누기 — Claude 속 Adobe(Acrobat)로 '개인정보 가린 공유용 PDF' 만들기",
+      "summary": "2026년 9월 24일부터 Claude의 Adobe 커넥터·플러그인에 Acrobat PDF 도구가 들어와, 대화 한 줄로 PDF를 합치고 쪽을 지우고 나누고, 민감한 정보를 가리고(Redact), 다른 형식으로 바꿀 수 있습니다. 수업 안내문과 가짜 명단을 합친 뒤 이름·전화번호를 가려 '밖으로 보내도 되는 PDF' 1개를 완성합니다.",
+      "tool": "Claude",
+      "feature": "Adobe 커넥터·플러그인의 Acrobat PDF 도구 (Adobe for Claude — 쪽 삭제·합치기·나누기, 가리기(Redact), 변환·내보내기)",
+      "company": "Anthropic · Adobe",
+      "type": "update",
+      "released": "2026-09-24",
+      "categories": [
+        "CAT-09",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-HLT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "안내문 + 명단을 하나로 합치고 이름·전화번호를 가린 '밖으로 보내도 되는 공유용 PDF' 1개 (+ 원본과 비교한 확인 메모 3줄)",
+      "access": "freemium",
+      "total_minutes": 58,
+      "notice": "",
+      "emoji": "🖍️",
+      "one_liner": "말 한 줄로 PDF 합치고 개인정보 가리기"
+    },
     {
       "id": "AI-2026-10-CAT03-004",
       "version": "v1.0",
