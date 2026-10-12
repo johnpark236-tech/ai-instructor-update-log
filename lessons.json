@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 26,
+  "count": 27,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-004",
+      "version": "v1.0",
+      "created_at": "2026-10-12 09:20 KST",
+      "checked": "2026-10-12",
+      "review_by": "2027-01-12",
+      "title": "수업 녹음 3분을 대본과 자막으로 — ElevenLabs 받아쓰기(Speech to Text)로 화자별 대본·SRT 자막 파일 만들기",
+      "summary": "ElevenLabs의 받아쓰기 모델 Scribe v2로 짧은 한국어 수업 녹음을 올려 화자가 나뉜 대본을 받고, 틀린 곳을 고친 뒤 영상에 넣을 SRT 자막 파일까지 내려받습니다. 9월 28일에는 받아쓴 원고를 문장 지시로 다듬는 기능(API, 실험 기능)도 추가되었습니다.",
+      "tool": "ElevenLabs",
+      "feature": "Speech to Text (Scribe v2) — 받아쓰기·대본 편집기(Transcript Editor)·자막(Subtitles), 받아쓰기 수정 지시(transcript_edit, API)",
+      "company": "ElevenLabs",
+      "type": "update",
+      "released": "2026-09-28",
+      "categories": [
+        "CAT-05",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-GLB",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 화자 이름이 붙은 수업 대화 대본 1부(.txt) ② 영상에 바로 넣을 수 있는 자막 파일 1개(.srt)",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "녹음 파일을 올리면 대본·자막이 뚝딱"
+    },
     {
       "id": "AI-2026-10-CAT02-002",
       "version": "v1.0",

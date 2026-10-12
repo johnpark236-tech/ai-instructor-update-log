@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 07:15 KST",
+  "updated_at": "2026-10-12 09:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -479,8 +479,8 @@
         "title": "ElevenLabs Changelog",
         "url": "https://elevenlabs.io/docs/changelog"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-12",
+      "lesson_id": "AI-2026-10-CAT05-004"
     },
     {
       "id": "chatgpt-2026-09-28-health-summaries",
