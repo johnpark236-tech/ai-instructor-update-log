@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 38,
+  "count": 39,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-005",
+      "version": "v1.0",
+      "created_at": "2026-10-13 18:16 KST",
+      "checked": "2026-10-13",
+      "review_by": "2027-01-13",
+      "title": "미드저니 편집 모델로 그림 한 장을 고쳐 쓰기 — 한 장면에서 낱말만 바꾼 '이것은 무엇이에요?' 그림 3장과 슬라이드용 넓은 그림 만들기",
+      "summary": "Midjourney V8.2 편집 모델(Edit Model)은 그림에서 고른 부분만 새로 그리고(부분 수정), 캔버스를 넓혀 빈 곳을 채웁니다(캔버스 확장). 9월 24일 업데이트로 고른 픽셀만 바뀌어 여러 번 고쳐도 화질이 덜 떨어집니다. 과일 가게 그림 하나에서 과일만 바꾼 어휘 그림 3장과 16:9 슬라이드용 그림을 만듭니다.",
+      "tool": "Midjourney",
+      "feature": "편집 모델(Edit Model, V8.2) — 웹 편집기(Editor)의 부분 수정(Erase·Submit Edit)·캔버스 확장(Move / Resize)",
+      "company": "Midjourney",
+      "type": "update",
+      "released": "2026-09-24",
+      "categories": [
+        "CAT-04",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "같은 과일 가게 장면에서 과일만 바꾼 '이것은 무엇이에요?' 그림 3장(사과·배·귤) + 오른쪽에 글 쓸 자리가 생긴 16:9 슬라이드용 그림 1장",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🖌️",
+      "one_liner": "그림 일부만 골라 고치고 넓히기"
+    },
     {
       "id": "AI-2026-10-CAT03-005",
       "version": "v1.0",

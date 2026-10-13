@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 16:14 KST",
+  "updated_at": "2026-10-13 18:16 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -585,7 +585,7 @@
         "url": "https://updates.midjourney.com/edit-updates-thumbnail-previews-and-more/"
       },
       "checked": "2026-10-13",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT04-005"
     },
     {
       "id": "midjourney-2026-09-23-korean-ui",
@@ -1141,6 +1141,21 @@
       },
       "checked": "2026-10-12",
       "lesson_id": "AI-2026-10-CAT02-002"
+    },
+    {
+      "id": "midjourney-2026-08-27-edit-model-v8",
+      "date": "2026-08-27",
+      "tool": "Midjourney",
+      "company": "Midjourney",
+      "type": "update",
+      "title": "V8.2 이미지 편집 모델 공개 시험",
+      "summary": "글로 그림을 고치고, 고른 부분만 다시 그리거나(인페인팅) 캔버스를 넓혀 이어 그리며(아웃페인팅), 참조 이미지를 최대 4장까지 쓰는 V8.2 편집 모델을 모든 사용자가 시험할 수 있게 공개",
+      "source": {
+        "title": "Midjourney – Edit Model for V8",
+        "url": "https://updates.midjourney.com/edit-model-for-v8/"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT04-005"
     },
     {
       "id": "claude-2026-08-25-7",
