@@ -1,7 +1,67 @@
 {
-  "updated_at": "2026-10-13 20:25 KST",
+  "updated_at": "2026-10-13 23:30 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "chatgpt-2026-06-04-lockdown-mode",
+      "date": "2026-06-04",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "잠금 모드(Lockdown Mode) 전체 확대",
+      "summary": "웹 검색·딥 리서치·파일 내려받기 등을 막아 프롬프트 주입에 의한 정보 유출 위험을 줄이는 선택형 보안 설정을 로그인한 모든 사용자에게 제공 (설정 > 보안)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-06-26-improved-dictation",
+      "date": "2026-06-26",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "받아쓰기 새 음성 인식 모델",
+      "summary": "모든 요금제의 받아쓰기에 새 음성 인식 모델을 적용해 여러 언어·억양과 시끄러운 곳에서 더 정확하게 글로 바꿈 (사용법은 그대로)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT10-006"
+    },
+    {
+      "id": "chatgpt-2026-08-07-ios-dictation-retry",
+      "date": "2026-08-07",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "iOS 받아쓰기 자동 재시도",
+      "summary": "iOS에서 연결 문제나 시간 초과로 받아쓰기가 실패하면 한 번 자동으로 다시 시도",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-08-14-android-dictation-switch",
+      "date": "2026-08-14",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Android 타자·받아쓰기 전환",
+      "summary": "Android에서 글자나 첨부를 넣은 뒤에도 받아쓰기 버튼이 남아 타자와 받아쓰기를 오가며 입력",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
     {
       "id": "muse-2026-10-12-muse-wonder",
       "date": "2026-10-12",

@@ -1,7 +1,44 @@
 {
   "standard": "v2.0",
-  "count": 41,
+  "count": 42,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT10-006",
+      "version": "v1.0",
+      "created_at": "2026-10-13 23:24 KST",
+      "checked": "2026-10-13",
+      "review_by": "2027-01-13",
+      "title": "말하면 글이 되는 수업 기록 — ChatGPT 받아쓰기로 1분 만에 수업 일지와 말하기 점검표 만들기",
+      "summary": "ChatGPT 입력창의 마이크로 말하면 글자로 바뀌고, 보내기 전에 고칠 수 있습니다. 2026년 6월 모든 요금제의 받아쓰기 모델이 바뀌어 여러 언어·억양·소음 속 인식이 좋아졌습니다. 수업 후 1분 말로 남긴 메모를 수업 일지 표로 바꾸고, 한국어 학습자용 '받아쓰기 거울' 말하기 점검표까지 만듭니다.",
+      "tool": "ChatGPT",
+      "feature": "받아쓰기(Dictation) — 새 음성 인식 모델(Improved dictation)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-06-26",
+      "categories": [
+        "CAT-10",
+        "CAT-05"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 말로 남긴 1분 메모로 만든 '오늘의 수업 일지' 표 1장 ② 한국어 학습자용 '받아쓰기 거울' 말하기 점검표(연습 문장 5개)",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "말로 남기면 수업 일지가 완성돼요"
+    },
     {
       "id": "AI-2026-10-CAT01-007",
       "version": "v1.0",
