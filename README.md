@@ -38,7 +38,7 @@ API key는 코드나 JSON에 직접 저장하지 마세요.
 
 `매일 06:00 KST 조사` → `ai-daily.json 갱신` → `main 커밋` → `GitHub Pages 자동 재배포`
 
-## 실습 교안 (기준 v2.0, 매시간 자동 추가)
+## 실습 교안 (기준 v2.3, 매시간 자동 추가)
 
 - 작성 기준: [`docs/lesson-standard-v2.md`](docs/lesson-standard-v2.md) — 교안 ID(AI-YYYY-MM-CATxx-NNN), 대상 배지, 직업군 JOB 코드, 카테고리 CAT-01~12, 이론·실습·정리 3부 구성, 강사용 지도 노트, 유효기간
 - 페이지: `lessons.html` — 순서 번호, 완료하면 숨김(완료 탭 보관), 신규/기존 AI·카테고리·대상·직업군 필터, 학습자용/강사용 보기 전환, 인터랙티브 퀴즈

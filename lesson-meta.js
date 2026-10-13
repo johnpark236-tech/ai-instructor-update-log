@@ -33,6 +33,23 @@ window.LESSON_META = {
     const c = Date.parse(String(L.created_at || '').slice(0, 10)), r = Date.parse(L.released || '');
     return !isNaN(c) && !isNaN(r) && (c - r) / 86400000 > 14;
   },
+  // 요금 문자열의 첫 금액 → {v, cur}. 읽을 수 없으면 null. 환율 추정 안 함
+  parsePrice(t) {
+    t = String(t || '').trim();
+    if (/^(0원|₩0|\$0|0달러|무료)/.test(t)) return { v: 0, cur: null };
+    let m = t.match(/\$\s?([\d,]+(?:\.\d+)?)/) || t.match(/([\d,]+(?:\.\d+)?)\s?달러/);
+    if (m) return { v: +m[1].replace(/,/g, ''), cur: 'USD' };
+    m = t.match(/₩\s?([\d,]+)/) || t.match(/([\d,]+)\s?원/);
+    if (m) return { v: +m[1].replace(/,/g, ''), cur: 'KRW' };
+    return null;
+  },
+  // 그래프로 그릴 수 있는 요금제 목록 (통화 1종, 2개 이상, 유료 1개 이상). 아니면 null
+  priceSeries(P) {
+    const rows = (P.plans || []).map(x => ({ x, p: this.parsePrice(x.price) })), ok = rows.filter(r => r.p);
+    const curs = [...new Set(ok.map(r => r.p.cur).filter(Boolean))];
+    if (ok.length < 2 || curs.length !== 1 || !ok.some(r => r.p.v > 0)) return null;
+    return { cur: curs[0], ok, skip: rows.filter(r => !r.p) };
+  },
   totalMinutes(L) { const m = L.minutes || {}; return (m.theory || 0) + (m.practice || 0) + (m.wrap || 0); },
   promptText(L) {
     const out = [`# ${L.title}`, `교안 ID: ${L.id} (${L.version}) · 기준일 ${L.checked}`, ''];

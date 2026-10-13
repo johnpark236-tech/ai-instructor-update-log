@@ -28,6 +28,17 @@ h2 small{color:var(--m);font-size:13px;font-weight:600;margin-left:6px}
 @media(max-width:560px){.ba{grid-template-columns:1fr}.bx{transform:rotate(90deg);justify-self:center}}
 .caut{display:flex;flex-wrap:wrap;gap:6px}.caut span{font-size:13px;background:#2a2210;border:1px solid #6b5520;color:#ffe2a8;border-radius:10px;padding:5px 10px}
 .vlink{display:inline-block;margin-top:12px;font-size:13px}
+.part{display:flex;align-items:center;gap:10px;margin:30px 0 10px}.part b{font-size:11px;letter-spacing:.14em;color:#03222d;background:var(--a);border-radius:6px;padding:3px 8px;flex:none}.part h2{margin:0;font-size:21px}.part h2 small{display:block;margin:2px 0 0}.part.detail b{background:#c9b8ff;color:#1a1140}
+.sum{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:760px){.sum{grid-template-columns:1fr}}.sum .card{margin:0}.sum .full{grid-column:1/-1}
+.ct{font-size:13px;color:var(--a);font-weight:800;margin:0 0 8px}
+.sum>*{min-width:0}table.kv,table.fb,table.ba2{table-layout:fixed}table.kv td,table.fb td,table.ba2 td{overflow-wrap:anywhere}table.kv th{width:28%;white-space:nowrap}table.fb th:first-child{width:42%}table.kv td,table.fb td{font-size:14px}table.fb td:first-child{font-weight:700}
+table.ba2 th{width:50%}table.ba2 th.b0{color:#d9c8ff}table.ba2 th.b1{color:var(--g)}
+.hb{display:grid;grid-template-columns:minmax(70px,32%) 1fr;gap:6px 10px;align-items:center;font-size:13px}.hb .hn{color:#c9d6e6;line-height:1.3;word-break:keep-all}.hb .ht{display:flex;align-items:center;gap:8px;min-width:0;width:100%}
+.hb .hbar{height:14px;background:#3987e5;border-radius:0 4px 4px 0;min-width:2px;flex:none;cursor:default}.hb .hv{color:#edf5ff;font-weight:700;white-space:nowrap;font-size:12.5px}.hb .hz{color:var(--m);font-size:12.5px}
+.stk{display:flex;gap:2px;height:22px;border-radius:4px;overflow:hidden;background:#0b1728}.stk i{display:block;height:100%;cursor:default}
+.lg{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:13px;color:#c9d6e6}.lg span{display:inline-flex;align-items:center;gap:6px}.lg i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.cnote{font-size:12px;color:var(--m);margin:8px 0 0}
+#tip{position:fixed;z-index:9;pointer-events:none;background:#06101d;border:1px solid #2f5577;color:#edf5ff;font-size:12.5px;padding:6px 9px;border-radius:8px;max-width:260px;display:none;box-shadow:0 6px 18px #0008}
 .rail{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:thin}.rail a{flex:none;display:flex;align-items:center;gap:6px;text-decoration:none;color:#d6e6f7;background:#0b1728;border:1px solid #2b4e72;border-radius:999px;padding:5px 12px 5px 5px;font-size:13px;white-space:nowrap}.rail a span{width:22px;height:22px;border-radius:50%;background:var(--a);color:#03222d;font-weight:900;display:grid;place-items:center;font-size:12px}
 .phase{font-size:12px;font-weight:900;color:var(--a);letter-spacing:.08em;margin:14px 0 6px}
 .step .sh{display:flex;align-items:center;gap:8px}.sn1{width:26px;height:26px;flex:none;border-radius:50%;background:#16304f;color:var(--a);font-weight:900;display:grid;place-items:center;font-size:13px}.step .sh em{margin-left:auto;font-style:normal;color:var(--m);font-size:12px;white-space:nowrap}
@@ -74,8 +85,8 @@ footer{padding:44px 0;color:#6f87a6;font-size:12px}
 </head>
 <body>
 <header><div class="w nav"><div class="brand">AI 실습 교안</div><div class="links"><a class="on" href="./lessons.html">교안</a><a href="./releases.html">릴리즈 노트</a><a href="./index.html">TOP10</a></div></div></header>
-<main class="w" id="app"></main>
-<footer class="w">교안 작성 기준 v2.0 — 모든 사실 정보는 공식 출처와 확인일을 표기합니다. [확인 필요]·[미검증] 표시는 강의 전 실제 화면으로 확인하세요.</footer>
+<main class="w" id="app"></main><div id="tip" role="tooltip"></div>
+<footer class="w">교안 작성 기준 v2.3 — 사실 정보는 공식 출처·확인일 표기. [확인 필요]·[미검증] 표시는 강의 전 실제 화면으로 확인.</footer>
 <script src="./lesson-meta.js"></script>
 <script src="./lesson-pptx.js"></script>
 <script>
@@ -110,8 +121,8 @@ function listView(){
     (f.kind==='all'||(f.kind==='past'?M.isPast(l):l.type===f.kind))&&(!f.cat||l.categories.includes(f.cat))&&
     (!f.lvl||l.learner_levels.includes(f.lvl)||l.instructor_levels.includes(f.lvl))&&(!f.job||l.jobs.includes(f.job))&&
     (!f.q||JSON.stringify(l).toLowerCase().includes(f.q.toLowerCase())));
-  app.innerHTML=`${inAppBanner()}<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.0</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
-  <p class="lead">신규 AI와 기존 AI의 새 기능을 이론 → 실습 → 결과물로 정리합니다. 새 교안이 맨 위에 올라옵니다. 하나씩 배우고, 다 배우면 <b>완료</b>를 눌러 숨기세요. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>에서 볼 수 있습니다.</p></section>
+  app.innerHTML=`${inAppBanner()}<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.3</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
+  <p class="lead">신규 AI·기존 AI 신기능 → 요약본(표·그래프) → 실습 → 결과물. 새 교안이 맨 위. 다 배운 교안은 <b>완료</b>로 숨김. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>.</p></section>
   <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
   <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI'],['past','📚 지난 기능']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
   <div class="tools"><select id="fc">${opt('','카테고리 전체',f.cat)}${Object.entries(M.CAT).map(([k,v])=>opt(k,`${k} ${v}`,f.cat)).join('')}</select>
@@ -148,6 +159,21 @@ const T=(h,rows)=>`<div class="tw"><table class="${h.length>=3?'wide':''}"><thea
 const UL=(a,c='')=>`<ul class="plain ${c}">${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
 const steps=(arr,start)=>arr.map((s,i)=>`<div class="card step"><div class="sh">STEP ${start+i}. ${esc(s.title)}${s.minutes?`<span>${s.minutes}분</span>`:''}</div><p style="margin:6px 0">${esc(s.do)}</p>${s.prompt?`<div class="prompt"><button class="cp" type="button">복사</button><span class="pv">${esc(s.prompt)}</span></div>`:''}<div class="ex">${esc(s.expect)}</div>${s.note?`<div class="sn">⚠️ ${esc(s.note)}</div>`:''}</div>`).join('');
 
+const fmtP=(v,cur)=>cur==='KRW'?'₩'+v.toLocaleString('ko-KR'):'$'+v;
+function priceChart(P){
+  const ps=M.priceSeries(P);if(!ps)return '';
+  const{cur,ok,skip}=ps,max=Math.max(...ok.map(r=>r.p.v));
+  return `<div class="card"><div class="ct">💳 요금제별 월 가격 (${cur==='KRW'?'원':'달러'})</div><div class="hb">${ok.map(r=>{const w=r.p.v?Math.max(2,r.p.v/max*100):0,more=/부터|~/.test(r.x.price)?'~':'',q=/확인 필요/.test(r.x.price)?' *':'';
+    return `<div class="hn">${esc(r.x.name)}</div><div class="ht">${r.p.v?`<i class="hbar" style="width:calc((100% - 70px) * ${(w/100).toFixed(3)})" data-tip="${esc(r.x.name+' — '+r.x.price)}"></i><span class="hv">${fmtP(r.p.v,cur)}${more}${q}</span>`:`<span class="hv">무료</span>`}</div>`}).join('')}</div>
+    <p class="cnote">첫 금액 기준 · 연간 할인·지역 가격은 표 참고${ok.some(r=>/확인 필요/.test(r.x.price))?' · * 확인 필요':''}${skip.length?` · 금액 미표시: ${esc(skip.map(r=>r.x.name).join(', '))}`:''}</p></div>`;
+}
+const TC=[['이론','#3987e5'],['실습','#d95926'],['정리','#199e70']];
+function timeChart(mn,tot){
+  const v=[mn.theory||0,mn.practice||0,mn.wrap||0];
+  return `<div class="card"><div class="ct">⏱ 수업 시간 배분 (총 ${tot}분)</div><div class="stk">${v.map((x,i)=>x?`<i style="flex:${x};background:${TC[i][1]}" data-tip="${TC[i][0]} ${x}분 (${Math.round(x/tot*100)}%)"></i>`:'').join('')}</div>
+    <div class="lg">${v.map((x,i)=>`<span><i style="background:${TC[i][1]}"></i>${TC[i][0]} ${x}분</span>`).join('')}</div></div>`;
+}
+
 async function lessonView(id){
   app.innerHTML='<div class="empty">불러오는 중…</div>';
   let L;try{const r=await fetch(`./lessons/${encodeURIComponent(id)}.json?${Date.now()}`);if(!r.ok)throw 0;L=await r.json()}catch(e){app.innerHTML='<div class="empty">교안을 찾을 수 없습니다. <a href="#">목록으로</a></div>';return}
@@ -157,16 +183,22 @@ async function lessonView(id){
   const lv=[...L.learner_levels.map(x=>M.LEVEL[x]+x),...L.instructor_levels.map(x=>M.LEVEL[x]+x)].join(' ');
   const bar=`<div class="bar"><a href="#">← 교안 목록</a><div class="btns"><div class="seg"><button data-v="learner" class="${ins?'':'on'}">학습자용</button><button data-v="instructor" class="${ins?'on':''}">강사용 완전본</button></div>
    <a class="btn pri dl" href="./downloads/${esc(L.id)}-learner.pptx" download="${esc(L.id)}-학습자용.pptx">⬇ PPT 학습자용</a><a class="btn pri dl" href="./downloads/${esc(L.id)}-instructor.pptx" download="${esc(L.id)}-강사용.pptx">⬇ PPT 강사용</a><a class="btn dl" href="./downloads/${esc(L.id)}-prompts.txt" download="${esc(L.id)}-prompts.txt">⬇ 프롬프트 모음</a></div></div>`;
+  const kv=[['도구',`${L.company} ${L.tool}`],['기능',L.feature],['구분',`${M.KIND[L.type]}${M.isPast(L)?' · 지난 기능':''}`],['대상',lv],['결과물',L.outcome],['요금',`${M.ACCESS[P.access]} — ${P.summary}`],['시간',`${tot}분 (이론 ${mn.theory} · 실습 ${mn.practice} · 정리 ${mn.wrap})`],['출시',L.released]];
   const glance=G?`<section class="glance">
     <div class="gl-hero"><div class="gl-emoji">${esc(G.emoji)}</div><div class="gl-one">${esc(G.one_liner)}</div></div>
     <div class="chips"><span>⏱ ${tot}분</span><span>💳 ${M.ACCESS[P.access]}</span><span>📅 출시 ${esc(L.released)}</span><span>🎯 ${esc(lv)}</span></div>
     <div class="gift"><div class="gi">🎁</div><div><div class="gk">오늘 만들 작품</div><div class="gv">${esc(L.outcome)}</div></div></div>
-    <div class="gcards">${G.cards.map(c=>`<div class="gcard"><div class="gic">${esc(c.icon)}</div><div class="gt">${esc(c.title)}</div><div class="gx">${esc(c.text)}</div></div>`).join('')}</div>
-    <div class="diag"><div class="dt">${esc(G.diagram.title)}</div><div class="flow">${G.diagram.nodes.map((nd,i)=>`${i?'<div class="arr" aria-hidden="true"></div>':''}<div class="node"><div class="ni">${esc(nd.icon)}</div><div class="nl">${esc(nd.label)}</div></div>`).join('')}</div></div>
-    <div class="ba"><div class="bb before"><div class="bl">😐 ${esc(G.before_after.before.label)}</div><div class="bt">${esc(G.before_after.before.text)}</div></div><div class="bx" aria-hidden="true">➜</div><div class="bb after"><div class="bl">😀 ${esc(G.before_after.after.label)}</div><div class="bt">${esc(G.before_after.after.text)}</div></div></div>
-    <div class="caut">${G.cautions.map(c=>`<span>⚠️ ${esc(c)}</span>`).join('')}</div>
-    ${(L.verification||[]).length?`<a class="vlink" href="#" data-open="verify">🔎 강의 전 확인할 점 ${L.verification.length}개 → 자세히 보기</a>`:''}
-  </section>`:`<p class="lead">${esc(L.summary)}</p>`;
+  </section>
+  <div class="part"><b>PART 1</b><h2>📊 요약본 <small>표·그래프로 1분 파악</small></h2></div>
+  <div class="sum">
+    <div class="card full"><div class="ct">📌 핵심 요약</div><table class="kv"><tbody>${kv.map(([k,v])=>`<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join('')}</tbody></table></div>
+    <div class="card full"><div class="ct">🎯 기능 · 혜택</div><table class="fb"><thead><tr><th>기능</th><th>혜택</th></tr></thead><tbody>${G.cards.map(c=>`<tr><td>${esc(c.icon)} ${esc(c.title)}</td><td>${esc(c.text)}</td></tr>`).join('')}</tbody></table></div>
+    ${priceChart(P)}${timeChart(mn,tot)}
+    <div class="card full diag"><div class="dt">⚙️ ${esc(G.diagram.title)}</div><div class="flow">${G.diagram.nodes.map((nd,i)=>`${i?'<div class="arr" aria-hidden="true"></div>':''}<div class="node"><div class="ni">${esc(nd.icon)}</div><div class="nl">${esc(nd.label)}</div></div>`).join('')}</div></div>
+    <div class="card full"><div class="ct">🔄 비포 → 애프터</div><table class="ba2"><thead><tr><th class="b0">😐 ${esc(G.before_after.before.label)}</th><th class="b1">😀 ${esc(G.before_after.after.label)}</th></tr></thead><tbody><tr><td>${esc(G.before_after.before.text)}</td><td>${esc(G.before_after.after.text)}</td></tr></tbody></table></div>
+    <div class="card full"><div class="ct">⚠️ 주의</div><div class="caut">${G.cautions.map(c=>`<span>⚠️ ${esc(c)}</span>`).join('')}</div>
+    ${(L.verification||[]).length?`<a class="vlink" href="#" data-open="verify">🔎 강의 전 확인 ${L.verification.length}개 → 자세한 설명</a>`:''}</div>
+  </div>`:`<p class="lead">${esc(L.summary)}</p>`;
   const stepCard=(s,i)=>`<div class="card step" id="st${i+1}"><div class="sh"><span class="sn1">${i+1}</span><b>${esc(s.title)}</b>${s.minutes?`<em>${s.minutes}분</em>`:''}</div>
     ${s.prompt?`<div class="prompt"><button class="cp" type="button">복사</button><span class="pv">${esc(s.prompt)}</span></div>`:''}
     <div class="ex">${esc(s.expect)}</div>
@@ -186,7 +218,7 @@ async function lessonView(id){
   ${L.notice?`<div class="call warn">⚠️ 변경 공지: ${esc(L.notice)}</div>`:''}
   ${glance}
 
-  <h2>🛠 바로 실습 <small>${mn.practice}분 · ${allSteps.length}단계</small></h2>
+  <div class="part"><b>PART 2</b><h2>🛠 바로 실습 <small>${mn.practice}분 · ${allSteps.length}단계 · 프롬프트 복사 → 결과 확인</small></h2></div>
   <div class="rail">${allSteps.map((s,i)=>`<a href="#" data-st="${i+1}"><span>${i+1}</span>${esc(s.title)}</a>`).join('')}</div>
   <div class="phase">따라하기</div>${pc.follow.map((s,i)=>stepCard(s,i)).join('')}
   <div class="phase">내 것으로 만들기</div>${pc.make_mine.map((s,i)=>stepCard(s,pc.follow.length+i)).join('')}
@@ -194,7 +226,7 @@ async function lessonView(id){
 
   <h2>✅ 3문제로 확인</h2><div class="card">${wr.quiz.map((q,i)=>`<div class="q" data-a="${q.answer}"><b>Q${i+1}. ${esc(q.q)}</b><div class="opts">${q.options.map((o,j)=>`<button class="opt" type="button" data-j="${j}">${'①②③④'[j]} ${esc(o)}</button>`).join('')}</div><div class="qe">정답 ${'①②③④'[q.answer]} — ${esc(q.explain)}</div></div>`).join('')}</div>
 
-  <h2>📖 자세히 보기 <small>필요한 부분만 펼쳐 보세요</small></h2>
+  <div class="part detail"><b>PART 3</b><h2>📖 자세한 설명 <small>개념·비교·요금 상세·윤리·평가·출처 — 필요한 항목만 펼침</small></h2></div>
   ${D('📋 교안 메타정보',`<div class="tw"><table class="meta-t"><tbody>${[['교안 ID / 버전',`${L.id} / ${L.version}`],['대상 배지',M.levelBadges(L).join('  ')],['직업군',L.jobs.map(j=>`${j}(${M.JOB[j]})`).join(', ')],['카테고리',L.categories.map(c=>`${c} ${M.CAT[c]}`).join(' · ')],['다루는 AI/기능',`${L.company} ${L.tool} — ${L.feature}`],['기능 출시일',L.released],['교안 기준일 / 재검토',`${L.checked} / ${L.review_by}`],['소요 시간',`이론 ${mn.theory}분 + 실습 ${mn.practice}분 + 정리 ${mn.wrap}분 = ${tot}분`],['준비물',L.prerequisites.join(' / ')]].map(([a,b])=>`<tr><th>${esc(a)}</th><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div>`)}
   ${D('📝 이 교안 요약',`<p>${esc(L.summary)}</p><p class="pnote">완성 예시: ${esc(pc.preview)}</p>`)}
   ${D('🎯 학습 목표',`<ol style="margin:0;padding-left:20px">${L.objectives.map(o=>`<li>${esc(o)}</li>`).join('')}</ol>`)}
@@ -202,7 +234,7 @@ async function lessonView(id){
   ${D('💡 개념 설명 (정의·비유·핵심 개념)',`<p><b>${esc(th.definition)}</b></p><div class="call">🧠 ${esc(th.analogy)}</div>${th.concepts.map((c,i)=>`<p><b>${'①②③④⑤'[i]||'•'} ${esc(c.title)}</b><br>${esc(c.body)}</p>`).join('')}`)}
   ${D('🆚 이전 방식과 비교',T(th.comparison.headers,th.comparison.rows))}
   ${D('✅❌ 할 수 있는 것 / 할 수 없는 것',`<div class="grid2"><div><b>✅ 할 수 있는 것</b>${UL(th.can,'ok')}</div><div><b>❌ 한계·주의</b>${UL(th.cannot,'bad')}</div></div>`)}
-  ${D(`💳 요금제별 기능 (확인 ${esc(P.checked)})`,`<p style="margin-top:0">${accB(P.access)}${esc(P.summary)}</p><div class="plans">${P.plans.map(x=>`<div class="plan"><div class="pn">${esc(x.name)}<span>${esc(x.price)}</span></div><div class="pf">${esc(x.features)}</div></div>`).join('')}</div><p class="pnote">${esc(P.note||'')} ${(P.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ')}</p>`)}
+  ${D(`💳 요금제별 기능 (확인 ${esc(P.checked)})`,`<p style="margin-top:0">${accB(P.access)}${esc(P.summary)}</p>${T(['요금제','가격','기능·혜택'],P.plans.map(x=>[x.name,x.price,x.features]))}<p class="pnote">${esc(P.note||'')} ${(P.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ')}</p>`)}
   ${D('🔐 윤리·저작권·보안 (전체)',UL(th.safety,'warn'))}
   ${D('🏁 정리·평가 (공유 방법·루브릭·다음 교안)',`<p><b>작품 공유</b><br>${esc(wr.share)}</p>${T(['기준','상 (3점)','중 (2점)','하 (1점)'],(wr.rubric||M.RUBRIC).map(r=>[r.criterion,r.high,r.mid,r.low]))}<p><b>다음에 배울 것</b></p>${UL(wr.next||[])}`)}
   ${(L.verification||[]).length?`<div id="verify">${D('🔎 강의 전 확인할 점',UL(L.verification))}</div>`:''}
@@ -224,6 +256,10 @@ async function lessonView(id){
 
 function route(){const h=location.hash.slice(1);if(h.startsWith('import='))return importSync(h.slice(7));let id=decodeURIComponent(h);if(M.LEGACY[id]){history.replaceState(null,'','#'+M.LEGACY[id]);id=M.LEGACY[id]}id?lessonView(id):listView()}
 document.addEventListener('click',e=>{if(e.target&&e.target.id==='goExt')openExternal(location.href)});
+// 그래프 막대 툴팁 (마우스 올림·탭)
+const tip=document.getElementById('tip');
+function showTip(e){const t=e.target.closest&&e.target.closest('[data-tip]');if(!t){tip.style.display='none';return}tip.textContent=t.dataset.tip;tip.style.display='block';const x=Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8),y=e.clientY-tip.offsetHeight-12;tip.style.left=Math.max(8,x)+'px';tip.style.top=(y<8?e.clientY+16:y)+'px'}
+document.addEventListener('pointermove',showTip);document.addEventListener('pointerdown',showTip);addEventListener('scroll',()=>tip.style.display='none',{passive:true});
 window.addEventListener('hashchange',route);
 fetch('./lessons.json?'+Date.now()).then(r=>r.json()).then(x=>{INDEX=x;route()}).catch(()=>route());
 </script>

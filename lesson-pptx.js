@@ -93,6 +93,52 @@
       G.cautions.forEach((c, i) => box(g, '⚠️ ' + c, 0.55 + i * (cw3 + 0.25), 5.75, cw3, 0.9, C.warnBg, C.warn, 13, true));
     }
 
+    // PART 1 요약본 — 표·그래프
+    if (G) {
+      let sm = slide('📊 요약본 · 핵심 요약 / 기능·혜택');
+      const mn0 = L.minutes, tot0 = MT.totalMinutes(L);
+      const kvRows = [['도구', `${L.company} ${L.tool}`], ['기능', L.feature], ['구분', kind + (MT.isPast(L) ? ' · 지난 기능' : '')], ['결과물', L.outcome],
+        ['요금', `${acc} — ${L.pricing.summary}`], ['시간', `${tot0}분 (이론 ${mn0.theory} · 실습 ${mn0.practice} · 정리 ${mn0.wrap})`], ['출시', L.released]];
+      sm.addTable([[{ text: '항목', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }, { text: '내용', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }],
+        ...kvRows.map((r, i) => r.map((c, j) => ({ text: String(c), options: { fill: { color: i % 2 ? 'FFFFFF' : C.card }, bold: j === 0 } })))],
+        { x: 0.55, y: 1.2, w: 6.3, colW: [1.2, 5.1], fontFace: FONT, fontSize: 11, color: C.text, border: { type: 'solid', pt: 0.75, color: C.line }, valign: 'middle', margin: 0.06 });
+      sm.addTable([[{ text: '기능', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }, { text: '혜택', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }],
+        ...G.cards.map((c, i) => [{ text: `${c.icon} ${c.title}`, options: { bold: true, fill: { color: i % 2 ? 'FFFFFF' : C.card } } }, { text: c.text, options: { fill: { color: i % 2 ? 'FFFFFF' : C.card } } }])],
+        { x: 7.1, y: 1.2, w: 5.65, colW: [2.25, 3.4], fontFace: FONT, fontSize: 13, color: C.text, border: { type: 'solid', pt: 0.75, color: C.line }, valign: 'middle', margin: 0.08 });
+
+      sm = slide('📊 요약본 · 요금·시간 그래프');
+      const ps = MT.priceSeries(L.pricing), half = ps ? 6.0 : 12.2;
+      if (ps) {
+        const cur = ps.cur, lab = r => r.x.name, ok = ps.ok.slice().reverse();
+        sm.addText(`💳 요금제별 월 가격 (${cur === 'KRW' ? '원' : '달러'})`, { x: 0.55, y: 1.15, w: 6, h: 0.45, fontFace: FONT, fontSize: 15, bold: true, color: C.text, margin: 0 });
+        sm.addChart(pptx.ChartType.bar, [{ name: '월 가격', labels: ok.map(lab), values: ok.map(r => r.p.v) }], {
+          x: 0.45, y: 1.6, w: 6.2, h: 4.2, barDir: 'bar', chartColors: ['3987E5'], barGapWidthPct: 60, showLegend: false,
+          showValue: true, dataLabelFontSize: 12, dataLabelColor: C.text, dataLabelFormatCode: cur === 'KRW' ? '₩#,##0' : '$#,##0.##',
+          catAxisLabelFontSize: 12, catAxisLabelColor: C.text, catAxisLabelFontFace: FONT, valAxisHidden: true, valGridLine: { style: 'none' }, catAxisLineShow: false
+        });
+        const fn = [`첫 금액 기준 · 연간 할인·지역 가격은 요금표 참고`]; if (ps.skip.length) fn.push('금액 미표시: ' + ps.skip.map(r => r.x.name).join(', '));
+        if (ps.ok.some(r => /부터|~|확인 필요/.test(r.x.price))) fn.push('일부 금액은 시작가·확인 필요');
+        sm.addText(fn.join(' · '), { x: 0.55, y: 5.9, w: 6, h: 0.6, fontFace: FONT, fontSize: 10, color: C.sub, valign: 'top', margin: 0 });
+      }
+      const tx = ps ? 7.0 : 0.55, tw = ps ? 5.75 : 12.2;
+      sm.addText(`⏱ 수업 시간 배분 (총 ${tot0}분)`, { x: tx, y: 1.15, w: tw, h: 0.45, fontFace: FONT, fontSize: 15, bold: true, color: C.text, margin: 0 });
+      sm.addChart(pptx.ChartType.bar, [['이론', mn0.theory], ['실습', mn0.practice], ['정리', mn0.wrap]].map(([nm, v]) => ({ name: `${nm} ${v}분`, labels: ['시간'], values: [v || 0] })), {
+        x: tx - 0.1, y: 1.6, w: tw + 0.2, h: 1.9, barDir: 'bar', barGrouping: 'stacked', chartColors: ['3987E5', 'D95926', '199E70'], barGapWidthPct: 20,
+        showLegend: true, legendPos: 'b', legendFontSize: 12, legendFontFace: FONT, showValue: true, dataLabelColor: 'FFFFFF', dataLabelFontSize: 12, dataLabelFontBold: true,
+        catAxisHidden: true, valAxisHidden: true, valGridLine: { style: 'none' }
+      });
+      const ba = G.before_after;
+      sm.addTable([[{ text: '😐 ' + ba.before.label, options: { bold: true, color: '5B21B6', fill: { color: 'F4F1F8' } } }, { text: '😀 ' + ba.after.label, options: { bold: true, color: C.green, fill: { color: C.greenBg } } }],
+        [ba.before.text, ba.after.text]], { x: tx, y: 3.8, w: tw, colW: [tw / 2, tw / 2], fontFace: FONT, fontSize: 12, color: C.text, border: { type: 'solid', pt: 0.75, color: C.line }, valign: 'top', margin: 0.08 });
+      sm.addText(G.cautions.map(c => '⚠️ ' + c).join('\n'), { x: tx, y: 5.5, w: tw, h: 1.2, fontFace: FONT, fontSize: 12, color: C.warn, valign: 'top', margin: 0 });
+
+      // PART 3 구분 장
+      const dv = pptx.addSlide(); n++;
+      dv.background = { color: C.navy };
+      dv.addText('📖 자세한 설명', { x: 0.8, y: 2.6, w: 11.8, h: 1.2, fontFace: FONT, fontSize: 40, bold: true, color: 'FFFFFF', margin: 0 });
+      dv.addText('메타정보 · 개념 · 비교 · 실습 단계 · 요금 상세 · 윤리 · 평가 · 출처', { x: 0.8, y: 3.8, w: 11.8, h: 0.6, fontFace: FONT, fontSize: 18, color: 'C0CDE0', margin: 0 });
+    }
+
     // 메타정보
     let s = slide('📋 교안 메타정보');
     table(s, ['항목', '내용'], [
