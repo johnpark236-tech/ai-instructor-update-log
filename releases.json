@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 04:25 KST",
+  "updated_at": "2026-10-14 05:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1890,7 +1890,7 @@
         "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
       },
       "checked": "2026-10-14",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT08-003"
     },
     {
       "id": "runway-2026-08-11-seedance-2-5",
@@ -1933,6 +1933,36 @@
       "source": {
         "title": "Runway 체인지로그",
         "url": "https://runway.com/en/changelog"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-05-19-spark",
+      "date": "2026-05-19",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini Spark 개인 에이전트 발표",
+      "summary": "클라우드 가상 머신에서 쉬지 않고 일을 대신 처리하는 Gemini 앱 속 개인 에이전트를 공개, 테스터에 이어 미국 Ultra 구독자 베타로 시작 (10월에 '작업(Task)'으로 이름 변경)",
+      "source": {
+        "title": "Google 블로그 – I/O 2026: Welcome to the agentic Gemini era",
+        "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT08-003"
+    },
+    {
+      "id": "gemini-2026-10-13-argon-ga",
+      "date": "2026-10-13",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 4 Argon 정식 공개(API·검색 AI 모드)",
+      "summary": "Gemini 4 Argon을 개발자·기업용 API로 전 세계 공개하고, 검색 AI 모드에서도 Google AI Pro·Ultra 구독자가 쓸 수 있게 됨 (API 소개 가격은 11월 30일까지)",
+      "source": {
+        "title": "Google 블로그 – Gemini 4 Argon is now available for everyone",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
       },
       "checked": "2026-10-14",
       "lesson_id": null
