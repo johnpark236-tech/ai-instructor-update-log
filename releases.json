@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 01:15 KST",
+  "updated_at": "2026-10-14 02:04 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -209,8 +209,8 @@
         "title": "Microsoft 365 Copilot 릴리스 노트",
         "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT03-006"
     },
     {
       "id": "copilot-2026-10-06-ppt-mac-file-reference",
@@ -811,6 +811,21 @@
       },
       "checked": "2026-10-11",
       "lesson_id": "AI-2026-10-CAT05-003"
+    },
+    {
+      "id": "microsoft365copilot-2026-09-23-ppt-custom-skills-web",
+      "date": "2026-09-23",
+      "tool": "Microsoft 365 Copilot",
+      "company": "Microsoft",
+      "type": "update",
+      "title": "웹 PowerPoint Copilot 사용자 정의 스킬",
+      "summary": "웹용 PowerPoint의 Copilot에서 기본 스킬에 더해 내가 정의한 스킬(SKILL.md 지시서)을 만들어 쓸 수 있게 됨",
+      "source": {
+        "title": "Microsoft 365 Copilot 릴리스 노트",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT03-006"
     },
     {
       "id": "claude-2026-09-22-11",
