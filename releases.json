@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 07:15 KST",
+  "updated_at": "2026-10-14 08:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -314,8 +314,8 @@
         "title": "Perplexity 체인지로그 – Automations, inline visualizations, and GPT-6.1 Sol",
         "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT08-004"
     },
     {
       "id": "elevenlabs-2026-10-05-agents-procedures-merge",

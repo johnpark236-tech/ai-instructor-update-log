@@ -1,7 +1,43 @@
 {
   "standard": "v2.0",
-  "count": 50,
+  "count": 51,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-004",
+      "version": "v1.0",
+      "created_at": "2026-10-14 08:10 KST",
+      "checked": "2026-10-14",
+      "review_by": "2027-01-14",
+      "title": "지난주와 달라진 것만 알려 주는 AI 감시병 — Perplexity Computer 자동화(Automations)로 '주간 변화 브리핑' 만들기",
+      "summary": "Perplexity Computer의 자동화는 정한 시간이나 앱 속 사건에 맞춰 같은 일을 반복하고, 지난번 실행 기록과 비교해 새로 생긴 것만 짚어 줍니다. 한국어 교육 공지를 매주 살펴 '바뀐 점만' 알려 주는 브리핑을 만들어 봅니다.",
+      "tool": "Perplexity",
+      "feature": "Computer 자동화(Automations) — 일정·앱 사건 트리거, 지난 실행 기억, 검토 단계, Automations 대시보드",
+      "company": "Perplexity",
+      "type": "update",
+      "released": "2026-09-29",
+      "categories": [
+        "CAT-08",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "중급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 매주 월요일 아침 '지난주와 달라진 한국어 교육 공지'만 골라 알려 주는 자동화 1개 ② 첫 실행 결과 브리핑 1부(출처 링크 포함)",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🛰️",
+      "one_liner": "지난주와 바뀐 것만 짚는 AI 자동화"
+    },
     {
       "id": "AI-2026-10-CAT05-008",
       "version": "v1.0",
