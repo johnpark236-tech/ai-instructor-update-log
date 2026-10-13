@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 08:05 KST",
+  "updated_at": "2026-10-13 12:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -873,6 +873,36 @@
       "lesson_id": null
     },
     {
+      "id": "elevenlabs-2026-09-11-music-v2-5",
+      "date": "2026-09-11",
+      "tool": "ElevenLabs",
+      "company": "ElevenLabs",
+      "type": "update",
+      "title": "Music v2.5 — 음악 생성 모델 업그레이드",
+      "summary": "ElevenMusic 기본 음악 모델이 v2.5로 바뀌어 악기 소리와 곡 짜임이 자연스러워지고, 무료를 포함한 모든 요금제에서 무손실 다운로드 가능(무료 하루 5곡)",
+      "source": {
+        "title": "ElevenLabs 블로그 – Music v2.5",
+        "url": "https://elevenlabs.io/blog/music-v2-5-model"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT05-005"
+    },
+    {
+      "id": "chatgpt-2026-09-11-gpt-retirement",
+      "date": "2026-09-11",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "맞춤형 GPT 종료 예정·플러그인 이전",
+      "summary": "맞춤형 GPT(custom GPTs)를 종료하고 플러그인으로 옮기는 경로를 제공할 계획 발표, 시점은 요금제·워크스페이스마다 다름",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
       "id": "gemini-2026-09-10-3",
       "date": "2026-09-10",
       "tool": "Gemini",
@@ -886,6 +916,21 @@
       },
       "checked": "2026-10-10",
       "lesson_id": "AI-2026-10-CAT01-003"
+    },
+    {
+      "id": "chatgpt-2026-09-10-library-cloud-files",
+      "date": "2026-09-10",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "라이브러리에 Box·Dropbox·SharePoint 연결",
+      "summary": "웹 Chat·Work의 라이브러리에서 Box·Dropbox·SharePoint 파일을 찾아 다시 올리지 않고 대화에 넣음 (Go 이상 유료·조직 요금제, 모바일은 추후)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
     },
     {
       "id": "chatgpt-2026-09-09-voice-limits",
@@ -915,6 +960,21 @@
         "url": "https://workspaceupdates.googleblog.com/2026/09/create-content-schedule-events-and-coordinate-tasks-across-Workspace-regardless-of-what-app-you-are-in.html"
       },
       "checked": "2026-10-11",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-09-09-library-share",
+      "date": "2026-09-09",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "라이브러리 파일·폴더 공유",
+      "summary": "라이브러리의 파일과 폴더를 특정 사람에게 보기·편집 권한으로, 또는 워크스페이스 전체에 공유",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
       "lesson_id": null
     },
     {
