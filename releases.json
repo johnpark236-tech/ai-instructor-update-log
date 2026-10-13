@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 19:20 KST",
+  "updated_at": "2026-10-13 20:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -705,7 +705,7 @@
         "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
       },
       "checked": "2026-10-13",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT01-007"
     },
     {
       "id": "claude-2026-09-22-11",
