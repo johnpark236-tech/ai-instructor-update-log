@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-14 03:15 KST",
+  "updated_at": "2026-10-14 04:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "chatgpt-2025-07-29-study-mode",
+      "date": "2025-07-29",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "학습 모드(Study mode)",
+      "summary": "정답을 바로 주지 않고 질문·힌트·확인 문제로 한 단계씩 이끄는 학습용 대화 방식, Free·Plus·Pro·Team 로그인 사용자부터 제공 (현재는 전 요금제)",
+      "source": {
+        "title": "OpenAI – Introducing study mode",
+        "url": "https://openai.com/index/chatgpt-study-mode/"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT10-007"
+    },
+    {
+      "id": "chatgpt-2026-10-01-virtual-try-on",
+      "date": "2026-10-01",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "쇼핑 가상 착용·상품 저장",
+      "summary": "옷·액세서리 상품의 'Try on'으로 내 사진에 입혀 본 모습을 이미지로 만들고, 상품을 즐겨찾기·라이브러리 폴더에 저장 (모바일·웹, 기준 사진은 설정 > 개인 맞춤에서 삭제 가능)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": null
+    },
     {
       "id": "muse-2026-10-12-muse-wonder",
       "date": "2026-10-12",
