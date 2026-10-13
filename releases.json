@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-13 13:10 KST",
+  "updated_at": "2026-10-13 16:14 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "muse-2026-10-12-muse-wonder",
+      "date": "2026-10-12",
+      "tool": "Muse",
+      "company": "Meta",
+      "type": "update",
+      "title": "Muse Wonder·Muse Wonder Full 모델",
+      "summary": "대화를 넘어 맥락을 이어 가는 Active Memory와 어려운 작업도 끝까지 붙드는 Active Focus를 갖춘 에이전트용 모델, Meta Model API·Muse Code에 먼저 제공하고 Muse 앱은 구독자부터 예정",
+      "source": {
+        "title": "Meta Newsroom – Introducing Muse Wonder and Muse Wonder Full",
+        "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
     {
       "id": "chatgpt-2026-10-09-composer-predictions",
       "date": "2026-10-09",
@@ -558,6 +573,21 @@
       "lesson_id": "AI-2026-10-CAT09-002"
     },
     {
+      "id": "midjourney-2026-09-24-edit-model-tile",
+      "date": "2026-09-24",
+      "tool": "Midjourney",
+      "company": "Midjourney",
+      "type": "update",
+      "title": "편집 모델 부분 수정 개선·스타일 미리보기·--tile 개선",
+      "summary": "고른 부분의 픽셀만 바꿔 여러 번 고쳐도 화질이 덜 상하는 인페인팅·아웃페인팅, 스타일 사이드바 실시간 미리보기, V8.1·8.2 --tile 이음새 개선",
+      "source": {
+        "title": "Midjourney Updates – Edit updates, thumbnail previews, and more",
+        "url": "https://updates.midjourney.com/edit-updates-thumbnail-previews-and-more/"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
+    },
+    {
       "id": "midjourney-2026-09-23-korean-ui",
       "date": "2026-09-23",
       "tool": "Midjourney",
@@ -795,6 +825,21 @@
         "url": "https://workspaceupdates.googleblog.com/2026/09/introducing-expert-intelligence-in-Gemini-Notebook.html"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-09-17-plugins-multiple-accounts",
+      "date": "2026-09-17",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "플러그인에 여러 계정 연결",
+      "summary": "같은 플러그인에 개인 계정과 회사 계정을 함께 연결해 골라 쓸 수 있음 (전 요금제, 웹·모바일·데스크톱)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트 (2026-09-17 항목)",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-13",
       "lesson_id": null
     },
     {
@@ -1428,6 +1473,21 @@
       "lesson_id": "AI-2026-10-CAT01-006"
     },
     {
+      "id": "gemininotebook-2026-03-20-slide-revise-pptx",
+      "date": "2026-03-20",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "슬라이드 장별 수정·PPTX 내보내기",
+      "summary": "슬라이드마다 고칠 점을 프롬프트로 지시해 새 덱을 받는 수정 기능(18세 이상)과 PPTX 내보내기, 인포그래픽 스타일 10종·EPUB 자료 추가",
+      "source": {
+        "title": "Google Workspace Updates – New ways to customize and interact with your content in NotebookLM",
+        "url": "https://workspaceupdates.googleblog.com/2026/03/new-ways-to-customize-and-interact-with-your-content-in-NotebookLM.html"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT03-005"
+    },
+    {
       "id": "claude-2026-03-02-4",
       "date": "2026-03-02",
       "tool": "Claude",
@@ -1441,6 +1501,21 @@
       },
       "checked": "2026-10-10",
       "lesson_id": null
+    },
+    {
+      "id": "gemininotebook-2025-11-20-slide-decks-infographics",
+      "date": "2025-11-20",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "슬라이드 자료·인포그래픽 생성",
+      "summary": "Nano Banana Pro 이미지 모델로 노트북 자료를 인포그래픽과 완성형 슬라이드 자료로 만들어 PDF로 공유 (18세 이상, 순차 제공)",
+      "source": {
+        "title": "Google Workspace Updates – Nano Banana Pro in Slides, Vids, Gemini app, and NotebookLM",
+        "url": "https://workspaceupdates.googleblog.com/2025/11/workspace-nano-banana-pro.html"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT03-005"
     },
     {
       "id": "claude-2025-10-23-3",

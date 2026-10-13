@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 37,
+  "count": 38,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-005",
+      "version": "v1.0",
+      "created_at": "2026-10-13 16:14 KST",
+      "checked": "2026-10-13",
+      "review_by": "2027-01-13",
+      "title": "수업 글 한 편으로 발표 슬라이드 완성하기 — Gemini Notebook 슬라이드 자료(Slide Deck)로 만들고, 말로 고치고, PPTX로 저장하기",
+      "summary": "Gemini Notebook(구 NotebookLM)에 내 수업 글을 넣으면 슬라이드 자료가 자동으로 만들어지고, 장마다 고칠 점을 말로 지시해 새 버전을 받은 뒤 파워포인트(PPTX) 파일로 내려받을 수 있습니다. 한국어 수업 도입용 발표 슬라이드 1세트를 완성합니다.",
+      "tool": "Gemini Notebook (구 NotebookLM)",
+      "feature": "슬라이드 자료(Slide Deck) — 발표용·상세형 생성, 프롬프트로 장별 수정(Revise), PPTX 내보내기",
+      "company": "Google",
+      "type": "update",
+      "released": "2025-11-20",
+      "categories": [
+        "CAT-03",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 수업 글로 만든 발표용 슬라이드 1세트(PPTX 파일) ② 장별 수정 지시를 반영한 개정판과 비포/애프터 비교 캡처",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "내 수업 글이 발표 슬라이드로 바로 변신"
+    },
     {
       "id": "AI-2026-10-CAT02-003",
       "version": "v1.0",
