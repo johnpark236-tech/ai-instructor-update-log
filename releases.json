@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 01:25 KST",
+  "updated_at": "2026-10-14 01:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1664,8 +1664,8 @@
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
-      "checked": "2026-10-13",
-      "lesson_id": null
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT09-004"
     },
     {
       "id": "claude-2026-04-28-adobe-creativity-connector",
@@ -1830,6 +1830,21 @@
         "url": "https://support.claude.com/en/articles/12138966-release-notes"
       },
       "checked": "2026-10-10",
+      "lesson_id": null
+    },
+    {
+      "id": "gemini-2026-10-13-argon-app-tasks",
+      "date": "2026-10-13",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 앱에 Gemini 4 Argon·작업(tasks) 전환",
+      "summary": "Gemini 4 Argon을 Gemini 앱에서 쓸 수 있게 되었고, 채팅창 토글로 컴퓨터를 떠나 있어도 계속 일하는 작업(tasks) 모드로 바꿀 수 있음. macOS 앱에는 Antigravity 코딩 화면 추가 (Google AI Pro·Ultra 구독자)",
+      "source": {
+        "title": "Google 블로그 – Gemini 4 Argon is now available in the Gemini app",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+      },
+      "checked": "2026-10-14",
       "lesson_id": null
     }
   ]

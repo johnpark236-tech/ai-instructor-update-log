@@ -1,6 +1,6 @@
 {
   "standard": "v2.0",
-  "count": 43,
+  "count": 44,
   "lessons": [
     {
       "id": "AI-2026-10-CAT07-002",
@@ -38,6 +38,44 @@
       "notice": "",
       "emoji": "🧩",
       "one_liner": "말로 부탁하면 AI 작업 화면이 바뀐다"
+    },
+    {
+      "id": "AI-2026-10-CAT09-004",
+      "version": "v1.0",
+      "created_at": "2026-10-14 01:12 KST",
+      "checked": "2026-10-14",
+      "review_by": "2027-01-14",
+      "title": "수상한 지시에 속지 않는 AI 쓰기 — ChatGPT 잠금 모드로 '우리 기관 AI 보안 점검표' 만들기",
+      "summary": "ChatGPT 잠금 모드(Lockdown Mode)는 웹·외부 서비스로 나가는 연결을 줄여, 문서나 웹페이지에 숨은 악성 지시(프롬프트 주입)로 정보가 새어 나갈 위험을 낮추는 선택형 보안 설정입니다. 2026년 6월부터 로그인한 모든 사용자가 켤 수 있습니다. 켜기 전·후를 비교해 보고, 내 업무에 맞는 AI 보안 점검표를 만듭니다.",
+      "tool": "ChatGPT",
+      "feature": "잠금 모드(Lockdown Mode)",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-06-04",
+      "categories": [
+        "CAT-09",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 잠금 모드 켜기 전·후 비교 기록 1장 ② 내 업무에 맞춘 'AI 보안 점검표' 1부 (10문항 내외)",
+      "access": "free",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🔒",
+      "one_liner": "숨은 악성 지시로부터 내 정보 지키기"
     },
     {
       "id": "AI-2026-10-CAT10-006",
