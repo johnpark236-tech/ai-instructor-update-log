@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 48,
+  "count": 49,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-006",
+      "version": "v1.0",
+      "created_at": "2026-10-14 06:10 KST",
+      "checked": "2026-10-14",
+      "review_by": "2027-01-14",
+      "title": "사기 전에 입어 보는 AI — ChatGPT 가상 착용(Try on)으로 '쇼핑 한국어 착용 카드' 만들기",
+      "summary": "ChatGPT 쇼핑 결과의 'Try on' 버튼이나 대화 속 사진 요청으로, 옷·액세서리를 내 사진에 입혀 본 이미지를 만듭니다. 그 이미지로 쇼핑 대화 표현 카드를 만들고, 마음에 든 상품은 Library 폴더에 모읍니다.",
+      "tool": "ChatGPT",
+      "feature": "가상 착용(Virtual try-on) · 상품 즐겨찾기·폴더 저장 — New ways to shop in ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-01",
+      "categories": [
+        "CAT-04",
+        "CAT-10",
+        "CAT-11"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-MKT",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "'쇼핑 한국어 착용 카드' 1장 — 내 사진(또는 가상 인물)에 입힌 착용 이미지 2장 + 그 이미지를 보고 만든 초급 쇼핑 대화 6줄·표현 5개, 그리고 Library의 '쇼핑 수업' 폴더 1개",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "👗",
+      "one_liner": "옷을 사기 전에 내 사진에 먼저 입혀 보기"
+    },
     {
       "id": "AI-2026-10-CAT08-003",
       "version": "v1.0",

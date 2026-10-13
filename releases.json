@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 05:25 KST",
+  "updated_at": "2026-10-14 06:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -30,7 +30,7 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-14",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT04-006"
     },
     {
       "id": "muse-2026-10-12-muse-wonder",
@@ -1963,6 +1963,21 @@
       "source": {
         "title": "Google 블로그 – Gemini 4 Argon is now available for everyone",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": null
+    },
+    {
+      "id": "cursor-2026-10-13-origin-app-marketplace",
+      "date": "2026-10-13",
+      "tool": "Cursor",
+      "company": "Anysphere",
+      "type": "update",
+      "title": "Origin 앱 마켓플레이스 공개 등록",
+      "summary": "배포·CI·코드 리뷰·보안·모니터링 등 20여 개 앱과 연결되는 Origin 마켓플레이스에 개발 도구 팀이 직접 앱을 신청할 수 있게 됨 (심사 후 등록, 시연 영상 필수)",
+      "source": {
+        "title": "Cursor Changelog — Origin App Marketplace",
+        "url": "https://cursor.com/changelog/origin-app-marketplace"
       },
       "checked": "2026-10-14",
       "lesson_id": null
