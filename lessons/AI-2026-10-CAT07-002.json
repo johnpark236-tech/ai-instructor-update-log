@@ -6,10 +6,10 @@
   "checked": "2026-10-14",
   "review_by": "2027-01-14",
   "title": "말 한마디로 내 AI 작업 화면 바꾸기 — Claude Code Mods로 '나만의 화면 표시' 만들기",
-  "summary": "Claude Code에 '모드(Mods)'가 생겨, 화면에 내가 원하는 정보를 띄우고 나만의 /명령을 추가하고 위험한 명령을 막는 기능을 직접 붙일 수 있게 되었습니다. Claude에게 말로 부탁해 첫 모드를 만들고, 간단한 모드 하나는 직접 코드를 읽으며 원리를 익힙니다.",
+  "summary": "Claude Code에 '모드(Mods)'가 생겨, 화면에 내가 원하는 정보를 띄우고 나만의 /명령을 추가하고 위험한 명령을 막는 기능을 직접 붙일 수 있게 됨. Claude에게 말로 부탁해 첫 모드를 만들고, 간단한 모드 하나는 직접 코드를 읽으며 원리를 익힘",
   "glance": {
     "emoji": "🧩",
-    "one_liner": "말로 부탁하면 AI 작업 화면이 바뀐다",
+    "one_liner": "말로 부탁하면 AI 작업 화면이 바뀜",
     "cards": [
       {
         "icon": "🖼️",
@@ -33,7 +33,7 @@
       }
     ],
     "diagram": {
-      "title": "모드는 이렇게 작동해요",
+      "title": "모드는 이렇게 작동함",
       "nodes": [
         {
           "icon": "💬",
@@ -108,13 +108,13 @@
   ],
   "outcome": "① Claude에게 말로 부탁해 만든 '입력창 위 git 브랜치 표시' 모드 ② 도구 사용 횟수를 세고 /tally로 보여 주는 first-mod 1개",
   "objectives": [
-    "모드가 무엇이고 설정 훅·스킬·MCP 서버와 무엇이 다른지 설명할 수 있다.",
-    "Claude에게 말로 부탁해 모드를 만들고, /plugin에서 켜고 끌 수 있다.",
-    "claude plugin validate로 모드가 하는 일을 확인하고, 믿을 수 있는 모드만 설치하는 기준을 말할 수 있다."
+    "모드가 무엇이고 설정 훅·스킬·MCP 서버와 무엇이 다른지 설명할 수 있음",
+    "Claude에게 말로 부탁해 모드를 만들고, /plugin에서 켜고 끌 수 있음",
+    "claude plugin validate로 모드가 하는 일을 확인하고, 믿을 수 있는 모드만 설치하는 기준을 말할 수 있음"
   ],
   "pricing": {
     "access": "paid",
-    "summary": "Mods는 Claude Code의 기능이라 Claude Code가 포함된 유료 요금제(Pro·Max·Team·Enterprise) 또는 API로 써야 합니다. 무료 요금제에는 Claude Code가 없습니다.",
+    "summary": "Mods는 Claude Code의 기능이라 Claude Code가 포함된 유료 요금제(Pro·Max·Team·Enterprise) 또는 API로 써야 함. 무료 요금제에는 Claude Code가 없음",
     "plans": [
       {
         "name": "Free",
@@ -137,7 +137,7 @@
         "features": "관리자가 마켓플레이스·모드 허용 범위를 설정, 보안 기본 모드(sec-default)가 먼저 로드됨"
       }
     ],
-    "note": "가격은 claude.com 요금 페이지의 미국 달러 표기 기준이며 부가세가 포함되지 않을 수 있습니다. 모드가 모델을 호출하면 그만큼 내 사용량이 쓰입니다.",
+    "note": "가격은 claude.com 요금 페이지의 미국 달러 표기 기준이며 부가세가 포함되지 않을 수 있음. 모드가 모델을 호출하면 그만큼 내 사용량이 쓰임",
     "checked": "2026-10-14",
     "sources": [
       {
@@ -173,8 +173,8 @@
     }
   ],
   "theory": {
-    "definition": "모드(Mod)는 Claude Code 안에서 실행되는 작은 JavaScript·TypeScript 함수 묶음으로, 도구 호출·프롬프트·화면 그리기 같은 사건(이벤트)이 일어날 때 끼어들어 지켜보거나, 바꾸거나, 대신 처리하는 플러그인입니다.",
-    "analogy": "Claude Code가 '공장 출고 그대로의 자동차'라면, 모드는 '내 손으로 다는 블랙박스·내비·후방 경고음'입니다. 계기판에 보고 싶은 정보를 추가하고, 위험한 순간에 경고를 울리게 할 수 있습니다. 대신 차 전원을 쓰니 믿을 수 있는 부품만 달아야 합니다.",
+    "definition": "모드(Mod)는 Claude Code 안에서 실행되는 작은 JavaScript·TypeScript 함수 묶음으로, 도구 호출·프롬프트·화면 그리기 같은 사건(이벤트)이 일어날 때 끼어들어 지켜보거나, 바꾸거나, 대신 처리하는 플러그인임",
+    "analogy": "Claude Code가 '공장 출고 그대로의 자동차'라면, 모드는 '내 손으로 다는 블랙박스·내비·후방 경고음'임. 계기판에 보고 싶은 정보를 추가하고, 위험한 순간에 경고를 울리게 할 수 있음. 대신 차 전원을 쓰니 믿을 수 있는 부품만 달아야 함",
     "comparison": {
       "headers": [
         "구분",
@@ -216,16 +216,16 @@
     },
     "concepts": [
       {
-        "title": "사건(이벤트)에 끼어든다",
-        "body": "Claude가 도구를 쓰려 할 때(tool.call), 내가 /명령을 칠 때(command.run), 화면을 그릴 때(ui.render) 같은 사건마다 모드 함수가 먼저 실행됩니다. 함수는 그대로 지켜보거나(관찰), 내용을 바꾸거나(수정), 직접 답하고 원래 동작을 막을(응답) 수 있습니다."
+        "title": "사건(이벤트)에 끼어듬",
+        "body": "Claude가 도구를 쓰려 할 때(tool.call), 내가 /명령을 칠 때(command.run), 화면을 그릴 때(ui.render) 같은 사건마다 모드 함수가 먼저 실행됨. 함수는 그대로 지켜보거나(관찰), 내용을 바꾸거나(수정), 직접 답하고 원래 동작을 막을(응답) 수 있음"
       },
       {
         "title": "말로 만들고 바로 적용",
-        "body": "Claude Code 세션에서 '입력창 위에 현재 git 브랜치를 보여 주는 모드를 만들어 줘'처럼 말하면, 내장 스킬 plugin-authoring을 바탕으로 Claude가 모드를 씁니다. 처음 저장할 때 '이 세션에서 핫 리로드 켜기'를 승인하면, 턴이 끝날 때마다 바뀐 모드가 바로 다시 불러와집니다."
+        "body": "Claude Code 세션에서 '입력창 위에 현재 git 브랜치를 보여 주는 모드를 만들어 줘'처럼 말하면, 내장 스킬 plugin-authoring을 바탕으로 Claude가 모드를 씀. 처음 저장할 때 '이 세션에서 핫 리로드 켜기'를 승인하면, 턴이 끝날 때마다 바뀐 모드가 바로 다시 불러와짐"
       },
       {
         "title": "모드 = 플러그인",
-        "body": "모드는 plugin.json(설명서), hooks/hooks.json(코드 위치), register.js(코드) 세 파일로 된 플러그인입니다. 그래서 /plugin에서 켜고 끄고, --plugin-dir로 한 세션만 불러오고, 마켓플레이스로 다른 사람과 나눌 수 있습니다."
+        "body": "모드는 plugin.json(설명서), hooks/hooks.json(코드 위치), register.js(코드) 세 파일로 된 플러그인임. 그래서 /plugin에서 켜고 끄고, --plugin-dir로 한 세션만 불러오고, 마켓플레이스로 다른 사람과 나눌 수 있음"
       }
     ],
     "can": [
@@ -242,20 +242,20 @@
       "샌드박스 밖에서 실행됨 — 모드가 시작한 프로세스는 샌드박스가 막지 못함"
     ],
     "safety": [
-      "모드는 내 계정 권한으로 실행됩니다. 파일 읽기·쓰기, 프로그램 실행, 네트워크 요청, 환경 변수(API 키 포함) 읽기가 모두 가능하니 믿을 수 있는 작성자·마켓플레이스의 모드만 설치합니다.",
-      "설치 전에 claude plugin validate <폴더>로 모드가 끼어드는 사건(hooks)과 요청하는 동작(calls)을 먼저 확인합니다.",
-      "도구 호출을 자동 승인하는 모드는 내가 정한 ask 규칙이나 차단 훅을 건너뛸 수 있습니다. 승인 관련 모드는 특히 조심합니다.",
-      "문제가 생기면 claude --safe-mode로 이번 세션의 모드를 모두 끄거나, settings.json에 \"disableAllHooks\": true를 넣어 내가 설치한 모드를 전부 끕니다.",
-      "회사·기관 계정은 관리자 정책(allowManagedModsOnly, sec-default)이 우선합니다. 기관 보안 지침을 먼저 확인하세요."
+      "모드는 내 계정 권한으로 실행됨. 파일 읽기·쓰기, 프로그램 실행, 네트워크 요청, 환경 변수(API 키 포함) 읽기가 모두 가능하니 믿을 수 있는 작성자·마켓플레이스의 모드만 설치함",
+      "설치 전에 claude plugin validate <폴더>로 모드가 끼어드는 사건(hooks)과 요청하는 동작(calls)을 먼저 확인함",
+      "도구 호출을 자동 승인하는 모드는 내가 정한 ask 규칙이나 차단 훅을 건너뛸 수 있음. 승인 관련 모드는 특히 조심함",
+      "문제가 생기면 claude --safe-mode로 이번 세션의 모드를 모두 끄거나, settings.json에 \"disableAllHooks\": true를 넣어 내가 설치한 모드를 전부 끔",
+      "회사·기관 계정은 관리자 정책(allowManagedModsOnly, sec-default)이 우선함. 기관 보안 지침을 먼저 확인할 것"
     ]
   },
   "practice": {
-    "preview": "실습이 끝나면 터미널의 Claude Code 입력창 바로 위에 'main'처럼 현재 git 브랜치가 늘 보이고, Claude가 일하는 동안 스피너 옆에 'Thinking · tool calls: 3…'처럼 도구 사용 횟수가 올라갑니다. /tally를 치면 'Claude has made 3 tool calls since this mod loaded'가 출력됩니다.",
+    "preview": "실습이 끝나면 터미널의 Claude Code 입력창 바로 위에 'main'처럼 현재 git 브랜치가 늘 보이고, Claude가 일하는 동안 스피너 옆에 'Thinking · tool calls: 3…'처럼 도구 사용 횟수가 올라감. /tally를 치면 'Claude has made 3 tool calls since this mod loaded'가 출력됨",
     "follow": [
       {
         "title": "버전 확인",
         "minutes": 3,
-        "do": "터미널에서 Claude Code 버전을 확인합니다. 2.1.287보다 낮으면 업데이트합니다.",
+        "do": "터미널에서 Claude Code 버전을 확인함. 2.1.287보다 낮으면 업데이트함",
         "prompt": "claude --version",
         "expect": "2.1.287 이상 버전 번호가 보임",
         "note": ""
@@ -263,7 +263,7 @@
       {
         "title": "비포 — 지금 화면 보기",
         "minutes": 2,
-        "do": "실습 폴더에서 claude를 실행하고, 입력창 주변에 무엇이 보이는지 캡처해 둡니다.",
+        "do": "실습 폴더에서 claude를 실행하고, 입력창 주변에 무엇이 보이는지 캡처해 둠",
         "prompt": "claude",
         "expect": "기본 Claude Code 화면 (브랜치 표시 없음)",
         "note": ""
@@ -271,15 +271,15 @@
       {
         "title": "말로 첫 모드 만들기",
         "minutes": 10,
-        "do": "아래 문장을 그대로 입력합니다. Claude가 ~/.claude/dev-mods/<세션 ID>/ 아래에 모드 파일을 만들고, 파일마다 저장 승인을 물어봅니다. 첫 파일 저장 때 나오는 질문에서 'Enable for this session'(이 세션에서 핫 리로드 켜기)을 고릅니다.",
+        "do": "아래 문장을 그대로 입력함. Claude가 ~/.claude/dev-mods/<세션 ID>/ 아래에 모드 파일을 만들고, 파일마다 저장 승인을 물어봄. 첫 파일 저장 때 나오는 질문에서 'Enable for this session'(이 세션에서 핫 리로드 켜기)을 고름",
         "prompt": "make a mod that shows the current git branch above the prompt",
         "expect": "턴이 끝나면 입력창 위에 현재 브랜치 이름이 나타남",
-        "note": "[확인 필요] 승인 질문의 정확한 문구는 버전에 따라 다를 수 있습니다. 강의 전날 실제 화면을 캡처해 두세요."
+        "note": "[확인 필요] 승인 질문의 정확한 문구는 버전에 따라 다를 수 있음. 강의 전날 실제 화면을 캡처해 둘 것"
       },
       {
         "title": "로드됐는지 확인",
         "minutes": 5,
-        "do": "/plugin을 입력하고 Tab으로 Installed 탭으로 이동해 방금 만든 모드가 있는지 봅니다. 여기서 끄고 켤 수도 있습니다.",
+        "do": "/plugin을 입력하고 Tab으로 Installed 탭으로 이동해 방금 만든 모드가 있는지 봄. 여기서 끄고 켤 수도 있음",
         "prompt": "/plugin",
         "expect": "Installed 탭에 내 모드가 보임",
         "note": ""
@@ -289,7 +289,7 @@
       {
         "title": "말로 고쳐 보기",
         "minutes": 5,
-        "do": "모드가 마음에 들지 않는 점을 그대로 말합니다. 턴이 끝나면 바로 다시 불러와집니다.",
+        "do": "모드가 마음에 들지 않는 점을 그대로 말함. 턴이 끝나면 바로 다시 불러와짐",
         "prompt": "브랜치 이름 앞에 🌿 아이콘을 붙이고, 커밋하지 않은 변경이 있으면 끝에 * 를 붙여 줘",
         "expect": "입력창 위 표시가 '🌿 main *'처럼 바뀜",
         "note": ""
@@ -297,26 +297,26 @@
       {
         "title": "first-mod 직접 만들어 원리 익히기",
         "minutes": 15,
-        "do": "새 터미널에서 공식 튜토리얼의 3개 파일(first-mod/.claude-plugin/plugin.json, first-mod/hooks/hooks.json, first-mod/hooks/register.js)을 만들거나, Claude에게 공식 문서의 first-mod 예제를 그대로 만들어 달라고 합니다. 그다음 claude --plugin-dir ./first-mod 로 시작해 몇 가지 일을 시키고 /tally를 칩니다.",
+        "do": "새 터미널에서 공식 튜토리얼의 3개 파일(first-mod/.claude-plugin/plugin.json, first-mod/hooks/hooks.json, first-mod/hooks/register.js)을 만들거나, Claude에게 공식 문서의 first-mod 예제를 그대로 만들어 달라고 함. 그다음 claude --plugin-dir ./first-mod 로 시작해 몇 가지 일을 시키고 /tally를 침",
         "prompt": "claude --plugin-dir ./first-mod",
         "expect": "스피너 옆에 도구 사용 수가 올라가고, /tally가 횟수를 출력",
-        "note": "register.js 안의 ' · tool calls: '를 ' · tools used: '로 바꿔 저장하면 세션을 끄지 않아도 바로 반영됩니다(핫 리로드)."
+        "note": "register.js 안의 ' · tool calls: '를 ' · tools used: '로 바꿔 저장하면 세션을 끄지 않아도 바로 반영됨(핫 리로드)"
       },
       {
         "title": "설치 전 점검 습관 들이기",
         "minutes": 5,
-        "do": "셸에서 validate를 실행해, 모드가 끼어드는 사건(hooks)과 요청하는 동작(calls)을 읽어 봅니다.",
+        "do": "셸에서 validate를 실행해, 모드가 끼어드는 사건(hooks)과 요청하는 동작(calls)을 읽어 봄",
         "prompt": "claude plugin validate ./first-mod",
         "expect": "hooks: session.start, tool.call, command.run, ui.render / calls: $.command.register, $.ui.invalidate 와 '✔ Validation passed'",
-        "note": "남이 만든 모드는 설치 전에 반드시 이 단계를 거칩니다."
+        "note": "남이 만든 모드는 설치 전에 반드시 이 단계를 거침"
       },
       {
         "title": "계속 쓰려면 폴더 옮기기",
         "minutes": 5,
-        "do": "Claude가 만든 git 브랜치 모드 폴더를 ~/mods/git-branch 처럼 내 폴더로 복사하고, 다음부터 claude --plugin-dir ~/mods/git-branch 로 불러옵니다.",
+        "do": "Claude가 만든 git 브랜치 모드 폴더를 ~/mods/git-branch 처럼 내 폴더로 복사하고, 다음부터 claude --plugin-dir ~/mods/git-branch 로 불러옴",
         "prompt": "",
         "expect": "🎉 다음 세션에서도 내 모드가 동작",
-        "note": "세션 모드 폴더는 일정 기간이 지나면 자동으로 지워집니다."
+        "note": "세션 모드 폴더는 일정 기간이 지나면 자동으로 지워짐"
       }
     ],
     "challenges": [
@@ -335,7 +335,7 @@
     ]
   },
   "wrap": {
-    "share": "비포(기본 화면)와 애프터(브랜치 표시 + 도구 사용 수) 캡처를 나란히 보여 주고, '내가 만들고 싶은 모드 1개'와 'validate에서 확인한 hooks·calls'를 발표합니다.",
+    "share": "비포(기본 화면)와 애프터(브랜치 표시 + 도구 사용 수) 캡처를 나란히 보여 주고, '내가 만들고 싶은 모드 1개'와 'validate에서 확인한 hooks·calls'를 발표함",
     "quiz": [
       {
         "q": "Mods를 쓰려면 필요한 Claude Code 최소 버전은?",
@@ -346,7 +346,7 @@
           "3.0.0"
         ],
         "answer": 2,
-        "explain": "Mods는 v2.1.287 이상에서 기본으로 켜져 있습니다. claude --version으로 확인합니다."
+        "explain": "Mods는 v2.1.287 이상에서 기본으로 켜져 있음. claude --version으로 확인함"
       },
       {
         "q": "남이 만든 모드를 설치하기 전에 하는 일로 가장 알맞은 것은?",
@@ -357,7 +357,7 @@
           "API 키를 지운다"
         ],
         "answer": 1,
-        "explain": "validate는 코드를 실행하지 않고 모드가 끼어드는 사건과 요청하는 동작을 보여 줍니다."
+        "explain": "validate는 코드를 실행하지 않고 모드가 끼어드는 사건과 요청하는 동작을 보여 줌"
       },
       {
         "q": "모드가 바꿀 수 없는 것은?",
@@ -368,7 +368,7 @@
           "나만의 /명령"
         ],
         "answer": 2,
-        "explain": "모드는 Claude Code 화면 대부분을 바꿀 수 있지만, 권한 확인 창이 보여 주는 내용은 바꿀 수 없습니다."
+        "explain": "모드는 Claude Code 화면 대부분을 바꿀 수 있지만, 권한 확인 창이 보여 주는 내용은 바꿀 수 없음"
       }
     ],
     "rubric": [
@@ -496,63 +496,63 @@
     "faq": [
       {
         "q": "코딩을 몰라도 모드를 만들 수 있나요?",
-        "a": "네. 원하는 기능을 말로 설명하면 Claude가 내장 plugin-authoring 스킬로 모드를 씁니다. 다만 결과를 확인하고 승인하는 것은 내 몫입니다."
+        "a": "네. 원하는 기능을 말로 설명하면 Claude가 내장 plugin-authoring 스킬로 모드를 씀. 다만 결과를 확인하고 승인하는 것은 내 몫임"
       },
       {
         "q": "영상에서 본 '캐시 만료 막대'는 기본 기능인가요?",
-        "a": "아닙니다. 개인 개발자가 모드로 만들어 공개한 예시입니다. 공식 샘플은 token-weather(컨텍스트 예보), blast-radius(위험 명령 확인), replay-theater(/replay) 등이 있습니다."
+        "a": "아님. 개인 개발자가 모드로 만들어 공개한 예시임. 공식 샘플은 token-weather(컨텍스트 예보), blast-radius(위험 명령 확인), replay-theater(/replay) 등이 있음"
       },
       {
         "q": "모드와 기존 훅(hooks)은 뭐가 다른가요?",
-        "a": "설정 훅은 바깥에서 셸 명령 등을 실행하고, 모드는 Claude Code 안에서 함수로 돌아 화면을 그리거나 사건을 바꿀 수 있습니다."
+        "a": "설정 훅은 바깥에서 셸 명령 등을 실행하고, 모드는 Claude Code 안에서 함수로 돌아 화면을 그리거나 사건을 바꿀 수 있음"
       },
       {
         "q": "모드를 다 끄고 싶으면요?",
-        "a": "이번 세션만이면 claude --safe-mode, 계속이면 ~/.claude/settings.json에 \"disableAllHooks\": true. 하나만이면 /plugin에서 끄면 됩니다."
+        "a": "이번 세션만이면 claude --safe-mode, 계속이면 ~/.claude/settings.json에 \"disableAllHooks\": true. 하나만이면 /plugin에서 끄면 됨"
       },
       {
         "q": "무료 계정으로도 되나요?",
-        "a": "안 됩니다. Claude Code는 Pro 이상 유료 요금제나 API로 사용합니다."
+        "a": "안 됨. Claude Code는 Pro 이상 유료 요금제나 API로 사용함"
       },
       {
         "q": "만든 모드를 동료와 나눌 수 있나요?",
-        "a": "모드는 플러그인이라 폴더나 zip으로 보내거나, 팀 마켓플레이스·Anthropic 디렉터리에 올릴 수 있습니다. 이름이 claude-로 시작하면 validate에서 거부됩니다."
+        "a": "모드는 플러그인이라 폴더나 zip으로 보내거나, 팀 마켓플레이스·Anthropic 디렉터리에 올릴 수 있음. 이름이 claude-로 시작하면 validate에서 거부됨"
       }
     ],
     "level_guide": [
       {
         "level": "🔴 고급 학습자(개발자)",
-        "guide": "first-mod를 직접 쓰고 claude plugin test로 테스트까지 작성합니다. 도전과제 ⭐⭐⭐를 필수로 합니다."
+        "guide": "first-mod를 직접 쓰고 claude plugin test로 테스트까지 작성함. 도전과제 ⭐⭐⭐를 필수로 함"
       },
       {
         "level": "🟣 중급강사",
-        "guide": "같은 실습을 3가지 직업군 모드로 변형해 보세요 — 개발자: 테스트 실패 수 표시, 데이터 분석가: 실행한 쿼리 수 표시, 강사: 수업 타이머 띠."
+        "guide": "같은 실습을 3가지 직업군 모드로 변형해 볼 것 — 개발자: 테스트 실패 수 표시, 데이터 분석가: 실행한 쿼리 수 표시, 강사: 수업 타이머 띠"
       },
       {
         "level": "⚫ 고급강사",
-        "guide": "4차시 'Claude Code 맞춤화' 과정에 스킬 → 설정 훅 → MCP → 모드 순서로 편입하고, 보안(권한 범위·validate·관리자 정책)을 독립 차시로 설계합니다."
+        "guide": "4차시 'Claude Code 맞춤화' 과정에 스킬 → 설정 훅 → MCP → 모드 순서로 편입하고, 보안(권한 범위·validate·관리자 정책)을 독립 차시로 설계함"
       },
       {
         "level": "한국어 학습자·다문화 대상 강사",
-        "guide": "학습자 실습보다는 강사 도구로 활용합니다. 예: 교안 폴더에서 Claude Code를 쓸 때 '오늘 만든 문항 수'를 띠로 보여 주는 모드. 용어는 '모드=추가 부품', '훅=끼어드는 순간'처럼 쉬운 말로 바꿔 설명합니다."
+        "guide": "학습자 실습보다는 강사 도구로 활용함. 예: 교안 폴더에서 Claude Code를 쓸 때 '오늘 만든 문항 수'를 띠로 보여 주는 모드. 용어는 '모드=추가 부품', '훅=끼어드는 순간'처럼 쉬운 말로 바꿔 설명함"
       }
     ],
     "pro_points": [
-      "모드는 '설정 파일'에서 '코드로 하는 사용자 정의'로 넘어간 변화입니다. 편의성과 함께 공급망 보안(남이 만든 코드 실행) 이슈가 커졌다는 점을 반드시 함께 다루세요.",
-      "Anthropic은 /diff 같은 자체 기능도 모드로 만들고 있습니다. 내장 모드 소스(anthropics/claude-code의 mods 폴더)를 교재로 쓰면 좋은 코드 예시가 됩니다."
+      "모드는 '설정 파일'에서 '코드로 하는 사용자 정의'로 넘어간 변화임. 편의성과 함께 공급망 보안(남이 만든 코드 실행) 이슈가 커졌다는 점을 반드시 함께 다룰 것",
+      "Anthropic은 /diff 같은 자체 기능도 모드로 만들고 있음. 내장 모드 소스(anthropics/claude-code의 mods 폴더)를 교재로 쓰면 좋은 코드 예시가 됨"
     ],
     "day_before": [
-      "강사 PC의 Claude Code가 v2.1.287 이상인지 확인했다",
-      "'make a mod that shows the current git branch above the prompt'를 미리 실행해 승인 질문 화면을 캡처했다",
-      "first-mod 3개 파일과 validate 결과를 미리 준비했다 (Plan B)",
-      "수강생에게 유료 요금제·설치 필요 사항을 사전 안내했다",
-      "Claude Code 변경 기록(changelog)에서 10월 8일 이후 모드 관련 변경을 확인했다"
+      "강사 PC의 Claude Code가 v2.1.287 이상인지 확인함",
+      "'make a mod that shows the current git branch above the prompt'를 미리 실행해 승인 질문 화면을 캡처함",
+      "first-mod 3개 파일과 validate 결과를 미리 준비함 (Plan B)",
+      "수강생에게 유료 요금제·설치 필요 사항을 사전 안내함",
+      "Claude Code 변경 기록(changelog)에서 10월 8일 이후 모드 관련 변경을 확인함"
     ]
   },
   "verification": [
-    "[확인 필요] 핫 리로드 승인 질문과 /plugin 화면 문구는 Claude Code 버전에 따라 다를 수 있습니다. 강의 전 실제 화면으로 확인하세요.",
-    "영상 속 '캐시 만료 막대'는 개인 개발자(X @dani_avila7)가 공개한 커뮤니티 모드로, 공식 기본 기능이 아닙니다. 교안의 실습은 공식 문서 예제만 사용했습니다.",
-    "모드의 이벤트·메서드 이름은 버전마다 바뀔 수 있어, 공식 문서는 모드 폴더에 생성되는 .d.ts 타입 파일을 가장 정확한 기준으로 안내합니다."
+    "[확인 필요] 핫 리로드 승인 질문과 /plugin 화면 문구는 Claude Code 버전에 따라 다를 수 있음. 강의 전 실제 화면으로 확인할 것",
+    "영상 속 '캐시 만료 막대'는 개인 개발자(X @dani_avila7)가 공개한 커뮤니티 모드로, 공식 기본 기능이 아님. 교안의 실습은 공식 문서 예제만 사용함",
+    "모드의 이벤트·메서드 이름은 버전마다 바뀔 수 있어, 공식 문서는 모드 폴더에 생성되는 .d.ts 타입 파일을 가장 정확한 기준으로 안내함"
   ],
   "sources": [
     {

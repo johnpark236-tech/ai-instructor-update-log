@@ -9,6 +9,9 @@ import pathlib
 import re
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import style_terse  # noqa: E402  문체 규칙(개조식) 검사
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LESSON_DIR = ROOT / "lessons"
 INDEX = ROOT / "lessons.json"
@@ -184,6 +187,10 @@ def main():
             errors.append(f"{path.name}: JSON 오류 {exc}")
             continue
         errs = check_lesson(path, d)
+        style_terse.walk(d, (), lambda s, p: (errs.append(
+            f"{path.name}: 문체 — {'.'.join(map(str, p))}: '…{s[-30:]}' → 개조식(~함·~임·~됨)으로 "
+            f"(python scripts/style_terse.py --fix {path.relative_to(ROOT)})")
+            if style_terse.remains(s) else None) or s)
         if errs:
             errors.extend(errs)
             continue
@@ -205,7 +212,7 @@ def main():
         print("\n".join(errors))
         sys.exit(1)
     lessons.sort(key=lambda x: (x["created_at"], x["id"]), reverse=True)
-    INDEX.write_text(json.dumps({"standard": "v2.0", "count": len(lessons), "lessons": lessons},
+    INDEX.write_text(json.dumps({"standard": "v2.3", "count": len(lessons), "lessons": lessons},
                                 ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     items = rdata.get("items", [])
     print(f"lessons.json 갱신: 교안 {len(lessons)}개 / 릴리즈 노트 {len(items)}건 "
