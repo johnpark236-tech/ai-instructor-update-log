@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 06:10 KST",
+  "updated_at": "2026-10-14 07:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1981,6 +1981,51 @@
       },
       "checked": "2026-10-14",
       "lesson_id": null
+    },
+    {
+      "id": "gemininotebook-2025-07-29-video-overviews",
+      "date": "2025-07-29",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "동영상 개요(Video Overviews) 첫 공개",
+      "summary": "노트북 자료로 그림·도표가 들어간 내레이션 해설 영상을 만드는 기능, 처음엔 영어만 지원하고 스튜디오 화면도 함께 개편",
+      "source": {
+        "title": "Google 블로그 – What's new in NotebookLM: Video Overviews and an upgraded Studio",
+        "url": "https://blog.google/technology/google-labs/notebooklm-video-overviews-studio-upgrades/"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT05-008"
+    },
+    {
+      "id": "gemininotebook-2025-10-13-video-overviews-styles",
+      "date": "2025-10-13",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "동영상 개요 그림체 6종·설명형/짧은 형식",
+      "summary": "Nano Banana로 그림을 그려 수채화·애니메 등 그림체를 고르고, 자세한 설명형과 짧게 요약하는 형식 중 선택 가능",
+      "source": {
+        "title": "Google 블로그 – Video Overviews on NotebookLM get a major upgrade with Nano Banana",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/video-overviews-nano-banana/"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT05-008"
+    },
+    {
+      "id": "gemininotebook-2026-03-04-cinematic-video-overviews",
+      "date": "2026-03-04",
+      "tool": "Gemini Notebook",
+      "company": "Google",
+      "type": "update",
+      "title": "시네마틱 동영상 개요",
+      "summary": "Veo 등 여러 모델로 애니메이션 중심의 몰입형 해설 영상을 만드는 새 형식, 처음엔 Ultra 구독자·18세 이상·영어만",
+      "source": {
+        "title": "Google 블로그 – Generate your own Cinematic Video Overviews in NotebookLM",
+        "url": "https://blog.google/innovation-and-ai/products/notebooklm/generate-your-own-cinematic-video-overviews-in-notebooklm/"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT05-008"
     }
   ]
 }

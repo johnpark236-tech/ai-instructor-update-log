@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 49,
+  "count": 50,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-008",
+      "version": "v1.0",
+      "created_at": "2026-10-14 07:15 KST",
+      "checked": "2026-10-14",
+      "review_by": "2027-01-14",
+      "title": "수업 글 한 편으로 한국어 해설 영상 만들기 — Gemini Notebook 동영상 개요(Video Overview)로 형식·그림체·초점을 골라 영상 만들고 내려받기",
+      "summary": "Gemini Notebook(구 NotebookLM)에 내 수업 글을 넣고 스튜디오의 동영상 개요를 누르면 AI가 그림과 한국어 내레이션이 들어간 해설 영상을 만들어 줍니다. 형식(설명형·짧은 영상)·언어·그림체·초점 프롬프트를 골라 수업 도입·복습용 영상 1편을 완성하고 내려받습니다.",
+      "tool": "Gemini Notebook (구 NotebookLM)",
+      "feature": "동영상 개요(Video Overview) — 설명형(Explainer)·짧은 영상(Short)·시네마틱(Cinematic) 형식, 그림체(Visual Style), 초점 프롬프트(Steering prompt)",
+      "company": "Google",
+      "type": "update",
+      "released": "2025-07-29",
+      "categories": [
+        "CAT-05",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-GLB",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 수업 글로 만든 한국어 해설 영상 1편(내려받은 파일) ② 초점 프롬프트를 바꿔 다시 만든 '맞춤판'과 비포/애프터 비교 메모",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎬",
+      "one_liner": "수업 글 한 편이 해설 영상으로 변신"
+    },
     {
       "id": "AI-2026-10-CAT04-006",
       "version": "v1.0",
