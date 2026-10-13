@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 18:16 KST",
+  "updated_at": "2026-10-13 19:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1725,7 +1725,7 @@
         "url": "https://manus.im/blog/introducing-video-editor"
       },
       "checked": "2026-10-13",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT05-006"
     },
     {
       "id": "claude-2026-04-28-adobe-creativity-connector",
@@ -1741,6 +1741,21 @@
       },
       "checked": "2026-10-13",
       "lesson_id": "AI-2026-10-CAT09-003"
+    },
+    {
+      "id": "gemini-2026-09-30-gemini-4-argon",
+      "date": "2026-09-30",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 4 Argon 모델 발표",
+      "summary": "코딩·기업 문서 업무·보안 방어용 최상위 모델로, 지금은 보안 방어 기관(Fairwind 프로그램)만 쓰고 유료 API·Google AI Ultra부터 순차 제공 예정",
+      "source": {
+        "title": "Google 블로그 – Gemini 4 Argon: our next era of frontier intelligence",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      },
+      "checked": "2026-10-13",
+      "lesson_id": null
     }
   ]
 }
