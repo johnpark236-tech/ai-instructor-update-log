@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 12:20 KST",
+  "updated_at": "2026-10-13 13:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -330,6 +330,21 @@
         "url": "https://updates.midjourney.com/alpha-changelog-10-1-26/"
       },
       "checked": "2026-10-11",
+      "lesson_id": null
+    },
+    {
+      "id": "runway-2026-10-02-ideogram-4-5-mcp",
+      "date": "2026-10-02",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "Runway MCP에 Ideogram 4.5",
+      "summary": "Runway MCP 작업 흐름 안에서 Ideogram 4.5 모델로 이미지를 만들 수 있게 됨 (유료 요금제)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/changelog"
+      },
+      "checked": "2026-10-13",
       "lesson_id": null
     },
     {
@@ -1164,13 +1179,13 @@
       "company": "OpenAI",
       "type": "update",
       "title": "인터랙티브 퀴즈",
-      "summary": "대화 안에서 바로 답을 고르는 인터랙티브 퀴즈 도입",
+      "summary": "주제를 말하고 퀴즈를 내 달라고 하면 대화 안에서 바로 답을 골라 푸는 퀴즈 (모든 개인 요금제·Edu, 웹·모바일)",
       "source": {
         "title": "ChatGPT 릴리스 노트",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-13",
+      "lesson_id": "AI-2026-10-CAT02-003"
     },
     {
       "id": "chatgpt-2026-08-10-restaurant-reservations",

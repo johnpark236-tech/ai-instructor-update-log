@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 36,
+  "count": 37,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT02-003",
+      "version": "v1.0",
+      "created_at": "2026-10-13 13:10 KST",
+      "checked": "2026-10-13",
+      "review_by": "2027-01-13",
+      "title": "대화창에서 바로 푸는 단원 확인 퀴즈 — ChatGPT 인터랙티브 퀴즈로 수업 퀴즈 10문항과 오답 복습표 만들기",
+      "summary": "ChatGPT에게 '퀴즈 내 줘'라고 하면 대화 안에서 바로 답을 고르는 인터랙티브 퀴즈가 나옵니다. 무료 계정으로 퀴즈를 잘 요청하는 문장(대상·범위·문항 수·난이도·해설)을 익히고, 내 수업 메모로 단원 확인 퀴즈 10문항을 만든 뒤 틀린 문제만 모은 오답 복습표까지 완성합니다.",
+      "tool": "ChatGPT",
+      "feature": "인터랙티브 퀴즈(Interactive quizzes) — 대화 안에서 답을 고르는 퀴즈",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-08-14",
+      "categories": [
+        "CAT-02",
+        "CAT-10",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-STU",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 수업 메모로 만든 단원 확인 퀴즈 10문항(대화 안에서 풀 수 있는 형태) ② 틀린 문제만 모은 '오답 복습표' 1장 ③ 다음에도 그대로 쓰는 '퀴즈 요청 문장' 템플릿 1개",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎯",
+      "one_liner": "말 한마디로 대화창 속 퀴즈 완성"
+    },
     {
       "id": "AI-2026-10-CAT05-005",
       "version": "v1.0",
