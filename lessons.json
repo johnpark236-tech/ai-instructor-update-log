@@ -1,7 +1,44 @@
 {
   "standard": "v2.0",
-  "count": 42,
+  "count": 43,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-002",
+      "version": "v1.0",
+      "created_at": "2026-10-14 01:20 KST",
+      "checked": "2026-10-14",
+      "review_by": "2027-01-14",
+      "title": "말 한마디로 내 AI 작업 화면 바꾸기 — Claude Code Mods로 '나만의 화면 표시' 만들기",
+      "summary": "Claude Code에 '모드(Mods)'가 생겨, 화면에 내가 원하는 정보를 띄우고 나만의 /명령을 추가하고 위험한 명령을 막는 기능을 직접 붙일 수 있게 되었습니다. Claude에게 말로 부탁해 첫 모드를 만들고, 간단한 모드 하나는 직접 코드를 읽으며 원리를 익힙니다.",
+      "tool": "Claude Code",
+      "feature": "Mods (모드) — 플러그인 기반 화면·명령·도구 호출 사용자 정의",
+      "company": "Anthropic",
+      "type": "update",
+      "released": "2026-10-01",
+      "categories": [
+        "CAT-07",
+        "CAT-08",
+        "CAT-09"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-DAT"
+      ],
+      "learner_levels": [
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① Claude에게 말로 부탁해 만든 '입력창 위 git 브랜치 표시' 모드 ② 도구 사용 횟수를 세고 /tally로 보여 주는 first-mod 1개",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "말로 부탁하면 AI 작업 화면이 바뀐다"
+    },
     {
       "id": "AI-2026-10-CAT10-006",
       "version": "v1.0",
