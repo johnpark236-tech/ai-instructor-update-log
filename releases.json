@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 02:04 KST",
+  "updated_at": "2026-10-14 03:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -311,11 +311,11 @@
       "title": "Agent의 Seedance 2.5 초안 모드",
       "summary": "Runway Agent가 480p 초안 영상을 빠르게 만든 뒤 화질 보정을 더하는 초안 모드, 자동 제안·켜고 끄기 가능 (전 요금제)",
       "source": {
-        "title": "Runway 체인지로그",
-        "url": "https://runway.com/ko/changelog"
+        "title": "Runway 체인지로그 – Seedance 2.5 Draft Mode in Agent",
+        "url": "https://runway.com/en/changelog"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-14",
+      "lesson_id": "AI-2026-10-CAT05-007"
     },
     {
       "id": "runway-2026-10-02-ideogram-4-5-mcp",
@@ -1858,6 +1858,51 @@
       "source": {
         "title": "Google 블로그 – Gemini 4 Argon is now available in the Gemini app",
         "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": null
+    },
+    {
+      "id": "runway-2026-08-11-seedance-2-5",
+      "date": "2026-08-11",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "Runway MCP에 Seedance 2.5",
+      "summary": "ByteDance의 Seedance 2.5를 Runway MCP에서 먼저 제공, 오디오가 포함된 최대 30초 영상과 처음·끝 프레임·참조 이미지 지정 (유료 요금제)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/en/changelog"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": null
+    },
+    {
+      "id": "runway-2026-08-15-seedance-2-5-1080p",
+      "date": "2026-08-15",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "Seedance 2.5 1080p 전 화면 확대",
+      "summary": "Seedance 2.5로 1080p 영상을 Tools·Workflows·Agent 등 모든 화면에서 만들 수 있게 됨 (유료 요금제)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/en/changelog"
+      },
+      "checked": "2026-10-14",
+      "lesson_id": null
+    },
+    {
+      "id": "runway-2026-09-17-enhance-frame-rate",
+      "date": "2026-09-17",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "프레임 수 늘리기(Enhance Frame Rate)",
+      "summary": "영상을 25·30·48·60·120fps 등으로 바꿔 부드럽게 만드는 기능, 최대 4K·5분 길이 (Max 이상)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/en/changelog"
       },
       "checked": "2026-10-14",
       "lesson_id": null

@@ -1,7 +1,45 @@
 {
   "standard": "v2.0",
-  "count": 45,
+  "count": 46,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-007",
+      "version": "v1.0",
+      "created_at": "2026-10-14 03:15 KST",
+      "checked": "2026-10-14",
+      "review_by": "2027-01-14",
+      "title": "크레딧 아끼며 AI 영상 만들기 — Runway Seedance 2.5 초안(Draft) 모드로 5초 '우리 한국어 교실' 소개 영상 완성하기",
+      "summary": "Runway Agent가 Seedance 2.5로 영상을 만들 때 480p 초안부터 빠르게 뽑아 주는 초안 모드가 생겼습니다. 싼 초안으로 방향을 확인한 뒤 마음에 드는 것만 1080p로 키워, 5초 교실 소개 영상을 완성합니다.",
+      "tool": "Runway",
+      "feature": "Seedance 2.5 초안 모드(Draft Mode) — Agent 자동 제안·Tools 초안·초안 향상(Enhance Draft)",
+      "company": "Runway",
+      "type": "update",
+      "released": "2026-10-02",
+      "categories": [
+        "CAT-05",
+        "CAT-11"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-CRE",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 5초짜리 '우리 한국어 교실' 소개 영상 1편(1080p MP4) ② 초안 2개와 최종본의 크레딧·결과를 비교한 '초안 기록표' 1장",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎬",
+      "one_liner": "싸게 초안 보고, 좋으면 고화질로"
+    },
     {
       "id": "AI-2026-10-CAT03-006",
       "version": "v1.0",
