@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 52,
+  "count": 53,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-003",
+      "version": "v1.0",
+      "created_at": "2026-10-15 19:10 KST",
+      "checked": "2026-10-15",
+      "review_by": "2027-01-15",
+      "title": "폰으로 내 컴퓨터의 코딩 에이전트 지휘하기 — Cursor 원격 조작(Remote Control)으로 README 완성",
+      "summary": "내 컴퓨터에서 돌아가는 Cursor 에이전트를 아이폰 Cursor 앱에서 보고 답할 수 있게 됨(2026-10-06). 코드·비밀값은 컴퓨터에 그대로 두고, 폰으로 진행 상황 확인 + 후속 지시 + 변경 내용(diff) 검토까지 진행",
+      "tool": "Cursor",
+      "feature": "원격 조작(Remote Control) — iOS 앱에서 내 컴퓨터의 로컬 에이전트 보기·답하기",
+      "company": "Anysphere",
+      "type": "update",
+      "released": "2026-10-06",
+      "categories": [
+        "CAT-07",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-BIZ",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 폰에서 지시해 내 컴퓨터 에이전트가 완성한 README.md 1개 ② 폰 화면의 에이전트 목록·diff 캡처 1장 (비포/애프터 비교용)",
+      "access": "paid",
+      "total_minutes": 72,
+      "notice": "",
+      "emoji": "📱",
+      "one_liner": "폰에서 내 PC 코딩 에이전트에 지시"
+    },
     {
       "id": "AI-2026-10-CAT08-005",
       "version": "v1.0",

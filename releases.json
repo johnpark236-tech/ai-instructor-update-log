@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 18:10 KST",
+  "updated_at": "2026-10-15 19:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -222,10 +222,10 @@
       "summary": "내 컴퓨터에서 돌아가는 Cursor 에이전트를 아이폰 앱으로 보고 답할 수 있게 됨 (Enterprise 외 기본 켜짐)",
       "source": {
         "title": "Cursor Changelog – Remote control for local agents",
-        "url": "https://cursor.com/changelog"
+        "url": "https://cursor.com/changelog/remote-control-local-agents"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-15",
+      "lesson_id": "AI-2026-10-CAT07-003"
     },
     {
       "id": "copilot-2026-10-06-ppt-skills-search-chat",
