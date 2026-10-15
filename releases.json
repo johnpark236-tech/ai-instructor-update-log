@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 04:10 KST",
+  "updated_at": "2026-10-16 05:30 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -356,11 +356,11 @@
       "title": "Runway MCP에 Ideogram 4.5",
       "summary": "Runway MCP 작업 흐름 안에서 Ideogram 4.5 모델로 이미지를 만들 수 있게 됨 (유료 요금제)",
       "source": {
-        "title": "Runway 체인지로그",
+        "title": "Runway 체인지로그 – Ideogram 4.5 (Runway MCP)",
         "url": "https://runway.com/changelog"
       },
-      "checked": "2026-10-13",
-      "lesson_id": null
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT04-008"
     },
     {
       "id": "midjourney-2026-10-02-folder-defaults",
@@ -2071,6 +2071,21 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT01-010"
+    },
+    {
+      "id": "runway-2026-09-22-brand-kits-mcp",
+      "date": "2026-09-22",
+      "tool": "Runway",
+      "company": "Runway",
+      "type": "update",
+      "title": "Runway MCP에서 Brand Kits 참조",
+      "summary": "Runway MCP 에이전트가 내 Brand Kits를 찾아 로고·자료를 참조로 씀 (읽기 전용, 만들기·수정은 Runway 웹에서, 전 요금제)",
+      "source": {
+        "title": "Runway 체인지로그",
+        "url": "https://runway.com/changelog"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT04-008"
     }
   ]
 }
