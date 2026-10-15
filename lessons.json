@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 58,
+  "count": 59,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-006",
+      "version": "v1.0",
+      "created_at": "2026-10-16 01:20 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "회의 끝나면 후속 메일 초안과 할 일 목록이 저절로 — Google Meet 회의 후 다음 단계(루틴)로 '회의 뒷정리 자동화' 만들기",
+      "summary": "Google Meet 회의 후 화면에 Gemini·Workspace Studio 기반 '다음 단계(next steps)' 루틴이 생김. 한 번 켜 두면 회의가 끝날 때마다 Gmail 후속 메일 초안 작성 + Google Tasks 할 일 추가를 자동 처리. 'Take notes for me'(회의록 작성)가 켜져 있어야 동작",
+      "tool": "Google Meet",
+      "feature": "회의 후 다음 단계(Post-meeting next steps) — 회의 후 화면의 루틴(Routines for this meeting): Gmail 후속 메일 초안·Google Tasks 할 일 추가",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-12",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 15분 모의 회의의 Gemini 회의록 1개 ② 회의 후 루틴으로 만들어진 Gmail 후속 메일 초안 1개 + Google Tasks 할 일 목록 ③ 루틴 켜기 전·후 정리 시간 비교표 1장",
+      "access": "paid",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🗓️",
+      "one_liner": "회의 끝나면 메일 초안·할 일이 자동"
+    },
     {
       "id": "AI-2026-10-CAT07-005",
       "version": "v1.0",

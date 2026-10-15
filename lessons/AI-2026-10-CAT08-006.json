@@ -1,0 +1,581 @@
+{
+  "id": "AI-2026-10-CAT08-006",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 01:20 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "회의 끝나면 후속 메일 초안과 할 일 목록이 저절로 — Google Meet 회의 후 다음 단계(루틴)로 '회의 뒷정리 자동화' 만들기",
+  "summary": "Google Meet 회의 후 화면에 Gemini·Workspace Studio 기반 '다음 단계(next steps)' 루틴이 생김. 한 번 켜 두면 회의가 끝날 때마다 Gmail 후속 메일 초안 작성 + Google Tasks 할 일 추가를 자동 처리. 'Take notes for me'(회의록 작성)가 켜져 있어야 동작",
+  "glance": {
+    "emoji": "🗓️",
+    "one_liner": "회의 끝나면 메일 초안·할 일이 자동",
+    "cards": [
+      {
+        "icon": "✉️",
+        "title": "후속 메일 초안",
+        "text": "회의 내용으로 Gmail 초안 작성"
+      },
+      {
+        "icon": "✅",
+        "title": "할 일 자동 추가",
+        "text": "실행 항목을 Google Tasks로"
+      },
+      {
+        "icon": "👆",
+        "title": "탭 한 번 켜기",
+        "text": "회의 후 화면에서 바로 켜기"
+      },
+      {
+        "icon": "🔁",
+        "title": "반복 회의 적용",
+        "text": "모든 회의에 켜 둘 수도 있음"
+      }
+    ],
+    "diagram": {
+      "title": "회의 뒷정리는 이렇게 돌아감",
+      "nodes": [
+        {
+          "icon": "🎥",
+          "label": "Meet 회의"
+        },
+        {
+          "icon": "📝",
+          "label": "회의록 작성"
+        },
+        {
+          "icon": "🖥️",
+          "label": "회의 후 화면"
+        },
+        {
+          "icon": "⚙️",
+          "label": "루틴 켜기"
+        },
+        {
+          "icon": "📬",
+          "label": "초안·할 일"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "회의 뒤 손 정리",
+        "text": "회의록 다시 읽고 메일 쓰고 할 일 옮기느라 20분"
+      },
+      "after": {
+        "label": "루틴이 먼저 정리",
+        "text": "회의 끝나면 메일 초안·할 일 목록이 기다림, 검토만 함"
+      }
+    },
+    "cautions": [
+      "회의록 켜기 전 참석자에게 알림",
+      "메일 초안은 읽고 고친 뒤 발송",
+      "민감 회의는 회의록·루틴 끄기"
+    ]
+  },
+  "tool": "Google Meet",
+  "feature": "회의 후 다음 단계(Post-meeting next steps) — 회의 후 화면의 루틴(Routines for this meeting): Gmail 후속 메일 초안·Google Tasks 할 일 추가",
+  "company": "Google",
+  "type": "update",
+  "released": "2026-10-12",
+  "categories": [
+    "CAT-08",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-BIZ",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 20,
+    "practice": 35,
+    "wrap": 5
+  },
+  "prerequisites": [
+    "Google Workspace 업무·학교 계정 — Business Standard·Plus, Enterprise Standard·Plus, 또는 Google AI Pro for Education 부가기능 (Business Starter·개인 Gmail은 대상 아님)",
+    "관리자가 'Take notes for me'와 Workspace Studio를 꺼 두지 않은 상태 (기본값은 켜짐)",
+    "PC 웹브라우저(meet.google.com) + 마이크 — 회의 주최자 계정으로 실습",
+    "실습 짝꿍 1명(같은 기관 계정 권장) 또는 15분 이상 진행할 모의 회의 대본",
+    "Gmail·Google Tasks를 열 수 있는 같은 계정"
+  ],
+  "outcome": "① 15분 모의 회의의 Gemini 회의록 1개 ② 회의 후 루틴으로 만들어진 Gmail 후속 메일 초안 1개 + Google Tasks 할 일 목록 ③ 루틴 켜기 전·후 정리 시간 비교표 1장",
+  "objectives": [
+    "회의록(Take notes for me)·다음 단계(next steps)·회의 후 루틴의 관계와 사용 조건을 설명할 수 있음",
+    "회의 후 화면의 '이 회의의 루틴(Routines for this meeting)'에서 후속 메일 초안·Tasks 추가 루틴을 켜고 결과를 확인할 수 있음",
+    "AI가 만든 메일 초안·할 일을 회의록과 대조해 고치고, 민감 회의에서 끄는 기준을 정할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "Google Workspace 유료 요금제(Business Standard 이상)에 포함, 별도 요금 없음. Business Starter는 Gemini in Meet 미지원이라 사용 불가. 교육기관은 Google AI Pro for Education 부가기능 필요. 14일 무료 체험 있음",
+    "plans": [
+      {
+        "name": "Business Starter",
+        "price": "$7/사용자/월 (연간 약정), 탄력 요금제 $8.40",
+        "features": "Gemini in Meet 미지원 → 회의 후 루틴 사용 불가"
+      },
+      {
+        "name": "Business Standard",
+        "price": "$14/사용자/월 (연간 약정), 탄력 요금제 $16.80",
+        "features": "Gemini in Meet(요약·번역·회의록) + 회의 후 루틴 사용 가능"
+      },
+      {
+        "name": "Business Plus",
+        "price": "$22/사용자/월 (연간 약정), 탄력 요금제 $26.40",
+        "features": "Standard 기능 + 보안·보관 강화, 회의 후 루틴 사용 가능"
+      },
+      {
+        "name": "Enterprise Standard·Plus",
+        "price": "영업팀 문의",
+        "features": "회의 후 루틴 사용 가능"
+      },
+      {
+        "name": "Google AI Pro for Education (부가기능)",
+        "price": "[확인 필요]",
+        "features": "교육용 Workspace에 추가 시 회의 후 루틴 사용 가능"
+      }
+    ],
+    "note": "가격은 Google Workspace 관리자 도움말(탄력 요금제·연간 요금제 비교)의 미국 달러 기준. 요금 페이지는 1년 약정 시 16% 할인, 14일 무료 체험 안내. 원화 가격·교육용 부가기능 가격은 [확인 필요]",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "Google Workspace 관리자 도움말 – Flexible Plan",
+        "url": "https://knowledge.workspace.google.com/admin/billing/flexible-plan"
+      },
+      {
+        "title": "Google Workspace 관리자 도움말 – Compare Flexible and Annual/Fixed-Term payment plans",
+        "url": "https://knowledge.workspace.google.com/admin/billing/compare-flexible-and-annual-fixed-term-payment-plans"
+      },
+      {
+        "title": "Google Workspace 요금제 페이지",
+        "url": "https://workspace.google.com/pricing"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2024-08",
+      "text": "Google Meet 'Take notes for me'(Gemini 회의록) 공개 (Workspace Updates 블로그 언급)"
+    },
+    {
+      "date": "2025-02-18",
+      "text": "회의록에 '추천 다음 단계(suggested next steps)' 추가 — 후속 할 일 찾기·담당자 지정 (Workspace Updates 블로그)"
+    },
+    {
+      "date": "2025-12-03",
+      "text": "Workspace Studio 공개 — 코딩 없이 Workspace 업무 자동화 흐름 만들기 (Workspace Updates 블로그)"
+    },
+    {
+      "date": "2026-10-05",
+      "text": "회의 후 화면 루틴(다음 단계) 순차 출시 시작 — Rapid·Scheduled Release 모두 확장 출시, 15일 이상 걸릴 수 있음"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "Workspace Updates 블로그에 공식 발표 — 루틴 2종(Gmail 후속 메일 초안, Google Tasks 실행 항목 추가), 추가 루틴 예고"
+    }
+  ],
+  "theory": {
+    "definition": "회의 후 다음 단계(post-meeting next steps)는 Google Meet 회의가 끝난 뒤 나오는 화면에서 반복되는 뒷정리를 자동화하는 기능임. Gemini가 만든 회의록을 바탕으로 Workspace Studio 흐름이 동작하며, 현재 루틴은 ① Gmail 후속 메일 초안 작성 ② 실행 항목을 Google Tasks에 추가 2가지임",
+    "analogy": "회의 끝나고 문을 나서면 비서가 '회의 정리 메일 초안 써 뒀고, 할 일은 업무 수첩에 옮겨 놨습니다'라고 말해 주는 것과 같음. 비서는 회의록(Take notes for me)을 보고 일하므로, 회의록을 안 켜면 비서도 할 일이 없음",
+    "comparison": {
+      "headers": [
+        "구분",
+        "회의록 다음 단계(2025-02)",
+        "회의 후 루틴(2026-10)"
+      ],
+      "rows": [
+        [
+          "하는 일",
+          "회의록 문서 안에 할 일 목록 정리",
+          "목록을 바탕으로 메일 초안·Tasks 추가까지 실행"
+        ],
+        [
+          "결과 위치",
+          "Drive의 회의록 문서",
+          "Gmail 임시보관함·Google Tasks"
+        ],
+        [
+          "켜는 곳",
+          "회의 중 'Take notes for me'",
+          "회의 후 화면 'Routines for this meeting'"
+        ],
+        [
+          "반복 적용",
+          "회의마다 회의록 켜기",
+          "특정 루틴을 모든 회의에 켜 둘 수 있음"
+        ],
+        [
+          "관리",
+          "Meet 설정",
+          "Meet 회의 후 화면 + Workspace Studio 흐름 목록(Flows library)"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "회의록이 출발점",
+        "body": "루틴은 'Take notes for me'가 켜진 회의에서만 나타남. 회의록은 주최자 Drive의 'Google Meet' 폴더에 저장되고, 회의록의 '다음 단계' 항목이 루틴의 재료가 됨. 회의록은 한국어 포함 8개 언어 지원(회의당 1개 언어), 15분~8시간 회의 권장"
+      },
+      {
+        "title": "루틴 2종",
+        "body": "① 후속 메일 초안: 회의 내용을 정리한 Gmail 초안 작성(발송은 사람이 함) ② 실행 항목 내보내기: 할 일을 Google Tasks에 추가. 한 회의에만 켜거나, 회의록이 켜진 모든 회의에 켜 둘 수 있음. 일회성·반복 회의 모두 지원. 정확한 메뉴 표기·초안 수신자 설정은 [확인 필요]"
+      },
+      {
+        "title": "뒤에서 돌아가는 Workspace Studio",
+        "body": "루틴은 Workspace Studio 흐름으로 동작함. 한 번 Meet에서 켠 뒤에는 Studio의 흐름 목록(Flows library)에서도 관리 가능. 관리자는 도메인·조직 단위(OU)·그룹별로 Studio 설정이나 Take notes for me 설정으로 끌 수 있음(기본 켜짐)"
+      }
+    ],
+    "can": [
+      "회의 후 화면에서 탭 한 번으로 후속 메일 초안 루틴 켜기",
+      "회의 실행 항목을 Google Tasks 할 일로 자동 추가",
+      "특정 루틴을 회의록이 켜진 모든 회의에 적용",
+      "일회성·반복 회의 모두에 사용",
+      "Workspace Studio 흐름 목록에서 켠 루틴 관리"
+    ],
+    "cannot": [
+      "'Take notes for me' 없이 루틴 사용 불가",
+      "Business Starter·개인 Gmail 계정은 대상 아님",
+      "현재 루틴은 2종(메일 초안·Tasks)뿐, 더 추가될 예정이라고만 발표",
+      "15분 미만 회의·연결 불량 회의는 회의록이 불완전할 수 있어 결과도 부정확할 수 있음",
+      "순차 출시라 수업 날 화면에 안 보일 수 있음(15일 이상 소요 가능)"
+    ],
+    "safety": [
+      "회의록(Take notes for me)을 켜면 참석자에게 알려지고 내부 참석자가 끌 수 있음. 켜기 전에 목적을 말로 안내할 것",
+      "메일 초안의 수신자·날짜·금액·약속 내용은 회의록과 대조한 뒤 직접 발송. 자동 초안 그대로 보내지 않음",
+      "인사·상담·개인정보가 오가는 회의는 회의록과 루틴을 끄는 기준을 미리 정함",
+      "회의록은 기관의 Meet 보존 정책을 따르고 주최자 Drive에 저장됨. 공유 범위를 확인할 것",
+      "Tasks로 옮긴 할 일의 담당자·기한은 AI 추정일 수 있으므로 회의 참석자와 확정함"
+    ]
+  },
+  "practice": {
+    "preview": "15분 모의 회의 '다음 달 학부모 설명회 준비'를 마치고 나가면 회의 후 화면에 'Routines for this meeting'이 보임. 후속 메일 초안·Tasks 추가를 켜면, 잠시 뒤 Gmail 임시보관함에 '오늘 회의 정리: ① 안내문 초안 금요일까지(김 선생) ② 장소 예약(이 선생)…' 초안이, Google Tasks에는 할 일 3개가 생김. 강사는 초안의 날짜를 회의록과 대조해 고친 뒤 보냄",
+    "follow": [
+      {
+        "title": "회의록 켜고 모의 회의 시작",
+        "minutes": 5,
+        "do": "meet.google.com에서 새 회의를 열고 짝꿍을 초대함. 오른쪽 위 'Take notes for me' → 설정에서 언어를 한국어로 → 'Start taking notes'. 참석자에게 회의록을 켰다고 알림",
+        "prompt": "",
+        "expect": "회의 화면에 회의록 작성 중 표시",
+        "note": "회의록 언어는 회의당 1개. 시작 후 바꾼 언어는 반복·이후 회의에 적용되지 않음"
+      },
+      {
+        "title": "대본으로 15분 회의 진행",
+        "minutes": 15,
+        "do": "아래 대본을 짝꿍과 나눠 읽고, 담당자와 기한이 분명한 할 일을 3개 이상 말함. 15분 미만이면 회의록이 부실할 수 있으므로 자유 토의를 덧붙여 15분을 채움",
+        "prompt": "회의 주제: 다음 달 학부모 설명회 준비\nA: 설명회는 11월 20일 목요일 저녁 7시로 정하겠습니다.\nB: 안내문 초안은 제가 이번 주 금요일까지 만들겠습니다.\nA: 장소는 3층 강당으로 하고, 제가 다음 주 월요일까지 예약하겠습니다.\nB: 참석 신청은 구글 설문으로 받고, 11월 13일에 마감하죠.\nA: 마지막으로 발표 자료는 둘이 나눠서 11월 17일까지 공유 드라이브에 올립시다.",
+        "expect": "결정 사항 1개 + 담당자·기한이 있는 할 일 4개가 말로 오감",
+        "note": "실제 학생·학부모 이름은 쓰지 않음"
+      },
+      {
+        "title": "회의 후 화면에서 루틴 켜기",
+        "minutes": 5,
+        "do": "회의를 나가면 나오는 회의 후 화면에서 'Routines for this meeting' 영역을 찾음. 후속 메일 초안(Gmail)·실행 항목 추가(Google Tasks) 루틴을 각각 한 번 탭해 켬. '모든 회의에 적용' 선택지가 보이면 오늘은 이 회의만 선택",
+        "prompt": "",
+        "expect": "루틴 2개가 켜짐 표시",
+        "note": "[확인 필요] 한국어 화면의 메뉴 표기, 루틴 결과가 나오기까지 걸리는 시간. 회의록이 꺼졌으면 이 영역이 나타나지 않음"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "결과 확인과 대조",
+        "minutes": 5,
+        "do": "Drive 'Google Meet' 폴더의 회의록, Gmail 임시보관함의 후속 메일 초안, Google Tasks 목록을 나란히 열고 날짜·담당자·할 일 수가 대본과 맞는지 표로 대조함",
+        "prompt": "",
+        "expect": "대조표(항목 / 대본 / AI 결과 / 수정 여부)",
+        "note": "틀린 날짜·빠진 할 일은 초안과 Tasks에서 직접 고침"
+      },
+      {
+        "title": "내 회의 템플릿 만들기",
+        "minutes": 5,
+        "do": "고친 메일 초안을 기준으로, 앞으로 루틴 초안을 다듬을 때 쓸 Gemini 프롬프트를 만들어 둠(Gmail의 Gemini에 붙여 넣어 사용)",
+        "prompt": "이 회의 정리 메일 초안을 다듬어 줘. 1) 첫 줄에 회의 날짜와 주제 2) 결정 사항 3) 할 일은 '담당자 – 할 일 – 기한' 표로 4) 기한이 불분명한 항목은 [확인 필요]로 표시 5) 정중하고 짧은 한국어로.",
+        "expect": "🎉 회의 뒷정리 자동화 + 다듬기 프롬프트 완성",
+        "note": "실습 뒤 남기지 않을 루틴은 Workspace Studio 흐름 목록에서 끔 [확인 필요: 끄는 위치]"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "회의 길이(10분 vs 20분)를 바꿔 두 번 진행하고, 할 일 추출 정확도 차이를 표로 비교하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "반복 회의(매주 팀 회의)에 Tasks 루틴만 켜 두고 2주 동안 쌓인 할 일 목록을 점검해 '그대로 쓸 수 있음/고침/삭제' 비율 기록하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Workspace Studio 흐름 목록에서 회의 루틴을 열어 구조(시작 조건·단계)를 확인하고, 'Chat으로 나에게 요약 알림' 같은 단계를 직접 추가한 나만의 회의 흐름 만들기 [확인 필요: 편집 가능 여부]"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 대조표를 보여 주고 AI가 맞힌 것 1개·틀린 것 1개를 발표함. 마지막으로 '내 회의 중 루틴을 꼭 끌 회의' 1가지를 말함",
+    "quiz": [
+      {
+        "q": "Google Meet 회의 후 화면에 루틴(다음 단계)이 나타나려면 회의 중 무엇이 켜져 있어야 할까요?",
+        "options": [
+          "녹화(Recording)",
+          "Take notes for me(회의록 작성)",
+          "실시간 자막",
+          "배경 흐리기"
+        ],
+        "answer": 1,
+        "explain": "루틴은 Gemini 회의록(Take notes for me)이 켜진 회의에서만 나타남"
+      },
+      {
+        "q": "2026년 10월 발표 기준 회의 후 루틴 2가지는?",
+        "options": [
+          "Slides 발표 자료 만들기·Drive 폴더 정리",
+          "Gmail 후속 메일 초안·Google Tasks 할 일 추가",
+          "Calendar 다음 회의 예약·Chat 공지",
+          "Sheets 출석부·Forms 설문 만들기"
+        ],
+        "answer": 1,
+        "explain": "현재 루틴은 Gmail 후속 메일 초안과 Google Tasks 실행 항목 추가 2종이며, 추가 루틴은 예고만 됨"
+      },
+      {
+        "q": "다음 중 회의 후 루틴을 쓸 수 없는 요금제는?",
+        "options": [
+          "Business Starter",
+          "Business Standard",
+          "Business Plus",
+          "Enterprise Plus"
+        ],
+        "answer": 0,
+        "explain": "Business Starter는 Gemini in Meet을 지원하지 않아 대상이 아님"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "완성도",
+        "high": "회의록 + 메일 초안 + Tasks 모두 확인",
+        "mid": "일부 결과만 확인",
+        "low": "루틴 미실행"
+      },
+      {
+        "criterion": "검증 습관",
+        "high": "대본과 대조해 오류 수정",
+        "mid": "대충 읽음",
+        "low": "확인 안 함"
+      },
+      {
+        "criterion": "응용력",
+        "high": "내 회의용 다듬기 프롬프트 작성",
+        "mid": "예시 그대로 사용",
+        "low": "없음"
+      },
+      {
+        "criterion": "보안·윤리",
+        "high": "회의록 고지 + 끌 회의 기준 설명",
+        "mid": "일부만 설명",
+        "low": "인지 없음"
+      }
+    ],
+    "next": [
+      "Workspace Studio 조건 분기로 메일 자동 분류하기(AI-2026-10-CAT08-005)",
+      "Gemini 작업 모드·ChatGPT 예약 작업과 자동화 비교(AI-2026-10-CAT08-003, AI-2026-10-CAT08-002)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 출시 타임라인",
+        "note": "'회의 끝나면 비서가 정리' 비유"
+      },
+      {
+        "time": "5~20분",
+        "content": "1부 이론: 회의록 → 다음 단계 → 루틴 구조, 요금제 조건, 안전",
+        "note": "Starter 불가 강조"
+      },
+      {
+        "time": "20~40분",
+        "content": "회의록 켜기 + 15분 모의 회의",
+        "note": "짝꿍 대본 배포"
+      },
+      {
+        "time": "40~55분",
+        "content": "루틴 켜기 → 결과 대조 → 다듬기 프롬프트",
+        "note": "루틴 안 보이면 Plan B"
+      },
+      {
+        "time": "55~60분",
+        "content": "발표·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "회의 끝나고 '정리 메일 누가 보내죠?' 하다가 하루가 지난 적 있으시죠? 10월에 Google Meet에 회의가 끝나면 정리 메일 초안과 할 일 목록을 알아서 만들어 주는 루틴이 생겼습니다. 오늘은 실제로 회의를 하고, 끝나자마자 무엇이 생기는지 확인합니다."
+      },
+      {
+        "label": "이론 → 안전 전환",
+        "text": "이 기능의 출발점은 회의록입니다. 회의록을 켜면 참석자 모두가 압니다. 그러니 켜기 전에 '오늘 회의 정리용으로 회의록을 켭니다'라고 꼭 말씀해 주세요."
+      },
+      {
+        "label": "결과 대조",
+        "text": "초안이 꽤 그럴듯하죠? 그런데 날짜 하나만 틀려도 설명회에 아무도 안 옵니다. 대본과 한 줄씩 맞춰 보세요. 그게 사람의 일입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "루틴은 켜 두면 매 회의마다 돌아갑니다. 인사나 상담처럼 기록이 남으면 안 되는 회의는 회의록부터 끄는 것, 오늘 정한 기준을 지켜 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생이 개인 Gmail·Business Starter 계정만 있음",
+        "response": "강사 계정으로 시연하고, 수강생은 Gemini 앱에 대본을 붙여 '정리 메일 초안 + 할 일 표'를 만드는 프롬프트 실습으로 대체"
+      },
+      {
+        "situation": "회의 후 화면에 루틴 영역이 안 보임",
+        "response": "10월 5일부터 15일 이상 걸리는 순차 출시임을 안내, 사전 캡처로 설명. 회의록의 '다음 단계' 항목으로 Tasks에 손으로 옮기며 차이 체감"
+      },
+      {
+        "situation": "관리자가 회의록 또는 Workspace Studio를 꺼 둠",
+        "response": "기관 관리자에게 Take notes for me·Studio 허용 요청 안내, 당일은 강사 시연"
+      },
+      {
+        "situation": "회의록이 너무 짧게 나옴",
+        "response": "15분 미만 회의는 부정확할 수 있음 → 사전 준비한 20분 회의 결과물로 대조 실습"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "'Take notes for me' 버튼이 없음",
+        "fix": "주최자 계정이 대상 요금제인지, 관리자 설정·스마트 기능 제어(Smart feature control)가 켜졌는지 확인"
+      },
+      {
+        "issue": "회의록이 영어로 나옴",
+        "fix": "회의록 시작 전 설정에서 언어를 한국어로 선택(회의 중 1개 언어만)"
+      },
+      {
+        "issue": "Gmail 초안이 안 보임",
+        "fix": "임시보관함 확인, 루틴 처리에 시간이 걸릴 수 있으므로 몇 분 뒤 새로고침 [확인 필요: 소요 시간]"
+      },
+      {
+        "issue": "Tasks에 할 일이 일부만 들어감",
+        "fix": "회의 중 '누가 – 무엇을 – 언제까지'를 분명히 말하도록 대본 수정, 빠진 항목은 손으로 추가"
+      },
+      {
+        "issue": "모든 회의에 루틴이 돌아 불편함",
+        "fix": "Workspace Studio 흐름 목록 또는 회의 후 화면에서 '모든 회의' 적용 해제 [확인 필요: 해제 위치]"
+      }
+    ],
+    "faq": [
+      {
+        "q": "별도 요금이 있나요?",
+        "a": "없음. Business Standard 이상 Workspace 요금제에 포함. Business Starter는 대상 아님"
+      },
+      {
+        "q": "개인 Gmail로도 되나요?",
+        "a": "발표 글의 대상 요금제는 Business·Enterprise·Google AI Pro for Education뿐임. 개인 계정 지원은 언급 없음"
+      },
+      {
+        "q": "한국어 회의도 되나요?",
+        "a": "회의록(Take notes for me)은 한국어 지원. 루틴 결과물(메일 초안·할 일)의 한국어 품질은 강의 전 확인 필요 [확인 필요]"
+      },
+      {
+        "q": "메일이 자동으로 발송되나요?",
+        "a": "발표 글 기준 루틴은 후속 메일 '초안'을 만드는 것임. 발송 전 반드시 검토"
+      },
+      {
+        "q": "참석자가 아닌 사람도 할 일을 받나요?",
+        "a": "할 일은 루틴을 켠 사용자의 Google Tasks에 추가되는 구조로 안내됨. 담당자 배정 방식은 [확인 필요]"
+      },
+      {
+        "q": "관리자가 끌 수 있나요?",
+        "a": "기본은 켜짐이며, 관리자가 도메인·조직 단위·그룹별로 Workspace Studio 설정 또는 Take notes for me 설정에서 끌 수 있음"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "강사가 회의를 주최하고 수강생은 참석자로 대본만 읽음. 결과는 강사 화면으로 함께 보고 '틀린 날짜 찾기' 게임으로 대조"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "본 교안 그대로 진행, 도전과제 ⭐⭐까지. 반복 회의 적용과 끄기 기준을 직접 정함"
+      },
+      {
+        "level": "교사 대상 (JOB-EDU)",
+        "guide": "교직원 회의·학년 협의회 정리에 적용. 학생 상담·성적 관련 회의는 회의록·루틴 금지 원칙을 강조"
+      },
+      {
+        "level": "한국어 학습자·다문화 (JOB-GLB)",
+        "guide": "'회의록·초안·할 일·기한·담당자' 어휘를 먼저 익히고, 대본을 쉬운 한국어로 바꿔 천천히 읽음. 결과 메일을 읽고 날짜·이름 찾기 활동"
+      }
+    ],
+    "pro_points": [
+      "직업군별 예시 — 사무·공공: 주간 업무 회의 후 할 일 자동 정리 / 소상공인: 거래처 미팅 후 견적 후속 메일 초안 / 강사: 수업 준비 회의 후 역할 분담 메일",
+      "핵심은 '말하는 방식'임. 회의 중 '누가 – 무엇을 – 언제까지'를 또렷이 말하면 결과 정확도가 올라감을 비포·애프터로 보여 줄 것",
+      "회의록 이전(Take notes for me), 회의록 다음 단계(2025-02), 회의 후 루틴(2026-10) 3단계 변천을 보여 주며 'AI가 기록 → 정리 → 실행'으로 넓어지는 흐름을 설명"
+    ],
+    "day_before": [
+      "강사 계정(Business Standard 이상)에서 회의 후 화면의 'Routines for this meeting' 영역이 보이는지 확인하고 한국어 표기 캡처",
+      "같은 대본으로 15분 회의를 미리 해 메일 초안·Tasks 결과를 확보함 (Plan B)",
+      "수강생 계정 종류(Starter·Standard·개인)와 관리자 허용 여부 사전 조사",
+      "Workspace Studio 흐름 목록에서 루틴을 끄는 위치 확인·캡처",
+      "모의 회의 대본과 대조표 양식을 공유 문서로 준비"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 회의 후 화면의 한국어 메뉴 표기, 루틴 결과가 생기기까지 걸리는 시간 — 발표 글·도움말 요약에 화면 상세 설명 부족",
+    "[확인 필요] 메일 초안 수신자 설정 방식, Tasks 할 일의 담당자 배정 방식, Studio에서 루틴 편집 가능 여부",
+    "[확인 필요] 2026-10-05부터 확장 출시(15일 이상 소요 가능)라 수업 날 일부 도메인에는 아직 보이지 않을 수 있음",
+    "[확인 필요] 한국어 회의에서 루틴 결과물 품질, 원화 가격, Google AI Pro for Education 가격",
+    "Google Meet 도움말 'Complete routine tasks with post-meeting next steps'는 발표 글의 링크로 확인했으나 본문은 이번 작성 시 직접 열람하지 못함",
+    "실습 결과(초안 문장·할 일 수)는 회의 내용·길이에 따라 달라짐. 대본은 실습용 가상 회의임"
+  ],
+  "sources": [
+    {
+      "title": "Google Workspace Updates – Find your routine next steps on the post-meeting screen in Google Meet (2026-10-12)",
+      "url": "https://workspaceupdates.googleblog.com/2026/10/find-your-routine-next-steps-on-post-meeting-screen-in-Google-Meet.html",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Meet 도움말 – Complete routine tasks with post-meeting next steps",
+      "url": "https://support.google.com/meet/answer/18481437",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Meet 도움말 – \"Take notes for me\" in Google Meet",
+      "url": "https://support.google.com/meet/answer/14754931",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Workspace Updates – \"Take notes for me\" in Google Meet now captures \"next steps\" (2025-02-18)",
+      "url": "https://workspaceupdates.googleblog.com/2025/02/google-meet-take-notes-for-me-next-steps.html",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Workspace Updates – Now available: Create AI agents to automate work with Google Workspace Studio (2025-12-03)",
+      "url": "https://workspaceupdates.googleblog.com/2025/12/workspace-studio.html",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Workspace 요금제 페이지",
+      "url": "https://workspace.google.com/pricing",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Workspace 관리자 도움말 – Flexible Plan",
+      "url": "https://knowledge.workspace.google.com/admin/billing/flexible-plan",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Workspace 관리자 도움말 – Compare Flexible and Annual/Fixed-Term payment plans",
+      "url": "https://knowledge.workspace.google.com/admin/billing/compare-flexible-and-annual-fixed-term-payment-plans",
+      "checked": "2026-10-16"
+    }
+  ]
+}

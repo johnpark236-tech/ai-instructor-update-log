@@ -2026,6 +2026,21 @@
       },
       "checked": "2026-10-14",
       "lesson_id": "AI-2026-10-CAT05-008"
+    },
+    {
+      "id": "googlemeet-2026-10-12-post-meeting-routines",
+      "date": "2026-10-12",
+      "tool": "Google Meet",
+      "company": "Google",
+      "type": "update",
+      "title": "회의 후 화면 루틴(다음 단계)",
+      "summary": "Take notes for me가 켜진 회의가 끝나면 회의 후 화면에서 Gmail 후속 메일 초안·Google Tasks 할 일 추가 루틴을 켤 수 있음 (Gemini·Workspace Studio 기반, Business Standard 이상, 10월 5일부터 순차 출시)",
+      "source": {
+        "title": "Google Workspace Updates – Find your routine next steps on the post-meeting screen in Google Meet",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/find-your-routine-next-steps-on-post-meeting-screen-in-Google-Meet.html"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT08-006"
     }
   ]
 }
