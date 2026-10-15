@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI 실습 교안</title>
 <style>
 :root{--bg:#07111f;--p:#0e1b2e;--l:#203552;--t:#edf5ff;--m:#91a6c2;--a:#6ee7ff;--g:#70e1a1;--w:#ffcf70;--r:#ff8fa3}
@@ -96,6 +97,8 @@ const M=window.LESSON_META,app=document.getElementById('app');
 // 카카오톡 등 앱 안의 브라우저는 파일 다운로드가 막혀 있어 외부 브라우저(크롬·사파리)로 넘긴다
 const UA=navigator.userAgent||'',IS_KAKAO=/KAKAOTALK/i.test(UA),IN_APP=IS_KAKAO||/(NAVER\(inapp|Instagram|FBAN|FBAV|Line\/|; wv\))/i.test(UA);
 function openExternal(url){
+  // 크롬이 예전에 저장해 둔(캐시) 화면을 보여 주지 않도록 매번 새 주소로 엶
+  {const u=new URL(url,location.href);u.searchParams.set('v',Date.now().toString(36));url=u.href}
   if(IS_KAKAO){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(url);return}
   if(/Android/i.test(UA)){location.href='intent://'+url.replace(/^https?:\/\//,'')+'#Intent;scheme=https;package=com.android.chrome;end';return}
   alert('다운로드는 사파리·크롬에서 됩니다. 오른쪽 위 메뉴에서 "다른 브라우저로 열기"를 눌러 주세요.');
