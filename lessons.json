@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 56,
+  "count": 57,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-004",
+      "version": "v1.0",
+      "created_at": "2026-10-15 23:10 KST",
+      "checked": "2026-10-15",
+      "review_by": "2027-01-15",
+      "title": "구독에 딸려 온 API 크레딧으로 첫 AI 앱 만들기 — Claude Max·Team 월간 API 크레딧 받기 → Playground에서 '수업 안내문 생성기' 다듬기 → Python 20줄로 여러 개 한 번에",
+      "summary": "2026-10-07부터 Claude Max·Team 요금제에 Claude Platform(API)용 월간 크레딧이 포함됨(Max 5x $100·Max 20x $200·Team 좌석당 $20/$100, 팀 합계 최대 $500). claude.ai 결제 설정에서 Console 조직을 연결해 받고, Playground에서 프롬프트를 시험한 뒤 API 키로 '수업 안내문 생성기'를 만들어 여러 수업 안내문을 한 번에 뽑음",
+      "tool": "Claude",
+      "feature": "Max·Team 월간 API 크레딧 (Monthly API credits) — Claude Platform API·Playground·Agent SDK용",
+      "company": "Anthropic",
+      "type": "update",
+      "released": "2026-10-07",
+      "categories": [
+        "CAT-07",
+        "CAT-08",
+        "CAT-11"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① Console에 연결된 월간 크레딧 잔액·만료일 확인 화면 + ② Playground에서 다듬은 '수업 안내문 생성기' 시스템 프롬프트 1개 + ③ 수업 목록을 넣으면 안내문을 여러 개 뽑는 Python 파일 1개 + ④ 요청 1건당 비용 계산 메모",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎟️",
+      "one_liner": "구독 크레딧으로 내 AI 앱 직접 만들기"
+    },
     {
       "id": "AI-2026-10-CAT01-009",
       "version": "v1.0",
