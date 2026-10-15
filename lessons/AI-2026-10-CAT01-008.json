@@ -1,0 +1,627 @@
+{
+  "id": "AI-2026-10-CAT01-008",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-15 21:10 KST",
+  "checked": "2026-10-15",
+  "review_by": "2027-01-15",
+  "title": "Claude Haiku 5.5로 빠르고 가볍게 대량 정리 — 고객 후기·설문 응답 분류표 + 노력 수준(Effort) 비교로 '일에 맞는 모델 고르기' 카드 만들기",
+  "summary": "Claude Haiku 5.5는 2026-10-07 출시된 Claude 5.5 계열의 가장 빠르고 가벼운 모델. Haiku 최초로 노력 수준(Effort) 조절 가능, 무료(Free) 요금제에서도 선택 가능(제품 페이지 기준). 후기·설문 응답을 분류·요약하는 반복 작업을 Haiku 5.5로 처리하고, Effort 낮음 vs 높음·Sonnet 결과를 비교해 내 업무용 모델 선택 카드를 만듦",
+  "glance": {
+    "emoji": "⚡",
+    "one_liner": "가볍고 빠른 Haiku로 반복 정리 끝내기",
+    "cards": [
+      {
+        "icon": "🏎️",
+        "title": "가장 빠른 모델",
+        "text": "Claude 5.5 계열 중 가장 빠름"
+      },
+      {
+        "icon": "🎚️",
+        "title": "노력 수준 조절",
+        "text": "Haiku 최초 Effort 낮음~최대"
+      },
+      {
+        "icon": "🆓",
+        "title": "무료도 선택",
+        "text": "Free~Enterprise 웹·앱에서 선택"
+      },
+      {
+        "icon": "📋",
+        "title": "반복 작업용",
+        "text": "분류·요약·추출을 빠르게"
+      }
+    ],
+    "diagram": {
+      "title": "Haiku 5.5 이렇게 씀",
+      "nodes": [
+        {
+          "icon": "🔽",
+          "label": "모델 메뉴 열기"
+        },
+        {
+          "icon": "⚡",
+          "label": "Haiku 5.5 선택"
+        },
+        {
+          "icon": "🎚️",
+          "label": "Effort 고르기"
+        },
+        {
+          "icon": "📋",
+          "label": "후기 붙여 넣기"
+        },
+        {
+          "icon": "⚖️",
+          "label": "결과 비교"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "무조건 큰 모델",
+        "text": "짧은 분류도 무거운 모델로 돌려 사용 한도가 빨리 줄어듦"
+      },
+      "after": {
+        "label": "일에 맞는 모델",
+        "text": "반복 정리는 Haiku 5.5, 어려운 판단만 Sonnet·Opus로"
+      }
+    },
+    "cautions": [
+      "고객 이름·연락처 지우고 넣기",
+      "분류 결과는 사람이 표본 확인",
+      "중요한 판단은 상위 모델로"
+    ]
+  },
+  "tool": "Claude",
+  "feature": "Claude Haiku 5.5 — 가장 빠른 소형 모델, Haiku 최초 노력 수준(Effort) 선택",
+  "company": "Anthropic",
+  "type": "update",
+  "released": "2026-10-07",
+  "categories": [
+    "CAT-01",
+    "CAT-06",
+    "CAT-12"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-MKT",
+    "JOB-EDU",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Claude 계정 (무료 Free 가능) — claude.ai 웹 또는 Claude 앱",
+    "PC 크롬 권장 (모델 메뉴·Effort 메뉴 확인이 쉬움)",
+    "분류할 짧은 글 10~30개: 고객 후기·설문 주관식 응답·수업 소감 등 (이름·연락처는 미리 지울 것)",
+    "강사: 실습용 가상 후기 10개 (교안 프롬프트에 포함)"
+  ],
+  "outcome": "① 후기 10개를 '칭찬·배송·품질·응대' 등으로 나눈 분류표(표 1개) + ② Effort 낮음 vs 높음(또는 Haiku vs Sonnet) 비교 메모 3줄 + ③ 내 업무 3가지에 맞는 '모델·Effort 선택 카드' 1장",
+  "objectives": [
+    "claude.ai 모델 메뉴에서 Haiku 5.5를 고르고 노력 수준(Effort)을 바꿀 수 있음",
+    "같은 분류 작업을 Effort·모델별로 돌려 속도·정확도 차이를 근거 있게 비교할 수 있음",
+    "내 업무를 '가벼운 반복 작업 / 어려운 판단'으로 나눠 알맞은 모델을 고르는 기준을 세울 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Haiku 5.5는 Free·Pro·Max·Team·Enterprise 모든 claude.ai 요금제에서 선택 가능(제품 페이지 기준). 무료로 실습 가능, 유료는 사용량이 많아짐. API는 입력 100만 토큰당 $0.10·출력 $0.50(10만 토큰 이하 요청)",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Haiku·Sonnet 사용 (Opus·Fable 제외), 웹·데스크톱·모바일, 웹 검색, 파일 만들기, 최대 5개 Projects"
+      },
+      {
+        "name": "Pro",
+        "price": "월 $20 (연간 결제 시 월 $17)",
+        "features": "Free보다 많은 사용량, Opus 포함, Claude Code, Claude in Chrome, 무제한 Projects"
+      },
+      {
+        "name": "Max",
+        "price": "월 $100부터",
+        "features": "Pro의 5배·20배 사용량, 월 API 크레딧 $100(5x)·$200(20x) 포함"
+      },
+      {
+        "name": "Team Standard",
+        "price": "좌석당 월 $25 (연간 결제 시 월 $20)",
+        "features": "Pro보다 많은 사용량, Claude Code·Cowork, 팀 공용 API 크레딧 월 최대 $500"
+      },
+      {
+        "name": "API (Claude Platform)",
+        "price": "입력 $0.10 / 출력 $0.50 (100만 토큰당, 10만 토큰 이하 요청)",
+        "features": "10만 토큰 초과 요청은 입력 $0.50·출력 $2.50, 배치 50% 할인, 모델 ID claude-haiku-5-5"
+      }
+    ],
+    "note": "구독 가격은 달러 기준 공식 요금 페이지 표기, 원화·부가세 미확인. API 가격은 구독과 별개라 그래프 비교 대상 아님. 요금 페이지 표는 Free에 'Haiku'라고만 적고 버전은 적지 않음 → 제품 페이지의 'Free~Enterprise에서 선택 가능' 문구를 근거로 씀 [확인 필요: 강의 전날 무료 계정 모델 메뉴에서 Haiku 5.5 표시 확인]",
+    "checked": "2026-10-15",
+    "sources": [
+      {
+        "title": "Claude 요금제",
+        "url": "https://claude.com/pricing",
+        "checked": "2026-10-15"
+      },
+      {
+        "title": "Anthropic – Claude Haiku 제품 페이지",
+        "url": "https://www.anthropic.com/claude/haiku",
+        "checked": "2026-10-15"
+      },
+      {
+        "title": "Anthropic – Introducing Claude Haiku 5.5 (2026-10-07)",
+        "url": "https://www.anthropic.com/claude-haiku-5-5",
+        "checked": "2026-10-15"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-10-15",
+      "text": "Claude Haiku 4.5 출시 (대화 창 20만 토큰)"
+    },
+    {
+      "date": "2026-10-07",
+      "text": "Claude Haiku 5.5 출시 — 가장 빠르고 저렴한 소형 모델, Haiku 최초 Effort 조절, 대화 창 100만 토큰, 최대 출력 12만 8천 토큰"
+    },
+    {
+      "date": "2026-10-07",
+      "text": "같은 날 Max·Team 요금제에 월간 API 크레딧 포함 발표"
+    }
+  ],
+  "theory": {
+    "definition": "Claude Haiku 5.5는 Anthropic의 Claude 5.5 계열 중 가장 빠르고 가벼운 모델임. 분류·요약·추출·짧은 답변처럼 양이 많고 반복되는 일에 맞춤. Haiku 계열 최초로 노력 수준(Effort)을 골라 '빠르게 대충 ↔ 천천히 꼼꼼히'를 조절할 수 있음",
+    "analogy": "Haiku는 '빠른 택배 오토바이', Sonnet은 '일반 화물차', Opus·Fable은 '대형 트럭'. 서류 한 장 보내는 데 트럭을 부를 필요 없음. Effort는 같은 오토바이의 '속도 모드 ↔ 안전 모드' 선택 버튼",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Haiku 5.5",
+        "Sonnet 5.5",
+        "Opus·Fable"
+      ],
+      "rows": [
+        [
+          "성격",
+          "가장 빠르고 가벼움",
+          "대부분 업무의 기본",
+          "깊은 추론·큰 프로젝트"
+        ],
+        [
+          "잘 맞는 일",
+          "분류·요약·추출·빠른 답",
+          "글쓰기·분석·코딩",
+          "복잡한 연구·정확도가 중요한 일"
+        ],
+        [
+          "무료(Free)",
+          "선택 가능",
+          "선택 가능",
+          "포함 안 됨"
+        ],
+        [
+          "API 입력/출력 (100만 토큰당)",
+          "$0.10 / $0.50 (10만 토큰 이하)",
+          "$2.00 / $10.00",
+          "이 교안에서 다루지 않음"
+        ],
+        [
+          "Effort",
+          "낮음~최대 선택 가능",
+          "선택 가능",
+          "선택 가능"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "노력 수준(Effort) — 메뉴 위치와 단계",
+        "body": "보내기 버튼 옆 모델 이름 클릭 → 'Effort' → 단계 선택. 도움말 단계 이름은 Low·Medium·High·Extra high·Max, 모델마다 권장값에 'Default' 표시. 높을수록 꼼꼼하지만 느리고 사용 한도를 더 씀. 대화 중 바꿔도 다음 답부터 적용"
+      },
+      {
+        "title": "Haiku 5.5는 생각(Thinking)을 끌 수 없음",
+        "body": "도움말 기준 claude.ai에서 Haiku 5.5는 생각(Thinking) 켜고 끄기 불가, Effort 선택만 있음. 생각을 줄이고 싶으면 Effort를 낮출 것. API 문서도 Effort를 속도·비용 조절의 주된 방법으로 권장"
+      },
+      {
+        "title": "얼마나 빨라지고 싸졌나",
+        "body": "Anthropic 발표: Haiku 4.5보다 평균 약 75% 저렴(10만 토큰 이하 요청은 90%, 초과는 50% 낮음). 대화 창은 20만 → 100만 토큰, 최대 출력 6만 4천 → 12만 8천 토큰. 같은 글도 새 토크나이저로 토큰 수가 약 30% 많아질 수 있음. 복잡한 코딩 작업은 Sonnet·Opus가 낫다고 발표에 명시"
+      }
+    ],
+    "can": [
+      "후기·설문 응답·문의 메일을 주제별로 나누고 개수 세기",
+      "긴 글을 3줄 요약·핵심 낱말 뽑기",
+      "표·목록에서 날짜·이름·금액 같은 정보만 추출",
+      "그림(이미지)을 넣고 짧게 설명 받기 (입력: 글·그림 → 글)",
+      "같은 대화에서 Effort를 바꿔 속도와 꼼꼼함 비교"
+    ],
+    "cannot": [
+      "claude.ai에서 Haiku 5.5의 생각(Thinking) 끄기",
+      "복잡한 코딩·긴 다단계 판단에서 상위 모델만큼의 결과 기대 — 발표도 Sonnet·Opus 권장",
+      "분류 결과를 검토 없이 그대로 보고서 숫자로 쓰기",
+      "무료 요금제에서 사용 한도 걱정 없이 무제한 사용",
+      "Enterprise에서 관리자가 끈 모델·Effort 단계 사용"
+    ],
+    "safety": [
+      "고객 후기·설문을 넣기 전 이름·전화번호·주소·주문번호를 지울 것. 학생 소감은 이름 대신 번호로",
+      "빠른 모델일수록 표본 확인 필수 — 분류표에서 무작위 5개를 사람이 직접 다시 확인",
+      "분류 기준(칭찬·불만 등)은 사람이 먼저 정해서 줄 것. AI가 만든 기준을 그대로 쓰면 중요한 불만이 묻힐 수 있음",
+      "의료·법률·인사 평가처럼 결과가 사람에게 영향을 주는 판단은 Haiku 결과만으로 결정하지 않음",
+      "회사 정책상 외부 AI에 고객 자료를 넣을 수 있는지 먼저 확인할 것"
+    ]
+  },
+  "practice": {
+    "preview": "가상 쇼핑몰 후기 10개 → 분류표(구분·번호·한 줄 이유) + 개수 합계 + 'Effort 낮음 vs 높음 차이' 메모 3줄 + 내 업무 3개용 모델 선택 카드",
+    "follow": [
+      {
+        "title": "모델 메뉴에서 Haiku 5.5 고르기",
+        "minutes": 5,
+        "do": "claude.ai에서 새 대화를 열고 보내기 버튼 옆 모델 이름 클릭 → Haiku 5.5 선택. 안 보이면 'More models' 클릭",
+        "prompt": "",
+        "expect": "입력창 옆 모델 이름이 Haiku 5.5로 바뀜",
+        "note": "[확인 필요] 무료 계정 메뉴 표시 이름은 강의 전날 확인할 것"
+      },
+      {
+        "title": "Effort 확인하기",
+        "minutes": 3,
+        "do": "모델 이름 클릭 → 'Effort'에 마우스를 올려 단계 목록과 'Default' 표시 확인 후 Low 선택",
+        "prompt": "",
+        "expect": "Low가 선택됨, Thinking 끄기 토글은 Haiku 5.5에서 쓸 수 없음",
+        "note": "[확인 필요] Haiku 5.5에 Extra high 단계가 보이는지 화면으로 확인"
+      },
+      {
+        "title": "후기 10개 분류하기 (Effort Low)",
+        "minutes": 8,
+        "do": "아래 프롬프트를 붙여 넣고 보낸 뒤 답이 나오기까지 걸린 시간을 대략 메모",
+        "prompt": "아래 쇼핑몰 후기 10개를 '칭찬 / 배송·포장 / 상품 품질 / 고객 응대' 4가지 중 하나로 분류해 줘.\n표로 정리: 번호 | 분류 | 판단 이유(10자 이내)\n표 아래에 분류별 개수 합계를 적어 줘. 두 분류에 걸치면 더 중요한 쪽 하나만 골라 줘.\n\n1. 배송이 하루 늦었지만 포장은 꼼꼼했어요\n2. 사이즈 표랑 실제 크기가 달라서 교환했어요\n3. 색이 사진이랑 똑같아요. 재구매 의사 있어요\n4. 문의 답변이 3일 걸렸어요\n5. 가격 대비 품질 최고\n6. 상자가 찌그러져서 왔어요\n7. 설명서가 영어뿐이라 어려웠어요\n8. 아이가 정말 좋아해요\n9. 환불 처리가 빨라서 만족\n10. 냄새가 좀 나요. 며칠 환기하니 괜찮아졌어요",
+        "expect": "번호·분류·이유 3칸 표 + 분류별 개수 합계",
+        "note": "1번(늦은 배송+꼼꼼한 포장), 10번(냄새+해결)처럼 애매한 후기를 어떻게 처리했는지 볼 것"
+      },
+      {
+        "title": "Effort High로 다시 돌려 비교하기",
+        "minutes": 8,
+        "do": "같은 대화에서 Effort를 High로 바꾸고 아래 프롬프트 전송. 앞 결과와 달라진 번호에 표시",
+        "prompt": "방금 분류를 다시 꼼꼼히 검토해 줘. 애매한 후기는 왜 그 분류인지 한 줄로 설명하고, 처음 분류와 달라진 번호가 있으면 따로 표시해 줘.",
+        "expect": "애매한 후기 설명 + 달라진 번호 목록 (없을 수도 있음)",
+        "note": "속도 차이·설명 깊이 차이를 메모. 결과가 같다면 '이 작업은 Low로 충분'이 결론"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 자료로 분류표 만들기",
+        "minutes": 12,
+        "do": "내 업무의 짧은 글 10~30개(설문 응답·문의 메일 제목·수업 소감)를 개인정보를 지운 뒤 붙여 넣고 분류 기준을 내가 정해서 요청",
+        "prompt": "아래 글을 내가 정한 기준 [기준1 / 기준2 / 기준3 / 기타]로 분류해 표로 만들어 줘.\n표: 번호 | 분류 | 핵심 내용(15자 이내)\n표 아래에 분류별 개수와, 가장 많이 나온 의견 1줄 요약을 적어 줘.\n\n[여기에 글 붙여 넣기]",
+        "expect": "내 기준으로 나뉜 표 + 개수 + 1줄 요약",
+        "note": "표에서 무작위 5개를 골라 원문과 직접 대조할 것"
+      },
+      {
+        "title": "Sonnet과 한 번 비교하기",
+        "minutes": 7,
+        "do": "같은 프롬프트를 새 대화에서 Sonnet으로 보내 결과·속도를 비교",
+        "prompt": "",
+        "expect": "분류가 같은 번호·다른 번호 확인",
+        "note": "사용 한도가 걱정되면 글 10개로 줄여 비교"
+      },
+      {
+        "title": "모델 선택 카드 만들기",
+        "minutes": 7,
+        "do": "Haiku 5.5(Effort Low)로 아래 프롬프트를 보내 카드 완성",
+        "prompt": "내 업무 3가지를 '가벼운 반복 작업'과 '꼼꼼한 판단이 필요한 작업'으로 나누고, 각각 Claude의 어떤 모델(Haiku / Sonnet / Opus)과 노력 수준(Low / Medium / High)이 맞는지 표로 정리해 줘. 오늘 비교해 보니 [비교 메모 3줄]이었어.\n내 업무: [업무1], [업무2], [업무3]",
+        "expect": "업무 | 작업 성격 | 추천 모델 | 추천 Effort | 이유 표",
+        "note": "추천은 참고용, 내 비교 결과로 최종 결정"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 후기 10개를 Effort Low·Medium·High 3번 돌려 분류가 바뀐 번호를 표로 정리하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "후기 30개를 넣고 분류 + 불만 후기만 골라 '답장 초안 1줄'까지 한 번에 받은 뒤, 표본 5개 정확도를 직접 채점하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "우리 부서 주간 반복 업무 5가지를 골라 Haiku·Sonnet으로 각각 시험하고 '부서 모델 사용 기준표'(작업·모델·Effort·검토 방법) 초안 만들기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 분류표와 'Low vs High 차이' 메모를 보여 주고, 내 모델 선택 카드에서 'Haiku로 충분한 일' 1가지와 '상위 모델이 필요한 일' 1가지를 이유와 함께 말함",
+    "quiz": [
+      {
+        "q": "claude.ai에서 Claude Haiku 5.5에 대해 옳은 것은?",
+        "options": [
+          "Pro 이상에서만 고를 수 있다",
+          "생각(Thinking)을 끌 수 없고 노력 수준(Effort)은 고를 수 있다",
+          "Effort 메뉴가 없다",
+          "그림은 넣을 수 없다"
+        ],
+        "answer": 1,
+        "explain": "도움말 기준 Haiku 5.5는 claude.ai에서 Thinking을 끌 수 없고 Effort 선택기가 있음. 제품 페이지는 Free~Enterprise에서 선택 가능하다고 밝힘"
+      },
+      {
+        "q": "Effort를 높이면 생기는 일로 알맞은 것은?",
+        "options": [
+          "답이 더 짧고 빨라진다",
+          "더 꼼꼼해지지만 느려지고 사용 한도를 더 쓴다",
+          "모델이 자동으로 Opus로 바뀐다",
+          "다음 대화부터만 적용된다"
+        ],
+        "answer": 1,
+        "explain": "도움말: 높은 Effort는 더 철저한 답을 주지만 시간이 더 걸리고 사용 한도를 더 씀. 대화 중 바꾸면 다음 답부터 적용"
+      },
+      {
+        "q": "Haiku 5.5에 가장 잘 맞는 작업은?",
+        "options": [
+          "후기 수백 개를 주제별로 분류하기",
+          "복잡한 대형 코딩 프로젝트 설계",
+          "정확도가 생명인 전문 연구 분석",
+          "긴 다단계 에이전트 코딩"
+        ],
+        "answer": 0,
+        "explain": "발표는 분류·요약·추출 같은 대량·저비용 작업을 Haiku 5.5의 용도로 들고, 복잡한 코딩은 Sonnet·Opus가 낫다고 밝힘"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "완성도",
+        "high": "분류표 + 비교 메모 + 선택 카드 모두 완성",
+        "mid": "분류표 + 비교 메모",
+        "low": "분류표만"
+      },
+      {
+        "criterion": "검증 습관",
+        "high": "표본 5개를 원문과 대조해 정확도 기록",
+        "mid": "일부만 확인",
+        "low": "확인 안 함"
+      },
+      {
+        "criterion": "응용력",
+        "high": "내 업무 자료·내 기준으로 분류",
+        "mid": "예시 자료로만",
+        "low": "따라 하기만"
+      },
+      {
+        "criterion": "윤리·안전",
+        "high": "개인정보를 지우고 넣음 + 회사 정책 확인",
+        "mid": "일부 지움",
+        "low": "원문 그대로 넣음"
+      }
+    ],
+    "next": [
+      "Claude 메모리로 내 업무 맥락 기억시키기 (AI-2026-10-CAT01-001)",
+      "Google Sheets 안에서 Claude로 표 정리하기 (AI-2026-10-CAT06-001)",
+      "AI 모델별 속도·정확도 비교 실험 설계 (CAT-12)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: '서류 한 장에 트럭 부르기' 비유",
+        "note": "모델 이름보다 '일에 맞는 크기' 강조"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: Haiku 5.5 특징, 모델 비교표, Effort 메뉴, 개인정보 지우기",
+        "note": "벤치마크 숫자는 깊게 다루지 않음"
+      },
+      {
+        "time": "35~51분",
+        "content": "따라 하기: 모델 선택 → Effort Low → 후기 분류",
+        "note": "모두 같은 가상 후기 사용"
+      },
+      {
+        "time": "51~59분",
+        "content": "Effort High로 다시 돌려 비교",
+        "note": "결과가 같아도 정상 — 그게 결론"
+      },
+      {
+        "time": "59~85분",
+        "content": "내 자료 분류 → Sonnet 비교 → 모델 선택 카드",
+        "note": "개인정보 지우기 먼저 확인"
+      },
+      {
+        "time": "85~90분",
+        "content": "짝 발표·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "서류 한 장 보내는데 대형 트럭을 부르진 않잖아요? AI도 똑같습니다. 오늘은 Claude에서 가장 빠르고 가벼운 모델, Haiku 5.5로 후기 정리 같은 반복 일을 빨리 끝내는 법을 배워 보겠습니다."
+      },
+      {
+        "label": "Effort 설명",
+        "text": "Effort는 같은 모델에게 '대충 빨리' 할지 '천천히 꼼꼼히' 할지 정해 주는 버튼이에요. 높이면 더 꼼꼼하지만 느리고, 사용량도 더 씁니다."
+      },
+      {
+        "label": "보안 전환",
+        "text": "자료를 붙여 넣기 전에 잠깐 멈춰 주세요. 고객 이름, 전화번호, 주문번호가 있나요? 있으면 먼저 지우고 넣습니다. 빠른 모델이라고 안전 규칙이 빨라지는 건 아니에요."
+      },
+      {
+        "label": "비교 결과 정리",
+        "text": "Low와 High 결과가 똑같았다면, 이 일은 Low로 충분하다는 뜻입니다. 달라졌다면 어떤 후기에서 달라졌는지 보세요. 그게 바로 사람이 꼭 확인해야 할 애매한 부분입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "빠른 모델로 많이 처리하고, 애매한 것과 중요한 판단만 사람과 큰 모델이 맡는다. 오늘 만든 모델 선택 카드를 책상 옆에 붙여 두세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "무료 계정 모델 메뉴에 Haiku 5.5가 안 보임",
+        "response": "'More models' 확인 → 그래도 없으면 강사 화면 공유로 시연하고 수강생은 기본 모델로 같은 분류 실습, 비교는 강사 결과로 진행"
+      },
+      {
+        "situation": "Effort 메뉴가 안 보임",
+        "response": "앱 버전·브라우저 새로 고침 확인, 안 되면 Effort 비교 대신 'Haiku vs Sonnet' 비교로 바꿔 진행"
+      },
+      {
+        "situation": "무료 사용 한도 도달",
+        "response": "짝과 한 계정을 번갈아 쓰거나 후기를 5개로 줄임, 강사가 미리 만든 결과 인쇄본으로 비교"
+      },
+      {
+        "situation": "Low·High 결과가 완전히 같음",
+        "response": "정상 결과로 설명 — '이 작업은 Low로 충분'을 카드에 기록하고 더 애매한 후기 3개를 추가해 다시 시도"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "모델 이름 메뉴를 못 찾음",
+        "fix": "입력창 오른쪽 아래 보내기 버튼 바로 옆의 모델 이름 글자를 클릭"
+      },
+      {
+        "issue": "Thinking 끄기 토글이 없음",
+        "fix": "정상 — Haiku 5.5는 claude.ai에서 생각을 끌 수 없음. Effort를 낮출 것"
+      },
+      {
+        "issue": "표가 아니라 문장으로 답함",
+        "fix": "'표로 정리: 번호 | 분류 | 이유' 형식을 다시 붙여 '표로만 답해 줘' 요청"
+      },
+      {
+        "issue": "분류 개수 합계가 10이 아님",
+        "fix": "'합계가 원문 개수와 같은지 확인해 다시 세어 줘' 요청 후 사람이 직접 세어 확인"
+      },
+      {
+        "issue": "내 자료가 너무 길어 붙여 넣기 어려움",
+        "fix": "30개 이하로 나눠 여러 번 보내거나 파일로 올림, 파일에도 개인정보가 없는지 먼저 확인"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로 Haiku 5.5를 쓸 수 있나요?",
+        "a": "제품 페이지 기준 Free·Pro·Max·Team·Enterprise에서 선택 가능. 요금 페이지 표는 Free에 'Haiku'라고만 적음 [확인 필요]"
+      },
+      {
+        "q": "Haiku 4.5와 무엇이 다른가요?",
+        "a": "발표 기준 평균 약 75% 저렴, 대화 창 20만 → 100만 토큰, 최대 출력 2배, Haiku 최초 Effort 조절"
+      },
+      {
+        "q": "Effort는 어떤 단계가 있나요?",
+        "a": "도움말 기준 Low·Medium·High·Extra high·Max, 모델별 권장값에 Default 표시. API 문서상 Haiku 5.5 기본값은 Medium"
+      },
+      {
+        "q": "Haiku로 보고서 글쓰기도 되나요?",
+        "a": "가능하지만 Claude Academy는 글쓰기·분석 대부분은 Sonnet을 기본으로 권장. 초안은 Haiku, 다듬기는 Sonnet처럼 나눠 쓰는 방법 추천"
+      },
+      {
+        "q": "한국어 분류도 정확한가요?",
+        "a": "공식 발표에 한국어 성능 수치는 없음 [미검증]. 실습 표본 확인으로 직접 판단할 것"
+      },
+      {
+        "q": "대화 중에 모델을 바꿔도 되나요?",
+        "a": "도움말 기준 대화 중 모델·Effort 변경 가능, 다음 답부터 적용"
+      },
+      {
+        "q": "Claude Code에서도 쓰나요?",
+        "a": "제품 페이지 기준 Claude Code에서도 사용 가능"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "가상 후기 10개 분류까지만 진행, Effort는 Low 하나로. 비교는 강사 화면으로 보여 주고 '빠른 모델 = 간단한 일'만 기억하게 함"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "내 자료 분류 + Sonnet 비교 + 도전과제 ⭐⭐(답장 초안·정확도 채점) 필수, 모델 선택 카드를 팀 공유용으로 다듬기"
+      },
+      {
+        "level": "교사 대상 (JOB-EDU)",
+        "guide": "수업 소감·형성평가 주관식 응답을 번호로만 넣어 '이해함·헷갈림·질문' 분류, 헷갈림 응답만 모아 다음 수업 보충 계획에 활용. 학생 이름 절대 넣지 않음"
+      },
+      {
+        "level": "소상공인·마케팅 (JOB-MKT)",
+        "guide": "스마트스토어·배달앱 후기를 주 단위로 분류해 불만 유형 순위표 만들기, 상위 불만 1개는 Sonnet으로 개선 문구 작성"
+      },
+      {
+        "level": "한국어 학습자·다문화 (JOB-GLB)",
+        "guide": "짧은 한국어 문장 10개를 '인사·부탁·사과·감사'로 분류하는 활동으로 바꿈. 분류 이유를 쉬운 한국어로 말하게 해 말하기 연습으로 연결"
+      }
+    ],
+    "pro_points": [
+      "모델 선택은 '정답'이 아니라 '비용·속도·정확도 균형' 문제임을 강조",
+      "Low·High 결과가 같으면 실패가 아니라 '싼 방법으로 충분'이라는 발견임",
+      "표본 확인 5개 습관이 빠른 모델 활용의 핵심 안전장치",
+      "벤치마크 숫자는 회사 발표 기준임을 밝히고 깊이 다루지 않음"
+    ],
+    "day_before": [
+      "무료 계정·유료 계정 각각 모델 메뉴에 Haiku 5.5가 보이는지 확인 [확인 필요]",
+      "Haiku 5.5의 Effort 단계 목록(Extra high 표시 여부)과 Default 위치 캡처 준비",
+      "가상 후기 10개로 Low·High 결과를 미리 돌려 인쇄본 준비 (Plan B용)",
+      "모델 메뉴·Effort 메뉴 화면 캡처 준비",
+      "수강생 자료 개인정보 지우기 안내문 1장 준비"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 무료(Free) 계정 모델 메뉴의 Haiku 5.5 표시: 제품 페이지는 Free 포함 전 요금제 선택 가능이라 밝히나 요금 페이지 표는 버전 없이 'Haiku'만 표기",
+    "[확인 필요] claude.ai에서 Haiku 5.5의 Effort 단계 목록: 도움말은 Extra high를 'Opus 4.7 이후'에만 있다고 적고, API 문서는 Haiku 5.5가 5단계 모두 지원한다고 적음",
+    "[확인 필요] 메뉴 이름('More models'·'Effort')은 영어 화면 기준, 한국어 화면 표기는 미확인",
+    "[미검증] 한국어 분류 정확도: 공식 발표에 한국어 수치 없음",
+    "벤치마크·속도 수치는 Anthropic 발표·고객사 인용 기준이며 교안에서 직접 재현하지 않음",
+    "국내 사용: claude.ai는 국내 이용 가능, 원화 가격은 확인하지 못함"
+  ],
+  "sources": [
+    {
+      "title": "Anthropic – Introducing Claude Haiku 5.5 (2026-10-07)",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Anthropic – Claude Haiku 제품 페이지",
+      "url": "https://www.anthropic.com/claude/haiku",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Claude 도움말 – Change the model, effort, and thinking settings",
+      "url": "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Claude 릴리스 노트 (2026-10-07 Claude Haiku 5.5)",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Claude 요금제",
+      "url": "https://claude.com/pricing",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Claude Platform Docs – Claude Haiku 5.5 개요",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Claude Platform Docs – What's new in Claude Haiku 5.5",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Claude Platform Docs – Effort",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Claude Academy – Choosing the right Claude model",
+      "url": "https://academy.claude.com/tutorials/choosing-the-right-claude-model",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Claude Platform Docs – Claude Haiku 4.5 개요",
+      "url": "https://platform.claude.com/docs/en/models/haiku-4-5/overview",
+      "checked": "2026-10-15"
+    }
+  ]
+}

@@ -174,13 +174,13 @@
       "company": "Anthropic",
       "type": "update",
       "title": "Claude Haiku 5.5",
-      "summary": "지금까지 가장 저렴하고 빠른 소형 모델 Haiku 5.5 출시",
+      "summary": "Claude 5.5 계열 중 가장 빠르고 저렴한 소형 모델, Haiku 최초 노력 수준(Effort) 조절·대화 창 100만 토큰, claude.ai 전 요금제(Free 포함)·Claude Code·API 제공",
       "source": {
-        "title": "Claude 릴리스 노트",
-        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+        "title": "Anthropic – Introducing Claude Haiku 5.5",
+        "url": "https://www.anthropic.com/claude-haiku-5-5"
       },
-      "checked": "2026-10-12",
-      "lesson_id": null
+      "checked": "2026-10-15",
+      "lesson_id": "AI-2026-10-CAT01-008"
     },
     {
       "id": "chatgpt-2026-10-07-teens-study",
