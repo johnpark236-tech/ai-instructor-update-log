@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 57,
+  "count": 58,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-005",
+      "version": "v1.0",
+      "created_at": "2026-10-16 00:20 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "Tab 한 번으로 다음 지시 이어 가기 — Codex 다음 메시지 추천(Composer predictions)으로 '수업 타이머 웹페이지' 완성하기",
+      "summary": "2026-10-09부터 ChatGPT 데스크톱 앱의 Codex에서 답이 끝나면 다음에 보낼 메시지를 입력창에 미리 제안하는 기능(베타)이 생김. Tab으로 받아 고친 뒤 직접 전송, 자동 전송 없음. 개인 ChatGPT Pro(18세 이상) 전용, 베타 동안 추천 생성은 사용 한도 차감 없음",
+      "tool": "Codex",
+      "feature": "다음 메시지 추천(Composer predictions, 베타) — ChatGPT 데스크톱 앱 Codex에서 Tab으로 받는 후속 지시 제안",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-09",
+      "categories": [
+        "CAT-07",
+        "CAT-02",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 실습 폴더 안에 '수업 타이머 웹페이지'(index.html) 1개 + ② 추천 문장을 그대로 받은 것·고쳐서 보낸 것·버린 것을 적은 '추천 기록표' 1장 + ③ 추천 켜기·끄기 설정 위치 메모",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "⌨️",
+      "one_liner": "Codex가 다음 지시를 미리 써 줌"
+    },
     {
       "id": "AI-2026-10-CAT07-004",
       "version": "v1.0",

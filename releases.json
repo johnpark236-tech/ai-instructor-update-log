@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 22:10 KST",
+  "updated_at": "2026-10-16 00:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -71,11 +71,11 @@
       "title": "Codex 다음 메시지 추천(베타)",
       "summary": "Codex 데스크톱에서 대화 흐름을 보고 다음에 보낼 메시지를 제안, Tab으로 받아 고친 뒤 전송 (개인 Pro)",
       "source": {
-        "title": "ChatGPT 릴리스 노트",
-        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        "title": "OpenAI 도움말 – Composer predictions in Codex",
+        "url": "https://help.openai.com/en/articles/20001601-composer-predictions-in-codex"
       },
-      "checked": "2026-10-12",
-      "lesson_id": null
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT07-005"
     },
     {
       "id": "midjourney-2026-10-08-thinking-shared-folders",
