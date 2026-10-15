@@ -1,0 +1,629 @@
+{
+  "id": "AI-2026-10-CAT01-009",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-15 22:10 KST",
+  "checked": "2026-10-15",
+  "review_by": "2027-01-15",
+  "title": "Gemini 4 Argon으로 여러 단계 분석 한 번에 — 매출 표 분석 → 원인 가설 → 발표 5장 개요 + Flash와 비교한 '어려운 일 맡기기' 카드 만들기",
+  "summary": "Gemini 4 Argon은 2026-10-13 Gemini 앱에 순차 제공된 Google 최상위(프런티어) 모델. 복잡한 다단계 업무(재무 보고서 분석·발표 자료 만들기·인터랙티브 3D 모델)에 맞춤, Google AI Pro·Ultra 구독자 대상. 가상 매출 표를 Argon으로 분석해 원인 가설·발표 개요를 받고, 가벼운 모델(Flash) 결과와 비교해 '어떤 일을 Argon에 맡길지' 기준 카드를 만듦",
+  "glance": {
+    "emoji": "🧠",
+    "one_liner": "어려운 다단계 분석은 Argon에게",
+    "cards": [
+      {
+        "icon": "🏔️",
+        "title": "최상위 모델",
+        "text": "Google의 새 프런티어 모델"
+      },
+      {
+        "icon": "🧩",
+        "title": "다단계 업무",
+        "text": "분석·발표 자료·3D 모델까지"
+      },
+      {
+        "icon": "💬",
+        "title": "더 직접적인 답",
+        "text": "얼버무림·반복 줄인 답변"
+      },
+      {
+        "icon": "💳",
+        "title": "Pro·Ultra 전용",
+        "text": "무료·AI Plus는 사용 불가"
+      }
+    ],
+    "diagram": {
+      "title": "Argon 이렇게 씀",
+      "nodes": [
+        {
+          "icon": "🔽",
+          "label": "모델 선택기 열기"
+        },
+        {
+          "icon": "🧠",
+          "label": "Argon 선택"
+        },
+        {
+          "icon": "📊",
+          "label": "자료·과제 입력"
+        },
+        {
+          "icon": "🪜",
+          "label": "단계별 결과"
+        },
+        {
+          "icon": "✅",
+          "label": "숫자 검증"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "질문 쪼개 넣기",
+        "text": "분석·원인·발표 개요를 질문 3~4번에 나눠 묻고 직접 이어 붙임"
+      },
+      "after": {
+        "label": "한 번에 맡기기",
+        "text": "과제 전체를 한 번에 주고 단계별 결과를 받아 검증만 함"
+      }
+    },
+    "cautions": [
+      "실제 매출·고객 정보 넣지 않기",
+      "계산 숫자는 직접 다시 확인",
+      "가설은 가설로만 표시하기"
+    ]
+  },
+  "tool": "Gemini",
+  "feature": "Gemini 4 Argon — Gemini 앱 최상위 모델(복잡한 다단계 업무용, Google AI Pro·Ultra)",
+  "company": "Google",
+  "type": "update",
+  "released": "2026-10-13",
+  "categories": [
+    "CAT-01",
+    "CAT-06",
+    "CAT-12"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-BIZ",
+    "JOB-DAT",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Google 계정 + Google AI Pro 또는 Ultra 구독 (무료·AI Plus는 Argon 사용 불가)",
+    "PC 크롬 권장 — gemini.google.com (모델 선택기 확인이 쉬움)",
+    "비교용 자료: 교안 프롬프트 안의 가상 월별 매출 표 (실제 회사 자료 사용 금지)",
+    "내 자료 실습용: 개인정보·기밀을 지운 표·보고서 1개 (PDF·스프레드시트·붙여 넣기 표)",
+    "강사: Pro 계정 1개 이상으로 시연 화면 준비 (수강생 무료 계정 대비)"
+  ],
+  "outcome": "① 가상 매출 표 분석 결과(핵심 지표 표 + 원인 가설 3개 + 확인 방법) + ② 발표 5장 개요(장 제목·핵심 메시지·넣을 그래프) + ③ Flash vs Argon 비교 메모 3줄 + ④ 내 업무용 '어려운 일 맡기기' 카드 1장",
+  "objectives": [
+    "Gemini 앱 모델 선택기에서 Gemini 4 Argon과 사고 수준(Thinking level)을 고를 수 있음",
+    "여러 단계로 이뤄진 분석 과제를 한 프롬프트로 맡기고 단계별 결과의 숫자·근거를 검증할 수 있음",
+    "같은 과제를 가벼운 모델과 비교해 Argon이 필요한 일과 아닌 일을 구분하는 기준을 세울 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "Gemini 앱의 Gemini 4 Argon은 Google AI Pro·Ultra 구독자 전용. 무료·AI Plus는 사용 불가. 개발자 API는 유료 등급만, 2026-11-30까지 소개 가격(입력 100만 토큰당 $2·출력 $10), 12-01부터 $4·$20",
+    "plans": [
+      {
+        "name": "무료",
+        "price": "₩0",
+        "features": "Gemini 4 Argon 불가, 대화 창 3만 2천 토큰"
+      },
+      {
+        "name": "Google AI Plus",
+        "price": "₩7,500/월",
+        "features": "Gemini 4 Argon 불가, 무료의 2배 사용량, 대화 창 12만 8천 토큰"
+      },
+      {
+        "name": "Google AI Pro",
+        "price": "미국 $19.99/월 (원화 가격 [확인 필요])",
+        "features": "Gemini 4 Argon, 작업(tasks) 모드, 무료의 4배 사용량, 대화 창 100만 토큰"
+      },
+      {
+        "name": "Google AI Ultra",
+        "price": "₩119,000/월부터",
+        "features": "Gemini 4 Argon, AI Pro의 5배 또는 20배 사용량, AI Studio·Antigravity에서도 Argon 체험"
+      },
+      {
+        "name": "Gemini API (유료 등급)",
+        "price": "입력 $2 / 출력 $10 (100만 토큰당, 11-30까지 소개 가격)",
+        "features": "12-01부터 입력 $4·출력 $20, 무료 등급 불가, 모델 코드 gemini-4-argon"
+      }
+    ],
+    "note": "구독 가격은 2026-10-14 Gemini 구독 페이지(한국·미국) 확인값, 이번 작성 때 한국 페이지 재접속 실패로 재확인 못 함 [확인 필요]. 원화·달러가 섞여 요금 그래프는 생략됨. 사용량은 5시간마다 새로 채워지고 주간 한도 있음, 상위 모델·높은 사고 수준일수록 더 많이 씀. 한도 도달 시 Flash-Lite로 이어짐(도움말)",
+    "checked": "2026-10-15",
+    "sources": [
+      {
+        "title": "Gemini 구독 요금제 (한국)",
+        "url": "https://gemini.google/kr/subscriptions/?hl=ko",
+        "checked": "2026-10-14"
+      },
+      {
+        "title": "Gemini 구독 요금제 (미국)",
+        "url": "https://gemini.google/subscriptions/",
+        "checked": "2026-10-14"
+      },
+      {
+        "title": "Gemini 앱 도움말 – Gemini Apps limits & feature availability",
+        "url": "https://support.google.com/gemini/answer/16275805?hl=en",
+        "checked": "2026-10-15"
+      },
+      {
+        "title": "Gemini API – What's new in Gemini 4 Argon (가격)",
+        "url": "https://ai.google.dev/gemini-api/docs/latest-model",
+        "checked": "2026-10-15"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "text": "Gemini 4 Argon 발표 — 코딩·기업 문서 업무·보안 방어용 최상위 모델, 처음엔 보안 방어 기관(Fairwind 프로그램)만 사용"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "Gemini 앱에서 Google AI Pro·Ultra 구독자에게 전 세계 순차 제공 시작, 채팅 ↔ 작업(tasks) 토글·macOS 앱 Antigravity 코딩 화면 함께 공개"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "개발자용 Gemini API 유료 등급·Google AI Studio·Android Studio 공개, 검색 AI 모드에서도 Pro·Ultra 구독자 사용"
+    },
+    {
+      "date": "2026-12-01",
+      "text": "API 소개 가격 종료 예정 — 입력 $2→$4, 출력 $10→$20 (100만 토큰당)"
+    }
+  ],
+  "theory": {
+    "definition": "Gemini 4 Argon은 Google의 최신 최상위(프런티어) 모델임. 재무 보고서 분석·발표 자료 만들기·인터랙티브 3D 모델처럼 여러 단계를 거치는 복잡한 일에 맞춤. Gemini 앱에서는 Google AI Pro·Ultra 구독자가 사용. 답이 더 직접적이고(얼버무림·반복·상투어 감소), 긴 작업 중 진행 상황을 더 자주 알려 줌(Google 발표)",
+    "analogy": "Flash-Lite·Flash는 '동네 빠른 심부름 센터', Argon은 '여러 부서를 거치는 프로젝트를 혼자 끝내는 수석 컨설턴트'. 우유 사 오기에 컨설턴트를 부를 필요 없고, 회사 연간 분석은 심부름 센터에 맡기기 어려움",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Flash-Lite·Flash",
+        "Gemini 4 Argon"
+      ],
+      "rows": [
+        [
+          "성격",
+          "빠름·가벼움, 일상 업무",
+          "깊은 추론, 복잡한 다단계 업무"
+        ],
+        [
+          "잘 맞는 일",
+          "요약·브레인스토밍·짧은 답",
+          "재무 분석·발표 자료·코드 이전·연구"
+        ],
+        [
+          "Gemini 앱 요금제",
+          "무료부터 사용",
+          "Google AI Pro·Ultra만"
+        ],
+        [
+          "응답 속도",
+          "빠름",
+          "느릴 수 있음 (API 문서: 긴 요청은 몇 분)"
+        ],
+        [
+          "사용량 소모",
+          "적음",
+          "많음 — 상위 모델일수록 한도를 더 씀"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "모델 선택기와 사고 수준",
+        "body": "도움말 기준: 채팅창 아래 현재 모델 이름 클릭 → 원하는 모델 선택 → 사고 수준 Low·Medium·High 선택(선택 안 하면 Low). 고른 모델·사고 수준은 그 대화 동안 유지. 수동 모델 변경은 Google AI 요금제 필요. 도움말 문서에는 Argon 표시 이름이 아직 없음 [확인 필요]"
+      },
+      {
+        "title": "자동 모델 선택(Auto)",
+        "body": "설정 > 사용 한도(Usage limits) 아래쪽에서 켜고 끔. 켜면 질문마다 가장 효율적인 모델·사고 수준으로 자동 연결. Argon으로 꼭 비교 실습하려면 자동 선택 대신 직접 고를 것"
+      },
+      {
+        "title": "Argon이 바뀐 점 (개발자 문서)",
+        "body": "대화 창(입력+사고+출력 합계) 1,048,576 토큰. 입력은 글·이미지·영상·오디오·PDF, 출력은 글. API 사고 수준 low·medium(기본)·high. 문서는 '세 수준을 모두 시험해 품질 기준을 넘는 가장 낮은 수준을 고를 것' 권장 — 앱 사용에도 같은 원리 적용 가능"
+      }
+    ],
+    "can": [
+      "표·보고서를 넣고 지표 계산 → 원인 가설 → 확인 방법까지 한 번에 받기",
+      "분석 결과를 발표 자료 장별 개요(제목·메시지·그래프)로 바꾸기",
+      "PDF·이미지·영상·오디오를 함께 넣고 종합 분석 받기 (입력 형식은 API 문서 기준)",
+      "같은 대화에서 사고 수준을 바꿔 결과 차이 비교하기",
+      "작업(tasks) 모드로 전환해 컴퓨터를 떠나 있어도 일을 이어 맡기기 (AI-2026-10-CAT08-003 참고)"
+    ],
+    "cannot": [
+      "무료·Google AI Plus 요금제에서 Argon 선택",
+      "계산·통계 숫자를 검증 없이 그대로 보고서에 쓰기",
+      "원인 가설을 사실처럼 단정하기 — 데이터가 보여 주는 것은 상관관계까지",
+      "사용량 걱정 없이 무제한 사용 (한도는 5시간마다 채워지고 주간 한도 있음)",
+      "한국어 화면의 메뉴 이름이 영어 화면과 같다고 가정하기 [확인 필요]"
+    ],
+    "safety": [
+      "실제 매출·고객·직원 정보는 넣지 말 것. 실습은 가상 자료, 업무 자료는 회사 정책 확인 후 익명화",
+      "최상위 모델도 계산을 틀릴 수 있음 — 합계·증감률 2~3개는 계산기·스프레드시트로 직접 다시 확인",
+      "원인 가설에는 '가설' 표시 + 확인 방법을 붙일 것. 보고서에 단정 표현 금지",
+      "재무·투자·법률 판단은 AI 분석만으로 결정하지 않음. 전문가 검토 거칠 것",
+      "학생·고객 자료로 수업·업무 분석 시 이름 대신 번호 사용"
+    ]
+  },
+  "practice": {
+    "preview": "가상 카페 6개월 매출 표 → ① 핵심 지표 표(월별 매출·전월 대비 증감률·객단가) + ② 원인 가설 3개와 확인 방법 + ③ 발표 5장 개요 + ④ Flash와 Argon 비교 메모 3줄 + ⑤ 내 업무용 '어려운 일 맡기기' 카드",
+    "follow": [
+      {
+        "title": "비교 기준 만들기 — Flash로 먼저",
+        "minutes": 8,
+        "do": "gemini.google.com 새 대화 → 채팅창 아래 모델 이름 클릭 → Flash 선택 → 아래 프롬프트 전송, 답 받은 시간과 결과 저장",
+        "prompt": "아래는 가상 카페의 6개월 매출 자료야.\n\n월 | 매출(만 원) | 방문 고객 수 | 신메뉴 출시 | 비 온 날\n4월 | 1,820 | 2,600 | 없음 | 6일\n5월 | 2,050 | 2,850 | 딸기 라테 | 8일\n6월 | 1,960 | 2,500 | 없음 | 14일\n7월 | 2,310 | 2,700 | 빙수 | 16일\n8월 | 2,420 | 2,750 | 없음 | 9일\n9월 | 2,120 | 2,650 | 없음 | 7일\n\n다음을 순서대로 해 줘.\n1) 월별 전월 대비 매출 증감률과 객단가(매출÷방문 고객 수)를 표로 계산\n2) 매출 변화의 원인 가설 3개 — 각각 근거가 된 숫자와 '확인하려면 무엇을 더 봐야 하는지' 함께\n3) 사장님께 보고할 발표 자료 5장 개요 — 장마다 제목, 핵심 메시지 한 줄, 넣을 그래프 종류\n가설은 반드시 '가설'이라고 표시해 줘.",
+        "expect": "계산 표 + 가설 3개 + 발표 5장 개요 (Flash 기준 결과)",
+        "note": "결과 전체를 메모장에 복사해 둘 것 — 4단계 비교용"
+      },
+      {
+        "title": "모델을 Gemini 4 Argon으로 바꾸기",
+        "minutes": 4,
+        "do": "새 대화 → 채팅창 아래 모델 이름 클릭 → Gemini 4 Argon 선택 → 사고 수준 Medium 선택",
+        "prompt": "",
+        "expect": "채팅창 아래 모델 이름이 Argon으로 바뀜",
+        "note": "[확인 필요] 선택기의 Argon 표시 이름(예: 'Pro' 자리 대체 여부)은 강의 전날 확인할 것. 안 보이면 요금제가 Pro·Ultra인지, 순차 제공 중인지 확인"
+      },
+      {
+        "title": "같은 과제를 Argon에 맡기기",
+        "minutes": 10,
+        "do": "1단계와 똑같은 프롬프트를 붙여 넣고 전송. 중간 진행 안내가 보이는지, 답 받는 데 걸린 시간 메모",
+        "prompt": "(1단계 프롬프트 그대로 붙여 넣기)",
+        "expect": "계산 표 + 가설 3개(근거 숫자·확인 방법) + 발표 5장 개요",
+        "note": "6월(비 온 날 14일)·7월(빙수 출시)처럼 원인이 겹치는 달을 어떻게 설명했는지 볼 것"
+      },
+      {
+        "title": "숫자 검증하고 두 결과 비교하기",
+        "minutes": 8,
+        "do": "증감률 2개(5월·9월)와 객단가 1개(7월)를 계산기로 직접 계산해 Flash·Argon 결과와 대조. 이어서 아래 프롬프트를 Argon 대화에 전송",
+        "prompt": "방금 표의 숫자를 다시 검산해 줘. 틀린 숫자가 있으면 고쳐서 표시하고, 원인 가설 3개 중 데이터만으로는 확신할 수 없는 부분을 솔직하게 짚어 줘.",
+        "expect": "검산 결과 + 확신하기 어려운 부분 목록",
+        "note": "정답 참고: 5월 증감률 약 +12.6%, 9월 약 -12.4%, 7월 객단가 약 8,556원"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 자료로 다단계 분석 맡기기",
+        "minutes": 10,
+        "do": "개인정보·기밀을 지운 내 표·보고서를 올리거나 붙여 넣고 아래 프롬프트의 [ ]를 바꿔 Argon(사고 수준 Medium)으로 전송",
+        "prompt": "첨부한 [자료 이름]을 보고 다음을 순서대로 해 줘.\n1) 핵심 숫자 [3~5개 지표]를 표로 정리\n2) 눈에 띄는 변화 3가지와 원인 가설 — 가설마다 근거 숫자와 확인 방법\n3) [보고 대상]에게 보여 줄 발표 [5]장 개요(제목·핵심 메시지·그래프 종류)\n가설은 '가설'로 표시하고, 자료만으로 알 수 없는 것은 모른다고 적어 줘.",
+        "expect": "내 자료 기반 지표 표 + 가설 3개 + 발표 개요",
+        "note": "업무 자료는 회사 정책상 외부 AI 입력이 허용되는지 먼저 확인"
+      },
+      {
+        "title": "사고 수준 High로 한 번 더",
+        "minutes": 7,
+        "do": "같은 대화에서 사고 수준을 High로 바꾸고 아래 프롬프트 전송, Medium 결과와 달라진 점 메모",
+        "prompt": "같은 분석을 더 깊이 다시 검토해 줘. 놓친 변화나 더 나은 가설이 있으면 앞 답과 달라진 점만 따로 정리해 줘.",
+        "expect": "앞 답과 달라진 점 목록 (없을 수도 있음)",
+        "note": "차이가 없으면 '이 일은 Medium으로 충분'이 결론. 높은 사고 수준은 사용량을 더 씀"
+      },
+      {
+        "title": "'어려운 일 맡기기' 카드 만들기",
+        "minutes": 7,
+        "do": "가벼운 모델(Flash)로 바꿔 아래 프롬프트 전송, 카드 완성 후 인쇄하거나 메모 앱에 저장",
+        "prompt": "내 업무 4가지를 'Flash로 충분한 가벼운 일'과 'Gemini 4 Argon이 필요한 복잡한 다단계 일'로 나누고, 각각 추천 모델·사고 수준(Low/Medium/High)·검증 방법을 표로 정리해 줘.\n오늘 비교 결과: [비교 메모 3줄]\n내 업무: [업무1], [업무2], [업무3], [업무4]",
+        "expect": "업무 | 일의 성격 | 추천 모델 | 사고 수준 | 검증 방법 표",
+        "note": "추천은 참고용 — 내 비교 결과로 최종 결정"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 매출 과제를 Argon 사고 수준 Low·Medium·High로 돌려 가설이 바뀐 부분을 표로 정리하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "발표 5장 개요를 Gemini Canvas로 넘겨 월별 매출 막대그래프가 들어간 한 장짜리 보고 화면 만들고, 그래프 숫자를 원본 표와 대조하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "공개된 공공 통계(예: 지자체 관광객 수) PDF를 넣고 '분석 → 가설 → 정책 제안 3개 → 발표 개요'를 Argon 작업(tasks) 모드로 맡긴 뒤 근거 페이지 번호까지 검증하기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 Flash vs Argon 비교 메모와 '어려운 일 맡기기' 카드를 보여 주고, Argon이 꼭 필요한 일 1가지와 Flash로 충분한 일 1가지를 이유와 함께 말함",
+    "quiz": [
+      {
+        "q": "2026-10-13 기준 Gemini 앱에서 Gemini 4 Argon을 쓸 수 있는 요금제는?",
+        "options": [
+          "무료 포함 모든 요금제",
+          "Google AI Plus 이상",
+          "Google AI Pro와 Ultra",
+          "Google AI Ultra만"
+        ],
+        "answer": 2,
+        "explain": "Gemini 앱 릴리스 노트: Google AI Pro·Ultra 구독자에게 전 세계 순차 제공. 무료·AI Plus는 언급 없음"
+      },
+      {
+        "q": "Gemini 앱에서 사고 수준(Thinking level)을 따로 고르지 않으면?",
+        "options": [
+          "High로 시작한다",
+          "Low로 시작한다",
+          "모델이 자동으로 Argon이 된다",
+          "사고 수준 기능이 꺼진다"
+        ],
+        "answer": 1,
+        "explain": "도움말: 사고 수준을 선택하지 않으면 기본값 Low. 고른 모델·사고 수준은 그 대화 동안 유지"
+      },
+      {
+        "q": "Argon이 만든 매출 분석을 보고서에 쓸 때 가장 알맞은 행동은?",
+        "options": [
+          "최상위 모델이니 그대로 쓴다",
+          "숫자 일부를 직접 검산하고 원인은 '가설'로 표시한다",
+          "가설을 확정 원인으로 바꿔 쓴다",
+          "사고 수준을 High로 하면 검증이 필요 없다"
+        ],
+        "answer": 1,
+        "explain": "최상위 모델도 계산·해석을 틀릴 수 있음. 숫자 검산과 가설 표시가 기본 안전장치"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "완성도",
+        "high": "분석 표 + 가설 + 발표 개요 + 비교 메모 + 카드 모두 완성",
+        "mid": "분석 표 + 발표 개요",
+        "low": "분석 표만"
+      },
+      {
+        "criterion": "검증 습관",
+        "high": "숫자 3개 이상 직접 검산 + 틀린 곳 기록",
+        "mid": "1~2개만 확인",
+        "low": "확인 안 함"
+      },
+      {
+        "criterion": "비교 판단",
+        "high": "Flash·Argon·사고 수준 차이를 근거로 카드 작성",
+        "mid": "모델 비교만",
+        "low": "비교 없이 카드 작성"
+      },
+      {
+        "criterion": "윤리·안전",
+        "high": "가상·익명 자료 사용 + 가설 표시 + 회사 정책 확인",
+        "mid": "일부만 지킴",
+        "low": "실제 자료 그대로 입력"
+      }
+    ],
+    "next": [
+      "Gemini 작업(tasks) 모드로 긴 일을 맡겨 두기 (AI-2026-10-CAT08-003)",
+      "Gemini 노트북으로 자료를 모아 두고 반복 분석하기 (AI-2026-10-CAT06-003)",
+      "Claude Haiku 5.5로 일에 맞는 모델 고르기 비교 (AI-2026-10-CAT01-008)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: '우유 심부름에 컨설턴트?' 비유",
+        "note": "모델 이름보다 '일의 난이도에 맞는 모델' 강조"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: Argon 소개, 요금제, 모델 선택기·사고 수준, 비교표, 안전",
+        "note": "벤치마크·API 내용은 간단히"
+      },
+      {
+        "time": "35~47분",
+        "content": "따라 하기 1~2: Flash로 기준 결과 → Argon 선택",
+        "note": "모두 같은 가상 매출 표 사용"
+      },
+      {
+        "time": "47~61분",
+        "content": "따라 하기 3~4: Argon 결과 → 검산·비교",
+        "note": "계산기 준비, 정답은 note 참고"
+      },
+      {
+        "time": "61~85분",
+        "content": "내 자료 분석 → High 비교 → 맡기기 카드",
+        "note": "개인정보·기밀 지우기 먼저 확인"
+      },
+      {
+        "time": "85~90분",
+        "content": "짝 발표·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "우유 한 통 사 오는데 수석 컨설턴트를 부르진 않잖아요? 반대로 회사 1년 실적 분석을 심부름 센터에 맡기기도 어렵고요. 오늘은 Google의 새 최상위 모델 Gemini 4 Argon에게 '어려운 일'을 맡기는 법, 그리고 언제 맡길지 고르는 법을 배웁니다."
+      },
+      {
+        "label": "요금제 안내",
+        "text": "먼저 확인할 게 있어요. Argon은 Google AI Pro나 Ultra 구독자만 쓸 수 있습니다. 무료 계정이신 분은 Flash로 같은 실습을 하시고, Argon 결과는 제 화면으로 함께 비교하겠습니다."
+      },
+      {
+        "label": "검산 강조",
+        "text": "최상위 모델이라고 계산을 절대 안 틀리는 건 아닙니다. 숫자 세 개만 계산기로 직접 확인해 보세요. 이 3분이 보고서의 신뢰를 지킵니다."
+      },
+      {
+        "label": "비교 정리",
+        "text": "Flash와 Argon 결과가 거의 같았다면, 그 일은 Flash로 충분하다는 뜻이에요. 차이가 컸던 부분, 특히 원인 가설과 확인 방법에서 차이가 났다면 그게 바로 Argon에게 맡길 일입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "가벼운 일은 빠른 모델로, 여러 단계를 거치는 어려운 일은 Argon으로. 그리고 어떤 모델이든 숫자는 내가 확인한다. 오늘 만든 카드를 업무 책상에 붙여 두세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 대부분이 무료 계정이라 Argon 선택 불가",
+        "response": "수강생은 Flash·Thinking 등 쓸 수 있는 모델로 같은 과제 진행, Argon 결과는 강사 화면 공유로 보여 주고 비교 메모는 함께 작성"
+      },
+      {
+        "situation": "Pro 계정인데 모델 선택기에 Argon이 안 보임",
+        "response": "순차 제공 중일 수 있음 — 새로 고침·로그아웃 후 재로그인, 그래도 없으면 강사 시연으로 대체 [확인 필요]"
+      },
+      {
+        "situation": "Argon 답이 오래 걸림",
+        "response": "사고 수준을 Low로 낮추거나 과제 3번(발표 개요)만 따로 요청, 기다리는 동안 Flash 결과 검산 진행"
+      },
+      {
+        "situation": "사용 한도 도달 (Flash-Lite로 전환됨)",
+        "response": "5시간 뒤 다시 채워짐 안내, 강사가 미리 받아 둔 Argon 결과 인쇄본으로 비교 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "모델 선택기를 못 찾음",
+        "fix": "채팅창 아래쪽 현재 모델 이름(예: Flash) 글자를 클릭"
+      },
+      {
+        "issue": "사고 수준 메뉴가 안 보임",
+        "fix": "모델을 고른 뒤 같은 메뉴 안의 Low·Medium·High 확인, 일부 모델은 표시가 다를 수 있음 [확인 필요]"
+      },
+      {
+        "issue": "표가 아니라 긴 문장으로 답함",
+        "fix": "'1)은 표로만 답해 줘: 월 | 매출 | 증감률 | 객단가' 형식을 다시 붙여 요청"
+      },
+      {
+        "issue": "증감률 숫자가 계산기와 다름",
+        "fix": "'(이번 달-지난달)÷지난달×100'으로 계산했는지 물어보고 다시 검산 요청, 최종 숫자는 사람이 계산한 값 사용"
+      },
+      {
+        "issue": "원인을 단정해서 씀",
+        "fix": "'각 원인 앞에 [가설] 표시, 확인 방법 한 줄 추가' 요청"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로 Argon을 쓸 수 있나요?",
+        "a": "불가. Gemini 앱은 Google AI Pro·Ultra 구독자만. API도 유료 등급만, AI Studio·Antigravity 체험은 Ultra 구독자"
+      },
+      {
+        "q": "기존 Pro 모델과 무엇이 다른가요?",
+        "a": "Google 발표 기준 더 직접적인 답(얼버무림·반복 감소), 긴 작업 중 잦은 진행 안내, 복잡한 다단계 업무·코딩 성능 향상. 한국어 성능 수치는 공개 안 됨 [미검증]"
+      },
+      {
+        "q": "검색에서도 쓸 수 있나요?",
+        "a": "Google 발표 기준 검색 AI 모드에서도 Google AI Pro·Ultra 구독자 사용 가능. 국내 AI 모드 적용 여부는 [확인 필요]"
+      },
+      {
+        "q": "사고 수준은 무엇을 고르면 되나요?",
+        "a": "평소 Medium, 어려운 수학·복잡한 분석은 High. 결과가 같으면 낮은 쪽이 사용량 절약. 앱 기본값은 Low"
+      },
+      {
+        "q": "파일은 어떤 걸 넣을 수 있나요?",
+        "a": "API 문서 기준 글·이미지·영상·오디오·PDF 입력 가능, 출력은 글. 앱의 파일 형식·크기 제한은 별도 [확인 필요]"
+      },
+      {
+        "q": "작업(tasks) 모드와는 어떻게 다른가요?",
+        "a": "Argon은 '모델', 작업 모드는 '일하는 방식'. 채팅창 토글로 작업 모드로 바꾸면 컴퓨터를 떠나 있어도 계속 일함 (AI-2026-10-CAT08-003)"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "따라 하기 1~3단계까지만, 모델 비교는 강사 화면으로. '어려운 일 = 좋은 모델, 숫자는 내가 확인' 두 가지만 기억하게 함"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "내 자료 분석 + 사고 수준 비교 + 도전과제 ⭐⭐(Canvas 보고 화면) 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ + 같은 과제를 API(gemini-4-argon, 사고 수준 low·medium·high)로 돌려 비용·시간 비교표 작성"
+      },
+      {
+        "level": "교사 대상 (JOB-EDU)",
+        "guide": "가상 매출 표 대신 반별 형성평가 점수(번호만) 표로 바꿔 '점수 변화 → 원인 가설 → 학부모 상담용 5장 개요' 실습. 학생 이름 절대 넣지 않음"
+      },
+      {
+        "level": "한국어 학습자·다문화 (JOB-GLB)",
+        "guide": "가상 매출 표로 '늘었다·줄었다·비슷하다' 표현 익히기. Argon 발표 개요를 쉬운 한국어로 다시 써 달라고 요청해 말하기 연습으로 연결"
+      }
+    ],
+    "pro_points": [
+      "최상위 모델 교안의 핵심은 '성능 자랑'이 아니라 '언제 맡길지 판단 기준'임",
+      "Flash와 결과가 같아도 실패가 아님 — '가벼운 모델로 충분'이라는 발견",
+      "숫자 검산 3개 습관이 AI 분석 보고서의 최소 안전장치",
+      "요금제 제한(Pro·Ultra)을 수업 공지 단계에서 미리 알려 무료 수강생 대안 준비",
+      "벤치마크·API 가격은 Google 발표 기준임을 밝히고 깊이 다루지 않음"
+    ],
+    "day_before": [
+      "Pro 계정으로 모델 선택기의 Argon 표시 이름·사고 수준 메뉴 확인 후 캡처 준비 [확인 필요]",
+      "한국어 화면에서 메뉴 이름(사고 수준·사용 한도) 표기 확인",
+      "가상 매출 표 과제를 Flash·Argon으로 미리 돌려 결과 인쇄본 준비 (Plan B용)",
+      "검산 정답(5월 +12.6%, 9월 -12.4%, 7월 객단가 약 8,556원) 확인",
+      "수강생 요금제 사전 조사 — 무료 비율이 높으면 강사 시연 중심으로 시간표 조정"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Gemini 앱 모델 선택기의 Argon 표시 이름: 릴리스 노트·블로그·도움말 모두 선택 방법·표시 이름을 밝히지 않음",
+    "[확인 필요] 한국 구독 페이지 원화 가격: 2026-10-14 확인값 사용, 이번 작성 때 재접속 실패. AI Pro 원화 가격은 미표시",
+    "[확인 필요] 검색 AI 모드의 Argon 국내 적용 여부",
+    "[미검증] 한국어 성능: Google 발표에 한국어 수치 없음",
+    "도움말(About Gemini models)은 아직 Flash-Lite·Flash·Pro만 설명, Argon 항목 없음 — 앱 메뉴 구성이 문서와 다를 수 있음",
+    "API '무료 등급·Google AI Pro 요금제 불가' 문구는 개발자 API(AI Studio) 기준이며, Gemini 앱은 Pro 구독자 사용 가능 (릴리스 노트)",
+    "Google 발표(2026-09-30·10-13 블로그)의 성능 설명은 회사 주장이며 교안에서 직접 재현하지 않음"
+  ],
+  "sources": [
+    {
+      "title": "Gemini 앱 릴리스 노트 (2026-10-13 Gemini 4 Argon)",
+      "url": "https://gemini.google/release-notes/",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Google 블로그 – Gemini 4 Argon is now available in the Gemini app (2026-10-13)",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Google 블로그 – Gemini 4 Argon is now available for developers (2026-10-13)",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Google 블로그 – Gemini 4 Argon is now available for everyone (2026-10-13)",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "checked": "2026-10-14"
+    },
+    {
+      "title": "Google 블로그 – Gemini 4 Argon: our next era of frontier intelligence (2026-09-30)",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "checked": "2026-10-13"
+    },
+    {
+      "title": "Gemini 앱 도움말 – About Gemini models",
+      "url": "https://support.google.com/gemini/answer/18648722?hl=en",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Gemini 앱 도움말 – Gemini Apps limits & feature availability",
+      "url": "https://support.google.com/gemini/answer/16275805?hl=en",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Gemini API – Gemini 4 Argon 모델 문서",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Gemini API – What's new in Gemini 4 Argon",
+      "url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "checked": "2026-10-15"
+    },
+    {
+      "title": "Gemini 구독 요금제 (한국)",
+      "url": "https://gemini.google/kr/subscriptions/?hl=ko",
+      "checked": "2026-10-14"
+    }
+  ]
+}

@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 55,
+  "count": 56,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT01-009",
+      "version": "v1.0",
+      "created_at": "2026-10-15 22:10 KST",
+      "checked": "2026-10-15",
+      "review_by": "2027-01-15",
+      "title": "Gemini 4 Argon으로 여러 단계 분석 한 번에 — 매출 표 분석 → 원인 가설 → 발표 5장 개요 + Flash와 비교한 '어려운 일 맡기기' 카드 만들기",
+      "summary": "Gemini 4 Argon은 2026-10-13 Gemini 앱에 순차 제공된 Google 최상위(프런티어) 모델. 복잡한 다단계 업무(재무 보고서 분석·발표 자료 만들기·인터랙티브 3D 모델)에 맞춤, Google AI Pro·Ultra 구독자 대상. 가상 매출 표를 Argon으로 분석해 원인 가설·발표 개요를 받고, 가벼운 모델(Flash) 결과와 비교해 '어떤 일을 Argon에 맡길지' 기준 카드를 만듦",
+      "tool": "Gemini",
+      "feature": "Gemini 4 Argon — Gemini 앱 최상위 모델(복잡한 다단계 업무용, Google AI Pro·Ultra)",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-13",
+      "categories": [
+        "CAT-01",
+        "CAT-06",
+        "CAT-12"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-DAT",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 가상 매출 표 분석 결과(핵심 지표 표 + 원인 가설 3개 + 확인 방법) + ② 발표 5장 개요(장 제목·핵심 메시지·넣을 그래프) + ③ Flash vs Argon 비교 메모 3줄 + ④ 내 업무용 '어려운 일 맡기기' 카드 1장",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧠",
+      "one_liner": "어려운 다단계 분석은 Argon에게"
+    },
     {
       "id": "AI-2026-10-CAT01-008",
       "version": "v1.0",
