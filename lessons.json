@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 53,
+  "count": 54,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-007",
+      "version": "v1.0",
+      "created_at": "2026-10-15 20:15 KST",
+      "checked": "2026-10-15",
+      "review_by": "2027-01-15",
+      "title": "미드저니 Thinking 모드로 빗나간 그림 다시 그리기 — 글자·개수·배치가 맞는 수업 포스터 + 동료 교사와 함께 쓰는 공유 폴더 만들기",
+      "summary": "Midjourney 알파 사이트(alpha.midjourney.com)에서 시험 중인 Thinking 모드는 V8.2로 만든 그림을 다시 살펴 프롬프트와 어긋난 곳(물건·배치·인체·글자)을 찾아 새로 그림. 같은 날 공개된 공유 폴더로 동료와 한 폴더에 함께 생성 가능. 글자·개수·배치가 정확한 수업 포스터를 만들고 일반 결과와 비교한 뒤 공유 폴더로 나눔 [실험 기능]",
+      "tool": "Midjourney",
+      "feature": "Thinking 모드(Rerun (Thinking), V8.2) · 공유 폴더(Shared folders) — 알파 사이트 시험",
+      "company": "Midjourney",
+      "type": "update",
+      "released": "2026-10-08",
+      "categories": [
+        "CAT-04",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 글자·개수·배치가 들어간 수업 포스터 1장의 일반 결과 vs Thinking 결과 비교표(3칸: 글자·개수·배치) + ② 내 문구로 만든 포스터 1장 + ③ 동료를 공동 작업자로 초대한 공유 폴더 1개",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧠",
+      "one_liner": "빗나간 그림을 '생각'해서 다시 그리기"
+    },
     {
       "id": "AI-2026-10-CAT07-003",
       "version": "v1.0",

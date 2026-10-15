@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 19:10 KST",
+  "updated_at": "2026-10-15 20:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -89,8 +89,8 @@
         "title": "Midjourney Alpha Changelog 10/7/26",
         "url": "https://updates.midjourney.com/alpha-changelog-10-7-26/"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-15",
+      "lesson_id": "AI-2026-10-CAT04-007"
     },
     {
       "id": "gemini-agent-2026-10-08-launch",
