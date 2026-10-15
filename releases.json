@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 02:10 KST",
+  "updated_at": "2026-10-16 03:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2041,6 +2041,21 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT08-006"
+    },
+    {
+      "id": "gemini-2026-10-13-antigravity-macos",
+      "date": "2026-10-13",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini macOS 앱에 Antigravity 내장",
+      "summary": "Gemini macOS 앱 상단 Antigravity로 코딩 에이전트를 시작해 계획 승인 후 백그라운드에서 코드 작성·테스트, 완료 알림 (영어, 18세 이상 개인·자격 있는 업무 계정)",
+      "source": {
+        "title": "Gemini Apps release notes",
+        "url": "https://gemini.google/release-notes/"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT07-006"
     }
   ]
 }

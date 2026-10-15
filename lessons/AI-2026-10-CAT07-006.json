@@ -1,0 +1,604 @@
+{
+  "id": "AI-2026-10-CAT07-006",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 03:10 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "Mac용 Gemini 앱에서 대화로 다듬은 아이디어를 Antigravity 코딩 에이전트에 넘겨 작은 웹 앱 시제품을 만들 수 있음",
+  "summary": "Gemini macOS 앱 상단 Antigravity를 누르면 코딩 에이전트가 계획을 세우고, 사람이 계획을 승인하면 백그라운드에서 코드 작성·테스트 후 검토 알림을 줌. 대화와 코딩이 한 앱에서 이어짐 (영어, 18세 이상 개인 계정)",
+  "glance": {
+    "emoji": "🛸",
+    "one_liner": "Gemini 대화에서 바로 코딩 에이전트",
+    "cards": [
+      {
+        "icon": "🖱️",
+        "title": "상단 버튼 1개",
+        "text": "앱 상단 Antigravity 클릭"
+      },
+      {
+        "icon": "📝",
+        "title": "계획 먼저 승인",
+        "text": "에이전트 계획 확인 후 승인"
+      },
+      {
+        "icon": "⏳",
+        "title": "백그라운드 작업",
+        "text": "만드는 동안 대화로 복귀"
+      },
+      {
+        "icon": "🔔",
+        "title": "검토 알림",
+        "text": "완성되면 알림 → 결과 검토"
+      }
+    ],
+    "diagram": {
+      "title": "Gemini 앱 Antigravity 작동 흐름",
+      "nodes": [
+        {
+          "icon": "💬",
+          "label": "대화로 구상"
+        },
+        {
+          "icon": "🛸",
+          "label": "에이전트 시작"
+        },
+        {
+          "icon": "✅",
+          "label": "계획 승인"
+        },
+        {
+          "icon": "🧪",
+          "label": "작성·테스트"
+        },
+        {
+          "icon": "👀",
+          "label": "알림·검토"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "예전 방식",
+        "text": "Gemini에서 구상 → Antigravity 앱 따로 열고 내용 다시 설명"
+      },
+      "after": {
+        "label": "통합 후",
+        "text": "Gemini 앱 안에서 버튼 하나로 에이전트 시작, 대화는 계속"
+      }
+    },
+    "cautions": [
+      "API 키·비밀번호 붙여넣기 금지",
+      "명령 실행 권한은 묻기로 유지",
+      "결과 코드는 직접 열어 테스트"
+    ]
+  },
+  "tool": "Gemini",
+  "feature": "Gemini macOS 앱의 Google Antigravity — 대화에서 코딩 에이전트 시작·계획 승인·백그라운드 빌드",
+  "company": "Google",
+  "type": "update",
+  "released": "2026-10-13",
+  "categories": [
+    "CAT-07",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-DEV",
+    "JOB-EDU",
+    "JOB-BIZ",
+    "JOB-STU"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Apple Silicon Mac + macOS Sequoia(15.0) 이상 (Gemini macOS 앱 요구 사항)",
+    "Gemini macOS 앱 최신 버전 (gemini.google/desktop 에서 내려받기)",
+    "만 18세 이상 개인 Google 계정 — Antigravity FAQ 기준 지원 국가에 한국 포함, 회사 계정은 '자격 있는 업무 계정'만",
+    "앱 언어 영어 설정 — 릴리스 노트 기준 영어로 제공, 한국어 화면 제공 여부 [확인 필요]",
+    "실습 폴더 1개 (예: ~/Documents/ag-practice, 비어 있는 폴더)"
+  ],
+  "outcome": "① 대화로 기획한 '한국어 단어 카드 퀴즈' 웹 앱(HTML 1~3개 파일) + ② 에이전트가 낸 계획과 내가 고친 점 메모 3줄 + ③ 직접 브라우저로 열어 확인한 테스트 체크리스트",
+  "objectives": [
+    "Gemini macOS 앱 안 Antigravity가 일반 Gemini 대화·Canvas와 어떻게 다른지 설명할 수 있음",
+    "대화로 정리한 요구 사항을 코딩 에이전트에 넘기고 계획을 검토·승인해 작은 웹 앱을 만들 수 있음",
+    "에이전트 권한 설정과 결과 검토 습관으로 안전하게 코드를 받아들일 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Gemini macOS 앱은 무료. Antigravity는 개인 무료 요금(주간 한도)부터 쓸 수 있고 Google AI Pro·Ultra는 한도가 커짐. 단, 무료 계정에서 Gemini 앱 안 Antigravity가 열리는지는 공식 문서에 명시 없음 [확인 필요]",
+    "plans": [
+      {
+        "name": "무료 (개인)",
+        "price": "$0/월",
+        "features": "Antigravity 기본 주간 한도(1주마다 새로 채워짐), Tab 자동완성 무제한, AI 크레딧 초과 사용 불가"
+      },
+      {
+        "name": "Google AI Plus",
+        "price": "$4.99/월",
+        "features": "구독 페이지에 Antigravity 혜택 표기 없음 — 무료 개인 한도와 같은지 [확인 필요]"
+      },
+      {
+        "name": "Google AI Pro",
+        "price": "$19.99/월",
+        "features": "Antigravity 에이전트 모델 기본(Entry) 한도, 5시간마다 새로 채워짐 + 주간 한도, AI 크레딧 초과 사용 가능"
+      },
+      {
+        "name": "Google AI Ultra (5x)",
+        "price": "$99.99/월",
+        "features": "Antigravity 더 높은 한도, 타사 모델 이용, AI 크레딧 초과 사용 가능"
+      },
+      {
+        "name": "Google AI Ultra (20x)",
+        "price": "$199.99/월",
+        "features": "Antigravity 최고 한도"
+      }
+    ],
+    "note": "가격은 미국 Gemini 구독 페이지 기준, 원화 가격은 이번에 확인하지 않음(이전 교안 확인값: AI Plus ₩7,500·Ultra ₩119,000부터). 한도는 작업량 기준이라 간단한 작업일수록 더 많이 쓸 수 있고 수시로 바뀔 수 있음. 회사용 Antigravity Business는 사용자당 월 $30부터(Gemini Enterprise 고객)",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "Gemini 구독 요금제 (미국)",
+        "url": "https://gemini.google/subscriptions/"
+      },
+      {
+        "title": "Google Antigravity – Pricing",
+        "url": "https://antigravity.google/pricing"
+      },
+      {
+        "title": "Google Antigravity Docs – Plans",
+        "url": "https://antigravity.google/docs/plans"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-19",
+      "text": "Antigravity 2.0 공개 — IDE 없이 쓰는 독립 데스크톱 앱(macOS·Linux·Windows), 하위 에이전트·예약 작업(/schedule)"
+    },
+    {
+      "date": "2026-08-21",
+      "text": "Antigravity 원격 조작(Remote Control) 공개 (Antigravity 블로그 목록 기준)"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "Gemini macOS 앱에 Antigravity 내장 — 대화에서 코딩 에이전트 시작·계획 승인·백그라운드 빌드·검토 알림 (영어, 18세 이상)"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "같은 날 Gemini 4 Argon이 Gemini 앱(AI Pro·Ultra)과 Antigravity에 제공"
+    }
+  ],
+  "theory": {
+    "definition": "Gemini macOS 앱에 Google의 에이전트형 개발 플랫폼 Antigravity가 들어간 것임. 앱 상단 Antigravity를 눌러 코딩 에이전트를 시작하고, 에이전트가 낸 계획을 승인하면 에이전트가 백그라운드에서 코드를 만들고 테스트함. 그동안 사용자는 대화로 돌아가 있고, 결과가 준비되면 알림을 받아 검토함",
+    "analogy": "회의실(Gemini 대화)에서 아이디어를 정리한 뒤 옆방 개발자(Antigravity 에이전트)에게 '이 계획대로 만들어 줘'라고 맡기고, 다 되면 연락받는 구조임. 개발자에게 다시 처음부터 설명할 필요가 줄어듦",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Gemini 대화",
+        "Gemini Canvas",
+        "Gemini 앱 속 Antigravity (신규)"
+      ],
+      "rows": [
+        [
+          "결과물",
+          "답변·코드 조각",
+          "화면 속 시제품(앱) 미리보기",
+          "내 Mac 폴더에 실제 코드 파일 [확인 필요]"
+        ],
+        [
+          "진행 방식",
+          "질문 1번에 답 1번",
+          "대화하며 수정",
+          "계획 → 승인 → 백그라운드 작성·테스트"
+        ],
+        [
+          "사람 역할",
+          "답 복사·붙여넣기",
+          "미리보기 보며 요청",
+          "계획 승인, 권한 허용, 결과 검토"
+        ],
+        [
+          "어울리는 일",
+          "개념 질문·짧은 코드",
+          "빠른 화면 시안",
+          "여러 파일 웹 앱·도구 시제품"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "계획 승인",
+        "body": "에이전트가 바로 코드를 쓰지 않고 계획을 먼저 보여 줌. 사람이 승인해야 작업 시작(릴리스 노트 기준). 계획 단계에서 범위를 줄이거나 빠진 요구 사항을 넣는 것이 결과 품질을 가장 크게 좌우함"
+      },
+      {
+        "title": "백그라운드 실행·알림",
+        "body": "승인 뒤 에이전트는 코드 작성과 테스트를 뒤에서 진행하고, 사용자는 Gemini 대화로 돌아가 다른 일을 함. 검토할 준비가 되면 알림이 옴. 한 번에 끝나지 않으면 피드백을 주고 다시 맡김"
+      },
+      {
+        "title": "권한 설정(Permission Settings)",
+        "body": "Antigravity 문서 기준 세 가지 기본값: Default(샌드박스 안 명령은 바로 실행, 네트워크·외부 자원은 물어봄) · Request Review(터미널 명령마다 물어봄) · Turbo(제한 없음). 수업에서는 Request Review 권장. Gemini 앱 안에서도 같은 설정 화면인지는 [확인 필요]"
+      }
+    ],
+    "can": [
+      "대화로 다듬은 기획을 그대로 코딩 에이전트에 넘기기",
+      "에이전트 계획을 읽고 승인·수정 요청하기",
+      "웹 페이지·작은 도구·시제품을 여러 파일로 만들고 테스트까지 맡기기",
+      "작업이 도는 동안 Gemini 대화에서 다른 일 하기",
+      "결과에 피드백을 주고 고치게 하기"
+    ],
+    "cannot": [
+      "Windows용 Gemini 앱에서는 이번 통합 사용 불가 — macOS 앱 항목임(Windows는 추후 기능 확대 예고)",
+      "18세 미만·지원 국가 밖 계정은 사용 불가",
+      "한국어 화면 제공은 근거 없음 — 영어로 제공 [확인 필요]",
+      "에이전트가 만든 코드의 정확성·보안을 보장하지 않음 — 사람 검토 필수",
+      "주간·5시간 한도를 넘으면 한도가 다시 찰 때까지 멈춤(Pro·Ultra는 AI 크레딧으로 초과 사용 가능)"
+    ],
+    "safety": [
+      "API 키·비밀번호·개인정보를 프롬프트나 실습 폴더에 넣지 않음",
+      "권한은 Request Review로 두고, 모르는 터미널 명령은 승인하지 않음",
+      "실습은 빈 연습 폴더에서만 진행 — 업무 폴더·사진 폴더를 작업 공간으로 열지 않음",
+      "에이전트가 가져온 외부 라이브러리·이미지·글꼴의 라이선스를 확인함",
+      "Antigravity FAQ 기준 데이터 수집은 설정에서 끌 수 있음 — 기관 규정과 함께 확인함"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① Gemini 대화로 기획한 '한국어 단어 카드 퀴즈' 웹 앱 + ② 에이전트 계획에서 내가 고친 점 메모 3줄 + ③ 브라우저로 직접 확인한 테스트 체크리스트 5줄",
+    "follow": [
+      {
+        "title": "앱 준비·실습 폴더 만들기",
+        "minutes": 5,
+        "do": "Gemini macOS 앱을 최신으로 업데이트하고 로그인함. Finder에서 Documents 안에 빈 폴더 ag-practice를 만듦",
+        "prompt": "",
+        "expect": "앱 상단에 Antigravity 항목이 보임",
+        "note": "[확인 필요] 버튼 위치·이름은 순차 배포 중 바뀔 수 있음. 안 보이면 앱 언어 영어·계정 연령 확인"
+      },
+      {
+        "title": "대화로 기획 다듬기",
+        "minutes": 8,
+        "do": "일반 Gemini 대화 창에서 아래 프롬프트를 보내 요구 사항 목록을 받음. 마음에 안 드는 항목은 대화로 고침",
+        "prompt": "I want to build a simple web app for beginner Korean learners: a flashcard quiz with 10 Korean words. Show the Korean word, let the learner flip the card to see the English meaning, and mark 'I know it' or 'Again'. Show a score at the end. Please turn this into a short requirements list (max 8 items) for a coding agent. Use plain HTML, CSS and JavaScript only, no external libraries, no login, no server.",
+        "expect": "8개 이하 요구 사항 목록",
+        "note": "영어 화면 기준이라 영어 프롬프트 제공. 한국어 프롬프트도 이해하는지는 [확인 필요]"
+      },
+      {
+        "title": "Antigravity 시작·계획 확인",
+        "minutes": 10,
+        "do": "상단 Antigravity를 누르고 작업 폴더로 ag-practice를 지정함. 위 요구 사항을 붙여 넣어 에이전트를 시작하고, 나온 계획을 읽음. 범위가 크면 줄이라고 답한 뒤 승인함",
+        "prompt": "Build the flashcard quiz from these requirements in this folder. Keep it to at most 3 files (index.html, style.css, app.js). Before writing code, show me your plan. Do not install anything and do not use the network.",
+        "expect": "파일 목록·단계가 담긴 계획 → 승인",
+        "note": "계획에 설치·외부 다운로드가 있으면 승인하지 말고 빼 달라고 요청함"
+      },
+      {
+        "title": "기다리는 동안 대화로 복귀",
+        "minutes": 5,
+        "do": "승인 후 Gemini 대화로 돌아가 아래 프롬프트로 테스트 체크리스트를 만들어 둠. 알림이 오면 Antigravity로 돌아감",
+        "prompt": "Write a 5-item manual test checklist for a flashcard quiz web app (flip card, I know it, Again, score at the end, restart).",
+        "expect": "테스트 체크리스트 5줄 + 완료 알림",
+        "note": "백그라운드 실행이 이번 기능의 핵심 — 기다리지 말고 다른 일을 해 볼 것"
+      },
+      {
+        "title": "결과 검토·직접 테스트",
+        "minutes": 7,
+        "do": "에이전트가 보여 준 변경 내용을 읽고, Finder에서 index.html을 더블클릭해 브라우저로 열어 체크리스트대로 직접 확인함",
+        "prompt": "",
+        "expect": "카드 뒤집기·점수 표시가 동작하는 웹 페이지",
+        "note": "에이전트의 '테스트 통과' 보고만 믿지 말고 사람이 직접 눌러 봄"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 주제로 바꾸기",
+        "minutes": 5,
+        "do": "내 수업·업무용 작은 도구 아이디어 1개를 정함(예: 출석 체크표, 발음 연습 카드, 상품 가격 계산기). 개인정보 없는 예시 데이터만 씀",
+        "prompt": "",
+        "expect": "아이디어 1줄 + 예시 데이터",
+        "note": "로그인·서버·결제가 필요한 아이디어는 오늘 범위 밖"
+      },
+      {
+        "title": "요구 사항 → 에이전트",
+        "minutes": 7,
+        "do": "대화로 요구 사항 8줄을 만든 뒤 Antigravity에 새 작업으로 넘김. 계획에서 한 가지 이상 직접 고치고 승인함",
+        "prompt": "Turn my idea into a requirements list (max 8 items) for a coding agent: [my idea]. Use plain HTML/CSS/JavaScript, no external libraries, sample data only.",
+        "expect": "내 도구 계획 승인",
+        "note": "고친 점을 메모해 둠 — 오늘 결과물 ②"
+      },
+      {
+        "title": "피드백 1회 주기",
+        "minutes": 3,
+        "do": "결과를 열어 보고 고칠 점 1가지를 구체적으로 요청함",
+        "prompt": "Make the buttons bigger and the font at least 20px for older learners. Do not change anything else.",
+        "expect": "요청한 부분만 바뀐 결과",
+        "note": "'다른 건 바꾸지 말 것'을 붙이면 엉뚱한 수정이 줄어듦"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 요구 사항을 Gemini Canvas와 Antigravity에 각각 맡겨 결과물·걸린 시간·수정 횟수 비교표 만들기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "권한을 Request Review로 두고 에이전트가 승인을 요청한 명령을 모두 적은 뒤, 각각 무슨 일을 하는 명령인지 Gemini 대화로 물어 정리하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "퀴즈 단어를 words.json 파일로 분리하고, 다른 강사가 단어만 바꿔 재사용할 수 있게 README 사용법까지 에이전트에게 쓰게 한 뒤 직접 검증하기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 결과 웹 앱을 바꿔 체크리스트대로 눌러 보고 '계획 단계에서 고친 점 1개 + 직접 테스트에서 찾은 문제 1개'를 말함",
+    "quiz": [
+      {
+        "q": "2026년 10월 13일 Gemini 릴리스 노트에서 Gemini macOS 앱에 들어온 기능은?",
+        "options": [
+          "Google Antigravity 코딩 에이전트",
+          "Windows 전용 받아쓰기",
+          "무료 Gemini 4 Argon",
+          "Photoshop 편집기"
+        ],
+        "answer": 0,
+        "explain": "릴리스 노트는 Google Antigravity가 Gemini macOS 앱에 내장되어 대화에서 코딩 에이전트를 시작할 수 있다고 밝힘"
+      },
+      {
+        "q": "Gemini 앱 속 Antigravity에서 에이전트가 코드를 만들기 전 사람이 하는 일은?",
+        "options": [
+          "코드를 직접 다 씀",
+          "에이전트의 계획을 승인함",
+          "서버를 빌림",
+          "결제 카드를 등록함"
+        ],
+        "answer": 1,
+        "explain": "에이전트를 시작하고 계획을 승인하면 백그라운드에서 코드를 만들고 테스트함"
+      },
+      {
+        "q": "수업 실습에 가장 알맞은 안전 습관은?",
+        "options": [
+          "Turbo 모드로 모든 명령 자동 허용",
+          "업무 폴더를 작업 공간으로 열기",
+          "빈 연습 폴더 + Request Review 권한으로 진행",
+          "API 키를 프롬프트에 붙여 넣기"
+        ],
+        "answer": 2,
+        "explain": "Request Review는 터미널 명령마다 승인을 요청하고, 빈 폴더는 실수로 다른 파일을 바꿀 위험을 줄임"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "요구 사항 정리",
+        "high": "8줄 이내로 범위·제약(라이브러리·서버 없음)까지 명확",
+        "mid": "기능만 나열",
+        "low": "한 줄 요청만"
+      },
+      {
+        "criterion": "계획 검토",
+        "high": "계획에서 1개 이상 고치고 이유를 말함",
+        "mid": "읽고 그대로 승인",
+        "low": "읽지 않고 승인"
+      },
+      {
+        "criterion": "결과 검증·안전",
+        "high": "직접 테스트 5항목 + 권한·데이터 점검",
+        "mid": "직접 열어 보기만 함",
+        "low": "에이전트 보고만 믿음"
+      }
+    ],
+    "next": [
+      "Gemini Canvas로 시제품 만들기와 비교 (AI-2026-10-CAT07-001)",
+      "Gemini 작업 모드로 코드 밖 업무 맡기기 (AI-2026-10-CAT08-003)",
+      "Cursor 원격 조작으로 휴대폰에서 에이전트 확인 (AI-2026-10-CAT07-003)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 출시 타임라인(10/13 Gemini 릴리스 노트)",
+        "note": "'회의실과 옆방 개발자' 비유"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 정의, 대화·Canvas·Antigravity 비교, 계획 승인·백그라운드·권한, 할 수 있는/없는 것, 안전",
+        "note": "권한 3가지 페이지 생략 금지"
+      },
+      {
+        "time": "35~70분",
+        "content": "2부 따라 하기: 준비 → 기획 → 계획 승인 → 대화 복귀 → 직접 테스트",
+        "note": "Mac 없는 수강생은 짝 실습"
+      },
+      {
+        "time": "70~85분",
+        "content": "2부 내 것 만들기: 내 주제 → 요구 사항 → 피드백 1회",
+        "note": "개인정보 없는 예시 데이터만"
+      },
+      {
+        "time": "85~95분",
+        "content": "3부 정리: 결과 바꿔 테스트, 퀴즈 3문제, 다음 단계",
+        "note": "전체 95분, 쉬는 시간 별도"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "지금까지는 Gemini에게 아이디어를 물어보고, 코드는 다른 프로그램에 다시 설명해야 했죠. 10월 13일부터 Mac용 Gemini 앱에서는 위쪽 Antigravity 버튼 하나로 코딩 에이전트에게 바로 일을 맡길 수 있습니다. 오늘은 그걸로 단어 카드 퀴즈 앱을 만들어 보겠습니다."
+      },
+      {
+        "label": "계획 강조",
+        "text": "에이전트는 먼저 계획을 보여 줍니다. 여기서 승인 버튼을 누르는 사람이 바로 여러분입니다. 계획을 읽지 않고 승인하는 건, 견적서를 안 보고 계약하는 것과 같습니다."
+      },
+      {
+        "label": "보안 전환",
+        "text": "에이전트는 내 컴퓨터에서 명령을 실행할 수 있습니다. 그래서 오늘은 빈 폴더에서만, 그리고 명령마다 물어보는 설정으로 진행하겠습니다."
+      },
+      {
+        "label": "대기 전환",
+        "text": "승인했으면 기다리지 마세요. 대화 창으로 돌아가서 테스트 체크리스트를 만드는 겁니다. 이게 이번 기능의 진짜 장점입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "에이전트가 '다 됐다'고 해도, 마지막에 직접 눌러 보는 사람은 우리입니다. 계획은 꼼꼼히, 권한은 좁게, 결과는 직접. 이 세 가지만 기억하세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Antigravity 버튼이 안 보임(순차 배포·언어·연령)",
+        "response": "강사 화면 시연으로 대체하고, 수강생은 별도 Antigravity 데스크톱 앱(무료 개인 요금)이나 Gemini Canvas로 같은 요구 사항을 실습함"
+      },
+      {
+        "situation": "Windows·Intel Mac 수강생",
+        "response": "Gemini macOS 앱 요구 사항(Apple Silicon·macOS 15 이상) 밖이므로 Antigravity 독립 앱(Windows 지원) 또는 Canvas로 진행"
+      },
+      {
+        "situation": "한도 초과로 에이전트가 멈춤",
+        "response": "요구 사항을 3줄로 줄여 다시 시작하거나, 강사가 미리 만든 결과 폴더를 나눠 주고 검토·테스트 활동만 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "계획이 너무 큼(프레임워크 설치 등)",
+        "fix": "'plain HTML/CSS/JS only, do not install anything'를 붙여 계획 다시 요청"
+      },
+      {
+        "issue": "승인 요청이 너무 자주 옴",
+        "fix": "Request Review 설정의 정상 동작임. 명령 뜻을 Gemini 대화로 물어 이해한 뒤 승인"
+      },
+      {
+        "issue": "index.html을 열어도 빈 화면",
+        "fix": "파일이 ag-practice 폴더에 실제로 생겼는지 확인, 에이전트에게 'The page is blank when I open index.html. Find and fix the cause.'로 요청"
+      },
+      {
+        "issue": "엉뚱한 폴더에 파일이 생김",
+        "fix": "작업 공간 폴더 지정 다시 확인, 새 작업으로 ag-practice를 명시해 재시작"
+      },
+      {
+        "issue": "한국어 글자가 깨짐",
+        "fix": "'Use UTF-8 and add <meta charset=\"utf-8\">' 요청"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 계정으로도 되나요?",
+        "a": "Antigravity 자체는 개인 무료 요금(주간 한도)이 있음. 다만 Gemini 앱 안 Antigravity가 무료 계정에 열리는지는 릴리스 노트에 명시 없음 [확인 필요]. 릴리스 노트는 '개인 Google 계정과 자격 있는 업무 계정, 18세 이상'으로 안내"
+      },
+      {
+        "q": "한국에서 쓸 수 있나요?",
+        "a": "Antigravity FAQ의 지원 국가 목록에 한국 포함. 단 Gemini 앱 속 기능은 영어로 제공 — 앱 언어 설정 영향은 [확인 필요]"
+      },
+      {
+        "q": "Windows Gemini 앱에도 있나요?",
+        "a": "이번 항목은 macOS 앱. Gemini 데스크톱 페이지는 Windows에 기능을 차차 늘린다고만 안내함"
+      },
+      {
+        "q": "만든 코드는 어디에 저장되나요?",
+        "a": "에이전트가 작업하는 로컬 폴더(작업 공간)에 저장되는 구조로 보임. Gemini 앱 안에서 폴더 지정 방식은 [확인 필요] — 강의 전날 실제 확인 필요"
+      },
+      {
+        "q": "Canvas와 무엇이 다른가요?",
+        "a": "Canvas는 화면 안 미리보기 중심 시제품, Antigravity는 계획 승인 후 에이전트가 파일을 만들고 테스트까지 하는 개발 도구임"
+      },
+      {
+        "q": "내 코드가 학습에 쓰이나요?",
+        "a": "Antigravity FAQ는 서비스 약관을 따르며 설정 패널에서 데이터 수집을 끌 수 있다고 안내함. 기관 규정 함께 확인"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "강사가 준 요구 사항 그대로 붙여 넣고 계획 읽기·승인·직접 테스트까지만. 권한 화면은 강사와 함께"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "내 주제로 요구 사항 작성, 계획 수정 1회 이상, 피드백 2회"
+      },
+      {
+        "level": "고급(자동화·개발)",
+        "guide": "words.json 분리·README 작성 도전, 권한 규칙(Allow·Ask·Deny) 직접 설계"
+      },
+      {
+        "level": "시니어",
+        "guide": "짝 실습, 프롬프트는 종이 카드로 배포. 결과물은 큰 글씨 버튼 요청으로 마무리"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "단어 카드에 모국어 뜻 추가 버전 만들기. 번역은 원어민·사전으로 확인"
+      }
+    ],
+    "pro_points": [
+      "핵심은 코딩이 아니라 '요구 사항 쓰기 → 계획 검토 → 결과 검증'이라는 에이전트 업무 습관임 — 다른 코딩 에이전트에도 그대로 통함",
+      "대화 ↔ 에이전트 사이를 오가는 장면을 시연하면 '백그라운드 실행'의 가치가 한 번에 보임",
+      "권한 3단계를 신호등(Turbo 빨강·Default 노랑·Request Review 초록)으로 비유하면 비개발자도 이해함"
+    ],
+    "day_before": [
+      "강사 Mac에서 Gemini 앱 업데이트 후 Antigravity 버튼 위치·작업 폴더 지정·계획 승인 화면 캡처",
+      "무료 계정과 AI Pro 계정 각각에서 Gemini 앱 안 Antigravity가 열리는지 확인",
+      "완성 예시 폴더(단어 카드 퀴즈) 미리 만들어 Plan B용으로 공유",
+      "수강생 기기(Apple Silicon·macOS 버전) 사전 설문 → 짝 편성",
+      "기관 네트워크에서 Gemini·Antigravity 접속 확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Gemini 앱 안 Antigravity의 무료 계정 이용 가능 여부 — 릴리스 노트에 요금제 조건 없음, Antigravity 단독은 무료 개인 요금 있음",
+    "[확인 필요] 버튼 이름·위치, 작업 폴더 지정 방식, 권한 설정 화면이 Antigravity 독립 앱과 같은지",
+    "[확인 필요] 한국어 프롬프트·한국어 화면 지원 — 릴리스 노트는 영어 제공으로 안내",
+    "[확인 필요] Google AI Plus의 Antigravity 한도 — 구독 페이지에 표기 없음",
+    "자동 작성 교안이라 실제 Mac 화면에서 재현하지 않음. 강의 전날 체크리스트로 확인할 것"
+  ],
+  "sources": [
+    {
+      "title": "Gemini Apps release notes – Code, prototype, and build with Google Antigravity in the Gemini macOS app (2026.10.13)",
+      "url": "https://gemini.google/release-notes/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google 블로그 – Gemini 4 Argon is now available in the Gemini app",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Gemini for desktop (macOS 요구 사항·기능)",
+      "url": "https://gemini.google/desktop/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Antigravity – FAQ (지원 국가·연령·계정)",
+      "url": "https://antigravity.google/docs/faq/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Antigravity – Permissions",
+      "url": "https://antigravity.google/docs/permissions/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Antigravity – Plans",
+      "url": "https://antigravity.google/docs/plans",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google Antigravity – Pricing",
+      "url": "https://antigravity.google/pricing",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Gemini 구독 요금제 (미국)",
+      "url": "https://gemini.google/subscriptions/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Antigravity 블로그 – Introducing Google Antigravity 2.0",
+      "url": "https://antigravity.google/blog/introducing-google-antigravity-2/",
+      "checked": "2026-10-16"
+    }
+  ]
+}

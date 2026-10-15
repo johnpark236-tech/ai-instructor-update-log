@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 60,
+  "count": 61,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-006",
+      "version": "v1.0",
+      "created_at": "2026-10-16 03:10 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "Mac용 Gemini 앱에서 대화로 다듬은 아이디어를 Antigravity 코딩 에이전트에 넘겨 작은 웹 앱 시제품을 만들 수 있음",
+      "summary": "Gemini macOS 앱 상단 Antigravity를 누르면 코딩 에이전트가 계획을 세우고, 사람이 계획을 승인하면 백그라운드에서 코드 작성·테스트 후 검토 알림을 줌. 대화와 코딩이 한 앱에서 이어짐 (영어, 18세 이상 개인 계정)",
+      "tool": "Gemini",
+      "feature": "Gemini macOS 앱의 Google Antigravity — 대화에서 코딩 에이전트 시작·계획 승인·백그라운드 빌드",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-13",
+      "categories": [
+        "CAT-07",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-STU"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 대화로 기획한 '한국어 단어 카드 퀴즈' 웹 앱(HTML 1~3개 파일) + ② 에이전트가 낸 계획과 내가 고친 점 메모 3줄 + ③ 직접 브라우저로 열어 확인한 테스트 체크리스트",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🛸",
+      "one_liner": "Gemini 대화에서 바로 코딩 에이전트"
+    },
     {
       "id": "AI-2026-10-CAT03-007",
       "version": "v1.0",
