@@ -254,6 +254,8 @@ async function lessonView(id){
   scrollTo(0,0);
 }
 
+// 카카오톡 등은 링크의 #뒷부분을 빼먹음 → ?id=교안ID 로도 바로 열리게 함 (주소는 #ID 로 정리)
+(function(){const q=new URLSearchParams(location.search),id=q.get('id')||q.get('lesson');if(id&&!location.hash){history.replaceState(null,'',location.pathname+'#'+encodeURIComponent(id))}})();
 function route(){const h=location.hash.slice(1);if(h.startsWith('import='))return importSync(h.slice(7));let id=decodeURIComponent(h);if(M.LEGACY[id]){history.replaceState(null,'','#'+M.LEGACY[id]);id=M.LEGACY[id]}id?lessonView(id):listView()}
 document.addEventListener('click',e=>{if(e.target&&e.target.id==='goExt')openExternal(location.href)});
 // 그래프 막대 툴팁 (마우스 올림·탭)

@@ -23,7 +23,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 def compose(lesson, base):
     e = lambda s: html.escape(str(s), quote=False)
-    link = f"{base}/lessons.html#{urllib.parse.quote(lesson['id'])}"
+    link = f"{base}/lessons.html?id={urllib.parse.quote(lesson['id'])}"
     kind = "신규 AI" if lesson.get("type") == "new" else "기존 AI"
     acc = {"free": "무료", "freemium": "무료+유료", "paid": "유료"}.get(lesson["pricing"]["access"], "")
     steps = lesson["practice"]["follow"] + lesson["practice"]["make_mine"]
