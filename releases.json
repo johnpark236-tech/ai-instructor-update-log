@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 06:15 KST",
+  "updated_at": "2026-10-16 07:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2086,6 +2086,36 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT04-008"
+    },
+    {
+      "id": "chatgpt-2026-09-29-dots",
+      "date": "2026-09-29",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "dots — 상시 에이전트",
+      "summary": "자기 클라우드 컴퓨터·브라우저를 가진 GPT-6 Astra 기반 상시 에이전트. 맞춤 규칙으로 행동 승인 단계 설정, 연결 앱·예약 작업·Codex 활용. Pro·Business Premium 포함(첫 dot), Enterprise 베타",
+      "source": {
+        "title": "OpenAI – Introducing dots",
+        "url": "https://openai.com/index/introducing-dots/"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT08-007"
+    },
+    {
+      "id": "chatgpt-2026-10-09-dots-mobile-codex",
+      "date": "2026-10-09",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "dots 모바일 만들기·Codex 위임",
+      "summary": "iOS·Android 앱에서 dot 만들기, dot이 Codex에 작업을 맡기고 기존 스레드 이어 가기, ChatGPT Work 예약 작업 확인·수정",
+      "source": {
+        "title": "OpenAI Developer Community – Fresh dots updates",
+        "url": "https://community.openai.com/t/fresh-dots-updates-create-in-the-mobile-app-delegate-to-codex/1404834"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT08-007"
     }
   ]
 }

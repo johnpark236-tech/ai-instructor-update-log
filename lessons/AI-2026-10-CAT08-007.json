@@ -1,0 +1,603 @@
+{
+  "id": "AI-2026-10-CAT08-007",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 07:20 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "24시간 일하는 내 AI 동료 만들기 — ChatGPT dots(상시 에이전트)로 '주간 수업 준비 비서' 세팅하기",
+  "summary": "2026-09-29 공개된 ChatGPT dots는 자기 클라우드 컴퓨터·브라우저를 가진 상시 에이전트(GPT-6 Astra)임. 이름·캐릭터를 정하고 맞춤 규칙(Custom rules)으로 '알아서 할 일·물어볼 일'을 나눈 뒤 반복 작업을 맡김. Pro·Business Premium 포함(첫 dot 추가 요금 없음), 2026-10-09부터 모바일 앱에서도 만들기 가능",
+  "glance": {
+    "emoji": "🟣",
+    "one_liner": "쉬지 않고 일하는 내 AI 동료",
+    "cards": [
+      {
+        "icon": "☁️",
+        "title": "자기 컴퓨터",
+        "text": "클라우드 컴퓨터·브라우저로 작업"
+      },
+      {
+        "icon": "⏰",
+        "title": "24시간 상시",
+        "text": "내가 없을 때도 목표 향해 작업"
+      },
+      {
+        "icon": "🚦",
+        "title": "맞춤 규칙",
+        "text": "바로 실행·승인 후·넘기기 4단계"
+      },
+      {
+        "icon": "💳",
+        "title": "Pro·BP 포함",
+        "text": "첫 dot 추가 요금 없음"
+      }
+    ],
+    "diagram": {
+      "title": "dot이 일하는 흐름",
+      "nodes": [
+        {
+          "icon": "🐣",
+          "label": "dot 만들기"
+        },
+        {
+          "icon": "🚦",
+          "label": "규칙 정하기"
+        },
+        {
+          "icon": "🔌",
+          "label": "앱 연결"
+        },
+        {
+          "icon": "📋",
+          "label": "일 맡기기"
+        },
+        {
+          "icon": "✅",
+          "label": "검토·승인"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "매번 직접 지시",
+        "text": "수업 준비 때마다 새 대화 열고 같은 조사·정리 반복"
+      },
+      "after": {
+        "label": "dot에게 맡김",
+        "text": "dot이 매주 자료를 모아 두고 결정할 일만 물어봄"
+      }
+    },
+    "cautions": [
+      "중요 결과물은 반드시 직접 검토",
+      "연결 앱·권한은 필요한 것만",
+      "비밀번호 변경 등은 직접 할 것"
+    ]
+  },
+  "tool": "ChatGPT",
+  "feature": "dots(상시 에이전트) — 자기 클라우드 컴퓨터를 가진 개인 AI 동료, 맞춤 규칙(Custom rules)·예약 작업·Codex 위임",
+  "company": "OpenAI",
+  "type": "update",
+  "released": "2026-09-29",
+  "categories": [
+    "CAT-08",
+    "CAT-01"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "ChatGPT Pro(Pro 100·200·500) 또는 Business Premium 좌석 계정 — Free·Go·Plus·Business 일반 좌석은 대상 아님. Enterprise·Edu는 관리자가 베타를 켜야 함",
+    "최신 ChatGPT 앱 — iOS·Android 앱, 데스크톱 앱(macOS·Windows) 또는 데스크톱 웹. 모바일 웹은 미지원",
+    "Pro는 순차 제공(EEA·스위스·영국 제외) — 계정에 dot 메뉴가 보이는지 사전 확인 [확인 필요: 국내 제공 여부]",
+    "연결해 볼 앱 1개(선택) — 예: Google Drive·Gmail·캘린더 중 실습용 계정",
+    "강사: 수강생 요금제 사전 조사 — 대상이 아니면 시연 중심으로 전환"
+  ],
+  "outcome": "① 이름·캐릭터를 정한 내 dot 1개 + ② '바로 실행/승인 후 실행/물어보기/나에게 넘기기' 4칸 맞춤 규칙표 + ③ 매주 반복되는 '주간 수업 준비 브리핑' 예약 작업 1개 + ④ 일시 정지·재설정(Reset) 위치 메모",
+  "objectives": [
+    "dots의 작동 방식(클라우드 컴퓨터·상시 작업·연결 앱)과 대상 요금제를 설명할 수 있음",
+    "맞춤 규칙(Custom rules)으로 dot이 스스로 할 일과 승인받을 일을 나눠 설정할 수 있음",
+    "dot에게 반복 작업을 맡기고 결과를 검토한 뒤 일시 정지·재설정으로 관리할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "첫 dot은 Pro·Business Premium 요금제에 추가 요금 없이 포함. 출시 후 첫 달은 '더 깊은 작업' 한도 확대. dot과의 대화는 ChatGPT 사용 한도에서 빠지지 않지만 Codex·ChatGPT Work에서 돌린 작업은 한도 차감. 추가 dot·속도·월 작업량 확장은 향후 제공 예정(금액 미발표)",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "dots 없음"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $20 [확인 필요]",
+        "features": "dots 없음"
+      },
+      {
+        "name": "Pro 100",
+        "price": "월 $100",
+        "features": "첫 dot 포함(순차 제공, EEA·스위스·영국 제외)"
+      },
+      {
+        "name": "Pro 200",
+        "price": "월 $200",
+        "features": "첫 dot 포함, Pro 100보다 많은 사용량"
+      },
+      {
+        "name": "Pro 500",
+        "price": "월 $500",
+        "features": "첫 dot 포함, Pro 중 최대 사용량"
+      },
+      {
+        "name": "Business Premium",
+        "price": "월 $125 (1인, 연간 결제 시 $100)",
+        "features": "첫 dot 포함, 지원 지역 전체, 일반 좌석 대비 5배 사용량"
+      }
+    ],
+    "note": "Pro 가격은 OpenAI 도움말 'About ChatGPT Pro tiers', Business Premium 가격은 OpenAI 발표(2026-08) 달러 표기. 원화·부가세 미확인. Plus 월 $20은 이번 확인 범위 공식 페이지에 금액 미표시 → [확인 필요]. 문자(texting)는 미국 Pro 한정 베타, 문자 요금은 통신사 기준",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "OpenAI – Introducing dots",
+        "url": "https://openai.com/index/introducing-dots/"
+      },
+      {
+        "title": "OpenAI 도움말 – Getting started with your dot",
+        "url": "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"
+      },
+      {
+        "title": "OpenAI 도움말 – About ChatGPT Pro tiers",
+        "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+      },
+      {
+        "title": "OpenAI – Premium seats are coming to ChatGPT Business",
+        "url": "https://openai.com/index/premium-seats-chatgpt-business/"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-08-25",
+      "text": "ChatGPT Business Premium 좌석 제공 시작 (월 $125, 일반 좌석 대비 5배 사용량)"
+    },
+    {
+      "date": "2026-09-29",
+      "text": "dots 공개 — GPT-6 Astra 기반 상시 에이전트, Pro·Business Premium 순차 제공, Enterprise 베타, 전문가 dot(Specialist dots) 기업 파일럿"
+    },
+    {
+      "date": "2026-10-01",
+      "text": "Runway, dots에서 장면별 영상 생성 연동 발표 (Runway 체인지로그) [확인 필요]"
+    },
+    {
+      "date": "2026-10-09",
+      "text": "dots 업데이트 — iOS·Android 앱에서 만들기, Codex에 작업 위임, ChatGPT Work 예약 작업 확인·수정, Outlook 연결 쉬워짐"
+    }
+  ],
+  "theory": {
+    "definition": "dots는 ChatGPT 안에 사는 상시(always-on) 에이전트임. 각 dot은 자기 클라우드 컴퓨터와 브라우저를 갖고, 연결한 앱과 메모리를 바탕으로 사용자가 자리에 없을 때도 목표를 향해 일함. 대화·음성 통화로 지시하고, dot이 먼저 진행 상황·결정할 일을 알려 줌",
+    "analogy": "출근하지 않아도 되는 '개인 비서'. 자기 책상(클라우드 컴퓨터)이 따로 있고, 내가 정해 준 결재 규칙(맞춤 규칙)대로 일하다가 결재가 필요하면 나를 부름",
+    "comparison": {
+      "headers": [
+        "구분",
+        "일반 ChatGPT 대화",
+        "예약 작업(Scheduled tasks)",
+        "dots"
+      ],
+      "rows": [
+        [
+          "시작",
+          "내가 질문할 때만",
+          "정한 시각에 실행",
+          "상시 대기 + 스스로 도울 일 탐색"
+        ],
+        [
+          "작업 공간",
+          "대화창",
+          "대화창",
+          "자기 클라우드 컴퓨터·브라우저"
+        ],
+        [
+          "기억",
+          "메모리",
+          "메모리",
+          "ChatGPT 메모리 + dot 자체 메모"
+        ],
+        [
+          "행동 통제",
+          "—",
+          "—",
+          "맞춤 규칙 4단계 + 자동 검토"
+        ],
+        [
+          "대상",
+          "모든 요금제",
+          "Plus 이상 [확인 필요]",
+          "Pro·Business Premium (Enterprise 베타)"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "자기 컴퓨터를 가진 에이전트",
+        "body": "dot마다 클라우드 컴퓨터·클라우드 브라우저가 있음. 브라우저 로그인 상태는 내 것과 따로 보관. 내 PC 접근은 기본 꺼짐 → 데스크톱 앱에서 프로필 > Computers > Allow access로 켬, Revoke access로 해제"
+      },
+      {
+        "title": "맞춤 규칙(Custom rules)",
+        "body": "Customize > Custom rules에서 행동별 처리 방식 지정: Take action without asking(묻지 않고 실행) · Take action if pre-approved(미리 승인된 것만) · Ask before taking action(실행 전 질문) · Hand off to you(나에게 넘김). 비밀번호 변경 같은 민감 작업은 항상 사용자 몫"
+      },
+      {
+        "title": "연결·예약·관리",
+        "body": "Customize > Plugins로 앱 연결(4,000개 이상), 쉬는 동안 연결 앱을 읽기 전용으로 살펴 도울 일 탐색. 예약 작업은 프로필의 Recent activity 또는 ChatGPT Scheduled에서 수정. ••• > Pause로 일시 정지, ••• > Reset으로 dot·대화·메모·예약 작업 모두 삭제"
+      }
+    ],
+    "can": [
+      "이름·캐릭터(또는 반려동물)를 정한 내 dot 만들기",
+      "대화·음성 통화로 일 맡기고 진행 상황 받기",
+      "연결 앱 자료를 읽고 정리·초안 작성",
+      "반복 작업 예약, Codex에 코딩 작업 위임",
+      "맞춤 규칙으로 승인 단계 설정, 일시 정지·재설정"
+    ],
+    "cannot": [
+      "Free·Go·Plus·Business 일반 좌석에서 사용",
+      "모바일 웹 브라우저에서 만들기",
+      "출시 시점에 dot이 먼저 전화 걸기, 자체 이메일 주소 갖기",
+      "비밀번호 변경 같은 민감 작업 대신 처리",
+      "앱 연결을 끊는 것만으로 이미 저장한 메모 지우기(Reset 필요)"
+    ],
+    "safety": [
+      "dot도 실수함 — 보내기·결제·공유 등 결과가 큰 작업은 'Ask before taking action'으로 두고 직접 검토할 것",
+      "연결 앱은 실습용·필요한 것만 — 연결 앱 정보로 dot이 스스로 메모를 만듦",
+      "앱 연결 해제는 이후 접근만 막음, 이미 저장된 정보는 Reset으로만 삭제됨",
+      "개인 요금제는 데이터 학습 사용 여부를 설정에서 직접 확인할 것 (Business·Enterprise·Edu는 기본 미사용)",
+      "수강생 실명·연락처·성적 등 개인정보를 dot에 맡기지 말 것",
+      "문자(texting) 베타는 제3자 사업자를 거침 — 민감 정보 문자 전송 금지"
+    ]
+  },
+  "practice": {
+    "preview": "내 dot을 만들고 ① 4단계 맞춤 규칙표 + ② '매주 월요일 아침 주간 수업 준비 브리핑' 예약 작업 + ③ 첫 브리핑 결과 검토 메모 완성. 연결 앱 없이도 웹 검색만으로 진행 가능",
+    "follow": [
+      {
+        "title": "dot 메뉴 확인·만들기",
+        "minutes": 7,
+        "do": "ChatGPT 앱(모바일 최신 버전·데스크톱 앱·데스크톱 웹) 실행 → 안내(onboarding)에 따라 dot 만들기 → 이름 정하기 → 캐릭터·반려동물 고르거나 자동 생성",
+        "prompt": "",
+        "expect": "@내이름-dot 형태의 기본 핸들 + 이름·아바타가 있는 dot 프로필",
+        "note": "메뉴가 안 보이면 순차 제공 중 — 강사 화면 시연으로 전환. 한국어 메뉴 이름 [확인 필요]"
+      },
+      {
+        "title": "자기소개·역할 알려 주기",
+        "minutes": 6,
+        "do": "dot 대화창에 아래 프롬프트 전송 → 답을 읽고 고칠 점 추가 지시",
+        "prompt": "안녕, 나는 성인 대상 AI 활용 강의를 하는 강사야. 앞으로 너는 내 '수업 준비 비서'야. 매주 새로 나온 AI 기능을 찾아 수업에 쓸 만한 것을 골라 주고, 실습 아이디어를 제안하는 게 주 업무야. 확실하지 않은 정보는 꼭 '확인 필요'라고 표시해 줘. 이해한 내용을 3줄로 요약해 줘.",
+        "expect": "역할 요약 3줄 답변",
+        "note": "dot은 ChatGPT 메모리도 받음 — Customize > Memory에서 공유 메모리 설정 확인"
+      },
+      {
+        "title": "맞춤 규칙 정하기",
+        "minutes": 8,
+        "do": "Customize > Custom rules 열기 → 아래 표를 기준으로 행동별 처리 방식 지정 (보내기·공유·구매는 Ask before taking action 이상)",
+        "prompt": "| 행동 | 처리 방식 |\n|---|---|\n| 웹 검색·자료 요약 | Take action without asking |\n| 내 문서에 초안 저장 | Take action if pre-approved |\n| 이메일·메시지 보내기, 파일 공유 | Ask before taking action |\n| 결제·계정 설정 변경 | Hand off to you |",
+        "expect": "규칙 4줄 저장",
+        "note": "규칙 화면의 행동 목록 구성은 계정마다 다를 수 있음 [확인 필요]"
+      },
+      {
+        "title": "첫 작업 맡기기",
+        "minutes": 7,
+        "do": "아래 프롬프트로 첫 브리핑 요청 → dot의 클라우드 컴퓨터 화면을 열어 작업 과정 지켜보기",
+        "prompt": "이번 주(최근 7일) 공식 발표된 AI 새 기능 3가지를 찾아서 표로 정리해 줘. 열: 도구 / 기능 / 발표일 / 공식 출처 링크 / 수업 실습 아이디어 1줄. 공식 블로그·도움말·릴리스 노트만 출처로 써 줘.",
+        "expect": "3행 표 + 출처 링크",
+        "note": "출처 링크를 직접 눌러 날짜·내용이 맞는지 확인 — 틀린 줄은 dot에게 수정 요청"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "주간 예약 작업 만들기",
+        "minutes": 8,
+        "do": "아래 프롬프트로 반복 작업 요청 → 프로필의 Recent activity 또는 ChatGPT Scheduled에서 시각·반복·알림 확인",
+        "prompt": "방금 만든 브리핑을 매주 월요일 오전 8시에 반복해 줘. 끝나면 나에게 알림을 보내고, 지난주에 소개한 기능은 빼 줘.",
+        "expect": "매주 월요일 08:00 예약 작업 1개",
+        "note": "시각이 틀리면 Scheduled에서 직접 수정. 시간대(KST) 확인"
+      },
+      {
+        "title": "내 분야로 바꾸기",
+        "minutes": 7,
+        "do": "예약 작업 지시를 내 직업·수강생에 맞게 수정 (예: 시니어반·다문화반·사무직 대상)",
+        "prompt": "브리핑 조건을 바꿔 줘. 대상은 '스마트폰만 쓰는 60대 수강생'이고, 무료로 쓸 수 있는 기능을 우선해 줘. 실습 아이디어는 10분 안에 끝나는 것만.",
+        "expect": "수정된 예약 작업 내용 확인 답변",
+        "note": "dot이 바꾼 내용을 다시 요약하게 해 의도대로 바뀌었는지 확인"
+      },
+      {
+        "title": "관리 연습 — 일시 정지·재설정 위치 확인",
+        "minutes": 7,
+        "do": "프로필 > ••• > Pause로 일시 정지 → 'Paused • Tap to resume'으로 재개 → ••• > Reset 화면의 안내문만 읽고 취소 (실제 Reset은 하지 않음)",
+        "prompt": "",
+        "expect": "일시 정지·재개 성공 + Reset 위치 메모",
+        "note": "Reset은 dot·대화·메모·예약 작업 전부 삭제 — 실습에선 누르지 말 것"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "실습용 Google Drive(또는 캘린더)를 Customize > Plugins로 연결하고, 브리핑 결과를 Drive 문서 초안으로 저장하게 하기 (규칙: 미리 승인된 것만)"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "dot에게 '다음 주 수업 실습지 초안'을 맡기고, 승인 요청이 왔을 때 무엇을 확인하고 승인·거절했는지 기록하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Codex 클라우드 환경을 만든 뒤 dot에게 '수업 타이머 웹페이지' 작업을 Codex로 위임하게 하고, 사용 한도 차감 여부를 확인해 정리하기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 서로의 맞춤 규칙표를 비교하고 '나라면 이 행동은 한 단계 더 엄격하게 둔다' 1가지씩 제안",
+    "quiz": [
+      {
+        "q": "dots에 대한 설명으로 맞는 것은?",
+        "options": [
+          "내 컴퓨터에서만 작동한다",
+          "자기 클라우드 컴퓨터와 브라우저를 갖고 일한다",
+          "질문할 때만 답하는 일반 채팅이다",
+          "Free 요금제에서도 쓸 수 있다"
+        ],
+        "answer": 1,
+        "explain": "dot마다 클라우드 컴퓨터·브라우저가 있음. 내 PC 접근은 기본 꺼짐, Pro·Business Premium 대상"
+      },
+      {
+        "q": "이메일 보내기처럼 결과가 큰 행동에 알맞은 맞춤 규칙은?",
+        "options": [
+          "Take action without asking",
+          "Ask before taking action",
+          "규칙을 정하지 않는다",
+          "dot을 Reset한다"
+        ],
+        "answer": 1,
+        "explain": "되돌리기 어려운 행동은 실행 전 질문 이상으로 두고 직접 검토"
+      },
+      {
+        "q": "dot이 연결 앱에서 이미 저장한 메모까지 지우려면?",
+        "options": [
+          "앱 연결만 끊는다",
+          "메모리 설정을 끈다",
+          "••• 메뉴에서 Reset한다",
+          "일시 정지(Pause)한다"
+        ],
+        "answer": 2,
+        "explain": "연결 해제·메모리 설정 변경은 기존 메모를 지우지 않을 수 있음. Reset만 dot·대화·메모·예약 작업 삭제"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "설정 완성도",
+        "high": "dot + 규칙 4칸 + 예약 작업 모두 완료",
+        "mid": "dot + 규칙만",
+        "low": "dot만 생성"
+      },
+      {
+        "criterion": "안전한 권한 설계",
+        "high": "보내기·공유·결제를 승인 이상으로 설정 + 이유 설명",
+        "mid": "일부만 승인 설정",
+        "low": "전부 묻지 않고 실행"
+      },
+      {
+        "criterion": "결과 검토",
+        "high": "출처 링크 직접 확인 + 오류 수정 요청",
+        "mid": "결과만 읽음",
+        "low": "검토 없음"
+      }
+    ],
+    "next": [
+      "ChatGPT 예약 작업으로 반복 업무 맡기기 (AI-2026-10-CAT08-002)",
+      "Codex 다음 메시지 추천으로 코딩 지시 이어 가기 (AI-2026-10-CAT07-005)",
+      "Perplexity Computer 자동화와 비교하기 (AI-2026-10-CAT08-004)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: '출근 안 하는 개인 비서' 비유",
+        "note": "'맡기되, 결재는 내가' 한 문장 먼저"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 클라우드 컴퓨터·상시 작업·연결 앱, 맞춤 규칙 4단계, 요금·대상, 관리(Pause·Reset)",
+        "note": "요금제 표로 수강생 계정 확인"
+      },
+      {
+        "time": "35~63분",
+        "content": "따라 하기 1~4: 만들기 → 역할 알려 주기 → 맞춤 규칙 → 첫 작업",
+        "note": "클라우드 컴퓨터 화면을 함께 보며 진행"
+      },
+      {
+        "time": "63~85분",
+        "content": "내 것 만들기: 주간 예약 → 내 분야로 바꾸기 → 일시 정지·Reset 위치",
+        "note": "Reset은 누르지 않게 반복 안내"
+      },
+      {
+        "time": "85~90분",
+        "content": "규칙표 비교·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "지금까지 ChatGPT는 우리가 물어봐야 답하는 도구였죠. dots는 다릅니다. 자기 컴퓨터를 갖고, 우리가 자는 동안에도 일하는 비서예요. 그래서 오늘 제일 중요한 건 '무엇을 맡길까'보다 '무엇은 꼭 나에게 물어보게 할까'입니다."
+      },
+      {
+        "label": "맞춤 규칙",
+        "text": "회사에서 신입에게 일을 줄 때도 '이건 알아서 해, 이건 꼭 나한테 보여 주고 해' 하고 나누잖아요. 맞춤 규칙이 바로 그 결재 규칙입니다."
+      },
+      {
+        "label": "검토 강조",
+        "text": "dot이 가져온 표의 출처 링크, 하나만이라도 직접 눌러 보세요. AI 비서도 틀립니다. 확인하는 습관이 비서를 잘 쓰는 실력입니다."
+      },
+      {
+        "label": "Reset 경고",
+        "text": "Reset 버튼은 오늘 절대 누르지 마세요. 누르면 dot과 대화, 기억, 예약 작업이 전부 사라집니다. 위치만 확인하고 취소합니다."
+      },
+      {
+        "label": "마무리",
+        "text": "다음 주 월요일 아침, 여러분의 dot이 브리핑을 보내올 겁니다. 그 결과를 그대로 쓰지 말고, 오늘처럼 출처를 확인하고 고쳐 달라고 하세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 대부분이 Pro·Business Premium이 아님",
+        "response": "강사 계정 화면 시연 + 수강생은 일반 ChatGPT의 예약 작업(Scheduled tasks)으로 같은 주간 브리핑 만들기, 맞춤 규칙표는 종이로 설계"
+      },
+      {
+        "situation": "강사 계정에도 dot 메뉴가 안 보임(순차 제공·지역)",
+        "response": "사전 캡처 화면과 공식 도움말 화면으로 설명, 실습은 규칙표 설계 + 예약 작업으로 대체"
+      },
+      {
+        "situation": "dot 작업이 오래 걸려 수업 시간 초과",
+        "response": "첫 작업 범위를 '기능 1개'로 줄이고, 결과는 다음 시간에 확인"
+      },
+      {
+        "situation": "교육장 PC에 앱 설치 불가",
+        "response": "데스크톱 웹 또는 수강생 휴대폰 앱(최신 버전) 사용, 모바일 웹은 미지원임을 안내"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "휴대폰 브라우저에서 dot 만들기가 안 됨",
+        "fix": "모바일 웹 미지원 — iOS·Android ChatGPT 앱 최신 버전 설치 후 시도"
+      },
+      {
+        "issue": "Custom rules 메뉴를 못 찾음",
+        "fix": "dot 프로필 > Customize 안에 있음 [확인 필요: 한국어 메뉴 이름]"
+      },
+      {
+        "issue": "예약 작업 시각이 이상함",
+        "fix": "ChatGPT Scheduled에서 시각·반복·알림 직접 수정, 시간대 확인"
+      },
+      {
+        "issue": "dot이 연결 앱 자료를 못 읽음",
+        "fix": "Customize > Plugins에서 해당 앱 연결·권한 확인 후 다시 요청"
+      },
+      {
+        "issue": "브리핑에 날짜·출처가 틀린 항목이 있음",
+        "fix": "'출처 링크를 다시 열어 날짜를 확인하고 틀린 줄을 고쳐 줘'로 수정 요청"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Plus 요금제에서도 되나요?",
+        "a": "안 됨. 2026-10-16 도움말 기준 Pro·Business Premium 포함, Enterprise·Edu는 관리자 베타 설정 필요"
+      },
+      {
+        "q": "dot과 대화하면 사용량이 줄어드나요?",
+        "a": "dot과의 대화는 ChatGPT 사용 한도에서 빠지지 않음. Codex·ChatGPT Work에서 돌린 작업은 한도 차감"
+      },
+      {
+        "q": "dot이 제 컴퓨터를 마음대로 쓰나요?",
+        "a": "아님. 내 PC 접근은 기본 꺼짐, 데스크톱 앱 프로필 > Computers > Allow access로 켜야 함, Revoke access로 해제"
+      },
+      {
+        "q": "dot을 여러 개 만들 수 있나요?",
+        "a": "현재 첫 dot만 요금제에 포함. 추가 dot은 향후 제공 예정(공식 발표 기준, 금액 미발표)"
+      },
+      {
+        "q": "dot을 완전히 지우려면?",
+        "a": "프로필 > ••• > Reset. dot·대화·메모·예약 작업 모두 삭제, 필요한 결과는 먼저 저장"
+      },
+      {
+        "q": "dot이 전화나 문자도 하나요?",
+        "a": "출시 시점엔 dot이 먼저 전화하지 않음. 문자는 미국 Pro 한정 베타"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "강사 시연 중심. '맡길 일 / 물어볼 일' 두 칸 종이 규칙표 만들기로 개념만 익힘"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐(Codex 위임) + 규칙별 승인 요청 로그 분석"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "주간 브리핑을 '다음 주 수업 자료 후보 3개'로 바꿔 실제 수업 준비에 활용"
+      },
+      {
+        "level": "다문화·한국어 학습자반 (JOB-GLB)",
+        "guide": "dot에게 '이번 주 생활 한국어 표현 5개 + 예문' 주간 브리핑을 맡기는 형태로 변형, 예문 검토는 강사가 함께"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 맡기되, 결재 규칙은 사람이 정함",
+      "상시 에이전트 = 권한 설계가 실력 — 규칙표를 결과물로 남길 것",
+      "Reset의 삭제 범위(대화·메모·예약 작업)를 반드시 짚을 것",
+      "대상 요금제가 좁음 → 사전 조사 후 시연 비중 결정",
+      "첫 달 한도 확대는 출시 직후 한정 조건임을 안내"
+    ],
+    "day_before": [
+      "강사 Pro 계정에서 dot 메뉴·Customize·Custom rules·Scheduled 화면 캡처 준비 [확인 필요]",
+      "첫 작업 프롬프트로 리허설 — 소요 시간·결과 표 캡처",
+      "맞춤 규칙표 빈 양식 배포 준비",
+      "수강생 요금제 조사 — Pro·Business Premium 비율에 따라 시연·실습 비중 조정",
+      "Reset을 누르지 않도록 화면에 경고 슬라이드 준비"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 한국이 Pro 순차 제공 지역인지 — 도움말은 EEA·스위스·영국 제외만 명시",
+    "[확인 필요] 한국어 앱 화면의 메뉴 이름(Customize·Custom rules·Plugins·Scheduled)",
+    "[확인 필요] 2026-10-01 Runway–dots 연동 — Runway 체인지로그 항목, 이번 작성 중 원문 재확인 못 함",
+    "[확인 필요] Plus 월 $20 — 이번 확인한 공식 페이지에 금액 미표시",
+    "2026-10-09 업데이트는 OpenAI Developer Community Announcements 게시글 기준(게시자 직원 여부 미표시)",
+    "교안 작성 중 실제 계정으로 dot을 만들어 재현하지 못함 — 공식 발표·도움말 기준"
+  ],
+  "sources": [
+    {
+      "title": "OpenAI – Introducing dots",
+      "url": "https://openai.com/index/introducing-dots/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "OpenAI 도움말 – Getting started with your dot",
+      "url": "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "OpenAI Developer Community(Announcements) – Fresh dots updates: Create in the mobile app, delegate to Codex",
+      "url": "https://community.openai.com/t/fresh-dots-updates-create-in-the-mobile-app-delegate-to-codex/1404834",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "OpenAI 도움말 – About ChatGPT Pro tiers",
+      "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "OpenAI – Premium seats are coming to ChatGPT Business",
+      "url": "https://openai.com/index/premium-seats-chatgpt-business/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "ChatGPT 릴리스 노트",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "checked": "2026-10-16"
+    }
+  ]
+}
