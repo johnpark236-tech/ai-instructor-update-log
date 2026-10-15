@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 61,
+  "count": 62,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT01-010",
+      "version": "v1.0",
+      "created_at": "2026-10-16 04:10 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "메뉴 한 곳에서 내 Gemini 세팅 끝 — Gemini 맞춤 설정(Customize)으로 지침·스킬·커넥터를 묶어 '수업 준비 비서' 만들기",
+      "summary": "Gemini 왼쪽 메뉴에 '맞춤 설정(Customize)'이 생겨 응답 방식 + 스킬 + 연결 앱(커넥터)을 한 화면에서 관리하게 됨. 연결 가능한 앱은 40개 이상으로 늘었고 모든 요금제·웹·모바일·데스크톱 앱에 순차 제공. Google Workspace 커넥터를 연결해 @Gmail·@Calendar·@Keep으로 수업 준비를 시키는 비서를 만듦",
+      "tool": "Gemini",
+      "feature": "맞춤 설정(Customize) 페이지 — 응답 방식·스킬·커넥터(Connectors) 한곳 관리, 연결 앱 40개 이상, @앱 호출",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-13",
+      "categories": [
+        "CAT-01",
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 응답 지침 2개(요약 먼저·표 정리) 저장 ② Google Workspace 커넥터 연결 + @호출 3회 결과(메일 요약·캘린더 일정·Keep 체크리스트) ③ '수업 준비 비서' 프롬프트 카드 1장",
+      "access": "freemium",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🎛️",
+      "one_liner": "지침·스킬·앱 연결을 한 화면에서"
+    },
     {
       "id": "AI-2026-10-CAT07-006",
       "version": "v1.0",

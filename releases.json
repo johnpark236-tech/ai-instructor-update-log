@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 03:10 KST",
+  "updated_at": "2026-10-16 04:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2056,6 +2056,21 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT07-006"
+    },
+    {
+      "id": "gemini-2026-10-13-customize-connectors",
+      "date": "2026-10-13",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "맞춤 설정(Customize) 페이지·연결 앱 40개+",
+      "summary": "왼쪽 메뉴 Customize에서 응답 방식·스킬·연결 앱(커넥터)을 한곳에서 관리, 연결 앱 40개 이상으로 확대 (웹·모바일·Windows/macOS 앱, 모든 등급 순차 제공, 외부 앱 다수는 미국·영어)",
+      "source": {
+        "title": "Gemini Apps release notes",
+        "url": "https://gemini.google/release-notes/"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT01-010"
     }
   ]
 }
