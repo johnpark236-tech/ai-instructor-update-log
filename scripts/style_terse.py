@@ -45,7 +45,8 @@ def sub_end(pattern, repl, s):
     return re.sub(pattern + END, repl, s)
 
 
-QUOTE = re.compile(r"'[^'\n]*'|‘[^’\n]*’|\"[^\"\n]*\"|“[^”\n]*”|「[^」\n]*」")
+# 따옴표·괄호 안(예시 문장, 문법 표현 "-아/어 주세요", 대화 예문)은 원문 유지
+QUOTE = re.compile(r"'[^'\n]*'|‘[^’\n]*’|\"[^\"\n]*\"|“[^”\n]*”|「[^」\n]*」|\([^()\n]*(?:\([^()\n]*\)[^()\n]*)*\)")
 DIALOGUE = re.compile(r"^\s*(?:\[[^\]]{1,12}\]|[A-Za-z가-힣0-9]{1,6}\s?:)\s")
 
 
@@ -61,7 +62,11 @@ def convert(s):
         keep = []
         masked = QUOTE.sub(lambda m: keep.append(m.group(0)) or f"\ue000{len(keep) - 1}\ue001", line)
         conv = convert_line(masked)
-        out.append(re.sub(r"\ue000(\d+)\ue001", lambda m: keep[int(m.group(1))], conv))
+        line = re.sub(r"\ue000(\d+)\ue001", lambda m: keep[int(m.group(1))], conv).rstrip()
+        # 끝 마침표 정리 (개조식은 마침표 없음)
+        if len(line) > 1 and line.endswith(".") and not line.endswith("..") and (is_hangul(line[-2]) or line[-2] in ")'\"”’"):
+            line = line[:-1]
+        out.append(line)
     return "\n".join(out)
 
 

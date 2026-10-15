@@ -71,7 +71,9 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{border-bottom:1px
 .tw{overflow-x:auto}.tw table.wide{min-width:620px}td:first-child{min-width:64px}.meta-t th{width:28%;white-space:normal}
 .call{border-left:4px solid var(--a);background:#0d1f35;padding:10px 14px;border-radius:8px;margin:10px 0;font-size:14px}.call.warn{border-color:var(--w);background:#2a2210}.call.note{border-color:#8b9dff}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:700px){.grid2{grid-template-columns:1fr}}
-ul.plain{margin:0;padding-left:20px}ul.ok li::marker{color:var(--g)}ul.bad li::marker{color:var(--r)}ul.warn li::marker{color:var(--w)}
+ul.plain{margin:0;padding-left:20px}
+ol.n{list-style:none;margin:2px 0;padding:0;counter-reset:n}ol.n>li{counter-increment:n;position:relative;padding-left:1.9em;margin:2px 0}ol.n>li:before{content:counter(n) ")";position:absolute;left:0;font-weight:900;color:var(--a);font-variant-numeric:tabular-nums}
+.rn{color:var(--a);font-weight:900}table.nw1 td:first-child{white-space:nowrap}.nlead{margin:0 0 2px}.cnt{display:inline-block;font-size:.78em;font-weight:800;color:#03222d;background:var(--a);border-radius:999px;padding:0 7px;margin-left:6px;vertical-align:middle;line-height:1.5}ul.ok li::marker{color:var(--g)}ul.bad li::marker{color:var(--r)}ul.warn li::marker{color:var(--w)}
 .step{padding:14px 16px}.sh{display:flex;justify-content:space-between;gap:8px;font-weight:800}.sh span{color:var(--m);font-weight:600;font-size:13px;white-space:nowrap}
 .prompt{position:relative;background:#06101d;border:1px solid #284866;border-radius:10px;padding:12px 56px 12px 12px;margin:8px 0;font-size:14px;white-space:pre-wrap;font-family:inherit;line-height:1.55}
 .cp{position:absolute;top:6px;right:6px;cursor:pointer;background:#123456;color:#cfefff;border:1px solid #2f5577;border-radius:8px;font-size:12px;padding:3px 8px;font-family:inherit}
@@ -103,7 +105,7 @@ function openExternal(url){
   if(/Android/i.test(UA)){location.href='intent://'+url.replace(/^https?:\/\//,'')+'#Intent;scheme=https;package=com.android.chrome;end';return}
   alert('다운로드는 사파리·크롬에서 됩니다. 오른쪽 위 메뉴에서 "다른 브라우저로 열기"를 눌러 주세요.');
 }
-function inAppBanner(){return IN_APP?`<div class="call warn inapp">📥 지금은 <b>${IS_KAKAO?'카카오톡':'앱'} 안의 브라우저</b>라 파일 다운로드가 안 될 수 있어요. <button class="btn" type="button" id="goExt">크롬으로 열기</button></div>`:''}
+function inAppBanner(){return IN_APP?`<div class="call warn inapp">📥 지금은 <b>${IS_KAKAO?'카카오톡':'앱'} 안의 브라우저</b> — 파일 다운로드 안 될 수 있음 <button class="btn" type="button" id="goExt">크롬으로 열기</button></div>`:''}
 let INDEX={lessons:[]},tab='todo',f={kind:'all',cat:'',lvl:'',job:'',q:''},view='learner';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
@@ -164,8 +166,11 @@ async function shareSync(){
 }
 function importSync(raw){const d=getDone();let n=0;decodeURIComponent(raw).split(',').filter(Boolean).map(i=>M.LEGACY[i]||i).forEach(i=>{if(!d[i]){d[i]=new Date().toISOString();n++}});store.set('done',d);history.replaceState(null,'',location.pathname);alert(`완료 기록 ${n}개를 가져왔습니다.`);tab='todo';listView()}
 
-const T=(h,rows)=>`<div class="tw"><table class="${h.length>=3?'wide':''}"><thead><tr>${h.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
-const UL=(a,c='')=>`<ul class="plain ${c}">${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+// 여러 내용이 한 줄로 이어진 글 → 1) 2) 3) 번호 목록
+const NX=t=>{const r=M.splitItems(t);if(r.items.length<2)return esc(t);return `${r.lead?`<div class="nlead">${esc(r.lead)}</div>`:''}<ol class="n">${r.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>`};
+const CN=n=>`<span class="cnt">${n}개</span>`;
+const T=(h,rows)=>`<div class="tw"><table class="${h.length>=3?'wide':''} ${rows.every(r=>String(r[0]).length<=12)?'nw1':''}"><thead><tr>${h.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map((r,ri)=>`<tr>${r.map((c,ci)=>`<td>${ci===0&&rows.length>1?`<b class="rn">${ri+1})</b> `:''}${NX(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+const UL=(a,c='')=>`<ol class="n ${c}">${a.map(x=>`<li>${NX(x)}</li>`).join('')}</ol>`;
 const steps=(arr,start)=>arr.map((s,i)=>`<div class="card step"><div class="sh">STEP ${start+i}. ${esc(s.title)}${s.minutes?`<span>${s.minutes}분</span>`:''}</div><p style="margin:6px 0">${esc(s.do)}</p>${s.prompt?`<div class="prompt"><button class="cp" type="button">복사</button><span class="pv">${esc(s.prompt)}</span></div>`:''}<div class="ex">${esc(s.expect)}</div>${s.note?`<div class="sn">⚠️ ${esc(s.note)}</div>`:''}</div>`).join('');
 
 const fmtP=(v,cur)=>cur==='KRW'?'₩'+v.toLocaleString('ko-KR'):'$'+v;
@@ -196,31 +201,31 @@ async function lessonView(id){
   const glance=G?`<section class="glance">
     <div class="gl-hero"><div class="gl-emoji">${esc(G.emoji)}</div><div class="gl-one">${esc(G.one_liner)}</div></div>
     <div class="chips"><span>⏱ ${tot}분</span><span>💳 ${M.ACCESS[P.access]}</span><span>📅 출시 ${esc(L.released)}</span><span>🎯 ${esc(lv)}</span></div>
-    <div class="gift"><div class="gi">🎁</div><div><div class="gk">오늘 만들 작품</div><div class="gv">${esc(L.outcome)}</div></div></div>
+    <div class="gift"><div class="gi">🎁</div><div><div class="gk">오늘 만들 작품 ${CN(Math.max(1,M.splitItems(L.outcome).items.length))}</div><div class="gv">${NX(L.outcome)}</div></div></div>
   </section>
   <div class="part"><b>PART 1</b><h2>📊 요약본 <small>표·그래프로 1분 파악</small></h2></div>
   <div class="sum">
-    <div class="card full"><div class="ct">📌 핵심 요약</div><table class="kv"><tbody>${kv.map(([k,v])=>`<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join('')}</tbody></table></div>
-    <div class="card full"><div class="ct">🎯 기능 · 혜택</div><table class="fb"><thead><tr><th>기능</th><th>혜택</th></tr></thead><tbody>${G.cards.map(c=>`<tr><td>${esc(c.icon)} ${esc(c.title)}</td><td>${esc(c.text)}</td></tr>`).join('')}</tbody></table></div>
+    <div class="card full"><div class="ct">📌 핵심 요약 ${CN(kv.length)}</div><table class="kv"><tbody>${kv.map(([k,v],i)=>`<tr><th><b class="rn">${i+1})</b> ${k}</th><td>${NX(v)}</td></tr>`).join('')}</tbody></table></div>
+    <div class="card full"><div class="ct">🎯 기능 · 혜택 ${CN(G.cards.length)}</div><table class="fb"><thead><tr><th>기능</th><th>혜택</th></tr></thead><tbody>${G.cards.map((c,i)=>`<tr><td><b class="rn">${i+1})</b> ${esc(c.icon)} ${esc(c.title)}</td><td>${esc(c.text)}</td></tr>`).join('')}</tbody></table></div>
     ${priceChart(P)}${timeChart(mn,tot)}
-    <div class="card full diag"><div class="dt">⚙️ ${esc(G.diagram.title)}</div><div class="flow">${G.diagram.nodes.map((nd,i)=>`${i?'<div class="arr" aria-hidden="true"></div>':''}<div class="node"><div class="ni">${esc(nd.icon)}</div><div class="nl">${esc(nd.label)}</div></div>`).join('')}</div></div>
+    <div class="card full diag"><div class="dt">⚙️ ${esc(G.diagram.title)} ${CN(G.diagram.nodes.length)}</div><div class="flow">${G.diagram.nodes.map((nd,i)=>`${i?'<div class="arr" aria-hidden="true"></div>':''}<div class="node"><div class="ni">${esc(nd.icon)}</div><div class="nl">${i+1}) ${esc(nd.label)}</div></div>`).join('')}</div></div>
     <div class="card full"><div class="ct">🔄 비포 → 애프터</div><table class="ba2"><thead><tr><th class="b0">😐 ${esc(G.before_after.before.label)}</th><th class="b1">😀 ${esc(G.before_after.after.label)}</th></tr></thead><tbody><tr><td>${esc(G.before_after.before.text)}</td><td>${esc(G.before_after.after.text)}</td></tr></tbody></table></div>
-    <div class="card full"><div class="ct">⚠️ 주의</div><div class="caut">${G.cautions.map(c=>`<span>⚠️ ${esc(c)}</span>`).join('')}</div>
+    <div class="card full"><div class="ct">⚠️ 주의 ${CN(G.cautions.length)}</div><div class="caut">${G.cautions.map((c,i)=>`<span>⚠️ ${i+1}) ${esc(c)}</span>`).join('')}</div>
     ${(L.verification||[]).length?`<a class="vlink" href="#" data-open="verify">🔎 강의 전 확인 ${L.verification.length}개 → 자세한 설명</a>`:''}</div>
   </div>`:`<p class="lead">${esc(L.summary)}</p>`;
   const stepCard=(s,i)=>`<div class="card step" id="st${i+1}"><div class="sh"><span class="sn1">${i+1}</span><b>${esc(s.title)}</b>${s.minutes?`<em>${s.minutes}분</em>`:''}</div>
     ${s.prompt?`<div class="prompt"><button class="cp" type="button">복사</button><span class="pv">${esc(s.prompt)}</span></div>`:''}
-    <div class="ex">${esc(s.expect)}</div>
-    <details class="how"><summary>방법 자세히</summary><p>${esc(s.do)}</p>${s.note?`<div class="sn">⚠️ ${esc(s.note)}</div>`:''}</details></div>`;
+    <div class="ex">${NX(s.expect)}</div>
+    <details class="how"><summary>방법 자세히</summary><div class="mb0">${NX(s.do)}</div>${s.note?`<div class="sn">⚠️ ${NX(s.note)}</div>`:''}</details></div>`;
   const insBody=`<div class="ins"><h2>👨‍🏫 강사용 지도 노트</h2>
-    ${D(`⏰ 차시별 시간표 (${tot}분)`,T(['시간','내용','비고'],I.timetable.map(t=>[t.time,t.content,t.note||''])),1)}
-    ${D('🎤 그대로 읽어도 되는 멘트',I.script.map(s=>`<p><b>${esc(s.label)}</b><br>“${esc(s.text)}”</p>`).join(''),1)}
-    ${D('🛟 시연 실패 대비 Plan B',T(['상황','대응'],I.plan_b.map(p=>[p.situation,p.response])))}
-    ${D('🚧 수강생이 자주 막히는 지점',T(['막히는 지점','해결법'],I.stuck.map(p=>[p.issue,p.fix])))}
-    ${D(`💬 예상 질문 & 모범 답변 (${I.faq.length})`,T(['질문','답변'],I.faq.map(p=>[p.q,p.a])))}
-    ${D('🎚 레벨별 변형 가이드',I.level_guide.map(g=>`<p><b>${esc(g.level)}</b><br>${esc(g.guide)}</p>`).join(''))}
-    ${(I.pro_points||[]).length?D('🧭 중·고급강사 응용 포인트',UL(I.pro_points)):''}
-    ${D('✅ 강의 전날 체크리스트',I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span>${esc(c)}</span></label>`).join(''),1)}</div>`;
+    ${D(`⏰ 차시별 시간표 (${tot}분) ${CN(I.timetable.length)}`,T(['시간','내용','비고'],I.timetable.map(t=>[t.time,t.content,t.note||''])),1)}
+    ${D(`🎤 그대로 읽어도 되는 멘트 ${CN(I.script.length)}`,I.script.map((s,i)=>`<p><b>${i+1}) ${esc(s.label)}</b><br>“${esc(s.text)}”</p>`).join(''),1)}
+    ${D(`🛟 시연 실패 대비 Plan B ${CN(I.plan_b.length)}`,T(['상황','대응'],I.plan_b.map(p=>[p.situation,p.response])))}
+    ${D(`🚧 수강생이 자주 막히는 지점 ${CN(I.stuck.length)}`,T(['막히는 지점','해결법'],I.stuck.map(p=>[p.issue,p.fix])))}
+    ${D(`💬 예상 질문 & 모범 답변 ${CN(I.faq.length)}`,T(['질문','답변'],I.faq.map(p=>[p.q,p.a])))}
+    ${D(`🎚 레벨별 변형 가이드 ${CN(I.level_guide.length)}`,I.level_guide.map((g,i)=>`<p><b>${i+1}) ${esc(g.level)}</b></p>${NX(g.guide)}`).join(''))}
+    ${(I.pro_points||[]).length?D(`🧭 중·고급강사 응용 포인트 ${CN(I.pro_points.length)}`,UL(I.pro_points)):''}
+    ${D(`✅ 강의 전날 체크리스트 ${CN(I.day_before.length)}`,I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span><b class="rn">${i+1})</b> ${esc(c)}</span></label>`).join(''),1)}</div>`;
   app.innerHTML=`${inAppBanner()}${bar}
   <section class="hero" style="padding:16px 0 4px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)}${isDone?' · ✅ 완료':''}</div>
   <h1 style="font-size:clamp(22px,4vw,34px)">${kindB(L.type)}${pastB(L)}${accB(P.access)}${esc(L.title)}</h1></section>
@@ -229,25 +234,25 @@ async function lessonView(id){
 
   <div class="part"><b>PART 2</b><h2>🛠 바로 실습 <small>${mn.practice}분 · ${allSteps.length}단계 · 프롬프트 복사 → 결과 확인</small></h2></div>
   <div class="rail">${allSteps.map((s,i)=>`<a href="#" data-st="${i+1}"><span>${i+1}</span>${esc(s.title)}</a>`).join('')}</div>
-  <div class="phase">따라하기</div>${pc.follow.map((s,i)=>stepCard(s,i)).join('')}
-  <div class="phase">내 것으로 만들기</div>${pc.make_mine.map((s,i)=>stepCard(s,pc.follow.length+i)).join('')}
-  <div class="phase">도전 과제 (빨리 끝낸 분)</div><div class="chal">${pc.challenges.map(c=>`<div class="card"><b>${esc(c.level)}</b> ${esc(c.mission)}</div>`).join('')}</div>
+  <div class="phase">따라하기 ${CN(pc.follow.length)}</div>${pc.follow.map((s,i)=>stepCard(s,i)).join('')}
+  <div class="phase">내 것으로 만들기 ${CN(pc.make_mine.length)}</div>${pc.make_mine.map((s,i)=>stepCard(s,pc.follow.length+i)).join('')}
+  <div class="phase">도전 과제 (빨리 끝낸 분) ${CN(pc.challenges.length)}</div><div class="chal">${pc.challenges.map((c,i)=>`<div class="card"><b class="rn">${i+1})</b> <b>${esc(c.level)}</b> ${NX(c.mission)}</div>`).join('')}</div>
 
-  <h2>✅ 3문제로 확인</h2><div class="card">${wr.quiz.map((q,i)=>`<div class="q" data-a="${q.answer}"><b>Q${i+1}. ${esc(q.q)}</b><div class="opts">${q.options.map((o,j)=>`<button class="opt" type="button" data-j="${j}">${'①②③④'[j]} ${esc(o)}</button>`).join('')}</div><div class="qe">정답 ${'①②③④'[q.answer]} — ${esc(q.explain)}</div></div>`).join('')}</div>
+  <h2>✅ ${wr.quiz.length}문제로 확인</h2><div class="card">${wr.quiz.map((q,i)=>`<div class="q" data-a="${q.answer}"><b>Q${i+1}. ${esc(q.q)}</b><div class="opts">${q.options.map((o,j)=>`<button class="opt" type="button" data-j="${j}">${'①②③④'[j]} ${esc(o)}</button>`).join('')}</div><div class="qe">정답 ${'①②③④'[q.answer]} — ${NX(q.explain)}</div></div>`).join('')}</div>
 
   <div class="part detail"><b>PART 3</b><h2>📖 자세한 설명 <small>개념·비교·요금 상세·윤리·평가·출처 — 필요한 항목만 펼침</small></h2></div>
-  ${D('📋 교안 메타정보',`<div class="tw"><table class="meta-t"><tbody>${[['교안 ID / 버전',`${L.id} / ${L.version}`],['대상 배지',M.levelBadges(L).join('  ')],['직업군',L.jobs.map(j=>`${j}(${M.JOB[j]})`).join(', ')],['카테고리',L.categories.map(c=>`${c} ${M.CAT[c]}`).join(' · ')],['다루는 AI/기능',`${L.company} ${L.tool} — ${L.feature}`],['기능 출시일',L.released],['교안 기준일 / 재검토',`${L.checked} / ${L.review_by}`],['소요 시간',`이론 ${mn.theory}분 + 실습 ${mn.practice}분 + 정리 ${mn.wrap}분 = ${tot}분`],['준비물',L.prerequisites.join(' / ')]].map(([a,b])=>`<tr><th>${esc(a)}</th><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div>`)}
-  ${D('📝 이 교안 요약',`<p>${esc(L.summary)}</p><p class="pnote">완성 예시: ${esc(pc.preview)}</p>`)}
-  ${D('🎯 학습 목표',`<ol style="margin:0;padding-left:20px">${L.objectives.map(o=>`<li>${esc(o)}</li>`).join('')}</ol>`)}
-  ${D('🗓️ 기능 출시 타임라인',T(['날짜','업데이트 내용'],L.timeline.map(t=>[t.date,t.text]))+'<p class="pnote">전체 기록은 <a href="./releases.html">AI 릴리즈 노트</a>에서 볼 수 있습니다.</p>')}
-  ${D('💡 개념 설명 (정의·비유·핵심 개념)',`<p><b>${esc(th.definition)}</b></p><div class="call">🧠 ${esc(th.analogy)}</div>${th.concepts.map((c,i)=>`<p><b>${'①②③④⑤'[i]||'•'} ${esc(c.title)}</b><br>${esc(c.body)}</p>`).join('')}`)}
-  ${D('🆚 이전 방식과 비교',T(th.comparison.headers,th.comparison.rows))}
-  ${D('✅❌ 할 수 있는 것 / 할 수 없는 것',`<div class="grid2"><div><b>✅ 할 수 있는 것</b>${UL(th.can,'ok')}</div><div><b>❌ 한계·주의</b>${UL(th.cannot,'bad')}</div></div>`)}
-  ${D(`💳 요금제별 기능 (확인 ${esc(P.checked)})`,`<p style="margin-top:0">${accB(P.access)}${esc(P.summary)}</p>${T(['요금제','가격','기능·혜택'],P.plans.map(x=>[x.name,x.price,x.features]))}<p class="pnote">${esc(P.note||'')} ${(P.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ')}</p>`)}
-  ${D('🔐 윤리·저작권·보안 (전체)',UL(th.safety,'warn'))}
-  ${D('🏁 정리·평가 (공유 방법·루브릭·다음 교안)',`<p><b>작품 공유</b><br>${esc(wr.share)}</p>${T(['기준','상 (3점)','중 (2점)','하 (1점)'],(wr.rubric||M.RUBRIC).map(r=>[r.criterion,r.high,r.mid,r.low]))}<p><b>다음에 배울 것</b></p>${UL(wr.next||[])}`)}
-  ${(L.verification||[]).length?`<div id="verify">${D('🔎 강의 전 확인할 점',UL(L.verification))}</div>`:''}
-  ${D('📚 출처',`<ul class="plain">${L.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> <span class="pnote">확인 ${esc(s.checked||L.checked)}</span></li>`).join('')}</ul>`)}
+  ${D(`📋 교안 메타정보 ${CN(9)}`,`<div class="tw"><table class="meta-t"><tbody>${[['교안 ID / 버전',`${L.id} / ${L.version}`],['대상 배지',M.levelBadges(L).join('  ')],['직업군',L.jobs.map(j=>`${j}(${M.JOB[j]})`).join(', ')],['카테고리',L.categories.map(c=>`${c} ${M.CAT[c]}`).join(' · ')],['다루는 AI/기능',`${L.company} ${L.tool} — ${L.feature}`],['기능 출시일',L.released],['교안 기준일 / 재검토',`${L.checked} / ${L.review_by}`],['소요 시간',`이론 ${mn.theory}분 + 실습 ${mn.practice}분 + 정리 ${mn.wrap}분 = ${tot}분`],['준비물',L.prerequisites]].map(([a,b],i)=>`<tr><th><b class="rn">${i+1})</b> ${esc(a)}</th><td>${Array.isArray(b)?UL(b):NX(b)}</td></tr>`).join('')}</tbody></table></div>`)}
+  ${D('📝 이 교안 요약',`<div>${NX(L.summary)}</div><p class="pnote"><b>완성 예시</b></p><div class="pnote">${NX(pc.preview)}</div>`)}
+  ${D(`🎯 학습 목표 ${CN(L.objectives.length)}`,UL(L.objectives))}
+  ${D(`🗓️ 기능 출시 타임라인 ${CN(L.timeline.length)}`,T(['날짜','업데이트 내용'],L.timeline.map(t=>[t.date,t.text]))+'<p class="pnote">전체 기록: <a href="./releases.html">AI 릴리즈 노트</a></p>')}
+  ${D(`💡 개념 설명 (정의·비유·핵심 개념) ${CN(th.concepts.length)}`,`<div><b>${NX(th.definition)}</b></div><div class="call">🧠 ${NX(th.analogy)}</div>${th.concepts.map((c,i)=>`<p><b>${i+1}) ${esc(c.title)}</b></p>${NX(c.body)}`).join('')}`)}
+  ${D(`🆚 이전 방식과 비교 ${CN(th.comparison.rows.length)}`,T(th.comparison.headers,th.comparison.rows))}
+  ${D('✅❌ 할 수 있는 것 / 할 수 없는 것',`<div class="grid2"><div><b>✅ 할 수 있는 것 ${CN(th.can.length)}</b>${UL(th.can,'ok')}</div><div><b>❌ 한계·주의 ${CN(th.cannot.length)}</b>${UL(th.cannot,'bad')}</div></div>`)}
+  ${D(`💳 요금제별 기능 ${CN(P.plans.length)} (확인 ${esc(P.checked)})`,`<div style="margin-top:0">${accB(P.access)}${NX(P.summary)}</div>${T(['요금제','가격','기능·혜택'],P.plans.map(x=>[x.name,x.price,x.features]))}<div class="pnote">${NX(P.note||'')}</div><p class="pnote">${(P.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(' · ')}</p>`)}
+  ${D(`🔐 윤리·저작권·보안 ${CN(th.safety.length)}`,UL(th.safety,'warn'))}
+  ${D('🏁 정리·평가 (공유 방법·루브릭·다음 교안)',`<p><b>작품 공유</b></p>${NX(wr.share)}${T(['기준','상 (3점)','중 (2점)','하 (1점)'],(wr.rubric||M.RUBRIC).map(r=>[r.criterion,r.high,r.mid,r.low]))}<p><b>다음에 배울 것</b></p>${UL(wr.next||[])}`)}
+  ${(L.verification||[]).length?`<div id="verify">${D(`🔎 강의 전 확인할 점 ${CN(L.verification.length)}`,UL(L.verification))}</div>`:''}
+  ${D(`📚 출처 ${CN(L.sources.length)}`,`<ol class="n">${L.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a> <span class="pnote">확인 ${esc(s.checked||L.checked)}</span></li>`).join('')}</ol>`)}
 
   ${ins?insBody:`<div class="call note">👨‍🏫 강사용 지도 노트(시간표·멘트·Plan B·FAQ)는 위의 <b>강사용 완전본</b>을 누르면 보입니다.</div>`}
   <button class="mk big ${isDone?'undo':''}" type="button">${isDone?'↩ 완료 취소 (다시 목록에 표시)':'✓ 학습 완료 — 목록에서 숨기고 다음 교안으로'}</button>

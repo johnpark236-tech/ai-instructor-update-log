@@ -264,7 +264,7 @@
       {
         "title": "로그인·계정 확인",
         "minutes": 5,
-        "do": "gemini.google.com에 개인 Google 계정으로 로그인함. 오른쪽 위 프로필에서 학교·회사 계정이 아닌지 확인함(배포용 링크는 개인 계정에서만 됨). 학생 허브가 보이면 gemini.google.com/students로 들어가 어떤 도구가 모여 있는지 둘러봄",
+        "do": "gemini.google.com에 개인 Google 계정으로 로그인함. 오른쪽 위 프로필에서 학교·회사 계정이 아닌지 확인함(배포용 링크는 개인 계정에서만 됩니다). 학생 허브가 보이면 gemini.google.com/students로 들어가 어떤 도구가 모여 있는지 둘러봄",
         "prompt": "",
         "expect": "개인 계정으로 Gemini 채팅창이 열림",
         "note": "[확인 필요] 학생 허브 메뉴의 한국어 이름과 위치는 순차 적용 중일 수 있음. 강의 전날 실제 화면을 캡처할 것"

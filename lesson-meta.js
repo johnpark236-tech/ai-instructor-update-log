@@ -50,6 +50,20 @@ window.LESSON_META = {
     if (ok.length < 2 || curs.length !== 1 || !ok.some(r => r.p.v > 0)) return null;
     return { cur: curs[0], ok, skip: rows.filter(r => !r.p) };
   },
+  // 한 칸에 여러 내용이 이어진 글 → 항목 배열. ①②…, ' + ', ', 그리고 ', 문장 끝 '. ' 기준 (따옴표 안은 나누지 않음)
+  // 반환 {lead, items}: 'xxx:' 처럼 머리말로 끝나는 첫 부분은 lead 로 분리
+  splitItems(t) {
+    t = String(t || '').trim(); if (!t) return { lead: '', items: [] };
+    const keep = [];
+    let x = t.replace(/'[^'\n]*'|‘[^’\n]*’|"[^"\n]*"|“[^”\n]*”|\([^()\n]*(?:\([^()\n]*\)[^()\n]*)*\)|\[[^\]\n]*\]/g, q => { keep.push(q); return '' + (keep.length - 1) + ''; });
+    let parts = /[①-⑩](?!번)/.test(x) ? x.split(/\s*(?=[①-⑩](?!번))/) : [x];
+    parts = parts.flatMap(p => p.split(/\s+\+\s+(?=[가-힣'‘"“\uE000])|,\s*그리고\s+|(?<=[가-힣A-Za-z0-9)\]%])\.\s+(?=\S)/));
+    const back = p => p.replace(/(\d+)/g, (_, i) => keep[+i]);
+    let items = parts.map(p => back(p).trim().replace(/^[①-⑩]\s*/, '').replace(/[.,]$/, '').trim()).filter(Boolean);
+    let lead = '';
+    if (items.length > 1 && /[:：—]$/.test(items[0])) lead = items.shift();
+    return { lead, items };
+  },
   totalMinutes(L) { const m = L.minutes || {}; return (m.theory || 0) + (m.practice || 0) + (m.wrap || 0); },
   promptText(L) {
     const out = [`# ${L.title}`, `교안 ID: ${L.id} (${L.version}) · 기준일 ${L.checked}`, ''];

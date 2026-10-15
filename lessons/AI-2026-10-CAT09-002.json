@@ -312,7 +312,7 @@
       {
         "title": "의심 상황 대응 연습",
         "minutes": 5,
-        "do": "Security and login → Active sessions → 'Log out of all sessions'의 Log out all 버튼 위치만 확인함(실제로 누르면 지금 PC도 로그아웃됨). 카드 아래에 '이상하면: 비밀번호 변경 → 모두 로그아웃 → 보안 기록 확인 → 지원팀 문의' 4단계를 적음",
+        "do": "Security and login → Active sessions → 'Log out of all sessions'의 Log out all 버튼 위치만 확인함(실제로 누르면 지금 PC도 로그아웃됩니다). 카드 아래에 '이상하면: 비밀번호 변경 → 모두 로그아웃 → 보안 기록 확인 → 지원팀 문의' 4단계를 적음",
         "prompt": "",
         "expect": "위급할 때 누를 버튼 위치를 암",
         "note": "다른 기기의 로그아웃은 최대 30분 걸릴 수 있음"
