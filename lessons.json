@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 65,
+  "count": 66,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-004",
+      "version": "v1.0",
+      "created_at": "2026-10-16 08:20 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "질문 한 줄로 '살아 있는 대시보드' 만들기 — Claude Dashboards(베타)로 데이터 연결·차트·쿼리 확인까지",
+      "summary": "2026-10-08 공개된 Claude Dashboards(베타)는 연결한 데이터 웨어하우스·앱에서 답을 뽑아 대시보드를 만들고 데이터가 바뀌면 갱신함. 차트마다 마지막 갱신 시각과 계산 쿼리를 보여 줌. Pro·Max·Team·Enterprise 대상(Enterprise는 관리자가 켜야 함). 무료 BigQuery 샌드박스 공개 데이터로 실습 진행",
+      "tool": "Claude",
+      "feature": "Claude Dashboards(베타) — 연결한 데이터 웨어하우스·앱으로 만드는 자동 갱신 대시보드, 차트별 쿼리 보기·갱신 시각",
+      "company": "Anthropic",
+      "type": "update",
+      "released": "2026-10-08",
+      "categories": [
+        "CAT-06",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-DAT",
+        "JOB-OFF",
+        "JOB-MKT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① BigQuery 공개 데이터로 만든 내 대시보드 1개(차트 3개 이상) + ② 차트 1개의 쿼리를 열어 확인한 '숫자 검증 메모' + ③ 필터·주간 보기 등 수정 요청 2회 반영본 + ④ 공유 범위 결정 메모",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "말로 묻고 계속 갱신되는 대시보드"
+    },
     {
       "id": "AI-2026-10-CAT08-007",
       "version": "v1.0",

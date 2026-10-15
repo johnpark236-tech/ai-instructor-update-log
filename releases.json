@@ -2116,6 +2116,21 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT08-007"
+    },
+    {
+      "id": "claude-2026-10-08-dashboards-motion",
+      "date": "2026-10-08",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude Dashboards·Motion(베타)",
+      "summary": "연결한 데이터 웨어하우스·앱으로 자동 갱신 대시보드를 만드는 Dashboards(Pro 이상 베타)와 /motion으로 MP4 설명 애니메이션을 만드는 Motion(Team·Enterprise 베타) 공개, Docs·Slides·Design은 베타 해제·Free 포함 전 요금제 제공",
+      "source": {
+        "title": "Claude – Build live dashboards and animate explainers with Claude",
+        "url": "https://claude.com/resources/articles/dashboards-and-motion"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT06-004"
     }
   ]
 }
