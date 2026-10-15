@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 05:30 KST",
+  "updated_at": "2026-10-16 06:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -369,13 +369,13 @@
       "company": "Midjourney",
       "type": "update",
       "title": "폴더별 기본 설정·스타일 참조 묶음(알파)",
-      "summary": "알파 사이트에서 폴더마다 기본 파라미터(--exp 포함)를 정해 두고, 여러 스타일 참조(sref)를 썸네일 묶음 하나로 보여 주며, 이미지를 끌어다 '스타일 참조'로 붙이는 기능 추가",
+      "summary": "알파 사이트에서 프롬프트 바 설정(pill)을 폴더마다 기본값으로 저장(--exp 포함)하고, 여러 스타일 참조(sref)를 썸네일 묶음 하나로 보여 주며, 이미지를 프롬프트 바에 끌어 'Reference style'로 붙이는 기능 추가 (9/23 Live previews·Your defaults에 이은 개선)",
       "source": {
         "title": "Midjourney Alpha Changelog 10/1/26",
         "url": "https://updates.midjourney.com/alpha-changelog-10-1-26/"
       },
-      "checked": "2026-10-11",
-      "lesson_id": null
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT04-009"
     },
     {
       "id": "chatgpt-2026-10-02-7",

@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 63,
+  "count": 64,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-009",
+      "version": "v1.0",
+      "created_at": "2026-10-16 06:10 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "미드저니 폴더별 기본 설정·스타일 미리보기로 '같은 그림체' 단원 그림 4장 세트 만들기 — 폴더 하나 = 그림체 하나",
+      "summary": "Midjourney 알파 사이트(alpha.midjourney.com)에서 시험 중인 기능 묶음. 스타일 사이드바의 실시간 미리보기(Live previews)로 내 프롬프트를 여러 그림체에 미리 비춰 보고, 고른 그림체·비율 등 프롬프트 바 설정을 폴더 기본값(Your defaults)으로 저장. 여러 스타일 참조(sref)는 썸네일 묶음 하나로 표시되고, 그림을 프롬프트 바에 끌어 놓으면 '스타일 참조'로 붙임. 단원 폴더를 만들고 같은 그림체 어휘 그림 4장을 매번 설정 없이 만듦 [실험 기능]",
+      "tool": "Midjourney",
+      "feature": "폴더별 기본 설정(Your defaults) · 스타일 실시간 미리보기(Live previews) · 스타일 참조 묶음(sref pill)·끌어서 스타일 참조 — 알파 사이트 시험",
+      "company": "Midjourney",
+      "type": "update",
+      "released": "2026-10-02",
+      "categories": [
+        "CAT-04",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 그림체·비율이 기본값으로 저장된 '○단원 낱말 그림' 폴더 1개 + ② 같은 그림체 어휘 그림 4장 세트 + ③ 고른 그림체 코드·기본값을 적은 '우리 반 그림체 카드' 1장",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "폴더마다 그림체를 정해 두고 바로 생성"
+    },
     {
       "id": "AI-2026-10-CAT04-008",
       "version": "v1.0",
