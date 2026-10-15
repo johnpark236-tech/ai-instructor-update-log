@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 00:25 KST",
+  "updated_at": "2026-10-16 02:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -252,10 +252,10 @@
       "summary": "Mac용 PowerPoint의 Copilot으로 발표 자료를 만들 때 SharePoint·OneDrive 파일을 이름만 말해도 찾아서 내용 근거로 씀",
       "source": {
         "title": "Microsoft 365 Copilot 릴리스 노트",
-        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
       },
-      "checked": "2026-10-11",
-      "lesson_id": null
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT03-007"
     },
     {
       "id": "claude-2026-10-06-google-workspace-addon",

@@ -1,0 +1,580 @@
+{
+  "id": "AI-2026-10-CAT03-007",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 02:10 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "Mac PowerPoint Copilot에 OneDrive·SharePoint 파일 이름만 말해 그 자료로 수업 슬라이드를 만들 수 있음",
+  "summary": "Mac용 PowerPoint의 Copilot이 프롬프트 속 파일 이름(예: '2학기 수업 계획서 문서로')을 알아듣고 OneDrive·SharePoint에 저장된 그 파일을 찾아 발표 자료의 근거로 씀. 예전엔 / 메뉴로 파일을 직접 골라야 했음",
+  "glance": {
+    "emoji": "📂",
+    "one_liner": "파일 이름만 말하면 그 자료로 슬라이드",
+    "cards": [
+      {
+        "icon": "🗣️",
+        "title": "이름으로 부르기",
+        "text": "프롬프트에 파일 이름 그대로 쓰기"
+      },
+      {
+        "icon": "☁️",
+        "title": "OneDrive 파일",
+        "text": "OneDrive·SharePoint 파일 근거"
+      },
+      {
+        "icon": "🍎",
+        "title": "Mac 업데이트",
+        "text": "Mac PowerPoint, 10/6 릴리스"
+      },
+      {
+        "icon": "/",
+        "title": "/ 메뉴도 가능",
+        "text": "못 찾으면 /로 파일 직접 고르기"
+      }
+    ],
+    "diagram": {
+      "title": "파일 이름 참조는 이렇게 작동함",
+      "nodes": [
+        {
+          "icon": "💾",
+          "label": "OneDrive 저장"
+        },
+        {
+          "icon": "✍️",
+          "label": "프롬프트에 이름"
+        },
+        {
+          "icon": "🔎",
+          "label": "파일 찾기"
+        },
+        {
+          "icon": "🖼️",
+          "label": "슬라이드 초안"
+        },
+        {
+          "icon": "👀",
+          "label": "사람이 검토"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "예전 방식",
+        "text": "/ 메뉴를 열어 목록에서 파일을 찾아 클릭해야 했음"
+      },
+      "after": {
+        "label": "이름 참조 후",
+        "text": "'수업계획서_2학기 문서로 10장 만들어 줘' 한 줄"
+      }
+    },
+    "cautions": [
+      "학생 명단·성적 파일은 참조 금지",
+      "권한 없는 파일은 쓰지 않기",
+      "숫자·날짜는 원본과 대조"
+    ]
+  },
+  "tool": "Microsoft 365 Copilot",
+  "feature": "Mac PowerPoint Copilot 파일 이름 참조 — OneDrive·SharePoint 파일을 이름만 말해 발표 자료 근거로 쓰기",
+  "company": "Microsoft",
+  "type": "update",
+  "released": "2026-10-06",
+  "categories": [
+    "CAT-03",
+    "CAT-10"
+  ],
+  "jobs": [
+    "JOB-EDU",
+    "JOB-OFF",
+    "JOB-PUB",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Mac + PowerPoint for Microsoft 365 for Mac (최신 버전으로 업데이트)",
+    "Copilot이 포함된 Microsoft 365 계정 — 회사·학교 계정은 Microsoft 365 Copilot 라이선스, 개인 구독(Personal·Family·Premium)에서 이 기능이 되는지는 [확인 필요]",
+    "OneDrive(또는 SharePoint)에 저장한 연습용 Word 문서 1개 — 예) '수업계획서_2학기' (강사 배포, 개인정보 없는 자작 자료)",
+    "Windows·웹 사용자는 / 메뉴로 파일 고르기 방식으로 같은 실습 가능"
+  ],
+  "outcome": "OneDrive에 있는 수업 계획서 문서를 이름으로 불러 만든 8~10장짜리 수업 소개 슬라이드 1벌 + / 메뉴 방식과 비교한 비포/애프터 메모",
+  "objectives": [
+    "Mac PowerPoint Copilot의 파일 이름 참조가 무엇이며 / 메뉴 참조와 어떻게 다른지 설명할 수 있음",
+    "OneDrive·SharePoint에 저장한 파일을 프롬프트에 이름으로 넣어 발표 자료 초안을 만들 수 있음",
+    "만든 초안을 원본 파일과 대조해 틀린 내용·빠진 내용을 고칠 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "Copilot in PowerPoint를 쓸 수 있는 유료 Microsoft 365 구독 필요. 회사용은 Microsoft 365 Copilot Business 추가 구독(연간 결제 사용자당 월 21달러, 2026-07-01~12-31 첫해 18달러 프로모션) 또는 Copilot 포함 번들, 개인용은 Microsoft 365 Personal(월 9.99달러)부터. SharePoint 참조는 회사·학교 계정 기준이고, 개인 구독에서 OneDrive 파일 이름 참조가 되는지는 [확인 필요]",
+    "plans": [
+      {
+        "name": "무료 Copilot / Copilot Chat",
+        "price": "0달러",
+        "features": "웹 대화형 Copilot만. PowerPoint 안 파일 참조 기능은 포함 근거 없음"
+      },
+      {
+        "name": "Microsoft 365 Personal",
+        "price": "월 9.99달러 (미국)",
+        "features": "Copilot in PowerPoint 포함(AI 크레딧 한도). FAQ는 개인용 Copilot이 Word 파일 1개로 발표 자료 만들기를 지원한다고 안내, 이름 참조는 [확인 필요]"
+      },
+      {
+        "name": "Microsoft 365 Family",
+        "price": "월 12.99달러 (미국)",
+        "features": "Personal과 같은 Copilot 기능, 최대 6명 공유(구독 소유자만 Copilot 사용 여부는 공식 페이지 확인)"
+      },
+      {
+        "name": "Microsoft 365 Copilot Business (추가 구독)",
+        "price": "사용자당 월 21달러 연간 결제 (첫해 18달러 프로모션), 월 결제 25.20달러",
+        "features": "Word·Excel·PowerPoint의 Copilot, 업무용 데이터(OneDrive·SharePoint) 근거 사용. 기존 Microsoft 365 업무용 라이선스 필요, 300명 이하"
+      },
+      {
+        "name": "Business Standard with Copilot",
+        "price": "사용자당 월 23.50달러 (연간 결제)",
+        "features": "업무용 Office + Copilot 묶음, 월 결제 28.20달러"
+      },
+      {
+        "name": "Business Premium with Copilot",
+        "price": "사용자당 월 32.00달러 (연간 결제)",
+        "features": "보안 기능 강화 업무용 Office + Copilot 묶음, 월 결제 38.40달러"
+      }
+    ],
+    "note": "가격은 미국 공식 페이지 기준, 한국 원화 가격은 이번에 확인하지 않음. 18달러 프로모션은 기존 업무용 고객·연간 약정·첫해 한정이며 체험 구독 제외. 회사·학교 계정은 관리자가 Copilot을 막아 두었을 수 있음",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "Microsoft – Copilot Plans and Pricing for Business",
+        "url": "https://www.microsoft.com/en-us/copilot/pricing/business"
+      },
+      {
+        "title": "Microsoft – Copilot Pricing Plans for Individuals",
+        "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing/individuals"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-06-25",
+      "text": "Microsoft 365 Insider 블로그: 발표 자료 만들 때 PDF·TXT 파일 참조 안내(블로그 수정일 기준)"
+    },
+    {
+      "date": "2026-08-25",
+      "text": "릴리스 노트(Windows): PowerPoint Copilot으로 발표 자료 만들 때 이메일 참조 제공"
+    },
+    {
+      "date": "2026-10-06",
+      "text": "릴리스 노트(Mac): OneDrive 폴더·SharePoint 라이브러리 파일을 이름으로 참조해 발표 자료 만들기 제공 — 이전엔 이런 암묵적 파일 참조 미지원"
+    },
+    {
+      "date": "2026-10-06",
+      "text": "같은 날 릴리스 노트(Windows): PowerPoint Copilot 사용자 지정 스킬 만들기 제공"
+    }
+  ],
+  "theory": {
+    "definition": "파일 이름 참조는 Mac PowerPoint의 Copilot 프롬프트에 파일·문서 이름을 쓰기만 하면 Copilot이 OneDrive·SharePoint에서 그 파일을 알아보고 발표 자료의 근거 자료로 쓰는 기능임. 릴리스 노트 표현으로는 '암묵적 파일 참조(implicit file references)' 지원임. 예전엔 Reference a file 버튼이나 / 메뉴로 파일을 직접 골라야 했음",
+    "analogy": "조교에게 '책장 두 번째 칸 파란 파일'이라고 위치를 알려 주던 방식에서 '2학기 수업 계획서 가져와'라고 이름만 말하는 방식으로 바뀐 것임",
+    "comparison": {
+      "headers": [
+        "구분",
+        "파일 없이 프롬프트만",
+        "/ 메뉴로 파일 고르기",
+        "파일 이름으로 참조 (신규)"
+      ],
+      "rows": [
+        [
+          "근거 자료",
+          "Copilot 일반 지식",
+          "내가 고른 파일",
+          "이름으로 찾은 파일"
+        ],
+        [
+          "입력 방법",
+          "주제만 입력",
+          "/ 입력 → 목록에서 클릭",
+          "문장 속에 파일 이름"
+        ],
+        [
+          "내 자료 반영",
+          "낮음",
+          "높음",
+          "높음"
+        ],
+        [
+          "주의점",
+          "내용이 일반적·틀릴 수 있음",
+          "목록에 안 보이면 이름 검색",
+          "이름이 비슷한 파일이 여러 개면 엉뚱한 파일 [확인 필요]"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "어디 있는 파일을 찾나",
+        "body": "릴리스 노트 기준 OneDrive 폴더와 SharePoint 라이브러리에 저장된 파일. 내 Mac 바탕화면에만 있는 파일은 대상이 아님 [확인 필요]. 그래서 먼저 OneDrive에 저장해 두는 습관이 핵심임 — Microsoft 지원 문서도 Word 자료를 OneDrive에 저장한 뒤 PowerPoint에서 'Create presentation from file'로 이어 가는 흐름을 안내함"
+      },
+      {
+        "title": "어떤 파일을 쓸 수 있나",
+        "body": "FAQ 기준 개인용 Copilot은 Word 파일 1개, 업무용 Microsoft Copilot은 Word·PDF(암호화 파일 포함). Insider 블로그는 PDF·TXT 참조를 안내함. 한 번에 몇 개까지 되는지는 문서마다 달라 [확인 필요] — FAQ는 '한 번에 파일 1개', 일부 관리 센터 공지는 최대 5개로 적음"
+      },
+      {
+        "title": "잘 부르는 요령",
+        "body": "① 파일 이름을 정확하게, 가능하면 따옴표로 묶어 씀 ② 무엇을 만들지(장 수·대상·어조)를 함께 씀 ③ '파일의 3장 평가 계획 부분만'처럼 쓸 부분을 지정하면 결과가 좋아짐(지원 문서 권장) ④ 못 찾으면 / 메뉴로 직접 고름"
+      }
+    ],
+    "can": [
+      "OneDrive·SharePoint의 Word 문서 이름을 말해 그 내용으로 발표 자료 초안 만들기",
+      "목록에 파일이 안 보여도 이름을 입력해 찾기",
+      "만든 초안을 Copilot 대화로 이어서 고치기(장 추가·삭제·요약)",
+      "Windows·웹·iPad에서는 / 메뉴·Reference a file로 같은 흐름 실습"
+    ],
+    "cannot": [
+      "권한이 없는 파일은 참조 못 함 — 지원 문서: 파일에 접근·사용 권한이 있어야 함",
+      "한 프롬프트에 처리할 수 있는 단어 수에 한도가 있어 아주 긴 문서는 일부만 반영될 수 있음",
+      "Copilot이 만든 내용이 원본과 다를 수 있음 — 반드시 검토 필요",
+      "한국어 결과 품질은 보장 안 됨 — FAQ의 지원 언어 목록에 한국어가 명시되지 않음 [확인 필요]"
+    ],
+    "safety": [
+      "학생 명단·성적·상담 기록처럼 개인정보가 든 파일은 이름으로도 부르지 않음",
+      "회사·학교 SharePoint 파일은 기관 AI 사용 규정과 공유 범위를 먼저 확인함. 내 권한으로 열리는 파일이라도 발표 자료로 외부에 보여도 되는지 따로 판단함",
+      "Copilot이 옮긴 숫자·날짜·인용문은 원본 파일과 한 줄씩 대조함",
+      "남의 저작물(교재 본문·그림)을 통째로 슬라이드로 옮기지 않고 출처를 밝힘",
+      "이름이 비슷한 파일이 여러 개면 엉뚱한 파일을 쓸 수 있으므로 결과 첫 장에서 어떤 파일을 썼는지 확인함"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: OneDrive에 있는 '수업계획서_2학기' Word 문서를 이름으로 불러 만든 수업 소개 슬라이드 8~10장 + 비포/애프터 메모. 비포는 파일 없이 주제만 준 슬라이드, 애프터는 내 문서를 근거로 한 슬라이드",
+    "follow": [
+      {
+        "title": "파일을 OneDrive에 저장",
+        "minutes": 5,
+        "do": "강사가 나눠 준 연습 문서를 Word for Mac에서 열고 파일 > 다른 이름으로 저장 > OneDrive를 골라 '수업계획서_2학기'로 저장함. 이미 OneDrive에 있으면 이름만 확인함",
+        "prompt": "",
+        "expect": "OneDrive에 '수업계획서_2학기.docx'가 보임",
+        "note": "이름에 날짜·버전이 섞인 비슷한 파일이 여러 개면 하나만 남기거나 이름을 구분되게 바꿈"
+      },
+      {
+        "title": "비포: 파일 없이 요청",
+        "minutes": 7,
+        "do": "PowerPoint for Mac에서 새 프레젠테이션을 만들고 오른쪽 아래 또는 홈 탭의 Copilot을 눌러 창을 염. 아래 프롬프트를 보내고 결과를 '비포'로 저장함",
+        "prompt": "성인 한국어 초급반 2학기 수업 소개 발표 자료를 8장으로 만들어 줘.",
+        "expect": "그럴듯하지만 일반적인 내용의 슬라이드",
+        "note": "내 수업의 실제 일정·교재·평가가 없다는 점을 확인하는 것이 목적임"
+      },
+      {
+        "title": "애프터: 파일 이름으로 요청",
+        "minutes": 10,
+        "do": "새 프레젠테이션을 하나 더 만들고 Copilot 창에 파일 이름을 넣은 아래 프롬프트를 보냄. 질문이 나오면 대상·스타일에 답하거나 건너뜀",
+        "prompt": "내 OneDrive에 있는 '수업계획서_2학기' 문서를 바탕으로 성인 한국어 초급반 수강생에게 보여 줄 수업 소개 발표 자료를 8장으로 만들어 줘. 수업 목표, 주차별 일정, 교재, 평가 방법, 수업 규칙을 꼭 넣어 줘.",
+        "expect": "문서 속 일정·교재·평가가 반영된 슬라이드 초안",
+        "note": "[확인 필요] Mac에서 파일을 못 찾으면 / 를 입력해 목록에서 '수업계획서_2학기'를 고르는 방식으로 진행함"
+      },
+      {
+        "title": "원본과 대조하기",
+        "minutes": 8,
+        "do": "Word 원본과 슬라이드를 나란히 놓고 날짜·주차·평가 비율을 표시하며 대조함. 틀린 곳은 아래 프롬프트로 고치거나 직접 수정함",
+        "prompt": "5번 슬라이드의 평가 방법을 '수업계획서_2학기' 문서의 평가 기준과 똑같이 고쳐 줘. 비율 숫자는 문서 그대로 써 줘.",
+        "expect": "평가 비율이 원본과 같아짐",
+        "note": "숫자는 Copilot에게 맡기지 말고 마지막에 사람이 다시 확인함"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 파일 고르기",
+        "minutes": 5,
+        "do": "내 OneDrive에서 슬라이드로 만들고 싶은 문서 하나를 고름(회의록·안내문·강의 원고 등). 개인정보가 있으면 지운 사본을 따로 저장함",
+        "prompt": "",
+        "expect": "개인정보 없는 내 문서 1개 준비",
+        "note": "파일 이름을 짧고 구분되게 바꿔 두면 이름 참조가 쉬움 [확인 필요]"
+      },
+      {
+        "title": "부분만 골라 만들기",
+        "minutes": 10,
+        "do": "문서 전체 대신 특정 부분만 쓰도록 지정해 슬라이드를 만듦",
+        "prompt": "'[내 파일 이름]' 문서에서 [쓸 부분: 예) 3장 실습 활동] 부분만 써서 [대상: 예) 신규 강사]에게 설명하는 발표 자료를 6장으로 만들어 줘. 각 장에 핵심 문장 3개 이하, 마지막 장은 질문 받기로 해 줘.",
+        "expect": "지정한 부분 중심의 6장 초안",
+        "note": "지원 문서도 파일의 어느 부분·주제를 쓸지 알려 주면 결과가 좋아진다고 안내함"
+      },
+      {
+        "title": "다듬고 비교 메모",
+        "minutes": 5,
+        "do": "초안을 2~3번 대화로 고친 뒤, 비포(파일 없이)와 애프터(파일 이름 참조)의 차이를 메모 3줄로 남김",
+        "prompt": "전체 슬라이드의 문장을 초급 학습자도 읽기 쉬운 짧은 한국어로 바꿔 줘.",
+        "expect": "고쳐진 슬라이드 + 비교 메모 3줄",
+        "note": "메모 예) ① 일정이 실제와 같아짐 ② 교재명이 정확해짐 ③ 평가 비율 하나는 직접 고침"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 요청을 / 메뉴 방식과 이름 참조 방식으로 각각 해 보고 걸린 시간·결과 차이 비교하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "이름이 비슷한 파일 2개(예: 수업계획서_1학기, 수업계획서_2학기)를 두고 Copilot이 맞는 파일을 고르는지 실험하고, 헷갈리지 않는 파일 이름 규칙 정하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "SharePoint 팀 사이트의 공유 문서(회사·학교 계정)로 팀 회의용 발표 자료를 만들고, 공유 범위·권한을 점검하는 체크리스트 5줄 함께 만들기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 비포/애프터 슬라이드를 바꿔 보고 '내 문서를 썼더니 정확해진 점 1개 + 그래도 직접 고친 점 1개'를 말함",
+    "quiz": [
+      {
+        "q": "2026년 10월 6일 릴리스 노트에서 Mac PowerPoint Copilot에 새로 생긴 기능은?",
+        "options": [
+          "Mac 바탕화면 파일을 자동으로 모두 읽는 기능",
+          "OneDrive·SharePoint 파일을 프롬프트 속 이름만으로 참조하는 기능",
+          "PowerPoint를 무료로 쓰게 하는 기능",
+          "슬라이드를 영상으로 바꾸는 기능"
+        ],
+        "answer": 1,
+        "explain": "릴리스 노트는 OneDrive 폴더·SharePoint 라이브러리 파일을 파일·문서 이름으로 언급하면 Copilot이 알아본다고 밝힘. 이전엔 이런 암묵적 참조가 안 됐음"
+      },
+      {
+        "q": "Copilot이 파일을 참조하지 못하는 경우로 맞는 것은?",
+        "options": [
+          "파일 이름이 한글일 때",
+          "파일에 접근 권한이 없을 때",
+          "파일이 Word 문서일 때",
+          "프롬프트가 한 문장일 때"
+        ],
+        "answer": 1,
+        "explain": "지원 문서는 참조할 파일에 접근·사용 권한이 있어야 한다고 안내함"
+      },
+      {
+        "q": "Copilot이 만든 발표 자료를 쓰기 전 가장 먼저 할 일은?",
+        "options": [
+          "바로 수강생에게 배포",
+          "숫자·날짜를 원본 파일과 대조",
+          "디자인만 바꾸기",
+          "파일 이름 바꾸기"
+        ],
+        "answer": 1,
+        "explain": "AI 초안은 원본과 다를 수 있으므로 숫자·날짜·인용은 원본과 대조해 검토해야 함"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "내 자료 반영",
+        "high": "원본 문서의 일정·교재·평가가 정확히 반영됨",
+        "mid": "일부만 반영",
+        "low": "파일 없이 만든 것과 차이 없음"
+      },
+      {
+        "criterion": "검토·수정",
+        "high": "틀린 숫자를 찾아 고치고 근거를 말할 수 있음",
+        "mid": "읽어 보기만 함",
+        "low": "검토 없이 그대로 사용"
+      },
+      {
+        "criterion": "개인정보·권한",
+        "high": "개인정보 없는 사본을 쓰고 공유 범위를 확인함",
+        "mid": "개인정보는 없으나 권한 확인 없음",
+        "low": "개인정보가 든 파일을 그대로 참조"
+      }
+    ],
+    "next": [
+      "Copilot in PowerPoint 사용자 지정 스킬로 같은 형식 반복하기 (AI-2026-10-CAT03-006)",
+      "Gemini Notebook 슬라이드 자료로 같은 문서를 발표 자료로 만들어 비교 (AI-2026-10-CAT03-005)",
+      "ChatGPT for PowerPoint 추가 기능과 비교 (AI-2026-10-CAT10-005)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 출시 타임라인(10/6 Mac 릴리스 노트)",
+        "note": "'이름만 말하면 가져오는 조교' 비유"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 이름 참조 정의, / 메뉴와 비교, 파일 위치·종류, 요령, 할 수 있는/없는 것, 윤리·보안",
+        "note": "개인정보·권한 페이지 생략 금지"
+      },
+      {
+        "time": "35~65분",
+        "content": "2부 따라 하기: OneDrive 저장 → 비포 → 이름으로 요청 → 원본 대조",
+        "note": "Windows·웹 수강생은 / 메뉴 방식"
+      },
+      {
+        "time": "65~85분",
+        "content": "2부 내 것 만들기: 내 파일 고르기 → 부분 지정 → 다듬기·비교 메모",
+        "note": "개인정보 지운 사본만"
+      },
+      {
+        "time": "85~95분",
+        "content": "3부 정리: 비포/애프터 공유, 퀴즈 3문제, 다음 단계",
+        "note": "전체 95분, 쉬는 시간 별도"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "발표 자료 만들 때 제일 귀찮은 게 뭔가요? 이미 써 둔 계획서를 다시 옮기는 일이죠. 10월 6일부터 Mac PowerPoint의 Copilot은 'OneDrive에 있는 수업계획서로 만들어 줘'처럼 파일 이름만 말해도 그 파일을 찾아 씁니다. 오늘은 그걸로 수업 소개 슬라이드를 만들어 보겠습니다."
+      },
+      {
+        "label": "보안 전환",
+        "text": "이름만 말하면 찾아 준다는 건, 반대로 말하면 내 권한으로 열리는 파일은 무엇이든 끌어올 수 있다는 뜻입니다. 학생 명단이나 성적 파일은 이름으로도 부르지 않는다, 이것부터 약속하겠습니다."
+      },
+      {
+        "label": "실습 전환",
+        "text": "먼저 파일 없이 대충 만들어 보세요. 그다음 같은 요청에 파일 이름만 넣어서 비교합니다. 차이가 오늘의 핵심입니다."
+      },
+      {
+        "label": "대조 전환",
+        "text": "이제 원본과 슬라이드를 나란히 놓고 숫자 하나하나 확인합니다. Copilot이 잘 옮겼더라도, 확인은 선생님 몫입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘부터 자료는 OneDrive에, 이름은 알아보기 쉽게. 이 두 가지만 지켜도 다음 발표 자료는 한 줄로 시작할 수 있습니다. 다만 결과는 꼭 원본과 대조하세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생이 Windows·웹 PowerPoint를 씀",
+        "response": "이름 참조가 Mac 릴리스 노트 항목이므로, Copilot 창에서 / 를 입력하거나 Reference a file로 같은 파일을 골라 같은 실습을 진행함"
+      },
+      {
+        "situation": "Copilot 라이선스가 없음",
+        "response": "강사 화면 시연을 보며, 수강생은 무료 Copilot(웹)에 문서 내용 일부(개인정보 없음)를 붙여 넣고 '이 내용으로 8장 발표 자료 개요를 써 줘'로 개요를 받아 원본 대조 실습을 함"
+      },
+      {
+        "situation": "이름을 넣어도 파일을 못 찾음",
+        "response": "파일이 OneDrive에 동기화됐는지 확인하고, / 메뉴에서 직접 고르는 방식으로 전환함. 결과 비교 활동은 그대로 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Copilot 버튼이 안 보임",
+        "fix": "PowerPoint for Mac 업데이트, 로그인 계정이 Copilot 라이선스 계정인지 확인. 회사 계정이면 관리자 설정 확인"
+      },
+      {
+        "issue": "엉뚱한 파일 내용이 들어감",
+        "fix": "이름이 비슷한 파일을 정리하고 프롬프트에 파일 이름을 따옴표로 정확히 씀. 그래도 안 되면 / 메뉴로 직접 선택"
+      },
+      {
+        "issue": "파일을 찾지 못한다고 함",
+        "fix": "파일이 내 Mac에만 있고 OneDrive에 없는지 확인 → OneDrive에 저장 후 다시 시도"
+      },
+      {
+        "issue": "긴 문서의 뒷부분이 빠짐",
+        "fix": "프롬프트당 처리 단어 수 한도가 있으므로 '3장 부분만'처럼 범위를 나눠 요청"
+      },
+      {
+        "issue": "한국어 문장이 어색함",
+        "fix": "'초급 학습자용 짧은 한국어로 바꿔 줘'로 다시 요청하고, 최종 문장은 사람이 다듬음"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Windows에서도 파일 이름으로 부를 수 있나요?",
+        "a": "이번 이름 참조 항목은 2026-10-06 릴리스 노트의 Mac 항목임. Windows·웹의 이름 참조 지원 여부는 이 교안에서 확인하지 않음 [확인 필요]. / 메뉴·Reference a file 방식은 지원 문서에 안내되어 있음"
+      },
+      {
+        "q": "내 Mac 바탕화면에 있는 파일도 되나요?",
+        "a": "릴리스 노트는 OneDrive 폴더와 SharePoint 라이브러리 파일을 대상으로 밝힘. 로컬 파일은 OneDrive에 저장한 뒤 쓰는 것을 권장 [확인 필요]"
+      },
+      {
+        "q": "어떤 파일 형식을 쓸 수 있나요?",
+        "a": "FAQ 기준 개인용은 Word, 업무용은 Word·PDF(암호화 파일 포함). Insider 블로그는 PDF·TXT 참조를 안내함. 엑셀·이메일 참조도 별도 공지가 있으나 Mac 지원 범위는 [확인 필요]"
+      },
+      {
+        "q": "몇 개 파일까지 한 번에 참조되나요?",
+        "a": "공식 FAQ는 한 번에 파일 1개로 적고 있고, 일부 관리 센터 공지에는 최대 5개로 나옴. 문서마다 달라 [확인 필요]. 수업에서는 1개로 진행 권장"
+      },
+      {
+        "q": "개인 구독(Personal)으로도 되나요?",
+        "a": "개인 구독에도 Copilot in PowerPoint가 포함되지만, 이번 Mac 이름 참조가 개인 구독 OneDrive에서도 되는지는 공식 문서에 명시가 없음 [확인 필요]. SharePoint는 회사·학교 계정 기능임"
+      },
+      {
+        "q": "Copilot이 내 파일을 학습에 쓰나요?",
+        "a": "이 교안은 데이터 처리 정책을 자세히 다루지 않음. 업무용은 Microsoft 365 보안·개인정보 정책을 따르며 기관 정책 확인 권장"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "강사가 준 연습 문서만 사용, 비포/애프터 2개 만들기까지. 파일 저장은 강사가 화면으로 함께 진행"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "내 업무 문서로 부분 지정 프롬프트를 쓰고, 이름 규칙(날짜_주제_버전) 정하기까지 진행"
+      },
+      {
+        "level": "시니어",
+        "guide": "글자 크기 큰 연습 문서, 파일 이름은 짧은 한글 2~3단어로. 프롬프트를 종이 카드로 나눠 주고 복사·붙여넣기만 하게 함"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "'쉬운 한국어 안내문' 문서를 이름으로 불러 학습자용 생활 안내 슬라이드 만들기로 변형. 모국어 병기는 원어민·사전으로 확인"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지는 'AI 기능'보다 '자료를 클라우드에, 이름은 분명하게'라는 파일 관리 습관임 — 다른 AI 도구에도 그대로 통함",
+      "비포/애프터를 같은 요청으로 비교시키면 근거 자료(그라운딩)의 가치가 한 번에 보임",
+      "Mac 이름 참조와 Windows / 메뉴를 함께 보여 주면 기기 혼합 수업에서도 막힘이 줄어듦"
+    ],
+    "day_before": [
+      "강사 Mac에서 PowerPoint 업데이트 후 Copilot 창에 파일 이름 프롬프트로 실제 결과 확인 + 화면 캡처(Plan B용)",
+      "연습 문서 '수업계획서_2학기'(개인정보 없는 자작 자료) 준비·배포 링크 확인",
+      "수강생 기기(Mac·Windows)와 Copilot 라이선스 여부 사전 설문 → 조 편성",
+      "한국어 화면의 Copilot·Reference a file 메뉴 이름 캡처",
+      "기관 와이파이에서 OneDrive·Copilot 접속 확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 이름 참조는 2026-10-06 릴리스 노트의 Mac 항목으로 확인. Windows·웹·iPad에서의 이름 참조 지원 여부는 확인하지 않음",
+    "[확인 필요] 한 번에 참조 가능한 파일 수: 공식 FAQ는 1개, 일부 관리 센터 공지 사본은 최대 5개로 적음",
+    "[확인 필요] Microsoft 365 Personal·Family 개인 구독에서 OneDrive 파일 이름 참조가 되는지 공식 문서에 명시 없음",
+    "[확인 필요] 한국어 화면 메뉴 이름과 한국어 지원 품질 — FAQ 지원 언어 목록에 한국어 미표기",
+    "자동 작성 교안이라 실제 Mac 화면에서 재현하지 않음. 강의 전날 체크리스트로 확인할 것"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft 365 Copilot 릴리스 노트 (2026-10-06 PowerPoint Mac 항목)",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Add a slide from a file with Copilot in PowerPoint",
+      "url": "https://support.microsoft.com/en-gb/powerpoint/copilot/add-a-slide-from-a-file-with-copilot-in-powerpoint",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Prepare your presentation with Microsoft Copilot",
+      "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/prepare-your-presentation-with-microsoft-365-copilot",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Frequently asked questions about Copilot in PowerPoint",
+      "url": "https://support.microsoft.com/en-us/powerpoint/frequently-asked-questions-about-copilot-in-powerpoint",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Create a new presentation with Copilot in PowerPoint",
+      "url": "https://support.microsoft.com/en-us/powerpoint/copilot/create-a-new-presentation-with-copilot-in-powerpoint",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft – Copilot Plans and Pricing for Business",
+      "url": "https://www.microsoft.com/en-us/copilot/pricing/business",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft – Copilot Pricing Plans for Individuals",
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing/individuals",
+      "checked": "2026-10-14"
+    }
+  ]
+}
