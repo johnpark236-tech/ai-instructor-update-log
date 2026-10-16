@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-17 04:10 KST",
+  "updated_at": "2026-10-17 05:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-08-19-build-for-everyone",
+      "date": "2026-08-19",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Build — 웹·모바일 모든 요금제로 확대",
+      "summary": "말로 설명한 웹사이트·앱·게임·대시보드를 대화창에서 만들고 grok.me 주소로 게시, 공개 범위(나만·링크·전체)·내 도메인·Remix·GitHub 내보내기·Secrets·커넥터·앱 안 Grok API(채팅·이미지·음성) 지원, 모든 요금제",
+      "source": {
+        "title": "xAI News – Grok Build on web and mobile",
+        "url": "https://x.ai/news/grok-build-for-everyone"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT07-008"
+    },
+    {
+      "id": "grok-2026-07-28-build-mode",
+      "date": "2026-07-28",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "빌드 모드(Build Mode) Early Beta",
+      "summary": "아이디어를 말하면 대화창에서 작동하는 웹사이트·앱·게임·대시보드를 만들고 grok.me·내 도메인으로 게시, SuperGrok Heavy 한정, 웹·iOS·Android",
+      "source": {
+        "title": "xAI News – Introducing Build Mode",
+        "url": "https://x.ai/news/grok-build-mode"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT07-008"
+    },
     {
       "id": "genspark-2026-08-03-genoffice",
       "date": "2026-08-03",

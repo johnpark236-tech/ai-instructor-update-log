@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 86,
+  "count": 87,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-008",
+      "version": "v1.0",
+      "created_at": "2026-10-17 05:20 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "말로 설명해 수업용 퀴즈 웹앱을 만들고 링크로 나눠 주기 — Grok Build(빌드 모드, 웹·모바일)",
+      "summary": "2026-07-28 xAI가 Grok 빌드 모드(Build Mode) Early Beta 공개(SuperGrok Heavy 한정). 2026-08-19 Grok Build를 웹·iOS·Android 모든 요금제로 확대. 만들고 싶은 웹사이트·앱·게임·대시보드를 말로 설명하면 Grok이 코드를 써서 대화창 안에 작동하는 미리보기를 보여 주고, 클릭 한 번으로 grok.me 주소에 게시함. 공개 범위(나만·링크 있는 사람·전체 공개)·내 도메인·Remix(복제)·GitHub 내보내기·Secrets·커넥터·앱 안 Grok API(채팅·이미지·음성) 지원",
+      "tool": "Grok",
+      "feature": "Grok Build(그록 빌드, 빌드 모드 Build Mode) — 웹·iOS·Android 모든 요금제, 말로 웹사이트·앱·게임·대시보드 만들기, 대화창 미리보기·수정, grok.me 게시·공개 범위·내 도메인·Remix·GitHub 내보내기·Secrets·커넥터·앱 안 Grok API",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-08-19",
+      "categories": [
+        "CAT-07",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-DEV",
+        "JOB-STU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 자동 채점되는 '오늘의 단어 퀴즈' 웹앱 1개 + ② '링크 있는 사람만' 공개로 게시한 grok.me 주소 1개 + ③ 말로 고친 수정 기록 2회 이상",
+      "access": "freemium",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "말로 설명하면 작동하는 웹앱이 생김"
+    },
     {
       "id": "AI-2026-10-CAT07-007",
       "version": "v1.0",
