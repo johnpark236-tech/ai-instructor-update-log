@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 83,
+  "count": 84,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-015",
+      "version": "v1.0",
+      "created_at": "2026-10-17 02:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "전화·라디오·카페 소리를 입힌 듣기 평가 음원 만들기 — ElevenLabs Text to Speech 오디오 효과(Audio effects)",
+      "summary": "2026-10-12 ElevenLabs가 Text to Speech·Text to Dialogue에 오디오 효과 추가. 생성한 목소리에 ① 필터(전화선·옛 라디오·로봇) ② 거리(Near·Medium·Far) ③ 공간(방·홀 울림) ④ 배경 소음(카페·도시) ⑤ 좌우 위치(Pan, API) 적용 가능. 웹 화면은 설정 패널 'Audio effects' → 'Add effect'로 추가, 효과는 생성 비용에 영향 없음",
+      "tool": "ElevenLabs",
+      "feature": "Text to Speech 오디오 효과(Audio effects) — 필터(Filter)·배경 소음(Noise)·공간(Space)·거리(Distance), API audio_effects(필터·거리·환경 울림·배경 소음·Pan), Text to Dialogue 지원",
+      "company": "ElevenLabs",
+      "type": "update",
+      "released": "2026-10-12",
+      "categories": [
+        "CAT-05",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-GLB",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 전화 필터를 입힌 '병원 예약 전화' 듣기 음원 1개 + ② 카페 배경 소음을 깐 같은 대본 음원 1개 + ③ 효과 없는 원본과 비교한 듣기 메모 1장",
+      "access": "freemium",
+      "total_minutes": 47,
+      "notice": "",
+      "emoji": "🎧",
+      "one_liner": "AI 목소리에 전화·카페 소리 입히기"
+    },
     {
       "id": "AI-2026-10-CAT08-009",
       "version": "v1.0",

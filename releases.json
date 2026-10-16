@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 01:03 KST",
+  "updated_at": "2026-10-17 02:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "elevenlabs-2026-10-12-audio-effects",
+      "date": "2026-10-12",
+      "tool": "ElevenLabs",
+      "company": "ElevenLabs",
+      "type": "update",
+      "title": "Text to Speech 오디오 효과(Audio effects)",
+      "summary": "생성 음성에 필터(전화·라디오·로봇)·거리·공간 울림·배경 소음·좌우 위치(API)를 입히는 후처리 효과, 웹은 Text to Speech 탭, Text to Dialogue는 API 지원, 비용 변화 없음",
+      "source": {
+        "title": "ElevenLabs Changelog",
+        "url": "https://elevenlabs.io/docs/fr/changelog"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT05-015"
+    },
     {
       "id": "grok-2026-10-12-x-subscription",
       "date": "2026-10-12",
