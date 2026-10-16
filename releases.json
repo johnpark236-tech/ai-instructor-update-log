@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 05:20 KST",
+  "updated_at": "2026-10-17 06:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2476,6 +2476,21 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT07-007"
+    },
+    {
+      "id": "chatgpt-2026-09-29-pages-space",
+      "date": "2026-09-29",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Pages·Space — 대화를 공동 편집 문서로",
+      "summary": "대화를 편집 가능한 페이지로 바꾸고 ChatGPT로 구간 수정·댓글·하위 페이지, 보기·편집 권한 공유로 실시간 공동 편집. Space가 Library 대체 (Pro·Business·Enterprise, 웹·데스크톱 편집, 모바일은 읽기)",
+      "source": {
+        "title": "OpenAI Help – Getting started with Space in ChatGPT",
+        "url": "https://help.openai.com/en/articles/20001549-getting-started-with-space-in-chatgpt"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT03-013"
     }
   ]
 }

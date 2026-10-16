@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 87,
+  "count": 88,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-013",
+      "version": "v1.0",
+      "created_at": "2026-10-17 06:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "대화를 함께 고치는 수업 계획 문서로 바꾸기 — ChatGPT Pages(페이지)·Space(스페이스)",
+      "summary": "2026-09-29 ChatGPT가 Pages·Space 공개. 대화 내용을 편집 가능한 문서(Page)로 바꾸고, ChatGPT에게 구간별 수정을 맡기고, 하위 페이지로 정리하고, 보기·편집 권한으로 동료와 실시간 공동 편집 가능. Pro·Business·Enterprise 전용, 웹·데스크톱 앱에서 만들기·편집(모바일은 읽기·공유만)",
+      "tool": "ChatGPT",
+      "feature": "Pages(페이지)·Space(스페이스) — 대화를 편집 가능한 문서로 만들기, ChatGPT로 전체·구간 수정, 댓글, 하위 페이지, 템플릿, 보기·편집 권한 공유와 실시간 공동 편집, Library 대체",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-09-29",
+      "categories": [
+        "CAT-03",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 대화로 만든 '수업 계획' 페이지 1개 + ② ChatGPT로 고친 구간 + 댓글 1개 + ③ 하위 페이지 '활동지' 1개 + ④ 짝과 공유해 함께 고친 최종본",
+      "access": "paid",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "📄",
+      "one_liner": "대화를 함께 고치는 문서로 바꾸기"
+    },
     {
       "id": "AI-2026-10-CAT07-008",
       "version": "v1.0",
