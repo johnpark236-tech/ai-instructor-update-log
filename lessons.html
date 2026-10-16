@@ -59,11 +59,11 @@ a.btn{text-decoration:none;display:inline-block}
 .kind.kn{background:#70e1a1;color:#04261a}.kind.ku{background:#6ee7ff;color:#03222d}
 .acc{border:1.5px solid}.acc.af{color:var(--g)}.acc.am{color:var(--w)}.acc.ap{color:var(--r)}
 h1 .kind,h1 .acc{font-size:15px;top:-8px}
-.item{position:relative;padding:0}.item .go{display:block;color:inherit;text-decoration:none;padding:16px 16px 52px}.item:hover{border-color:#3a6a90}.no{color:var(--a);font-weight:900;margin-right:6px}
+.item{position:relative;padding:0}.item .go{display:block;color:inherit;text-decoration:none;padding:16px 16px 10px}.item:hover{border-color:#3a6a90}.no{color:var(--a);font-weight:900;margin-right:6px}
 .ttl{font-weight:850;font-size:17px;line-height:1.45}.meta{font-size:12px;color:#8fa6c3;display:flex;gap:6px 10px;flex-wrap:wrap;margin-top:6px}
 .pill{font-size:11px;border:1px solid #2c4867;border-radius:999px;padding:1px 8px;color:#bcd0e8}
 .desc{color:#c0cde0;font-size:14px;margin:8px 0 0}
-.mk{cursor:pointer;background:#123326;color:var(--g);border:1px solid #2d6b4c;border-radius:10px;padding:7px 12px;font-weight:800;font-size:13px}.item .mk{position:absolute;right:14px;bottom:12px}.mk.undo{background:#1a2638;color:#bed0e8;border-color:#3a5473}.mk.big{display:block;width:100%;margin:28px 0 0;padding:15px;font-size:16px}
+.mk{cursor:pointer;background:#123326;color:var(--g);border:1px solid #2d6b4c;border-radius:10px;padding:7px 12px;font-weight:800;font-size:13px}.acts{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px;padding:0 14px 14px}.ib{cursor:pointer;background:#0f2038;color:#d6e6f7;border:1px solid #2f5577;border-radius:10px;padding:7px 12px;font-weight:800;font-size:13px;white-space:nowrap}.ib.star.on{background:#3a2e0b;border-color:#c9a227;color:#ffd75e}.hacts{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}.mk.undo{background:#1a2638;color:#bed0e8;border-color:#3a5473}.mk.big{display:block;width:100%;margin:28px 0 0;padding:15px;font-size:16px}
 .bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}.btns{display:flex;gap:8px;flex-wrap:wrap}
 .btn{cursor:pointer;background:#10243d;color:#dff3ff;border:1px solid #2f5577;border-radius:10px;padding:9px 12px;font-weight:800;font-size:13px}.btn.pri{background:linear-gradient(90deg,#0891b2,#6366f1);border:0;color:#fff}.btn:disabled{opacity:.6;cursor:wait}
 .seg{display:inline-flex;border:1px solid #2f5577;border-radius:10px;overflow:hidden}.seg button{cursor:pointer;background:#0b1728;color:#bed0e8;border:0;padding:9px 12px;font-size:13px;font-weight:700}.seg button.on{background:#1b3a5c;color:#fff}
@@ -118,6 +118,22 @@ const kindB=t=>`<span class="kind ${t==='new'?'kn':'ku'}">${M.KIND[t]||''}</span
 const pastB=L=>M.isPast(L)?'<span class="past">📚 지난 기능</span>':'';
 const accB=a=>M.ACCESS[a]?`<span class="acc ${{free:'af',freemium:'am',paid:'ap'}[a]}">${M.ACCESS[a]}</span>`:'';
 const getDone=()=>store.get('done')||{};
+// 즐겨찾기 (이 기기에 저장)
+const getFav=()=>store.get('fav')||{};
+function toggleFav(id){const d=getFav();if(d[id])delete d[id];else d[id]=new Date().toISOString();store.set('fav',d);return !!d[id]}
+const starBtn=(id,fav)=>`<button class="ib star ${fav?'on':''}" type="button" data-fav="${esc(id)}" aria-pressed="${fav}" title="즐겨찾기">${fav?'★ 즐겨찾기':'☆ 즐겨찾기'}</button>`;
+const shareBtn=id=>`<button class="ib share" type="button" data-share="${esc(id)}" title="카카오톡 등으로 공유">📤 공유</button>`;
+// 공유: 휴대폰 공유 창(카카오톡 선택) → 안 되면 링크 복사
+async function shareLesson(id){
+  const l=(INDEX.lessons||[]).find(x=>x.id===id)||{id,title:id,one_liner:''};
+  const url=location.origin+location.pathname+'?id='+encodeURIComponent(id);
+  const text=`📘 ${l.title}${l.one_liner?'\n'+l.one_liner:''}`;
+  if(navigator.share){try{await navigator.share({title:l.title,text,url});return}catch(e){if(e&&e.name==='AbortError')return}}
+  try{await navigator.clipboard.writeText(text+'\n'+url);alert('링크 복사됨 — 카카오톡 대화창에 붙여넣기')}catch(e){prompt('이 링크를 복사해 카카오톡에 붙여넣기',url)}
+}
+document.addEventListener('click',e=>{const t=e.target.closest&&e.target.closest('[data-share],[data-fav]');if(!t)return;e.preventDefault();e.stopPropagation();
+  if(t.dataset.share)return shareLesson(t.dataset.share);
+  const on=toggleFav(t.dataset.fav);if(!location.hash){const y=scrollY;listView();scrollTo(0,y);return}t.classList.toggle('on',on);t.setAttribute('aria-pressed',on);t.textContent=on?'★ 즐겨찾기':'☆ 즐겨찾기'});
 function setDone(id,on){const d=getDone();if(on)d[id]=new Date().toISOString();else delete d[id];store.set('done',d)}
 // 예전(v1) 교안 ID로 남은 완료 기록을 새 ID로 옮김
 (function(){const d=getDone();let ch=0;for(const[o,n]of Object.entries(M.LEGACY)){if(d[o]){d[n]=d[o];delete d[o];ch=1}}if(ch)store.set('done',d)})();
@@ -127,14 +143,14 @@ function nextTodo(id){const d=getDone(),all=newestFirst(),i=all.findIndex(l=>l.i
 const opt=(v,t,cur)=>`<option value="${v}" ${v===cur?'selected':''}>${t}</option>`;
 
 function listView(){
-  const done=getDone(),all=ordered(),doneN=all.filter(l=>done[l.id]).length;
-  const items=newestFirst().filter(l=>(tab==='done')===!!done[l.id]).filter(l=>
+  const done=getDone(),fav=getFav(),all=ordered(),doneN=all.filter(l=>done[l.id]).length,favN=all.filter(l=>fav[l.id]).length;
+  const items=newestFirst().filter(l=>tab==='fav'?!!fav[l.id]:(tab==='done')===!!done[l.id]).filter(l=>
     (f.kind==='all'||(f.kind==='past'?M.isPast(l):l.type===f.kind))&&(!f.cat||l.categories.includes(f.cat))&&
     (!f.lvl||l.learner_levels.includes(f.lvl)||l.instructor_levels.includes(f.lvl))&&(!f.job||l.jobs.includes(f.job))&&
     (!f.q||JSON.stringify(l).toLowerCase().includes(f.q.toLowerCase())));
   app.innerHTML=`${inAppBanner()}<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.3</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
   <p class="lead">신규 AI·기존 AI 신기능 → 요약본(표·그래프) → 실습 → 결과물. 새 교안이 맨 위. 다 배운 교안은 <b>완료</b>로 숨김. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>.</p></section>
-  <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
+  <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='fav'?'on':''}" data-t="fav">★ 즐겨찾기 <b>${favN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
   <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI'],['past','📚 지난 기능']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
   <div class="tools"><select id="fc">${opt('','카테고리 전체',f.cat)}${Object.entries(M.CAT).map(([k,v])=>opt(k,`${k} ${v}`,f.cat)).join('')}</select>
   <select id="fl">${opt('','대상 전체',f.lvl)}${Object.keys(M.LEVEL).map(k=>opt(k,`${M.LEVEL[k]} ${k.includes('강사')?k:'학습자-'+k}`,f.lvl)).join('')}</select>
@@ -146,9 +162,9 @@ function listView(){
    <div class="meta"><span>${esc(l.tool)} · ${esc(l.feature)}</span><span>출시 ${esc(l.released)}</span><span>${l.total_minutes}분</span><span>재검토 ${esc(l.review_by)}</span>${done[l.id]?`<span>완료 ${esc(String(done[l.id]).slice(0,10))}</span>`:''}</div>
    <div class="meta">${l.categories.map(c=>`<span class="pill">${c} ${M.CAT[c]}</span>`).join('')}${M.levelBadges(l).map(b=>`<span class="pill">${b}</span>`).join('')}</div>
 </a>
-   ${tab==='done'?`<button class="mk undo" data-id="${esc(l.id)}">↩ 다시 학습하기</button>`:`<button class="mk" data-id="${esc(l.id)}">✓ 완료</button>`}</div>`).join('')
-   :`<div class="empty">${tab==='done'?'아직 완료한 교안이 없습니다.':(all.length-doneN?'조건에 맞는 교안이 없습니다.':'🎉 모든 교안을 완료했습니다. 새 교안은 매시간 추가됩니다.')}</div>`}</div>
-  <div class="sync">완료 기록은 이 기기의 브라우저에 저장됩니다. <button class="linkbtn" id="sync">다른 기기로 완료 기록 옮기기</button></div>`;
+   <div class="acts">${shareBtn(l.id)}${starBtn(l.id,!!fav[l.id])}${done[l.id]?`<button class="mk undo" data-id="${esc(l.id)}">↩ 다시 학습</button>`:`<button class="mk" data-id="${esc(l.id)}">✓ 완료</button>`}</div></div>`).join('')
+   :`<div class="empty">${tab==='fav'?'즐겨찾기한 교안 없음 — 교안의 ☆ 버튼을 누르면 여기에 모임':tab==='done'?'아직 완료한 교안이 없습니다.':(all.length-doneN?'조건에 맞는 교안이 없습니다.':'🎉 모든 교안을 완료했습니다. 새 교안은 매시간 추가됩니다.')}</div>`}</div>
+  <div class="sync">완료·즐겨찾기 기록은 이 기기의 브라우저에 저장됨. <button class="linkbtn" id="sync">다른 기기로 기록 옮기기</button></div>`;
   const q=document.getElementById('q');q.oninput=()=>{f.q=q.value;const p=q.selectionStart;listView();const n=document.getElementById('q');n.focus();n.setSelectionRange(p,p)};
   document.getElementById('fc').onchange=e=>{f.cat=e.target.value;listView()};
   document.getElementById('fl').onchange=e=>{f.lvl=e.target.value;listView()};
@@ -160,11 +176,11 @@ function listView(){
 }
 
 async function shareSync(){
-  const url=location.href.split('#')[0]+'#import='+encodeURIComponent(Object.keys(getDone()).join(','));
+  const url=location.href.split('#')[0].split('?')[0]+'#import='+encodeURIComponent([...Object.keys(getDone()),...Object.keys(getFav()).map(i=>'*'+i)].join(','));
   try{if(navigator.share){await navigator.share({title:'AI 실습 교안 완료 기록',url});return}}catch(e){return}
   try{await navigator.clipboard.writeText(url);alert('링크를 복사했습니다. 다른 기기에서 이 링크를 열면 완료 기록이 합쳐집니다.')}catch(e){prompt('이 링크를 다른 기기에서 여세요',url)}
 }
-function importSync(raw){const d=getDone();let n=0;decodeURIComponent(raw).split(',').filter(Boolean).map(i=>M.LEGACY[i]||i).forEach(i=>{if(!d[i]){d[i]=new Date().toISOString();n++}});store.set('done',d);history.replaceState(null,'',location.pathname);alert(`완료 기록 ${n}개를 가져왔습니다.`);tab='todo';listView()}
+function importSync(raw){const d=getDone(),fv=getFav();let n=0,m=0;decodeURIComponent(raw).split(',').filter(Boolean).forEach(r=>{const isF=r[0]==='*';let i=isF?r.slice(1):r;i=M.LEGACY[i]||i;const t=isF?fv:d;if(!t[i]){t[i]=new Date().toISOString();isF?m++:n++}});store.set('done',d);store.set('fav',fv);history.replaceState(null,'',location.pathname);alert(`완료 ${n}개 · 즐겨찾기 ${m}개 가져옴`);tab='todo';listView()}
 
 // 여러 내용이 한 줄로 이어진 글 → 1) 2) 3) 번호 목록
 const NX=t=>{const r=M.splitItems(t);if(r.items.length<2)return esc(t);return `${r.lead?`<div class="nlead">${esc(r.lead)}</div>`:''}<ol class="n">${r.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>`};
@@ -228,7 +244,7 @@ async function lessonView(id){
     ${D(`✅ 강의 전날 체크리스트 ${CN(I.day_before.length)}`,I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span><b class="rn">${i+1})</b> ${esc(c)}</span></label>`).join(''),1)}</div>`;
   app.innerHTML=`${inAppBanner()}${bar}
   <section class="hero" style="padding:16px 0 4px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)}${isDone?' · ✅ 완료':''}</div>
-  <h1 style="font-size:clamp(22px,4vw,34px)">${kindB(L.type)}${pastB(L)}${accB(P.access)}${esc(L.title)}</h1></section>
+  <h1 style="font-size:clamp(22px,4vw,34px)">${kindB(L.type)}${pastB(L)}${accB(P.access)}${esc(L.title)}</h1><div class="hacts">${shareBtn(L.id)}${starBtn(L.id,!!getFav()[L.id])}</div></section>
   ${L.notice?`<div class="call warn">⚠️ 변경 공지: ${esc(L.notice)}</div>`:''}
   ${glance}
 
