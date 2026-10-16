@@ -1,0 +1,569 @@
+{
+  "id": "AI-2026-10-CAT04-010",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 23:05 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "수업 홍보 포스터 1장을 만들고 SNS·발표 화면 크기로 바꾸기 — Grok Imagine Image 2.0(편집·배경 제거·Smart resize)",
+  "summary": "2026-08-07 xAI가 이미지 생성·편집 모델 Imagine Image 2.0 공개, Grok Imagine의 기본 Quality Mode로 적용. 글자·배치가 많은 포스터를 또렷하게 만들고 Magic wand(선택 영역만 수정)·배경 제거·참조 이미지 최대 5장·Smart resize(9개 비율 재구성)로 다듬기 가능. 2026-10-12부터 Grok은 The X Subscription에 포함 — Plus(월 $8) 이상에 Imagine 포함, Free 이용 범위는 [확인 필요]",
+  "glance": {
+    "emoji": "🖼️",
+    "one_liner": "글자 또렷한 포스터를 만들고 크기별로 변환",
+    "cards": [
+      {
+        "icon": "🔤",
+        "title": "또렷한 글자",
+        "text": "작은 글씨·복잡한 배치도 정돈"
+      },
+      {
+        "icon": "🪄",
+        "title": "Magic wand",
+        "text": "고른 부분만 바꾸고 나머지 유지"
+      },
+      {
+        "icon": "✂️",
+        "title": "배경 제거",
+        "text": "투명 배경으로 대상만 내보내기"
+      },
+      {
+        "icon": "📐",
+        "title": "Smart resize",
+        "text": "9:16·16:9 등 비율 재구성"
+      }
+    ],
+    "diagram": {
+      "title": "Grok Imagine으로 포스터 만드는 흐름",
+      "nodes": [
+        {
+          "icon": "🌐",
+          "label": "Imagine 열기"
+        },
+        {
+          "icon": "💬",
+          "label": "포스터 요청"
+        },
+        {
+          "icon": "🪄",
+          "label": "부분 수정"
+        },
+        {
+          "icon": "📐",
+          "label": "비율 바꾸기"
+        },
+        {
+          "icon": "✅",
+          "label": "글자 검수"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "디자인 앱 따로",
+        "text": "포스터 만든 뒤 SNS·발표용 크기마다 다시 배치하느라 시간 소요"
+      },
+      "after": {
+        "label": "한 장 → 여러 크기",
+        "text": "요청 한 번으로 포스터 생성 후 Smart resize로 세로·가로판 바로 확보"
+      }
+    },
+    "cautions": [
+      "실존 인물 얼굴 합성 금지",
+      "글자·날짜 오타 직접 검수",
+      "AI 생성 이미지 표기"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Imagine — Imagine Image 2.0 (기본 Quality Mode, Magic wand 부분 수정·Segmentation·배경 제거·참조 이미지 최대 5장·Smart resize·Templates)",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-08-07",
+  "categories": [
+    "CAT-04",
+    "CAT-11"
+  ],
+  "jobs": [
+    "JOB-MKT",
+    "JOB-EDU",
+    "JOB-CRE",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 30,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Grok 계정(grok.com 또는 X 계정 로그인) — Plus(월 $8) 이상 권장, Free 이미지 생성 범위 [확인 필요]",
+    "PC 웹 브라우저(grok.com/imagine) 권장 — iOS·Android Grok 앱도 Quality Mode로 지원",
+    "포스터에 넣을 문구(강좌명·날짜·장소·문의처)와 로고·사진 1~2장(선택, 본인 소유)",
+    "강사: 수강생 요금제·이미지 생성 가능 여부 사전 확인"
+  ],
+  "outcome": "① 강좌명·일시·장소가 또렷한 수업 홍보 포스터 1장 + ② Magic wand로 고친 수정본 1장 + ③ Smart resize로 만든 9:16(SNS 세로)·16:9(발표 화면) 2장",
+  "objectives": [
+    "Imagine Image 2.0이 무엇이고 이전 이미지 생성과 무엇이 달라졌는지 설명할 수 있음",
+    "문구·배치 조건을 담은 요청으로 포스터를 만들고 Magic wand·배경 제거로 필요한 곳만 고칠 수 있음",
+    "Smart resize로 용도별 비율을 만들고 글자·사실 오류와 저작권·초상권 문제를 점검할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "2026-10-12부터 Grok은 The X Subscription에 포함. Plus 월 $8부터 Grok Chat·Voice·Imagine·Build 포함, Premium 월 $30(Plus의 4배 사용량)·Super 월 $100(15배)·Ultra 월 $200(50배). 유료는 Grok·Cursor 사용량을 한 주 단위 공용 한도로 함께 씀. Free는 매일 제한된 Grok 이용, 이미지 생성 표기는 'Limited' — 범위 [확인 필요]",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "매일 제한된 Grok 이용, 이미지 생성 'Limited'(범위 [확인 필요]), Cursor 체험 한도, 기본 X"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok Chat·Voice·Imagine·Build 포함, 기준(1배) 사용량, X 체크마크·크리에이터 도구·광고 감소"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "Plus의 4배 사용량, SuperGrok·Cursor Pro·X Premium+ 혜택, 이미지·영상 생성, Grok Bot"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "Plus의 15배 사용량, 혼잡 시간 우선 모델 접근"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "Plus의 50배 사용량, 새 제품·모델 가장 먼저 이용"
+      }
+    ],
+    "note": "금액은 xAI 공식 발표·가격 페이지(2026-10-16 확인, 미국 달러·세금 별도). 요금제별 이미지 생성 장수는 공개되지 않음 — 공용 사용량 한도에서 차감, 한 주 단위로 갱신. 기존 SuperGrok 구독자는 기존 요금제 유지 또는 전환 선택 가능. API(grok-imagine-image-2.0) 장당 가격 [확인 필요]. 원화 가격 미확인",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "xAI – Pricing (The X Subscription)",
+        "url": "https://x.ai/pricing"
+      },
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-07-31",
+      "text": "Imagine Video 1.5 with References 공개 — 참조 이미지 최대 7장·1080p 영상"
+    },
+    {
+      "date": "2026-08-07",
+      "text": "Imagine Image 2.0 공개 — Grok Imagine 기본 Quality Mode, Magic wand·Segmentation·배경 제거·참조 5장·Smart resize·Templates, API grok-imagine-image-2.0"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "The X Subscription 출시 — Grok·Grok Bot·Cursor·X Premium 통합, Plus(월 $8) 이상에 Imagine 포함"
+    }
+  ],
+  "theory": {
+    "definition": "Imagine Image 2.0은 xAI가 만든 이미지 생성·편집 모델임. Grok Imagine(grok.com/imagine·Grok 앱)의 기본 Quality Mode로 쓰이며, 디자이너처럼 글자와 배치를 계획해 포스터·상품 사진·아이콘처럼 '실제 업무에 쓸 수 있는 이미지'를 만드는 것이 목표라고 xAI가 밝힘",
+    "analogy": "'그림만 그리는 화가'에서 '글자 배치까지 챙기는 편집 디자이너'로 바뀐 것. 한 번 만든 포스터를 다른 판형으로 다시 짜 주는 조판 담당까지 겸함",
+    "comparison": {
+      "headers": [
+        "구분",
+        "새로 만들기(생성)",
+        "Magic wand·Segmentation",
+        "Smart resize"
+      ],
+      "rows": [
+        [
+          "하는 일",
+          "요청으로 새 이미지 생성",
+          "고른 영역만 수정",
+          "비율에 맞게 다시 구성"
+        ],
+        [
+          "입력",
+          "글 요청 + 참조 이미지 최대 5장",
+          "이미지 + 고칠 영역 + 요청",
+          "이미지 1장 + 원하는 비율"
+        ],
+        [
+          "결과",
+          "새 이미지",
+          "나머지 그대로인 수정본",
+          "1:2~2:1 등 9개 비율판"
+        ],
+        [
+          "주의",
+          "글자 오타 가능",
+          "경계가 어색할 수 있음 [확인 필요]",
+          "글자 위치·잘림 재검수"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "글자·배치(Typography)",
+        "body": "① 요청을 자세히 따르는 지시 이행 ② 여러 칸으로 된 복잡한 그림도 정돈된 배치 ③ 작은 글씨도 또렷하게 표현 — 한국어 글자 품질은 공식 언급 없음 [확인 필요]"
+      },
+      {
+        "title": "편집 도구 5가지",
+        "body": "① Magic wand: 고른 영역만 변경 ② Segmentation: 바꿀 영역을 정밀 선택 ③ Background removal: 투명 배경으로 대상만 내보내기 ④ Multi-ref: 참조 이미지 최대 5장 ⑤ Smart resize: 1:2·9:16·2:3·3:4·1:1·4:3·3:2·16:9·2:1로 재구성"
+      },
+      {
+        "title": "Templates(템플릿)",
+        "body": "① 사진 보정·상품 색 바꾸기 ② 잡지형 포스터·증명사진(헤드샷) ③ 쇼핑몰·후기용 사진 ④ 아이콘·게임 스프라이트·UI 키트 ⑤ 이모지·굿즈 — 미리 짜인 작업 흐름으로 바로 시작"
+      }
+    ],
+    "can": [
+      "글 요청으로 포스터·안내문·상품 사진 생성",
+      "작은 글씨가 들어간 복잡한 배치 표현",
+      "고른 영역만 수정하고 나머지 유지(Magic wand)",
+      "배경을 지워 투명 배경 이미지로 내보내기",
+      "참조 이미지 최대 5장으로 인물·제품·로고 일관성 유지",
+      "한 장을 9개 비율로 다시 구성(Smart resize)",
+      "웹·iOS·Android·API(grok-imagine-image-2.0)에서 이용"
+    ],
+    "cannot": [
+      "글자·날짜·숫자 정확성 보장 — 생성 후 직접 검수 필요",
+      "한국어 글자 품질 보장 — 공식 문서에 언어별 품질 언급 없음 [확인 필요]",
+      "요금제별 생성 장수 확인 — 공용 사용량 한도만 공개",
+      "참조 이미지 6장 이상 한 번에 사용",
+      "타인 저작물·초상권 문제를 대신 해결"
+    ],
+    "safety": [
+      "실존 인물(지인 포함) 사진을 동의 없이 합성·변형하지 않을 것",
+      "남의 로고·캐릭터·사진을 참조로 넣지 말고 본인 소유 자료만 사용",
+      "포스터 속 날짜·장소·연락처는 원문과 한 글자씩 대조",
+      "홍보물에 'AI 생성 이미지' 표기 — 기관·플랫폼 규정 확인",
+      "수강생 얼굴 사진 업로드 시 본인 동의 받고 학생·미성년자 사진은 사용하지 않을 것",
+      "상업적 이용 범위는 xAI 이용약관 확인 [확인 필요]"
+    ]
+  },
+  "practice": {
+    "preview": "수업 홍보 포스터 1장 생성 → Magic wand로 한 곳 수정 → 배경 제거(선택) → Smart resize로 9:16·16:9 두 판 만들기 → 글자 검수",
+    "follow": [
+      {
+        "title": "Grok Imagine 열기",
+        "minutes": 3,
+        "do": "grok.com/imagine 접속 → 로그인 → 이미지 모드와 Quality Mode(Imagine Image 2.0) 선택 상태 확인",
+        "prompt": "",
+        "expect": "Imagine 입력 화면 + Quality Mode 선택 상태",
+        "note": "메뉴 이름·한글 표기 [확인 필요], 앱은 Grok 앱의 Imagine 탭"
+      },
+      {
+        "title": "포스터 만들기",
+        "minutes": 8,
+        "do": "아래 요청을 붙여 넣고 생성 → 결과 중 글자가 가장 또렷한 1장 고르기",
+        "prompt": "A clean A4 poster for a Korean language class for adult beginners.\nTitle (large, bold): \"한국어 첫걸음\"\nSubtitle: \"Korean for Beginners\"\nInfo block (small but sharp text): \"11/2(Mon) 7PM · Community Center Room 3 · Free\"\nStyle: warm, friendly, flat illustration of a cup of tea and an open notebook, lots of white space, two colors (navy and coral).",
+        "expect": "제목·부제·안내 문구가 배치된 포스터 1장",
+        "note": "한글 글자가 깨지면 제목을 영어로 바꾸거나 한글은 나중에 직접 넣을 것"
+      },
+      {
+        "title": "Magic wand로 한 곳만 고치기",
+        "minutes": 6,
+        "do": "고른 포스터 편집 열기 → Magic wand로 그림(찻잔) 부분 선택 → 아래 요청 입력",
+        "prompt": "Replace only the selected area with a small stack of Korean textbooks. Keep everything else exactly the same.",
+        "expect": "선택한 그림만 바뀌고 글자·색은 그대로인 수정본",
+        "note": "버튼 위치 [확인 필요] — 글자 부분이 같이 바뀌면 선택 영역을 더 좁힐 것"
+      },
+      {
+        "title": "Smart resize로 크기 바꾸기",
+        "minutes": 6,
+        "do": "수정본에서 Smart resize 선택 → 9:16 생성 → 다시 16:9 생성",
+        "prompt": "",
+        "expect": "SNS 세로판(9:16) + 발표 화면판(16:9) 2장",
+        "note": "비율이 바뀌면 글자 위치가 다시 짜임 — 잘린 글자 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 강좌로 바꾸기",
+        "minutes": 4,
+        "do": "포스터 요청의 제목·일시·장소·그림 소재를 내 강좌 내용으로 바꿔 다시 생성",
+        "prompt": "",
+        "expect": "내 강좌 포스터 1장",
+        "note": "로고·사진을 참조로 넣을 땐 본인 소유만, 최대 5장"
+      },
+      {
+        "title": "글자 검수",
+        "minutes": 3,
+        "do": "원문 메모와 포스터 글자를 한 글자씩 대조 → 틀린 곳은 Magic wand로 다시 쓰게 하거나 디자인 앱에서 직접 수정",
+        "prompt": "",
+        "expect": "오타 0개 포스터 + 대조 메모",
+        "note": "날짜·요일·전화번호가 가장 자주 틀림"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "Templates에서 포스터 계열 템플릿 1개를 골라 같은 강좌 포스터를 만들고 직접 요청 결과와 비교 1줄 기록"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "배경 제거로 그림 요소만 투명 배경 PNG로 내보내 수업 자료(PPT) 표지에 얹기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "강좌 로고·마스코트 그림을 참조 이미지로 넣어 포스터·SNS 카드·수료증 3종을 같은 디자인으로 만들고 일관성 점검표 작성"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 9:16 SNS판을 휴대폰 화면에 띄워 보고, 상대 포스터에서 '3초 안에 읽히는 정보' 1개 + '고칠 곳' 1개씩 말하기",
+    "quiz": [
+      {
+        "q": "Imagine Image 2.0에서 선택한 영역만 바꾸고 나머지는 그대로 두는 도구는?",
+        "options": [
+          "Smart resize",
+          "Magic wand",
+          "Templates",
+          "Quality Mode"
+        ],
+        "answer": 1,
+        "explain": "Magic wand는 고른 영역만 변경, Smart resize는 비율 재구성"
+      },
+      {
+        "q": "한 번에 넣을 수 있는 참조 이미지(Multi-ref) 최대 장수는?",
+        "options": [
+          "1장",
+          "3장",
+          "5장",
+          "10장"
+        ],
+        "answer": 2,
+        "explain": "xAI 발표 기준 한 번 생성에 입력 이미지 최대 5장"
+      },
+      {
+        "q": "2026-10-12 The X Subscription 기준, Grok Imagine이 포함된다고 명시된 가장 저렴한 유료 요금제는?",
+        "options": [
+          "Plus 월 $8",
+          "Premium 월 $30",
+          "Super 월 $100",
+          "Ultra 월 $200"
+        ],
+        "answer": 0,
+        "explain": "가격 페이지에 Plus 포함 내용으로 'Grok Chat, Voice, Imagine, and Build' 표기"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "요청 설계",
+        "high": "제목·안내 문구·스타일·색 모두 지정",
+        "mid": "제목·스타일만 지정",
+        "low": "주제만 입력"
+      },
+      {
+        "criterion": "편집 활용",
+        "high": "Magic wand 수정 + Smart resize 2개 비율 완성",
+        "mid": "둘 중 하나만 사용",
+        "low": "생성만 함"
+      },
+      {
+        "criterion": "검수·윤리",
+        "high": "글자 전수 대조 + AI 생성 표기 + 본인 자료만 사용",
+        "mid": "일부 대조",
+        "low": "검수 없음"
+      }
+    ],
+    "next": [
+      "ChatGPT Images 2.5로 템플릿·부분 편집 비교 (AI-2026-10-CAT04-001)",
+      "Midjourney 편집 모델로 부분 수정·캔버스 확장 (AI-2026-10-CAT04-005)",
+      "Genspark AI Slides로 수업 발표 자료 만들기 (AI-2026-10-CAT03-011)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 포스터 한 장이 세로·가로판으로 바뀌는 과정 시연",
+        "note": "미리 만든 3종 결과물 함께 보여 주기"
+      },
+      {
+        "time": "5~18분",
+        "content": "1부 이론: Imagine Image 2.0, 편집 도구 5가지, 요금제(The X Subscription), 안전 수칙",
+        "note": "수강생 요금제·로그인 상태 확인"
+      },
+      {
+        "time": "18~41분",
+        "content": "따라 하기 1~4: 열기 → 포스터 생성 → Magic wand → Smart resize",
+        "note": "생성 대기 중 요청문 구조 설명"
+      },
+      {
+        "time": "41~48분",
+        "content": "내 것 만들기: 내 강좌로 바꾸기 → 글자 검수",
+        "note": "대조 메모 양식 배부"
+      },
+      {
+        "time": "48~54분",
+        "content": "짝 공유·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "홍보 포스터 한 장 만들고 나면 인스타용, 발표 화면용으로 또 다시 만들어야 하죠. 오늘은 한 장을 만들고 크기 바꾸기는 AI에게 맡겨 보겠습니다."
+      },
+      {
+        "label": "개념",
+        "text": "Imagine Image 2.0은 그림뿐 아니라 글자 배치까지 디자이너처럼 계획하도록 만든 모델입니다. 그래서 작은 안내 문구가 이전보다 또렷하게 나옵니다."
+      },
+      {
+        "label": "편집",
+        "text": "마음에 안 드는 곳이 있어도 처음부터 다시 만들 필요 없습니다. 그 부분만 골라서 바꿔 달라고 하면 나머지는 그대로 남습니다."
+      },
+      {
+        "label": "안전",
+        "text": "다른 사람 얼굴 사진이나 남의 로고는 넣지 마세요. 그리고 AI가 쓴 날짜와 전화번호는 반드시 한 글자씩 확인하세요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 세 장은 바로 홍보에 쓸 수 있는 초안입니다. 올릴 때는 AI로 만든 이미지라는 표시도 함께 해 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "무료 계정에서 이미지 생성이 막힘",
+        "response": "짝 계정 또는 강사 계정으로 함께 생성, 수강생은 요청문 작성·검수 역할 진행"
+      },
+      {
+        "situation": "한글 제목이 깨져 나옴",
+        "response": "제목을 영어로 생성 후 한글은 Canva·PPT에서 직접 얹기, 또는 Magic wand로 제목 부분만 재요청"
+      },
+      {
+        "situation": "Magic wand·Smart resize 버튼을 못 찾음",
+        "response": "강사 화면 캡처로 위치 안내, 그래도 없으면 요청문에 '9:16 vertical version of this poster' 추가해 새로 생성"
+      },
+      {
+        "situation": "사용량 한도 도달",
+        "response": "강사가 미리 만든 포스터를 나눠 주고 검수·비율 비교 실습으로 전환"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Imagine 입구를 못 찾음",
+        "fix": "주소창에 grok.com/imagine 직접 입력, 앱은 하단·사이드 메뉴의 Imagine"
+      },
+      {
+        "issue": "글자가 너무 많아 뭉개짐",
+        "fix": "안내 문구를 3줄 이하로 줄이고 'sharp small print' 조건 유지"
+      },
+      {
+        "issue": "Magic wand 수정이 글자까지 바꿈",
+        "fix": "선택 영역을 그림 부분으로 좁히고 'Keep everything else exactly the same' 명시"
+      },
+      {
+        "issue": "Smart resize 후 글자가 잘림",
+        "fix": "다른 비율로 다시 생성하거나 잘린 부분만 Magic wand로 재요청"
+      },
+      {
+        "issue": "결과가 매번 달라 일관성이 없음",
+        "fix": "첫 결과물이나 로고를 참조 이미지로 넣고 같은 색·스타일 문구 반복"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로도 쓸 수 있나요?",
+        "a": "Free 요금제는 매일 제한된 Grok 이용, 이미지 생성은 'Limited' 표기 — 범위 [확인 필요]. 공식 문구상 Imagine이 포함된 가장 싼 요금제는 Plus(월 $8)"
+      },
+      {
+        "q": "한 달에 몇 장 만들 수 있나요?",
+        "a": "장수 공개 없음. 유료는 Chat·Imagine·Voice·Bot·Cursor가 한 주 단위 공용 사용량 한도를 함께 씀"
+      },
+      {
+        "q": "한국어 글자도 잘 나오나요?",
+        "a": "공식 발표에 언어별 품질 언급 없음 [확인 필요]. 짧은 한글 제목부터 시험하고 긴 문구는 디자인 앱에서 직접 넣기 권장"
+      },
+      {
+        "q": "SuperGrok 구독 중인데 바꿔야 하나요?",
+        "a": "기존 SuperGrok 구독자는 유지하거나 전환 선택 가능, 전환 시 남은 기간 환불 안내가 결제 설정에 표시된다고 공식 발표"
+      },
+      {
+        "q": "만든 포스터를 상업적으로 써도 되나요?",
+        "a": "xAI 이용약관 확인 필요 [확인 필요]. 타인 로고·인물·캐릭터가 들어가면 별도 권리 문제 발생"
+      },
+      {
+        "q": "API로도 쓸 수 있나요?",
+        "a": "가능. 모델 ID grok-imagine-image-2.0, 장당 가격은 xAI 개발자 문서 확인 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "요청문 그대로 복사 → 생성 → Smart resize 9:16 한 번까지만. 검수는 강사와 함께"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ — 참조 이미지로 3종 시리즈 디자인 일관성 만들기"
+      },
+      {
+        "level": "마케팅·소상공인 (JOB-MKT·JOB-BIZ)",
+        "guide": "상품 사진 → 배경 제거 → 쇼핑몰·SNS 비율 변환으로 바꿔 진행"
+      },
+      {
+        "level": "다문화·한국어 학습자 (JOB-GLB)",
+        "guide": "모국어+한국어 2개 언어 포스터 만들기, 한글 표기는 강사가 검수"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 생성보다 '고치기·크기 바꾸기'가 빨라진 것이 이번 업데이트의 실무 가치",
+      "좋은 요청 = 제목(따옴표) + 안내 문구 + 스타일 + 색 2개 + 여백",
+      "글자는 반드시 사람이 검수 — 특히 날짜·요일·전화번호",
+      "한글이 약하면 '그림은 AI, 글자는 사람' 분업",
+      "2026-10-12 요금제 개편(The X Subscription) — 수업 전 최신 가격 재확인"
+    ],
+    "day_before": [
+      "강사 계정으로 예시 요청 생성 리허설 — 한글 제목 품질·소요 시간 기록",
+      "Quality Mode·Magic wand·Smart resize·배경 제거·Templates 버튼 위치 캡처 준비 [확인 필요]",
+      "Plan B용 완성 포스터 3종(원본·9:16·16:9) 미리 만들어 두기",
+      "x.ai/pricing에서 요금제·Free 이미지 생성 가능 여부 재확인",
+      "글자 대조 메모 양식과 수강생 강좌 정보 미리 받기"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Free 요금제의 Imagine 이미지 생성 범위 — 가격 페이지 표기 'Limited'만 확인",
+    "[확인 필요] Magic wand·Smart resize·배경 제거 버튼 위치와 한국어 화면 표기",
+    "[확인 필요] 한국어 글자(한글) 렌더링 품질 — 공식 문서에 언어 언급 없음",
+    "[확인 필요] API grok-imagine-image-2.0 장당 가격",
+    "[확인 필요] 상업적 이용 범위(이용약관), 원화 가격·부가세",
+    "교안 작성 중 실제 계정으로 이미지를 생성·재현하지 못함 — xAI 공식 발표·가격 페이지 기준"
+  ],
+  "sources": [
+    {
+      "title": "xAI News – Imagine Image 2.0",
+      "url": "https://x.ai/news/grok-imagine-image-2",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "xAI – Pricing (The X Subscription)",
+      "url": "https://x.ai/pricing",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "xAI News – Imagine Video 1.5 with References",
+      "url": "https://x.ai/news/grok-imagine-video-1-5-references",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "xAI News 목록",
+      "url": "https://x.ai/news",
+      "checked": "2026-10-16"
+    }
+  ]
+}

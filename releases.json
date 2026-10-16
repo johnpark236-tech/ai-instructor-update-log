@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-16 22:10 KST",
+  "updated_at": "2026-10-16 23:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-08-07-imagine-image-2",
+      "date": "2026-08-07",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Imagine Image 2.0 — Grok Imagine 이미지 생성·편집",
+      "summary": "글자·배치에 강한 이미지 생성·편집 모델, Grok Imagine 기본 Quality Mode로 적용 — Magic wand 부분 수정·Segmentation·배경 제거·참조 이미지 최대 5장·Smart resize(9개 비율)·Templates, API grok-imagine-image-2.0",
+      "source": {
+        "title": "xAI News – Imagine Image 2.0",
+        "url": "https://x.ai/news/grok-imagine-image-2"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT04-010"
+    },
     {
       "id": "genspark-2026-09-10-gen-1-slides",
       "date": "2026-09-10",
