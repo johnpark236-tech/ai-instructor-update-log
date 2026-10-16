@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 89,
+  "count": 90,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-014",
+      "version": "v1.0",
+      "created_at": "2026-10-17 08:00 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "메일 한 통에서 기획서·추적표·발표 자료·후속 메일까지 — Gemini in Workspace 앱 어디서나 작업 처리(Workspace Intelligence)",
+      "summary": "2026-09-09 Google이 Workspace 앱 Gemini 측면 패널 통합 공개(2026-09-02부터 순차 출시). Gmail·Docs·Sheets·Slides·Drive·Chat 어느 앱에서든 같은 Gemini로 기획서·추적 시트·슬라이드 생성 + 메일 초안·회의 예약·할 일 추가, 보내기·예약 전 미리보기 카드로 확인. 출시 때 영어만 지원",
+      "tool": "Gemini",
+      "feature": "Workspace 앱 어디서나 문서·메일·일정 처리(Gemini in Workspace 측면 패널 통합, Workspace Intelligence) — Gmail·Docs·Sheets·Slides·Drive·Chat에서 기획서·추적 시트·슬라이드 생성, 문서에서 메일 초안·발송, 회의 예약, Google Tasks 할 일, 미리보기 카드 확인",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-09-09",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-PUB",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① Gmail 스레드로 만든 프로젝트 기획서(Docs) 1개 + ② 할 일 추적 시트(Sheets) 1개 + ③ 기획서로 만든 팀 공유 메일 초안 1개 + ④ 회의 예약 또는 Tasks 할 일 미리보기 카드 1개",
+      "access": "paid",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🧭",
+      "one_liner": "앱 안 바꾸고 문서·메일·일정 처리"
+    },
     {
       "id": "AI-2026-10-CAT06-007",
       "version": "v1.0",

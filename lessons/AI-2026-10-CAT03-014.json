@@ -1,0 +1,607 @@
+{
+  "id": "AI-2026-10-CAT03-014",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-17 08:00 KST",
+  "checked": "2026-10-17",
+  "review_by": "2027-01-17",
+  "title": "메일 한 통에서 기획서·추적표·발표 자료·후속 메일까지 — Gemini in Workspace 앱 어디서나 작업 처리(Workspace Intelligence)",
+  "summary": "2026-09-09 Google이 Workspace 앱 Gemini 측면 패널 통합 공개(2026-09-02부터 순차 출시). Gmail·Docs·Sheets·Slides·Drive·Chat 어느 앱에서든 같은 Gemini로 기획서·추적 시트·슬라이드 생성 + 메일 초안·회의 예약·할 일 추가, 보내기·예약 전 미리보기 카드로 확인. 출시 때 영어만 지원",
+  "glance": {
+    "emoji": "🧭",
+    "one_liner": "앱 안 바꾸고 문서·메일·일정 처리",
+    "cards": [
+      {
+        "icon": "📄",
+        "title": "어디서나 만들기",
+        "text": "메일에서 기획서·시트·슬라이드"
+      },
+      {
+        "icon": "✉️",
+        "title": "문서에서 메일",
+        "text": "Docs에서 팀 메일 초안·발송"
+      },
+      {
+        "icon": "📅",
+        "title": "일정·할 일",
+        "text": "회의 예약·Tasks 할 일 추가"
+      },
+      {
+        "icon": "👀",
+        "title": "미리보기 확인",
+        "text": "보내기·예약 전 카드로 검토"
+      }
+    ],
+    "diagram": {
+      "title": "한 앱에서 끝내는 작업 흐름",
+      "nodes": [
+        {
+          "icon": "📨",
+          "label": "Gmail 스레드"
+        },
+        {
+          "icon": "✨",
+          "label": "측면 패널 요청"
+        },
+        {
+          "icon": "🔗",
+          "label": "Drive·Chat"
+        },
+        {
+          "icon": "📄",
+          "label": "기획서·시트 생성"
+        },
+        {
+          "icon": "👀",
+          "label": "미리보기 승인"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "앱마다 따로",
+        "text": "메일 읽고 Docs 열어 정리, Slides로 옮기고 캘린더에서 시간 찾기를 직접 반복"
+      },
+      "after": {
+        "label": "패널 한 곳",
+        "text": "지금 앱의 Gemini 패널에 한 번 요청 → 문서·메일·일정 초안 생성"
+      }
+    },
+    "cautions": [
+      "보내기·예약 전 미리보기 확인",
+      "고객·직원 개인정보 주의",
+      "자료 범위(소스) 직접 선택"
+    ]
+  },
+  "tool": "Gemini",
+  "feature": "Workspace 앱 어디서나 문서·메일·일정 처리(Gemini in Workspace 측면 패널 통합, Workspace Intelligence) — Gmail·Docs·Sheets·Slides·Drive·Chat에서 기획서·추적 시트·슬라이드 생성, 문서에서 메일 초안·발송, 회의 예약, Google Tasks 할 일, 미리보기 카드 확인",
+  "company": "Google",
+  "type": "update",
+  "released": "2026-09-09",
+  "categories": [
+    "CAT-03",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-BIZ",
+    "JOB-PUB",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 20,
+    "practice": 34,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Gemini 측면 패널을 쓸 수 있는 계정 — 회사: Workspace Business·Enterprise Standard/Plus, 개인: Google AI Pro(회의 예약 제외)·Ultra",
+    "PC 웹 브라우저(Chrome 권장)로 Gmail·Google Docs·Drive 접속",
+    "실습용 메일 스레드 1개(가상 프로젝트 메일 3~4통) — 강사가 미리 보내 두거나 아래 예시를 내게 보내기",
+    "출시 때 영어만 지원 — 프롬프트는 영어로 입력(한국어 결과는 이후 번역 요청)",
+    "실제 고객·직원 개인정보 없는 연습용 자료"
+  ],
+  "outcome": "① Gmail 스레드로 만든 프로젝트 기획서(Docs) 1개 + ② 할 일 추적 시트(Sheets) 1개 + ③ 기획서로 만든 팀 공유 메일 초안 1개 + ④ 회의 예약 또는 Tasks 할 일 미리보기 카드 1개",
+  "objectives": [
+    "Workspace 앱 측면 패널 통합으로 무엇이 달라졌는지(앱마다 다르던 기능 → 어디서나 같은 기능) 설명할 수 있음",
+    "Gmail·Docs·Drive에서 측면 패널로 기획서·추적 시트·메일 초안을 만들 수 있음",
+    "보내기·예약 전 미리보기 카드를 검토·수정하고, 참고 자료(소스) 범위를 정해 안전하게 쓸 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "무료 개인 계정은 대상 아님. 개인은 Google AI Pro(회의 예약 제외)·Ultra, 회사는 Workspace Business·Enterprise Standard/Plus, Frontline Plus는 회의 예약만. 기능 별도 추가 요금 없음, 사용 한도 적용",
+    "plans": [
+      {
+        "name": "무료 개인 계정",
+        "price": "$0",
+        "features": "대상 아님"
+      },
+      {
+        "name": "Google AI Plus",
+        "price": "$4.99/월",
+        "features": "공지 대상 목록에 없음 [확인 필요]"
+      },
+      {
+        "name": "Google AI Pro",
+        "price": "$19.99/월",
+        "features": "문서·메일·할 일 등 사용 가능 + 회의 예약 제외"
+      },
+      {
+        "name": "Google AI Ultra",
+        "price": "$99.99/월부터",
+        "features": "전체 기능 + 가장 높은 한도"
+      },
+      {
+        "name": "Workspace Business Standard",
+        "price": "$14/사용자/월 (연간 약정)",
+        "features": "전체 기능"
+      },
+      {
+        "name": "Workspace Business Plus",
+        "price": "$22/사용자/월 (연간 약정)",
+        "features": "전체 기능"
+      },
+      {
+        "name": "Enterprise Standard·Plus",
+        "price": "",
+        "features": "전체 기능 — 가격은 영업팀 문의"
+      },
+      {
+        "name": "Frontline Plus",
+        "price": "",
+        "features": "회의 예약만 — 가격은 영업팀 문의"
+      }
+    ],
+    "note": "대상 요금제는 Workspace Updates(2026-09-09) 기준, 교육용 Google AI Pro for Education·AI Expanded Access 부가기능도 대상. Google AI 요금은 Gemini 구독 페이지 미국 달러 확인(2026-10-17, Ultra 20배 한도는 $199.99). Workspace 가격은 교안 AI-2026-10-CAT03-009 확인값 재사용(연간 약정). 원화 가격 [확인 필요]",
+    "checked": "2026-10-17",
+    "sources": [
+      {
+        "title": "Google Workspace Updates – Create content, schedule events, and coordinate tasks across Workspace",
+        "url": "https://workspaceupdates.googleblog.com/2026/09/create-content-schedule-events-and-coordinate-tasks-across-Workspace-regardless-of-what-app-you-are-in.html"
+      },
+      {
+        "title": "Gemini 구독 요금제 페이지",
+        "url": "https://gemini.google/subscriptions/"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-09-02",
+      "text": "Rapid·Scheduled Release 도메인에 순차 출시 시작(표시까지 최대 15일)"
+    },
+    {
+      "date": "2026-09-09",
+      "text": "Google Workspace 블로그·Workspace Updates 공개 — 측면 패널 기능 통일, 앱 간 작업(문서 생성·메일·회의 예약·할 일), 미리보기 카드"
+    },
+    {
+      "date": "2026-09-09",
+      "text": "Chat의 Ask Gemini는 '몇 주 안' 예정, Workspace Studio 흐름에도 '곧' 적용 예고"
+    },
+    {
+      "date": "2026-10-15",
+      "text": "Gmail Live·AI Inbox가 Workspace 유료 요금제로 확대(관련 기능, 별도 교안 AI-2026-10-CAT03-009·010)"
+    }
+  ],
+  "theory": {
+    "definition": "Gemini in Workspace 측면 패널 통합은 Gmail·Docs·Sheets·Slides·Drive·Chat의 Gemini 패널 기능을 하나로 맞춘 업데이트임. 예전엔 문서는 Docs에서만 만들 수 있었지만, 이제 어느 앱에서든 Workspace Intelligence(메일·파일·채팅·일정 맥락)를 참고해 문서 생성·메일 초안·회의 예약·할 일 추가를 요청할 수 있음",
+    "analogy": "'어느 방에서 불러도 오는 비서'. 예전엔 서류는 서류실, 일정은 일정실에 가서 맡겨야 했지만, 이제 지금 있는 방에서 부르면 비서가 다른 방 자료까지 챙겨 와서 초안을 보여 주고 승인을 기다림",
+    "comparison": {
+      "headers": [
+        "구분",
+        "예전 측면 패널",
+        "통합 측면 패널(2026-09)",
+        "Gemini 앱(gemini.google.com)"
+      ],
+      "rows": [
+        [
+          "기능 범위",
+          "앱마다 다름",
+          "모든 앱 같은 기능",
+          "대화 중심 + 연결 앱"
+        ],
+        [
+          "문서 만들기",
+          "해당 앱에서만",
+          "Gmail·Chat·Drive에서도 Docs·Sheets·Slides 생성",
+          "Canvas·내보내기"
+        ],
+        [
+          "메일·일정",
+          "Gmail·Calendar 안에서",
+          "Docs·Chat 등에서 초안·예약 + 미리보기 카드",
+          "연결 앱으로 일부 [확인 필요]"
+        ],
+        [
+          "참고 자료",
+          "열린 파일 중심",
+          "Workspace Intelligence + 선택 소스",
+          "연결 앱·업로드 파일"
+        ],
+        [
+          "언어",
+          "여러 언어 일부",
+          "출시 때 영어만",
+          "여러 언어"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "앱 간 작업 5가지",
+        "body": "① Chat에서 프로젝트 현황 발표 자료 ② Drive 폴더에서 추적 스프레드시트 ③ Docs에서 팀 메일 초안·발송 ④ Gmail 스레드를 기획서(brief)로 ⑤ Docs 문서를 브랜드 템플릿 슬라이드로 + 회의 예약·Tasks 할 일"
+      },
+      {
+        "title": "미리보기 카드",
+        "body": "① 메일 발송·일정 예약은 바로 실행되지 않음 ② 측면 패널에 인터랙티브 미리보기 카드 표시 ③ 수신자·시간·내용 수정 후 확인을 눌러야 실행 — 사람 승인 단계"
+      },
+      {
+        "title": "소스·한도·언어",
+        "body": "① Gemini는 선택한 소스만 검색(관리자가 허용한 범위) ② 사용 한도 적용 ③ 출시 때 영어만 ④ 결과 파일은 Drive에 저장되어 일반 문서처럼 편집 가능"
+      }
+    ],
+    "can": [
+      "Gmail 스레드 + 관련 Drive 파일로 기획서(Docs) 만들기",
+      "Drive 폴더 내용으로 추적 스프레드시트 만들기",
+      "Docs 문서 내용으로 팀 메일 초안 작성·발송(미리보기 확인 후)",
+      "Docs 제안서를 슬라이드로 바꾸고 팀 템플릿 적용",
+      "Chat·Gmail 등에서 빈 시간 찾아 회의 예약·충돌 조정(Pro 개인 요금제 제외)",
+      "어느 앱에서나 Google Tasks 할 일·알림 추가"
+    ],
+    "cannot": [
+      "무료 개인 계정에서 사용",
+      "한국어 프롬프트로 정식 사용 — 출시 때 영어만 [확인 필요]",
+      "Google AI Pro 개인 요금제로 회의 예약",
+      "미리보기 확인 없이 자동 발송·예약",
+      "선택하지 않은 소스·권한 없는 파일 참고",
+      "결과 정확성 보장 — 수치·이름·날짜는 직접 확인"
+    ],
+    "safety": [
+      "메일·일정은 미리보기 카드에서 수신자·시간·내용을 반드시 확인 후 승인할 것",
+      "고객·직원 개인정보, 인사·급여 자료는 소스로 쓰지 말고 연습은 가상 자료로",
+      "자동 생성 문서의 숫자·날짜·담당자는 원문 메일과 대조할 것",
+      "회사 계정은 관리자 정책(소스 범위·데이터 보관) 먼저 확인",
+      "피드백 제출란에 개인·기밀 정보 넣지 말 것 — 사람이 검토할 수 있음(도움말)",
+      "'평소 내 말투' 메일 초안도 보내기 전 직접 다듬어 책임 있게 발송"
+    ]
+  },
+  "practice": {
+    "preview": "연습 메일 스레드 준비 → Gmail 측면 패널로 기획서 만들기 → 기획서에서 팀 메일 초안 → Drive에서 추적 시트 → 회의 예약·할 일 미리보기 카드 확인",
+    "follow": [
+      {
+        "title": "연습 메일 준비",
+        "minutes": 5,
+        "do": "아래 내용을 내 Gmail로 보내 스레드 만들기(제목: Spring workshop planning) → 답장으로 2~3통 더 이어 붙이기",
+        "prompt": "Subject: Spring workshop planning\n\nHi team,\nWe will run a 2-day AI workshop for 40 small business owners on March 12–13.\nBudget: $3,000. Venue: City Learning Center (not confirmed yet).\nMina will handle registration, Joon will prepare slides, I will contact speakers.\nOpen issues: catering vendor, venue contract, survey form.\nPlease reply with your updates by Friday.",
+        "expect": "Gmail에 가상 프로젝트 메일 스레드 1개",
+        "note": "실제 고객·직원 정보 넣지 말 것"
+      },
+      {
+        "title": "메일 → 기획서",
+        "minutes": 8,
+        "do": "스레드 열기 → 오른쪽 위 Ask Gemini(✨) → 측면 패널에 아래 요청 입력 → 생성된 Docs 링크 열기",
+        "prompt": "Turn this email thread into a project brief with goals, timeline, owners, budget, open issues, and next steps. Create it as a Google Doc.",
+        "expect": "목표·일정·담당자·예산·미결 사항·다음 단계가 정리된 Docs 기획서 1개(Drive 저장)",
+        "note": "질문을 되묻는 경우 답하기 — Gemini가 추가 확인 질문 가능"
+      },
+      {
+        "title": "기획서 → 팀 메일",
+        "minutes": 7,
+        "do": "방금 만든 Docs 열기 → Ask Gemini → 아래 요청 → 미리보기 카드에서 받는 사람 추가·문장 수정",
+        "prompt": "Draft a short email to the team summarizing this brief and asking each owner to confirm their next step by Friday. Keep it friendly and under 120 words.",
+        "expect": "Docs 안에서 만든 팀 메일 초안(미리보기 카드)",
+        "note": "연습은 받는 사람을 내 주소로, 실제 발송 전 반드시 검토"
+      },
+      {
+        "title": "폴더 → 추적 시트",
+        "minutes": 6,
+        "do": "Drive에서 기획서가 든 폴더 열기 → Ask Gemini → 아래 요청",
+        "prompt": "Create a tracker spreadsheet from the files in this folder with columns: Task, Owner, Due date, Status, Notes.",
+        "expect": "작업·담당자·마감일·상태 열이 있는 Sheets 추적표 1개",
+        "note": "폴더에 파일이 1개뿐이면 기획서 기준으로 생성"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "회의 예약 또는 할 일",
+        "minutes": 4,
+        "do": "Gmail 또는 Docs 측면 패널에 아래 요청 → 미리보기 카드에서 시간·참석자 확인 → 연습이면 취소 또는 내 일정만",
+        "prompt": "Find a 30-minute slot next week for a workshop planning check-in and schedule it. Also add a task: 'Confirm venue contract' due this Friday.",
+        "expect": "회의 예약 미리보기 카드 + Google Tasks 할 일 1개",
+        "note": "Google AI Pro 개인 요금제는 회의 예약 제외 — 할 일만 진행"
+      },
+      {
+        "title": "기획서 → 슬라이드",
+        "minutes": 3,
+        "do": "기획서 Docs에서 Ask Gemini → 아래 요청",
+        "prompt": "Turn this brief into a 5-slide kickoff deck for the team: overview, timeline, owners, budget, next steps.",
+        "expect": "Slides 킥오프 자료 5장 링크",
+        "note": "팀 템플릿이 있으면 'using our template [파일명]' 추가"
+      },
+      {
+        "title": "내 업무로 바꾸기",
+        "minutes": 1,
+        "do": "내 실제 업무 하나(행사·수업·보고)를 골라 첫 요청 문장만 작성해 메모",
+        "prompt": "Turn [내 메일 스레드/폴더] into a [brief / tracker / deck] with [필요한 항목]. Then draft an email to [대상] asking for [요청].",
+        "expect": "내 업무용 요청 문장 1개",
+        "note": "개인정보 포함 자료는 제외"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "생성된 기획서의 날짜·예산·담당자 3가지를 원문 메일과 대조해 틀린 곳 1줄 기록"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "같은 요청을 Gmail·Docs·Drive 세 곳에서 해 보고 결과 차이(참고한 자료·형식)를 표로 정리"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "팀 주간 업무(메일 → 기획서 → 추적표 → 공유 메일 → 점검 회의) 흐름을 설계하고, Workspace Studio 자동화로 옮길 단계 표시"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 '가장 시간을 아낀 요청 1개' + '미리보기 카드에서 고친 것 1개' 말하기",
+    "quiz": [
+      {
+        "q": "이번 업데이트로 가장 크게 바뀐 점은?",
+        "options": [
+          "Gemini가 무료가 됨",
+          "앱마다 다르던 측면 패널 기능이 어느 앱에서나 같아짐",
+          "Gmail이 사라짐",
+          "한국어 전용이 됨"
+        ],
+        "answer": 1,
+        "explain": "Gmail·Docs·Sheets·Slides·Drive·Chat 측면 패널이 같은 기능을 갖게 되어 지금 앱에서 앱 간 작업 가능"
+      },
+      {
+        "q": "Gemini가 회의를 예약하거나 메일을 보낼 때 일어나는 일은?",
+        "options": [
+          "바로 자동 실행",
+          "미리보기 카드를 보여 주고 확인 후 실행",
+          "관리자 승인 필요",
+          "전화로 확인"
+        ],
+        "answer": 1,
+        "explain": "인터랙티브 미리보기 카드에서 수정·확인해야 실행됨"
+      },
+      {
+        "q": "Google AI Pro 개인 요금제에서 빠진 기능은?",
+        "options": [
+          "문서 만들기",
+          "메일 초안",
+          "회의 예약",
+          "할 일 추가"
+        ],
+        "answer": 2,
+        "explain": "공지상 Google AI Pro는 회의 예약 제외, Ultra와 Workspace Business·Enterprise Standard/Plus는 전체"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "요청 설계",
+        "high": "결과물 형식·항목·대상까지 명시",
+        "mid": "형식만 지정",
+        "low": "막연한 요청"
+      },
+      {
+        "criterion": "결과 검증",
+        "high": "원문과 숫자·날짜·담당자 대조",
+        "mid": "훑어보기만",
+        "low": "확인 안 함"
+      },
+      {
+        "criterion": "안전한 실행",
+        "high": "미리보기에서 수신자·시간 수정 후 승인",
+        "mid": "그대로 승인",
+        "low": "개인정보 포함 자료 사용"
+      }
+    ],
+    "next": [
+      "Gmail Live — 메일함 음성 검색·대화 (AI-2026-10-CAT03-009)",
+      "Gmail AI Inbox — 추천 할 일 (AI-2026-10-CAT03-010)",
+      "Workspace Studio 조건 분기 자동화 (AI-2026-10-CAT08-005)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 메일 스레드 하나에서 기획서·시트·메일 초안이 나오는 장면 시연",
+        "note": "강사 계정에 연습 스레드·결과물 미리 준비"
+      },
+      {
+        "time": "5~20분",
+        "content": "1부 이론: 측면 패널 통합 의미, 앱 간 작업 5가지, 미리보기 카드, 대상 요금제·영어 제한",
+        "note": "무료 계정은 안 됨을 먼저 안내"
+      },
+      {
+        "time": "20~46분",
+        "content": "따라 하기 1~4: 연습 메일 → 기획서 → 팀 메일 → 추적 시트",
+        "note": "영어 프롬프트 복사 붙여 넣기"
+      },
+      {
+        "time": "46~54분",
+        "content": "내 것 만들기: 회의 예약·할 일 → 슬라이드 → 내 업무 요청 문장",
+        "note": "Pro 개인 계정은 회의 예약 생략"
+      },
+      {
+        "time": "54~60분",
+        "content": "짝 발표·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "메일 읽고, 문서 열고, 표 만들고, 캘린더에서 시간 찾고… 하루에 앱을 몇 번이나 옮겨 다니시나요? 오늘은 지금 열려 있는 앱 하나에서 이 일을 다 끝내 보겠습니다."
+      },
+      {
+        "label": "개념",
+        "text": "핵심은 '어디서 불러도 같은 Gemini'입니다. 예전엔 문서는 Docs에서만 만들 수 있었는데, 이제 Gmail에서도, Drive에서도 바로 문서와 시트를 만들 수 있습니다."
+      },
+      {
+        "label": "조건",
+        "text": "지금은 영어로 요청해야 하고, 회사 Workspace 유료 요금제나 Google AI Pro·Ultra가 필요합니다. 개인 Pro 요금제는 회의 예약이 빠져 있습니다."
+      },
+      {
+        "label": "안전",
+        "text": "메일 발송과 회의 예약은 바로 실행되지 않고 미리보기 카드가 뜹니다. 받는 사람과 시간을 꼭 확인하고 누르세요. 확인 버튼을 누르는 순간 책임은 우리에게 있습니다."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 요청 문장을 내일 실제 업무 메일 하나에 써 보세요. 앱을 옮겨 다니던 시간이 얼마나 줄어드는지 직접 느끼실 겁니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 계정에 측면 패널·새 기능이 안 보임",
+        "response": "무료 계정이거나 순차 출시 전 — 강사 화면 시연 + 짝 화면 관찰, 요청 문장 작성 실습으로 대체"
+      },
+      {
+        "situation": "회사 계정인데 Gemini가 꺼져 있음",
+        "response": "관리자 설정 문제 — 개인 Google AI Pro 체험 계정 또는 강사 시연으로 전환"
+      },
+      {
+        "situation": "한국어 요청이 제대로 안 됨",
+        "response": "영어 프롬프트 사용(출시 때 영어만), 결과 생성 후 'Translate this document into Korean' 별도 요청"
+      },
+      {
+        "situation": "사용 한도 초과",
+        "response": "남은 단계는 강사 시연, 수강생은 결과 검증(⭐ 도전과제) 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Ask Gemini 아이콘이 안 보임",
+        "fix": "오른쪽 위 ✨ 아이콘 확인, 대상 요금제·관리자 설정 확인, 새로고침"
+      },
+      {
+        "issue": "문서를 만들지 않고 패널에 글만 씀",
+        "fix": "요청에 'Create it as a Google Doc' 처럼 결과 형식 명시"
+      },
+      {
+        "issue": "회의 예약이 안 됨",
+        "fix": "Google AI Pro 개인 요금제는 예약 제외 — 할 일 추가로 대체"
+      },
+      {
+        "issue": "엉뚱한 메일·파일을 참고함",
+        "fix": "측면 패널 소스 선택에서 참고 범위를 좁히거나 해당 스레드·폴더를 연 상태에서 요청"
+      },
+      {
+        "issue": "메일 초안이 너무 길거나 딱딱함",
+        "fix": "'under 120 words, friendly tone' 처럼 길이·말투 조건 추가 후 다시 요청"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국어로도 쓸 수 있나요?",
+        "a": "공지상 출시 때 영어만 지원. 한국어 지원 시점 미공개 [확인 필요]"
+      },
+      {
+        "q": "무료 Gmail 계정으로 되나요?",
+        "a": "안 됨. 개인은 Google AI Pro·Ultra, 회사는 Workspace Business·Enterprise Standard/Plus 등 대상"
+      },
+      {
+        "q": "Gemini가 마음대로 메일을 보내나요?",
+        "a": "아님. 메일·일정은 미리보기 카드에서 사람이 확인해야 실행"
+      },
+      {
+        "q": "만든 문서는 어디에 저장되나요?",
+        "a": "Google Drive에 일반 Docs·Sheets·Slides 파일로 저장, 링크로 열어 편집"
+      },
+      {
+        "q": "Google AI Plus 요금제도 되나요?",
+        "a": "Workspace Updates 대상 목록에는 Pro·Ultra만 있음 [확인 필요]"
+      },
+      {
+        "q": "Gemini 앱(gemini.google.com)과 뭐가 다른가요?",
+        "a": "측면 패널은 지금 작업 중인 메일·문서·폴더 맥락을 바로 쓰고 결과를 Workspace 파일·메일·일정으로 만듦"
+      },
+      {
+        "q": "Chat에서도 되나요?",
+        "a": "Chat의 Ask Gemini는 공지 당시 '몇 주 안' 예정, 일정 예약·조정 지원. Chat에서 Ask Gemini가 생기면 측면 패널은 사라짐(도움말)"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "강사 시연 위주 + 따라 하기 1~2(메일 → 기획서)만 직접, 프롬프트는 복사 붙여 넣기"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ — 주간 업무 흐름 설계 + Workspace Studio 자동화 연결"
+      },
+      {
+        "level": "공공·평생교육 (JOB-PUB)",
+        "guide": "행사·교육 운영 메일로 기획서·참가자 추적표 만들기, 참가자 개인정보는 가명 처리"
+      },
+      {
+        "level": "다문화·한국어 학습자 (JOB-GLB)",
+        "guide": "영어 프롬프트 그대로 쓰고, 결과를 '쉬운 한국어로 번역' 요청해 업무 어휘 학습 자료로 활용"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 지금 앱에서 부르면 다른 앱 일까지 처리",
+      "좋은 요청 = 결과 형식 + 항목 + 대상 명시",
+      "메일·일정은 미리보기 카드 확인이 마지막 안전장치",
+      "출시 때 영어만 — 영어 프롬프트 복붙 준비",
+      "개인 Pro는 회의 예약 제외 — 수강생 요금제 미리 파악"
+    ],
+    "day_before": [
+      "강사 계정에서 연습 스레드·기획서·추적 시트·메일 초안 미리 생성",
+      "Ask Gemini 아이콘·측면 패널·미리보기 카드 화면 캡처 준비",
+      "수강생 계정 요금제(무료·Pro·회사 계정) 사전 설문",
+      "국내 계정·한국어 요청 동작 여부 직접 확인 [확인 필요]",
+      "영어 프롬프트 모음 파일(복사용) 배포 준비"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 한국어 프롬프트 지원 시점 — 공지상 출시 때 영어만",
+    "[확인 필요] Google AI Plus 요금제 지원 여부 — 대상 목록에 없음",
+    "[확인 필요] 측면 패널 버튼 이름·미리보기 카드 화면 — 공지·도움말 설명 기준 작성",
+    "[확인 필요] 국내 계정 출시 상태 — 순차 출시(최대 15일), 국가 제한 명시 없음",
+    "Workspace 가격은 AI-2026-10-CAT03-009 확인값 재사용, Google AI 요금은 2026-10-17 구독 페이지 확인",
+    "교안 작성 중 실제 로그인·실행 재현 못 함 — Workspace Updates·Workspace 블로그·도움말 기준"
+  ],
+  "sources": [
+    {
+      "title": "Google Workspace Updates – Create content, schedule events, and coordinate tasks across Workspace regardless of what app you are in (2026-09-09)",
+      "url": "https://workspaceupdates.googleblog.com/2026/09/create-content-schedule-events-and-coordinate-tasks-across-Workspace-regardless-of-what-app-you-are-in.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Google Workspace 블로그 – Less switching, more flow: 5 new agentic capabilities across Google Workspace apps (2026-09-09)",
+      "url": "https://workspace.google.com/blog/product-announcements/less-switching-more-flow-5-new-agentic-capabilities-across-google-workspace-apps",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Google Workspace 학습 센터 – Using Google Workspace with Gemini",
+      "url": "https://support.google.com/a/users/answer/15146419?hl=en",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Gemini 구독 요금제 페이지",
+      "url": "https://gemini.google/subscriptions/",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "9to5Google – Gemini Workspace side panel upgrade (보조 근거)",
+      "url": "https://9to5google.com/2026/09/09/gemini-workspace-side-panel-upgrade/",
+      "checked": "2026-10-17"
+    }
+  ]
+}
