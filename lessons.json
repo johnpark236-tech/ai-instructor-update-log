@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 67,
+  "count": 68,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-010",
+      "version": "v1.0",
+      "created_at": "2026-10-16 15:05 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "한국어 목소리 '햇살·하늘'로 듣기 자료 만들기 — ChatGPT Voice GPT-Live-1.1 새 음성·다국어 억양",
+      "summary": "2026-10-15 ChatGPT Voice에 GPT-Live-1.1·소형판 GPT-Live-1.1 Quip 적용, 언어별 억양 개선 + 한국어 전용 Live 음성 2종(Haetsal·Hanul) 등 새 음성 추가. 설정 > 음성에서 목소리를 고르고 같은 대본을 두 목소리로 들어 보며 한국어 듣기 자료·다국어 안내를 만듦. 무료는 Quip 제한 사용, Go 3시간·Plus 3시간·Pro 15시간 이상(24시간 기준)",
+      "tool": "ChatGPT",
+      "feature": "ChatGPT Voice GPT-Live-1.1 새 음성 — 한국어 Live 음성(Haetsal·Hanul)·다국어 억양 개선, GPT-Live-1.1 Quip",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-15",
+      "categories": [
+        "CAT-05",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-GLB",
+        "JOB-SEN",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 한국어 Live 음성 2종으로 들은 같은 대본 비교 메모 1장 + ② 대화 기록(녹취 텍스트)으로 만든 듣기 이해 문제 3개 + ③ 학습자 모국어 음성으로 들은 수업 안내 1개",
+      "access": "freemium",
+      "total_minutes": 58,
+      "notice": "",
+      "emoji": "🗣️",
+      "one_liner": "한국어 원어민 억양 AI 목소리로 듣기 연습"
+    },
     {
       "id": "AI-2026-10-CAT05-009",
       "version": "v1.0",
