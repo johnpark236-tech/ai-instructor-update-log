@@ -166,7 +166,7 @@ function listView(){
    <div class="meta">${l.categories.map(c=>`<span class="pill">${c} ${M.CAT[c]}</span>`).join('')}${M.levelBadges(l).map(b=>`<span class="pill">${b}</span>`).join('')}</div>
 </a>
    <div class="acts">${shareBtn(l.id)}${starBtn(l.id,!!fav[l.id])}${done[l.id]?`<button class="mk undo" data-id="${esc(l.id)}">↩ 다시 학습</button>`:`<button class="mk" data-id="${esc(l.id)}">✓ 완료</button>`}</div></div>`).join('')
-   :`<div class="empty">${tab==='fav'?'즐겨찾기한 교안 없음 — 교안의 ☆ 버튼을 누르면 여기에 모임':tab==='done'?'아직 완료한 교안이 없습니다.':(all.length-doneN?'조건에 맞는 교안이 없습니다.':'🎉 모든 교안을 완료했습니다. 새 교안은 매시간 추가됩니다.')}</div>`}</div>
+   :`<div class="empty">${f.ai&&!all.some(l=>M.brandMatch(l,f.ai,INDEX.lessons))?`${esc(f.ai)} 교안 준비 중 — 새 기능이 확인되면 매시간 작업에서 우선 작성`:tab==='fav'?'즐겨찾기한 교안 없음 — 교안의 ☆ 버튼을 누르면 여기에 모임':tab==='done'?'아직 완료한 교안이 없습니다.':(all.length-doneN?'조건에 맞는 교안이 없습니다.':'🎉 모든 교안을 완료했습니다. 새 교안은 매시간 추가됩니다.')}</div>`}</div>
   <div class="sync">완료·즐겨찾기 기록은 이 기기의 브라우저에 저장됨. <button class="linkbtn" id="sync">다른 기기로 기록 옮기기</button></div>`;
   const q=document.getElementById('q');q.oninput=()=>{f.q=q.value;const p=q.selectionStart;listView();const n=document.getElementById('q');n.focus();n.setSelectionRange(p,p)};
   document.getElementById('fc').onchange=e=>{f.cat=e.target.value;listView()};

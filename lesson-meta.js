@@ -71,13 +71,18 @@ window.LESSON_META = {
     if (/Claude/i.test(t)) return 'Claude';
     if (/Gemini|NotebookLM|Gmail|Google (Meet|Workspace|Docs|Sheets|Slides|Drive)|Veo|Imagen/i.test(t)) return 'Gemini';
     if (/Copilot/i.test(t)) return 'Copilot';
+    if (/Grok/i.test(t)) return 'Grok';
+    if (/Genspark/i.test(t)) return 'Genspark';
     return t.split(/\s|\(/)[0] || '기타';
   },
   // 교안 3개 미만인 AI 는 '기타' 버튼 하나로 묶음 (버튼이 너무 많아지지 않게)
+  // 교안 수와 상관없이 항상 따로 보이는 AI 버튼
+  PINNED_AI: ['ChatGPT', 'Gemini', 'Claude', 'Grok', 'Genspark'],
   brandGroups(list) {
-    const c = {}; list.forEach(l => { const b = this.brand(l); c[b] = (c[b] || 0) + 1; });
-    const main = Object.entries(c).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]);
-    const etc = Object.entries(c).filter(([, n]) => n < 3).map(([b]) => b);
+    const c = {}; this.PINNED_AI.forEach(b => { c[b] = 0; }); list.forEach(l => { const b = this.brand(l); c[b] = (c[b] || 0) + 1; });
+    const keep = ([b, n]) => n >= 3 || this.PINNED_AI.includes(b);
+    const P = this.PINNED_AI, main = Object.entries(c).filter(keep).sort((a, b) => (P.includes(b[0]) - P.includes(a[0])) || b[1] - a[1]);
+    const etc = Object.entries(c).filter(e => !keep(e)).map(([b]) => b);
     return { main, etc, etcN: etc.reduce((s, b) => s + c[b], 0) };
   },
   brandMatch(L, sel, list) {
