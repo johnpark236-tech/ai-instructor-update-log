@@ -64,6 +64,15 @@ window.LESSON_META = {
     if (items.length > 1 && /[:：—]$/.test(items[0])) lead = items.shift();
     return { lead, items };
   },
+  // 목록 필터용 AI 서비스 묶음 (도구 이름 기준)
+  brand(L) {
+    const t = String(L.tool || '');
+    if (/ChatGPT|Codex|OpenAI|Sora/i.test(t)) return 'ChatGPT';
+    if (/Claude/i.test(t)) return 'Claude';
+    if (/Gemini|NotebookLM|Google|SynthID|Veo|Imagen/i.test(t)) return 'Gemini·Google';
+    if (/Copilot/i.test(t)) return 'Copilot';
+    return t.split(/\s|\(/)[0] || '기타';
+  },
   totalMinutes(L) { const m = L.minutes || {}; return (m.theory || 0) + (m.practice || 0) + (m.wrap || 0); },
   promptText(L) {
     const out = [`# ${L.title}`, `교안 ID: ${L.id} (${L.version}) · 기준일 ${L.checked}`, ''];

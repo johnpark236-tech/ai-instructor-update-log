@@ -54,7 +54,7 @@ a.btn{text-decoration:none;display:inline-block}
 .past{display:inline-block;vertical-align:middle;font-size:12px;font-weight:900;padding:2px 8px;border-radius:7px;margin-right:6px;position:relative;top:-2px;background:#2b2140;color:#d9c8ff;border:1px solid #6b5cff;white-space:nowrap}h1 .past{font-size:15px;top:-8px}
 .tabs{display:flex;gap:8px;margin:6px 0}.tab{cursor:pointer;flex:1;max-width:220px;background:#0b1728;color:#bed0e8;border:1px solid #294563;border-radius:12px;padding:10px;font-size:14px}.tab.on{border-color:var(--a);color:#fff;background:#10243d}.tab b{color:var(--a);margin-left:4px}
 .tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tools input,.tools select{flex:1;min-width:150px;background:#0b1728;border:1px solid var(--l);color:#fff;border-radius:12px;padding:10px;font-size:14px}
-.chip{cursor:pointer;background:#0f2038;color:#bed0e8;border:1px solid #294563;padding:8px 12px;border-radius:999px;font-size:13px}.chip.on{border-color:var(--a);color:#fff}
+.frow{align-items:center;gap:6px}.fl{font-size:13px;font-weight:800;color:var(--m);margin-right:2px;white-space:nowrap}.chip b{color:var(--a);margin-left:2px}.chip{cursor:pointer;background:#0f2038;color:#bed0e8;border:1px solid #294563;padding:8px 12px;border-radius:999px;font-size:13px}.chip.on{border-color:var(--a);color:#fff}
 .kind,.acc{display:inline-block;vertical-align:middle;font-size:12px;font-weight:900;padding:2px 8px;border-radius:7px;margin-right:6px;position:relative;top:-2px;white-space:nowrap}
 .kind.kn{background:#70e1a1;color:#04261a}.kind.ku{background:#6ee7ff;color:#03222d}
 .acc{border:1.5px solid}.acc.af{color:var(--g)}.acc.am{color:var(--w)}.acc.ap{color:var(--r)}
@@ -106,7 +106,7 @@ function openExternal(url){
   alert('다운로드는 사파리·크롬에서 됩니다. 오른쪽 위 메뉴에서 "다른 브라우저로 열기"를 눌러 주세요.');
 }
 function inAppBanner(){return IN_APP?`<div class="call warn inapp">📥 지금은 <b>${IS_KAKAO?'카카오톡':'앱'} 안의 브라우저</b> — 파일 다운로드 안 될 수 있음 <button class="btn" type="button" id="goExt">크롬으로 열기</button></div>`:''}
-let INDEX={lessons:[]},tab='todo',f={kind:'all',cat:'',lvl:'',job:'',q:''},view='learner';
+let INDEX={lessons:[]},tab='todo',f={kind:'all',cat:'',lvl:'',job:'',q:'',acc:'',ai:''},view='learner';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 view=store.get('view')||'learner';
@@ -145,13 +145,15 @@ const opt=(v,t,cur)=>`<option value="${v}" ${v===cur?'selected':''}>${t}</option
 function listView(){
   const done=getDone(),fav=getFav(),all=ordered(),doneN=all.filter(l=>done[l.id]).length,favN=all.filter(l=>fav[l.id]).length;
   const items=newestFirst().filter(l=>tab==='fav'?!!fav[l.id]:(tab==='done')===!!done[l.id]).filter(l=>
-    (f.kind==='all'||(f.kind==='past'?M.isPast(l):l.type===f.kind))&&(!f.cat||l.categories.includes(f.cat))&&
+    (f.kind==='all'||(f.kind==='past'?M.isPast(l):l.type===f.kind))&&(!f.acc||l.access===f.acc)&&(!f.ai||M.brand(l)===f.ai)&&(!f.cat||l.categories.includes(f.cat))&&
     (!f.lvl||l.learner_levels.includes(f.lvl)||l.instructor_levels.includes(f.lvl))&&(!f.job||l.jobs.includes(f.job))&&
     (!f.q||JSON.stringify(l).toLowerCase().includes(f.q.toLowerCase())));
   app.innerHTML=`${inAppBanner()}<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.3</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
   <p class="lead">신규 AI·기존 AI 신기능 → 요약본(표·그래프) → 실습 → 결과물. 새 교안이 맨 위. 다 배운 교안은 <b>완료</b>로 숨김. 출시일 기록은 <a href="./releases.html">릴리즈 노트</a>.</p></section>
   <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='fav'?'on':''}" data-t="fav">★ 즐겨찾기 <b>${favN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
   <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI'],['past','📚 지난 기능']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
+  <div class="tools frow"><span class="fl">💳 요금</span>${[['','전체'],['free','무료'],['freemium','무료+유료'],['paid','유료']].map(([k,t])=>`<button class="chip ${f.acc===k?'on':''}" data-acc="${k}">${t} <b>${k?all.filter(l=>l.access===k).length:all.length}</b></button>`).join('')}</div>
+  <div class="tools frow"><span class="fl">🤖 AI</span>${[['','전체',all.length],...Object.entries(all.reduce((o,l)=>{const b=M.brand(l);o[b]=(o[b]||0)+1;return o},{})).sort((a,b)=>b[1]-a[1]).map(([b,n])=>[b,b,n])].map(([k,t,n])=>`<button class="chip ${f.ai===k?'on':''}" data-ai="${esc(k)}">${esc(t)} <b>${n}</b></button>`).join('')}</div>
   <div class="tools"><select id="fc">${opt('','카테고리 전체',f.cat)}${Object.entries(M.CAT).map(([k,v])=>opt(k,`${k} ${v}`,f.cat)).join('')}</select>
   <select id="fl">${opt('','대상 전체',f.lvl)}${Object.keys(M.LEVEL).map(k=>opt(k,`${M.LEVEL[k]} ${k.includes('강사')?k:'학습자-'+k}`,f.lvl)).join('')}</select>
   <select id="fj">${opt('','직업군 전체',f.job)}${Object.entries(M.JOB).map(([k,v])=>opt(k,v,f.job)).join('')}</select>
@@ -170,6 +172,8 @@ function listView(){
   document.getElementById('fl').onchange=e=>{f.lvl=e.target.value;listView()};
   document.getElementById('fj').onchange=e=>{f.job=e.target.value;listView()};
   document.querySelectorAll('.chip[data-k]').forEach(b=>b.onclick=()=>{f.kind=b.dataset.k;listView()});
+  document.querySelectorAll('.chip[data-acc]').forEach(b=>b.onclick=()=>{f.acc=b.dataset.acc;listView()});
+  document.querySelectorAll('.chip[data-ai]').forEach(b=>b.onclick=()=>{f.ai=b.dataset.ai;listView()});
   document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{tab=b.dataset.t;listView()});
   document.querySelectorAll('.item .mk').forEach(b=>b.onclick=()=>{setDone(b.dataset.id,!b.classList.contains('undo'));listView()});
   document.getElementById('sync').onclick=shareSync;
