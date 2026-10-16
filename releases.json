@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-16 23:05 KST",
+  "updated_at": "2026-10-16 23:58 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-10-14-voice-3",
+      "date": "2026-10-14",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Voice 3.0 — 말→말 음성 모델",
+      "summary": "1초 미만 응답·끼어들기 처리·도구 호출(웹·X 검색·함수·MCP) 말→말(Speech to Speech) 모델, Voice Agent API 분당 $0.08(2.0과 동일), grok-voice-latest 자동 전환, Grok Bot 음성 모드 적용",
+      "source": {
+        "title": "xAI News – Introducing Grok Voice 3.0",
+        "url": "https://x.ai/news/grok-voice-3"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT05-014"
+    },
     {
       "id": "grok-2026-08-07-imagine-image-2",
       "date": "2026-08-07",

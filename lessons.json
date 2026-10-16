@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 81,
+  "count": 82,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-014",
+      "version": "v1.0",
+      "created_at": "2026-10-16 23:58 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "말로 주고받는 한국어 회화 연습 음성 에이전트 만들기 — Grok Voice 3.0(xAI 콘솔 음성 에이전트 플레이그라운드)",
+      "summary": "2026-10-14 xAI가 말→말(Speech to Speech) 음성 모델 Grok Voice 3.0 공개. 1초 미만 응답·끼어들기 처리·도구 호출(웹 검색·X 검색·함수)이 강점이며 grok-voice-latest 를 쓰는 음성 에이전트는 자동으로 3.0 적용. xAI 콘솔 음성 에이전트 플레이그라운드에서 코드 없이 지침·목소리·도구를 정해 한국어 회화 상대 에이전트를 만들어 시험 가능. API 요금 분당 $0.08(2.0과 동일)",
+      "tool": "Grok",
+      "feature": "Grok Voice 3.0 — 말→말(Speech to Speech) 음성 모델, Voice Agent API·콘솔 음성 에이전트 플레이그라운드(지침·목소리·웹/X 검색·함수 호출), grok-voice-latest 자동 적용, Grok Bot 음성 모드",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-10-14",
+      "categories": [
+        "CAT-05",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 역할·말투·난이도를 정한 '한국어 카페 주문 연습' 음성 에이전트 지침 1개 + ② 실제 음성 대화 3회 이상 기록 + ③ 지침을 고쳐 다시 시험한 비교 메모 1장",
+      "access": "paid",
+      "total_minutes": 54,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "말로 대화하는 AI 상대를 코드 없이 시험"
+    },
     {
       "id": "AI-2026-10-CAT04-010",
       "version": "v1.0",
