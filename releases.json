@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 12:10 KST",
+  "updated_at": "2026-10-16 13:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -16,6 +16,21 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT05-010"
+    },
+    {
+      "id": "gemini-2026-10-13-skills",
+      "date": "2026-10-13",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 앱 스킬(Skills) 순차 출시·Gem 전환",
+      "summary": "한 번 저장해 모든 대화·작업에서 / 호출·자동 적용·겹쳐 쓰는 재사용 지침 스킬을 Gemini 앱에 순차 제공(11월 중순 완료 예정, 개인 계정), Gem은 단계적으로 스킬로 전환, Workspace 속 스킬은 출시 연기",
+      "source": {
+        "title": "Google Workspace Updates – An update on the launch of skills in the Gemini app and Workspace",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/an-update-on-launch-of-skills-in-gemini-app-and-workspace.html"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT02-004"
     },
     {
       "id": "notion-2026-10-13-skills-mcp",

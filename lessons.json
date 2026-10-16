@@ -1,6 +1,6 @@
 {
   "standard": "v2.3",
-  "count": 70,
+  "count": 71,
   "lessons": [
     {
       "id": "AI-2026-10-CAT05-010",
@@ -39,6 +39,44 @@
       "notice": "",
       "emoji": "🗣️",
       "one_liner": "한국어 원어민 억양 AI 목소리로 듣기 연습"
+    },
+    {
+      "id": "AI-2026-10-CAT02-004",
+      "version": "v1.0",
+      "created_at": "2026-10-16 13:05 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "Gemini 스킬(Skills)로 내 업무 방식 한 번 저장 — '수업 안내문 도우미' 스킬 만들고 /로 불러 쓰기 + 스킬 2개 겹쳐 쓰기",
+      "summary": "Gemini 스킬(Skills)은 한 번 저장해 두면 모든 대화·작업에서 다시 쓰는 맞춤 지침. 2026-10-13부터 Gemini 앱에 순차 제공(11월 중순 완료 예정), 기존 Gem(젬)을 대신함. 맞춤 설정(Customize) → 스킬(Skills)에서 직접 만들기·Gemini와 만들기·SKILL.md 올리기 가능, 대화창 / 로 불러오거나 Gemini가 상황에 맞으면 자동 적용. 구독 없이도 사용 가능",
+      "tool": "Gemini",
+      "feature": "스킬(Skills) — 재사용 맞춤 지침 만들기(직접·Gemini와·SKILL.md 업로드), / 호출·자동 적용·여러 스킬 겹쳐 쓰기, Gem(젬)에서 전환",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-13",
+      "categories": [
+        "CAT-02",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① '수업 안내문 도우미' 스킬 1개(이름·설명·지침) + ② /호출로 만든 안내문 1장 + ③ Gemini와 대화로 만든 '쉬운 말 다듬기' 스킬 1개 + ④ 스킬 2개를 겹쳐 쓴 쉬운 말 안내문 1장",
+      "access": "free",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "내 지침을 스킬로 저장해 어디서나 호출"
     },
     {
       "id": "AI-2026-10-CAT01-011",
