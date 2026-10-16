@@ -1,0 +1,597 @@
+{
+  "id": "AI-2026-10-CAT08-008",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 19:10 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "Perplexity Computer 노력 모드(Effort)·사이드 챗으로 '알맞은 힘 조절' 조사 브리프 만들기 — Light vs Standard 비교 + 작업 중 몰래 묻기",
+  "summary": "Perplexity Computer 노력 모드(Effort mode)는 Light·Standard·High·Ultra 4단계 슬라이더로 모델·추론 깊이를 자동 선택하는 기능(2026-09-17 공개), 사이드 챗(Side Chat)은 실행 중인 작업을 멈추지 않고 /btw 등으로 따로 묻는 읽기 전용 대화(2026-09-21 체인지로그). 같은 조사 과제를 Light·Standard로 돌려 비교하고, 작업 중 사이드 챗으로 궁금한 점을 확인해 1쪽 조사 브리프 + 노력 단계 선택표 완성",
+  "glance": {
+    "emoji": "🎚️",
+    "one_liner": "일의 난이도에 맞춰 AI 힘 조절하기",
+    "cards": [
+      {
+        "icon": "🎚️",
+        "title": "노력 4단계",
+        "text": "Light·Standard·High·Ultra"
+      },
+      {
+        "icon": "🤖",
+        "title": "모델 자동 선택",
+        "text": "단계마다 모델·추론 깊이 자동"
+      },
+      {
+        "icon": "💬",
+        "title": "사이드 챗",
+        "text": "/btw로 작업 중 따로 묻기"
+      },
+      {
+        "icon": "💳",
+        "title": "크레딧 절약",
+        "text": "낮은 단계 = 대체로 적게 듦"
+      }
+    ],
+    "diagram": {
+      "title": "노력 모드 + 사이드 챗 흐름",
+      "nodes": [
+        {
+          "icon": "📝",
+          "label": "과제 정하기"
+        },
+        {
+          "icon": "🎚️",
+          "label": "노력 단계 선택"
+        },
+        {
+          "icon": "⚙️",
+          "label": "Computer 실행"
+        },
+        {
+          "icon": "💬",
+          "label": "사이드 챗 질문"
+        },
+        {
+          "icon": "📄",
+          "label": "결과 비교·검수"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "모델 고민형",
+        "text": "어떤 모델·추론 수준을 골라야 할지 몰라 늘 최고 사양으로 돌려 크레딧 낭비"
+      },
+      "after": {
+        "label": "단계 선택형",
+        "text": "쉬운 일은 Light, 판단이 필요한 일만 High 이상으로 골라 시간·크레딧 절약"
+      }
+    },
+    "cautions": [
+      "개인정보·내부 자료 넣지 않기",
+      "높은 단계 ≠ 더 좋은 결과",
+      "출처 링크 직접 열어 확인"
+    ]
+  },
+  "tool": "Perplexity",
+  "feature": "노력 모드(Effort mode, Light·Standard·High·Ultra) · 사이드 챗(Side Chat, /ask·/side·/btw) — Perplexity Computer 모델 자동 선택과 작업 중 읽기 전용 질문",
+  "company": "Perplexity",
+  "type": "update",
+  "released": "2026-09-17",
+  "categories": [
+    "CAT-08",
+    "CAT-06"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-DAT",
+    "JOB-BIZ",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Perplexity 유료 계정(Pro·Max·Education Pro 등) — Computer는 무료 계정에서 쓸 수 없음 (도움말 2026-10-16 확인, 미국 일부 무료 계정 체험 턴은 예외)",
+    "PC 크롬 웹(perplexity.ai) 권장 — 노력 모드는 웹·iOS 26.38.0 이상·Android 2.100.0 이상 지원, macOS·Windows 데스크톱 앱은 미지원",
+    "남은 크레딧 또는 Pro 주간 포함 사용량 확인 (설정 > Usage 페이지 [확인 필요: 화면 이름])",
+    "강사: 실습용 조사 과제 문장과 Light·Standard 결과 예시 미리 준비"
+  ],
+  "outcome": "① 1쪽 조사 브리프(Light 결과 + Standard 결과 중 더 나은 쪽) + ② Light vs Standard 비교 메모(걸린 시간·출처 수·크레딧) + ③ 사이드 챗 질문·답 기록 2개 + ④ 내 업무용 노력 단계 선택표",
+  "objectives": [
+    "Perplexity Computer 입력창의 노력 슬라이더로 Light·Standard·High·Ultra를 고르고 Custom으로 모델을 직접 지정할 수 있음",
+    "실행 중인 작업을 멈추지 않고 사이드 챗(/btw 등)으로 따로 질문할 수 있음",
+    "일의 난이도·크레딧을 따져 내 업무에 맞는 노력 단계를 고를 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "노력 모드·사이드 챗은 Perplexity Computer 기능이라 유료 구독자 대상. 무료 계정에는 Computer 없음(미국 일부 무료 계정 체험 턴 예외). 노력 단계 자체는 추가 요금 없음, 실제 작업량만큼 크레딧(100크레딧 = $1) 차감. 낮은 단계는 저렴한 모델을 써서 같은 작업이면 대체로 크레딧이 적게 듦",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "검색·출처 답변만, Computer·노력 모드·사이드 챗 불가"
+      },
+      {
+        "name": "Education Pro",
+        "price": "$10/월 (SheerID 인증)",
+        "features": "Pro 전체 + Perplexity Computer·Learn Mode 포함"
+      },
+      {
+        "name": "Pro",
+        "price": "$17/월 (연간 결제 기준)",
+        "features": "Computer 주간 포함 사용량 + 가입 보너스 4,000 크레딧(약 30일)"
+      },
+      {
+        "name": "Max",
+        "price": "$200/월 (연 $2,000)",
+        "features": "매월 10,000 크레딧 + 가입 보너스 35,000 크레딧, 월 크레딧 청구 상한 기본 $200"
+      },
+      {
+        "name": "Enterprise Pro",
+        "price": "$40/월·좌석 (연 $400)",
+        "features": "매월 500 크레딧, 노력 모드 도움말이 명시한 요금제, 관리자 모델 차단 시 다른 모델로 대체"
+      }
+    ],
+    "note": "Max 가격은 Perplexity Max 도움말, Enterprise Pro·Education Pro 가격은 요금제 비교 도움말 기준(2026-10-16). Pro 가격은 2026-10-14 요금 페이지 확인값(교안 AI-2026-10-CAT08-004와 같음)이며 월 결제 가격·원화 가격 [확인 필요]. 노력 모드 도움말은 Enterprise Pro·Enterprise Max만 요금제로 명시하고, 체인지로그는 '웹, 개인 계정' 제공으로 밝힘 → 개인 Pro·Max 사용 가능 범위 [확인 필요: 강의 전날 내 계정 화면 확인]",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "Perplexity 도움말 – How credits work on Perplexity",
+        "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity"
+      },
+      {
+        "title": "Perplexity 도움말 – Which Perplexity Subscription Plan is right for you?",
+        "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you"
+      },
+      {
+        "title": "Perplexity 도움말 – Perplexity Max",
+        "url": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-03-12",
+      "text": "Perplexity Computer를 Pro 구독자에게 제공(체인지로그)"
+    },
+    {
+      "date": "2026-09-17",
+      "text": "Computer 노력 모드(Effort mode) 공개 — 입력창 슬라이더로 Light·Standard·High·Ultra 선택, 웹 먼저(블로그)"
+    },
+    {
+      "date": "2026-09-21",
+      "text": "체인지로그 'Effort Mode, GPT-6 Astra & Skills Marketplace' — 노력 모드(웹·개인 계정, 모바일·데스크톱 예정), 사이드 챗(/ask·/side·/btw), GPT-6 Astra, 스킬 마켓플레이스, Cmd+K 기록 검색 발표"
+    },
+    {
+      "date": "2026-10-16",
+      "text": "도움말 기준 노력 모드 지원: 웹·iOS 26.38.0 이상·Android 2.100.0 이상, macOS·Windows 데스크톱 앱은 미지원(일반 모델 선택기 표시)"
+    }
+  ],
+  "theory": {
+    "definition": "노력 모드(Effort mode)는 Perplexity Computer(여러 단계 작업을 스스로 계획·실행하는 에이전트)에서 일의 난이도를 Light·Standard·High·Ultra 4단계로 고르면, 그 단계에 맞는 지휘 모델(오케스트레이터)과 추론 깊이를 자동으로 골라 주는 기능임. 사이드 챗(Side Chat)은 실행 중인 Computer 작업을 방해하지 않고 그 작업에 대해 따로 묻는 읽기 전용 대화임",
+    "analogy": "노력 모드 = 자동차 주행 모드. 동네 장보기는 에코(Light), 출퇴근은 일반(Standard), 산길은 스포츠(High), 레이스는 최고 출력(Ultra). 높은 모드가 늘 좋은 게 아니라 기름(크레딧)만 더 듦. 사이드 챗 = 운전 중 옆 사람에게 '다음 출구 어디야?' 묻기 — 운전은 그대로 계속됨",
+    "comparison": {
+      "headers": [
+        "단계",
+        "잘 맞는 일 (도움말 예시)",
+        "속도·크레딧"
+      ],
+      "rows": [
+        [
+          "Light",
+          "지시가 분명한 반복 업무 — 메일 속 청구서를 표로 모으고 중복 번호 표시",
+          "가장 빠름·대체로 가장 적음"
+        ],
+        [
+          "Standard",
+          "자료를 합쳐 브리프·추천안 만들기 — 고객 메모 + 최근 뉴스로 영업 브리프",
+          "보통"
+        ],
+        [
+          "High",
+          "원인 설명·우선순위 저울질 — 고객 요청·사용 데이터·개발 추정으로 우선순위 정하기",
+          "느림·더 많음"
+        ],
+        [
+          "Ultra",
+          "여러 접근을 시험할 열린 문제 — 성장 가정별 신규 시장 평가",
+          "가장 느림·가장 많음"
+        ],
+        [
+          "Custom",
+          "모델·추론 수준·속도 설정을 직접 고름",
+          "선택에 따라 다름"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "단계 = 모델 + 추론 깊이 자동 묶음",
+        "body": "단계마다 평가 결과로 고른 모델이 짝지어지고, 선택기에 현재 모델 이름이 표시됨. 도움말 예시로 Standard에 Claude Opus 5가 표시됨. 짝은 수시로 바뀌므로 선택기의 이름이 현재 정답임. 지휘 모델은 일부 일을 다른 회사 모델을 쓰는 보조 에이전트에 넘길 수 있음"
+      },
+      {
+        "title": "높을수록 좋은 게 아님",
+        "body": "도움말: 잘 정리된 과제는 Light·Standard로도 충분히 끝나는 경우가 많고, High·Ultra는 더 오래 걸리고 크레딧을 더 씀. 노력 단계는 지출 상한이 아님 → Light도 크레딧 총량을 보장하지 않고, 단계·출처 수·도구 사용 횟수도 제한하지 않음"
+      },
+      {
+        "title": "사이드 챗 사용법",
+        "body": "입력창에 /ask, /side, /btw 입력 또는 Ask 메뉴·스레드 메뉴·웹에서 답변 글자 드래그로 시작. 작업 맥락의 스냅숏을 보고 답하며 작업 파일 읽기·웹 검색은 가능, 본 작업은 바꾸지 않음(읽기 전용)"
+      }
+    ],
+    "can": [
+      "슬라이더 한 번으로 일 난이도에 맞는 모델·추론 깊이 고르기",
+      "Custom으로 모델·추론 수준·속도 설정 직접 지정, Return to Presets로 되돌리기",
+      "작업 실행 중 사이드 챗으로 진행 상황·용어·자료를 따로 묻기",
+      "같은 과제를 단계별로 돌려 결과·시간·크레딧 비교",
+      "후속 질문은 대화의 현재 단계를 그대로 이어 쓰기"
+    ],
+    "cannot": [
+      "무료 계정에서 사용 — Computer 자체가 유료 기능 (미국 일부 체험 턴 예외)",
+      "실행 중인 작업의 단계 바꾸기 — 다음 전송부터 적용, 낮추려면 작업 재시작",
+      "단계로 크레딧 상한 걸기 — 지출 상한 아님",
+      "기기 간 설정 동기화 — 브라우저·앱마다 따로 저장",
+      "사이드 챗으로 본 작업 수정 — 읽기 전용",
+      "macOS·Windows 데스크톱 앱에서 노력 모드 사용 — 일반 모델 선택기만 표시"
+    ],
+    "safety": [
+      "실습 과제에 이름·연락처·내부 문서 같은 개인정보·기밀을 넣지 말 것",
+      "Computer 결과의 출처 링크를 직접 열어 원문과 대조할 것. 숫자·날짜는 특히 확인",
+      "Ultra·High는 크레딧을 많이 쓸 수 있음 → 실습 전 남은 크레딧·자동 충전(Auto-refill) 설정 확인할 것",
+      "기관 계정은 관리자가 모델을 막으면 다른 모델로 대체됨 → 기관 보안 정책 먼저 확인할 것",
+      "AI 조사 결과를 그대로 공문·보고서로 쓰지 말고 사람이 최종 검수할 것"
+    ]
+  },
+  "practice": {
+    "preview": "과제 '우리 지역 시니어 대상 무료 디지털 교육 프로그램 조사' → Light로 실행 → 실행 중 사이드 챗 질문 → 같은 과제 Standard로 실행 → 결과·시간·크레딧 비교 → 1쪽 브리프 + 내 업무 단계 선택표",
+    "follow": [
+      {
+        "title": "노력 슬라이더 찾기",
+        "minutes": 4,
+        "do": "perplexity.ai 웹 → Computer 열기 → 입력창 아래 현재 모델 이름 옆 노력 선택기 클릭 → 슬라이더를 Light로 이동, 표시되는 모델 이름 메모",
+        "prompt": "",
+        "expect": "선택기에 'Light'와 그 단계의 모델 이름 표시",
+        "note": "[확인 필요] 화면 위치·이름은 강의 전날 확인. 데스크톱 앱이면 브라우저로 전환"
+      },
+      {
+        "title": "Light로 조사 실행",
+        "minutes": 10,
+        "do": "아래 프롬프트 전송 후 시작 시각 메모",
+        "prompt": "서울 지역에서 2026년에 운영 중인 시니어(65세 이상) 대상 무료 디지털 교육 프로그램을 조사해 줘.\n표로 정리: 프로그램명 | 운영 기관 | 대상 | 내용 | 신청 방법 | 출처 링크\n최대 5개, 공식 기관 누리집 출처만 사용하고 확인 못 한 칸은 [확인 필요]로 표시해 줘.",
+        "expect": "5행 이내 표 + 칸마다 출처 링크",
+        "note": "지역은 수강생 지역으로 바꿔도 됨"
+      },
+      {
+        "title": "작업 중 사이드 챗으로 묻기",
+        "minutes": 6,
+        "do": "작업이 도는 동안 입력창에 /btw 입력 후 아래 질문 전송",
+        "prompt": "/btw 지금까지 찾은 프로그램 중 공식 누리집이 아닌 곳에서 가져온 정보가 있어?",
+        "expect": "본 작업은 계속 진행되고, 옆에서 따로 답이 옴",
+        "note": "/ask·/side도 같은 기능. 사이드 챗은 읽기 전용이라 본 작업을 바꾸지 않음"
+      },
+      {
+        "title": "같은 과제 Standard로 실행",
+        "minutes": 10,
+        "do": "새 Computer 작업에서 슬라이더를 Standard로 바꾸고 같은 프롬프트 전송, 시작·끝 시각 메모",
+        "prompt": "",
+        "expect": "Standard 단계의 표 결과",
+        "note": "실행 중인 작업은 단계가 바뀌지 않음 → 반드시 새 작업에서 진행"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "Light vs Standard 비교 메모",
+        "minutes": 6,
+        "do": "두 결과를 나란히 놓고 비교, 사용 크레딧은 Usage 페이지에서 확인",
+        "prompt": "",
+        "expect": "비교 메모: 걸린 시간 | 찾은 프로그램 수 | 공식 출처 비율 | [확인 필요] 칸 수 | 사용 크레딧",
+        "note": "Pro 주간 포함 사용량을 쓰는 중이면 크레딧 차이가 안 보일 수 있음"
+      },
+      {
+        "title": "1쪽 조사 브리프 받기",
+        "minutes": 6,
+        "do": "더 나은 결과가 나온 작업에서 아래 프롬프트 전송",
+        "prompt": "위 표를 바탕으로 주민센터 게시용 1쪽 안내문을 만들어 줘.\n순서: 제목 → 한 줄 소개 → 프로그램 표(이름·대상·신청 방법) → 문의처 → '정보 확인일'\n쉬운 말로, 출처에 없는 내용은 쓰지 마.",
+        "expect": "1쪽 안내문 + 확인일",
+        "note": "표의 링크 2개 이상을 직접 열어 원문과 대조"
+      },
+      {
+        "title": "내 업무 노력 단계 선택표",
+        "minutes": 8,
+        "do": "내 업무 중 Computer에 맡길 일 4개를 골라 단계를 정하고, 아래 프롬프트로 검토받기",
+        "prompt": "내 업무 4개에 Perplexity Computer 노력 단계(Light·Standard·High·Ultra)를 정해 봤어. 각 선택이 적절한지 한 줄씩 의견을 주고, 크레딧을 아낄 수 있는 곳을 표시해 줘.\n1) [업무1] - [단계]\n2) [업무2] - [단계]\n3) [업무3] - [단계]\n4) [업무4] - [단계]",
+        "expect": "업무 | 고른 단계 | 의견 | 절약 가능 여부 표",
+        "note": "이 검토는 Light로 충분함"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "사이드 챗을 /ask·/side·/btw·답변 글자 드래그 4가지 방법으로 열어 보고 가장 편한 방법 고르기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Custom으로 모델·추론 수준을 직접 고른 결과와 Standard 결과를 비교해 '프리셋으로 충분한가' 한 줄 결론 내기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "같은 열린 과제(예: 우리 기관 새 강좌 3개 기획)를 High·Ultra로 돌려 품질 차이 대비 크레딧 차이를 표로 정리하고 팀 사용 규칙 3줄 만들기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 Light·Standard 비교 메모를 바꿔 보고 '우리 업무에서 기본 단계는 무엇으로 할지' 한 줄 합의 발표",
+    "quiz": [
+      {
+        "q": "Perplexity Computer 노력 모드에 대한 설명으로 옳은 것은?",
+        "options": [
+          "단계를 높이면 크레딧 상한이 자동으로 걸린다",
+          "Light·Standard·High·Ultra 중 고르면 모델과 추론 깊이가 자동으로 정해진다",
+          "실행 중인 작업도 슬라이더를 움직이면 바로 단계가 바뀐다",
+          "무료 계정에서도 모든 단계를 쓸 수 있다"
+        ],
+        "answer": 1,
+        "explain": "단계를 고르면 모델·추론 깊이가 자동 선택됨. 지출 상한이 아니며, 실행 중 작업은 시작 단계 유지, Computer는 유료 기능"
+      },
+      {
+        "q": "사이드 챗(Side Chat)의 특징은?",
+        "options": [
+          "본 작업의 결과를 직접 고쳐 준다",
+          "본 작업을 멈춰야 쓸 수 있다",
+          "작업을 방해하지 않고 읽기 전용으로 따로 묻는다",
+          "데스크톱 앱에서만 쓸 수 있다"
+        ],
+        "answer": 2,
+        "explain": "/ask·/side·/btw 등으로 시작, 작업 맥락 스냅숏을 보고 답하며 본 작업은 바꾸지 않음"
+      },
+      {
+        "q": "메일 속 청구서를 표로 모으는 단순 반복 업무에 도움말이 권하는 단계는?",
+        "options": [
+          "Light",
+          "High",
+          "Ultra",
+          "항상 가장 높은 단계"
+        ],
+        "answer": 0,
+        "explain": "지시가 분명한 반복 업무는 Light 예시. 높은 단계는 더 오래 걸리고 크레딧을 더 씀"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "완성도",
+        "high": "Light·Standard 결과 + 사이드 챗 기록 + 비교 메모 + 브리프 + 선택표 모두 완성",
+        "mid": "두 단계 결과 + 비교 메모",
+        "low": "한 단계 결과만"
+      },
+      {
+        "criterion": "단계 선택 근거",
+        "high": "업무 난이도·크레딧을 근거로 단계를 고름",
+        "mid": "근거가 일부만 있음",
+        "low": "근거 없이 가장 높은 단계"
+      },
+      {
+        "criterion": "사실 검수",
+        "high": "출처 링크 2개 이상을 원문과 대조",
+        "mid": "1개 대조",
+        "low": "대조 안 함"
+      },
+      {
+        "criterion": "윤리·안전",
+        "high": "개인정보·기밀 없이 공개 정보만 사용 + 크레딧 설정 확인",
+        "mid": "일부 확인",
+        "low": "확인 안 함"
+      }
+    ],
+    "next": [
+      "Perplexity Computer 자동화(Automations)로 정기 조사 맡기기 (AI-2026-10-CAT08-004)",
+      "Perplexity Wiley 학술지 검색과 인용 (AI-2026-10-CAT06-002)",
+      "Claude Opus 5.5 노력 수준(Effort)과 비교해 보기 (AI-2026-10-CAT06-005)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 자동차 주행 모드 비유",
+        "note": "'높을수록 좋다'는 오해부터 깨기"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: Computer란, 노력 4단계 비교표, Custom, 사이드 챗, 크레딧 구조, 안전",
+        "note": "단계별 모델 이름은 수시로 바뀜을 강조"
+      },
+      {
+        "time": "35~65분",
+        "content": "따라 하기: 슬라이더 찾기 → Light 실행 → 사이드 챗 → Standard 실행",
+        "note": "Light 실행 중에 사이드 챗 실습을 끼워 대기 시간 활용"
+      },
+      {
+        "time": "65~85분",
+        "content": "비교 메모 → 1쪽 브리프 → 내 업무 단계 선택표",
+        "note": "크레딧 확인 화면 함께 보기"
+      },
+      {
+        "time": "85~90분",
+        "content": "짝 공유·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "동네 마트 갈 때 스포츠 모드로 달리시나요? 아니죠. AI도 마찬가지입니다. 오늘은 Perplexity Computer에 새로 생긴 '노력 모드'로, 일의 난이도에 맞게 AI의 힘을 조절하는 법을 배워 보겠습니다."
+      },
+      {
+        "label": "단계 선택",
+        "text": "슬라이더를 움직이면 옆에 모델 이름이 바뀌는 게 보이죠? 어떤 모델을 쓸지 고민하지 않아도, 일의 무게만 정하면 Perplexity가 알맞은 모델을 골라 줍니다."
+      },
+      {
+        "label": "사이드 챗",
+        "text": "AI가 열심히 일하는 동안 궁금한 게 생기면 /btw 라고 치고 물어보세요. 일은 멈추지 않고, 옆에서 따로 대답해 줍니다. 운전 중에 옆 사람에게 길을 묻는 것과 같아요."
+      },
+      {
+        "label": "비교",
+        "text": "Light와 Standard 결과를 나란히 놓아 보세요. 차이가 크지 않다면, 앞으로 이런 일은 Light로 충분하다는 뜻입니다. 그만큼 시간과 크레딧을 아낄 수 있어요."
+      },
+      {
+        "label": "마무리",
+        "text": "높은 단계가 늘 좋은 답을 주는 건 아닙니다. 쉬운 일은 가볍게, 어려운 판단만 무겁게. 그리고 어떤 단계든 출처 링크는 꼭 직접 열어 확인하세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "무료 계정이라 Computer가 없음",
+        "response": "강사 화면 시연으로 진행, 학습자는 일반 검색으로 같은 질문을 해 보고 결과 차이만 비교"
+      },
+      {
+        "situation": "노력 선택기가 보이지 않음(데스크톱 앱·구버전 앱)",
+        "response": "웹 브라우저(perplexity.ai)로 전환, 모바일은 iOS 26.38.0·Android 2.100.0 이상으로 업데이트"
+      },
+      {
+        "situation": "Light 작업이 너무 빨리 끝나 사이드 챗을 못 씀",
+        "response": "Standard 실행 중에 사이드 챗 실습, 또는 과제를 '10개 조사'로 늘려 다시 실행"
+      },
+      {
+        "situation": "크레딧 부족",
+        "response": "짝과 한 계정 공유, Standard 결과는 강사가 미리 만든 인쇄본으로 대체"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "슬라이더가 어디 있는지 못 찾음",
+        "fix": "웹 입력창 아래쪽, 현재 모델 이름 바로 옆 선택기 클릭"
+      },
+      {
+        "issue": "슬라이더를 바꿨는데 진행 중인 작업이 그대로임",
+        "fix": "정상 동작 — 변경은 다음 전송부터 적용. 새 작업으로 다시 시작"
+      },
+      {
+        "issue": "/btw를 쳤는데 본 작업에 지시로 들어감",
+        "fix": "명령어 맨 앞에 / 를 빠뜨렸는지 확인, 또는 Ask 메뉴·스레드 메뉴에서 사이드 챗 열기 [확인 필요]"
+      },
+      {
+        "issue": "다른 PC에서 접속하니 단계가 기본값으로 돌아감",
+        "fix": "설정은 브라우저·앱마다 따로 저장됨 → 다시 선택"
+      },
+      {
+        "issue": "Light와 Standard 결과가 거의 같음",
+        "fix": "좋은 결론 — 이런 과제는 Light로 충분하다는 근거로 기록"
+      }
+    ],
+    "faq": [
+      {
+        "q": "단계마다 어떤 모델이 쓰이나요?",
+        "a": "선택기에 현재 모델 이름이 표시됨. 도움말 예시로 Standard에 Claude Opus 5, 짝은 평가 결과에 따라 수시로 바뀜. 전체 목록은 공개되지 않음"
+      },
+      {
+        "q": "Ultra로 하면 항상 더 좋은가요?",
+        "a": "아니오. 도움말은 잘 정리된 과제는 Light·Standard로 충분한 경우가 많고, High·Ultra는 더 오래 걸리고 크레딧을 더 쓴다고 안내"
+      },
+      {
+        "q": "Light로 하면 크레딧이 얼마나 드나요?",
+        "a": "고정 가격 없음. 실제 작업량만큼 차감되고 Light는 대체로 적게 들지만 총량을 보장하지 않음. 100크레딧 = $1"
+      },
+      {
+        "q": "사이드 챗도 크레딧이 드나요?",
+        "a": "공식 문서에 명시 없음 [확인 필요]. 웹 검색·파일 읽기를 하므로 사용량이 생길 수 있음"
+      },
+      {
+        "q": "모바일에서도 되나요?",
+        "a": "도움말 기준 iOS 26.38.0 이상·Android 2.100.0 이상 지원, macOS·Windows 데스크톱 앱은 미지원"
+      },
+      {
+        "q": "Custom은 언제 쓰나요?",
+        "a": "특정 모델을 꼭 써야 할 때. 모델·추론 수준·속도 설정을 직접 고르고, 보조 에이전트는 따로 지정 불가. Return to Presets로 복귀"
+      },
+      {
+        "q": "한국에서도 쓸 수 있나요?",
+        "a": "Perplexity 웹·앱은 국내 이용 가능, 유료 구독 시 Computer 사용 가능 [확인 필요: 원화 가격·한국어 화면 표기]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟡 중급반",
+        "guide": "Light → 사이드 챗 → Standard 비교 → 브리프까지 필수, 도전과제 ⭐까지"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "내 업무 단계 선택표 + 도전과제 ⭐⭐⭐(High·Ultra 품질 대비 크레딧)까지, 팀 사용 규칙 토론"
+      },
+      {
+        "level": "🟢 초급·시니어반 (변형)",
+        "guide": "강사 시연 위주, 학습자는 슬라이더 움직여 모델 이름 바뀌는 것만 보고 '쉬운 일은 Light' 한 문장 기억"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수업 자료 조사(Light)와 교육과정 기획(High)으로 단계 차이 체험"
+      },
+      {
+        "level": "한국어 학습자·다문화 (JOB-GLB)",
+        "guide": "조사 결과를 '쉬운 한국어' 안내문으로 받아 신청 방법·대상 같은 생활 낱말 익히기"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: '높을수록 좋다'가 아니라 '일에 맞게' — 도움말 문구를 그대로 인용",
+      "Light 실행 대기 시간에 사이드 챗을 넣어 두 기능을 한 흐름으로 묶음",
+      "단계별 모델 이름은 수시로 바뀌므로 교안 대신 화면 선택기를 기준으로 안내",
+      "크레딧 = 비용 감각을 Usage 페이지로 직접 보여 줌"
+    ],
+    "day_before": [
+      "유료 계정 웹에서 노력 선택기 위치·단계 이름·표시 모델 캡처 준비 [확인 필요]",
+      "개인 Pro 계정에서 노력 모드 표시 여부 확인 (체인지로그는 개인 계정 제공, 도움말은 Enterprise 요금제만 명시)",
+      "/ask·/side·/btw 사이드 챗 동작 확인·캡처",
+      "실습 과제로 Light·Standard 결과를 미리 만들어 인쇄본 준비 (Plan B용)",
+      "남은 크레딧·자동 충전 설정 확인, 요금 페이지에서 Pro 가격 재확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 개인 Pro·Max 사용 범위: 체인지로그는 '웹, 개인 계정', 노력 모드 도움말은 Enterprise Pro·Enterprise Max만 요금제로 명시",
+    "[확인 필요] 메뉴·버튼 이름(노력 선택기, Usage 페이지, Ask 메뉴)은 영어 문서 기준, 한국어 화면 표기 미확인",
+    "[확인 필요] Pro 가격은 2026-10-14 요금 페이지 확인값, 월 결제·원화 가격 미확인",
+    "[확인 필요] 사이드 챗 크레딧 차감 여부 공식 문서에 없음",
+    "단계별 모델 짝은 수시로 바뀜 — 도움말 예시(Standard = Claude Opus 5)만 기재, 다른 단계 모델은 기재하지 않음",
+    "국내 사용: Perplexity 국내 이용 가능, 미국 무료 계정 체험 턴은 국내 해당 없음 [확인 필요]"
+  ],
+  "sources": [
+    {
+      "title": "Perplexity 도움말 – Effort mode in Perplexity Computer",
+      "url": "https://www.perplexity.ai/help-center/en/articles/20260917-effort-mode-in-perplexity-computer",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Perplexity 블로그 – Computer adds effort mode for model selection (2026-09-17)",
+      "url": "https://www.perplexity.ai/hub/blog/computer-adds-effort-mode-for-model-selection",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Perplexity 체인지로그 – Effort Mode, GPT-6 Astra & Skills Marketplace (2026-09-21)",
+      "url": "https://www.perplexity.ai/changelog/effort-mode-gpt-6-astra-and-skills-marketplace",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Perplexity 도움말 – How credits work on Perplexity",
+      "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Perplexity 도움말 – Which Perplexity Subscription Plan is right for you?",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Perplexity 도움말 – Perplexity Max",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max",
+      "checked": "2026-10-16"
+    }
+  ]
+}

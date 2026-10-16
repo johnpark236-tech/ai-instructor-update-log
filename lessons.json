@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 76,
+  "count": 77,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-008",
+      "version": "v1.0",
+      "created_at": "2026-10-16 19:10 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "Perplexity Computer 노력 모드(Effort)·사이드 챗으로 '알맞은 힘 조절' 조사 브리프 만들기 — Light vs Standard 비교 + 작업 중 몰래 묻기",
+      "summary": "Perplexity Computer 노력 모드(Effort mode)는 Light·Standard·High·Ultra 4단계 슬라이더로 모델·추론 깊이를 자동 선택하는 기능(2026-09-17 공개), 사이드 챗(Side Chat)은 실행 중인 작업을 멈추지 않고 /btw 등으로 따로 묻는 읽기 전용 대화(2026-09-21 체인지로그). 같은 조사 과제를 Light·Standard로 돌려 비교하고, 작업 중 사이드 챗으로 궁금한 점을 확인해 1쪽 조사 브리프 + 노력 단계 선택표 완성",
+      "tool": "Perplexity",
+      "feature": "노력 모드(Effort mode, Light·Standard·High·Ultra) · 사이드 챗(Side Chat, /ask·/side·/btw) — Perplexity Computer 모델 자동 선택과 작업 중 읽기 전용 질문",
+      "company": "Perplexity",
+      "type": "update",
+      "released": "2026-09-17",
+      "categories": [
+        "CAT-08",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-DAT",
+        "JOB-BIZ",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 1쪽 조사 브리프(Light 결과 + Standard 결과 중 더 나은 쪽) + ② Light vs Standard 비교 메모(걸린 시간·출처 수·크레딧) + ③ 사이드 챗 질문·답 기록 2개 + ④ 내 업무용 노력 단계 선택표",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎚️",
+      "one_liner": "일의 난이도에 맞춰 AI 힘 조절하기"
+    },
     {
       "id": "AI-2026-10-CAT06-005",
       "version": "v1.0",
