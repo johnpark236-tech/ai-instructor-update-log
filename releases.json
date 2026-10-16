@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-16 17:10 KST",
+  "updated_at": "2026-10-16 18:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "claude-2026-10-15-opus-fast-mode-ga",
+      "date": "2026-10-15",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Opus 5.5 빠른 모드(Fast mode) API 정식 제공",
+      "summary": "API에서 Opus 5.5 빠른 모드(최대 2.5배 빠른 출력, 입력 $8·출력 $40)가 연구 미리보기를 끝내고 정식 제공, 별도 신청·베타 헤더 불필요",
+      "source": {
+        "title": "Claude Platform Docs – 릴리스 노트",
+        "url": "https://platform.claude.com/docs/en/release-notes/overview"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT06-005"
+    },
     {
       "id": "gmail-2026-10-15-ai-inbox-workspace",
       "date": "2026-10-15",
@@ -1014,13 +1029,13 @@
       "company": "Anthropic",
       "type": "update",
       "title": "Claude Opus 5.5",
-      "summary": "5.5 제품군 첫 모델 Opus 5.5 출시",
+      "summary": "5.5 계열 첫 모델, 대부분 업무에서 Fable 5.1 수준·Opus 5보다 실행 비용 40% 절감·출력 30% 이상 빠름(발표), 핵심 먼저 쓰는 글, Effort 5단계(기본 Medium), API 입력 $4·출력 $20, 유료 요금제 사용 한도 상향",
       "source": {
-        "title": "Claude 릴리스 노트",
-        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+        "title": "Anthropic – Introducing Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT06-005"
     },
     {
       "id": "chatgpt-2026-09-22-4",
