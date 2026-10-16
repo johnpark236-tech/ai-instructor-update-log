@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-10-17 07:30 KST",
+  "updated_at": "2026-10-17 09:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "chatgpt-2026-10-15-sites-limit",
+      "date": "2026-10-15",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Sites 개수 제한 해제(Plus·Pro)",
+      "summary": "Plus·Pro에서 만들 수 있는 Sites 개수 고정 한도 폐지, 사용량·저장 공간 한도는 유지",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-10-16-gpt6-pro-update",
+      "date": "2026-10-16",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "GPT-6 Pro 개선 — 더 빠른 응답·병렬 에이전트",
+      "summary": "Chat 탭 GPT-6 Pro가 더 빨리 답하고 플러그인·도구를 더 잘 쓰며, 작업을 나눠 여러 에이전트를 병렬 실행하고 진행 상황·각 에이전트 결과를 대화에서 확인 (Pro 순차 출시)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": null
+    },
+    {
+      "id": "chatgpt-2026-10-16-slides",
+      "date": "2026-10-16",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Slides — Space에서 발표 자료 만들기·공동 편집",
+      "summary": "대화·파일·개요·예시 덱으로 발표 자료 생성, 글·이미지·도형·차트 직접·ChatGPT 수정, 실시간 공동 편집·댓글, ChatGPT에서 발표, PowerPoint·PDF·Google Slides 내보내기 (Space 접근 Pro·Business·Enterprise 순차 출시, 웹·데스크톱)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT03-015"
+    },
     {
       "id": "gemininotebook-2026-08-27-expert-intelligence",
       "date": "2026-08-27",

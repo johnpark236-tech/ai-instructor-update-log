@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 90,
+  "count": 91,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-015",
+      "version": "v1.0",
+      "created_at": "2026-10-17 09:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "대화로 수업 발표 자료를 만들고 동료와 함께 고치기 — ChatGPT Slides(슬라이드, Space)",
+      "summary": "2026-10-16 ChatGPT가 Space 안에서 쓰는 Slides 공개. 대화·파일·개요로 발표 자료를 만들고, 예시 덱으로 스타일·배치를 맞추고, 글·이미지·도형·차트를 직접 또는 ChatGPT로 고치고, 동료와 실시간 공동 편집·댓글, ChatGPT 안에서 발표, PowerPoint·PDF·Google Slides 내보내기 가능. Space 접근 가능한 Pro·Business·Enterprise 대상 순차 출시, 웹·데스크톱 앱",
+      "tool": "ChatGPT",
+      "feature": "Slides(슬라이드) — Space에서 대화·파일·개요로 발표 자료 만들기, 예시 덱으로 스타일·배치 맞추기, 글·이미지·도형·차트 직접·ChatGPT 수정, 맞춤 이미지 생성, 실시간 공동 편집·댓글, ChatGPT에서 발표, PowerPoint·PDF·Google Slides 내보내기",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-16",
+      "categories": [
+        "CAT-03",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 대화로 만든 5~6장짜리 수업 소개 덱 1개 + ② ChatGPT로 고친 장 1개와 직접 고친 차트·글 + ③ 짝이 남긴 댓글 반영본 + ④ PowerPoint 또는 PDF로 내보낸 파일 1개",
+      "access": "paid",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "대화로 발표 자료 만들고 함께 고치기"
+    },
     {
       "id": "AI-2026-10-CAT03-014",
       "version": "v1.0",
