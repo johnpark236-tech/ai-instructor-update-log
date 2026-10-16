@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 74,
+  "count": 75,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-010",
+      "version": "v1.0",
+      "created_at": "2026-10-16 17:05 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "할 일이 먼저 보이는 아침 메일 정리 루틴 만들기 — Gmail AI Inbox(AI 받은편지함, Workspace 유료 요금제 확대)",
+      "summary": "2026-10-15 공지로 Gmail AI Inbox가 Workspace 유료 요금제로 순차 확대됨(Rapid Release 10-12부터, Scheduled Release 10-26부터). 왼쪽 메뉴 AI Inbox에서 메일 속 마감·결제·답장 할 일을 '추천 할 일(Suggested to-dos)'로, 흩어진 메일 묶음을 '따라잡을 주제(Topics to catch up on)' 요약으로 보여 줌. 실습용 메일 6통으로 할 일 처리(완료·삭제)와 원문 대조를 해 보고 '아침 10분 메일 정리 루틴' 카드를 만듦. 미국·영어만, 베타",
+      "tool": "Gmail",
+      "feature": "AI Inbox(AI 받은편지함) — 추천 할 일(Suggested to-dos)·따라잡을 주제(Topics to catch up on), Workspace 유료 요금제 확대(2026-10-15)",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-15",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① AI Inbox 추천 할 일 처리 기록표 1장(할 일 / 원문 메일 / 맞음·틀림·빠짐 / 처리: Mark done·Remove) + ② 따라잡을 주제 요약 1개를 원문과 비교한 메모 3줄 + ③ 내 업무용 '아침 10분 메일 정리 루틴' 카드 1장",
+      "access": "paid",
+      "total_minutes": 58,
+      "notice": "",
+      "emoji": "📥",
+      "one_liner": "메일 속 할 일·주제를 먼저 정리"
+    },
     {
       "id": "AI-2026-10-CAT05-012",
       "version": "v1.0",

@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-16 15:10 KST",
+  "updated_at": "2026-10-16 17:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "gmail-2026-10-15-ai-inbox-workspace",
+      "date": "2026-10-15",
+      "tool": "Gmail",
+      "company": "Google",
+      "type": "update",
+      "title": "AI Inbox — Workspace 유료 요금제 확대",
+      "summary": "메일 속 할 일을 추천 할 일로, 흩어진 메일을 주제 요약으로 보여 주는 AI Inbox를 Business·Enterprise 등 Workspace 유료 요금제로 확대 (Rapid 10-12·Scheduled 10-26부터, 미국 영어)",
+      "source": {
+        "title": "Google Workspace Updates – Gmail's AI Inbox is rolling out to paid Workspace users",
+        "url": "http://workspaceupdates.googleblog.com/2026/10/gmails-ai-inbox-is-rolling-out-to-paid-Workspace-users.html"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT03-010"
+    },
     {
       "id": "suno-2026-10-05-albums",
       "date": "2026-10-05",

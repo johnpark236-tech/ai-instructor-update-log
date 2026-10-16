@@ -1,0 +1,621 @@
+{
+  "id": "AI-2026-10-CAT03-010",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 17:05 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "할 일이 먼저 보이는 아침 메일 정리 루틴 만들기 — Gmail AI Inbox(AI 받은편지함, Workspace 유료 요금제 확대)",
+  "summary": "2026-10-15 공지로 Gmail AI Inbox가 Workspace 유료 요금제로 순차 확대됨(Rapid Release 10-12부터, Scheduled Release 10-26부터). 왼쪽 메뉴 AI Inbox에서 메일 속 마감·결제·답장 할 일을 '추천 할 일(Suggested to-dos)'로, 흩어진 메일 묶음을 '따라잡을 주제(Topics to catch up on)' 요약으로 보여 줌. 실습용 메일 6통으로 할 일 처리(완료·삭제)와 원문 대조를 해 보고 '아침 10분 메일 정리 루틴' 카드를 만듦. 미국·영어만, 베타",
+  "glance": {
+    "emoji": "📥",
+    "one_liner": "메일 속 할 일·주제를 먼저 정리",
+    "cards": [
+      {
+        "icon": "✅",
+        "title": "추천 할 일",
+        "text": "마감·결제·답장을 자동 추림"
+      },
+      {
+        "icon": "🧵",
+        "title": "따라잡을 주제",
+        "text": "흩어진 메일 묶음을 요약"
+      },
+      {
+        "icon": "🖱️",
+        "title": "바로 처리",
+        "text": "View·Reply·Mark done 버튼"
+      },
+      {
+        "icon": "🔗",
+        "title": "원문 링크",
+        "text": "근거 메일로 바로 이동"
+      }
+    ],
+    "diagram": {
+      "title": "AI Inbox가 정리하는 흐름",
+      "nodes": [
+        {
+          "icon": "📨",
+          "label": "기본 탭 메일"
+        },
+        {
+          "icon": "🤖",
+          "label": "Gemini 분석"
+        },
+        {
+          "icon": "✅",
+          "label": "추천 할 일"
+        },
+        {
+          "icon": "🧵",
+          "label": "주제 요약"
+        },
+        {
+          "icon": "🔗",
+          "label": "원문 확인·처리"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "메일 하나씩 열기",
+        "text": "긴 스레드를 다 읽으며 마감일·결제일을 따로 메모함"
+      },
+      "after": {
+        "label": "할 일부터 처리",
+        "text": "AI Inbox에서 할 일 목록을 보고 원문 확인 후 Mark done"
+      }
+    },
+    "cautions": [
+      "할 일·날짜는 원문 메일과 대조",
+      "실습은 연습용 계정 사용",
+      "화면 공유 시 메일 노출 주의"
+    ]
+  },
+  "tool": "Gmail",
+  "feature": "AI Inbox(AI 받은편지함) — 추천 할 일(Suggested to-dos)·따라잡을 주제(Topics to catch up on), Workspace 유료 요금제 확대(2026-10-15)",
+  "company": "Google",
+  "type": "update",
+  "released": "2026-10-15",
+  "categories": [
+    "CAT-03",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-BIZ",
+    "JOB-EDU",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 20,
+    "practice": 32,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "PC 브라우저의 Gmail(웹) — 도움말 단계는 컴퓨터 기준, 모바일은 앱 메뉴에서 열기(단계 미공개) [확인 필요]",
+    "자격 계정 ① 개인: Google AI Plus·Pro·Ultra ② 회사·학교: AI Inbox 대상 Workspace 요금제(Business Standard·Plus, Enterprise Starter~Plus, Frontline Plus 등)",
+    "계정 언어 영어(미국)·미국 지역 — 한국 계정 노출 여부 [확인 필요]",
+    "Gmail 설정에서 스마트 기능 2종(Smart features in Google Workspace·in other Google products) 켜기 — 켠 뒤 준비에 몇 시간, 첫 할 일 표시까지 최대 7일",
+    "연습용 메일 6통이 기본(Primary) 탭에 들어 있는 실습 계정(강사가 2~7일 전 미리 발송)"
+  ],
+  "outcome": "① AI Inbox 추천 할 일 처리 기록표 1장(할 일 / 원문 메일 / 맞음·틀림·빠짐 / 처리: Mark done·Remove) + ② 따라잡을 주제 요약 1개를 원문과 비교한 메모 3줄 + ③ 내 업무용 '아침 10분 메일 정리 루틴' 카드 1장",
+  "objectives": [
+    "AI Inbox의 두 영역(추천 할 일·따라잡을 주제)과 이용 조건(요금제·미국 영어·스마트 기능·베타)을 설명할 수 있음",
+    "AI Inbox를 열어 할 일을 View·Reply로 처리하고 Mark done·Remove to-do·Mark all as read를 쓸 수 있음",
+    "추천 할 일과 원문 메일을 대조해 빠진 할 일을 찾고 나만의 아침 메일 정리 루틴을 설계할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "무료 개인 계정은 사용 불가. 개인은 Google AI Plus·Pro·Ultra, 회사는 Business Standard·Plus, Enterprise Starter·Standard·Plus, Frontline Plus, AI Pro for Education 대상(Business Starter·교육용은 '몇 달 안에' 나중 제공). 별도 추가 요금 없음",
+    "plans": [
+      {
+        "name": "무료 개인 계정",
+        "price": "$0",
+        "features": "AI Inbox 미지원"
+      },
+      {
+        "name": "Google AI Plus",
+        "price": "$4.99/월",
+        "features": "AI Inbox 사용 가능(미국·영어)"
+      },
+      {
+        "name": "Google AI Pro",
+        "price": "$19.99/월",
+        "features": "AI Inbox + Gemini in Gmail·Docs, 더 높은 한도"
+      },
+      {
+        "name": "Google AI Ultra",
+        "price": "$99.99/월부터",
+        "features": "AI Inbox + 최고 한도 ($199.99 상위 단계 있음)"
+      },
+      {
+        "name": "Workspace Business Starter",
+        "price": "$7/사용자/월 (연간 약정)",
+        "features": "대상 요금제이나 첫 출시 일정에서 제외 — '몇 달 안에' 제공 예정"
+      },
+      {
+        "name": "Workspace Business Standard",
+        "price": "$14/사용자/월 (연간 약정)",
+        "features": "2026-10-12(Rapid)·10-26(Scheduled)부터 순차 제공"
+      },
+      {
+        "name": "Workspace Business Plus",
+        "price": "$22/사용자/월 (연간 약정)",
+        "features": "2026-10-12(Rapid)·10-26(Scheduled)부터 순차 제공"
+      },
+      {
+        "name": "Enterprise·Frontline Plus·교육",
+        "price": "",
+        "features": "Enterprise Starter·Standard·Plus, Frontline Plus 대상, AI Pro for Education은 나중 제공 — 가격은 영업팀 문의"
+      }
+    ],
+    "note": "대상 요금제는 Workspace Updates(2026-10-15) 기준. Gmail 도움말은 회사 계정 조건을 'Enterprise Plus + Gemini 베타'로 적고 있어 공지와 다름 [확인 필요]. Google AI 구독 가격은 Gemini 구독 페이지(미국 달러, 2026-10-16 확인). Workspace 가격은 교안 AI-2026-10-CAT08-006의 관리자 도움말 값(연간 약정) 인용. 원화 가격 [확인 필요]. 관리자 제어 없음(공지 기준)",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "Google Workspace Updates – Gmail's AI Inbox is rolling out to paid Workspace users",
+        "url": "http://workspaceupdates.googleblog.com/2026/10/gmails-ai-inbox-is-rolling-out-to-paid-Workspace-users.html"
+      },
+      {
+        "title": "Gmail 도움말 – Manage to-dos & topics with AI Inbox",
+        "url": "https://support.google.com/mail/answer/16845247"
+      },
+      {
+        "title": "Gemini 구독 요금제 페이지",
+        "url": "https://gemini.google/subscriptions/"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-01-08",
+      "text": "Google 블로그 'Gmail is entering the Gemini era'에서 AI Inbox 공개 — 신뢰 테스터(trusted testers)부터 제공"
+    },
+    {
+      "date": "2026-03-31",
+      "text": "AI Inbox 베타를 Google AI Ultra 구독자에게 제공 시작 (보조 근거: 9to5Google 보도)"
+    },
+    {
+      "date": "2026-05-19",
+      "text": "Google I/O 2026 구독 소식 — AI Inbox를 Google AI Plus·Pro 구독자로 확대(미국)"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "Workspace Rapid Release 도메인부터 순차 제공 시작(노출까지 최대 15일)"
+    },
+    {
+      "date": "2026-10-15",
+      "text": "Workspace Updates 공지 — Business·Enterprise·Frontline Plus 유료 요금제로 확대, 미국 영어 사용자 대상"
+    },
+    {
+      "date": "2026-10-26",
+      "text": "Scheduled Release 도메인 순차 제공 시작 예정, Business Starter·교육용은 '몇 달 안에'"
+    }
+  ],
+  "theory": {
+    "definition": "AI Inbox는 Gmail 왼쪽 메뉴의 별도 화면으로, Gemini가 기본(Primary) 탭 메일을 읽고 ① 처리해야 할 일을 '추천 할 일(Suggested to-dos)' ② 여러 메일에 흩어진 소식을 '따라잡을 주제(Topics to catch up on)' 요약으로 보여 주는 기능임. 받은편지함을 대신하지 않고 위에 얹는 '오늘의 할 일 화면'임. 현재 베타, 미국·영어만",
+    "analogy": "'아침마다 우편물을 먼저 훑어 고지서·답장할 편지만 책상 위에 올려 두는 비서'. 편지 원본은 우편함에 그대로 있고, 비서 메모마다 원본 위치가 적혀 있음",
+    "comparison": {
+      "headers": [
+        "구분",
+        "기존 받은편지함",
+        "Gemini 사이드 패널",
+        "AI Inbox"
+      ],
+      "rows": [
+        [
+          "보여 주는 것",
+          "메일 목록",
+          "질문한 내용의 답·요약",
+          "할 일 목록 + 주제 요약"
+        ],
+        [
+          "시작 방법",
+          "그냥 열기",
+          "직접 질문 입력",
+          "왼쪽 메뉴 AI Inbox 클릭"
+        ],
+        [
+          "처리",
+          "메일마다 직접",
+          "답 보고 직접",
+          "View·Reply·Mark done 버튼"
+        ],
+        [
+          "대상 메일",
+          "모든 탭",
+          "요청한 범위",
+          "기본(Primary) 탭만"
+        ],
+        [
+          "언어·지역",
+          "모든 언어",
+          "요금제·지역별 상이",
+          "미국·영어만(베타)"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "추천 할 일(Suggested to-dos)",
+        "body": "① 메일 속 마감·결제·답장 요청을 할 일로 추림 ② 꼭 해야 할 행동은 굵게 표시(예: 공과금·카드 결제일) ③ 옆 버튼 View·Reply로 바로 처리 ④ 끝나면 Mark done ⑤ 필요 없으면 More options → Remove to-do"
+      },
+      {
+        "title": "따라잡을 주제(Topics to catch up on)",
+        "body": "① 여러 스레드에 흩어진 프로젝트·여행·예약·구매 소식을 주제별로 요약 ② 최근 결정·상태 변화 정리 ③ Mark all as read를 누르면 관련 메일도 받은편지함에서 읽음 처리 ④ 링크로 원문 메일 이동"
+      },
+      {
+        "title": "이용 조건과 한계",
+        "body": "① 개인 Google AI Plus 이상 또는 대상 Workspace 요금제 ② 스마트 기능 2종 켜기, 첫 표시까지 최대 7일 ③ 기본 탭만 분석 — 소셜·프로모션, 보관·삭제·음소거·다시 알림 메일 제외 ④ 첨부파일·위임 받은편지함·암호화 메일 미지원 ⑤ 설정 → Inbox → Show AI Inbox로 표시·숨김"
+      }
+    ],
+    "can": [
+      "메일 속 마감·결제·답장 할 일을 목록으로 보기",
+      "할 일 옆 View·Reply로 원문 열기·답장하기",
+      "Mark done으로 완료 처리, Remove to-do로 지우기",
+      "여러 메일에 흩어진 주제를 요약으로 따라잡기",
+      "Refresh로 최신 상태 다시 불러오기, 항목별 긍정·부정 피드백 보내기"
+    ],
+    "cannot": [
+      "첨부파일 내용 읽기, 위임 받은편지함·암호화 메일 분석",
+      "소셜·프로모션 탭이나 보관·삭제·음소거·다시 알림 메일 반영",
+      "영어 외 언어·미국 외 지역에서 사용(현재 기준)",
+      "무료 개인 계정에서 사용",
+      "할 일을 직접 추가하기 — 도움말에 언급 없음 [확인 필요]"
+    ],
+    "safety": [
+      "AI가 할 일을 빠뜨리거나 날짜를 잘못 읽을 수 있음 — 마감일·금액은 원문 메일로 반드시 확인",
+      "AI Inbox에 없다고 할 일이 없는 것 아님 — 프로모션 탭·첨부파일 속 요청은 직접 확인",
+      "실습·시연은 연습용 계정 사용, 화면 공유 시 개인 메일 제목·내용 노출 주의",
+      "Mark all as read는 실제 메일도 읽음 처리 — 안 읽은 중요 메일을 놓칠 수 있음",
+      "회사 계정은 회사 정책(스마트 기능 사용 여부)을 따를 것 — 임의 설정 변경 금지"
+    ]
+  },
+  "practice": {
+    "preview": "강사가 미리 보낸 연습용 메일 6통(공과금 결제·교육 신청 마감·회의 자료 요청·출장 예약 3통 스레드)이 있는 계정에서 AI Inbox 열기 → 추천 할 일 처리 → 원문 대조 → 주제 요약 확인 → 내 '아침 10분 메일 정리 루틴' 카드 완성",
+    "follow": [
+      {
+        "title": "스마트 기능·AI Inbox 표시 확인",
+        "minutes": 4,
+        "do": "Gmail 웹 → 설정(톱니) → See all settings → 스마트 기능 2종 켜기 확인 → 위쪽 Inbox 탭 → 'Show AI Inbox' 체크 → 왼쪽 메뉴에 AI Inbox 표시 확인",
+        "prompt": "",
+        "expect": "왼쪽 메뉴(Inbox 위쪽)에 AI Inbox 표시",
+        "note": "스마트 기능을 막 켰다면 준비에 몇 시간~최대 7일 — 강사가 미리 켜 둔 계정 사용"
+      },
+      {
+        "title": "AI Inbox 열고 새로 고침",
+        "minutes": 4,
+        "do": "왼쪽 메뉴 AI Inbox 클릭 → 위쪽 Refresh 클릭 → 추천 할 일(Suggested to-dos)·따라잡을 주제(Topics to catch up on) 두 영역 확인",
+        "prompt": "",
+        "expect": "할 일 목록(굵은 글씨 행동 포함) + 주제 요약 카드",
+        "note": "비어 있으면 최근 메일이 적거나 기본 탭이 아닌 경우 — Plan B"
+      },
+      {
+        "title": "할 일 처리하기",
+        "minutes": 6,
+        "do": "할 일 1개 옆 View 눌러 원문 확인 → 회의 자료 요청 할 일은 Reply로 짧은 답장 → 끝난 할 일 Mark done → 필요 없는 할 일 More options → Remove to-do",
+        "prompt": "Hi Jordan, thanks for the reminder. I'll send the slides for Thursday's meeting by Wednesday 5 PM.",
+        "expect": "처리한 할 일이 목록에서 완료·삭제됨",
+        "note": "Reply 문장은 예시 — 실제 답장은 연습용 계정에서만"
+      },
+      {
+        "title": "주제 요약과 원문 대조",
+        "minutes": 4,
+        "do": "출장 예약 주제 카드 열기 → 요약의 날짜·호텔·항공편을 링크한 원문 메일과 비교 → 맞으면 Mark all as read",
+        "prompt": "",
+        "expect": "요약과 원문이 일치하는지 확인 완료",
+        "note": "Mark all as read는 원래 메일도 읽음 처리됨"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "할 일 처리 기록표",
+        "minutes": 5,
+        "do": "표 작성: 추천 할 일 / 원문 메일 제목 / 맞음·틀림·빠짐 / 처리(Mark done·Remove·Reply). 6통 중 할 일로 안 잡힌 메일도 '빠짐'으로 기록",
+        "prompt": "",
+        "expect": "기록표 1장(5~6행)",
+        "note": "빠진 할 일은 '왜 빠졌나'(탭·첨부·표현) 한 단어로 메모"
+      },
+      {
+        "title": "사이드 패널로 빠진 할 일 재확인",
+        "minutes": 4,
+        "do": "Gmail 오른쪽 위 Gemini(Ask Gemini) 열기 → 아래 문장 붙여 넣기 → AI Inbox 목록과 비교",
+        "prompt": "List every email from this week that asks me to do something by a deadline. Show the sender, the task, and the due date in a table.",
+        "expect": "AI Inbox에 없던 할 일이 있는지 비교 결과",
+        "note": "사이드 패널 이름·위치 [확인 필요], 답도 원문으로 확인"
+      },
+      {
+        "title": "아침 10분 메일 정리 루틴 카드",
+        "minutes": 5,
+        "do": "카드 1장 작성: ① AI Inbox Refresh ② 굵은 할 일부터 View로 원문 확인 ③ 처리 후 Mark done ④ 주제 요약은 원문 대조 후 읽음 ⑤ 프로모션 탭·첨부 메일은 직접 훑기 — 내 업무에 맞게 순서·시간 수정",
+        "prompt": "",
+        "expect": "내 업무용 루틴 카드 1장(단계 5개 + 단계별 분)",
+        "note": "개인 메일 내용은 카드에 적지 않기"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 6통을 기존 받은편지함에서 직접 훑어 할 일을 찾을 때 걸린 시간과 AI Inbox 시간 비교 1줄 기록"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "할 일로 잘 잡히는 메일 문장과 안 잡히는 문장을 비교해 '상대가 할 일을 알아보기 쉬운 메일 쓰기 요령' 3가지 정리"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "팀용 'AI Inbox 사용 수칙'(원문 대조·읽음 처리 주의·빠지는 메일 유형·화면 공유) 1쪽 안내문 설계"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 기록표를 바꿔 보고 '빠진 할 일'과 그 이유를 하나씩 소개, 루틴 카드 중 가장 좋은 단계 1개 공유",
+    "quiz": [
+      {
+        "q": "AI Inbox가 분석하는 메일은?",
+        "options": [
+          "모든 탭과 스팸함",
+          "기본(Primary) 탭 메일",
+          "프로모션 탭 메일만",
+          "첨부파일만"
+        ],
+        "answer": 1,
+        "explain": "기본 탭만 사용, 소셜·프로모션·스팸·보관·삭제·음소거·다시 알림 메일은 제외"
+      },
+      {
+        "q": "처리한 추천 할 일을 완료로 표시하는 버튼은?",
+        "options": [
+          "Refresh",
+          "Mark done",
+          "Report abuse",
+          "Show AI Inbox"
+        ],
+        "answer": 1,
+        "explain": "Mark done으로 완료, 필요 없으면 More options → Remove to-do"
+      },
+      {
+        "q": "주제 요약에서 Mark all as read를 누르면?",
+        "options": [
+          "요약만 사라지고 메일은 그대로",
+          "관련 메일도 받은편지함에서 읽음 처리됨",
+          "메일이 삭제됨",
+          "상대에게 답장이 보내짐"
+        ],
+        "answer": 1,
+        "explain": "도움말 기준 관련 메일도 읽음 처리 — 안 읽은 중요 메일 놓치지 않게 주의"
+      }
+    ],
+    "next": [
+      "Gmail Live로 메일함에 말로 묻기 (AI-2026-10-CAT03-009)",
+      "Google Meet 회의 후 다음 단계로 할 일을 Google Tasks에 추가 (AI-2026-10-CAT08-006)",
+      "Gemini 스킬로 반복 메일 답장 지침 저장 (AI-2026-10-CAT02-004)"
+    ],
+    "rubric": [
+      {
+        "criterion": "기능 사용",
+        "high": "Refresh·View·Reply·Mark done·Remove 모두 수행",
+        "mid": "목록 보기·Mark done만",
+        "low": "AI Inbox 열기 못 함"
+      },
+      {
+        "criterion": "원문 대조",
+        "high": "모든 할 일과 주제 요약을 원문과 대조, 빠진 할 일까지 기록",
+        "mid": "일부만 대조",
+        "low": "대조 없음"
+      },
+      {
+        "criterion": "업무 적용",
+        "high": "기록표 + 대조 메모 + 내 업무 루틴 카드 완성",
+        "mid": "기록표만",
+        "low": "예시 루틴 그대로 사용"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 강사 연습용 계정의 받은편지함 vs AI Inbox 화면 나란히 보여 주기",
+        "note": "연습용 계정만 화면 공유"
+      },
+      {
+        "time": "5~20분",
+        "content": "1부 이론: 추천 할 일·따라잡을 주제, 이용 조건(요금제·미국 영어·스마트 기능·베타), 분석 제외 메일, 안전 수칙",
+        "note": "수강생 계정 자격 미리 확인"
+      },
+      {
+        "time": "20~38분",
+        "content": "따라 하기 1~4: 표시 확인 → 열고 새로 고침 → 할 일 처리 → 주제 대조",
+        "note": "Mark all as read 효과 강조"
+      },
+      {
+        "time": "38~52분",
+        "content": "내 것 만들기: 기록표 → 사이드 패널 재확인 → 루틴 카드",
+        "note": "개인 메일 사용 시 화면 공유 금지"
+      },
+      {
+        "time": "52~58분",
+        "content": "짝 나누기·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "아침에 메일함 열면 어디부터 보세요? 오늘은 Gmail이 할 일만 먼저 골라 주는 AI Inbox를 써 보겠습니다. 받은편지함은 그대로 있고, 그 위에 할 일 화면이 하나 더 생긴다고 보시면 됩니다."
+      },
+      {
+        "label": "개념",
+        "text": "화면은 두 칸입니다. 위는 지금 처리할 할 일, 아래는 여러 메일에 흩어진 소식을 묶은 주제 요약이에요. 할 일마다 원래 메일로 가는 링크가 붙어 있습니다."
+      },
+      {
+        "label": "한계",
+        "text": "AI Inbox는 기본 탭 메일만 봅니다. 프로모션 탭에 들어간 고지서나 첨부파일 속 요청은 안 잡힐 수 있어요. 그래서 오늘 기록표에 빠진 할 일 칸을 따로 만들었습니다."
+      },
+      {
+        "label": "안전",
+        "text": "마감일이나 금액은 꼭 원래 메일을 열어서 확인하세요. 그리고 Mark all as read를 누르면 실제 메일도 읽음으로 바뀌니까, 아직 안 읽은 중요한 메일이 있으면 누르기 전에 확인합니다."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 루틴 카드대로 내일 아침 10분만 해 보세요. AI가 골라 준 할 일부터, 그다음 직접 훑어볼 곳까지. 이 두 단계가 핵심입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 계정에 AI Inbox가 안 보임(무료·한국 설정·순차 노출)",
+        "response": "강사 화면 시연 + 수강생은 받은편지함에서 같은 6통을 직접 훑어 기록표 작성, 사이드 패널 단계는 가능한 사람만"
+      },
+      {
+        "situation": "AI Inbox는 보이나 할 일이 비어 있음",
+        "response": "실습 메일이 기본 탭에 있는지 확인, 스마트 기능 켠 지 7일 미만이면 강사 계정 화면으로 진행"
+      },
+      {
+        "situation": "회사 계정인데 아직 노출 전(Scheduled Release·Business Starter)",
+        "response": "노출 일정(10-26부터·최대 15일, Starter는 몇 달 뒤) 안내 후 연습용 개인 계정 또는 강사 시연으로 대체"
+      },
+      {
+        "situation": "영어 화면이 부담스러운 수강생",
+        "response": "버튼 이름표(Refresh·View·Reply·Mark done·Remove to-do·Mark all as read)를 한국어 뜻과 함께 인쇄해 배부"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "왼쪽 메뉴에 AI Inbox가 없음",
+        "fix": "설정 → See all settings → Inbox → 'Show AI Inbox' 체크 여부 확인, 자격·언어(영어 미국)·순차 노출 확인"
+      },
+      {
+        "issue": "할 일·주제가 하나도 안 나옴",
+        "fix": "스마트 기능 2종 켜기 확인, 켠 직후면 몇 시간~최대 7일 대기, 최근 메일이 기본 탭에 있는지 확인"
+      },
+      {
+        "issue": "보낸 실습 메일이 할 일로 안 잡힘",
+        "fix": "프로모션·소셜 탭으로 분류됐거나 첨부파일 속 요청이면 제외됨 — 본문에 '무엇을 언제까지' 명확히 적어 다시 발송"
+      },
+      {
+        "issue": "Mark all as read 후 메일이 다 읽음으로 바뀜",
+        "fix": "정상 동작 — 필요하면 받은편지함에서 메일 선택 후 '읽지 않음으로 표시'"
+      },
+      {
+        "issue": "모바일에서 찾기 어려움",
+        "fix": "공지 기준 앱 메뉴(왼쪽 위 ≡)에 있음, 도움말은 컴퓨터 단계만 제공 — 실습은 PC 웹으로 [확인 필요]"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국어 메일도 할 일로 잡아 주나요?",
+        "a": "현재 미국·영어만 지원(베타). 한국어 지원 일정 공지 없음 [확인 필요]"
+      },
+      {
+        "q": "무료 Gmail 계정도 되나요?",
+        "a": "안 됨. 개인은 Google AI Plus·Pro·Ultra 필요"
+      },
+      {
+        "q": "회사 관리자가 끌 수 있나요?",
+        "a": "Workspace 공지는 '관리자 제어 없음'. 다만 사용자 스마트 기능이 꺼져 있으면 동작하지 않음"
+      },
+      {
+        "q": "AI Inbox가 받은편지함을 바꾸나요?",
+        "a": "아님. 왼쪽 메뉴의 별도 화면, 설정의 Show AI Inbox로 숨길 수 있음"
+      },
+      {
+        "q": "할 일을 지우면 메일도 지워지나요?",
+        "a": "Remove to-do는 할 일만 지움(도움말 기준). 단 Mark all as read는 관련 메일을 읽음 처리"
+      },
+      {
+        "q": "할 일을 Google Tasks로 보낼 수 있나요?",
+        "a": "도움말에 언급 없음 [확인 필요]"
+      },
+      {
+        "q": "잘못된 할 일은 어떻게 알리나요?",
+        "a": "항목 옆 More options → Positive feedback·Negative feedback·Report abuse"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "강사 시연 + AI Inbox 열기·View로 원문 보기·Mark done까지만. 버튼 이름표 인쇄물 사용"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐·⭐⭐⭐ — 할 일이 잘 잡히는 메일 쓰기 요령과 팀 수칙 설계"
+      },
+      {
+        "level": "사무·창업 (JOB-OFF·JOB-BIZ)",
+        "guide": "청구서·견적 회신·회의 자료 요청 메일 중심, 하루 시작 루틴으로 연결"
+      },
+      {
+        "level": "교사·공공 (JOB-EDU·JOB-PUB)",
+        "guide": "연수 신청 마감·공문 회신·학부모 문의 메일로 실습 메일 구성, 영어 수업이면 메일 문장 자체를 읽기 자료로 활용"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: AI가 고른 할 일부터 처리하되, 원문 대조와 직접 훑기를 함께",
+      "분석 제외 메일(프로모션·소셜 탭, 첨부, 보관·음소거) 꼭 짚기",
+      "Mark all as read는 실제 메일도 읽음 처리 — 매번 강조",
+      "스마트 기능 켠 뒤 최대 7일 — 실습 계정은 1주 전 준비",
+      "Workspace는 Rapid 10-12, Scheduled 10-26부터 최대 15일 순차 노출 — 강의 전 계정별 확인"
+    ],
+    "day_before": [
+      "연습용 Gmail 계정에 실습 메일 6통을 2~7일 전 발송(영어 본문): 공과금 결제일 안내, 교육 신청 마감 안내, 회의 자료 요청, 출장 항공·호텔·일정 변경 3통 스레드",
+      "실습 메일이 기본(Primary) 탭에 들어갔는지, AI Inbox에 할 일·주제로 잡혔는지 확인",
+      "AI Inbox 화면·할 일 버튼·주제 카드 캡처 준비(시연 실패 대비) [확인 필요]",
+      "버튼 이름표(영어·한국어 뜻)와 기록표·루틴 카드 빈 양식 인쇄",
+      "수강생 계정 자격(Google AI 구독 또는 회사 요금제·노출 일정) 사전 안내"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 회사 계정 조건 — Workspace 공지(Business Standard·Plus, Enterprise 등) vs Gmail 도움말(Enterprise Plus + Gemini 베타) 서로 다름",
+    "[확인 필요] 모바일 앱에서 여는 단계 — 공지는 '모바일 앱 메뉴', 도움말은 컴퓨터 단계만",
+    "[확인 필요] 한국 계정·한국 지역 노출 여부 — 공지·도움말 모두 미국·영어만",
+    "[미검증] Google AI Ultra 베타 시작일(2026-03-31)은 9to5Google 보도 기준, 공식 공지 미확인",
+    "[실험 기능] 도움말 기준 베타, 기능 변경 가능",
+    "교안 작성 중 실제 계정으로 AI Inbox를 재현하지 못함 — 공식 공지·도움말 기준"
+  ],
+  "sources": [
+    {
+      "title": "Google Workspace Updates – Gmail's AI Inbox is rolling out to paid Workspace users (2026-10-15)",
+      "url": "http://workspaceupdates.googleblog.com/2026/10/gmails-ai-inbox-is-rolling-out-to-paid-Workspace-users.html",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Gmail 도움말 – Manage to-dos & topics with AI Inbox",
+      "url": "https://support.google.com/mail/answer/16845247",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google 블로그 – Gmail is entering the Gemini era (2026-01-08)",
+      "url": "https://blog.google/products-and-platforms/products/gmail/gmail-is-entering-the-gemini-era/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Google 블로그 – Everything new in our Google AI subscriptions, fresh from I/O 2026 (2026-05-19)",
+      "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Gemini 구독 요금제 페이지",
+      "url": "https://gemini.google/subscriptions/",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "9to5Google – Gmail rolling out AI Inbox beta for AI Ultra subscribers (보조 근거)",
+      "url": "https://9to5google.com/2026/03/31/gmail-ai-inbox-beta-ultra/",
+      "checked": "2026-10-16"
+    }
+  ]
+}
