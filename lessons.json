@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 84,
+  "count": 85,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-012",
+      "version": "v1.0",
+      "created_at": "2026-10-17 03:20 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "PDF 안내문을 무료로 Word 파일로 바꾸고 AI로 다듬기 — Genspark GenOffice(오픈소스 AI 오피스)",
+      "summary": "2026-08-03 Genspark가 무료 오픈소스 데스크톱 오피스 GenOffice 공개(Apache 2.0, 알파). Docs·Sheets·Slides·PDF·HTML·Markdown을 한 앱에서 열고 .docx·.xlsx·.pptx로 저장. PDF→Word 변환·편집은 내 PC에서 무료 처리, AI 수정·생성은 Genspark 크레딧(무료 하루 100크레딧) 또는 내 API 키(BYOK) 사용",
+      "tool": "Genspark",
+      "feature": "GenOffice(젠오피스) — 무료 오픈소스 AI 오피스 데스크톱 앱(Docs·Sheets·Slides·PDF·HTML·Markdown), PDF→Word·Excel·PowerPoint 로컬 변환, 블록 단위 AI 수정·스냅샷·차이 보기, Genspark 크레딧 또는 BYOK",
+      "company": "Genspark (MainFunc)",
+      "type": "new",
+      "released": "2026-08-03",
+      "categories": [
+        "CAT-03",
+        "CAT-07"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① PDF 안내문을 변환한 Word 파일(.docx) + ② AI로 문장을 다듬은 수정본 + ③ AI로 만든 수업 준비물 예산표(.xlsx)",
+      "access": "freemium",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "무료 오픈소스 AI 오피스로 문서 작업"
+    },
     {
       "id": "AI-2026-10-CAT05-015",
       "version": "v1.0",

@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 02:10 KST",
+  "updated_at": "2026-10-17 03:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2026-08-03-genoffice",
+      "date": "2026-08-03",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "new",
+      "title": "GenOffice — 무료 오픈소스 AI 오피스(알파)",
+      "summary": "Docs·Sheets·Slides·PDF(이후 HTML·Markdown 추가)를 한 앱에서 쓰는 데스크톱 오피스, .docx·.xlsx·.pptx 저장·PDF→Office 로컬 변환 무료, AI 기능은 Genspark 크레딧 또는 내 API 키(BYOK) 사용, Apache 2.0",
+      "source": {
+        "title": "Genspark Blog – GenOffice: The First Open-Source AI Office Suite",
+        "url": "https://www.genspark.ai/blog/genoffice-open-source-ai-office"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT03-012"
+    },
     {
       "id": "elevenlabs-2026-10-12-audio-effects",
       "date": "2026-10-12",
