@@ -1,6 +1,6 @@
 {
   "standard": "v2.3",
-  "count": 68,
+  "count": 69,
   "lessons": [
     {
       "id": "AI-2026-10-CAT05-010",
@@ -39,6 +39,45 @@
       "notice": "",
       "emoji": "🗣️",
       "one_liner": "한국어 원어민 억양 AI 목소리로 듣기 연습"
+    },
+    {
+      "id": "AI-2026-10-CAT03-008",
+      "version": "v1.0",
+      "created_at": "2026-10-16 11:05 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "반복 업무를 '/한 번'으로 — Notion Agent 스킬(Skills)로 우리 팀 업무 지시서 만들기",
+      "summary": "Notion 스킬(Skills)은 반복 작업 지시를 Notion 페이지 1장에 적어 두고 Notion Agent·선택 메뉴·/skill로 불러 쓰는 기능. 2026-03 개인 스킬 → 2026-09-15 Notion 3.7 스킬 라이브러리·로컬 에이전트 내려받기 → 2026-10-13 스킬 공유·관리 + Skills API·MCP 연결 강화. 회의 메모→업무 보고 스킬 1개를 만들어 실행·공유까지 진행. Notion Agent는 Business($20)·Enterprise 포함, Free·Plus는 AI 체험 수준",
+      "tool": "Notion",
+      "feature": "Notion Agent 스킬(Skills) — 스킬 라이브러리·스킬 데이터베이스·/skill 실행·자동 적용·로컬 에이전트 내려받기, Skills API",
+      "company": "Notion Labs",
+      "type": "update",
+      "released": "2026-10-13",
+      "categories": [
+        "CAT-03",
+        "CAT-02",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 회의 메모를 팀 양식 업무 보고로 바꾸는 나만의 스킬 페이지 1개 + ② 스킬 실행 결과 보고서 1개 + ③ 설명(Description)을 단 팀 공유용 스킬 데이터베이스 항목 1개",
+      "access": "freemium",
+      "total_minutes": 58,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "반복 지시를 스킬로 저장해 /로 바로 실행"
     },
     {
       "id": "AI-2026-10-CAT05-009",

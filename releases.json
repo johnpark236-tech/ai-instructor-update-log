@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 09:10 KST",
+  "updated_at": "2026-10-16 11:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -16,6 +16,21 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT05-010"
+    },
+    {
+      "id": "notion-2026-10-13-skills-mcp",
+      "date": "2026-10-13",
+      "tool": "Notion",
+      "company": "Notion Labs",
+      "type": "update",
+      "title": "Notion 스킬·Skills API·MCP 150+ 연결",
+      "summary": "스킬 만들기·공유·관리와 Skills API로 ChatGPT·Claude 등과 동기화, Notion Agent·Custom Agents에 MCP 연결 150개 이상, 버전 기록 개선·열 권한·ChatGPT 요금제 연결(Business·Enterprise)",
+      "source": {
+        "title": "Notion – October 13, 2026 release",
+        "url": "https://www.notion.com/releases/2026-10-13"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT03-008"
     },
     {
       "id": "claude-2026-10-08-motion",

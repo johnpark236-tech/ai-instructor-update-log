@@ -1,0 +1,599 @@
+{
+  "id": "AI-2026-10-CAT03-008",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 11:05 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "반복 업무를 '/한 번'으로 — Notion Agent 스킬(Skills)로 우리 팀 업무 지시서 만들기",
+  "summary": "Notion 스킬(Skills)은 반복 작업 지시를 Notion 페이지 1장에 적어 두고 Notion Agent·선택 메뉴·/skill로 불러 쓰는 기능. 2026-03 개인 스킬 → 2026-09-15 Notion 3.7 스킬 라이브러리·로컬 에이전트 내려받기 → 2026-10-13 스킬 공유·관리 + Skills API·MCP 연결 강화. 회의 메모→업무 보고 스킬 1개를 만들어 실행·공유까지 진행. Notion Agent는 Business($20)·Enterprise 포함, Free·Plus는 AI 체험 수준",
+  "glance": {
+    "emoji": "🧩",
+    "one_liner": "반복 지시를 스킬로 저장해 /로 바로 실행",
+    "cards": [
+      {
+        "icon": "📄",
+        "title": "스킬 = 페이지",
+        "text": "지시 내용을 Notion 페이지에 작성"
+      },
+      {
+        "icon": "⌨️",
+        "title": "/로 바로 실행",
+        "text": "에이전트 채팅·본문에서 호출"
+      },
+      {
+        "icon": "🤖",
+        "title": "자동 적용",
+        "text": "설명 보고 Agent가 알아서 선택"
+      },
+      {
+        "icon": "👥",
+        "title": "팀 공유",
+        "text": "스킬 데이터베이스로 함께 관리"
+      }
+    ],
+    "diagram": {
+      "title": "스킬 만들고 쓰는 흐름",
+      "nodes": [
+        {
+          "icon": "🔁",
+          "label": "반복 업무 찾기"
+        },
+        {
+          "icon": "✍️",
+          "label": "지시 페이지 작성"
+        },
+        {
+          "icon": "🧩",
+          "label": "스킬로 지정"
+        },
+        {
+          "icon": "⌨️",
+          "label": "/로 실행"
+        },
+        {
+          "icon": "👥",
+          "label": "팀에 공유"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "매번 긴 지시 복붙",
+        "text": "회의 메모를 보고서로 바꿀 때마다 형식·말투 지시를 다시 써서 붙여 넣음"
+      },
+      "after": {
+        "label": "/스킬 한 번",
+        "text": "메모 옆에서 /스킬 이름만 고르면 팀 양식 보고서가 바로 나옴"
+      }
+    },
+    "cautions": [
+      "민감 정보는 스킬에 적지 않기",
+      "편집 권한자는 신중히 지정",
+      "결과물은 사람이 최종 확인"
+    ]
+  },
+  "tool": "Notion",
+  "feature": "Notion Agent 스킬(Skills) — 스킬 라이브러리·스킬 데이터베이스·/skill 실행·자동 적용·로컬 에이전트 내려받기, Skills API",
+  "company": "Notion Labs",
+  "type": "update",
+  "released": "2026-10-13",
+  "categories": [
+    "CAT-03",
+    "CAT-02",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-BIZ",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 20,
+    "practice": 32,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Notion 계정 + Notion Agent를 쓸 수 있는 워크스페이스 — Business·Enterprise 포함, Free·Plus는 AI 체험(Trial) 범위 [확인 필요]",
+    "Notion 웹 또는 데스크톱 앱(로컬 에이전트 내려받기는 데스크톱 앱 필요)",
+    "스킬로 만들 반복 업무 1개(예: 회의 메모 → 업무 보고) — 실습 예시 제공",
+    "개인정보를 지운 연습용 회의 메모 1개",
+    "강사: 수강생 워크스페이스 요금제·AI 사용 가능 여부 사전 확인"
+  ],
+  "outcome": "① 회의 메모를 팀 양식 업무 보고로 바꾸는 나만의 스킬 페이지 1개 + ② 스킬 실행 결과 보고서 1개 + ③ 설명(Description)을 단 팀 공유용 스킬 데이터베이스 항목 1개",
+  "objectives": [
+    "Notion 스킬의 개념(지시 페이지·설명·파일)과 요금제별 사용 조건을 설명할 수 있음",
+    "목표·입력·규칙·예시·출력 5요소로 스킬 페이지를 작성하고 /skill·선택 메뉴·Agent 채팅으로 실행할 수 있음",
+    "스킬 데이터베이스와 공유 권한으로 팀 스킬을 관리하고 결과물을 검토할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Notion 자체는 무료 시작 가능, Notion Agent는 Business·Enterprise에 포함. Free·Plus는 AI 체험(Trial) 수준. Custom Agents는 체험 후 Notion 크레딧 1,000개당 $10",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Notion AI 체험(Trial) — 스킬 지속 사용 여부 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $10 (1인)",
+        "features": "Notion AI 체험(Trial) 수준 [확인 필요]"
+      },
+      {
+        "name": "Business",
+        "price": "월 $20 (1인)",
+        "features": "Notion Agent 포함 — 스킬 만들기·실행·공유, AI 회의 노트"
+      },
+      {
+        "name": "Enterprise",
+        "price": "별도 문의",
+        "features": "Business 전부 + LLM 제공사 데이터 무보관(zero data retention)"
+      }
+    ],
+    "note": "요금은 Notion 요금 페이지 표기(2026-10-16 확인) 그대로, 연 결제 시 최대 20% 할인 — 연 결제 1인 금액·원화 가격 미확인. 2026-03 개인 스킬 출시 글은 Business·Enterprise 제공으로 안내. 프리미엄 모델은 Notion 크레딧 사용",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "Notion – Pricing",
+        "url": "https://www.notion.com/pricing"
+      },
+      {
+        "title": "Notion 릴리스 – March 20, 2026 Custom skills for Notion AI",
+        "url": "https://www.notion.com/releases/2026-03-20"
+      },
+      {
+        "title": "Notion 도움말 – Get started with Notion Agent",
+        "url": "https://www.notion.com/help/notion-agent"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-03-20",
+      "text": "Notion AI 맞춤 스킬(Custom skills) 출시 — 페이지 ••• > Use with AI > Use as AI skill, Business·Enterprise"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Notion 3.7 '팀 전체를 위한 에이전트 스킬' — 스킬 라이브러리, 스킬 데이터베이스, Claude Code·Codex·Cursor·Gemini·Grok로 내려받기(SKILL.md)"
+    },
+    {
+      "date": "2026-09-17",
+      "text": "Skills API 공개 — 스킬을 표준 파일 형식으로 불러오기, GitHub 동기화 시작 도구 공개"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "Notion 릴리스: 스킬 만들기·공유·관리 + Skills API로 ChatGPT·Claude 등과 동기화, MCP 연결 150개 이상·버전 기록 개선"
+    }
+  ],
+  "theory": {
+    "definition": "스킬(Skill)은 특정 종류의 일을 하는 방법을 적어 둔 Notion 페이지임. Notion Agent가 이 페이지의 지시(목표·규칙·출력 형식)를 따라 작업하고, 사용자는 /skill·선택 메뉴·Agent 채팅의 /로 불러 쓰거나 Agent가 설명을 보고 자동 적용함",
+    "analogy": "'신입에게 건네는 업무 매뉴얼 1장'. 매번 말로 설명하지 않고 매뉴얼을 주면 같은 품질로 처리하듯, 스킬 페이지 하나로 Agent가 우리 팀 방식대로 일함",
+    "comparison": {
+      "headers": [
+        "구분",
+        "일반 프롬프트",
+        "Agent 지침(Instructions)",
+        "스킬(Skill)"
+      ],
+      "rows": [
+        [
+          "저장 위치",
+          "매번 입력",
+          "개인 설정",
+          "Notion 페이지"
+        ],
+        [
+          "적용 범위",
+          "그 대화 1회",
+          "모든 대화",
+          "해당 업무만"
+        ],
+        [
+          "불러오기",
+          "복사·붙여넣기",
+          "항상 적용",
+          "/·선택 메뉴·자동"
+        ],
+        [
+          "팀 공유",
+          "어려움",
+          "개인용",
+          "페이지 공유·스킬 DB"
+        ],
+        [
+          "다른 AI에서 사용",
+          "직접 복사",
+          "불가",
+          "SKILL.md 내려받기·Skills API"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "스킬 만드는 3가지 방법",
+        "body": "① 사이드바 Library > Skills 탭 > New skill ② 기존 페이지 ••• > Use with AI > Use as a skill ③ 새 페이지 > Database > Skills로 스킬 데이터베이스 만들기 (Agent 채팅에서 '스킬 만들고 싶어'라고 말해도 됨)"
+      },
+      {
+        "title": "좋은 스킬 5요소 + 속성 2개",
+        "body": "① 목표 ② 입력 ③ 규칙(구성·말투·용어·길이) ④ 예시 ⑤ 출력 형식 + Description(언제 쓰는지 — 자동 적용 판단 근거) + Files(예시·참고 자료)"
+      },
+      {
+        "title": "실행 4가지 경로",
+        "body": "① 본문 텍스트 선택 → 메뉴에서 스킬 ② 내용 옆에서 /skill ③ 블록 ⁚⁚ 아이콘 > Skills ④ Notion Agent 채팅에서 / + 스킬 이름. 스킬 데이터베이스 + 설명이 있으면 Use automatically로 자동 적용"
+      }
+    ],
+    "can": [
+      "반복 지시를 페이지 1장으로 저장해 /로 재사용",
+      "기본 메뉴(Improve Writing·Proofread·Explain·Reformat) 옆에 내 스킬 추가",
+      "스킬 데이터베이스로 팀 스킬 모아 공유·담당자 지정",
+      "페이지 기록(History)으로 스킬 수정 내역 확인·되돌리기",
+      "Custom Agents의 Tools and access에 스킬 연결",
+      "데스크톱 앱에서 Claude Code·Codex·Cursor 등으로 SKILL.md 내려받기"
+    ],
+    "cannot": [
+      "빈 블록이나 지원하지 않는 블록(표 등)에 스킬 실행",
+      "내용 없는 줄에서 /skill 메뉴 표시",
+      "내려받은 SKILL.md 자동 갱신(바뀌면 배지 보고 다시 내려받기)",
+      "설명 없는 개인 스킬의 자동 적용(스킬 데이터베이스 + Description 필요)",
+      "Free·Plus에서 무제한 사용 — 체험 범위 [확인 필요]"
+    ],
+    "safety": [
+      "스킬 페이지에 고객·학생 개인정보, 비밀번호, 내부 금액을 적지 않을 것",
+      "편집 권한이 있으면 모두의 스킬이 바뀜 — 공유 스킬은 편집자 최소화 + 담당자(Owner) 지정",
+      "남이 공유한 스킬은 Enable 전 내용 확인 — 이상한 외부 링크·지시 포함 여부 점검",
+      "AI 결과물은 사실·숫자를 원문 메모와 대조 후 사용",
+      "로컬 에이전트로 내려받은 스킬·스크립트는 내 컴퓨터에서 실행되므로 출처 확인 후 사용"
+    ]
+  },
+  "practice": {
+    "preview": "회의 메모를 팀 양식 업무 보고로 바꾸는 스킬 1개 만들기 → /skill·Agent 채팅으로 실행 → 스킬 데이터베이스에 설명 달아 팀 공유",
+    "follow": [
+      {
+        "title": "연습용 회의 메모 준비",
+        "minutes": 4,
+        "do": "새 Notion 페이지 '10월 3주 팀 회의' 만들기 → 아래 메모 붙여 넣기",
+        "prompt": "10/14 팀 회의\n- 참석: 김 팀장, 이 주임, 박 강사\n- 11월 교육 신청자 42명, 목표 50명\n- 홍보 문자 10/20 재발송하기로 함 (이 주임)\n- 교재 인쇄 견적 2곳 비교 필요 (박 강사, 10/18까지)\n- 강의실 B 프로젝터 고장 → 시설팀 요청\n- 다음 회의 10/21",
+        "expect": "메모 페이지 1개",
+        "note": "실제 이름·연락처 대신 가명 사용"
+      },
+      {
+        "title": "스킬 페이지 만들기",
+        "minutes": 7,
+        "do": "사이드바 Library > Skills 탭 > New skill → 제목 '회의 메모 → 업무 보고' → 아래 지시 붙여 넣기",
+        "prompt": "# 목표\n팀 회의 메모를 상사에게 올리는 업무 보고로 바꾼다.\n\n# 입력\n선택한 회의 메모(날짜, 참석자, 논의 내용)\n\n# 규칙\n- 개조식, 문장 끝은 '~함/~임'으로 끝낸다\n- 숫자·날짜·담당자는 메모에 있는 것만 쓴다. 없는 내용은 만들지 않는다\n- 전체 15줄 이내\n\n# 출력 형식\n1. 회의 개요(날짜·참석자)\n2. 주요 현황(숫자 포함)\n3. 결정 사항\n4. 할 일 표(할 일 | 담당 | 기한)\n5. 확인 필요 사항",
+        "expect": "상단에 스킬 배너가 붙은 스킬 페이지",
+        "note": "Library 위치·한글 메뉴명 [확인 필요] — 안 보이면 설정 > Notion AI > Skills"
+      },
+      {
+        "title": "선택 메뉴로 실행",
+        "minutes": 5,
+        "do": "회의 메모 페이지에서 메모 본문 전체 선택 → 나타난 메뉴에서 '회의 메모 → 업무 보고' 선택 (안 보이면 Library > Skills에서 Add to text editor menu 켜기)",
+        "prompt": "",
+        "expect": "5개 항목 형식의 업무 보고 초안",
+        "note": "빈 블록·표는 지원 안 됨 — 글머리 목록·텍스트 블록에서 실행"
+      },
+      {
+        "title": "Agent 채팅에서 / 실행",
+        "minutes": 5,
+        "do": "하단 Notion Agent(얼굴 아이콘) 열기 → / 입력 → 스킬 선택 → 회의 메모 페이지를 @로 지정해 요청",
+        "prompt": "/회의 메모 → 업무 보고 @10월 3주 팀 회의 페이지를 보고서로 정리해서 새 페이지로 만들어 줘",
+        "expect": "새 페이지에 업무 보고 생성",
+        "note": "메모에 없는 숫자가 생겼는지 원문과 대조"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "Agent와 스킬 다듬기",
+        "minutes": 4,
+        "do": "결과가 아쉬운 점 1가지를 Agent에게 말해 스킬 페이지 자체를 고치게 하기",
+        "prompt": "'회의 메모 → 업무 보고' 스킬에서 할 일 표에 '진행 상태' 열을 추가하고, 기한이 지난 일은 맨 위로 오도록 규칙을 고쳐 줘.",
+        "expect": "규칙이 수정된 스킬 페이지 + 페이지 기록에 변경 내역",
+        "note": "스킬을 고치면 이후 실행 결과 전부 바뀜"
+      },
+      {
+        "title": "스킬 데이터베이스로 팀 공유",
+        "minutes": 5,
+        "do": "새 페이지 > Database > Skills로 '우리 팀 스킬' 데이터베이스 만들기 → 스킬 페이지 ••• > Move to로 이동 → Description 입력 → 팀원에게 공유",
+        "prompt": "Description 예: 팀 회의 메모를 상사 보고용 개조식 업무 보고(개요·현황·결정·할 일 표·확인 필요)로 바꿀 때 사용",
+        "expect": "설명이 달린 팀 스킬 1개 + 공유 설정",
+        "note": "편집 권한은 담당자만, 나머지는 읽기 권한"
+      },
+      {
+        "title": "내 업무 스킬 1개 더",
+        "minutes": 2,
+        "do": "내 반복 업무(수업 안내문·민원 답변 초안·주간 보고 등) 1개를 골라 Agent 채팅에서 / → + 또는 '스킬 만들고 싶어'로 초안 만들기",
+        "prompt": "매주 수강생에게 보내는 수업 안내 문자를 만드는 스킬을 만들고 싶어. 일시·장소·준비물을 받아서 3줄 이내 공손한 안내 문자로 만들어 줘.",
+        "expect": "내 업무 스킬 초안 1개",
+        "note": "실제 학생 정보는 넣지 않기"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "만든 스킬을 Library > Skills에서 Add to text editor menu로 켜고, 다른 메모에 /skill로 실행해 보기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "스킬 데이터베이스에 Owner·Status 속성을 추가하고 Use automatically를 켠 뒤 스킬 이름 없이 '이 메모 보고서로 정리해 줘'라고만 요청해 자동 적용되는지 확인"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "데스크톱 앱에서 스킬 ••• > Download to local agents로 Claude Code·Codex 등에 SKILL.md를 내려받아 같은 메모로 결과 비교"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 서로의 스킬 페이지를 바꿔 실행해 보고 '규칙이 더 분명해야 할 부분' 한 가지씩 피드백",
+    "quiz": [
+      {
+        "q": "Notion에서 스킬(Skill)의 실체는 무엇인가?",
+        "options": [
+          "별도 앱에 설치하는 확장 프로그램",
+          "지시 내용을 적은 Notion 페이지",
+          "관리자만 만드는 API 키",
+          "Notion이 미리 정해 둔 고정 메뉴"
+        ],
+        "answer": 1,
+        "explain": "스킬은 일반 Notion 페이지 — 공유·편집·기록 관리가 페이지와 같음"
+      },
+      {
+        "q": "Notion Agent가 스킬 이름을 말하지 않아도 자동으로 적용하려면 필요한 것은?",
+        "options": [
+          "스킬 이름을 영어로 짓기",
+          "스킬 데이터베이스 안에 있고 Description(설명)이 있어야 함",
+          "Enterprise 요금제만 가능",
+          "매번 /skill 입력"
+        ],
+        "answer": 1,
+        "explain": "자동 적용(Use automatically)은 스킬 데이터베이스 + 설명이 조건"
+      },
+      {
+        "q": "공유 스킬 관리로 가장 알맞은 것은?",
+        "options": [
+          "모든 팀원에게 편집 권한 부여",
+          "스킬에 고객 연락처를 예시로 넣기",
+          "담당자(Owner)를 정하고 편집 권한은 최소화",
+          "내려받은 SKILL.md는 자동 갱신되니 신경 쓰지 않기"
+        ],
+        "answer": 2,
+        "explain": "편집자는 모두의 스킬을 바꿀 수 있음, 내려받은 파일은 자동 갱신 안 됨"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "스킬 구조",
+        "high": "목표·입력·규칙·예시·출력 모두 포함",
+        "mid": "3~4요소 포함",
+        "low": "한 줄 지시뿐"
+      },
+      {
+        "criterion": "실행·검증",
+        "high": "2가지 경로로 실행 + 원문 대조",
+        "mid": "1가지 경로 실행",
+        "low": "실행 못 함"
+      },
+      {
+        "criterion": "팀 공유",
+        "high": "스킬 DB + 설명 + 권한 설정",
+        "mid": "페이지 공유만",
+        "low": "공유 없음"
+      }
+    ],
+    "next": [
+      "Gemini 스킬(Skills)로 반복 프롬프트 저장하기 (AI-2026-10-CAT02-001)",
+      "Claude Code Mods로 작업 환경 맞춤 설정 (AI-2026-10-CAT07-002)",
+      "Google Workspace Studio로 업무 자동 흐름 만들기 (AI-2026-10-CAT08-005)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 긴 지시를 복붙하는 장면 vs /스킬 한 번 시연",
+        "note": "차이 체감"
+      },
+      {
+        "time": "5~20분",
+        "content": "1부 이론: 스킬 개념·5요소·실행 경로·요금제·안전",
+        "note": "수강생 워크스페이스 요금제 확인"
+      },
+      {
+        "time": "20~41분",
+        "content": "따라 하기 1~4: 메모 준비 → 스킬 작성 → 선택 메뉴 실행 → Agent 채팅 실행",
+        "note": "Library 위치 화면 안내"
+      },
+      {
+        "time": "41~52분",
+        "content": "내 것 만들기: 스킬 다듬기 → 스킬 DB 공유 → 내 업무 스킬",
+        "note": "개인정보 금지 재안내"
+      },
+      {
+        "time": "52~58분",
+        "content": "짝 피드백·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "매주 회의록 정리할 때마다 'AI야, 이런 형식으로, 이런 말투로…' 길게 쓰시죠? 오늘은 그 설명을 한 번만 써 두고, 다음부터는 슬래시 한 번으로 끝내는 방법을 배웁니다."
+      },
+      {
+        "label": "개념",
+        "text": "Notion 스킬은 특별한 프로그램이 아니라 그냥 Notion 페이지예요. 신입에게 주는 업무 매뉴얼 한 장이라고 생각하시면 됩니다."
+      },
+      {
+        "label": "작성 요령",
+        "text": "좋은 스킬은 다섯 가지가 들어갑니다. 목표, 입력, 규칙, 예시, 출력 형식. 특히 '메모에 없는 숫자는 만들지 마'라는 규칙은 꼭 넣으세요."
+      },
+      {
+        "label": "안전",
+        "text": "스킬 페이지에는 학생 이름이나 연락처, 내부 금액을 적지 않습니다. 그리고 편집 권한이 있는 사람은 모두가 쓰는 스킬을 바꿀 수 있으니 담당자를 꼭 정해 두세요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 스킬은 다음 주 회의부터 바로 쓰실 수 있습니다. 한 달만 써 보시면 팀만의 스킬 목록이 생길 거예요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 워크스페이스에서 Notion Agent·스킬이 안 보임(Free·Plus)",
+        "response": "강사 Business 워크스페이스에 게스트로 초대하거나 강사 화면 시연 + 수강생은 스킬 페이지 작성(5요소)까지만 진행"
+      },
+      {
+        "situation": "Library > Skills 메뉴를 못 찾음",
+        "response": "설정 > Notion AI > Skills 경로 또는 페이지 ••• > Use with AI > Use as a skill로 대체"
+      },
+      {
+        "situation": "AI 크레딧·사용량 한도 도달",
+        "response": "짝 기기로 실행 결과 함께 보기, 남은 시간은 스킬 규칙 다듬기 중심"
+      },
+      {
+        "situation": "인터넷·로그인 문제",
+        "response": "미리 준비한 결과 캡처로 설명, 스킬 페이지는 메모장에 초안 작성 후 나중에 붙여 넣기"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "/skill을 쳐도 스킬이 안 나옴",
+        "fix": "내용이 있는 줄에서 입력해야 함 + 스킬의 Add to text editor menu 켜기"
+      },
+      {
+        "issue": "선택 메뉴에 내 스킬이 없음",
+        "fix": "Library > Skills 탭에서 해당 스킬 Add to text editor menu 켜기"
+      },
+      {
+        "issue": "결과에 메모에 없는 숫자·날짜가 생김",
+        "fix": "규칙에 '메모에 있는 것만, 없으면 확인 필요로 표시' 추가 후 재실행"
+      },
+      {
+        "issue": "자동 적용이 안 됨",
+        "fix": "스킬을 스킬 데이터베이스로 옮기고 Description 작성, Use automatically 켜기 확인"
+      },
+      {
+        "issue": "표 안 내용에 스킬이 실행 안 됨",
+        "fix": "지원 블록(텍스트·제목·목록·토글·인용·콜아웃 등)으로 바꾸거나 Agent 채팅에서 페이지를 @로 지정"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 요금제에서도 스킬을 쓸 수 있나요?",
+        "a": "Notion Agent는 Business·Enterprise 포함. Free·Plus는 AI 체험(Trial) 범위 — 체험 한도·스킬 사용 범위 [확인 필요]"
+      },
+      {
+        "q": "스킬과 Agent 지침(Instructions)은 뭐가 다른가요?",
+        "a": "지침은 모든 대화에 항상 적용되는 개인 설정, 스킬은 특정 업무에만 불러 쓰는 페이지"
+      },
+      {
+        "q": "팀원이 내 스킬을 고칠 수 있나요?",
+        "a": "편집 권한이 있으면 가능, 모두에게 바뀐 내용 적용. 페이지 기록으로 되돌리기 가능"
+      },
+      {
+        "q": "ChatGPT·Claude에서도 이 스킬을 쓸 수 있나요?",
+        "a": "데스크톱 앱 Download to local agents로 Claude Code·Codex·Cursor·Gemini·Grok에 SKILL.md 저장 가능. Skills API·GitHub 동기화로 다른 에이전트 앱 연결 가능(개발 작업 필요)"
+      },
+      {
+        "q": "스킬을 지우면 어떻게 되나요?",
+        "a": "휴지통으로 옮기면 모든 사용자에게서 삭제. 나만 끄려면 Library > Skills에서 토글 끄기"
+      },
+      {
+        "q": "스킬에 예시 파일을 붙일 수 있나요?",
+        "a": "스킬 데이터베이스의 Files 속성에 예시·참고 문서·이미지·데이터 파일 첨부 가능"
+      },
+      {
+        "q": "한국어로 스킬을 써도 되나요?",
+        "a": "지시 내용은 자유롭게 작성 가능. 메뉴 한글 표기는 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "강사가 준비한 스킬 페이지를 공유받아 Enable for me → 선택 메뉴 실행까지만"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ + Custom Agents에 스킬 연결, 로컬 에이전트 결과 비교"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수업 안내문·과제 피드백·가정통신문 스킬 3종 세트로 변형"
+      },
+      {
+        "level": "공공·평생교육 (JOB-PUB)",
+        "guide": "민원 답변 초안·결과 보고서 양식 스킬, 개인정보 규칙 강조"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 스킬 = 업무 매뉴얼 페이지, 한 번 써 두고 /로 재사용",
+      "5요소(목표·입력·규칙·예시·출력) 중 '없는 내용 만들지 않기' 규칙을 반드시 넣게 할 것",
+      "자동 적용 조건(스킬 DB + 설명)을 분명히 구분",
+      "공유 스킬은 담당자·편집 권한 관리가 품질을 좌우",
+      "요금제별 차이(Business 이상 Agent 포함)를 수업 전 정확히 안내"
+    ],
+    "day_before": [
+      "강사 워크스페이스에서 Library > Skills, New skill, Use with AI 메뉴의 한글 표기 확인·캡처 [확인 필요]",
+      "예시 회의 메모·스킬 페이지로 선택 메뉴·Agent 채팅 실행 리허설",
+      "스킬 데이터베이스(Database > Skills) 만들기 화면 캡처",
+      "수강생 워크스페이스 요금제·AI 사용 가능 여부 확인, 필요 시 게스트 초대 준비",
+      "데스크톱 앱에서 Download to local agents 메뉴 확인(고급반용)"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Library·Skills·New skill·Use with AI 등 메뉴의 한국어 표기",
+    "[확인 필요] Free·Plus 요금제의 AI 체험 한도와 스킬 사용 범위 — 요금 페이지 표기만 확인",
+    "[확인 필요] 연 결제 1인 금액·원화 가격",
+    "[확인 필요] 2026-10-13 릴리스의 스킬 관련 신규 범위 — 릴리스 글은 개요만 있고 세부 변경점 미기재",
+    "교안 작성 중 실제 워크스페이스로 재현하지 못함 — 릴리스 노트·도움말 기준"
+  ],
+  "sources": [
+    {
+      "title": "Notion 릴리스 – October 13, 2026",
+      "url": "https://www.notion.com/releases/2026-10-13",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Notion 도움말 – Skills for Notion Agent",
+      "url": "https://www.notion.com/help/create-and-manage-skills",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Notion 가이드 – Getting started with skills in Notion",
+      "url": "https://www.notion.com/help/guides/getting-started-with-skills-in-notion",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Notion 릴리스 – Notion 3.7: Agent skills for your whole team (2026-09-15)",
+      "url": "https://www.notion.com/releases/2026-09-15",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Notion 블로그 – A skills library for every agent",
+      "url": "https://www.notion.com/blog/a-skills-library-for-every-agent",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Notion – Pricing",
+      "url": "https://www.notion.com/pricing",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Notion 도움말 – Get started with Notion Agent",
+      "url": "https://www.notion.com/help/notion-agent",
+      "checked": "2026-10-16"
+    }
+  ]
+}
