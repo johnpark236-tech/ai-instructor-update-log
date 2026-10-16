@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-16 07:25 KST",
+  "updated_at": "2026-10-16 09:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "chatgpt-2026-10-15-gpt-live-1-1",
+      "date": "2026-10-15",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "GPT-Live-1.1·새 음성(한국어 포함)",
+      "summary": "ChatGPT Voice에 GPT-Live-1.1과 소형판 GPT-Live-1.1 Quip 추가, 언어별 억양 개선, 한국어·일본어·프랑스어 등 새 음성 제공 (음성은 지역·계정별 상이)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": null
+    },
+    {
+      "id": "claude-2026-10-08-motion",
+      "date": "2026-10-08",
+      "tool": "Claude",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "Claude Motion(베타) — 설명 애니메이션",
+      "summary": "프롬프트로 글·차트·도형·이미지를 코드로 움직이는 짧은 설명 애니메이션 생성, 대화·편집기 수정, MP4 내보내기 (Team 기본 켜짐·Enterprise는 관리자 설정, 실사·사람 생성 불가)",
+      "source": {
+        "title": "Claude 도움말 – Get started with Claude Motion",
+        "url": "https://support.claude.com/en/articles/17454997-get-started-with-claude-motion"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT05-009"
+    },
     {
       "id": "chatgpt-2025-07-29-study-mode",
       "date": "2025-07-29",
