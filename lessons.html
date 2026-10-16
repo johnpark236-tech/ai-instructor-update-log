@@ -145,7 +145,7 @@ const opt=(v,t,cur)=>`<option value="${v}" ${v===cur?'selected':''}>${t}</option
 function listView(){
   const done=getDone(),fav=getFav(),all=ordered(),doneN=all.filter(l=>done[l.id]).length,favN=all.filter(l=>fav[l.id]).length;
   const items=newestFirst().filter(l=>tab==='fav'?!!fav[l.id]:(tab==='done')===!!done[l.id]).filter(l=>
-    (f.kind==='all'||(f.kind==='past'?M.isPast(l):l.type===f.kind))&&(!f.acc||l.access===f.acc)&&(!f.ai||M.brand(l)===f.ai)&&(!f.cat||l.categories.includes(f.cat))&&
+    (f.kind==='all'||(f.kind==='past'?M.isPast(l):l.type===f.kind))&&(!f.acc||l.access===f.acc)&&M.brandMatch(l,f.ai,INDEX.lessons)&&(!f.cat||l.categories.includes(f.cat))&&
     (!f.lvl||l.learner_levels.includes(f.lvl)||l.instructor_levels.includes(f.lvl))&&(!f.job||l.jobs.includes(f.job))&&
     (!f.q||JSON.stringify(l).toLowerCase().includes(f.q.toLowerCase())));
   app.innerHTML=`${inAppBanner()}<section class="hero"><div class="ey">HOURLY AI PRACTICE · 기준 v2.3</div><h1>새 AI 기능,<br>바로 배우고 바로 가르치는 교안.</h1>
@@ -153,11 +153,12 @@ function listView(){
   <div class="tabs"><button class="tab ${tab==='todo'?'on':''}" data-t="todo">학습할 교안 <b>${all.length-doneN}</b></button><button class="tab ${tab==='fav'?'on':''}" data-t="fav">★ 즐겨찾기 <b>${favN}</b></button><button class="tab ${tab==='done'?'on':''}" data-t="done">완료 <b>${doneN}</b></button></div>
   <div class="tools">${[['all','전체'],['new','신규 AI'],['update','기존 AI'],['past','📚 지난 기능']].map(([k,t])=>`<button class="chip ${f.kind===k?'on':''}" data-k="${k}">${t}</button>`).join('')}</div>
   <div class="tools frow"><span class="fl">💳 요금</span>${[['','전체'],['free','무료'],['freemium','무료+유료'],['paid','유료']].map(([k,t])=>`<button class="chip ${f.acc===k?'on':''}" data-acc="${k}">${t} <b>${k?all.filter(l=>l.access===k).length:all.length}</b></button>`).join('')}</div>
-  <div class="tools frow"><span class="fl">🤖 AI</span>${[['','전체',all.length],...Object.entries(all.reduce((o,l)=>{const b=M.brand(l);o[b]=(o[b]||0)+1;return o},{})).sort((a,b)=>b[1]-a[1]).map(([b,n])=>[b,b,n])].map(([k,t,n])=>`<button class="chip ${f.ai===k?'on':''}" data-ai="${esc(k)}">${esc(t)} <b>${n}</b></button>`).join('')}</div>
+  <div class="tools frow"><span class="fl">🤖 AI</span>${(()=>{const g=M.brandGroups(all);return [['','전체',all.length,''],...g.main.map(([b,n])=>[b,b,n,'']),...(g.etcN?[['기타','기타',g.etcN,g.etc.join(' · ')]]:[])].map(([k,t,n,tip])=>`<button class="chip ${f.ai===k?'on':''}" data-ai="${esc(k)}"${tip?` title="${esc(tip)}"`:''}>${esc(t)} <b>${n}</b></button>`).join('')})()}</div>
   <div class="tools"><select id="fc">${opt('','카테고리 전체',f.cat)}${Object.entries(M.CAT).map(([k,v])=>opt(k,`${k} ${v}`,f.cat)).join('')}</select>
   <select id="fl">${opt('','대상 전체',f.lvl)}${Object.keys(M.LEVEL).map(k=>opt(k,`${M.LEVEL[k]} ${k.includes('강사')?k:'학습자-'+k}`,f.lvl)).join('')}</select>
   <select id="fj">${opt('','직업군 전체',f.job)}${Object.entries(M.JOB).map(([k,v])=>opt(k,v,f.job)).join('')}</select>
   <input id="q" placeholder="AI 이름·기능 검색" value="${esc(f.q)}"></div>
+  ${f.ai==='기타'?`<div class="pnote" style="margin:-4px 0 8px">기타: ${esc(M.brandGroups(all).etc.join(' · '))}</div>`:''}
   <div class="list">${items.length?items.map(l=>`<div class="card item"><a class="go" href="#${esc(l.id)}">
    <div class="lrow"><div class="lemo">${esc(l.emoji||"📘")}</div><div><div class="ttl"><span class="no">#${l.no}</span>${kindB(l.type)}${pastB(l)}${accB(l.access)}${esc(l.title)}</div><div class="lone">${esc(l.one_liner||"")}</div></div></div>
    ${l.notice?`<div class="call warn">⚠️ ${esc(l.notice)}</div>`:''}

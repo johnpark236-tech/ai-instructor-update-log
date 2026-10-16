@@ -64,14 +64,26 @@ window.LESSON_META = {
     if (items.length > 1 && /[:：—]$/.test(items[0])) lead = items.shift();
     return { lead, items };
   },
-  // 목록 필터용 AI 서비스 묶음 (도구 이름 기준)
+  // 목록 필터용 AI 묶음 — 회사명 없이 AI 이름만. Gmail·Meet·Workspace 의 AI 기능은 Gemini 로 동작하므로 Gemini 에 포함
   brand(L) {
     const t = String(L.tool || '');
-    if (/ChatGPT|Codex|OpenAI|Sora/i.test(t)) return 'ChatGPT';
+    if (/ChatGPT|Codex|Sora/i.test(t)) return 'ChatGPT';
     if (/Claude/i.test(t)) return 'Claude';
-    if (/Gemini|NotebookLM|Google|SynthID|Veo|Imagen/i.test(t)) return 'Gemini·Google';
+    if (/Gemini|NotebookLM|Gmail|Google (Meet|Workspace|Docs|Sheets|Slides|Drive)|Veo|Imagen/i.test(t)) return 'Gemini';
     if (/Copilot/i.test(t)) return 'Copilot';
     return t.split(/\s|\(/)[0] || '기타';
+  },
+  // 교안 3개 미만인 AI 는 '기타' 버튼 하나로 묶음 (버튼이 너무 많아지지 않게)
+  brandGroups(list) {
+    const c = {}; list.forEach(l => { const b = this.brand(l); c[b] = (c[b] || 0) + 1; });
+    const main = Object.entries(c).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]);
+    const etc = Object.entries(c).filter(([, n]) => n < 3).map(([b]) => b);
+    return { main, etc, etcN: etc.reduce((s, b) => s + c[b], 0) };
+  },
+  brandMatch(L, sel, list) {
+    if (!sel) return true;
+    const b = this.brand(L);
+    return sel === '기타' ? this.brandGroups(list).etc.includes(b) : b === sel;
   },
   totalMinutes(L) { const m = L.minutes || {}; return (m.theory || 0) + (m.practice || 0) + (m.wrap || 0); },
   promptText(L) {
