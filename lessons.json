@@ -1,6 +1,6 @@
 {
   "standard": "v2.3",
-  "count": 72,
+  "count": 73,
   "lessons": [
     {
       "id": "AI-2026-10-CAT03-009",
@@ -39,6 +39,44 @@
       "notice": "",
       "emoji": "📬",
       "one_liner": "메일함에 말로 묻고 소리로 답 듣기"
+    },
+    {
+      "id": "AI-2026-10-CAT05-011",
+      "version": "v1.0",
+      "created_at": "2026-10-16 15:10 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "글 한 편을 '배경음악 깔린 낭독 트랙'으로 — Suno Speech(베타)로 동화·시 오디오 만들기",
+      "summary": "2026-10-01 Suno가 목소리와 배경음악을 한 번에 만드는 Speech(베타)를 웹·모바일 전체 사용자에게 공개. 아이디어나 직접 쓴 시·글을 넣고 목소리 느낌 + 음악 스타일을 설명하면 낭독과 음악이 한 트랙으로 나옴. 잠자리 동화·시 낭송·응원 메시지 오디오 실습. 무료 하루 50크레딧(평생 내려받기 7회·비상업), Pro 월 $8·Premier 월 $24(상업 이용)",
+      "tool": "Suno",
+      "feature": "Speech(베타) — 목소리와 배경음악을 한 트랙으로 만드는 낭독 생성",
+      "company": "Suno",
+      "type": "update",
+      "released": "2026-10-01",
+      "categories": [
+        "CAT-05",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-CRE",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 잠자리 동화 낭독 트랙 1개(부드러운 피아노 배경) + ② 내가 쓴 시·응원 메시지 낭독 트랙 1개 + ③ 목소리·음악 설명을 바꿔 비교한 메모 1장",
+      "access": "freemium",
+      "total_minutes": 58,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "글을 음악 깔린 낭독 오디오로 변환"
     },
     {
       "id": "AI-2026-10-CAT05-010",

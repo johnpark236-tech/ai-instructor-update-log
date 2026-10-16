@@ -1,7 +1,52 @@
 {
-  "updated_at": "2026-10-16 16:05 KST",
+  "updated_at": "2026-10-16 15:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "suno-2026-10-05-albums",
+      "date": "2026-10-05",
+      "tool": "Suno",
+      "company": "Suno",
+      "type": "update",
+      "title": "Albums — 작품을 앨범으로 공개",
+      "summary": "내 작품을 앨범으로 묶어 공개하고 팔로워에게 알림, 기존 재생목록을 앨범으로 전환 가능",
+      "source": {
+        "title": "Suno Release Notes",
+        "url": "https://suno.com/release-notes"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": null
+    },
+    {
+      "id": "suno-2026-10-01-speech-beta",
+      "date": "2026-10-01",
+      "tool": "Suno",
+      "company": "Suno",
+      "type": "update",
+      "title": "Speech(베타) — 목소리와 배경음악을 한 트랙으로",
+      "summary": "아이디어·시·글을 넣고 목소리와 음악 스타일을 설명하면 낭독과 배경음악을 한 번에 생성하는 베타 모델, 약 한 달 시험 후 웹·모바일 모든 사용자에게 공개",
+      "source": {
+        "title": "Suno Release Notes – Introducing Speech (beta)",
+        "url": "https://www.suno.com/release-notes/introducing-speech-beta"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT05-011"
+    },
+    {
+      "id": "suno-2026-09-09-v6",
+      "date": "2026-09-09",
+      "tool": "Suno",
+      "company": "Suno",
+      "type": "update",
+      "title": "v6 모델군(v6·v6-wild·v6-mini)",
+      "summary": "말로 곡 일부 수정·매시업·샘플링·텍스트/오디오/이미지/영상 입력 지원, v6·v6-wild는 유료, v6-mini는 모든 사용자",
+      "source": {
+        "title": "Suno Release Notes – Introducing v6",
+        "url": "https://suno.com/release-notes/introducing-v6"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": null
+    },
     {
       "id": "gmail-2026-10-15-gmail-live-workspace",
       "date": "2026-10-15",
