@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-16 13:05 KST",
+  "updated_at": "2026-10-16 16:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "gmail-2026-10-15-gmail-live-workspace",
+      "date": "2026-10-15",
+      "tool": "Gmail",
+      "company": "Google",
+      "type": "update",
+      "title": "Gmail Live Workspace 유료 요금제 확대",
+      "summary": "메일함에 말로 묻고 소리로 답을 듣는 Gmail Live(베타)를 Business·Enterprise 등 Workspace 유료 요금제로 순차 확대 (모바일 앱, 미국 영어 사용자부터)",
+      "source": {
+        "title": "Google Workspace Updates – Gmail Live is rolling out to paid Workspace users",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT03-009"
+    },
+    {
+      "id": "google-2026-09-03-gmail-docs-keep-live",
+      "date": "2026-09-03",
+      "tool": "Gmail",
+      "company": "Google",
+      "type": "update",
+      "title": "Gmail Live·Docs Live·Keep Live",
+      "summary": "Gmail·Docs·Keep에 음성 대화 기능 추가 — Google AI Plus·Pro·Ultra 개인 구독자부터 (Docs Live는 Pro·Ultra)",
+      "source": {
+        "title": "Google 블로그 – Use your voice to get more done in Gmail, Docs, and Keep",
+        "url": "https://blog.google/products-and-platforms/products/workspace/voice-features-gmail-docs-keep"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT03-009"
+    },
     {
       "id": "chatgpt-2026-10-15-gpt-live-1-1",
       "date": "2026-10-15",
