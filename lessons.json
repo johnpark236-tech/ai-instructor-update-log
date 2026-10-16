@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 73,
+  "count": 74,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-012",
+      "version": "v1.0",
+      "created_at": "2026-10-16 16:10 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "흩어진 AI 노래를 '내 첫 앨범'으로 — Suno Albums로 EP 만들어 공개하기",
+      "summary": "2026-10-05 Suno가 내 곡을 묶어 한 작품으로 공개하는 Albums 출시. 보관함(Library) > Albums > + New Album에서 표지·제목·LP/EP·설명 입력 → 곡 추가·순서 정리 → Publish Album, 공개 시 팔로워에게 알림. 기존 재생목록을 앨범으로 바로 전환도 가능. 수업 주제곡 3~4곡으로 미니 EP 완성 실습. 무료 하루 50크레딧, Pro 월 $8·Premier 월 $24",
+      "tool": "Suno",
+      "feature": "Albums — 내 곡을 LP·EP 앨범으로 묶어 공개, 재생목록을 앨범으로 전환",
+      "company": "Suno",
+      "type": "update",
+      "released": "2026-10-05",
+      "categories": [
+        "CAT-05",
+        "CAT-11"
+      ],
+      "jobs": [
+        "JOB-CRE",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-STU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 수업 주제로 묶은 미니 EP 1장(곡 3~4개 + 표지 + 제목 + 소개 글) + ② 곡 순서를 정한 이유 메모 + ③ 공개 전 피드백용 초안 공유 링크",
+      "access": "freemium",
+      "total_minutes": 54,
+      "notice": "",
+      "emoji": "💿",
+      "one_liner": "내 AI 노래를 앨범으로 묶어 공개"
+    },
     {
       "id": "AI-2026-10-CAT03-009",
       "version": "v1.0",
