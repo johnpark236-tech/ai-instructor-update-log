@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 11:05 KST",
+  "updated_at": "2026-10-16 12:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -654,13 +654,13 @@
       "company": "Anthropic",
       "type": "update",
       "title": "Claude Sonnet 5.5",
-      "summary": "Opus 5.5를 보완하는 더 빠르고 저렴한 Sonnet 5.5 출시",
+      "summary": "Opus 5.5를 보완하는 더 빠르고 저렴한 모델, Sonnet 5보다 출력 30% 이상 빠르고 작업당 비용 최대 30% 절감(발표), 문서·슬라이드·시트 만들기 강화, 앱 기본 Effort Medium, API 입력 $2·출력 $10",
       "source": {
-        "title": "Claude 릴리스 노트",
-        "url": "https://support.claude.com/en/articles/12138966-release-notes"
+        "title": "Anthropic – Introducing Claude Sonnet 5.5",
+        "url": "https://www.anthropic.com/claude-sonnet-5-5"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT01-011"
     },
     {
       "id": "chatgpt-2026-09-28-health-summaries",
