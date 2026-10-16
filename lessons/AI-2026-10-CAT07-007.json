@@ -1,0 +1,604 @@
+{
+  "id": "AI-2026-10-CAT07-007",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-17 04:10 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "PR마다 AI 검토자 붙이기 — Claude Code 코드 리뷰(Code Review) 정식 출시로 '연습 저장소 버그 찾기 + 우리 팀 REVIEW.md' 만들기",
+  "summary": "2026-10-15 Claude Code의 코드 리뷰(Code Review)가 연구 미리보기를 끝내고 Team·Enterprise 정식 기능이 됨. GitHub PR이 열리면 여러 에이전트가 버그를 찾아 줄 단위 댓글로 남김, 대부분 6~10분(이전 약 20분)으로 약 3배 빨라짐, 관리자가 저장소마다 Quick·Standard(기본)·Deep 수준 선택. 리뷰 비용은 사용량 기반 평균 $15~25로 요금제 사용량과 별도 청구",
+  "glance": {
+    "emoji": "🔍",
+    "one_liner": "PR 열면 AI가 버그 찾아 댓글",
+    "cards": [
+      {
+        "icon": "✅",
+        "title": "정식 출시",
+        "text": "Team·Enterprise 정식 기능"
+      },
+      {
+        "icon": "⚡",
+        "title": "약 3배 빨라짐",
+        "text": "대부분 6~10분 안에 리뷰 완료"
+      },
+      {
+        "icon": "🎚️",
+        "title": "3단계 수준",
+        "text": "저장소별 Quick·Standard·Deep"
+      },
+      {
+        "icon": "🔴",
+        "title": "심각도 표시",
+        "text": "🔴중요 🟡사소 🟣기존 버그"
+      }
+    ],
+    "diagram": {
+      "title": "PR 하나가 리뷰되기까지",
+      "nodes": [
+        {
+          "icon": "📬",
+          "label": "PR 열기·푸시"
+        },
+        {
+          "icon": "🤖",
+          "label": "에이전트 분석"
+        },
+        {
+          "icon": "🧪",
+          "label": "버그 검증"
+        },
+        {
+          "icon": "💬",
+          "label": "줄 단위 댓글"
+        },
+        {
+          "icon": "🧑‍💻",
+          "label": "사람이 판단"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "사람 리뷰 대기",
+        "text": "리뷰어가 바빠 PR이 하루 넘게 대기, 큰 PR은 대충 훑고 승인"
+      },
+      "after": {
+        "label": "AI 1차 리뷰",
+        "text": "10분 안팎에 🔴🟡🟣 표시 댓글 도착, 사람은 중요한 것부터 판단"
+      }
+    },
+    "cautions": [
+      "승인·병합 결정은 사람이 함",
+      "리뷰마다 비용 발생, 상한 설정",
+      "비밀키·개인정보 없는 저장소로 실습"
+    ]
+  },
+  "tool": "Claude Code",
+  "feature": "코드 리뷰(Code Review) 정식 출시 — GitHub PR 자동 다중 에이전트 리뷰, 저장소별 Quick·Standard·Deep 수준, 약 3배 빨라진 리뷰(6~10분), @claude review 수동 실행, REVIEW.md 맞춤 규칙",
+  "company": "Anthropic",
+  "type": "update",
+  "released": "2026-10-15",
+  "categories": [
+    "CAT-07",
+    "CAT-08",
+    "CAT-09"
+  ],
+  "jobs": [
+    "JOB-DEV",
+    "JOB-EDU",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Claude Team 또는 Enterprise 조직 — Owner(소유자) 권한자 1명이 설정 (Zero Data Retention 사용 조직은 이용 불가)",
+    "GitHub 계정 + 실습용 저장소 1개 (GitHub 조직에 GitHub 앱 설치 권한 필요)",
+    "실습 저장소에 쓰기(write) 권한 — 조직 멤버십이 비공개면 저장소 협업자로 직접 추가",
+    "웹브라우저 (GitHub 웹 편집기로 파일 수정·PR 생성 가능, 코딩 도구 설치 불필요)",
+    "Team·Enterprise가 아닌 수강생: Claude Code(Pro·Max) 설치 → 로컬 /code-review 명령으로 대체 실습",
+    "강사: 월 사용 상한(spend cap) 미리 설정 — 리뷰 1회 평균 $15~25"
+  ],
+  "outcome": "① 일부러 버그 3개를 넣은 연습 PR 1개 + Claude 리뷰 댓글(🔴🟡🟣) 판독표 + ② 우리 팀 규칙을 담은 REVIEW.md 1개 + ③ 버그 수정 후 @claude review 재검토 결과 비교 메모",
+  "objectives": [
+    "코드 리뷰의 대상 요금제·작동 방식·심각도 표시·비용 구조를 설명할 수 있음",
+    "저장소에 리뷰 실행 방식(PR 생성 시·매 푸시·수동)과 @claude review 명령으로 리뷰를 받을 수 있음",
+    "REVIEW.md로 팀 규칙을 정하고 리뷰 결과를 사람이 판단해 수정·무시할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "코드 리뷰는 Claude Team·Enterprise 전용. 요금제 포함 사용량과 별도로 사용량 크레딧(usage credits)에서 토큰 사용량만큼 청구, 리뷰 1회 평균 $15~25(PR 크기·복잡도에 따라 변동). 조직 월 지출 상한 설정 가능. 자격 있는 Enterprise 조직은 2027-01-15까지 최소 $10,000 리뷰 크레딧 신청 가능(신청 후 30일 만료). Pro·Max는 GitHub 자동 리뷰 대신 로컬 /code-review 명령만 사용",
+    "plans": [
+      {
+        "name": "Pro",
+        "price": "월 $20 (연간 결제 시 월 $17)",
+        "features": "Claude Code 포함, 자동 PR 리뷰 없음 — 로컬 /code-review 로 내 변경 사항 검토"
+      },
+      {
+        "name": "Max",
+        "price": "월 $100부터",
+        "features": "Claude Code 사용량 확대, 자동 PR 리뷰 없음 — 로컬 /code-review·ultrareview"
+      },
+      {
+        "name": "Team Standard 좌석",
+        "price": "좌석당 월 $25 (연간 결제 시 $20)",
+        "features": "2~150명, Claude Code 포함, 코드 리뷰 사용 가능(리뷰 비용 별도)"
+      },
+      {
+        "name": "Team Premium 좌석",
+        "price": "좌석당 월 $125 (연간 결제 시 $100)",
+        "features": "더 많은 사용량, 코드 리뷰 사용 가능(리뷰 비용 별도)"
+      },
+      {
+        "name": "Enterprise",
+        "price": "좌석당 월 $20 (연간 결제, 20좌석 이상) + 사용량 API 요금",
+        "features": "코드 리뷰 사용 가능, 자격 조직은 리뷰 크레딧 $10,000 이상 신청 가능(2027-01-15까지)"
+      }
+    ],
+    "note": "가격은 claude.com/pricing 달러 표기(2026-10-16 확인), 원화·부가세 미확인. 리뷰 비용 $15~25는 평균값이며 '매 푸시마다' 설정 시 푸시 횟수만큼 늘어남. Quick·Standard·Deep 수준별 가격 차이는 공식 문서에 없음 [확인 필요]. Free 요금제는 Claude Code 미포함 [확인 필요]이라 표에서 제외",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "Claude 요금제(Pricing)",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "title": "Claude Code Docs – Code Review (Pricing)",
+        "url": "https://code.claude.com/docs/en/code-review"
+      },
+      {
+        "title": "Claude – Code Review is now generally available",
+        "url": "https://claude.com/resources/articles/code-review-is-now-generally-available"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-03-09",
+      "text": "코드 리뷰 연구 미리보기(research preview) 공개 — Team·Enterprise, 평균 약 20분, 리뷰 평균 $15~25"
+    },
+    {
+      "date": "2026-07",
+      "text": "@claude review 동작 변경 — 1회 리뷰만 실행, 이후 푸시마다 리뷰는 @claude review always 로 구독 (정확한 날짜 [확인 필요])"
+    },
+    {
+      "date": "2026-10-15",
+      "text": "정식 출시(GA) — 대부분 6~10분으로 약 3배 빨라짐, 저장소별 Quick·Standard(기본)·Deep 수준 선택, 짧고 명확한 지적(문제·발생 조건·수정법), Enterprise 리뷰 크레딧 프로그램"
+    }
+  ],
+  "theory": {
+    "definition": "코드 리뷰(Code Review)는 GitHub 풀 리퀘스트(PR)를 Anthropic 서버의 여러 전문 에이전트가 저장소 전체 맥락과 함께 분석해 논리 오류·보안 취약점·경계 조건 버그·회귀(regression)를 찾고, 해당 줄에 댓글로 남기는 관리형 서비스임. 찾은 후보는 실제 코드 동작과 대조하는 검증 단계를 거쳐 오탐을 걸러 냄. PR을 승인하거나 막지는 않음",
+    "analogy": "출판사의 '교정 전문팀'. 원고(PR)가 들어오면 맞춤법·사실·논리 담당이 나눠 읽고, 확인된 오류에만 빨간 펜(🔴)·노란 펜(🟡)을 그음. 인쇄(병합) 결정은 편집장(사람)이 함",
+    "comparison": {
+      "headers": [
+        "구분",
+        "로컬 /code-review",
+        "코드 리뷰(GitHub 관리형)"
+      ],
+      "rows": [
+        [
+          "대상 요금제",
+          "Claude Code 사용 요금제(Pro·Max 등)",
+          "Team·Enterprise"
+        ],
+        [
+          "실행 위치",
+          "내 터미널·데스크톱 앱 세션",
+          "Anthropic 서버, GitHub PR"
+        ],
+        [
+          "시작 방법",
+          "/code-review 직접 입력",
+          "PR 생성·푸시 시 자동 또는 @claude review"
+        ],
+        [
+          "결과",
+          "대화 안 목록, --comment 로 PR 게시",
+          "줄 단위 댓글 + 'Claude Code Review' 체크 실행"
+        ],
+        [
+          "REVIEW.md",
+          "읽지 않음 (CLAUDE.md만)",
+          "읽음 — 팀 규칙 반영"
+        ],
+        [
+          "비용",
+          "요금제 사용량 안에서",
+          "사용량 크레딧 별도, 평균 $15~25/회"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "실행 방식 3가지",
+        "body": "저장소마다 Review Behavior 선택: ① Once after PR creation — PR 열 때 1회 + ② After every push — 푸시마다(수정하면 해결된 스레드 자동 정리, 비용 최대) + ③ Manual — @claude review 댓글로만. 포크 PR은 항상 댓글로만 시작"
+      },
+      {
+        "title": "심각도 3색",
+        "body": "🔴 Important — 병합 전 고칠 버그 + 🟡 Nit — 사소, 막지 않음 + 🟣 Pre-existing — 이번 PR이 만든 게 아닌 기존 버그. 각 지적에 'Why this was flagged' 접힘 설명 포함. 체크 실행은 항상 중립(neutral) 결과라 병합을 막지 않음"
+      },
+      {
+        "title": "CLAUDE.md vs REVIEW.md",
+        "body": "CLAUDE.md — Claude Code 전체 작업용 프로젝트 지침, 위반은 🟡로 표시 + REVIEW.md — 리뷰 전용 규칙(무엇을 🔴로 볼지·사소 지적 개수 상한·건너뛸 경로·항상 볼 항목). 짧게 쓸수록 효과적"
+      }
+    ],
+    "can": [
+      "PR 생성·푸시 시 자동 리뷰 받기",
+      "@claude review(1회)·@claude review always(이후 푸시마다) 댓글로 수동 리뷰",
+      "저장소별 Quick·Standard·Deep 수준과 실행 방식 정하기",
+      "REVIEW.md로 심각도 기준·건너뛸 파일·필수 점검 항목 정하기",
+      "👍·👎로 지적 평가, 분석 대시보드에서 리뷰 수·주간 비용 확인",
+      "월 지출 상한 설정"
+    ],
+    "cannot": [
+      "PR 승인·병합 차단 (항상 중립 결과)",
+      "인라인 댓글에 답글 달아 Claude와 대화하기 (답글은 재리뷰 안 됨)",
+      "Pro·Max·Free 요금제에서 GitHub 자동 리뷰",
+      "Zero Data Retention 조직에서 사용",
+      "GitLab 저장소 자동 리뷰 (GitLab CI/CD 별도 구성 필요)"
+    ],
+    "safety": [
+      "AI 지적은 참고 의견 — 병합 결정·보안 판단은 반드시 사람이 함",
+      "GitHub 앱 설치 시 저장소 읽기·PR 쓰기 권한 부여됨 — 리뷰가 필요한 저장소만 선택할 것",
+      "실습 저장소에 API 키·비밀번호·개인정보를 커밋하지 말 것",
+      "'매 푸시마다' 설정은 비용이 푸시 수만큼 늘어남 — 월 지출 상한 먼저 설정",
+      "회사 코드는 사내 보안·외부 서비스 반출 정책 확인 후 연결",
+      "👍·👎 반응 수는 Anthropic이 리뷰어 개선에 사용함 — 조직 정책 확인"
+    ]
+  },
+  "practice": {
+    "preview": "연습 저장소에 '수강료 할인 계산' 파이썬 파일을 올리고, 일부러 버그 3개를 넣은 PR을 열어 Claude 리뷰를 받음. ① 리뷰 댓글을 🔴🟡🟣로 분류한 판독표 + ② 팀 규칙 REVIEW.md + ③ 고친 뒤 @claude review 재검토 비교 메모 완성",
+    "follow": [
+      {
+        "title": "관리자: 코드 리뷰 켜기",
+        "minutes": 8,
+        "do": "Owner 계정으로 claude.ai/admin-settings/claude-code 접속 → Code Review 영역 Setup → Claude GitHub 앱 설치(GitHub 조직 선택·실습 저장소만 선택·권한 승인) → 저장소 선택",
+        "prompt": "",
+        "expect": "Code Review 표에 실습 저장소가 나타남",
+        "note": "강사가 미리 해 두면 수업 시간 절약. 사용량 상한은 claude.ai/admin-settings/usage 에서 Claude Code Review 항목에 설정"
+      },
+      {
+        "title": "실행 방식·수준 정하기",
+        "minutes": 5,
+        "do": "저장소 행의 Review Behavior 드롭다운에서 Manual 선택(수업 중 비용 통제) → 리뷰 수준은 Standard(기본) 유지",
+        "prompt": "",
+        "expect": "실습 저장소 = Manual · Standard",
+        "note": "Quick·Standard·Deep 선택 메뉴 위치·이름 [확인 필요] — 2026-10-16 문서에는 Review Behavior만 표기"
+      },
+      {
+        "title": "기본 파일 올리기",
+        "minutes": 5,
+        "do": "GitHub 웹에서 실습 저장소 → Add file > Create new file → 이름 discount.py → 아래 코드 붙여 넣기 → main 브랜치에 바로 커밋",
+        "prompt": "def final_price(price, rate):\n    \"\"\"수강료 price 에 할인율 rate(0~100, %)를 적용한 금액\"\"\"\n    if rate < 0 or rate > 100:\n        raise ValueError(\"할인율은 0~100\")\n    return round(price * (100 - rate) / 100)\n\n\ndef group_price(price, people):\n    \"\"\"5명 이상 단체는 10% 할인\"\"\"\n    rate = 10 if people >= 5 else 0\n    return final_price(price, rate) * people\n",
+        "expect": "main 브랜치에 discount.py 생성",
+        "note": "코드는 몰라도 됨 — '정답 코드'로 두고 다음 단계에서 버그를 넣음"
+      },
+      {
+        "title": "버그 넣은 PR 열기",
+        "minutes": 7,
+        "do": "discount.py 연필(편집) 버튼 → 아래 코드로 전체 교체 → Commit changes에서 'Create a new branch' 선택(브랜치 이름 bug-practice) → Propose changes → Create pull request",
+        "prompt": "def final_price(price, rate):\n    \"\"\"수강료 price 에 할인율 rate(0~100, %)를 적용한 금액\"\"\"\n    if rate < 0 and rate > 100:\n        raise ValueError(\"할인율은 0~100\")\n    return round(price * (100 - rate) / 10)\n\n\ndef group_price(price, people):\n    \"\"\"5명 이상 단체는 10% 할인\"\"\"\n    rate = 10 if people > 5 else 0\n    return final_price(price, rate) * people\n",
+        "expect": "열린 PR 1개 (버그 3개: and/or 조건 · /10 계산 · 5명 경계)",
+        "note": "버그 위치는 수강생에게 알리지 말고 리뷰 결과로 찾게 할 것"
+      },
+      {
+        "title": "@claude review 로 리뷰 요청",
+        "minutes": 8,
+        "do": "PR 아래 대화 창(줄 댓글 아님)에 아래 명령만 맨 앞에 써서 댓글 등록 → Checks 탭에서 'Claude Code Review' 진행 확인 → 완료 후 Files changed 탭의 댓글·표시 확인",
+        "prompt": "@claude review",
+        "expect": "10분 안팎에 리뷰 본문 요약 + 줄 단위 🔴 댓글 [미검증 — 지적 개수·문구는 실행마다 다름]",
+        "note": "👀 반응만 뜨고 시작 안 되면 조직 멤버십 비공개 문제 → 저장소 협업자로 직접 추가. 대기 시간에 이론 복습"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "리뷰 판독표 만들기",
+        "minutes": 7,
+        "do": "체크 실행 Details의 심각도 표 + 각 댓글의 'Why this was flagged' 펼쳐 읽기 → 아래 표에 정리 → 맞는 지적 👍, 틀린 지적 👎",
+        "prompt": "| 번호 | 심각도(🔴🟡🟣) | 파일:줄 | 지적 내용 | 내 판단(맞음/틀림) | 이유 |\n|---|---|---|---|---|---|\n| 1 |  |  |  |  |  |\n| 2 |  |  |  |  |  |\n| 3 |  |  |  |  |  |",
+        "expect": "넣은 버그 3개 중 몇 개를 찾았는지 + 추가 지적 확인",
+        "note": "놓친 버그가 있으면 기록 — 'AI가 다 찾아 준다'는 오해를 깨는 핵심 장면"
+      },
+      {
+        "title": "우리 팀 REVIEW.md 쓰기",
+        "minutes": 6,
+        "do": "main 브랜치 저장소 맨 위에 REVIEW.md 새 파일 → 아래 예시를 내 팀 상황에 맞게 고쳐 커밋",
+        "prompt": "# 리뷰 지침\n\n## 중요(Important) 기준\n금액 계산 오류, 입력값 검증 누락, 개인정보가 로그에 남는 코드만 Important로 표시. 이름·스타일 제안은 Nit 이하.\n\n## 사소한 지적 상한\nNit은 리뷰당 최대 3개. 더 있으면 요약에 '외 N건'으로만 표시.\n\n## 보고하지 말 것\n- 자동 생성 파일, *.lock 파일\n\n## 항상 확인\n- 할인·금액 함수는 경계값(0, 100, 기준 인원)을 테스트할 것\n- 요약 첫 줄에 'Important N건, Nit N건' 집계를 쓸 것",
+        "expect": "저장소 루트에 REVIEW.md 생성",
+        "note": "REVIEW.md는 GitHub 관리형 리뷰만 읽음 — 로컬 /code-review 는 읽지 않음"
+      },
+      {
+        "title": "고치고 다시 리뷰 받기",
+        "minutes": 4,
+        "do": "PR 브랜치에서 리뷰가 지적한 줄을 고쳐 커밋 → 대화 창에 @claude review 다시 등록 → 첫 리뷰와 비교해 메모",
+        "prompt": "@claude review",
+        "expect": "남은 지적 감소 + 요약 첫 줄 집계(REVIEW.md 반영 여부) 확인 [미검증]",
+        "note": "인라인 댓글에 답글을 달아도 재리뷰 안 됨 — 수정 후 새 댓글로 요청. 해결한 지적은 스레드 Resolve"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 PR에 @claude review always 를 달고 푸시 2번 → 푸시마다 리뷰가 다시 도는지, 고친 지적의 스레드가 자동 해결되는지 관찰"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "관리자와 함께 실습 저장소 리뷰 수준을 Quick → Deep 으로 바꿔 같은 PR을 다시 리뷰받고, 걸린 시간·지적 수·analytics 비용 차이 비교표 만들기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "체크 실행 출력의 bughunter-severity JSON을 gh·jq로 읽어, Important가 1건 이상이면 실패하는 GitHub Actions 단계 만들기 (문서의 gh api 예시 활용)"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 판독표 교환 → 상대가 넣은 버그 3개 중 AI가 놓친 것·틀린 지적 1개씩 소개, 각자 REVIEW.md에서 가장 효과 있었던 규칙 1줄 발표",
+    "quiz": [
+      {
+        "q": "Claude 코드 리뷰가 🔴 Important 버그를 찾았을 때 PR은 어떻게 되나요?",
+        "options": [
+          "자동으로 병합이 막힌다",
+          "PR이 자동으로 닫힌다",
+          "체크 실행은 중립 결과로 끝나 병합을 막지 않고, 판단은 사람이 한다",
+          "Claude가 직접 버그를 고쳐 푸시한다"
+        ],
+        "answer": 2,
+        "explain": "체크 실행은 항상 중립(neutral) 결과, 승인·차단 없음. 병합 차단이 필요하면 체크 출력의 심각도 집계를 내 CI에서 읽어 직접 구성"
+      },
+      {
+        "q": "Manual 설정 저장소에서 이번 PR만 리뷰 1번 받고, 이후 푸시에는 리뷰를 돌리지 않으려면?",
+        "options": [
+          "PR 대화 창에 @claude review 댓글",
+          "PR 대화 창에 @claude review always 댓글",
+          "인라인 댓글에 'review' 답글",
+          "Checks 탭에서 Re-run을 두 번 누르기"
+        ],
+        "answer": 0,
+        "explain": "@claude review(= once)는 1회만, always는 이후 푸시마다 구독. 인라인 댓글·답글로는 시작 안 됨"
+      },
+      {
+        "q": "리뷰 전용 규칙(무엇을 Important로 볼지, 사소한 지적 개수 상한 등)을 넣기 가장 알맞은 파일은?",
+        "options": [
+          "README.md",
+          "REVIEW.md",
+          ".gitignore",
+          "package.json"
+        ],
+        "answer": 1,
+        "explain": "REVIEW.md는 찾기·검증 에이전트에 직접 전달되는 리뷰 전용 지침. CLAUDE.md는 전체 작업용 지침이며 위반은 🟡로 표시"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "리뷰 판독",
+        "high": "🔴🟡🟣 분류 + 맞음/틀림 판단과 이유 모두 기록",
+        "mid": "분류만 기록",
+        "low": "리뷰 결과 미확인"
+      },
+      {
+        "criterion": "REVIEW.md",
+        "high": "중요 기준·상한·제외·필수 점검 4요소 + 재리뷰에서 반영 확인",
+        "mid": "예시 그대로 커밋",
+        "low": "작성 안 함"
+      },
+      {
+        "criterion": "사람 판단",
+        "high": "AI가 놓친 버그·틀린 지적을 찾아 설명",
+        "mid": "AI 지적만 그대로 수용",
+        "low": "확인 없이 병합"
+      }
+    ],
+    "next": [
+      "Claude Code Mods로 코딩 도구 화면 맞춤 설정 (AI-2026-10-CAT07-002)",
+      "Codex 다음 메시지 추천으로 후속 지시 다듬기 (AI-2026-10-CAT07-005)",
+      "Max·Team 월간 API 크레딧으로 Claude Platform 써 보기 (AI-2026-10-CAT07-004)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 출판사 교정팀 비유, '빨간 펜은 AI, 인쇄 결정은 사람'",
+        "note": "실제 리뷰 댓글 캡처 1장 먼저 보여 주기"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 대상 요금제·작동 방식·심각도 3색·실행 방식 3가지·비용 구조·REVIEW.md",
+        "note": "비용 표(평균 $15~25/회)와 '매 푸시마다' 비용 곱하기 강조"
+      },
+      {
+        "time": "35~68분",
+        "content": "따라 하기 1~5: 설정 확인 → 실행 방식 → 기본 파일 → 버그 PR → @claude review",
+        "note": "리뷰 대기 6~10분 동안 심각도 표 퀴즈로 시간 채우기"
+      },
+      {
+        "time": "68~85분",
+        "content": "내 것 만들기: 판독표 → REVIEW.md → 고치고 재리뷰",
+        "note": "판독표 빈 양식 미리 배포"
+      },
+      {
+        "time": "85~90분",
+        "content": "짝 발표·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "PR을 올려 놓고 리뷰어가 볼 때까지 하루 이틀 기다려 본 적 있으시죠? 10월 15일부터 Claude 코드 리뷰가 정식 기능이 됐습니다. PR을 열면 10분 안팎으로 AI 검토팀이 빨간 펜을 들고 들어옵니다. 하지만 인쇄 버튼, 즉 병합은 여전히 우리가 누릅니다."
+      },
+      {
+        "label": "심각도",
+        "text": "빨간 동그라미는 '병합 전에 고쳐야 할 버그', 노란 동그라미는 '고치면 좋은 사소한 것', 보라 동그라미는 '이번 PR 탓은 아니지만 원래 있던 버그'입니다. 빨간 것부터 보세요."
+      },
+      {
+        "label": "비용",
+        "text": "리뷰 한 번에 평균 15~25달러가 별도로 나갑니다. '푸시할 때마다' 설정을 켜면 푸시 횟수만큼 곱해집니다. 그래서 오늘 실습은 '수동' 모드로, 필요할 때만 부릅니다."
+      },
+      {
+        "label": "판독",
+        "text": "AI가 우리가 넣은 버그 세 개를 다 찾았나요? 하나라도 놓쳤다면, 그게 오늘 가장 중요한 배움입니다. AI 리뷰는 첫 번째 눈이지, 마지막 눈이 아닙니다."
+      },
+      {
+        "label": "마무리",
+        "text": "REVIEW.md 한 장이 우리 팀의 리뷰 기준이 됩니다. 짧고 분명하게, 무엇이 정말 중요한지만 적으세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 조직이 Team·Enterprise가 아님",
+        "response": "강사 Team 조직의 실습 저장소에 수강생을 협업자로 초대해 PR만 각자 열게 함, 또는 Pro·Max 수강생은 Claude Code에서 같은 코드로 로컬 /code-review 실행"
+      },
+      {
+        "situation": "리뷰가 10분 넘게 끝나지 않음",
+        "response": "대기 중 강사가 미리 받아 둔 리뷰 결과 화면으로 판독 진행, 끝난 뒤 실제 결과와 비교"
+      },
+      {
+        "situation": "리뷰 실패·시간 초과(Code review failed / timed out)",
+        "response": "PR 대화 창에 @claude review 다시 등록 또는 Checks 탭에서 Re-run (포크 PR은 댓글만 가능)"
+      },
+      {
+        "situation": "월 지출 상한 도달로 '리뷰 건너뜀' 댓글",
+        "response": "관리자가 claude.ai/admin-settings/usage 에서 상한 상향, 불가하면 강사 화면 시연으로 전환"
+      },
+      {
+        "situation": "교육장 PC에서 GitHub 로그인 불가",
+        "response": "강사 화면 공유로 PR 생성·리뷰 시연, 수강생은 판독표·REVIEW.md 작성에 집중"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "@claude review 를 달았는데 👀 반응만 있고 리뷰가 시작 안 됨",
+        "fix": "조직 멤버십이 비공개(GitHub 기본값)면 멤버로 인식 안 됨 → 멤버십 공개 또는 저장소 협업자로 직접 추가"
+      },
+      {
+        "issue": "댓글을 달아도 아무 반응 없음",
+        "fix": "줄(인라인) 댓글이 아니라 PR 대화 창 맨 위 댓글로, 명령을 맨 앞에 쓸 것. 저장소 쓰기 권한·PR 열림 상태 확인"
+      },
+      {
+        "issue": "체크 실행에 'Claude Code Review'가 안 보임",
+        "fix": "관리자 설정 표에 저장소가 있는지, Claude GitHub 앱이 그 저장소 접근 권한을 가졌는지 확인"
+      },
+      {
+        "issue": "요약엔 이슈가 있다는데 줄 댓글이 안 보임",
+        "fix": "Checks 탭 Details 심각도 표, Files changed 주석, 리뷰 본문 'Additional findings' 확인"
+      },
+      {
+        "issue": "고쳤는데 지적 스레드가 그대로 남음",
+        "fix": "답글로는 해결 안 됨 → 수정 푸시 후 재리뷰(매 푸시 구독 시 자동 해결) 또는 스레드 Resolve"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Pro 요금제에서도 GitHub 자동 리뷰가 되나요?",
+        "a": "안 됨. GitHub 관리형 코드 리뷰는 Team·Enterprise 전용. Pro·Max는 Claude Code에서 /code-review 로 로컬 검토"
+      },
+      {
+        "q": "리뷰 비용은 요금제 사용량에서 빠지나요?",
+        "a": "아님. 사용량 크레딧으로 별도 청구, 요금제 포함 사용량을 쓰지 않음. 평균 1회 $15~25"
+      },
+      {
+        "q": "Quick·Standard·Deep는 누가 정하나요?",
+        "a": "조직 관리자가 저장소마다 선택, 기본은 Standard. 수준별 가격·시간 차이는 공식 문서에 수치 없음 [확인 필요]"
+      },
+      {
+        "q": "AI가 🔴를 달면 병합이 막히나요?",
+        "a": "안 막힘. 체크 실행은 항상 중립 결과. 막고 싶으면 체크 출력의 심각도 JSON을 내 CI에서 읽어 직접 구성"
+      },
+      {
+        "q": "리뷰 댓글에 답글로 '왜요?'라고 물으면 답해 주나요?",
+        "a": "아님. 답글은 재리뷰·응답을 일으키지 않음. 이유는 각 댓글의 'Why this was flagged' 펼쳐 보기"
+      },
+      {
+        "q": "GitLab에서도 되나요?",
+        "a": "관리형 자동 리뷰는 GitHub 전용. GitLab은 GitLab CI/CD 연동 또는 로컬 /code-review --comment(glab 필요)로 대체"
+      },
+      {
+        "q": "REVIEW.md와 CLAUDE.md 둘 다 있어야 하나요?",
+        "a": "필수 아님. 리뷰 전용 규칙은 REVIEW.md, 모든 Claude Code 작업에 쓰는 프로젝트 지침은 CLAUDE.md"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급반(비개발자)",
+        "guide": "코드 대신 '버그 숨은 그림 찾기'로 접근 — 강사가 PR·리뷰를 미리 만들어 두고 판독표만 작성, 심각도 3색 이해가 목표"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐(심각도 JSON으로 병합 게이트) + 실제 팀 저장소용 REVIEW.md 초안"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "학생 과제 저장소 운영 시 '피드백 1차 초안'으로 활용 — 평가는 교사가 하고 AI 지적은 참고만 한다는 원칙 함께 안내"
+      },
+      {
+        "level": "창업·1인기업 (JOB-BIZ)",
+        "guide": "리뷰어가 없는 1인 개발 환경에서 '두 번째 눈'으로 활용, 비용 상한과 Manual 모드 조합 권장"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: AI 리뷰는 첫 번째 눈, 병합 결정은 사람",
+      "넣은 버그 중 AI가 놓친 것을 반드시 짚어 과신 방지",
+      "비용 구조(별도 크레딧·푸시당 곱하기)를 실습 전 먼저 안내",
+      "REVIEW.md는 짧게 — 길수록 중요한 규칙이 희석됨",
+      "정식 출시 직후라 문서 일부(research preview 표기 등)가 갱신 전일 수 있음"
+    ],
+    "day_before": [
+      "Owner 계정으로 코드 리뷰 설정·GitHub 앱 설치·실습 저장소 등록 완료 + 화면 캡처 준비",
+      "월 지출 상한 설정 (수강생 수 × 2~3회 × $25 기준 여유 있게)",
+      "실습 저장소에 discount.py·버그 PR로 리허설 1회 → 리뷰 결과 캡처 (Plan B용)",
+      "Quick·Standard·Deep 선택 위치 실제 화면에서 확인 [확인 필요]",
+      "수강생 GitHub 계정·저장소 협업자 초대 사전 완료, 판독표 양식 배포 준비"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Quick·Standard·Deep 수준 선택 메뉴 위치·이름 — 정식 출시 글에만 언급, 2026-10-16 문서에는 Review Behavior만 표기",
+    "[확인 필요] 수준별 비용·소요 시간 차이 — 공식 수치 없음",
+    "[확인 필요] 코드 리뷰 문서 상단이 아직 'research preview' 표기 — 정식 출시 글(2026-10-15)과 불일치, 문서 갱신 전으로 판단",
+    "[확인 필요] @claude review 동작 변경 시점 — 문서에 '2026-07 업데이트'로만 표기",
+    "[미검증] 실습 PR의 리뷰 결과(지적 개수·문구·소요 시간)는 실행마다 다름 — 교안 작성 중 실제 Team 조직으로 재현하지 못함",
+    "[확인 필요] Enterprise 리뷰 크레딧 자격 조건 — 'Terms apply'로만 표기",
+    "[확인 필요] Free 요금제의 Claude Code 포함 여부"
+  ],
+  "sources": [
+    {
+      "title": "Claude – Code Review is now generally available",
+      "url": "https://claude.com/resources/articles/code-review-is-now-generally-available",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Claude Code Docs – Code Review",
+      "url": "https://code.claude.com/docs/en/code-review",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Claude 블로그 – Bringing Code Review to Claude Code",
+      "url": "https://claude.com/blog/code-review",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Claude 요금제(Pricing)",
+      "url": "https://claude.com/pricing",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "ClaudeDevs X 공식 계정 – Code Review GA 발표 (보조)",
+      "url": "https://x.com/ClaudeDevs/status/2110866210573386065",
+      "checked": "2026-10-16"
+    }
+  ]
+}

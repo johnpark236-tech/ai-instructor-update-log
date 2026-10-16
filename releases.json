@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 03:20 KST",
+  "updated_at": "2026-10-17 04:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2431,6 +2431,21 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT06-004"
+    },
+    {
+      "id": "claude-code-2026-10-15-code-review-ga",
+      "date": "2026-10-15",
+      "tool": "Claude Code",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "코드 리뷰(Code Review) 정식 출시",
+      "summary": "GitHub PR 다중 에이전트 자동 리뷰가 연구 미리보기를 끝내고 Team·Enterprise 정식 기능이 됨. 대부분 6~10분으로 약 3배 빨라짐, 저장소별 Quick·Standard(기본)·Deep 수준 선택, 자격 Enterprise 조직은 2027-01-15까지 $10,000 이상 리뷰 크레딧 신청 가능",
+      "source": {
+        "title": "Claude – Code Review is now generally available",
+        "url": "https://claude.com/resources/articles/code-review-is-now-generally-available"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT07-007"
     }
   ]
 }
