@@ -1,0 +1,598 @@
+{
+  "id": "AI-2026-10-CAT06-006",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-16 20:10 KST",
+  "checked": "2026-10-16",
+  "review_by": "2027-01-16",
+  "title": "Microsoft Copilot Notebooks로 메모·회의록 텍스트 파일을 모아 '프로젝트 한 장 요약' 만들기 — TXT·Markdown·RTF 참조 + 추천 산출물",
+  "summary": "Copilot Notebooks는 프로젝트별로 파일·메모를 모아 두고 그 자료만 근거로 Copilot과 대화하는 AI 작업 공간. 2026-10-09 'What's New in Notebooks' 글에서 Markdown·TXT·RTF 참조 지원과 추천 산출물(Suggested artifacts)을 정식 제공(GA)으로 안내. 메모(.txt)·강의 개요(.md)·공지(.rtf) 3개 파일로 노트북을 만들고 1쪽 프로젝트 요약 + 할 일 표 완성",
+  "glance": {
+    "emoji": "🗂️",
+    "one_liner": "흩어진 메모 파일을 한 노트북에 모아 요약",
+    "cards": [
+      {
+        "icon": "📄",
+        "title": "텍스트 파일 참조",
+        "text": "TXT·Markdown·RTF 추가 가능"
+      },
+      {
+        "icon": "📚",
+        "title": "노트북 = 자료함",
+        "text": "프로젝트별 파일·메모 모음"
+      },
+      {
+        "icon": "💬",
+        "title": "자료 기반 대화",
+        "text": "넣은 자료를 근거로 답변"
+      },
+      {
+        "icon": "✨",
+        "title": "추천 산출물",
+        "text": "Word·Excel·PPT 만들기 제안"
+      }
+    ],
+    "diagram": {
+      "title": "Copilot Notebooks 흐름",
+      "nodes": [
+        {
+          "icon": "➕",
+          "label": "새 노트북"
+        },
+        {
+          "icon": "📎",
+          "label": "참조 파일 추가"
+        },
+        {
+          "icon": "💬",
+          "label": "자료로 질문"
+        },
+        {
+          "icon": "📝",
+          "label": "요약·할 일 표"
+        },
+        {
+          "icon": "🔍",
+          "label": "원문과 대조"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "파일 흩어짐",
+        "text": "메모장·회의록·공지가 폴더마다 흩어져 매번 열어 보고 직접 정리"
+      },
+      "after": {
+        "label": "노트북 한곳",
+        "text": "한 노트북에 넣고 질문 한 번으로 요약·할 일 표를 받아 검수만 함"
+      }
+    },
+    "cautions": [
+      "개인정보·기밀 파일 올리지 않기",
+      "요약은 원문 파일과 대조",
+      "기관 계정은 보안 정책 먼저 확인"
+    ]
+  },
+  "tool": "Microsoft 365 Copilot",
+  "feature": "Copilot Notebooks — 참조 파일 확대(Markdown·TXT·RTF)·추천 산출물(Suggested artifacts)",
+  "company": "Microsoft",
+  "type": "update",
+  "released": "2026-10-09",
+  "categories": [
+    "CAT-06",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-PUB",
+    "JOB-DAT"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Microsoft 365 Personal·Family·Premium 구독 계정 또는 Microsoft Copilot·Copilot Chat 라이선스가 있는 회사·학교 계정 (도움말 2026-10-16 확인)",
+    "OneDrive 또는 SharePoint 사용 가능 계정 — 노트북 만들기에 필요",
+    "PC 웹 브라우저(m365.cloud.microsoft) 또는 Microsoft Copilot 앱, OneNote에서도 열림",
+    "실습 파일 3개: 회의 메모(.txt), 강의 개요(.md), 안내 공지(.rtf) — 개인정보 없는 연습용, 강사가 미리 배포",
+    "강사: 노트북 메뉴 위치 캡처와 예시 결과 인쇄본 준비"
+  ],
+  "outcome": "① 참조 파일 3개(.txt·.md·.rtf)가 들어간 프로젝트 노트북 + ② 1쪽 프로젝트 요약(목표·현황·결정 사항) + ③ 담당·마감이 있는 할 일 표 + ④ 원문 대조 체크 메모",
+  "objectives": [
+    "Copilot Notebooks에서 새 노트북을 만들고 TXT·Markdown·RTF 파일을 참조로 추가할 수 있음",
+    "노트북 채팅으로 참조 자료만 근거로 한 요약과 할 일 표를 받을 수 있음",
+    "Copilot 답변을 원문 파일과 대조해 틀리거나 빠진 내용을 고칠 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "Copilot Notebooks는 Microsoft 365 Personal·Family·Premium(개인) 구독자, Microsoft Copilot·Copilot Chat 라이선스가 있는 회사·학교 계정에서 사용. 무료 개인 Microsoft 계정·Microsoft 365 Basic은 대상 아님(Basic은 AI 기능 미제공). Copilot Chat(무료 업무용)은 참조 50개·웹 URL만, Microsoft Copilot 라이선스·개인 유료 구독은 참조 300개 이상(근거로는 앞 300개)",
+    "plans": [
+      {
+        "name": "Microsoft 365 Personal",
+        "price": "$9.99/월 (연 $99.99)",
+        "features": "Copilot Notebooks 사용, 고급 Copilot 채팅. Capture·마인드맵(Mind maps) 미제공"
+      },
+      {
+        "name": "Microsoft 365 Family",
+        "price": "$12.99/월 (연 $129.99)",
+        "features": "Notebooks 사용, AI 기능은 구독 소유자만"
+      },
+      {
+        "name": "Microsoft 365 Premium",
+        "price": "$19.99/월 (연 $199.99)",
+        "features": "Notebooks + 더 많은 사용량·에이전트형 AI 기능"
+      },
+      {
+        "name": "Copilot Chat (회사·학교 계정)",
+        "price": "기관 Microsoft 365 구독에 포함 [확인 필요]",
+        "features": "참조 50개까지, 연결 항목은 웹 URL만"
+      },
+      {
+        "name": "Microsoft Copilot (업무용 라이선스)",
+        "price": "기관 계약 [확인 필요: 공식 가격 페이지]",
+        "features": "참조 300개 이상, Outlook 메일·Teams 회의·SharePoint 연결, 오디오 개요(Audio overview)"
+      }
+    ],
+    "note": "개인 요금은 Microsoft Store 미국 요금 비교 페이지 기준(2026-10-16), 원화 가격 [확인 필요]. 업무용 Microsoft Copilot 라이선스 가격은 이번 확인 범위 밖이라 금액 미표기. 오디오 개요는 회사·학교(Entra ID) 계정 전용이며 한국어 미지원(8개 언어)",
+    "checked": "2026-10-16",
+    "sources": [
+      {
+        "title": "Microsoft Store – Compare All Microsoft 365 Products",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products"
+      },
+      {
+        "title": "Microsoft 지원 – Frequently asked questions about Microsoft Copilot Notebooks",
+        "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/frequently-asked-questions-about-microsoft-365-copilot-notebooks"
+      },
+      {
+        "title": "Microsoft 지원 – Get answers and insights about your Microsoft Copilot Notebook",
+        "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/get-answers-and-insights-about-your-microsoft-365-copilot-notebook"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-06",
+      "text": "Copilot Notebooks를 Microsoft 365 Copilot 웹·OneNote에 제공 시작 (보조 근거: topedia 블로그) [확인 필요: 정확한 날짜]"
+    },
+    {
+      "date": "2026-07",
+      "text": "메시지 센터 공지 MC1420894(TXT·RTF 참조)·MC1423103(Markdown 참조) 배포 안내 (보조 근거: mwpro 블로그) [확인 필요]"
+    },
+    {
+      "date": "2026-08-13",
+      "text": "Microsoft Tech Community 글 'Copilot Notebooks now works with Markdown, plain-text, and rich-text files' (페이지 수정일 기준)"
+    },
+    {
+      "date": "2026-10-09",
+      "text": "'What's New in Notebooks — October 2026' 발표: Markdown·TXT·RTF 참조와 추천 산출물 정식 제공, 노트북 자동 만들기·간단한 자동화·모델 선택·PDF 만들기 등은 Frontier 또는 몇 주 내 예정"
+    }
+  ],
+  "theory": {
+    "definition": "Copilot Notebooks는 한 프로젝트·주제의 파일·메모·회의·메일을 한 노트북에 모아 두고, Copilot이 그 자료를 근거로 답하게 하는 AI 작업 공간임. 이번 업데이트로 Word·PDF뿐 아니라 메모장(.txt)·Markdown(.md)·서식 있는 텍스트(.rtf) 파일도 참조로 넣을 수 있게 됨",
+    "analogy": "노트북 = 프로젝트 서류 바인더. 흩어진 쪽지(TXT)·개요(MD)·공지(RTF)를 바인더 한 권에 꽂아 두면, 비서(Copilot)가 그 바인더만 펼쳐 보고 요약·할 일 목록을 만들어 줌",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Copilot Chat (무료 업무용)",
+        "Microsoft Copilot (업무용·개인 유료 구독)"
+      ],
+      "rows": [
+        [
+          "추가할 수 있는 참조 수",
+          "50개",
+          "300개 이상(근거는 앞 300개)"
+        ],
+        [
+          "연결 항목",
+          "웹 URL만",
+          "Outlook 메일·Teams 회의·SharePoint 사이트·폴더"
+        ],
+        [
+          "파일 형식",
+          ".docx·.pptx·.xlsx·.pdf·.loop·.page·.txt·.rtf·.md·OneNote 페이지",
+          "같음"
+        ],
+        [
+          "오디오 개요",
+          "도움말에 명시 없음 [확인 필요]",
+          "회사·학교 계정만, 개인 구독은 미제공"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "참조(References)",
+        "body": "노트북에 넣은 자료 묶음. 업로드·OneDrive에서 고르기·검색·링크 붙여넣기·끌어 놓기로 추가. Copilot은 질문에 답할 때 이 참조를 근거로 사용"
+      },
+      {
+        "title": "텍스트 파일 지원 확대",
+        "body": "README·위키·로그·회의 받아쓰기처럼 메모장·Markdown으로 남긴 자료를 변환 없이 바로 넣을 수 있음. .csv·.tsv·.png·.jpg·Teams 채팅은 '곧 지원' 상태(도움말)"
+      },
+      {
+        "title": "추천 산출물(Suggested artifacts)",
+        "body": "노트북 내용을 보고 Copilot이 만들 만한 Word·Excel·PowerPoint 파일을 추천하고, 요청하면 생성. 글은 정식 제공이라 했지만 화면 캡션은 'Frontier에 9월 제공'으로 달라 실제 표시 여부 [확인 필요]"
+      }
+    ],
+    "can": [
+      "프로젝트별 노트북 만들고 파일·OneNote 페이지·웹 링크 모으기",
+      ".txt·.md·.rtf 메모를 변환 없이 참조로 추가",
+      "참조 자료만 근거로 요약·주제 정리·다음 단계 뽑기",
+      "노트북을 OneNote에서 열어 작업 공간처럼 쓰기",
+      "노트북 공유 — 대화 내용은 공유되지 않음"
+    ],
+    "cannot": [
+      "무료 개인 Microsoft 계정·Microsoft 365 Basic에서 사용",
+      "개인 구독(Personal·Family·Premium)에서 오디오 개요·Capture·마인드맵 사용",
+      "오디오 개요를 한국어로 만들기 — 영어 등 8개 언어만",
+      ".csv·이미지 파일을 참조로 넣기 — 아직 '곧 지원'",
+      "노트북 자동 만들기·예약 자동화·모델 선택 — Frontier 또는 예정 기능"
+    ],
+    "safety": [
+      "실습 파일에 이름·연락처·학생 정보 같은 개인정보를 넣지 말 것",
+      "Copilot 요약의 숫자·날짜·담당자는 원문 파일과 직접 대조할 것",
+      "회사·학교 계정은 기관 보안·데이터 정책을 먼저 확인할 것",
+      "노트북을 공유하면 참조 파일 접근 권한도 함께 따져 볼 것",
+      "AI 요약을 그대로 공문·보고서로 내지 말고 사람이 최종 검수할 것"
+    ]
+  },
+  "practice": {
+    "preview": "연습 파일 3개(회의 메모.txt·강의 개요.md·안내 공지.rtf) → 새 노트북 '가을 특강 준비' 만들기 → 참조 추가 → 요약 질문 → 할 일 표 → 원문 대조 → 1쪽 프로젝트 요약 완성",
+    "follow": [
+      {
+        "title": "노트북 열기",
+        "minutes": 4,
+        "do": "m365.cloud.microsoft 접속 → 왼쪽 메뉴 'Notebooks' 선택(안 보이면 앱 실행 아이콘에서 Notebooks) → 'All notebooks' → 'New notebook'",
+        "prompt": "",
+        "expect": "새 노트북 이름 입력 칸과 'Add content to References' 영역 표시",
+        "note": "[확인 필요] 한국어 화면 메뉴 이름은 강의 전날 확인"
+      },
+      {
+        "title": "이름 짓고 참조 3개 추가",
+        "minutes": 8,
+        "do": "이름 '가을 특강 준비' 입력 → 'Upload' 또는 끌어 놓기로 .txt·.md·.rtf 3개 추가 → 'Create'",
+        "prompt": "",
+        "expect": "참조 목록에 파일 3개 표시",
+        "note": ".md 업로드가 안 되면 .txt로 이름 바꿔 다시 올리기 [확인 필요: 개인 계정 .md 지원]"
+      },
+      {
+        "title": "자료 기반 요약 받기",
+        "minutes": 8,
+        "do": "'Message Copilot' 입력창에 아래 프롬프트 붙여넣고 'Send'",
+        "prompt": "이 노트북의 참조 파일만 근거로 '가을 특강 준비' 프로젝트를 요약해 줘.\n형식: ① 목표 ② 현재 진행 상황 ③ 정해진 결정 사항 ④ 아직 정하지 못한 것\n각 항목 끝에 근거가 된 파일 이름을 괄호로 적고, 파일에 없는 내용은 쓰지 마.",
+        "expect": "4개 항목 요약 + 항목마다 근거 파일 이름",
+        "note": "근거 파일 이름이 안 붙으면 '어느 파일에서 가져왔는지 표시해 줘'로 다시 요청"
+      },
+      {
+        "title": "할 일 표 뽑기",
+        "minutes": 6,
+        "do": "같은 대화에서 아래 프롬프트 전송",
+        "prompt": "참조 파일에서 해야 할 일을 모두 찾아 표로 정리해 줘.\n열: 할 일 | 담당 | 마감일 | 근거 파일\n담당이나 마감일이 파일에 없으면 '미정'이라고 써 줘.",
+        "expect": "할 일 표 + 빈 칸은 '미정'",
+        "note": "Copilot이 담당·날짜를 지어내지 않았는지 다음 단계에서 대조"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "원문 대조 체크",
+        "minutes": 8,
+        "do": "할 일 표의 행 3개를 골라 원문 파일을 열어 직접 확인, 틀린 곳 표시",
+        "prompt": "",
+        "expect": "체크 메모: 행 | 원문 일치 여부 | 고친 내용",
+        "note": "틀린 곳이 있으면 Copilot에 '○○ 파일 기준으로 이 행을 고쳐 줘'로 수정 요청"
+      },
+      {
+        "title": "내 프로젝트 노트북 만들기",
+        "minutes": 10,
+        "do": "내 업무 메모 파일 2~3개(개인정보 지운 것)로 새 노트북을 만들고 아래 프롬프트 전송",
+        "prompt": "이 노트북 자료로 1쪽 프로젝트 요약을 만들어 줘.\n순서: 제목 → 한 줄 목적 → 진행 현황 3줄 → 다음 주 할 일 표(할 일·담당·마감) → 확인이 필요한 점\n자료에 없는 내용은 쓰지 말고 '확인 필요'로 표시해 줘.",
+        "expect": "1쪽 요약 + 확인 필요 목록",
+        "note": "자료가 없으면 강사가 준 연습 파일로 대체"
+      },
+      {
+        "title": "추천 산출물 확인",
+        "minutes": 6,
+        "do": "노트북 화면에서 Copilot이 추천하는 Word·Excel·PowerPoint 산출물이 보이는지 확인, 있으면 하나 골라 생성",
+        "prompt": "",
+        "expect": "추천 카드가 보이면 파일 1개 생성, 안 보이면 '표시 안 됨'으로 기록",
+        "note": "[확인 필요] 계정 종류·Frontier 여부에 따라 표시가 다를 수 있음"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "노트북에 웹 페이지 링크 1개를 참조로 추가하고 요약이 어떻게 달라지는지 비교"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "같은 노트북을 OneNote에서 열어 Copilot 앱 화면과 다른 점 3가지 적기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "회의 받아쓰기(.txt) 2개를 더 넣고 '지난 회의와 달라진 결정 사항' 비교표를 받아 원문 대조까지 마치기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 할 일 표를 바꿔 보고 원문 대조에서 찾은 오류 1개씩 발표",
+    "quiz": [
+      {
+        "q": "이번 업데이트로 Copilot Notebooks 참조에 새로 넣을 수 있게 된 파일 형식은?",
+        "options": [
+          "MP4·MOV 동영상",
+          "TXT·Markdown·RTF 텍스트 파일",
+          "ZIP 압축 파일",
+          "EXE 실행 파일"
+        ],
+        "answer": 1,
+        "explain": "메모장(.txt)·Markdown(.md)·서식 있는 텍스트(.rtf)를 참조로 추가 가능. .csv·이미지는 '곧 지원' 상태"
+      },
+      {
+        "q": "무료 Copilot Chat(업무용) 사용자가 노트북에 넣을 수 있는 참조 수는?",
+        "options": [
+          "10개",
+          "50개",
+          "300개",
+          "제한 없음"
+        ],
+        "answer": 1,
+        "explain": "Copilot Chat은 50개, Microsoft Copilot 라이선스는 300개 이상 추가 가능(근거는 앞 300개)"
+      },
+      {
+        "q": "Copilot이 만든 할 일 표를 쓰기 전에 가장 먼저 할 일은?",
+        "options": [
+          "바로 팀에 공유한다",
+          "원문 파일과 담당·마감일을 대조한다",
+          "오디오 개요로 바꾼다",
+          "참조 파일을 모두 지운다"
+        ],
+        "answer": 1,
+        "explain": "AI 요약은 틀리거나 빠질 수 있음 → 숫자·날짜·담당은 원문과 직접 대조"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "완성도",
+        "high": "참조 3개 노트북 + 요약 + 할 일 표 + 대조 메모 모두 완성",
+        "mid": "노트북 + 요약",
+        "low": "노트북만 만듦"
+      },
+      {
+        "criterion": "근거 표시",
+        "high": "요약·표의 모든 항목에 근거 파일 이름",
+        "mid": "일부 항목만",
+        "low": "근거 없음"
+      },
+      {
+        "criterion": "사실 검수",
+        "high": "3행 이상 원문 대조, 오류 수정",
+        "mid": "1~2행 대조",
+        "low": "대조 안 함"
+      },
+      {
+        "criterion": "윤리·안전",
+        "high": "개인정보 없는 파일만 사용 + 기관 정책 확인",
+        "mid": "일부 확인",
+        "low": "확인 안 함"
+      }
+    ],
+    "next": [
+      "Gemini 노트북(Notebooks in Gemini)과 비교해 보기 (AI-2026-10-CAT06-003)",
+      "Copilot in PowerPoint 사용자 지정 스킬 (AI-2026-10-CAT03-006)",
+      "Gemini Notebook 스튜디오 학습 도구로 퀴즈 만들기 (AI-2026-10-CAT10-001)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 서류 바인더 비유",
+        "note": "흩어진 메모 파일 경험 묻기"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: Notebooks란, 참조·파일 형식, 라이선스 비교표, 추천 산출물, 안전",
+        "note": "개인 구독과 회사 계정 차이를 표로 강조"
+      },
+      {
+        "time": "35~61분",
+        "content": "따라 하기: 노트북 열기 → 참조 3개 추가 → 요약 → 할 일 표",
+        "note": "업로드 단계에서 가장 많이 막힘 → 순회 지도"
+      },
+      {
+        "time": "61~85분",
+        "content": "원문 대조 → 내 노트북 만들기 → 추천 산출물 확인",
+        "note": "대조에서 찾은 오류를 칭찬 포인트로"
+      },
+      {
+        "time": "85~90분",
+        "content": "짝 공유·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "회의 메모는 메모장에, 강의 개요는 다른 폴더에, 공지는 또 다른 파일에 있지요? 오늘은 이 흩어진 파일들을 Copilot 노트북 한 권에 모으고, 질문 한 번으로 정리해 보겠습니다."
+      },
+      {
+        "label": "참조 추가",
+        "text": "이제는 메모장 파일, Markdown 파일, RTF 파일도 그대로 넣을 수 있습니다. 워드로 바꿔 저장할 필요가 없어요. 세 파일을 끌어다 놓아 보세요."
+      },
+      {
+        "label": "요약",
+        "text": "프롬프트에 '참조 파일만 근거로', '파일에 없는 내용은 쓰지 마'라고 넣은 이유가 있습니다. 그래야 Copilot이 지어내지 않고, 어느 파일에서 왔는지 확인할 수 있어요."
+      },
+      {
+        "label": "대조",
+        "text": "할 일 표가 그럴듯해 보여도 바로 믿으면 안 됩니다. 세 줄만 골라서 원래 파일을 열어 보세요. 담당자나 날짜가 다르면 그게 오늘의 큰 발견입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "노트북은 자료를 모아 두는 바인더, Copilot은 그 바인더를 읽는 비서입니다. 비서가 만든 정리는 마지막에 꼭 내가 확인하세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Notebooks 메뉴가 보이지 않음(무료 계정·Basic)",
+        "response": "강사 화면 시연으로 진행, 학습자는 무료 Copilot 채팅에 파일 내용을 붙여넣어 같은 프롬프트로 요약 비교"
+      },
+      {
+        "situation": ".md 파일 업로드 실패",
+        "response": "확장자를 .txt로 바꿔 다시 업로드"
+      },
+      {
+        "situation": "추천 산출물이 표시되지 않음",
+        "response": "정상일 수 있음(계정·Frontier 차이) → 채팅으로 'Word 문서로 만들어 줘' 요청해 대체 [확인 필요]"
+      },
+      {
+        "situation": "인터넷·로그인 문제",
+        "response": "강사가 미리 만든 노트북 결과 인쇄본으로 원문 대조 실습만 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "왼쪽 메뉴에 Notebooks가 없음",
+        "fix": "앱 실행 아이콘(와플 메뉴)에서 Notebooks 선택, 그래도 없으면 계정 라이선스 확인"
+      },
+      {
+        "issue": "노트북 만들기 버튼이 비활성",
+        "fix": "OneDrive·SharePoint 사용 가능 계정인지 확인 — 노트북 만들기에 필요"
+      },
+      {
+        "issue": "답변에 근거 파일 이름이 없음",
+        "fix": "'각 항목 끝에 근거 파일 이름을 적어 줘' 다시 요청"
+      },
+      {
+        "issue": "Copilot이 파일에 없는 날짜를 씀",
+        "fix": "'파일에 없으면 미정으로 써 줘' 조건 추가 후 재요청"
+      },
+      {
+        "issue": "한국어 파일 글자가 깨짐",
+        "fix": "메모장에서 UTF-8로 다시 저장 후 업로드 [확인 필요]"
+      }
+    ],
+    "faq": [
+      {
+        "q": "개인 Microsoft 365 구독으로도 되나요?",
+        "a": "도움말 기준 Personal·Family·Premium·Pro 구독자 사용 가능. 단 Capture·마인드맵·오디오 개요는 개인 구독 미제공"
+      },
+      {
+        "q": "무료 계정은 안 되나요?",
+        "a": "무료 개인 Microsoft 계정·Microsoft 365 Basic은 대상 아님. 회사·학교 계정은 Copilot Chat 라이선스로 사용 가능(참조 50개)"
+      },
+      {
+        "q": "어떤 파일을 넣을 수 있나요?",
+        "a": ".docx·.pptx·.xlsx·.pdf·.loop·.page·.txt·.rtf·.md·OneNote 페이지, 웹 URL. .csv·.tsv·.png·.jpg·Teams 채팅은 곧 지원"
+      },
+      {
+        "q": "노트북을 공유하면 내 대화도 보이나요?",
+        "a": "아니오. 노트북을 공유해도 Copilot과의 대화는 다른 사람에게 보이지 않음(도움말)"
+      },
+      {
+        "q": "오디오 개요를 한국어로 들을 수 있나요?",
+        "a": "아니오. 영어·스페인어·일본어·프랑스어·독일어·포르투갈어·이탈리아어·중국어 8개 언어만, 회사·학교 계정 전용"
+      },
+      {
+        "q": "Gemini 노트북·Gemini Notebook과 무엇이 다른가요?",
+        "a": "비슷한 '자료 모음 + AI 대화' 개념. Copilot Notebooks는 OneDrive·OneNote·Outlook·Teams 등 Microsoft 365 자료와 연결이 강점"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급반",
+        "guide": "노트북 만들기 → 참조 3개 → 요약까지 필수, 할 일 표는 강사와 함께"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "원문 대조 + 내 노트북 만들기 + 도전과제 ⭐⭐까지"
+      },
+      {
+        "level": "시니어반 (변형)",
+        "guide": "파일 1개(.txt)만 넣고 '세 줄 요약' 받기, 끌어 놓기 동작 반복 연습"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수업 계획 메모·학부모 공지·회의록으로 학기 준비 노트북 만들기(학생 개인정보 제외)"
+      },
+      {
+        "level": "한국어 학습자·다문화 (JOB-GLB)",
+        "guide": "생활 안내문(.txt)을 넣고 '쉬운 한국어로 할 일 표' 받기, 마감·신청 같은 낱말 익히기"
+      }
+    ],
+    "pro_points": [
+      "'파일에 없는 내용은 쓰지 마' + '근거 파일 이름 표시' 두 조건이 핵심 프롬프트 습관",
+      "원문 대조를 평가의 중심에 둠 — 오류를 찾은 학습자를 칭찬",
+      "개인 구독과 회사 계정 기능 차이를 표 한 장으로 정리해 혼란 줄이기",
+      "Frontier·예정 기능은 '곧 나올 것'으로만 소개, 실습 대상에서 제외"
+    ],
+    "day_before": [
+      "개인 구독·회사 계정 각각에서 Notebooks 메뉴 위치와 한국어 메뉴 이름 캡처 준비 [확인 필요]",
+      ".md 파일 업로드가 개인 계정에서 되는지 직접 확인",
+      "추천 산출물 카드 표시 여부 확인·캡처",
+      "연습 파일 3개(.txt·.md·.rtf, UTF-8, 개인정보 없음) 배포 준비",
+      "예시 요약·할 일 표 결과 인쇄본 준비 (Plan B용)"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 한국어 화면 메뉴 이름 — 영어 도움말 기준(Notebooks·New notebook·Upload·Create·Message Copilot·Send)",
+    "[확인 필요] .md 지원: 'Get answers' 도움말·10월 블로그는 지원 명시, 'Add references' 도움말 형식 목록에는 .md 없음",
+    "[확인 필요] 추천 산출물: 블로그 본문은 정식 제공, 화면 캡션은 'Frontier에 9월 제공'으로 서로 다름",
+    "[확인 필요] 업무용 Microsoft Copilot 라이선스 가격·원화 가격 미확인",
+    "[확인 필요] Copilot Chat(무료 업무용)의 노트북 만들기에 필요한 조건은 기관 설정에 따라 다를 수 있음",
+    "타임라인의 2025-06·2026-07 항목은 보조 근거(블로그) 기반"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Tech Community – What's New in Notebooks (October 2026)",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/whats-new-in-notebooks--october-2026/4559105",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft Tech Community – Copilot Notebooks now works with Markdown, plain-text, and rich-text files",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/copilot-notebooks-now-works-with-markdown-plain-text-and-rich-text-files/4545652",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Get started with Microsoft Copilot Notebooks",
+      "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-notebooks",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Add references to your Microsoft Copilot Notebook",
+      "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/add-references-to-your-microsoft-365-copilot-notebook",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Get answers and insights about your Microsoft Copilot Notebook",
+      "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/get-answers-and-insights-about-your-microsoft-365-copilot-notebook",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Frequently asked questions about Microsoft Copilot Notebooks",
+      "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/frequently-asked-questions-about-microsoft-365-copilot-notebooks",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft 지원 – Get an audio overview of your Microsoft Copilot Notebook",
+      "url": "https://support.microsoft.com/en-gb/microsoft-365-copilot/get-an-audio-overview-of-your-microsoft-365-copilot-notebook",
+      "checked": "2026-10-16"
+    },
+    {
+      "title": "Microsoft Store – Compare All Microsoft 365 Products",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+      "checked": "2026-10-16"
+    }
+  ]
+}

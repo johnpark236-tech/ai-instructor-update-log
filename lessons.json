@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 77,
+  "count": 78,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-006",
+      "version": "v1.0",
+      "created_at": "2026-10-16 20:10 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "Microsoft Copilot Notebooks로 메모·회의록 텍스트 파일을 모아 '프로젝트 한 장 요약' 만들기 — TXT·Markdown·RTF 참조 + 추천 산출물",
+      "summary": "Copilot Notebooks는 프로젝트별로 파일·메모를 모아 두고 그 자료만 근거로 Copilot과 대화하는 AI 작업 공간. 2026-10-09 'What's New in Notebooks' 글에서 Markdown·TXT·RTF 참조 지원과 추천 산출물(Suggested artifacts)을 정식 제공(GA)으로 안내. 메모(.txt)·강의 개요(.md)·공지(.rtf) 3개 파일로 노트북을 만들고 1쪽 프로젝트 요약 + 할 일 표 완성",
+      "tool": "Microsoft 365 Copilot",
+      "feature": "Copilot Notebooks — 참조 파일 확대(Markdown·TXT·RTF)·추천 산출물(Suggested artifacts)",
+      "company": "Microsoft",
+      "type": "update",
+      "released": "2026-10-09",
+      "categories": [
+        "CAT-06",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-DAT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 참조 파일 3개(.txt·.md·.rtf)가 들어간 프로젝트 노트북 + ② 1쪽 프로젝트 요약(목표·현황·결정 사항) + ③ 담당·마감이 있는 할 일 표 + ④ 원문 대조 체크 메모",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "흩어진 메모 파일을 한 노트북에 모아 요약"
+    },
     {
       "id": "AI-2026-10-CAT08-008",
       "version": "v1.0",

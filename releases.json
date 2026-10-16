@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-16 18:10 KST",
+  "updated_at": "2026-10-16 20:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "copilot-2026-10-09-notebooks-text-files-suggested-artifacts",
+      "date": "2026-10-09",
+      "tool": "Microsoft 365 Copilot",
+      "company": "Microsoft",
+      "type": "update",
+      "title": "Copilot Notebooks 텍스트 파일 참조·추천 산출물",
+      "summary": "Copilot Notebooks 참조에 Markdown·TXT·RTF 파일을 넣을 수 있고, 노트북 내용으로 Word·Excel·PowerPoint 산출물을 추천·생성(정식 제공). 노트북 자동 만들기·자동화·모델 선택·PDF 만들기는 Frontier 또는 예정",
+      "source": {
+        "title": "Microsoft Tech Community – What's New in Notebooks (October 2026)",
+        "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/whats-new-in-notebooks--october-2026/4559105"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT06-006"
+    },
     {
       "id": "claude-2026-10-15-opus-fast-mode-ga",
       "date": "2026-10-15",
