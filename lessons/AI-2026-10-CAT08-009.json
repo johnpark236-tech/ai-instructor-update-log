@@ -1,0 +1,626 @@
+{
+  "id": "AI-2026-10-CAT08-009",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-17 01:03 KST",
+  "checked": "2026-10-17",
+  "review_by": "2027-01-17",
+  "title": "매주 알아서 AI 소식을 정리하는 'AI 팀원' 만들기 — Grok Bot(그록 봇, 자기 클라우드 컴퓨터를 가진 상시 에이전트)",
+  "summary": "2026-08-11 xAI가 Grok Bot 베타 공개. Bot마다 이름·역할·설명(지켜야 할 규칙)을 주면 사용자 전용 클라우드 컴퓨터에서 웹사이트·앱을 직접 다루며 일을 끝내고, 승인이 필요할 때만 돌아옴. 스킬(Skills)·루틴(Routines, 예약 실행)·Teach a task(작업 녹화로 배우기)·Team Bots(팀 공유, 2026-09-28 공개 베타) 지원. 2026-10-12 The X Subscription 개편으로 Premium(월 $30) 이상 요금제에 포함",
+  "glance": {
+    "emoji": "🤖",
+    "one_liner": "역할을 준 AI 팀원이 컴퓨터로 일을 끝냄",
+    "cards": [
+      {
+        "icon": "☁️",
+        "title": "전용 클라우드 PC",
+        "text": "노트북을 닫아도 계속 일함"
+      },
+      {
+        "icon": "📝",
+        "title": "설명에 규칙",
+        "text": "역할·금지·승인 규칙을 한곳에"
+      },
+      {
+        "icon": "⏰",
+        "title": "루틴 예약",
+        "text": "정한 시간마다 자동 실행"
+      },
+      {
+        "icon": "🙋",
+        "title": "승인 요청",
+        "text": "로그인·전송 전 사람에게 넘김"
+      }
+    ],
+    "diagram": {
+      "title": "Grok Bot 일하는 흐름",
+      "nodes": [
+        {
+          "icon": "🧑‍💼",
+          "label": "Bot 만들기"
+        },
+        {
+          "icon": "📋",
+          "label": "설명에 규칙"
+        },
+        {
+          "icon": "💬",
+          "label": "첫 업무 지시"
+        },
+        {
+          "icon": "✅",
+          "label": "결과 검토"
+        },
+        {
+          "icon": "⏰",
+          "label": "스킬·루틴 저장"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "매주 직접 검색",
+        "text": "매주 여러 사이트를 돌며 AI 소식을 찾고 표로 정리하는 데 1시간 이상"
+      },
+      "after": {
+        "label": "Bot이 먼저 정리",
+        "text": "월요일 아침 Bot이 공식 출처 3곳을 확인해 표 초안을 만들어 두면 검토만 함"
+      }
+    },
+    "cautions": [
+      "비밀번호·인증번호는 직접 입력",
+      "전송·삭제·결제는 먼저 묻게 설정",
+      "Bot끼리 컴퓨터·로그인 공유됨"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Bot(그록 봇) — 자기 클라우드 컴퓨터를 가진 상시 AI 팀원, Bot 만들기·설명(규칙)·Take over 로그인·스킬(/)·루틴(Test run)·Teach a task·Team Bots, The X Subscription Premium 이상 포함(2026-10-12)",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-08-11",
+  "categories": [
+    "CAT-08",
+    "CAT-06"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-BIZ",
+    "JOB-MKT"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 30,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Grok Bot 포함 요금제 — The X Subscription Premium(월 $30) 이상, 또는 기존 SuperGrok·Cursor 유료 요금제 연결",
+    "Grok Bot 데스크톱 앱(macOS·Windows·Linux) 설치 — x.ai/bot 내려받기, 휴대폰은 iOS 18 이상·Android 9 이상 보조 앱",
+    "Cursor 계정 로그인(Sign in) — 레거시 개인정보 모드(Legacy Privacy Mode) 사용 중이면 먼저 변경 필요",
+    "정리할 공식 출처 3곳 목록(예: OpenAI·Anthropic·Google 공식 블로그 주소)",
+    "강사: 개인 메일·SNS 계정이 로그인된 상태로 시연하지 않도록 시연 전용 계정 준비"
+  ],
+  "outcome": "① 역할·규칙이 설명에 들어간 'AI 소식 정리 Bot' 1개 + ② 공식 출처 3곳을 확인한 이번 주 AI 소식 표 초안 1개 + ③ 스킬로 저장하고 매주 월요일 실행 루틴을 Test run 해 본 기록 1개",
+  "objectives": [
+    "Grok Bot이 일반 채팅 AI와 무엇이 다른지(전용 클라우드 컴퓨터·상시 실행·승인 요청) 설명할 수 있음",
+    "Bot을 만들고 설명에 역할·금지·승인 규칙을 넣어 첫 업무를 맡기고 결과를 검토할 수 있음",
+    "완성된 작업을 스킬로 저장하고 루틴으로 예약해 Test run 하며 보안 수칙을 지킬 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "무료·Plus 요금제에는 Grok Bot 미포함. The X Subscription Premium 월 $30부터 포함, Super·Ultra는 사용량 확대. Grok Bot 사용량은 Grok·Cursor와 함께 쓰는 주간 공유 사용량에서 차감, 초과분은 API 정가로 충전(Top-up)",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "매일 제한된 Grok 이용 + Cursor 코딩 에이전트 맛보기 — Grok Bot 언급 없음"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8 (연 $80)",
+        "features": "Grok·Cursor 기본 사용량 + X 체크 표시·크리에이터 도구 — Grok Bot 미포함"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30 (연 $300)",
+        "features": "Grok Bot 포함 — Bot 전용 컴퓨터·도구 로그인·예약 루틴·데스크톱·모바일, Plus의 4배 사용량, SuperGrok·Cursor Pro·X Premium+ 혜택"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100 (연 $1,000)",
+        "features": "Premium 전체 + Plus의 15배 사용량, 사용량 몰릴 때 모델 우선 이용"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200 (연 $2,000)",
+        "features": "Super 전체 + Plus의 50배 사용량, 신제품·신모델 가장 먼저 이용"
+      }
+    ],
+    "note": "The X Subscription 요금은 xAI 공식 발표·문서 기준(2026-10-17 확인, 미국 달러·세금 별도). 팀 좌석은 Premium·Super·Ultra 좌석당 같은 가격, Team Bots는 Teams·Enterprise 요금제 공개 베타. 기존 SuperGrok·SuperGrok Plus·SuperGrok Heavy, Cursor Pro·Pro+·Ultra·Teams 구독자도 Grok Bot 사용 가능(기존 요금제 유지 또는 전환 선택, 계정 통합은 되돌릴 수 없음). 기본 사용량의 실제 양·원화 가격·국내 결제 여부 [확인 필요]",
+    "checked": "2026-10-17",
+    "sources": [
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI Docs – The X Subscription Pricing",
+        "url": "https://docs.x.ai/x-subscription/pricing"
+      },
+      {
+        "title": "xAI Docs – Grok Bot on The X Subscription",
+        "url": "https://docs.x.ai/x-subscription/grok-bot"
+      },
+      {
+        "title": "xAI – Grok Bot (AI teammates that finish the work)",
+        "url": "https://x.ai/bot"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-08-11",
+      "text": "Grok Bot 베타 공개 — Bot마다 클라우드 컴퓨터, 여러 Bot 동시 실행·그룹 대화, 작업 지켜보고 루틴으로 배우기, macOS·iOS, SuperGrok·Cursor 유료 요금제 포함"
+    },
+    {
+      "date": "2026-08-26",
+      "text": "포함 요금제 확대 — SuperGrok·SuperGrok Plus·Heavy, Cursor Pro·Pro+·Ultra·Teams, Bot 전용 사용량 별도"
+    },
+    {
+      "date": "2026-08-29",
+      "text": "X 연동 첫 버전 — X 커넥터로 게시물 검색·타임라인·멘션 확인·X 소식 요약"
+    },
+    {
+      "date": "2026-09-28",
+      "text": "Team Bots 공개 베타(Teams·Enterprise) — 팀 하나의 Bot을 공유하되 대화·기억은 사람별 분리, Slack 채널 초대"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "The X Subscription 개편 — Grok·Grok Bot·Cursor·X Premium 통합, Grok Bot은 Premium 월 $30 이상 포함, 주간 공유 사용량에서 차감"
+    },
+    {
+      "date": "2026-10-14",
+      "text": "Grok Voice 3.0 공개 — Grok Bot 음성 모드에 적용"
+    }
+  ],
+  "theory": {
+    "definition": "Grok Bot은 xAI의 상시 AI 팀원(에이전트) 앱임. Bot에게 이름·역할·설명을 주고 동료에게 메시지 보내듯 일을 맡기면, 사용자 전용 클라우드 컴퓨터에서 브라우저·앱·파일을 직접 다뤄 여러 단계 작업을 끝내고 승인이나 판단이 필요할 때만 돌아옴. 앱·노트북을 닫아도 클라우드에서 계속 실행됨",
+    "analogy": "'질문에 답해 주는 상담 창구'에서 '자기 책상과 컴퓨터를 받은 신입 직원'으로 바뀐 것 — 업무 규칙(설명)을 알려 주고, 잘한 일은 매뉴얼(스킬)로 남기고, 정기 업무(루틴)를 맡김",
+    "comparison": {
+      "headers": [
+        "구분",
+        "일반 채팅 AI",
+        "Grok Bot"
+      ],
+      "rows": [
+        [
+          "일하는 곳",
+          "대화창 안",
+          "사용자 전용 클라우드 컴퓨터(브라우저·파일·로그인)"
+        ],
+        [
+          "실행 시간",
+          "질문할 때만",
+          "앱을 닫아도 백그라운드·예약 실행"
+        ],
+        [
+          "기억·역할",
+          "대화 단위",
+          "Bot별 역할·설명·기억 유지"
+        ],
+        [
+          "사람 개입",
+          "매번 질문",
+          "로그인·승인 필요할 때만 Take over 요청"
+        ],
+        [
+          "반복 업무",
+          "매번 다시 지시",
+          "스킬 저장 + 루틴 예약(최소 5분 간격)"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "설명(Description)",
+        "body": "Bot 프로필에 적는 오래 지킬 규칙 — ① 역할(무엇을 맡는지) ② 출처·범위 ③ 금지(외부 메시지 전송 금지 등) ④ 승인 규칙(보내기·게시·삭제·구매 전 먼저 묻기). 그때그때 업무는 대화창에 따로 지시"
+      },
+      {
+        "title": "스킬(Skill)과 루틴(Routine)",
+        "body": "① 스킬: 일하는 방법을 적은 매뉴얼, 대화창에서 / 로 불러 씀 ② 루틴: 스킬을 어느 Bot이 언제 실행할지 정한 예약(일정 또는 사건 발생 시) ③ Test run: 예약 전 실제로 한 번 돌려 보기 — 실제 작업이 실행되므로 안전한 입력으로 시험"
+      },
+      {
+        "title": "Take over와 승인",
+        "body": "① 로그인 화면·비밀번호·2단계 인증·CAPTCHA는 사람만 처리 — 요청 카드의 Take over 눌러 직접 입력 후 I'm done ② 위험한 작업은 승인 대기, Auto-review 규칙으로 검토 ③ 모든 Bot이 한 컴퓨터·로그인을 함께 써서 Bot을 나눠도 보안 경계 아님"
+      }
+    ],
+    "can": [
+      "Bot 여러 개를 만들어 각자 역할 맡기기 + 동시에 작업(Bot마다 화면 1개)",
+      "커넥터가 없는 웹사이트도 브라우저로 직접 사용",
+      "완성한 작업을 스킬로 저장하고 / 로 불러 쓰기",
+      "루틴으로 정기 실행 — Bot당 최대 50개, 최근 실행 기록 20개 보관",
+      "Teach a task로 최대 10분 브라우저 작업을 녹화해 스킬 초안 만들기(순차 제공)",
+      "Bot 설정을 템플릿 링크로 공유(Public link·Team-only) + 마켓플레이스 Bot 가져오기",
+      "데스크톱 Cmd/Ctrl+D 받아쓰기, 음성 대화(Start voice chat)"
+    ],
+    "cannot": [
+      "무료·Plus 요금제에서 사용",
+      "웹 브라우저(grok.com)에서 Bot 사용 — FAQ에 웹 버전 없음 [확인 필요]",
+      "비밀번호·2단계 인증·CAPTCHA 자동 통과(사람이 Take over로 처리)",
+      "Bot별로 파일·로그인을 따로 격리",
+      "레거시 개인정보 모드(Legacy Privacy Mode) 계정에서 사용",
+      "루틴 5분보다 짧은 간격 예약, 삭제한 루틴·계정 통합 되돌리기"
+    ],
+    "safety": [
+      "설명에 '외부로 메시지 보내기·게시·삭제·구매 전 반드시 먼저 물어볼 것' 규칙을 넣을 것",
+      "비밀번호·인증번호는 채팅에 쓰지 말고 Take over 화면에서 직접 입력",
+      "모든 Bot이 같은 컴퓨터·로그인을 공유하므로 개인 메일·은행 등 불필요한 계정은 로그인하지 않을 것",
+      "Bot 템플릿을 공유하기 전 API 키·내부 주소·고객 정보 삭제 — 공개 링크는 설정이 그대로 보임",
+      "Bot을 지워도 공유 컴퓨터의 파일·로그인은 남을 수 있음 — 실습 후 로그아웃·파일 정리",
+      "Bot이 모은 소식·수치는 공식 출처를 열어 직접 재확인 후 사용"
+    ]
+  },
+  "practice": {
+    "preview": "Grok Bot 앱 로그인 → 'AI 소식 정리 Bot' 만들기 → 설명에 규칙 넣기 → 공식 출처 3곳 확인해 표 초안 받기 → 스킬 저장 → 매주 월요일 루틴 Test run",
+    "follow": [
+      {
+        "title": "앱 설치·로그인",
+        "minutes": 5,
+        "do": "x.ai/bot 에서 내 컴퓨터용 Grok Bot 내려받아 설치 → Sign in → 브라우저에서 인증 후 앱으로 돌아오기 → 첫 설정 질문 답하기",
+        "prompt": "",
+        "expect": "'Meet a future teammate' 화면 표시",
+        "note": "SuperGrok 구독으로 쓰는 경우 Settings → Usage & Billing 에서 구독 연결 — 화면 문구 [확인 필요]"
+      },
+      {
+        "title": "Bot 만들기",
+        "minutes": 5,
+        "do": "Create your own(또는 New → Create new Bot, Cmd/Ctrl+N) → Edit Profile 에서 이름 'AI 소식 정리' 입력 → 설명 칸에 아래 글 붙여 넣기",
+        "prompt": "역할: 나는 AI 강사의 조사 비서다. 매주 새로 나온 AI 기능을 공식 출처에서 찾아 표로 정리한다.\n출처: OpenAI 공식 블로그, Anthropic 공식 뉴스, Google 공식 블로그만 확인한다. 기사·SNS는 쓰지 않는다.\n규칙:\n1. 모든 항목에 공식 링크와 발표 날짜를 붙인다.\n2. 확실하지 않은 내용은 [확인 필요]라고 표시한다.\n3. 이메일·메시지 보내기, 게시, 삭제, 구매, 계정 설정 변경은 절대 하지 않는다. 필요하면 먼저 나에게 묻는다.\n4. 로그인이 필요하면 멈추고 나에게 Take over를 요청한다.\n5. 결과는 한국어로 쓴다.",
+        "expect": "이름·설명이 저장된 Bot 1개",
+        "note": "오래 지킬 규칙은 설명에, 이번 업무는 대화창에 — 공식 권장 방식"
+      },
+      {
+        "title": "첫 업무 맡기기",
+        "minutes": 8,
+        "do": "Bot 대화창에 아래 업무 지시 붙여 넣기 → Bot이 컴퓨터 화면에서 사이트를 여는 과정 지켜보기",
+        "prompt": "최근 7일 동안 위 세 곳 공식 출처에 올라온 새 AI 기능 소식을 찾아 줘.\n결과물: 표 1개 (열: 날짜 | 회사 | 기능 이름 | 한 줄 요약 | 무료/유료 | 공식 링크)\n조건: 회사마다 최대 3개, 모두 합쳐 9개 이내. 기능 소식이 아닌 회사 소식은 빼 줘.\n끝나면 표와 함께 '내가 직접 확인해야 할 항목'을 따로 적고 멈춰 줘.",
+        "expect": "날짜·회사·기능·요약·요금·링크가 들어간 표 + 확인 필요 목록",
+        "note": "소요 시간은 사이트·사용량에 따라 다름 — 기다리는 동안 다음 단계 설명 진행"
+      },
+      {
+        "title": "결과 검토·고치기",
+        "minutes": 4,
+        "do": "표의 링크 2개를 직접 열어 날짜·기능명이 맞는지 확인 → 틀린 점·바꿀 점을 대화로 요청",
+        "prompt": "2번째 항목 날짜를 공식 페이지 기준으로 다시 확인해 줘. 앞으로는 요약을 20자 이내로 줄여 줘.",
+        "expect": "수정된 표 + 짧아진 요약",
+        "note": "계속 지킬 선호는 '앞으로는'처럼 분명히 말하면 기억에 반영 — 중요한 판단은 원본 재확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "스킬로 저장",
+        "minutes": 4,
+        "do": "완성된 작업을 스킬로 저장해 달라고 요청 → 새 대화에서 / 입력해 스킬 불러 보기",
+        "prompt": "방금 한 작업을 '주간 AI 소식 표' 스킬로 저장해 줘. 언제 쓰는지, 확인할 출처, 표 형식, 확인 필요 표시 방법, 먼저 물어볼 행동을 모두 넣어 줘.",
+        "expect": "/ 목록에 '주간 AI 소식 표' 스킬 표시",
+        "note": "스킬이 안 보이면 Connect apps → Your plugins → Manage plugins and skills → Private skills 확인"
+      },
+      {
+        "title": "루틴 예약·Test run",
+        "minutes": 4,
+        "do": "같은 Bot에게 루틴 만들기 요청 → Bot이 보여 주는 다음 실행 시각 확인 → View conversation details → Routines → Test run",
+        "prompt": "'주간 AI 소식 표' 스킬로 매주 월요일 오전 8시(서울 시간)에 실행하는 루틴을 만들어 줘. 결과는 이 대화에 표로 올리고, 출처 사이트가 열리지 않으면 실패했다고 알려 줘. 외부로는 아무것도 보내지 마.",
+        "expect": "루틴 1개 + Test run 결과 표",
+        "note": "Test run도 실제 작업 실행 — 외부 전송이 없는 업무로만 시험, 오래 쓰지 않으면 루틴 일시 중지될 수 있음"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "설명에 '표 마지막 줄에 이번 주 수업 추천 기능 1개와 이유'를 추가하고 Test run 결과 비교"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Bot을 하나 더 만들어(예: '수업 자료 Bot') 정리 Bot의 표를 받아 10분 수업 개요를 만들게 하고 두 Bot 결과를 함께 검토"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Teach a task로 내가 출처 사이트를 확인하는 과정을 10분 이내로 녹화 → 생성된 스킬 초안에 실패 처리·승인 규칙 추가 후 Test run"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 서로의 Bot 설명(규칙)을 보여 주고 '꼭 남길 규칙 1개 + 빠진 안전 규칙 1개' 말하기",
+    "quiz": [
+      {
+        "q": "Grok Bot이 일반 채팅 AI와 가장 크게 다른 점은?",
+        "options": [
+          "답변이 더 짧다",
+          "사용자 전용 클라우드 컴퓨터에서 앱을 닫아도 계속 일한다",
+          "이미지만 만들 수 있다",
+          "무료로 무제한 쓸 수 있다"
+        ],
+        "answer": 1,
+        "explain": "공식 문서: Bot은 지속되는 클라우드 컴퓨터에서 도구·웹사이트·파일을 쓰며, 앱·노트북을 닫아도 백그라운드 작업·루틴이 계속됨"
+      },
+      {
+        "q": "Bot이 '절대 외부로 메시지를 보내지 말 것'처럼 오래 지켜야 할 규칙은 어디에 적는 것이 좋을까요?",
+        "options": [
+          "Bot 설명(Description)",
+          "매번 새 대화 첫 줄",
+          "Bot 이름",
+          "아바타 이미지"
+        ],
+        "answer": 0,
+        "explain": "공식 안내: 지속되는 규칙·책임은 설명에, 이번 업무 요청은 대화에 적음"
+      },
+      {
+        "q": "Bot이 로그인 화면에서 멈추고 비밀번호가 필요하다고 할 때 올바른 행동은?",
+        "options": [
+          "채팅창에 비밀번호를 적어 준다",
+          "다른 Bot에게 대신 입력하게 한다",
+          "Take over를 눌러 직접 입력하고 I'm done을 누른다",
+          "Bot을 삭제한다"
+        ],
+        "answer": 2,
+        "explain": "비밀번호·2단계 인증·CAPTCHA는 사람만 처리하는 단계 — Take over로 직접 입력 후 제어권 반환"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Bot 설명 설계",
+        "high": "역할·출처·금지·승인·로그인 규칙 모두 포함",
+        "mid": "역할·출처만 포함",
+        "low": "이름만 있음"
+      },
+      {
+        "criterion": "결과 검토",
+        "high": "링크 2개 이상 직접 확인 + 수정 요청 반영",
+        "mid": "표만 받음",
+        "low": "결과 확인 안 함"
+      },
+      {
+        "criterion": "자동화·안전",
+        "high": "스킬 저장 + 루틴 Test run + 외부 전송 없음 확인",
+        "mid": "스킬만 저장",
+        "low": "승인 규칙 없이 루틴 예약"
+      }
+    ],
+    "next": [
+      "ChatGPT dots(상시 에이전트)와 비교하기 (AI-2026-10-CAT08-007)",
+      "Perplexity Computer 자동화(Automations) (AI-2026-10-CAT08-004)",
+      "Grok Voice 3.0으로 음성 에이전트 만들기 (AI-2026-10-CAT05-014)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 강사가 미리 만든 Bot이 사이트를 열어 표를 채우는 화면 시연",
+        "note": "시연 전용 계정 사용, 개인 계정 로그아웃 확인"
+      },
+      {
+        "time": "5~18분",
+        "content": "1부 이론: 채팅 AI와 차이, 설명·스킬·루틴·Take over, 요금제, 보안",
+        "note": "비교표 + '모든 Bot이 컴퓨터 공유' 강조"
+      },
+      {
+        "time": "18~40분",
+        "content": "따라 하기 1~4: 설치·로그인 → Bot 만들기 → 첫 업무 → 검토",
+        "note": "Bot 작업 대기 시간에 다음 단계 미리 설명"
+      },
+      {
+        "time": "40~48분",
+        "content": "내 것 만들기: 스킬 저장 → 루틴 Test run",
+        "note": "외부 전송 없는 업무로만 루틴 시험"
+      },
+      {
+        "time": "48~54분",
+        "content": "짝 공유·퀴즈·로그아웃·루틴 정리 여부 결정",
+        "note": "수업용 루틴은 일시 중지 또는 삭제 안내"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "지금 화면 속 AI는 제 질문에 답하는 게 아니라, 자기 컴퓨터로 직접 사이트를 열고 표를 채우고 있습니다. 오늘은 이런 AI 팀원을 한 명 뽑아 보겠습니다."
+      },
+      {
+        "label": "개념",
+        "text": "Grok Bot은 각자 클라우드 컴퓨터를 받은 신입 직원이라고 생각하세요. 업무 규칙은 설명에 적어 주고, 잘한 일은 스킬로 매뉴얼을 만들고, 정기 업무는 루틴으로 맡깁니다."
+      },
+      {
+        "label": "설명 쓰기",
+        "text": "가장 중요한 건 설명입니다. 무엇을 맡는지, 어디서 찾는지, 무엇은 절대 하면 안 되는지, 언제 먼저 물어봐야 하는지를 꼭 적어 주세요."
+      },
+      {
+        "label": "안전",
+        "text": "비밀번호는 절대 채팅에 쓰지 마세요. Bot이 로그인 화면에서 멈추면 Take over를 눌러 직접 입력합니다. 그리고 모든 Bot이 같은 컴퓨터를 쓰니까, 필요 없는 계정은 로그인하지 마세요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 Bot은 다음 주 월요일 아침에도 혼자 일할 수 있습니다. 하지만 결과를 쓰기 전에 링크를 열어 확인하는 건 여전히 우리 몫입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생이 Premium 이상 요금제가 없음",
+        "response": "강사 화면 공유로 진행, 수강생은 설명(규칙)·업무 지시문 작성 실습 후 강사가 대표 2~3개를 실제 Bot에 넣어 시연"
+      },
+      {
+        "situation": "데스크톱 앱 설치 권한이 없는 PC",
+        "response": "휴대폰 보조 앱(iOS·Android)으로 강사 Bot 대화 보기, 또는 짝 PC 사용 — 모바일에서 Bot 만들기 가능 여부 [확인 필요]"
+      },
+      {
+        "situation": "Bot 작업이 오래 걸리거나 사용량 부족",
+        "response": "출처를 1곳·항목 3개로 줄여 다시 지시, 미리 준비한 완성 결과 캡처로 검토 단계 진행"
+      },
+      {
+        "situation": "사이트가 자동 접속을 막거나 CAPTCHA 표시",
+        "response": "Take over로 직접 처리하거나 다른 공식 출처로 바꾸기 — 우회 시도 금지(공식 안내)"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "로그인 후 'Meet a future teammate' 화면이 안 나옴",
+        "fix": "New → Create new Bot(Cmd/Ctrl+N)으로 직접 만들기"
+      },
+      {
+        "issue": "Bot이 기사·SNS까지 섞어 정리함",
+        "fix": "설명의 출처 규칙에 공식 주소를 직접 적고 '목록 밖 사이트 사용 금지' 추가"
+      },
+      {
+        "issue": "/ 를 눌러도 저장한 스킬이 없음",
+        "fix": "Connect apps → Your plugins → Manage plugins and skills → Private skills 확인, 없으면 다시 저장 요청"
+      },
+      {
+        "issue": "루틴이 언제 도는지 모르겠음",
+        "fix": "Bot 열기 → View conversation details → Routines 에서 일정·시간대·최근 실행 기록 확인"
+      },
+      {
+        "issue": "Teach a task 버튼이 안 보임",
+        "fix": "순차 제공 기능 — 대신 완료한 작업과 지시문으로 스킬을 써 달라고 요청"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로 쓸 수 있나요?",
+        "a": "무료·Plus에는 Grok Bot 미포함. The X Subscription Premium(월 $30) 이상 또는 기존 SuperGrok·Cursor 유료 요금제 필요"
+      },
+      {
+        "q": "노트북을 끄면 멈추나요?",
+        "a": "멈추지 않음. 작업은 클라우드 컴퓨터에서 돌아가서 앱·노트북·휴대폰을 닫아도 백그라운드 작업·루틴 계속됨"
+      },
+      {
+        "q": "Bot을 여러 개 만들면 서로 안전하게 분리되나요?",
+        "a": "분리되지 않음. 모든 Bot이 사용자 1명당 하나인 클라우드 컴퓨터의 파일·브라우저·로그인을 공유 — Bot 구분은 보안 경계가 아님"
+      },
+      {
+        "q": "한국어로 쓸 수 있나요?",
+        "a": "지시·결과는 한국어로 요청 가능. 앱 화면 언어는 Settings → Language 에서 20개 이상 언어 선택 — 한국어 화면 포함 여부 [확인 필요]"
+      },
+      {
+        "q": "ChatGPT dots와 무엇이 다른가요?",
+        "a": "둘 다 클라우드 컴퓨터를 가진 상시 에이전트. Grok Bot은 여러 Bot을 역할별로 나눠 그룹 대화·핸드오프, Cursor 계정·코딩 에이전트와 사용량 공유가 특징"
+      },
+      {
+        "q": "팀이 같은 Bot을 같이 쓸 수 있나요?",
+        "a": "Team Bots(Teams·Enterprise 공개 베타)로 가능. 팀이 같은 Bot·스킬을 쓰되 대화·기억은 사람별 분리, Slack 채널 초대 가능"
+      },
+      {
+        "q": "Bot을 지우면 모든 흔적이 사라지나요?",
+        "a": "Bot 프로필·대화·루틴만 삭제. 공유 컴퓨터의 파일·로그인은 남을 수 있어 직접 정리 필요 — 나중에 쓸 수 있으면 숨기기(Hide) 권장"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "강사 시연 중심, 수강생은 설명(규칙) 5줄 쓰기와 결과 표 링크 확인만 체험"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 스킬 저장까지, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "루틴 Test run + Bot 2개 협업(⭐⭐), Teach a task(⭐⭐⭐)로 스킬 초안 다듬기"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "주간 AI 소식 → 10분 수업 개요까지 이어지는 Bot 2개 구성, 수업 자료로 쓰기 전 출처 확인 습관 강조"
+      },
+      {
+        "level": "창업·마케팅 (JOB-BIZ·JOB-MKT)",
+        "guide": "경쟁사 공식 블로그·가격표 주간 정리 Bot — 외부 연락·게시 금지 규칙 필수"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: '답하는 AI'에서 '일을 끝내는 AI 팀원'으로 — 품질은 설명(규칙) 설계에서 결정",
+      "좋은 설명 = 역할 + 출처 범위 + 금지 행동 + 승인 시점 + 결과 언어·형식",
+      "스킬은 방법, 루틴은 언제 — 스킬을 실제 1회 시험한 뒤 루틴으로 예약(공식 권장 순서)",
+      "보안 핵심: 모든 Bot이 컴퓨터·로그인 공유, 비밀번호는 Take over로만",
+      "비교 수업: ChatGPT dots·Perplexity Computer와 '요금·실행 위치·승인 방식' 3가지로 비교"
+    ],
+    "day_before": [
+      "강사 시연 전용 계정으로 앱 설치·로그인·Bot 만들기 리허설 — 버튼 위치 캡처 준비 [확인 필요]",
+      "Premium 이상 요금제·주간 사용량 남은 양 확인(grok.com/dashboard → Usage)",
+      "출처 3곳이 자동 접속을 막지 않는지 미리 Bot으로 시험",
+      "Plan B용 완성 결과 표·루틴 화면 캡처 준비",
+      "x.ai/news·docs.x.ai 에서 요금·포함 요금제·Teach a task 제공 여부 재확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Grok Bot 앱 화면의 한국어 표기·한국어 화면 언어 지원 여부",
+    "[확인 필요] 기본(Base) 주간 사용량의 실제 양 — 공식 문서는 배수(4배·15배·50배)만 표기",
+    "[확인 필요] 국내 결제·원화 가격, 국내 이용 가능 여부(공식 문서에 국가 제한 언급 없음)",
+    "[확인 필요] 모바일 앱에서 Bot 새로 만들기 가능 여부(문서는 데스크톱 기준 설명)",
+    "[확인 필요] 웹 브라우저 버전 유무 — FAQ는 데스크톱·모바일 앱만 안내",
+    "[실험 기능] Teach a task — 순차 제공, 버튼이 없을 수 있음",
+    "교안 작성 중 실제 계정으로 Bot 실행을 재현하지 못함 — xAI 공식 발표·Grok Bot 문서 기준"
+  ],
+  "sources": [
+    {
+      "title": "xAI News – Introducing Grok Bot",
+      "url": "https://x.ai/news/introducing-grok-bot",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI News – Grok Bot is now included with more plans",
+      "url": "https://x.ai/news/grok-bot-more-plans",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI News – Grok Bot now works with X",
+      "url": "https://x.ai/news/grok-bot-and-x",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI News – Team Bots: shared AI teammates that learn as they work",
+      "url": "https://x.ai/news/team-bots",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI Docs – Grok Bot: Get started",
+      "url": "https://docs.x.ai/grok-bot/get-started",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI Docs – Create and manage Bots",
+      "url": "https://docs.x.ai/grok-bot/bots",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI Docs – Skills and routines",
+      "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI Docs – Grok Bot FAQ",
+      "url": "https://docs.x.ai/grok-bot/faq",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI Docs – The X Subscription Pricing",
+      "url": "https://docs.x.ai/x-subscription/pricing",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI – Grok Bot",
+      "url": "https://x.ai/bot",
+      "checked": "2026-10-17"
+    }
+  ]
+}

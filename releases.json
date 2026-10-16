@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-16 23:58 KST",
+  "updated_at": "2026-10-17 01:03 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-10-12-x-subscription",
+      "date": "2026-10-12",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "The X Subscription — Grok·Grok Bot·Cursor·X Premium 통합 요금제",
+      "summary": "Free $0·Plus 월 $8·Premium 월 $30·Super 월 $100·Ultra 월 $200, Grok Bot은 Premium 이상 포함, Grok 앱·X의 Grok 탭·Cursor가 주간 공유 사용량 사용, 기존 SuperGrok·Cursor 요금제 유지 또는 전환 선택",
+      "source": {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-009"
+    },
     {
       "id": "grok-2026-10-14-voice-3",
       "date": "2026-10-14",
@@ -16,6 +31,36 @@
       },
       "checked": "2026-10-16",
       "lesson_id": "AI-2026-10-CAT05-014"
+    },
+    {
+      "id": "grok-2026-09-28-team-bots",
+      "date": "2026-09-28",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Team Bots — 팀이 함께 쓰는 Grok Bot(공개 베타)",
+      "summary": "팀 공용 Bot에 자료·지침·스킬·플러그인·자격 증명·기억 부여, 대화·기억은 사람별 분리, Slack 채널 초대, Teams·Enterprise 요금제 공개 베타",
+      "source": {
+        "title": "xAI News – Team Bots",
+        "url": "https://x.ai/news/team-bots"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-009"
+    },
+    {
+      "id": "grok-2026-08-11-grok-bot",
+      "date": "2026-08-11",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Bot — 자기 클라우드 컴퓨터를 가진 상시 AI 팀원(베타)",
+      "summary": "Bot마다 역할·설명을 주면 클라우드 컴퓨터에서 앱·웹사이트를 다뤄 여러 단계 작업 완료, 여러 Bot 동시 실행·그룹 대화, 작업 지켜보고 루틴으로 배우기, 승인 필요 시만 사람에게 요청, macOS·iOS 베타",
+      "source": {
+        "title": "xAI News – Introducing Grok Bot",
+        "url": "https://x.ai/news/introducing-grok-bot"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-009"
     },
     {
       "id": "grok-2026-08-07-imagine-image-2",

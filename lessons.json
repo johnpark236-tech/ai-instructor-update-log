@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 82,
+  "count": 83,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-009",
+      "version": "v1.0",
+      "created_at": "2026-10-17 01:03 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "매주 알아서 AI 소식을 정리하는 'AI 팀원' 만들기 — Grok Bot(그록 봇, 자기 클라우드 컴퓨터를 가진 상시 에이전트)",
+      "summary": "2026-08-11 xAI가 Grok Bot 베타 공개. Bot마다 이름·역할·설명(지켜야 할 규칙)을 주면 사용자 전용 클라우드 컴퓨터에서 웹사이트·앱을 직접 다루며 일을 끝내고, 승인이 필요할 때만 돌아옴. 스킬(Skills)·루틴(Routines, 예약 실행)·Teach a task(작업 녹화로 배우기)·Team Bots(팀 공유, 2026-09-28 공개 베타) 지원. 2026-10-12 The X Subscription 개편으로 Premium(월 $30) 이상 요금제에 포함",
+      "tool": "Grok",
+      "feature": "Grok Bot(그록 봇) — 자기 클라우드 컴퓨터를 가진 상시 AI 팀원, Bot 만들기·설명(규칙)·Take over 로그인·스킬(/)·루틴(Test run)·Teach a task·Team Bots, The X Subscription Premium 이상 포함(2026-10-12)",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-08-11",
+      "categories": [
+        "CAT-08",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 역할·규칙이 설명에 들어간 'AI 소식 정리 Bot' 1개 + ② 공식 출처 3곳을 확인한 이번 주 AI 소식 표 초안 1개 + ③ 스킬로 저장하고 매주 월요일 실행 루틴을 Test run 해 본 기록 1개",
+      "access": "paid",
+      "total_minutes": 54,
+      "notice": "",
+      "emoji": "🤖",
+      "one_liner": "역할을 준 AI 팀원이 컴퓨터로 일을 끝냄"
+    },
     {
       "id": "AI-2026-10-CAT05-014",
       "version": "v1.0",
