@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-16 20:15 KST",
+  "updated_at": "2026-10-16 22:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2026-09-10-gen-1-slides",
+      "date": "2026-09-10",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Gen-1 Slides (AI Slides Standard 모드 기본 모델)",
+      "summary": "슬라이드 전용 모델 Gen-1 Slides 공개, AI Slides Standard 모드 기본 모델로 적용 — 저비용·빠른 생성, Ultra 모드는 최상위 모델 선택 유지, Genspark CLI(gsk task create slides)에서도 기본",
+      "source": {
+        "title": "Genspark Blog – Introducing Gen-1 Slides: AI Model Built for Work",
+        "url": "https://www.genspark.ai/blog/gen-1-slides"
+      },
+      "checked": "2026-10-16",
+      "lesson_id": "AI-2026-10-CAT03-011"
+    },
     {
       "id": "copilot-2026-10-09-notebooks-text-files-suggested-artifacts",
       "date": "2026-10-09",

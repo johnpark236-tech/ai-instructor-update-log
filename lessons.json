@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 79,
+  "count": 80,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-011",
+      "version": "v1.0",
+      "created_at": "2026-10-16 22:05 KST",
+      "checked": "2026-10-16",
+      "review_by": "2027-01-16",
+      "title": "한 줄 요청으로 수업 발표 자료 10장 만들기 — Genspark AI Slides Gen-1 Slides(Standard 모드)",
+      "summary": "2026-09-10 Genspark가 슬라이드 전용 모델 Gen-1 Slides 공개, AI Slides의 Standard 모드 기본 모델로 적용. 주제·대상·장수를 한 번에 요청해 발표 자료 초안을 만들고 Select·Draw 모드로 부분 수정, 직접 편집은 크레딧 없이 진행. 무료는 만들기·브라우저 발표·링크 공유까지, PPTX·PDF·Google Slides 내보내기는 Plus($24.99/월) 이상",
+      "tool": "Genspark",
+      "feature": "AI Slides Gen-1 Slides — Standard 모드 기본 슬라이드 전용 모델, Select·Draw 부분 수정·AI Edit·내보내기(PPTX·PDF·Google Slides)",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2026-09-10",
+      "categories": [
+        "CAT-03",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 한 줄 요청으로 만든 수업 발표 자료 초안 10장 + ② Select·Draw 모드로 고친 슬라이드 2장 이상 + ③ 공유 링크(유료면 PPTX 파일)",
+      "access": "freemium",
+      "total_minutes": 58,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "한 줄 요청으로 발표 자료 초안 완성"
+    },
     {
       "id": "AI-2026-10-CAT05-013",
       "version": "v1.0",
