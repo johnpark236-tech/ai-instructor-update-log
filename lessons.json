@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 110,
+  "count": 111,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-018",
+      "version": "v1.0",
+      "created_at": "2026-10-18 05:20 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "Runway 프레임 수 늘리기(Enhance Frame Rate)로 휴대폰 영상을 60·120fps로 바꿔 부드러운 슬로모션 쇼츠 만들기",
+      "summary": "Runway 프레임 수 늘리기(Enhance Frame Rate)는 AI가 프레임 사이의 중간 장면을 새로 만들어 영상을 25·30·48·60·120fps(NTSC 59.94 포함)로 바꾸는 프레임 보간(Frame interpolation) 기능. Runway에서 만든 영상이 아니어도 사용 가능, 최대 4K·5분, 원본 해상도 유지. 2026-09-17 출시, 체인지로그 기준 Max 이상 요금제, 영상 2초당 1크레딧(해상도·목표 fps 무관). Enhance 메뉴·Tool Mode·Workflows·Agent에서 사용",
+      "tool": "Runway",
+      "feature": "프레임 수 늘리기(Enhance Frame Rate) — AI 프레임 보간으로 영상을 25·30·48·60·120·59.94fps로 변환, Runway 외 영상도 가능, 최대 4K·5분·원본 해상도 유지, Enhance 메뉴·Tool Mode·Workflows·Agent, 2초당 1크레딧(Max 이상), API enhance_frame_rate",
+      "company": "Runway",
+      "type": "update",
+      "released": "2026-09-17",
+      "categories": [
+        "CAT-05",
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-EDU",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 원본(30fps)·60fps·120fps 영상 3개 + ② 세 영상을 25% 속도로 재생한 슬로모션 비교 결과표 + ③ 120fps 변환본으로 만든 10초 슬로모션 쇼츠 1개",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎞️",
+      "one_liner": "영상 사이 장면을 AI가 채워 부드럽게"
+    },
     {
       "id": "AI-2026-10-CAT08-014",
       "version": "v1.0",

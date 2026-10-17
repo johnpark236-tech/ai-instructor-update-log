@@ -2439,13 +2439,13 @@
       "company": "Runway",
       "type": "update",
       "title": "프레임 수 늘리기(Enhance Frame Rate)",
-      "summary": "영상을 25·30·48·60·120fps 등으로 바꿔 부드럽게 만드는 기능, 최대 4K·5분 길이 (Max 이상)",
+      "summary": "영상을 25·30·48·60·120·59.94fps로 바꿔 부드럽게 만드는 AI 프레임 보간 기능, Runway 외 영상도 가능, 최대 4K·5분·원본 해상도 유지, 2초당 1크레딧 (Max 이상)",
       "source": {
         "title": "Runway 체인지로그",
         "url": "https://runway.com/en/changelog"
       },
-      "checked": "2026-10-14",
-      "lesson_id": null
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT05-018"
     },
     {
       "id": "gemini-2026-05-19-spark",
