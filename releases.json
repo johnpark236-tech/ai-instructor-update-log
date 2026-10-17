@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 16:00 KST",
+  "updated_at": "2026-10-17 18:00 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "acrobat-2026-10-01-express-designs",
+      "date": "2026-10-01",
+      "tool": "Adobe Acrobat",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Acrobat에서 문서로 디자인 만들기(Adobe Express AI Assistant)",
+      "summary": "Adobe Express AI Assistant가 PDF·PDF Spaces 내용으로 전단·SNS 게시물·뉴스레터를 만들고 대화로 수정 후 내려받기·공유 (Acrobat 10월 업데이트, Reader 데스크톱 순차 제공)",
+      "source": {
+        "title": "Adobe Acrobat on the web 릴리스 노트",
+        "url": "https://helpx.adobe.com/acrobat/web/whats-new/release-notes.html"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT03-017"
+    },
     {
       "id": "grok-2026-05-18-skills",
       "date": "2026-05-18",

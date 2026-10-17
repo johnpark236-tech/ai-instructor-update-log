@@ -1,0 +1,599 @@
+{
+  "id": "AI-2026-10-CAT03-017",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-17 18:00 KST",
+  "checked": "2026-10-17",
+  "review_by": "2027-01-17",
+  "title": "Acrobat에서 PDF 안내문 하나로 Adobe Express AI Assistant가 전단·SNS 게시물을 만들고, 말로 고쳐 내려받을 수 있음",
+  "summary": "Acrobat 2026년 10월 업데이트로 Adobe Express AI Assistant가 ① PDF·PDF Spaces 문서 내용을 읽어 전단(flyer)·SNS 게시물·뉴스레터 같은 한 장짜리 디자인 생성 + ② 대화로 디자인 수정 + ③ 내려받기·공유 지원. 디자인은 원본 문서 내용 기반",
+  "glance": {
+    "emoji": "🪄",
+    "one_liner": "PDF 내용이 바로 전단·SNS 이미지로",
+    "cards": [
+      {
+        "icon": "📄",
+        "title": "문서 그대로",
+        "text": "PDF 내용으로 디자인 생성"
+      },
+      {
+        "icon": "🖼",
+        "title": "여러 형식",
+        "text": "전단·SNS 게시물·뉴스레터"
+      },
+      {
+        "icon": "💬",
+        "title": "말로 수정",
+        "text": "색·문구·배치 대화로 고침"
+      },
+      {
+        "icon": "⬇️",
+        "title": "내려받기·공유",
+        "text": "완성본 저장하거나 링크 공유"
+      }
+    ],
+    "diagram": {
+      "title": "문서 → 디자인 흐름",
+      "nodes": [
+        {
+          "icon": "📄",
+          "label": "PDF 열기"
+        },
+        {
+          "icon": "🤖",
+          "label": "AI Assistant"
+        },
+        {
+          "icon": "🖼",
+          "label": "디자인 생성"
+        },
+        {
+          "icon": "💬",
+          "label": "대화로 수정"
+        },
+        {
+          "icon": "⬇️",
+          "label": "저장·공유"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "기능 전",
+        "text": "PDF 내용 복사 → 디자인 앱에 붙여 넣기 → 템플릿 찾아 하나씩 배치"
+      },
+      "after": {
+        "label": "기능 후",
+        "text": "PDF에서 요청 한 줄 → 전단 초안 + 말로 수정 → 바로 내려받기"
+      }
+    },
+    "cautions": [
+      "날짜·장소·금액은 원문과 대조",
+      "개인정보 담긴 PDF는 올리지 않음",
+      "타인 로고·사진 무단 사용 금지"
+    ]
+  },
+  "tool": "Adobe Acrobat",
+  "feature": "Adobe Express AI Assistant로 문서에서 디자인 만들기(Create designs with Adobe Express in Acrobat) — PDF·PDF Spaces 내용으로 전단·SNS 게시물·뉴스레터 생성, 대화로 수정, 내려받기·공유",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-10-01",
+  "categories": [
+    "CAT-03",
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-MKT",
+    "JOB-EDU",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Adobe 계정(Adobe ID, 무료 가입 가능)",
+    "PC 웹 브라우저(Acrobat on the web) 또는 Acrobat 데스크톱 앱 최신 버전",
+    "실습용 PDF 1개 — 개인정보 없는 행사·강좌 안내문 1~2쪽 (예: '가을 AI 활용 무료 특강' 안내문)",
+    "Plan B용: Adobe Express 웹(express.adobe.com) 접속 — AI Assistant는 데스크톱 브라우저 전용 베타"
+  ],
+  "outcome": "① PDF 안내문으로 만든 A4 전단 1장 + ② 같은 내용의 정사각형 SNS 게시물 1장 + ③ 대화로 고친 수정 전·후 비교 메모 + ④ 원문 대조 체크리스트(날짜·장소·문의처)",
+  "objectives": [
+    "Acrobat 안 Adobe Express AI Assistant가 문서 내용으로 디자인을 만드는 방식을 설명할 수 있음",
+    "PDF 안내문으로 전단·SNS 게시물을 만들고 대화로 색·문구·배치를 수정할 수 있음",
+    "완성 디자인의 사실(날짜·장소·금액)을 원문과 대조하고 저작권·개인정보 기준으로 점검할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Acrobat Reader·Adobe Express Free는 무료. Acrobat Studio는 AI Assistant·PDF Spaces·Adobe Express Premium 포함. Acrobat Standard·Pro는 AI Assistant 미포함. 문서에서 디자인 만들기 기능의 무료 Reader 사용 범위는 공식 문서로 확인 못함 [확인 필요]",
+    "plans": [
+      {
+        "name": "Acrobat Reader",
+        "price": "$0",
+        "features": "PDF 보기·주석·서명 + 개인 Adobe ID로 Adobe Express Free 사용 + 문서에서 디자인 만들기 순차 제공 중 [확인 필요]"
+      },
+      {
+        "name": "Adobe Express Free",
+        "price": "$0/월",
+        "features": "템플릿 10만 개 이상 + Adobe Fonts 4,000개 이상 + AI Assistant(베타, 데스크톱) + 일부 생성 기능 하루 무료 횟수 + 저장 공간 5GB"
+      },
+      {
+        "name": "Adobe Express Premium",
+        "price": "$9.99/월",
+        "features": "프리미엄 템플릿·AI 디자인 도구 + 브랜드 키트 + 월 생성 크레딧 250"
+      },
+      {
+        "name": "Acrobat Pro",
+        "price": "$19.99/월",
+        "features": "PDF 편집·변환·서명 + Adobe Express Free 포함 + AI Assistant 미포함(연간 약정 월 결제)"
+      },
+      {
+        "name": "Acrobat Studio",
+        "price": "$24.99/월",
+        "features": "Acrobat Pro 기능 + AI Assistant + PDF Spaces + Adobe Express Premium 포함(연간 약정 월 결제, 월 결제 $34.99)"
+      }
+    ],
+    "note": "미국 달러 기준 Adobe 공식 요금 페이지 2026-10-17 확인, 원화 가격 미확인. 연간 약정 월 결제는 14일 지나 해지 시 위약금 있음. Acrobat Standard는 $14.99/월(연간 약정 월 결제)·AI Assistant 미포함. 디자인 생성 1회당 생성 크레딧 차감 여부 미확인 [확인 필요]",
+    "checked": "2026-10-17",
+    "sources": [
+      {
+        "title": "Adobe Acrobat plans and pricing",
+        "url": "https://www.adobe.com/acrobat/plans.html"
+      },
+      {
+        "title": "Adobe Express 요금제(Pricing)",
+        "url": "https://www.adobe.com/express/pricing"
+      },
+      {
+        "title": "Adobe Express Free plan",
+        "url": "https://helpx.adobe.com/express/web/adobe-express-subscription/free.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-10-28",
+      "text": "Adobe MAX 2025 — Adobe Express에 대화형 AI Assistant(베타) 공개 [확인 필요: 정확한 발표일]"
+    },
+    {
+      "date": "2026-01-21",
+      "text": "Acrobat Studio — PDF로 발표 자료 생성(Generate presentation)·팟캐스트 생성·AI Assistant 채팅 편집"
+    },
+    {
+      "date": "2026-08",
+      "text": "Acrobat 8월 업데이트 — PDF로 대시보드·보고서·타임라인 만들기, PDF에 Express 템플릿 입히기, 대화형 편집"
+    },
+    {
+      "date": "2026-10-01",
+      "text": "Acrobat 10월 업데이트 — Adobe Express AI Assistant로 문서 내용에서 전단·SNS 게시물·뉴스레터 생성, 대화로 수정 후 공유·내려받기"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "Acrobat 데스크톱 도움말 갱신 — PDF·PDF Spaces에서 디자인 만들기 안내, Acrobat Reader 데스크톱 순차 제공 중"
+    }
+  ],
+  "theory": {
+    "definition": "Acrobat 안에서 Adobe Express AI Assistant를 불러 지금 연 PDF(또는 PDF Spaces)의 내용을 읽혀 한 장짜리 디자인(전단·SNS 게시물·뉴스레터 등)을 자동으로 만드는 기능임. 만든 뒤 대화로 고치고 내려받거나 공유함",
+    "analogy": "안내문 원고를 디자인 담당자에게 건네고 '이걸로 전단 한 장 뽑아 줘'라고 말하는 것과 같음. 담당자(AI Assistant)는 원고 내용을 그대로 쓰고, 고칠 점은 말로 전달함",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Acrobat + Express AI Assistant",
+        "Adobe Express AI Assistant 단독",
+        "Express 템플릿 직접 편집"
+      ],
+      "rows": [
+        [
+          "시작점",
+          "열어 둔 PDF·PDF Spaces",
+          "빈 대화창에 요청 입력",
+          "템플릿 고르기"
+        ],
+        [
+          "내용 채우기",
+          "문서 내용 자동 반영",
+          "요청문에 직접 적기",
+          "글자 하나씩 입력"
+        ],
+        [
+          "수정 방법",
+          "대화로 수정",
+          "대화 + 선택 요소 수정",
+          "손으로 편집"
+        ],
+        [
+          "알맞은 경우",
+          "이미 PDF 원고가 있을 때",
+          "아이디어만 있을 때",
+          "세밀한 배치가 필요할 때"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "문서 기반 생성",
+        "body": "① 디자인 글은 PDF 원문 내용을 바탕으로 만들어짐 ② 원고가 길면 핵심만 뽑아 요약될 수 있음 → 빠진 정보 확인 필요 ③ PDF Spaces는 여러 파일을 묶어 한 번에 근거로 쓸 수 있음"
+      },
+      {
+        "title": "대화로 다듬기",
+        "body": "① '제목 더 크게' + '파란색 계열로' + '문의처 맨 아래' 처럼 한 번에 한두 가지씩 요청 ② 전체 디자인 또는 선택한 요소만 수정 가능(Express AI Assistant 기준) ③ AI 모드와 손 편집 모드 전환 가능"
+      },
+      {
+        "title": "모델과 생성 이미지",
+        "body": "① Express AI Assistant는 Adobe Firefly + 협력사 모델(Google Gemini 3.1 Nano Banana 2·OpenAI GPT Image 2·FLUX.1 Kontext)을 작업별로 자동 선택 ② 사용자가 모델을 고를 수 없음 ③ 생성 이미지 속 글자·사람 얼굴은 반드시 확인"
+      }
+    ],
+    "can": [
+      "PDF 안내문·보고서 내용으로 전단·SNS 게시물·뉴스레터 디자인 만들기",
+      "대화로 색·글꼴·문구·배치 수정 요청",
+      "완성 디자인 내려받기 또는 공유",
+      "Adobe Express에서 이어서 손으로 세밀하게 편집",
+      "같은 내용을 여러 형식(전단·SNS)으로 바꿔 만들기"
+    ],
+    "cannot": [
+      "생성 모델을 직접 선택 불가",
+      "Express AI Assistant는 Teams·Enterprise·Education 요금제에서 사용 불가(공식 개요 기준)",
+      "AI Assistant는 데스크톱 전용 베타 — 모바일 앱 사용 불가",
+      "문서 속 날짜·금액이 정확히 옮겨졌는지 보장 안 됨 — 사람 확인 필요",
+      "순차 출시 중이라 모든 Acrobat Reader 데스크톱 사용자에게 바로 보이지 않을 수 있음"
+    ],
+    "safety": [
+      "주민번호·연락처 명단·학생 성적처럼 개인정보가 든 PDF는 올리지 않음",
+      "완성 디자인의 날짜·시간·장소·금액·문의처를 원본 PDF와 한 줄씩 대조함",
+      "다른 기관 로고·유명인 사진·캐릭터를 넣어 달라고 요청하지 않음 (저작권·초상권)",
+      "기관 공식 홍보물은 담당자 검토 후 게시, AI로 만든 이미지임을 필요 시 표시함",
+      "업무 계정(Teams·Enterprise)은 관리자 정책을 먼저 확인함"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① PDF 안내문 → A4 전단 1장 + ② 같은 내용 SNS 정사각형 게시물 1장 + ③ 대화 수정 전·후 비교 + ④ 원문 대조 체크리스트. 비포(내용 복사·템플릿 배치 30분)가 애프터(요청 한 줄 + 말로 수정 5분)로 바뀜",
+    "follow": [
+      {
+        "title": "실습 PDF 열기",
+        "minutes": 5,
+        "do": "Acrobat on the web(acrobat.adobe.com) 또는 Acrobat 데스크톱 앱에 Adobe ID로 로그인 → 개인정보 없는 강좌 안내문 PDF 열기",
+        "prompt": "",
+        "expect": "안내문 PDF가 Acrobat 화면에 열림",
+        "note": "안내문이 없으면 강사가 배포한 연습 PDF 사용"
+      },
+      {
+        "title": "Express AI Assistant 열기",
+        "minutes": 5,
+        "do": "Acrobat 화면에서 Adobe Express 디자인 만들기(Create designs) 메뉴 또는 AI Assistant 패널 찾아 열기",
+        "prompt": "",
+        "expect": "Adobe Express AI Assistant 대화창 표시",
+        "note": "[확인 필요: 메뉴 이름·위치 — 순차 출시 중, 강의 전날 캡처]"
+      },
+      {
+        "title": "전단 만들기 요청",
+        "minutes": 8,
+        "do": "대화창에 아래 프롬프트 붙여 넣기 → 생성된 디자인 확인",
+        "prompt": "이 PDF 내용으로 A4 세로 전단 한 장을 만들어 줘. 제목은 크게, 날짜·시간·장소·신청 방법은 한눈에 보이게 정리하고, 밝고 따뜻한 색으로 해 줘. 문서에 없는 내용은 새로 지어내지 말아 줘.",
+        "expect": "안내문 내용이 담긴 전단 디자인 1장",
+        "note": "원문에 없는 문구가 생기면 바로 지적해 고칠 것"
+      },
+      {
+        "title": "원문 대조",
+        "minutes": 7,
+        "do": "전단의 날짜·시간·장소·금액·문의처를 원본 PDF와 한 줄씩 비교 → 틀린 곳 메모",
+        "prompt": "",
+        "expect": "원문 대조 체크리스트 1장",
+        "note": "AI 요약으로 빠진 정보가 있는지도 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "말로 수정하기",
+        "minutes": 10,
+        "do": "틀린 곳·바꿀 곳을 한두 가지씩 요청 → 수정 전·후 화면 비교",
+        "prompt": "제목 글자를 더 크게 하고, 배경은 연한 하늘색으로 바꿔 줘. 신청 방법은 맨 아래에 '신청: 전화 또는 QR'처럼 한 줄로 정리해 줘.",
+        "expect": "수정된 전단 + 수정 전·후 비교 메모",
+        "note": "한 번에 너무 많이 요청하면 원치 않는 부분까지 바뀔 수 있음"
+      },
+      {
+        "title": "SNS 게시물로 바꾸기",
+        "minutes": 10,
+        "do": "같은 대화에서 SNS용 정사각형 게시물 요청 → 글자 수가 줄었는지 확인",
+        "prompt": "같은 내용으로 인스타그램용 정사각형 게시물도 만들어 줘. 글자는 제목·날짜·장소만 남기고, 나머지는 '자세한 내용은 신청 페이지 확인'으로 줄여 줘.",
+        "expect": "정사각형 SNS 게시물 1장",
+        "note": "작은 화면에서 글자가 읽히는지 휴대폰으로 확인"
+      },
+      {
+        "title": "내려받기·공유",
+        "minutes": 7,
+        "do": "완성 디자인 내려받기(Download) 또는 공유(Share) → 파일 형식 확인 → 원문 대조 체크리스트 최종 점검",
+        "prompt": "",
+        "expect": "전단·SNS 게시물 파일 2개 저장",
+        "note": "[확인 필요: 내려받기 파일 형식 선택지(PNG·JPG·PDF 등)]"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 전단을 시니어 대상으로 '글자 더 크게 + 핵심 3줄만' 버전으로 다시 만들기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "같은 안내문으로 뉴스레터(이메일용) 디자인을 만들고 전단과 정보 배치 차이 비교하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "PDF Spaces에 안내문 + 강사 소개 PDF 2개를 넣고 두 문서를 함께 근거로 한 홍보물 만들기 (Acrobat Studio 필요 [확인 필요])"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 전단·SNS 게시물을 바꿔 보고, 원문과 다른 곳을 찾아 주는 '틀린 그림 찾기'로 상호 점검 진행",
+    "quiz": [
+      {
+        "q": "Acrobat의 Adobe Express AI Assistant가 전단을 만들 때 글 내용의 바탕이 되는 것은?",
+        "options": [
+          "인터넷 검색 결과",
+          "열어 둔 PDF 문서 내용",
+          "무작위 예시 문구",
+          "Adobe Stock 사진 설명"
+        ],
+        "answer": 1,
+        "explain": "Adobe 릴리스 노트 기준 디자인은 원본 문서 내용을 바탕으로 만들어짐"
+      },
+      {
+        "q": "Adobe 공식 요금 페이지 기준, AI Assistant·PDF Spaces·Adobe Express Premium이 모두 포함된 Acrobat 개인 요금제는?",
+        "options": [
+          "Acrobat Reader",
+          "Acrobat Standard",
+          "Acrobat Pro",
+          "Acrobat Studio"
+        ],
+        "answer": 3,
+        "explain": "세 가지가 모두 포함된 개인 요금제는 Acrobat Studio, Standard·Pro는 AI Assistant 미포함"
+      },
+      {
+        "q": "완성된 전단을 게시하기 전에 가장 먼저 해야 할 일은?",
+        "options": [
+          "바로 SNS에 올리기",
+          "날짜·장소·금액을 원본 PDF와 대조하기",
+          "유명 캐릭터 그림 추가하기",
+          "색만 바꿔 다시 생성하기"
+        ],
+        "answer": 1,
+        "explain": "AI가 옮긴 사실 정보는 틀리거나 빠질 수 있으므로 원문 대조가 먼저"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "디자인 생성",
+        "high": "전단·SNS 게시물 2종 완성",
+        "mid": "전단 1종만 완성",
+        "low": "생성 실패"
+      },
+      {
+        "criterion": "대화 수정",
+        "high": "2회 이상 수정 + 전·후 비교",
+        "mid": "1회 수정",
+        "low": "수정 없음"
+      },
+      {
+        "criterion": "사실 점검",
+        "high": "날짜·장소·금액·문의처 모두 대조",
+        "mid": "일부만 대조",
+        "low": "대조 없음"
+      }
+    ],
+    "next": [
+      "Claude Design으로 디자인 템플릿 만들기 (AI-2026-10-CAT03-004)",
+      "Gemini 연결 앱 Adobe로 이미지 편집하기 (AI-2026-10-CAT04-004)",
+      "Adobe for Claude의 Acrobat PDF 도구로 PDF 정리하기 (AI-2026-10-CAT09-003)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 안내문 PDF를 전단으로 바꾸는 시연 결과 먼저 보여 주기",
+        "note": "비포/애프터 화면"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 기능 정의, 타임라인, 비교표, 문서 기반 생성·대화 수정·모델, 요금제, 안전",
+        "note": "Reader 무료 범위는 [확인 필요]로 안내"
+      },
+      {
+        "time": "35~60분",
+        "content": "2부 따라 하기: PDF 열기 → AI Assistant 열기 → 전단 요청 → 원문 대조",
+        "note": "메뉴가 안 보이면 Plan B"
+      },
+      {
+        "time": "60~85분",
+        "content": "2부 내 것 만들기: 말로 수정 → SNS 게시물 → 내려받기·공유",
+        "note": "휴대폰으로 글자 크기 확인"
+      },
+      {
+        "time": "85~95분",
+        "content": "3부 정리: 틀린 그림 찾기 상호 점검, 퀴즈 3문제, 다음 단계",
+        "note": "전체 95분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "강좌 안내문은 이미 PDF로 다 써 두셨죠? 오늘은 그 PDF를 열어 놓고 한 줄만 부탁해서 전단과 SNS 이미지를 만들어 보겠습니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "이 기능의 핵심은 '내 문서가 원고'라는 점입니다. AI가 새 이야기를 지어내는 게 아니라, 열어 둔 PDF 내용을 디자인으로 옮겨 줍니다."
+      },
+      {
+        "label": "보안 안내",
+        "text": "명단이나 연락처가 들어 있는 PDF는 오늘 쓰지 않습니다. 그리고 만든 전단은 날짜와 장소를 원본과 꼭 한 줄씩 비교해 주세요."
+      },
+      {
+        "label": "마무리",
+        "text": "AI가 만든 초안은 출발점입니다. 원문 대조와 담당자 확인까지 거쳐야 진짜 홍보물이 됩니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Acrobat에 디자인 만들기 메뉴가 보이지 않음(순차 출시)",
+        "response": "Adobe Express 웹(express.adobe.com/assistant)의 AI Assistant(베타)에 PDF 안내문 내용을 붙여 넣고 같은 프롬프트로 진행"
+      },
+      {
+        "situation": "기관 계정(Teams·Enterprise·Education)이라 AI Assistant 사용 불가",
+        "response": "개인 Adobe ID(무료)로 다시 로그인해 실습, 기관 계정 사용 여부는 관리자에게 문의"
+      },
+      {
+        "situation": "무료 생성 횟수 소진",
+        "response": "강사 화면 시연으로 결과 공유, 수강생은 Express 템플릿 직접 편집으로 같은 전단 만들기"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "AI Assistant 창이 안 열림",
+        "fix": "데스크톱 브라우저(Chrome·Edge)로 접속했는지 확인 — 모바일 앱은 미지원"
+      },
+      {
+        "issue": "전단에 원문에 없는 문구가 생김",
+        "fix": "'문서에 없는 내용은 지우고 원문 문장만 써 줘'라고 다시 요청"
+      },
+      {
+        "issue": "수정 요청 후 다른 곳까지 바뀜",
+        "fix": "한 번에 한 가지씩 요청, 바꿀 요소를 '제목만'처럼 콕 집어 말하기"
+      },
+      {
+        "issue": "SNS 게시물 글자가 너무 작음",
+        "fix": "'제목·날짜·장소만 남기고 글자 크게'로 다시 요청"
+      },
+      {
+        "issue": "한글 글꼴이 깨지거나 어색함",
+        "fix": "'한글이 잘 보이는 고딕 글꼴로 바꿔 줘' 요청 또는 Express 편집 화면에서 글꼴 직접 교체"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 Acrobat Reader로도 되나요?",
+        "a": "Adobe 도움말은 Reader 데스크톱 사용자에게 순차 제공 중이라고 안내. 무료 사용 범위·횟수는 공식 문서에서 확인 못함 [확인 필요]"
+      },
+      {
+        "q": "Acrobat Pro를 쓰는데 AI Assistant가 없음",
+        "a": "공식 요금 페이지 기준 Acrobat Standard·Pro는 AI Assistant 미포함, Acrobat Studio에 포함"
+      },
+      {
+        "q": "어떤 AI 모델이 그림을 만드나요?",
+        "a": "Express AI Assistant는 Adobe Firefly와 협력사 모델(Gemini 3.1 Nano Banana 2·GPT Image 2·FLUX.1 Kontext)을 작업별로 자동 선택, 직접 선택 불가"
+      },
+      {
+        "q": "만든 전단을 상업용 홍보에 써도 되나요?",
+        "a": "Adobe 이용 약관·생성 AI 지침 확인 필요. 넣은 사진·로고 권리는 사용자 책임 [확인 필요]"
+      },
+      {
+        "q": "한국어 안내문도 되나요?",
+        "a": "공식 개요에 지원 언어 표기 없음. 강의 전날 한국어 PDF로 시험 필요 [확인 필요]"
+      },
+      {
+        "q": "만든 디자인은 어디에 저장되나요?",
+        "a": "Acrobat on the web은 최근 항목(Recent), Adobe Express는 내 항목(Your stuff)에서 다시 열 수 있음(Express 템플릿 편집 도움말 기준)"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "전단 1장 생성 + 원문 대조까지만"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "전단·SNS·뉴스레터 3종 + PDF Spaces 여러 문서 근거 + 브랜드 색 지정"
+      },
+      {
+        "level": "시니어",
+        "guide": "미리 준비한 PDF로 전단 1장만, '글자 크게' 수정 요청 1회 연습"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "'~게 해 주세요' '~으로 바꿔 주세요' 요청 표현 연습, 쉬운 한국어 안내문 PDF로 실습"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지는 '내 문서가 원고' — 지어내지 않게 하는 요청문과 원문 대조가 수업의 중심",
+      "공공기관·평생교육 담당자는 이미 PDF 공문·안내문이 많아 바로 업무 효과를 체감함",
+      "Claude Design·ChatGPT Images·Genspark AI Slides 교안과 묶어 '홍보물 AI 도구 비교' 과정 설계 가능"
+    ],
+    "day_before": [
+      "개인 Adobe ID(무료)로 Acrobat on the web·데스크톱에서 디자인 만들기 메뉴 실제 위치 확인·캡처",
+      "무료 계정에서 생성 가능 횟수와 생성 크레딧 차감 여부 확인",
+      "한국어 안내문 PDF로 전단 생성 시험 — 한글 글꼴·줄바꿈 확인",
+      "개인정보 없는 연습용 안내문 PDF 배포 준비",
+      "Plan B용 Adobe Express AI Assistant(express.adobe.com/assistant) 접속 확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Acrobat 화면의 디자인 만들기 메뉴 이름·위치(데스크톱·웹), 한국어 화면 표기",
+    "[확인 필요] 무료 Acrobat Reader·Adobe Express Free에서 문서로 디자인 만들기 사용 가능 범위·횟수",
+    "[확인 필요] 디자인 생성 시 생성 크레딧 차감 여부, 내려받기 파일 형식",
+    "[확인 필요] 한국어 문서 지원 여부(공식 개요에 지원 언어 표기 없음)",
+    "[미검증] Acrobat Reader 데스크톱은 순차 제공 중 — 모든 사용자에게 아직 보이지 않을 수 있음",
+    "[실험 기능] Adobe Express AI Assistant는 베타 표기",
+    "출시일 2026-10-01은 Acrobat 10월 릴리스 노트 기준(정확한 일자는 릴리스 노트 월 표기) [확인 필요]",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — Adobe 릴리스 노트·도움말·요금 페이지 기준"
+  ],
+  "sources": [
+    {
+      "title": "Adobe Acrobat on the web 릴리스 노트 – October 2026 (Adobe Express AI Assistant로 문서 내용에서 전단·SNS 게시물·뉴스레터 만들기)",
+      "url": "https://helpx.adobe.com/acrobat/web/whats-new/release-notes.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Acrobat on desktop release notes (2026-10-16 갱신)",
+      "url": "https://helpx.adobe.com/acrobat/desktop/whats-new/release-notes.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "What's new in Acrobat on desktop (2026-10-13 갱신)",
+      "url": "https://helpx.adobe.com/acrobat/desktop/whats-new/whats-new-acrobat-desktop.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Express AI Assistant overview (2026-09-10 갱신)",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Express Free plan",
+      "url": "https://helpx.adobe.com/express/web/adobe-express-subscription/free.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Express Premium plan",
+      "url": "https://helpx.adobe.com/express/web/adobe-express-subscription/premium.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Express 요금제(Pricing)",
+      "url": "https://www.adobe.com/express/pricing",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Acrobat plans and pricing",
+      "url": "https://www.adobe.com/acrobat/plans.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Design PDF pages with Express templates in Acrobat (Acrobat on the web)",
+      "url": "https://helpx.adobe.com/acrobat/web/create-pdfs/create-pdfs-with-templates/design-with-express.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe 블로그 – Turn your docs into presentations and podcasts with Adobe Acrobat and Express (2026-01-21)",
+      "url": "https://blog.adobe.com/en/publish/2026/01/21/work-smarter-acrobat-turn-docs-presentations-podcasts-edit-pdfs-ai",
+      "checked": "2026-10-17"
+    }
+  ]
+}

@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 99,
+  "count": 100,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-017",
+      "version": "v1.0",
+      "created_at": "2026-10-17 18:00 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "Acrobat에서 PDF 안내문 하나로 Adobe Express AI Assistant가 전단·SNS 게시물을 만들고, 말로 고쳐 내려받을 수 있음",
+      "summary": "Acrobat 2026년 10월 업데이트로 Adobe Express AI Assistant가 ① PDF·PDF Spaces 문서 내용을 읽어 전단(flyer)·SNS 게시물·뉴스레터 같은 한 장짜리 디자인 생성 + ② 대화로 디자인 수정 + ③ 내려받기·공유 지원. 디자인은 원본 문서 내용 기반",
+      "tool": "Adobe Acrobat",
+      "feature": "Adobe Express AI Assistant로 문서에서 디자인 만들기(Create designs with Adobe Express in Acrobat) — PDF·PDF Spaces 내용으로 전단·SNS 게시물·뉴스레터 생성, 대화로 수정, 내려받기·공유",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-10-01",
+      "categories": [
+        "CAT-03",
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-MKT",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① PDF 안내문으로 만든 A4 전단 1장 + ② 같은 내용의 정사각형 SNS 게시물 1장 + ③ 대화로 고친 수정 전·후 비교 메모 + ④ 원문 대조 체크리스트(날짜·장소·문의처)",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🪄",
+      "one_liner": "PDF 내용이 바로 전단·SNS 이미지로"
+    },
     {
       "id": "AI-2026-10-CAT08-013",
       "version": "v1.0",
