@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 09:15 KST",
+  "updated_at": "2026-10-17 10:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2551,6 +2551,21 @@
       },
       "checked": "2026-10-17",
       "lesson_id": "AI-2026-10-CAT03-013"
+    },
+    {
+      "id": "grok-2026-07-16-automations",
+      "date": "2026-07-16",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "자동화(Automations) — 예약·메일 트리거",
+      "summary": "할 일을 한 번 적고 예약(한 번~매년) 또는 메일 도착(보낸 사람·받는 사람·제목 필터) 때 Grok이 실행, 커넥터·스킬 연결, 메일·앱 알림, 실행 기록·이어서 대화, 예약은 모든 사용자·메일 트리거는 SuperGrok",
+      "source": {
+        "title": "xAI News – Automations in Grok",
+        "url": "https://x.ai/news/grok-automations"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-010"
     }
   ]
 }
