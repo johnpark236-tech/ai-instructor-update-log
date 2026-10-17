@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 92,
+  "count": 93,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-016",
+      "version": "v1.0",
+      "created_at": "2026-10-17 11:20 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "Microsoft Forms 안 Copilot 채팅 창으로 수업 퀴즈·만족도 설문을 만들고 개선·초대·응답 분석까지 한 화면에서 처리할 수 있음",
+      "summary": "Copilot in Forms 채팅 창(Copilot chat pane)은 Forms 안의 Copilot 아이콘으로 열어 ① 설문·퀴즈 개선 제안 + ② 초대 문구 작성·발송 + ③ 응답 분석을 대화로 맡기는 기능임. Microsoft 365 Copilot 라이선스 업무 계정 대상(2026-09-23 릴리스 노트), 개인 구독은 채팅 창 없이 상단 수정 막대(refinement bar)만 제공됨",
+      "tool": "Microsoft 365 Copilot",
+      "feature": "Copilot in Forms 채팅 창(Copilot chat pane) — 설문·퀴즈 개선 제안, 초대 문구 작성·발송, 응답 분석 (Surveys 에이전트 대체)",
+      "company": "Microsoft",
+      "type": "update",
+      "released": "2026-09-23",
+      "categories": [
+        "CAT-03",
+        "CAT-10",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① Copilot으로 만든 5문항 수업 퀴즈(정답·배점·해설 포함) + ② 수업 만족도 설문 1개 + ③ 초대 문구 초안 + ④ 테스트 응답 요약 1장",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📋",
+      "one_liner": "설문 만들기부터 응답 분석까지 대화로"
+    },
     {
       "id": "AI-2026-10-CAT08-010",
       "version": "v1.0",
