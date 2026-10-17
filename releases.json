@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 01:10 KST",
+  "updated_at": "2026-10-18 03:45 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1814,8 +1814,8 @@
         "title": "Google 블로그 – New flexible usage limits for Gemini Notebook",
         "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT06-009"
     },
     {
       "id": "midjourney-2026-08-27-edit-model-v8",

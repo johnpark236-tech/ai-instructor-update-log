@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 108,
+  "count": 109,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-009",
+      "version": "v1.0",
+      "created_at": "2026-10-18 03:40 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "Gemini Notebook 사용량 확인·나중에 생성(Generate later)으로 한도 걱정 없이 학습 자료 만들기 — 결과물별 사용량 비교표 + 동영상 개요 예약 1건 만들기",
+      "summary": "Gemini Notebook(구 NotebookLM) 사용 한도가 하루 단위에서 5시간마다 충전되는 계산량 기반 한도로 바뀜(2026-08-28 발표, 09-02부터 개인 계정 웹·모바일 적용). 설정 > 사용량(Usage)에서 남은 양과 충전 시각 확인, 스튜디오(Studio) 생성 화면 아래 막대로 예상 사용량 미리 확인 가능. 한도에 걸리면 웹에서 '나중에 생성(Generate later)'으로 동영상 개요·슬라이드 자료 등을 예약해 두면 자동 생성됨(몇 시간 걸릴 수 있음). 주간 한도도 있고 정확한 수치는 비공개",
+      "tool": "Gemini Notebook (구 NotebookLM)",
+      "feature": "유연한 사용 한도(Flexible usage limits) — 5시간 단위 충전·주간 한도, 설정 > 사용량(Usage) 확인, 스튜디오 예상 사용량 막대·대체 결과물 제안, 나중에 생성(Generate later, 웹)·완료 알림",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-08-28",
+      "categories": [
+        "CAT-06",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-STU",
+        "JOB-OFF",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 사용량 확인 메모 1줄(남은 양·충전 시각) + ② 스튜디오 결과물별 예상 사용량 비교표(3~4종) + ③ '나중에 생성'으로 예약한 동영상 개요 또는 슬라이드 자료 1건",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "⏳",
+      "one_liner": "한도 걸려도 예약해 두면 알아서 만들어 줌"
+    },
     {
       "id": "AI-2026-10-CAT01-012",
       "version": "v1.0",
