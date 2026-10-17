@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 19:05 KST",
+  "updated_at": "2026-10-17 20:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -90,7 +90,7 @@
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
       "checked": "2026-10-17",
-      "lesson_id": null
+      "lesson_id": "AI-2026-10-CAT06-008"
     },
     {
       "id": "chatgpt-2026-10-16-slides",

@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 101,
+  "count": 102,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-008",
+      "version": "v1.0",
+      "created_at": "2026-10-17 20:05 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "ChatGPT GPT-6 Pro의 병렬 에이전트로 조사 주제를 3갈래로 나눠 동시에 맡기고, 에이전트별 결과를 열어 확인한 뒤 출처 붙은 비교 조사표 1장을 만들 수 있음",
+      "summary": "GPT-6 Pro 2026-10-16 업데이트 — ① 더 빠른 응답 + ② 플러그인·도구 활용 개선 + ③ 한 작업을 여러 에이전트가 나눠 병렬 처리, 대화 안에서 에이전트별 진행 상황 확인·완료 작업 열어 보기 (Pro 순차 출시)",
+      "tool": "ChatGPT",
+      "feature": "GPT-6 Pro 업데이트 — 병렬 에이전트(Parallel agents: 작업을 나눠 여러 에이전트 동시 실행·진행 상황 확인·완료 작업 열람), 더 빠른 응답·플러그인/도구 활용 개선",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-16",
+      "categories": [
+        "CAT-06",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-DAT",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 3갈래(도구별) 병렬 조사 결과 3개(에이전트별 결과 화면) + ② 같은 항목(요금·대상·핵심 기능·한계·출처·확인일)으로 맞춘 비교 조사표 1장 + ③ 에이전트끼리 어긋난 내용·모르는 것 목록 + ④ 공식 페이지로 직접 대조한 확인 체크 3줄",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "👥",
+      "one_liner": "큰 조사를 여러 에이전트가 동시에"
+    },
     {
       "id": "AI-2026-10-CAT03-018",
       "version": "v1.0",
