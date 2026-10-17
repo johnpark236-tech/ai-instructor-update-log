@@ -1197,10 +1197,10 @@
       "summary": "Planner 오른쪽 아래 Copilot 아이콘으로 '이번 주 마감 작업 보여줘'처럼 묻고, 대화로 작업 상태를 바꾸거나 걸러 봄 (Windows·웹)",
       "source": {
         "title": "Microsoft 365 Copilot 릴리스 노트 (2026-09-23 항목)",
-        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes"
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
       },
-      "checked": "2026-10-13",
-      "lesson_id": null
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-011"
     },
     {
       "id": "copilot-2026-09-23-forms-chat-pane",

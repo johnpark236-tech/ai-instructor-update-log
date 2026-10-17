@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 93,
+  "count": 94,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-011",
+      "version": "v1.0",
+      "created_at": "2026-10-17 12:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "Planner 안 Copilot 채팅(Planner Agent)으로 이번 주 할 일을 묻고, 행사 준비 작업 목록을 대화로 만들고 상태까지 바꿀 수 있음",
+      "summary": "Planner Agent 채팅은 Microsoft Planner 오른쪽 아래 Copilot 아이콘으로 열어 ① 내 작업 질문 + ② 작업 만들기·수정 + ③ 상태·마감·우선순위 변경을 말로 처리하는 기능임. 2026-09-23 릴리스 노트(Windows·웹), Microsoft 365 Copilot 라이선스 업무 계정 대상, AI가 만든 작업은 초안(draft mode)으로 보여 주고 승인해야 반영됨",
+      "tool": "Microsoft 365 Copilot",
+      "feature": "Planner Agent 채팅(Planner 앱 안 Copilot 아이콘) — 자연어 작업 질문·찾기, 작업·계획 만들기와 이름·진행률·마감일·우선순위 수정, 대화형 작업 카드, 초안 검토·승인, Copilot Chat @Planner Agent",
+      "company": "Microsoft",
+      "type": "update",
+      "released": "2026-09-23",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 행사 준비 작업 8~10개가 들어간 Planner 계획(마감일·우선순위 포함) + ② '이번 주 할 일' 요약 답변 + ③ 대화로 바꾼 작업 상태 2건 + ④ 승인·거절 기록 메모 1장",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "할 일 목록을 말로 묻고 만들고 고치기"
+    },
     {
       "id": "AI-2026-10-CAT03-016",
       "version": "v1.0",
