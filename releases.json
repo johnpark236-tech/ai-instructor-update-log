@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 14:10 KST",
+  "updated_at": "2026-10-17 15:00 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2026-07-20-agentbase",
+      "date": "2026-07-20",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "AgentBase — 한 문장으로 만드는 업무 시스템(AI Workspace 6.0)",
+      "summary": "AI Workspace 6.0 Build Suite 신규 기능, 한 문장 설명으로 표·보기(표·칸반·갤러리·달력·폼)·대시보드·예약 워크플로 생성, 파일·메일·Microsoft 365·HubSpot·Salesforce·DB 데이터 가져오기, 역할별 공유",
+      "source": {
+        "title": "Genspark Blog – Introducing Genspark AI Workspace 6.0",
+        "url": "https://www.genspark.ai/blog/genspark-ai-workspace-6"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT07-009"
+    },
     {
       "id": "notion-2026-10-13-mcp-context",
       "date": "2026-10-13",
