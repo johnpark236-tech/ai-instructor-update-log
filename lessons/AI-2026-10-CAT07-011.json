@@ -1,0 +1,304 @@
+{
+  "id": "AI-2026-10-CAT07-011",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-18 07:20 KST",
+  "checked": "2026-10-17",
+  "review_by": "2027-01-17",
+  "title": "한 번 말한 규칙을 다음 세션에도 기억하는 코딩 에이전트 — Grok Build(그록 빌드, 터미널) 메모리(Memory)로 '내 프로젝트 규칙 기억 + 새 세션 확인 + 메모 정리' 해 보기",
+  "summary": "2026-09-16 xAI가 공개한 Grok Build(터미널 코딩 에이전트) 메모리. 대화가 끝날 때마다 오래 쓸 규칙·결정·프로젝트 사실을 마크다운 메모로 자동 저장 → 다음 세션에서 관련 작업 전에 스스로 읽어 씀. 프로젝트별(workspace)·전체 공통(global) 2가지 범위, /memory 로 메모 보기·검색·삭제, /dream 으로 주제별 정리. 2026-10 업데이트로 메모리 켜기·끄기 설정 단순화 + 한국어 단어 검색 개선 [확인 필요]",
+  "glance": {
+    "emoji": "🧠",
+    "one_liner": "말한 규칙을 다음에도 기억하는 코딩 AI",
+    "cards": [
+      {"icon": "✍️", "title": "자동 메모", "text": "대화 끝나면 규칙 저장"},
+      {"icon": "📂", "title": "2가지 범위", "text": "프로젝트별 + 전체 공통"},
+      {"icon": "🔍", "title": "/memory", "text": "메모 보기·검색·삭제"},
+      {"icon": "🌙", "title": "/dream", "text": "새 메모를 주제별 정리"}
+    ],
+    "diagram": {
+      "title": "Grok Build 메모리 흐름",
+      "nodes": [
+        {"icon": "💬", "label": "규칙 말하기"},
+        {"icon": "✍️", "label": "메모 자동 저장"},
+        {"icon": "🌙", "label": "/dream 정리"},
+        {"icon": "🆕", "label": "새 세션 시작"},
+        {"icon": "✅", "label": "규칙대로 작업"}
+      ]
+    },
+    "before_after": {
+      "before": {"label": "매번 규칙 다시 설명", "text": "새 세션마다 '테스트는 이 명령으로, 주석은 한국어로'를 처음부터 다시 입력"},
+      "after": {"label": "기억한 규칙 적용", "text": "새 세션에서 말하지 않아도 지난번 정한 명령·규칙대로 작업하고 근거 메모 표시"}
+    },
+    "cautions": [
+      "비밀번호·API 키는 대화에 넣지 말 것",
+      "틀린 메모는 /memory 에서 바로 삭제",
+      "AI가 고친 코드는 직접 실행해 확인"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Build(터미널 코딩 에이전트 CLI) 메모리(Memory) — 세션 간 기억: 대화 후 백그라운드 자동 메모(규칙·결정·프로젝트 사실), workspace(프로젝트별)·global(전체 공통) 범위 마크다운 주제 파일(MEMORY.md·topics/*.md), /memory 메모 브라우저(검색·경로 복사·삭제·켜기/끄기), /dream 주제별 정리, /new 새 세션 적용, 현재 대화 지시 우선, 비밀값·작업 상태 저장 안 함 · 2026-10 v1.0.50 한국어 메모 검색 개선·v1.0.51 [memory] enabled 켜기/끄기 설정 [확인 필요]",
+  "company": "xAI (SpaceXSI)",
+  "type": "update",
+  "released": "2026-09-16",
+  "categories": ["CAT-07", "CAT-08", "CAT-02"],
+  "jobs": ["JOB-DEV", "JOB-EDU", "JOB-DAT", "JOB-BIZ"],
+  "learner_levels": ["중급", "고급"],
+  "instructor_levels": ["중급강사", "고급강사"],
+  "minutes": {"theory": 30, "practice": 50, "wrap": 10},
+  "prerequisites": [
+    "macOS 또는 Linux 컴퓨터 + 터미널 — 설치 명령: curl -fsSL https://x.ai/cli/install.sh | bash (Windows는 WSL 사용 여부 [확인 필요])",
+    "xAI(Grok) 계정 — 설치 후 grok 실행 → 계정 로그인, 이용 가능 요금제 [확인 필요: 출시 당시 SuperGrok·X Premium+ 대상, 메모리 소개 페이지는 'Try Free' 표시]",
+    "실습용 빈 폴더 1개(예: lesson-memo-practice) + 간단한 파일 1~2개(index.html·README.md) — 실제 업무 저장소 사용 금지",
+    "선택: Git 설치(변경 내용 비교용), VS Code 등 편집기",
+    "API 키·비밀번호·고객 정보가 든 파일은 실습 폴더에 두지 않기"
+  ],
+  "outcome": "① 프로젝트 규칙 3가지를 기억한 Grok Build 메모리(workspace 주제 파일) + ② 새 세션에서 규칙을 스스로 적용한 작업 결과 1개 + ③ /memory·/dream 으로 정리한 메모 목록 캡처 1장 + ④ '기억시킬 것·기억시키지 않을 것' 체크리스트 1장",
+  "objectives": [
+    "Grok Build 메모리가 AGENTS.md·대화 기록과 무엇이 다른지(대화에서 배운 규칙을 자동 메모 → 다음 세션에서 스스로 읽음) 설명할 수 있음",
+    "규칙을 알려 준 뒤 /new 새 세션에서 기억 적용을 확인하고, /memory 로 메모를 찾아보고 /dream 으로 정리할 수 있음",
+    "틀린 메모 삭제, 비밀값 넣지 않기, 메모리 끄기 같은 관리 습관을 지킬 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "메모리 전용 요금 없음 — Grok Build 사용 범위 안에서 동작. Grok Build는 2026-05 출시 때 SuperGrok·X Premium+ 구독자 대상, 메모리 소개 페이지에는 'Try Free' 버튼 표시 [확인 필요: 무료 사용 범위]. 2026-10-12부터 신규 가입은 The X Subscription(Grok·Grok Bot·Cursor·X Premium 묶음) 요금제: Free $0·Plus 월 $8·Premium 월 $30·Super 월 $100·Ultra 월 $200 — 요금제별 Grok Build 포함 여부·사용량 [확인 필요]",
+    "plans": [
+      {"name": "Free", "price": "$0", "features": "Grok 매일 사용 + Cursor 코딩 에이전트 시작 사용량 + 사용량 제한 — Grok Build 메모리 체험 범위 [확인 필요]"},
+      {"name": "Plus", "price": "월 $8", "features": "Grok·Cursor 사용량 증가(기본 사용량) + X 체크 표시·크리에이터 도구·광고 감소"},
+      {"name": "Premium", "price": "월 $30", "features": "SuperGrok + Cursor Pro + X Premium+ 포함(기존 합계 월 $90) + Plus 대비 4배 사용량 — 출시 당시 Grok Build 대상(SuperGrok·X Premium+)에 해당"},
+      {"name": "Super", "price": "월 $100", "features": "위 기능 전부 + Plus 대비 15배 사용량"},
+      {"name": "Ultra", "price": "월 $200", "features": "위 기능 전부 + Plus 대비 50배 사용량"}
+    ],
+    "note": "요금은 xAI 공식 발표 'Introducing The X Subscription'(2026-10-12) 미국 달러 기준(2026-10-17 확인), 원화·부가세 미확인. 기존 SuperGrok·Cursor·X Premium 구독자는 기존 요금제 유지 또는 전환 선택(일할 환불). Teams는 Premium·Super·Ultra 좌석당 같은 가격",
+    "checked": "2026-10-17",
+    "sources": [
+      {"title": "xAI News – Introducing The X Subscription", "url": "https://x.ai/news/x-subscription"},
+      {"title": "xAI News – Grok Build (CLI 출시)", "url": "https://x.ai/news/grok-build-cli"},
+      {"title": "xAI News – Memory in Grok Build", "url": "https://x.ai/news/grok-build-memory"}
+    ]
+  },
+  "timeline": [
+    {"date": "2026-05-25", "text": "Grok Build 터미널 코딩 에이전트 공개(초기 베타) — 계획 모드·AGENTS.md·플러그인·훅·스킬·MCP·병렬 하위 에이전트·헤드리스(-p), SuperGrok·X Premium+ 대상"},
+    {"date": "2026-08-31", "text": "v1.0.15 — 메모리 정리(consolidation)를 종료 시가 아닌 다음 실행 때 진행(공식 changelog)"},
+    {"date": "2026-09-16", "text": "Memory in Grok Build 발표 + v1.0.34 메모리 정식(GA) — 자동 메모·workspace/global 범위·/memory·/dream"},
+    {"date": "2026-09-16", "text": "v1.0.35 — /memory 창에서 메모 내용 검색·복사 확인 표시, 메모 삭제 속도 개선"},
+    {"date": "2026-10-06", "text": "v1.0.50 — 메모 검색(memory_search)이 긴 메모 안의 한국어·일본어·중국어 단어도 찾음 [확인 필요: Releasebot 집계 기준]"},
+    {"date": "2026-10-09", "text": "v1.0.51 — 메모리를 켜기/끄기 한 가지 설정([memory] enabled)으로 단순화 + 백그라운드 목표(goal)·헤드리스 개선 [확인 필요: Releasebot 집계 기준]"}
+  ],
+  "theory": {
+    "definition": "Grok Build 메모리(Memory)는 xAI 터미널 코딩 에이전트 Grok Build의 세션 간 기억 기능임. 대화 한 턴이 끝날 때마다 Grok이 백그라운드에서 내용을 훑어 오래 쓸 규칙·결정·프로젝트 사실을 마크다운 메모로 저장 → 다음 세션에서 관련 작업 전에 해당 주제 메모를 먼저 읽고 작업함",
+    "analogy": "새로 온 조수의 '인수인계 노트'. 첫날 '테스트는 이 명령으로 돌려요'라고 한 번 알려 주면 조수가 노트에 적어 두고, 다음 날 말하지 않아도 노트를 보고 그대로 함. 단, 노트에 잘못 적힌 내용도 그대로 따르므로 가끔 노트 검사 필요",
+    "comparison": {
+      "headers": ["구분", "대화 기록(이전 세션)", "AGENTS.md(규칙 파일)", "Grok Build 메모리"],
+      "rows": [
+        ["누가 쓰나", "자동(대화 그대로)", "사람이 직접 작성", "Grok이 대화 후 자동 메모"],
+        ["저장 내용", "대화 전체", "팀이 정한 규칙", "오래 쓸 규칙·결정·사실만 골라 저장"],
+        ["범위", "그 세션", "저장소(팀 공유 가능)", "프로젝트별 workspace + 개인 global"],
+        ["새 세션에서", "다시 열어야 이어짐", "항상 읽음", "관련 작업 전에 해당 주제만 읽음"],
+        ["관리", "세션 삭제", "파일 편집·커밋", "/memory 보기·삭제, /dream 정리"]
+      ]
+    },
+    "concepts": [
+      {"title": "기록 → 저장 → 꺼내 쓰기 → 정리 4단계", "body": "① 기록(Capture): 한 턴이 끝나면 백그라운드에서 오래 쓸 내용 메모, 작업 흐름 방해 없음 ② 저장(Storage): 주제마다 마크다운 파일 1개 — workspace(프로젝트)·global(전체 선호) ③ 꺼내 쓰기(Recall): 관련 작업 전에 해당 주제 메모 읽기, 단 지금 대화의 지시가 메모보다 우선 ④ 정리(Consolidation): /dream 이 새 메모를 주제 파일에 합침, 주기적으로 백그라운드에서도 실행"},
+      {"title": "저장하지 않는 것", "body": "공식 발표 기준 ① 진행 중 작업 상태 ② 확정되지 않은 추측 결론 ③ 비밀값(secrets) ④ 저장소·문서에 이미 있는 내용은 메모하지 않음 → 그래도 실수 대비로 비밀번호·API 키는 대화에 넣지 않는 습관 필요"},
+      {"title": "메모 관리 명령", "body": "① /memory: 범위별 메모 파일 목록 + 미리보기(읽기 전용), ↑/↓ 이동·/ 검색·y 경로 복사·x 삭제·t 켜기/끄기·Ctrl+F 전체 화면·Esc 닫기 ② /dream: 최근 메모를 주제 파일(예: topics/testing.md)로 정리 ③ /new 또는 grok 새로 실행: 새 세션에 메모리 적용, 첫 턴이 끝난 뒤부터 메모 시작"}
+    ],
+    "can": [
+      "대화에서 말한 프로젝트 규칙(테스트 명령·코드 스타일·주석 언어 등)을 다음 세션에서 자동 적용",
+      "프로젝트별(workspace) 메모와 모든 프로젝트 공통(global) 선호(답변 방식·PR 설명 방식) 따로 보관",
+      "/memory 로 메모 파일 찾아보기·내용 검색·경로 복사·잘못된 메모 삭제",
+      "/dream 으로 흩어진 새 메모를 주제별 파일로 정리",
+      "현재 대화에서 다르게 지시하면 메모보다 그 지시를 우선 적용",
+      "한국어로 적힌 메모 단어 검색(v1.0.50 개선) [확인 필요]"
+    ],
+    "cannot": [
+      "웹·모바일 grok.com 빌드 모드(Build Mode)와 메모리 공유 — 이 교안은 터미널 CLI 기준, 별도 제품",
+      "팀원과 메모 자동 공유 — 공식 발표에 안내 없음, 팀 규칙은 AGENTS.md로 저장소에 남길 것 [확인 필요]",
+      "/memory 창 안에서 메모 글 직접 수정 — 창은 읽기 전용, 경로 복사 후 편집기로 열어 수정",
+      "이미 지난 세션에 소급 적용 — /new 또는 새 grok 실행부터 적용",
+      "메모 내용이 늘 정확하다는 보장 — 공식 changelog도 '기억은 과거 맥락이니 현재 자료로 확인' 방식으로 표시"
+    ],
+    "safety": [
+      "API 키·비밀번호·고객 개인정보는 대화·실습 파일에 넣지 말 것 — 메모 제외 대상이어도 실수 대비",
+      "회사 저장소에서 쓰기 전 회사 보안 정책·AI 도구 사용 허가 먼저 확인",
+      "틀린 규칙이 기억되면 이후 작업이 계속 틀어짐 → /memory 로 주기적 점검·삭제",
+      "AI가 수정한 코드·실행한 명령은 diff 확인 + 직접 테스트 후 반영",
+      "공용 컴퓨터 실습 후 로그아웃 + 실습 메모 삭제 또는 메모리 끄기"
+    ]
+  },
+  "practice": {
+    "preview": "설치·로그인 → 실습 폴더에서 규칙 3가지 알려 주기 → /new 새 세션에서 규칙 적용 확인 → /memory 로 메모 찾기 → /dream 정리·틀린 메모 삭제 → 기억시킬 것·말 것 체크리스트. ① 규칙 기억 메모 + ② 규칙 적용 결과 + ③ 메모 목록 캡처 + ④ 체크리스트 완성",
+    "follow": [
+      {
+        "title": "설치·로그인·실습 폴더 열기",
+        "minutes": 8,
+        "do": "터미널에서 설치 명령 실행 → mkdir lesson-memo-practice && cd lesson-memo-practice → 간단한 index.html 1개 만들기 → grok 실행 → 안내에 따라 계정 로그인 [확인 필요: 로그인 화면 문구]",
+        "prompt": "curl -fsSL https://x.ai/cli/install.sh | bash",
+        "expect": "실습 폴더에서 Grok Build 대화 화면(입력창)이 열림",
+        "note": "실제 업무 저장소 금지. 설치가 막히면 강사 화면 시연으로 진행"
+      },
+      {
+        "title": "프로젝트 규칙 3가지 알려 주기",
+        "minutes": 10,
+        "do": "아래 프롬프트로 규칙을 알려 주며 작은 작업 1개 요청 → 결과 확인 → 한 턴이 끝날 때까지 기다리기(자동 메모는 턴 종료 후 진행)",
+        "prompt": "이 프로젝트 규칙을 알려 줄게. 앞으로도 계속 지켜 줘.\n1) 코드 주석은 모두 한국어로 쓴다.\n2) 파일을 고치면 CHANGELOG.md 맨 위에 날짜와 한 줄 요약을 남긴다.\n3) 글자 색은 #222222, 강조 색은 #d95926 만 쓴다.\n이 규칙대로 index.html 에 '수업 안내' 제목과 한 줄 소개 문단을 추가해 줘.",
+        "expect": "① index.html 수정 + ② CHANGELOG.md 생성·기록 + ③ 한국어 주석",
+        "note": "변경 diff 확인 후 승인. 규칙은 짧고 분명하게"
+      },
+      {
+        "title": "새 세션에서 기억 확인",
+        "minutes": 8,
+        "do": "/new 입력(또는 종료 후 grok 다시 실행) → 규칙은 말하지 않고 아래 작업만 요청 → 규칙 3가지가 지켜졌는지 확인",
+        "prompt": "index.html 에 '준비물' 목록(노트북, 충전기, 필기구)을 추가해 줘. 어떤 기억 메모를 참고했는지도 알려 줘.",
+        "expect": "한국어 주석 + 지정 색상 + CHANGELOG.md 새 줄까지 자동 적용, 참고한 메모(주제) 언급",
+        "note": "규칙이 안 지켜지면 앞 세션이 턴을 끝까지 마쳤는지 확인 → 첫 턴 완료 후부터 메모 시작"
+      },
+      {
+        "title": "/memory 로 메모 찾아보기",
+        "minutes": 7,
+        "do": "/memory 입력 → workspace·global 범위 목록 보기 → ↑/↓ 이동·/ 로 'CHANGELOG' 검색 → 메모 미리보기 확인 → 화면 캡처",
+        "prompt": "/memory",
+        "expect": "프로젝트(workspace) 범위 아래 규칙이 담긴 주제 파일 목록·미리보기",
+        "note": "창은 읽기 전용. y 로 경로 복사 → 편집기에서 열어 수정 가능"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "/dream 정리 + 틀린 메모 고치기",
+        "minutes": 7,
+        "do": "/dream 실행 → 다시 /memory 로 주제 파일(예: topics/code-style.md) 확인 → 일부러 '강조 색은 파란색'처럼 규칙 변경을 말해 보고 메모가 어떻게 바뀌는지 확인 → 필요 없는 메모는 x 로 삭제",
+        "prompt": "/dream",
+        "expect": "새 메모가 주제별 파일로 합쳐진 목록 + 바뀐 규칙 반영 또는 삭제 완료",
+        "note": "삭제는 되돌리기 어려움 — 지울 메모 이름 먼저 확인"
+      },
+      {
+        "title": "내 규칙으로 바꿔 쓰기",
+        "minutes": 6,
+        "do": "내 업무에 맞는 규칙 2가지(예: 문서는 쉬운 한국어, 숫자는 천 단위 쉼표)를 알려 주고 작은 작업 요청 → /new 후 다시 확인",
+        "prompt": "앞으로 이 프로젝트에서는 (내 규칙 1)과 (내 규칙 2)를 지켜 줘. 이 규칙대로 README.md 에 프로젝트 소개 3줄을 써 줘.",
+        "expect": "내 규칙이 적용된 README.md + 새 세션에서도 유지",
+        "note": "개인 선호(답변 말투 등)는 global, 프로젝트 규칙은 workspace에 저장되는지 /memory 로 구분"
+      },
+      {
+        "title": "기억시킬 것·말 것 체크리스트",
+        "minutes": 4,
+        "do": "짝과 함께 '기억시킬 규칙 / 절대 말하지 않을 정보 / AGENTS.md에 직접 쓸 팀 규칙' 3칸에 2개씩 적기 → 실습 후 메모 정리 또는 메모리 끄기 방법 확인",
+        "prompt": "",
+        "expect": "3칸 체크리스트 1장",
+        "note": "메모리 끄기: v1.0.51부터 설정 파일 [memory] enabled 켜기/끄기 [확인 필요: 설정 파일 위치·문법]"
+      }
+    ],
+    "challenges": [
+      {"level": "⭐", "mission": "같은 작업을 메모리 없이(새 폴더·새 프로젝트) 요청해 보고, 규칙을 다시 설명해야 했던 양을 1줄로 비교"},
+      {"level": "⭐⭐", "mission": "지금 대화에서 메모와 반대되는 지시(예: 이번만 영어 주석)를 주고, 현재 지시가 메모보다 우선 적용되는지 확인 후 결과 정리"},
+      {"level": "⭐⭐⭐", "mission": "같은 규칙을 AGENTS.md 파일로도 만들어 보고, '자동 메모 vs 규칙 파일'을 팀 공유·수정 방법·실수 위험 3가지 기준으로 비교표 작성"}
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 새 세션 결과를 보여 주고 'AI가 기억한 규칙 1개 / 놓친 규칙 1개 / 절대 기억시키지 않을 정보 1개' 발표",
+    "quiz": [
+      {
+        "q": "Grok Build 메모리가 새 메모를 저장하는 시점은?",
+        "options": ["설치하자마자 바로", "대화 한 턴이 끝난 뒤 백그라운드에서", "사용자가 매번 저장 버튼을 누를 때만", "하루에 한 번 정해진 시간에만"],
+        "answer": 1,
+        "explain": "턴이 끝나면 Grok이 백그라운드에서 오래 쓸 내용을 메모, 새 세션은 첫 턴 완료 후부터 메모 시작"
+      },
+      {
+        "q": "흩어진 새 메모를 주제별 파일로 합쳐 정리하는 명령은?",
+        "options": ["/memory", "/new", "/dream", "/share"],
+        "answer": 2,
+        "explain": "/dream 이 최근 메모를 topics/testing.md 같은 주제 파일로 정리, /memory 는 보기·검색·삭제"
+      },
+      {
+        "q": "메모에는 '테스트는 just test'라고 적혀 있는데 지금 대화에서 '이번엔 cargo test로 돌려'라고 하면?",
+        "options": ["메모를 따른다", "현재 대화의 지시를 우선한다", "작업을 거부한다", "두 명령을 모두 실행한다"],
+        "answer": 1,
+        "explain": "공식 발표 기준 현재 대화의 지시가 메모보다 우선"
+      }
+    ],
+    "rubric": [
+      {"criterion": "규칙 전달", "high": "규칙 3가지를 짧고 분명하게 전달 + 첫 작업에 적용", "mid": "규칙 1~2가지만 적용", "low": "규칙 없이 작업만 요청"},
+      {"criterion": "기억 확인", "high": "/new 새 세션에서 규칙 적용 확인 + /memory 로 근거 메모 찾음", "mid": "적용만 확인, 메모 위치 못 찾음", "low": "새 세션 확인 안 함"},
+      {"criterion": "관리·안전", "high": "/dream 정리 + 틀린 메모 삭제 + 체크리스트 + 비밀값 없음", "mid": "정리만 하고 체크리스트 없음", "low": "비밀값·실제 업무 저장소 사용"}
+    ],
+    "next": [
+      "웹·모바일 Grok Build 빌드 모드로 말로 웹사이트 만들기 (AI-2026-10-CAT07-008)",
+      "Grok 스킬(Skills)로 재사용 지침 만들기와 메모리 비교 (AI-2026-10-CAT02-005)",
+      "Claude 메모리(Memory) 주제별 편집과 비교하기 (AI-2026-10-CAT01-001)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {"time": "0~5분", "content": "오프닝: 'AI에게 같은 규칙 몇 번 설명해 봤나요?' 질문 + 인수인계 노트 비유", "note": "강사가 미리 만든 새 세션 결과(규칙 자동 적용) 시연"},
+      {"time": "5~35분", "content": "1부 이론: 정의·4단계(기록·저장·꺼내 쓰기·정리)·비교표·저장하지 않는 것·명령·요금·안전", "note": "'지금 지시가 메모보다 우선' 강조"},
+      {"time": "35~68분", "content": "따라 하기 1~4: 설치·로그인 → 규칙 알려 주기 → /new 기억 확인 → /memory", "note": "설치 문제는 짝 화면 공유로 진행"},
+      {"time": "68~85분", "content": "내 것 만들기: /dream·틀린 메모 고치기 → 내 규칙 → 체크리스트", "note": "삭제 전 이름 확인"},
+      {"time": "85~90분", "content": "짝 공유·퀴즈·실습 메모 정리·로그아웃", "note": ""}
+    ],
+    "script": [
+      {"label": "오프닝", "text": "AI 코딩 도구를 쓸 때마다 '주석은 한국어로, 테스트는 이 명령으로' 하고 또 말씀하신 적 있으시죠? 오늘은 한 번 말하면 다음 날에도 기억하는 Grok Build 메모리를 써 보겠습니다."},
+      {"label": "핵심 원리", "text": "메모리는 조수의 인수인계 노트입니다. 대화가 끝날 때마다 오래 쓸 규칙만 골라 적어 두고, 다음 세션에서 관련 일을 하기 전에 그 노트를 먼저 펼쳐 봅니다."},
+      {"label": "우선순위", "text": "노트보다 지금 하는 말이 더 셉니다. 이번만 다르게 하고 싶으면 그냥 지금 말씀하시면 됩니다."},
+      {"label": "관리 습관", "text": "잘못 적힌 노트는 계속 틀린 결과를 만듭니다. 가끔 /memory로 노트를 열어 보고, 틀린 건 바로 지우는 습관까지가 오늘 실습입니다."},
+      {"label": "마무리", "text": "비밀번호나 API 키는 처음부터 대화에 넣지 마세요. 공용 컴퓨터라면 실습 메모를 정리하고 로그아웃까지 하고 나가세요."}
+    ],
+    "plan_b": [
+      {"situation": "설치 스크립트가 실행되지 않음(Windows·회사 보안 정책)", "response": "강사 macOS·Linux 화면 시연 + 수강생은 규칙 프롬프트·체크리스트 작성에 집중"},
+      {"situation": "로그인 후 요금제 문제로 사용이 막힘", "response": "강사 구독 계정으로 시연, 수강생은 짝 화면 참여 — 수업 전 요금제별 사용 가능 여부 확인"},
+      {"situation": "새 세션에서 규칙이 적용되지 않음", "response": "앞 세션이 턴을 끝까지 마쳤는지 확인 → /dream 실행 후 /new 다시 시도 → 그래도 안 되면 '기억 메모를 참고해서' 문구 추가"},
+      {"situation": "/memory 에 메모가 하나도 없음", "response": "메모리가 꺼져 있는지 설정 확인 [확인 필요] + 규칙을 '앞으로도 계속 지켜 줘' 형태로 다시 알려 주기"},
+      {"situation": "인터넷·서버 장애로 응답 없음", "response": "강사 사전 녹화 화면·캡처로 흐름 설명 후 이론 비교표 토론으로 대체"}
+    ],
+    "stuck": [
+      {"issue": "grok 명령을 찾을 수 없음", "fix": "설치 후 터미널 새로 열기 → 설치 안내에 나온 경로 확인 [확인 필요]"},
+      {"issue": "규칙 일부만 적용됨", "fix": "규칙을 번호 목록·짧은 문장으로 다시 전달, 한 번에 3개 이하로"},
+      {"issue": "메모 위치를 못 찾음", "fix": "/memory 에서 / 검색으로 핵심 단어(예: CHANGELOG) 입력, workspace 범위부터 확인"},
+      {"issue": "틀린 규칙이 기억됨", "fix": "/memory 에서 해당 메모 x 삭제 또는 y 로 경로 복사 후 편집기에서 수정, 대화로 '그 규칙은 취소' 알리기"},
+      {"issue": "AI가 승인 없이 명령 실행할까 걱정", "fix": "승인 모드(approval)에서 변경·명령마다 확인 후 허용, 실습은 빈 폴더에서만"}
+    ],
+    "faq": [
+      {"q": "웹 grok.com 의 Grok Build(빌드 모드)와 같은 건가요?", "a": "이름은 같지만 다른 제품. 이 교안은 터미널 코딩 에이전트(CLI) 메모리, 웹·모바일 빌드 모드는 AI-2026-10-CAT07-008"},
+      {"q": "무료로 쓸 수 있나요?", "a": "출시 당시 SuperGrok·X Premium+ 대상, 메모리 소개 페이지는 'Try Free' 표시 — 무료 범위와 The X Subscription 요금제별 포함 여부는 [확인 필요]"},
+      {"q": "메모리를 끌 수 있나요?", "a": "/memory 창에 t 켜기/끄기 표시, v1.0.51부터 [memory] enabled 켜기/끄기 설정으로 단순화 [확인 필요: 설정 위치]"},
+      {"q": "비밀번호를 실수로 말하면 저장되나요?", "a": "공식 발표 기준 비밀값은 저장 제외 대상. 그래도 /memory 로 확인하고 해당 비밀번호는 바로 변경할 것"},
+      {"q": "AGENTS.md가 있는데 메모리가 또 필요한가요?", "a": "AGENTS.md는 사람이 쓰는 팀 공유 규칙, 메모리는 대화에서 배운 개인·프로젝트 규칙 자동 메모. 저장소·문서에 이미 있는 내용은 메모하지 않음"},
+      {"q": "한국어로 규칙을 말해도 되나요?", "a": "가능. v1.0.50에서 긴 메모 안 한국어 단어 검색 개선 [확인 필요: Releasebot 집계 기준]"}
+    ],
+    "level_guide": [
+      {"level": "🟢 초급반", "guide": "강사 시연 중심 — 수강생은 규칙 3가지 프롬프트 작성 + 새 세션 결과 비교 관찰"},
+      {"level": "🟡 중급반", "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐⭐ 현재 지시 우선 확인까지"},
+      {"level": "🔴 고급반", "guide": "도전과제 ⭐⭐⭐ AGENTS.md 비교표 + 팀 저장소 도입 시 '기억시킬 것' 정책 초안"},
+      {"level": "교사·강사 (JOB-EDU)", "guide": "수업 안내 웹페이지 폴더로 '쉬운 한국어·글자 크기' 규칙 기억시키기"},
+      {"level": "데이터·연구 (JOB-DAT)", "guide": "분석 스크립트 폴더로 '그래프 색·파일 이름 규칙' 기억시키기 — 실제 데이터 금지"},
+      {"level": "외국인·다문화 (JOB-GLB)", "guide": "규칙을 모국어로 말한 뒤 새 세션에서 한국어 작업에 적용되는지 확인"}
+    ],
+    "pro_points": [
+      "핵심 메시지: 메모리는 인수인계 노트, 노트 점검은 사람",
+      "규칙은 '앞으로도 계속' + 번호 목록으로 짧게 전달",
+      "새 세션 확인은 /new 후 규칙을 말하지 않고 작업만 요청",
+      "팀 규칙은 AGENTS.md, 개인 습관은 메모리로 역할 구분",
+      "실습은 빈 폴더에서만, 비밀값은 처음부터 넣지 않기"
+    ],
+    "day_before": [
+      "강사 컴퓨터에서 설치·로그인·따라 하기 전 과정 리허설 → 새 세션 규칙 적용까지 걸린 시간 기록",
+      "현재 요금제(The X Subscription)별 Grok Build 사용 가능 여부 공식 페이지 재확인",
+      "/memory·/dream 화면 캡처 준비(실제 화면 캡처 필요)",
+      "메모리 켜기/끄기 설정 위치(v1.0.51 [memory] enabled) 실제 확인",
+      "수강생 컴퓨터 OS 조사(Windows 비율) → WSL 안내 또는 시연 중심 결정",
+      "실습용 빈 폴더 압축본(index.html·README.md) 배포 준비"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Grok Build 무료 사용 범위와 The X Subscription 요금제별 포함 여부 — 공식 요금 페이지 미확인",
+    "[확인 필요] v1.0.50·v1.0.51 내용은 Releasebot 집계 기준, 공식 changelog 페이지 원문 미확인(확인 시점 공식 페이지가 v1.0.46까지만 표시)",
+    "[확인 필요] 로그인 화면 문구·설치 경로·Windows 지원 여부",
+    "[확인 필요] /memory 의 t(켜기/끄기)가 메모리 전체인지 개별 파일인지"
+  ],
+  "sources": [
+    {"title": "xAI News – Memory in Grok Build (2026-09-16)", "url": "https://x.ai/news/grok-build-memory", "checked": "2026-10-17"},
+    {"title": "xAI News – Grok Build (CLI 출시, 2026-05-25)", "url": "https://x.ai/news/grok-build-cli", "checked": "2026-10-17"},
+    {"title": "xAI – Grok Build Changelog", "url": "https://x.ai/build/changelog", "checked": "2026-10-17"},
+    {"title": "xAI News – Introducing The X Subscription (2026-10-12)", "url": "https://x.ai/news/x-subscription", "checked": "2026-10-17"},
+    {"title": "Releasebot – Grok Build Updates by xAI (보조 근거, v1.0.50·v1.0.51)", "url": "https://releasebot.io/updates/xai/grok-build", "checked": "2026-10-17"}
+  ]
+}

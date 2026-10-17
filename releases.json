@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-18 06:10 KST",
+  "updated_at": "2026-10-18 07:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-09-16-build-memory",
+      "date": "2026-09-16",
+      "tool": "Grok",
+      "company": "xAI (SpaceXSI)",
+      "type": "update",
+      "title": "Grok Build(CLI) 메모리 — 세션 간 프로젝트 규칙 기억",
+      "summary": "터미널 코딩 에이전트 Grok Build에 세션 간 메모리 정식 적용(v1.0.34), 대화 후 규칙·결정 자동 메모, workspace·global 범위 마크다운 주제 파일, /memory 보기·검색·삭제, /dream 정리, 현재 지시 우선·비밀값 저장 제외",
+      "source": {
+        "title": "xAI News – Memory in Grok Build",
+        "url": "https://x.ai/news/grok-build-memory"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT07-011"
+    },
     {
       "id": "genspark-2026-07-20-secondbrain",
       "date": "2026-07-20",
