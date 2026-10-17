@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 13:10 KST",
+  "updated_at": "2026-10-17 14:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "notion-2026-10-13-mcp-context",
+      "date": "2026-10-13",
+      "tool": "Notion",
+      "company": "Notion",
+      "type": "update",
+      "title": "Notion 3.8 — 외부 AI MCP 연결·버전 기록 개편",
+      "summary": "Claude·ChatGPT·Codex 등 외부 AI가 MCP로 Notion 맥락을 읽고 문서·작업 표를 수정, 관리자 AI 도구 연결 관리, 버전 기록 개편, ChatGPT 요금제로 Notion Agent 사용(Business·Enterprise)",
+      "source": {
+        "title": "Notion Releases – Notion 3.8: Context for your agents",
+        "url": "https://www.notion.com/releases/2026-10-13"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-012"
+    },
     {
       "id": "chatgpt-2026-10-15-sites-limit",
       "date": "2026-10-15",

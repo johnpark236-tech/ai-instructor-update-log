@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 95,
+  "count": 96,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-012",
+      "version": "v1.0",
+      "created_at": "2026-10-17 14:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "Notion MCP로 Claude·ChatGPT 같은 다른 AI에 내 Notion을 연결해 회의록을 읽히고 할 일 표를 갱신, 버전 기록으로 AI가 바꾼 내용까지 확인할 수 있음",
+      "summary": "Notion 3.8(2026-10-13)은 MCP(Model Context Protocol)로 Claude·ChatGPT·Codex·Cursor 등 외부 AI가 ① 내 워크스페이스 맥락 읽기 + ② 문서·작업 표 수정 + ③ 관리자 연결 관리 + ④ 새 버전 기록(변경 강조·누가 바꿨는지·복원)을 지원함. 연결은 OAuth 로그인 방식, MCP 도구는 내 Notion 권한 전체로 동작함",
+      "tool": "Notion",
+      "feature": "Notion MCP 연결(Notion 3.8 Context for your agents) — Claude·ChatGPT(Codex)·Cursor 등 외부 AI가 워크스페이스 읽기·문서·작업 표 수정, 관리자 AI 앱 연결 관리, 버전 기록 개편(변경 강조·작성자·복원), ChatGPT 요금제로 Notion Agent 쓰기",
+      "company": "Notion",
+      "type": "update",
+      "released": "2026-10-13",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-DEV"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 외부 AI에 Notion 연결 완료 화면 + ② 회의록 3줄 요약 답변 + ③ AI가 할 일 데이터베이스에 추가한 작업 4~6개 + ④ 버전 기록에서 확인한 변경 내역 메모 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🔌",
+      "one_liner": "다른 AI가 내 Notion을 읽고 고치게 연결"
+    },
     {
       "id": "AI-2026-10-CAT05-016",
       "version": "v1.0",

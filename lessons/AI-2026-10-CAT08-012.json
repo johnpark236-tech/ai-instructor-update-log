@@ -1,0 +1,550 @@
+{
+  "id": "AI-2026-10-CAT08-012",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-17 14:10 KST",
+  "checked": "2026-10-17",
+  "review_by": "2027-01-17",
+  "title": "Notion MCP로 Claude·ChatGPT 같은 다른 AI에 내 Notion을 연결해 회의록을 읽히고 할 일 표를 갱신, 버전 기록으로 AI가 바꾼 내용까지 확인할 수 있음",
+  "summary": "Notion 3.8(2026-10-13)은 MCP(Model Context Protocol)로 Claude·ChatGPT·Codex·Cursor 등 외부 AI가 ① 내 워크스페이스 맥락 읽기 + ② 문서·작업 표 수정 + ③ 관리자 연결 관리 + ④ 새 버전 기록(변경 강조·누가 바꿨는지·복원)을 지원함. 연결은 OAuth 로그인 방식, MCP 도구는 내 Notion 권한 전체로 동작함",
+  "glance": {
+    "emoji": "🔌",
+    "one_liner": "다른 AI가 내 Notion을 읽고 고치게 연결",
+    "cards": [
+      {
+        "icon": "🔗",
+        "title": "MCP 연결",
+        "text": "Claude·ChatGPT에 Notion 연결"
+      },
+      {
+        "icon": "📖",
+        "title": "맥락 읽기",
+        "text": "회의록·문서를 근거로 답변"
+      },
+      {
+        "icon": "✏️",
+        "title": "표 갱신",
+        "text": "할 일 표에 작업 추가·수정"
+      },
+      {
+        "icon": "🕘",
+        "title": "버전 기록",
+        "text": "AI가 바꾼 부분 강조·복원"
+      }
+    ],
+    "diagram": {
+      "title": "Notion MCP 작동 흐름",
+      "nodes": [
+        {
+          "icon": "🤖",
+          "label": "AI 앱"
+        },
+        {
+          "icon": "🔑",
+          "label": "OAuth 로그인"
+        },
+        {
+          "icon": "🔌",
+          "label": "Notion MCP"
+        },
+        {
+          "icon": "📄",
+          "label": "페이지·표 읽기·쓰기"
+        },
+        {
+          "icon": "🕘",
+          "label": "버전 기록 확인"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "연결 전",
+        "text": "회의록을 복사해 AI 창에 붙이고, 결과를 다시 Notion 표에 손으로 옮김"
+      },
+      "after": {
+        "label": "MCP 연결 후",
+        "text": "'회의록 읽고 할 일 표에 넣어 줘' 한 줄로 읽기·추가 처리"
+      }
+    },
+    "cautions": [
+      "AI는 내 Notion 권한 전체로 동작",
+      "실습은 연습용 페이지에서만",
+      "바뀐 내용은 버전 기록으로 확인"
+    ]
+  },
+  "tool": "Notion",
+  "feature": "Notion MCP 연결(Notion 3.8 Context for your agents) — Claude·ChatGPT(Codex)·Cursor 등 외부 AI가 워크스페이스 읽기·문서·작업 표 수정, 관리자 AI 앱 연결 관리, 버전 기록 개편(변경 강조·작성자·복원), ChatGPT 요금제로 Notion Agent 쓰기",
+  "company": "Notion",
+  "type": "update",
+  "released": "2026-10-13",
+  "categories": [
+    "CAT-08",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-BIZ",
+    "JOB-DEV"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Notion 계정(무료 요금제 가능) + 연습용 페이지 2개 (회의록 페이지, '할 일' 데이터베이스)",
+    "MCP를 지원하는 AI 앱 1개: Claude(웹·데스크톱 커넥터) 또는 ChatGPT(앱 연결) 또는 Codex·Claude Code [확인 필요: 요금제별 커넥터 사용 조건]",
+    "PC 웹 브라우저 (OAuth 로그인 창 허용)",
+    "회의록 예시 1개 (실명·연락처 없는 가상 회의록)"
+  ],
+  "outcome": "① 외부 AI에 Notion 연결 완료 화면 + ② 회의록 3줄 요약 답변 + ③ AI가 할 일 데이터베이스에 추가한 작업 4~6개 + ④ 버전 기록에서 확인한 변경 내역 메모 1장",
+  "objectives": [
+    "Notion MCP가 무엇이고 어떤 AI 앱과 연결되는지 설명할 수 있음",
+    "외부 AI를 Notion에 연결해 회의록을 읽히고 할 일 데이터베이스에 작업을 추가할 수 있음",
+    "버전 기록으로 AI가 바꾼 내용을 확인·복원하고 연결 권한을 관리할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Notion MCP 연결 자체는 요금제 제한 표기 없음(무료 포함 일반 사용자 연결, 게스트 불가). 유료(Business·Enterprise + Notion AI)일수록 AI 검색·데이터 조회 한도가 큼. 관리자 승인 목록은 Enterprise. ChatGPT Plus·Pro·Go 요금제를 Notion Agent에 연결하는 기능은 Notion Business·Enterprise 대상",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "0달러",
+        "features": "MCP 연결 가능[확인 필요] + notion-search는 키워드 검색 + 데이터 조회 횟수 제한 + Notion AI 체험"
+      },
+      {
+        "name": "Plus",
+        "price": "월 10달러 (멤버당)",
+        "features": "Free와 같은 MCP 범위 + 기본 연결(Slack·Google Drive 등) + Notion AI 체험"
+      },
+      {
+        "name": "Business",
+        "price": "월 20달러 (멤버당)",
+        "features": "Notion Agent·AI 회의 노트 + MCP AI 검색·데이터 조회 무제한 + MCP 토큰 + ChatGPT 요금제 연결"
+      },
+      {
+        "name": "Enterprise",
+        "price": "별도 문의",
+        "features": "Business 전체 + AI 앱 승인 목록·전체 연결 해제 + LLM 데이터 미보관"
+      }
+    ],
+    "note": "가격은 notion.com/pricing 표기(월 결제, 연간 결제 최대 20% 할인 문구) 기준 2026-10-17 확인, 원화 가격 미확인. Custom Agents는 1,000 크레딧당 월 10달러. 연결할 AI 앱(Claude·ChatGPT)의 요금제 조건은 각 서비스 기준 [확인 필요]",
+    "checked": "2026-10-17",
+    "sources": [
+      {
+        "title": "Notion – Pricing",
+        "url": "https://www.notion.com/pricing"
+      },
+      {
+        "title": "Notion Developers – Get started with Notion MCP",
+        "url": "https://developers.notion.com/docs/get-started-with-mcp"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-09-15",
+      "text": "Notion 3.7 — 에이전트 스킬, 사용자 지정 MCP 연결(GitHub 등), Notion Agents iOS 앱"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "Notion 3.8 'Context for your agents' — 외부 AI MCP 연결, 관리자 AI 도구 연결 관리, Skills API, 버전 기록 개편, ChatGPT 요금제 연결, 열 권한, 새 모델 7종"
+    }
+  ],
+  "theory": {
+    "definition": "Notion MCP는 Claude·ChatGPT·Cursor 같은 AI 앱이 내 Notion 페이지를 실시간으로 읽고 쓰게 해 주는 연결 통로임. 서버 주소 https://mcp.notion.com/mcp, OAuth 로그인으로 연결, Notion 권한을 그대로 따름",
+    "analogy": "AI 비서에게 Notion 사무실 출입증을 발급하는 것과 같음. 출입증은 내 권한만큼 열리고, 누가 무엇을 바꿨는지는 출입 기록(버전 기록)에 남음",
+    "comparison": {
+      "headers": [
+        "구분",
+        "복사·붙여넣기",
+        "Notion 안 Notion Agent",
+        "외부 AI + Notion MCP(신규 확대)"
+      ],
+      "rows": [
+        [
+          "작업 장소",
+          "AI 창 ↔ Notion 오가기",
+          "Notion 안",
+          "Claude·ChatGPT 등 평소 쓰는 AI 앱"
+        ],
+        [
+          "Notion 읽기",
+          "직접 복사",
+          "자동",
+          "검색·페이지 불러오기 도구로 자동"
+        ],
+        [
+          "Notion 쓰기",
+          "손으로 옮김",
+          "자동",
+          "페이지 만들기·수정·댓글 도구로 자동"
+        ],
+        [
+          "필요 조건",
+          "없음",
+          "Notion AI(Business 이상 또는 체험)",
+          "MCP 지원 AI 앱 + OAuth 연결"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "MCP 연결 방식",
+        "body": "① AI 앱의 커넥터·앱 메뉴에서 Notion 선택 → OAuth 로그인 → 접근 허용 ② 개발 도구는 서버 주소 https://mcp.notion.com/mcp 등록 (예: claude mcp add --transport http notion https://mcp.notion.com/mcp → /mcp 로그인) ③ Business·Enterprise는 워크스페이스 소유자가 MCP 토큰 발급 가능"
+      },
+      {
+        "title": "주요 도구",
+        "body": "notion-search(검색) + notion-query-data-sources(데이터베이스 조회) + notion-create-pages(페이지 만들기) + notion-update-page(수정) + notion-create-comment(댓글) + notion-create-file-upload(파일 올리기). 유료 요금제+Notion AI면 AI 검색, 아니면 키워드 검색"
+      },
+      {
+        "title": "버전 기록 개편",
+        "body": "페이지·데이터베이스 변경을 강조 표시하고 누가 바꿨는지 표시, 이전 버전 복원 가능. AI가 MCP로 바꾼 내용도 검토할 수 있는 안전장치 역할"
+      }
+    ],
+    "can": [
+      "Claude·ChatGPT 대화창에서 내 Notion 회의록·문서를 근거로 답 받기",
+      "할 일 데이터베이스에 작업 추가·상태 수정·댓글 달기",
+      "여러 AI(Claude·Codex·Cursor 등)가 같은 Notion 맥락 공유",
+      "관리자: 누가 어떤 AI 도구를 연결했는지·마지막 사용 시점 확인, 개인 연결 해제",
+      "Notion Business 이상: ChatGPT Plus·Pro·Go 요금제로 Notion Agent의 GPT 모델 사용"
+    ],
+    "cannot": [
+      "MCP를 지원하지 않는 AI 채팅 도구는 연결 불가",
+      "게스트는 연결 불가 (워크스페이스 멤버만)",
+      "내 권한 밖 페이지는 읽거나 쓸 수 없음",
+      "무료·Plus 요금제는 AI 검색 대신 키워드 검색, 데이터 조회 횟수 제한",
+      "ChatGPT 요금제 연결은 Custom Agents에는 적용 안 됨"
+    ],
+    "safety": [
+      "MCP 도구는 내 Notion 권한 전체로 동작하므로 실습은 연습용 워크스페이스·페이지에서 진행함",
+      "개인정보·급여·학생 성적 같은 민감한 페이지가 있는 워크스페이스는 연결 전 권한·공유 범위 점검함",
+      "AI가 쓰거나 고친 내용은 버전 기록에서 확인하고 틀리면 이전 버전으로 복원함",
+      "기관 계정은 관리자 승인 목록 정책을 먼저 확인하고, 승인되지 않은 AI 앱은 연결하지 않음",
+      "실습 후 쓰지 않는 연결은 AI 앱 또는 Notion 설정에서 해제함"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① Notion 연결 완료 + ② 회의록 요약 + ③ AI가 채운 할 일 표 + ④ 버전 기록 확인 메모. 비포(회의록만 있는 Notion)가 애프터(할 일 표까지 정리된 Notion)로 바뀜",
+    "follow": [
+      {
+        "title": "연습 페이지 준비",
+        "minutes": 5,
+        "do": "Notion에 '연습-주간 회의록' 페이지 1개 + '연습-할 일' 데이터베이스(속성: 이름·상태·마감일) 만들기 → 회의록에 가상 회의 내용 5~6줄 입력",
+        "prompt": "",
+        "expect": "회의록 페이지 1개 + 빈 할 일 표 1개",
+        "note": "실명·연락처 넣지 않음"
+      },
+      {
+        "title": "AI 앱에 Notion 연결",
+        "minutes": 8,
+        "do": "Claude: 설정 또는 맞춤 설정의 커넥터(Connectors)에서 Notion 추가 → Notion 로그인 → 접근 허용 (ChatGPT는 앱·커넥터 메뉴에서 Notion 연결)",
+        "prompt": "",
+        "expect": "커넥터 목록에 Notion 연결됨 표시",
+        "note": "[확인 필요: 각 앱의 한국어 메뉴 이름·요금제별 커넥터 제공 여부]"
+      },
+      {
+        "title": "회의록 읽히기",
+        "minutes": 7,
+        "do": "AI 대화창에 아래 프롬프트 입력 → 도구 사용 승인 요청이 나오면 내용 확인 후 허용",
+        "prompt": "내 Notion에서 '연습-주간 회의록' 페이지를 찾아 읽고, 결정된 사항 3줄과 해야 할 일 목록을 정리해 줘.",
+        "expect": "회의록 근거 요약 3줄 + 할 일 후보 목록",
+        "note": "찾지 못하면 페이지 제목을 정확히 다시 알려 줄 것"
+      },
+      {
+        "title": "할 일 표에 넣기",
+        "minutes": 8,
+        "do": "이어서 아래 요청 → Notion '연습-할 일' 표 열어 결과 확인",
+        "prompt": "방금 정리한 할 일을 Notion '연습-할 일' 데이터베이스에 한 줄씩 추가해 줘. 상태는 '시작 전', 마감일은 회의록에 나온 날짜로 넣고, 날짜가 없으면 비워 둬.",
+        "expect": "할 일 표에 작업 4~6개 추가",
+        "note": "없는 날짜를 지어냈는지 반드시 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 문서로 바꾸기",
+        "minutes": 8,
+        "do": "내 업무(수업 계획·행사 준비 등) 연습 페이지 1개를 만들고 아래 프롬프트로 요약·할 일 추출",
+        "prompt": "Notion '[내 페이지 제목]'을 읽고 이번 주에 해야 할 일 3개를 골라 '연습-할 일' 표에 넣어 줘. 이유도 한 줄씩 댓글로 달아 줘.",
+        "expect": "내 업무 할 일 3개 + 이유 댓글",
+        "note": "민감한 실제 문서는 쓰지 않음"
+      },
+      {
+        "title": "버전 기록 확인",
+        "minutes": 7,
+        "do": "Notion 페이지·표 오른쪽 위 메뉴(…) → 버전 기록(Version history) 열기 → AI가 바꾼 부분 강조 표시·작성자 확인 → 한 군데를 이전 버전으로 복원해 보기",
+        "prompt": "",
+        "expect": "변경 내역 화면 + 복원 1회",
+        "note": "[확인 필요: 개편된 버전 기록 메뉴 위치·요금제별 보관 기간]"
+      },
+      {
+        "title": "연결 정리",
+        "minutes": 7,
+        "do": "Notion 설정(Settings) → 연결(Connections)에서 연결된 AI 앱 확인 → 실습 후 필요 없으면 해제 + 확인한 내용 메모",
+        "prompt": "",
+        "expect": "연결 목록 확인 메모 1장",
+        "note": "관리자 승인 목록·전체 해제는 Enterprise 기능"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "'연습-할 일' 표에서 마감이 가장 빠른 작업 2개를 AI에게 물어보고 Notion 화면과 맞는지 비교하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "다른 AI 앱(예: ChatGPT와 Claude)에 같은 Notion을 연결하고 같은 질문의 답과 표 수정 결과 비교하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Codex·Claude Code에 서버 주소 https://mcp.notion.com/mcp 를 등록하고 개발 메모 페이지를 자동으로 갱신하게 하기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 AI가 만든 할 일 표를 비교하고, 버전 기록에서 발견한 AI 실수 1개와 고친 방법을 서로 설명함",
+    "quiz": [
+      {
+        "q": "Notion MCP로 연결한 AI가 접근할 수 있는 범위는?",
+        "options": [
+          "워크스페이스 전체 모든 페이지",
+          "연결한 사람이 권한 있는 페이지만",
+          "공개 페이지만",
+          "관리자가 고른 한 페이지만"
+        ],
+        "answer": 1,
+        "explain": "MCP 도구는 내 Notion 권한으로 동작하고 기존 권한을 그대로 따름"
+      },
+      {
+        "q": "AI가 Notion에서 바꾼 내용을 확인하고 되돌리는 곳은?",
+        "options": [
+          "휴지통",
+          "버전 기록(Version history)",
+          "알림함",
+          "템플릿 갤러리"
+        ],
+        "answer": 1,
+        "explain": "Notion 3.8에서 버전 기록이 개편되어 변경 강조·작성자 표시·이전 버전 복원을 지원함"
+      },
+      {
+        "q": "Notion MCP 연결이 불가능한 사람은?",
+        "options": [
+          "무료 요금제 멤버",
+          "Business 요금제 멤버",
+          "워크스페이스 게스트",
+          "Enterprise 요금제 멤버"
+        ],
+        "answer": 2,
+        "explain": "공식 개발 문서 기준 게스트는 연결할 수 없고 워크스페이스 멤버만 가능함"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "연결·실행",
+        "high": "연결 후 읽기·쓰기 모두 성공",
+        "mid": "읽기만 성공",
+        "low": "연결 실패"
+      },
+      {
+        "criterion": "결과 검토",
+        "high": "지어낸 날짜·빠진 작업을 찾아 고침",
+        "mid": "표를 열어 확인만 함",
+        "low": "검토 없음"
+      },
+      {
+        "criterion": "보안 습관",
+        "high": "연습 페이지 사용 + 실습 후 연결 정리",
+        "mid": "연습 페이지만 사용",
+        "low": "실제 민감 문서 사용"
+      }
+    ],
+    "next": [
+      "Notion Agent 스킬로 반복 업무 지침 만들기 (AI-2026-10-CAT03-008)",
+      "Claude Cowork 예약 작업과 Notion 연결해 매주 회의록 정리 (AI-2026-10-CAT08-001)",
+      "Planner Agent 채팅과 할 일 관리 방식 비교 (AI-2026-10-CAT08-011)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, Notion 3.7 → 3.8 타임라인",
+        "note": "'출입증' 비유"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: MCP 개념, 연결 방식, 주요 도구, 버전 기록, 권한·보안",
+        "note": "게스트 불가·권한 그대로 강조"
+      },
+      {
+        "time": "35~63분",
+        "content": "2부 따라 하기: 연습 페이지 → AI 연결 → 회의록 읽기 → 할 일 표 넣기",
+        "note": "연결 안 되는 수강생은 Plan B"
+      },
+      {
+        "time": "63~85분",
+        "content": "2부 내 것 만들기: 내 문서 → 버전 기록 확인·복원 → 연결 정리",
+        "note": "변경 메모 작성"
+      },
+      {
+        "time": "85~95분",
+        "content": "3부 정리: 결과 비교, 퀴즈 3문제, 다음 단계",
+        "note": "전체 95분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "회의록을 복사해서 AI에 붙여 넣고, 답을 다시 Notion 표에 옮겨 적은 적 있으시죠? 10월 13일 Notion 3.8부터는 Claude나 ChatGPT가 직접 Notion을 읽고 표까지 채워 줍니다."
+      },
+      {
+        "label": "보안 안내",
+        "text": "중요한 점 하나. 연결된 AI는 여러분이 볼 수 있는 Notion 페이지를 전부 볼 수 있습니다. 그래서 오늘은 꼭 '연습' 페이지로만 해 주세요."
+      },
+      {
+        "label": "실습 전환",
+        "text": "이제 AI에게 회의록을 읽혀 봅시다. 도구를 쓰겠다는 허락 요청이 뜨면 무엇을 하려는지 읽고 허용해 주세요."
+      },
+      {
+        "label": "마무리",
+        "text": "AI가 표를 채웠다고 끝이 아닙니다. 버전 기록에서 무엇이 바뀌었는지 보고, 틀렸으면 되돌리는 것까지가 오늘 실습입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 AI 앱에서 Notion 커넥터가 안 보임(요금제·지역·관리자 설정)",
+        "response": "강사 화면 시연 + 수강생은 회의록을 복사해 AI에 붙이는 방식으로 같은 결과를 만든 뒤 연결 방식과 비교"
+      },
+      {
+        "situation": "기관 Notion이 승인 목록 정책으로 외부 AI 연결을 막음",
+        "response": "개인 무료 Notion 계정을 새로 만들어 연습 워크스페이스로 진행"
+      },
+      {
+        "situation": "OAuth 로그인 창이 팝업 차단으로 안 열림",
+        "response": "브라우저 주소창 오른쪽 팝업 차단 아이콘에서 허용 후 다시 연결"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "AI가 페이지를 못 찾음",
+        "fix": "페이지 제목을 정확히 알려 주고, 연결 시 해당 페이지 접근을 허용했는지 확인"
+      },
+      {
+        "issue": "검색 결과가 엉뚱함",
+        "fix": "무료·Plus는 키워드 검색이므로 페이지 제목의 단어를 그대로 넣어 요청"
+      },
+      {
+        "issue": "할 일 표에 속성(상태·마감일)이 안 채워짐",
+        "fix": "데이터베이스 속성 이름을 프롬프트에 그대로 적어 다시 요청"
+      },
+      {
+        "issue": "AI가 없는 마감일을 만들어 넣음",
+        "fix": "버전 기록에서 확인 후 복원하거나 직접 수정, 프롬프트에 '날짜 없으면 비워 둘 것' 추가"
+      },
+      {
+        "issue": "게스트 계정이라 연결 안 됨",
+        "fix": "게스트는 연결 불가, 본인 워크스페이스(멤버 권한)에서 실습"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 Notion으로도 되나요?",
+        "a": "개발 문서에 MCP 연결 자체의 요금제 제한은 없고, 무료는 키워드 검색·데이터 조회 횟수 제한이 있다고 안내됨. 실제 동작은 강의 전날 확인 [확인 필요]"
+      },
+      {
+        "q": "Claude 무료 요금제에서도 Notion 커넥터를 쓸 수 있나요?",
+        "a": "Notion 문서는 Claude.ai·Claude Desktop 연결을 안내하지만 Claude 요금제별 조건은 Anthropic 문서 기준 [확인 필요]"
+      },
+      {
+        "q": "AI가 내 다른 페이지도 보나요?",
+        "a": "MCP 도구는 내 Notion 권한 전체로 동작함. 그래서 민감한 페이지가 있는 워크스페이스는 연결 전 점검 필요"
+      },
+      {
+        "q": "ChatGPT 요금제로 Notion AI를 쓴다는 건 무엇인가요?",
+        "a": "Notion Business·Enterprise 워크스페이스에서 ChatGPT Plus·Pro·Go 계정을 연결하면 Notion Agent의 GPT 모델 사용량이 ChatGPT 요금제에서 차감됨. 설정 → Notion AI → 사용량(Usage)에서 연결"
+      },
+      {
+        "q": "관리자가 특정 AI만 허용할 수 있나요?",
+        "a": "Enterprise에서 설정 → 연결(Connections) → 권한(Permissions) → AI 앱을 '승인된 목록만'으로 제한 가능"
+      },
+      {
+        "q": "연결을 끊으려면?",
+        "a": "AI 앱의 커넥터 메뉴에서 해제하거나 Notion 설정의 연결 목록에서 확인 후 해제 [확인 필요: 개인 사용자 해제 메뉴 이름]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "강사가 만든 연습 페이지 템플릿 복제 → 연결 → 회의록 요약까지만"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "할 일 표 쓰기 + 버전 기록 복원 + 두 AI 앱 비교, Codex·Claude Code 등록은 도전 과제"
+      },
+      {
+        "level": "시니어",
+        "guide": "큰 글씨 화면, 연결 경로를 종이 카드로 배포, 읽기(요약) 1회만 실습"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "회의록을 쉬운 한국어로 쓰고 '할 일을 표에 넣어 줘' 같은 짧은 요청 문장 연습"
+      }
+    ],
+    "pro_points": [
+      "핵심은 '복사·붙여넣기 없이 AI가 Notion을 직접 읽고 쓴다' + '버전 기록으로 검토' 두 가지",
+      "권한 그대로 동작한다는 점을 먼저 설명하면 보안 질문이 줄고 연습 페이지 사용 이유가 분명해짐",
+      "Claude Cowork·dots·Grok Bot 같은 상시 에이전트 교안과 묶어 '에이전트에게 업무 기억(Notion) 주기' 과정으로 설계 가능"
+    ],
+    "day_before": [
+      "Claude·ChatGPT 각 앱에서 Notion 커넥터 연결 경로 실제 확인·한국어 메뉴 캡처",
+      "무료 Notion 계정으로 읽기·쓰기 동작 확인",
+      "개편된 버전 기록 화면에서 변경 강조·복원 캡처 준비",
+      "연습용 회의록·할 일 데이터베이스 템플릿을 공유 링크로 준비",
+      "기관 Notion 승인 목록 정책·팝업 차단 설정 확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Claude·ChatGPT 앱의 Notion 커넥터 한국어 메뉴 이름과 요금제별 제공 조건",
+    "[확인 필요] 무료·Plus 요금제의 MCP 쓰기 동작과 데이터 조회 횟수",
+    "[확인 필요] 개편된 버전 기록의 메뉴 위치와 요금제별 보관 기간",
+    "[확인 필요] 3.8 릴리스 페이지의 'Business·Enterprise 대상' 표기 — 도움말 기준 Notion 워크스페이스 요금제를 뜻함",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — Notion 공식 릴리스 노트·도움말·개발 문서 기준"
+  ],
+  "sources": [
+    {
+      "title": "Notion Releases – Notion 3.8: Context for your agents (2026-10-13)",
+      "url": "https://www.notion.com/releases/2026-10-13",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Notion Help – Notion MCP",
+      "url": "https://www.notion.com/help/notion-mcp",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Notion Developers – Get started with Notion MCP",
+      "url": "https://developers.notion.com/docs/get-started-with-mcp",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Notion Help – Use your ChatGPT plan with Notion Agent",
+      "url": "https://www.notion.com/help/use-your-chatgpt-plan-with-notion-agent",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Notion – Pricing",
+      "url": "https://www.notion.com/pricing",
+      "checked": "2026-10-17"
+    }
+  ]
+}
