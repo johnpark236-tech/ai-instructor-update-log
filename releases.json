@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-18 04:00 KST",
+  "updated_at": "2026-10-18 06:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2026-07-20-secondbrain",
+      "date": "2026-07-20",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "SecondBrain — 메일·회의·파일을 기억하는 AI 기억 창고(AI Workspace 6.0)",
+      "summary": "메일·회의 메모·파일·연결 앱(Gmail·Google Calendar·Outlook·Slack·Notion 등) 맥락을 한곳에 모아 Super Agent가 자동 활용, 파일 업로드(.md·.csv·.html·.pdf·.zip), Plus·Pro는 Free Quota 적용, 녹음기 SecondBrain Note($199) 연동",
+      "source": {
+        "title": "Genspark Help Center – SecondBrain",
+        "url": "https://www.genspark.ai/helpcenter/secondbrain"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-015"
+    },
     {
       "id": "genspark-2026-07-20-design",
       "date": "2026-07-20",

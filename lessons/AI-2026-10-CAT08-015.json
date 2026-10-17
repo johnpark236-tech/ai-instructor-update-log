@@ -1,0 +1,599 @@
+{
+  "id": "AI-2026-10-CAT08-015",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-18 06:10 KST",
+  "checked": "2026-10-17",
+  "review_by": "2027-01-17",
+  "title": "한 번 알려 주면 계속 기억하는 AI 비서 — Genspark SecondBrain(세컨드브레인)으로 '내 업무 기억 창고 + 회의 준비 브리핑 + 주간 업무 요약' 만들기",
+  "summary": "2026-07-20 Genspark AI Workspace 6.0에서 공개된 SecondBrain. 메일·회의 메모·파일·연결 앱 내용을 한곳에 모아 두는 개인 기억 창고(메모리 계층)로, Super Agent가 이 맥락을 자동으로 꺼내 써서 매번 '나는 누구, 무슨 일 중' 설명이 필요 없음. 파일 업로드(.md·.csv·.html·.pdf·.zip) + Gmail·Google Calendar·Outlook·Slack·Notion 등 Connect 연결 + Genspark 작업·AI Meeting Notes 자동 저장. Plus·Pro는 SecondBrain 표준 작업에 Free Quota 적용",
+  "glance": {
+    "emoji": "🧠",
+    "one_liner": "내 업무 맥락을 기억하는 AI 비서",
+    "cards": [
+      {
+        "icon": "📥",
+        "title": "자료 모으기",
+        "text": "파일 업로드·앱 연결"
+      },
+      {
+        "icon": "🔗",
+        "title": "앱 연결",
+        "text": "Gmail·캘린더·Notion 등"
+      },
+      {
+        "icon": "🤖",
+        "title": "Super Agent",
+        "text": "기억을 꺼내 답·작업"
+      },
+      {
+        "icon": "🔒",
+        "title": "나만 접근",
+        "text": "연결은 언제든 해제"
+      }
+    ],
+    "diagram": {
+      "title": "SecondBrain 작동 흐름",
+      "nodes": [
+        {
+          "icon": "📂",
+          "label": "파일 업로드"
+        },
+        {
+          "icon": "🔗",
+          "label": "앱 Connect"
+        },
+        {
+          "icon": "🧠",
+          "label": "기억 창고 저장"
+        },
+        {
+          "icon": "🤖",
+          "label": "에이전트 활용"
+        },
+        {
+          "icon": "📝",
+          "label": "브리핑·요약 완성"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "매번 처음부터 설명",
+        "text": "새 대화마다 내 업무·고객·지난 회의 내용을 다시 붙여 넣고 설명"
+      },
+      "after": {
+        "label": "기억에서 바로 꺼냄",
+        "text": "'다음 회의 브리핑 만들어 줘' 한 줄로 지난 메일·메모 근거 브리핑 완성"
+      }
+    },
+    "cautions": [
+      "고객·학생 개인정보 파일 올리지 말 것",
+      "연결 앱은 꼭 필요한 것만 Connect",
+      "AI 브리핑 내용은 원본과 대조 확인"
+    ]
+  },
+  "tool": "Genspark",
+  "feature": "SecondBrain(세컨드브레인) — 메일·회의·파일·연결 앱 맥락을 모으는 개인 기억 창고, SecondBrain 홈(genspark.ai/second-brain/home)에서 Connect(Gmail·Google Calendar·Outlook·Slack·Notion·HubSpot·Salesforce·Google Workspace·Microsoft 365 등)·파일 업로드(.md·.csv·.html·.pdf·.zip, 500MB), Genspark 작업·AI Meeting Notes 자동 저장, Super Agent가 자동 활용(주간 업무 요약·회의 브리핑·후속 메일 초안·전체 검색), SecondBrain Note 녹음기 연동(선택)",
+  "company": "Genspark (MainFunc)",
+  "type": "update",
+  "released": "2026-07-20",
+  "categories": [
+    "CAT-08",
+    "CAT-06",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-BIZ",
+    "JOB-EDU",
+    "JOB-MKT"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Genspark 계정 — 웹 브라우저(Chrome 권장)로 genspark.ai 접속",
+    "요금: Plus·Pro는 SecondBrain 표준(Standard) 작업에 Free Quota 적용, Free 계정은 Free Quota 없음 → 크레딧 차감 [확인 필요: Free 계정 SecondBrain 사용 범위], 강사는 Plus 계정 권장",
+    "실습용 가짜 업무 파일 2~3개(.md 또는 .pdf): 예) 이번 달 업무 메모, 가상 고객 회의록, 수업 운영 계획 — 실제 개인정보 없는 연습용으로 준비",
+    "선택: 연습용 Google 계정(Gmail·Google Calendar) — 실제 업무 계정 연결은 수업에서 하지 않기 권장",
+    "Word·한글 파일은 .zip으로 묶어서 올려야 함(도움말 기준)"
+  ],
+  "outcome": "① 연습용 업무 파일 2~3개가 담긴 내 SecondBrain + ② 기억을 근거로 만든 '다음 회의 준비 브리핑' 1개 + ③ '이번 주 업무 요약(Weekly update)' 1개 + ④ 연결·자료 정리 체크리스트(무엇을 넣고 무엇을 뺄지) 1장",
+  "objectives": [
+    "SecondBrain이 일반 AI 대화·파일 첨부와 무엇이 다른지(한 번 넣은 맥락을 Super Agent가 계속 꺼내 씀) 설명할 수 있음",
+    "SecondBrain 홈에서 파일을 올리거나 앱을 Connect하고, Super Agent에게 회의 브리핑·주간 요약을 요청할 수 있음",
+    "넣어도 되는 자료와 넣으면 안 되는 자료를 구분하고, 연결 해제·크레딧·정확성 확인 습관을 지킬 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "SecondBrain 전용 요금제 없음 — Genspark 요금제 안에서 사용. Plus·Pro는 SecondBrain 표준 작업에 Free Quota(주간 무료 한도, 크레딧 미차감) 적용, Free 계정은 Free Quota 없음. AI Meeting Notes(회의 녹음·요약, 하루 최대 24시간)는 Plus·Pro 포함. 녹음기 SecondBrain Note는 별도 판매 $199(출시 할인 $179). Genspark 요금: Free $0·Plus 월 $24.99·Pro 월 $249.99·Team 좌석당 월 $40",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "하루 100크레딧(평생 한도 소진 시 중단) + Free Quota 없음 — SecondBrain 체험 범위 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $24.99 (연 결제 시 월 $19.99)",
+        "features": "월 10,000크레딧부터 + SecondBrain 표준 작업 Free Quota 적용 + AI Meeting Notes 포함 — 개인 업무 기억 창고로 적합"
+      },
+      {
+        "name": "Pro",
+        "price": "월 $249.99 (연 결제 시 월 $199.99)",
+        "features": "월 125,000크레딧부터 + SecondBrain Free Quota + AI Meeting Notes — 연결 앱·자료가 많은 사용자"
+      },
+      {
+        "name": "Team",
+        "price": "좌석당 월 $40 (연 결제 시 $35)",
+        "features": "좌석당 월 10,000크레딧 + 커넥터 관리(Connector management) + 관리자·결제 통합"
+      },
+      {
+        "name": "Enterprise",
+        "price": "별도 문의",
+        "features": "좌석당 20,000크레딧부터 + 커넥터 관리 + 조직 지원"
+      }
+    ],
+    "note": "요금은 Genspark 도움말 'Membership Plans' 미국 달러 기준(2026-10-17 확인), 원화·부가세 미확인. 도움말 안내: Ultra 모드는 Standard보다 크레딧이 훨씬 많이 들고, 대화가 길수록 비용 증가 → 주제가 바뀌면 새 대화 시작. SecondBrain Note 가격은 2026-07-21 보도자료 기준",
+    "checked": "2026-10-17",
+    "sources": [
+      {
+        "title": "Genspark Help Center – SecondBrain",
+        "url": "https://www.genspark.ai/helpcenter/secondbrain"
+      },
+      {
+        "title": "Genspark Help Center – Membership Plans",
+        "url": "https://www.genspark.ai/helpcenter/membership-plans"
+      },
+      {
+        "title": "Genspark Help Center – Credits Guide",
+        "url": "https://www.genspark.ai/helpcenter/credits-guide"
+      },
+      {
+        "title": "Business Wire – Genspark Unveils AI Workspace 6.0 (2026-07-21, 회사 보도자료)",
+        "url": "https://www.businesswire.com/news/home/20260721503339/en/Genspark-Unveils-AI-Workspace-6.0-Betting-AIs-Next-Breakthrough-Isnt-Models-Its-Context"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-07-20",
+      "text": "Genspark AI Workspace 6.0 발표 — AI 기억 계층 SecondBrain + 카드 두께 녹음기 SecondBrain Note 공개(GenMail·GenTeam·Design·AgentBase와 함께)"
+    },
+    {
+      "date": "2026-07-21",
+      "text": "Business Wire 보도자료 — SecondBrain Note $199(출시가 $179) shop.genspark.ai 판매 시작"
+    },
+    {
+      "date": "2026-10-17",
+      "text": "도움말 'SecondBrain' 기준 현황 — 연결 도구 Gmail·Google Calendar·Outlook·Slack·Notion·HubSpot·Salesforce 등, 업로드 .md·.csv·.html·.pdf·.zip(500MB, Notion 내보내기 1GB) [확인일 기준, 개별 기능 추가일 미공개]"
+    }
+  ],
+  "theory": {
+    "definition": "SecondBrain(세컨드브레인)은 Genspark의 개인 지식·기억 시스템임. 메일·회의 메모·파일·연결 앱에서 배운 내 업무 맥락을 한곳에 모아 두고, Super Agent가 질문·작업 때 이 맥락을 자동으로 꺼내 써서 더 개인화된 답과 결과물을 만듦. 사용자와 에이전트가 함께 읽고 갱신하는 '업무 기억 창고'",
+    "analogy": "오래 같이 일한 '눈치 빠른 비서의 업무 수첩'. 지난 회의 내용·거래처 메일·내 메모를 수첩에 다 적어 두었기 때문에 '내일 OO 미팅 준비해 줘' 한마디면 수첩을 뒤져 준비물을 챙겨 옴. 단, 수첩에 적어 준 것만 알고, 잘못 적힌 내용은 그대로 옮길 수 있음",
+    "comparison": {
+      "headers": [
+        "구분",
+        "일반 AI 대화",
+        "대화에 파일 첨부",
+        "Genspark SecondBrain"
+      ],
+      "rows": [
+        [
+          "맥락 유지",
+          "대화가 끝나면 다시 설명",
+          "그 대화에서만 사용",
+          "한 번 넣으면 계속 사용"
+        ],
+        [
+          "자료 범위",
+          "내가 입력한 글",
+          "첨부한 파일 몇 개",
+          "파일 + 메일·캘린더·Slack·Notion 등 연결 앱"
+        ],
+        [
+          "갱신",
+          "수동",
+          "매번 다시 첨부",
+          "연결 앱은 백그라운드 동기화"
+        ],
+        [
+          "활용 주체",
+          "그 대화",
+          "그 대화",
+          "Super Agent가 자동 활용"
+        ],
+        [
+          "정리·해제",
+          "해당 없음",
+          "대화 삭제",
+          "SecondBrain 홈에서 연결 해제"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "자료가 들어오는 3가지 길",
+        "body": "① Genspark 작업: 지난 Genspark 활동·AI Meeting Notes 자동 저장 ② 연결 도구: SecondBrain 홈에서 도구 옆 Connect → 권한 승인 → 백그라운드 동기화(일부는 일정 주기라 몇 분 걸림) ③ 파일 업로드: .md·.csv·.html·.pdf·.zip(Word·한글 등 오피스 파일과 Notion 내보내기는 .zip), 한 번에 500MB(Notion 1GB)"
+      },
+      {
+        "title": "Super Agent와 4가지 대표 활용(Popular Plays)",
+        "body": "① 주간 업무 요약(Weekly update) ② 회의 브리핑(Meeting brief) ③ 회의 메모로 후속 메일 초안(Follow-up drafts) ④ 연결한 모든 자료 통합 검색 — 자료를 연결하면 Super Agent가 SecondBrain을 근거로 답함"
+      },
+      {
+        "title": "개인정보·저장 위치",
+        "body": "도움말 기준 SecondBrain 데이터는 본인만 접근, 연결은 명시적 승인 필요·SecondBrain 홈에서 언제든 해제, SOC 2 Type II·ISO 27001 인증 표기. SecondBrain 데이터는 AI Drive와 따로 저장 → 업로드한 파일이 AI Drive에 보이지 않음"
+      }
+    ],
+    "can": [
+      "SecondBrain 홈(genspark.ai/second-brain/home)에서 연결 도구 Connect·해제",
+      "Gmail·Google Calendar·Outlook·Slack·Notion·HubSpot·Salesforce·Google Workspace·Microsoft 365 등 연결",
+      ".md·.csv·.html·.pdf·.zip 파일 업로드(Word·한글 등은 .zip으로 묶기)",
+      "Genspark 작업·AI Meeting Notes 회의 요약 자동 저장",
+      "Super Agent로 주간 업무 요약·회의 브리핑·후속 메일 초안·전체 검색",
+      "선택: SecondBrain Note 녹음기로 대면 회의를 녹음 → 앱 AI Notes에서 녹취·요약 → SecondBrain 반영"
+    ],
+    "cannot": [
+      "기억 항목을 하나씩 보고 고치거나 지우는 방법 — 도움말에 안내 없음 [확인 필요]",
+      "SecondBrain에 올린 파일을 AI Drive에서 열기(따로 저장)",
+      "Word(.docx)·한글(.hwp) 파일 그대로 올리기(.zip으로 묶어야 함)",
+      "연결 직후 바로 모든 자료 반영 보장(일부는 일정 주기 동기화, 몇 분 대기)",
+      "넣지 않은 정보·틀린 원본을 스스로 바로잡기"
+    ],
+    "safety": [
+      "실제 고객·학생·환자 실명·연락처·주민번호가 든 파일은 올리지 말 것 — 연습은 가짜 자료로",
+      "회사 메일·업무 메신저 연결은 회사 보안 정책·관리자 허락 먼저 확인",
+      "연결 앱은 꼭 필요한 것만, 수업 후 연습용 연결은 SecondBrain 홈에서 해제",
+      "SecondBrain Note로 대면 대화를 녹음할 때는 상대방에게 미리 알리고 동의 받기",
+      "AI 브리핑·요약의 날짜·금액·약속 내용은 원본 메일·메모와 대조 후 사용",
+      "장기 기억은 오래된 정보도 남음 — 바뀐 사실(담당자·일정)은 새 메모로 갱신"
+    ]
+  },
+  "practice": {
+    "preview": "연습용 업무 파일 업로드 → (선택) 연습용 캘린더 Connect → Super Agent로 '다음 회의 브리핑' 만들기 → '이번 주 업무 요약' 만들기 → 근거 대조·연결 정리. ① 내 SecondBrain + ② 회의 브리핑 + ③ 주간 요약 + ④ 정리 체크리스트 완성",
+    "follow": [
+      {
+        "title": "SecondBrain 홈 열기",
+        "minutes": 5,
+        "do": "genspark.ai 로그인 → genspark.ai/second-brain/home 접속(또는 Genspark 홈에서 SecondBrain 메뉴) [확인 필요: 메뉴 위치] → 연결 도구 목록·업로드 영역 훑어보기",
+        "prompt": "",
+        "expect": "Connect 버튼이 있는 연결 도구 목록 + 파일 업로드 영역이 보이는 SecondBrain 홈",
+        "note": "화면 이름은 도움말 기준, 강사 사전 캡처로 안내"
+      },
+      {
+        "title": "연습용 파일 올리기",
+        "minutes": 10,
+        "do": "준비한 연습용 파일 2~3개(.md·.pdf) 업로드 → Word·한글 파일은 .zip으로 묶어 올리기 → 몇 분 기다린 뒤 반영 확인",
+        "prompt": "",
+        "expect": "업로드한 파일이 SecondBrain 자료로 표시 [미검증 — 표시 방식 미확인]",
+        "note": "한 번에 500MB 한도. 실제 개인정보가 든 파일 금지"
+      },
+      {
+        "title": "기억이 들어갔는지 확인",
+        "minutes": 7,
+        "do": "Super Agent 새 대화 열기 → 아래 질문 입력 → 올린 파일 내용이 답에 나오는지 확인",
+        "prompt": "내 SecondBrain에 있는 자료만 보고, 이번 달 내가 맡은 일과 마감일을 표로 정리해 줘. 각 줄마다 어느 자료에서 찾았는지도 적어 줘.",
+        "expect": "업로드한 메모 기준 업무·마감일 표 + 근거 자료 이름",
+        "note": "답에 없는 내용이 섞이면 '자료에 없는 내용은 빼 줘'로 다시 요청"
+      },
+      {
+        "title": "회의 브리핑 만들기",
+        "minutes": 8,
+        "do": "같은 대화 또는 새 대화에서 회의 브리핑(Meeting brief) 요청 → 결과를 원본 회의록과 대조",
+        "prompt": "다음 주 화요일 'OO문화센터 담당자'와 두 번째 회의가 있어. SecondBrain에 있는 지난 회의록과 메모를 바탕으로 ① 지난 회의 요약 ② 아직 안 끝난 약속 ③ 이번에 물어볼 질문 3개 ④ 챙길 자료를 한 장짜리 회의 브리핑으로 만들어 줘.",
+        "expect": "①②③④ 4칸 회의 브리핑 1장",
+        "note": "날짜·숫자·약속은 원본과 반드시 대조"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "주간 업무 요약",
+        "minutes": 8,
+        "do": "내 업무에 맞게 '이번 주 메모' 파일 1개를 더 올리기 → 주간 업무 요약(Weekly update) 요청",
+        "prompt": "SecondBrain 자료를 바탕으로 이번 주 업무 요약을 만들어 줘. 형식: ① 이번 주 한 일 3가지 ② 진행 중인 일과 다음 단계 ③ 도움이 필요한 일 ④ 다음 주 우선순위 3가지. 팀장에게 보내는 메시지처럼 짧게.",
+        "expect": "4칸 주간 업무 요약 1개(메신저에 붙여 넣을 길이)",
+        "note": "회사 보고에 쓰기 전 사실 확인 필수"
+      },
+      {
+        "title": "(선택) 연습 캘린더 연결",
+        "minutes": 7,
+        "do": "연습용 Google 계정이 있으면 SecondBrain 홈에서 Google Calendar 옆 Connect → 권한 승인 → 몇 분 뒤 '이번 주 일정 기준 준비할 일' 질문",
+        "prompt": "내 캘린더와 SecondBrain 메모를 같이 보고, 이번 주 일정마다 미리 준비할 일을 한 줄씩 정리해 줘.",
+        "expect": "일정별 준비 사항 목록",
+        "note": "실제 업무 계정 연결 금지. 동기화가 늦으면 몇 분 대기 → 안 되면 해제 후 다시 Connect(도움말)"
+      },
+      {
+        "title": "넣을 것·뺄 것 체크리스트",
+        "minutes": 5,
+        "do": "짝과 함께 '내 SecondBrain에 넣을 자료 / 절대 넣지 않을 자료 / 연결할 앱 / 연결하지 않을 앱'을 2개씩 적기 → 연습 연결이 있으면 SecondBrain 홈에서 해제",
+        "prompt": "",
+        "expect": "4칸 정리 체크리스트 1장 + 연습 연결 해제 완료",
+        "note": "고객·학생 개인정보, 회사 기밀, 비밀번호 메모는 '넣지 않을 자료'"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 회의 브리핑을 SecondBrain 없이 새 대화에서 파일 첨부만으로 만들어 보고, 두 결과의 차이(정확도·설명해야 했던 양)를 1줄로 정리"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "회의록 파일을 바탕으로 Super Agent에게 '후속 메일 초안(Follow-up drafts)'을 요청하고, 보내기 전에 고칠 곳 3군데를 표시"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Claude 메모리·Gemini 메모리 가져오기 등 다른 AI의 기억 기능과 SecondBrain을 '자료 범위·연결 앱·삭제 방법·요금' 4가지로 비교표 작성"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 회의 브리핑을 보여 주고 'AI가 정확히 찾은 것 1개 / 틀리거나 빠진 것 1개 / 내 SecondBrain에 넣지 않을 자료 1개' 발표",
+    "quiz": [
+      {
+        "q": "SecondBrain이 일반 AI 대화와 가장 크게 다른 점은?",
+        "options": [
+          "그림을 더 잘 그린다",
+          "한 번 넣은 업무 맥락을 Super Agent가 계속 꺼내 쓴다",
+          "인터넷 검색을 하지 않는다",
+          "무료로 무제한 쓸 수 있다"
+        ],
+        "answer": 1,
+        "explain": "SecondBrain은 메일·회의·파일·연결 앱 맥락을 모아 두는 기억 창고, Super Agent가 매번 자동 활용"
+      },
+      {
+        "q": "Word(.docx) 파일을 SecondBrain에 올리는 방법은?",
+        "options": [
+          ".docx 그대로 올린다",
+          ".zip으로 묶어서 올린다",
+          "AI Drive에 올리면 자동 반영된다",
+          "올릴 수 없다"
+        ],
+        "answer": 1,
+        "explain": "도움말 기준 오피스·ODF·RTF·EPUB 파일은 .zip 안에 넣어 업로드, AI Drive와는 따로 저장"
+      },
+      {
+        "q": "수업 실습에서 SecondBrain을 안전하게 쓰는 방법으로 알맞지 않은 것은?",
+        "options": [
+          "연습용 가짜 파일을 쓴다",
+          "실습 후 연습 연결을 해제한다",
+          "실제 고객 연락처 파일을 올려 정확도를 시험한다",
+          "AI 브리핑을 원본과 대조한다"
+        ],
+        "answer": 2,
+        "explain": "실제 고객·학생 개인정보는 올리지 않는 것이 원칙, 연습은 가짜 자료로"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "자료 구성",
+        "high": "연습용 자료 2개 이상 업로드 + 개인정보 없음",
+        "mid": "자료 1개만 업로드",
+        "low": "실제 개인정보 자료 업로드"
+      },
+      {
+        "criterion": "활용 능력",
+        "high": "회의 브리핑·주간 요약 모두 완성 + 근거 자료 확인",
+        "mid": "하나만 완성",
+        "low": "SecondBrain 근거 없이 일반 답만 받음"
+      },
+      {
+        "criterion": "안전·정확성",
+        "high": "원본 대조 + 넣을 것·뺄 것 체크리스트 + 연결 해제",
+        "mid": "대조는 했지만 연결 정리 안 함",
+        "low": "AI 결과 그대로 사용"
+      }
+    ],
+    "next": [
+      "Genspark GenMail로 메일함 자동 분류·내 말투 답장 초안 만들기 (AI-2026-10-CAT03-019)",
+      "Genspark AgentBase로 업무 관리 표·대시보드 만들기 (AI-2026-10-CAT07-009)",
+      "Claude 메모리(Memory) 주제별 편집과 비교하기 (AI-2026-10-CAT01-001)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: '새 대화마다 내 소개 다시 한 적 있나요?' 질문 + 비서 업무 수첩 비유",
+        "note": "강사가 미리 만든 회의 브리핑 결과 보여 주기"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 정의·자료 들어오는 3가지 길·비교표·Popular Plays·저장 위치·요금(Free Quota)·안전",
+        "note": "'넣은 것만 안다' 강조"
+      },
+      {
+        "time": "35~65분",
+        "content": "따라 하기 1~4: 홈 열기 → 파일 올리기 → 기억 확인 → 회의 브리핑",
+        "note": "동기화 대기 시간에 비교표 복습"
+      },
+      {
+        "time": "65~85분",
+        "content": "내 것 만들기: 주간 요약 → (선택) 캘린더 연결 → 넣을 것·뺄 것 체크리스트",
+        "note": "실제 업무 계정 연결 금지"
+      },
+      {
+        "time": "85~90분",
+        "content": "짝 공유·퀴즈·연습 연결 해제 확인",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI랑 대화할 때마다 '저는 문화센터 강사고요, 지난번에 이런 회의를 했는데요' 하고 다시 설명하신 적 있으시죠? 오늘은 한 번 알려 주면 계속 기억하는 업무 수첩, Genspark SecondBrain을 만들어 보겠습니다."
+      },
+      {
+        "label": "핵심 원리",
+        "text": "SecondBrain은 마법이 아니라 수첩입니다. 우리가 넣어 준 파일과 연결한 앱 내용만 알고, 그걸 Super Agent가 꺼내서 쓰는 구조예요."
+      },
+      {
+        "label": "자료 고르기",
+        "text": "오늘은 연습용 가짜 자료만 씁니다. 실제 고객 연락처, 학생 이름, 회사 기밀은 절대 올리지 마세요. 집에서 쓰실 때도 넣을 것과 뺄 것을 먼저 정하세요."
+      },
+      {
+        "label": "확인 습관",
+        "text": "AI가 만든 브리핑은 그럴듯해 보여도 날짜와 약속이 틀릴 수 있습니다. 원본 회의록과 한 줄씩 비교하는 것까지가 오늘 실습입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "수업에서 연결한 연습 계정은 SecondBrain 홈에서 꼭 연결을 해제하고 나가세요. 기억 창고는 넣는 것보다 정리하는 게 더 중요합니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "무료 계정에서 SecondBrain 사용이 막히거나 크레딧 부족",
+        "response": "강사 Plus 계정 화면 시연 + 수강생은 프롬프트·체크리스트 작성에 집중, 결과는 강사가 공유"
+      },
+      {
+        "situation": "SecondBrain 메뉴를 찾지 못함",
+        "response": "주소창에 genspark.ai/second-brain/home 직접 입력, 화면은 강사 사전 캡처로 안내"
+      },
+      {
+        "situation": "업로드한 파일이 답에 반영되지 않음",
+        "response": "몇 분 대기 후 다시 질문 + '내 SecondBrain 자료만 보고' 문구 넣기, 그래도 안 되면 대화에 파일 직접 첨부로 대체"
+      },
+      {
+        "situation": "Word·한글 파일 업로드 실패",
+        "response": ".zip으로 묶어 다시 업로드 또는 .pdf로 저장해 업로드"
+      },
+      {
+        "situation": "Google 계정 연결 권한 화면에서 막힘",
+        "response": "선택 단계이므로 건너뛰고 파일 업로드 자료로만 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "연결 후 데이터가 안 보임",
+        "fix": "일부 자료는 일정 주기로 동기화 → 몇 분 대기, 계속 안 되면 SecondBrain 홈에서 연결 해제 후 다시 Connect(도움말)"
+      },
+      {
+        "issue": "AI Drive에서 올린 파일이 안 보임",
+        "fix": "SecondBrain 데이터는 AI Drive와 따로 저장되는 것이 정상"
+      },
+      {
+        "issue": "답에 자료에 없는 내용이 섞임",
+        "fix": "'SecondBrain 자료에 있는 내용만, 근거 자료 이름과 함께' 조건 추가"
+      },
+      {
+        "issue": "크레딧이 빨리 줄어듦",
+        "fix": "Standard 모드 사용 + 주제가 바뀌면 새 대화 시작(긴 대화일수록 비용 증가, 도움말)"
+      },
+      {
+        "issue": "SecondBrain Note 녹음이 앱에 안 올라옴",
+        "fix": "휴대폰 잠금 해제·블루투스 켜기·Genspark 앱 열기 → 앱 AI Notes에서 확인, Fast Transfer(Wi-Fi) 버튼 사용"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로 쓸 수 있나요?",
+        "a": "요금제 안의 기능. Plus·Pro는 SecondBrain 표준 작업에 Free Quota 적용, Free 계정은 Free Quota 없음 — 무료 계정 사용 범위는 [확인 필요]"
+      },
+      {
+        "q": "제 데이터를 다른 사람이 볼 수 있나요?",
+        "a": "도움말 기준 SecondBrain 데이터는 본인만 접근, 연결은 명시적 승인 필요·언제든 해제 가능, SOC 2 Type II·ISO 27001 인증 표기"
+      },
+      {
+        "q": "기억된 내용을 하나씩 지울 수 있나요?",
+        "a": "도움말에 개별 기억 편집·삭제 방법 안내 없음 [확인 필요]. 연결은 SecondBrain 홈에서 해제 가능"
+      },
+      {
+        "q": "녹음기(SecondBrain Note)가 꼭 필요한가요?",
+        "a": "선택 사항. 녹음기 없이도 SecondBrain 사용 가능, 대면 회의 기록용 보조 장치($199, 출시가 $179)"
+      },
+      {
+        "q": "카카오톡·네이버 메일도 연결되나요?",
+        "a": "SecondBrain 도움말 목록에는 없음(Gmail·Outlook·Slack·Notion 등). 필요한 내용은 파일로 내보내 업로드 [확인 필요]"
+      },
+      {
+        "q": "Claude·ChatGPT 메모리와 무엇이 다른가요?",
+        "a": "대화 기억뿐 아니라 메일·캘린더·업무 앱·파일까지 한곳에 모아 Super Agent가 쓰는 구조 — 자세한 비교는 도전과제 ⭐⭐⭐"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급반",
+        "guide": "따라 하기 1~4만 진행 — 강사가 나눠 준 연습 파일 그대로 업로드, 회의 브리핑 1개 완성"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐⭐ 후속 메일 초안까지"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ 다른 AI 기억 기능 비교표 + 팀 도입 시 연결 정책(넣을 것·뺄 것) 초안"
+      },
+      {
+        "level": "시니어 (JOB-SEN)",
+        "guide": "동호회·봉사 모임 메모 1개로 '다음 모임 준비물' 브리핑 만들기, 계정 연결은 생략"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수업 운영 메모·학부모 상담 일정(가명)으로 주간 요약 만들기 — 학생 실명 자료 금지"
+      },
+      {
+        "level": "외국인·다문화 (JOB-GLB)",
+        "guide": "한국어 쉬운 문장 메모로 진행, 결과 요약을 모국어로 다시 요청해 비교"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: SecondBrain은 넣은 것만 아는 수첩, 확인은 사람",
+      "'자료만 보고 + 근거 자료 이름' 조건이 정확도를 높임",
+      "Free 계정은 Free Quota 없음 — 수업 전 크레딧 사용량 리허설 필수",
+      "업무 계정 연결은 회사 정책 확인 후, 수업은 연습 자료로",
+      "수업 끝에 연습 연결 해제까지 확인"
+    ],
+    "day_before": [
+      "강사 계정으로 따라 하기 전 과정 리허설 → 업로드 반영까지 걸린 시간·사용 크레딧 기록",
+      "무료 계정으로 SecondBrain 홈 접속·파일 업로드·질문이 되는지 확인 → 안 되면 강사 시연 중심 전환",
+      "연습용 가짜 파일 3종(업무 메모·회의록·수업 계획) .md·.pdf로 준비해 배포",
+      "SecondBrain 홈·Connect 버튼·업로드 영역·Super Agent 대화 화면 캡처 준비",
+      "메뉴·버튼 이름(SecondBrain, Connect, AI Notes, Fast Transfer) 최신 화면 확인 [확인 필요]"
+    ]
+  },
+  "verification": [
+    "[미검증] 업로드 후 반영 시간·화면 표시 방식, 브리핑·요약 결과는 실제 계정으로 재현하지 못함",
+    "[확인 필요] Free 계정의 SecondBrain 사용 범위 — 요금 도움말은 Plus·Pro Free Quota 적용만 명시",
+    "[확인 필요] 개별 기억 항목 보기·편집·삭제 방법 — 도움말에 안내 없음",
+    "[확인 필요] SecondBrain 메뉴 위치 — 도움말은 전용 주소(genspark.ai/second-brain/home) 또는 Genspark 홈 경유로만 안내",
+    "[확인 필요] 한국 서비스(네이버·카카오 등) 직접 연결 여부 — 도움말 연결 목록에 없음"
+  ],
+  "sources": [
+    {
+      "title": "Genspark Help Center – SecondBrain",
+      "url": "https://www.genspark.ai/helpcenter/secondbrain",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Genspark Blog – Introducing Genspark AI Workspace 6.0 (2026-07-20)",
+      "url": "https://www.genspark.ai/blog/genspark-ai-workspace-6",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Business Wire – Genspark Unveils AI Workspace 6.0 (2026-07-21, 회사 보도자료)",
+      "url": "https://www.businesswire.com/news/home/20260721503339/en/Genspark-Unveils-AI-Workspace-6.0-Betting-AIs-Next-Breakthrough-Isnt-Models-Its-Context",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Genspark Help Center – Membership Plans",
+      "url": "https://www.genspark.ai/helpcenter/membership-plans",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Genspark Help Center – Credits Guide",
+      "url": "https://www.genspark.ai/helpcenter/credits-guide",
+      "checked": "2026-10-17"
+    }
+  ]
+}

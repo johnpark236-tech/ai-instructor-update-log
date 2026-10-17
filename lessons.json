@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 111,
+  "count": 112,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-015",
+      "version": "v1.0",
+      "created_at": "2026-10-18 06:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "한 번 알려 주면 계속 기억하는 AI 비서 — Genspark SecondBrain(세컨드브레인)으로 '내 업무 기억 창고 + 회의 준비 브리핑 + 주간 업무 요약' 만들기",
+      "summary": "2026-07-20 Genspark AI Workspace 6.0에서 공개된 SecondBrain. 메일·회의 메모·파일·연결 앱 내용을 한곳에 모아 두는 개인 기억 창고(메모리 계층)로, Super Agent가 이 맥락을 자동으로 꺼내 써서 매번 '나는 누구, 무슨 일 중' 설명이 필요 없음. 파일 업로드(.md·.csv·.html·.pdf·.zip) + Gmail·Google Calendar·Outlook·Slack·Notion 등 Connect 연결 + Genspark 작업·AI Meeting Notes 자동 저장. Plus·Pro는 SecondBrain 표준 작업에 Free Quota 적용",
+      "tool": "Genspark",
+      "feature": "SecondBrain(세컨드브레인) — 메일·회의·파일·연결 앱 맥락을 모으는 개인 기억 창고, SecondBrain 홈(genspark.ai/second-brain/home)에서 Connect(Gmail·Google Calendar·Outlook·Slack·Notion·HubSpot·Salesforce·Google Workspace·Microsoft 365 등)·파일 업로드(.md·.csv·.html·.pdf·.zip, 500MB), Genspark 작업·AI Meeting Notes 자동 저장, Super Agent가 자동 활용(주간 업무 요약·회의 브리핑·후속 메일 초안·전체 검색), SecondBrain Note 녹음기 연동(선택)",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2026-07-20",
+      "categories": [
+        "CAT-08",
+        "CAT-06",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-EDU",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 연습용 업무 파일 2~3개가 담긴 내 SecondBrain + ② 기억을 근거로 만든 '다음 회의 준비 브리핑' 1개 + ③ '이번 주 업무 요약(Weekly update)' 1개 + ④ 연결·자료 정리 체크리스트(무엇을 넣고 무엇을 뺄지) 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧠",
+      "one_liner": "내 업무 맥락을 기억하는 AI 비서"
+    },
     {
       "id": "AI-2026-10-CAT05-018",
       "version": "v1.0",
