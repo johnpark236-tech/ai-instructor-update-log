@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 18:00 KST",
+  "updated_at": "2026-10-17 19:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2656,6 +2656,36 @@
       },
       "checked": "2026-10-17",
       "lesson_id": "AI-2026-10-CAT08-013"
+    },
+    {
+      "id": "grok-2026-10-07-bot-slide-decks",
+      "date": "2026-10-07",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Bot 슬라이드 덱 — 샘플 고르기·PowerPoint·Google Slides",
+      "summary": "Bot과 함께 발표 자료 제작, 샘플 슬라이드에서 디자인 선택, PowerPoint 파일·Google Slides로 전달 + 서식 있는 메일 초안(v0.68.1)",
+      "source": {
+        "title": "xAI – Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT03-018"
+    },
+    {
+      "id": "grok-2026-10-11-bot-email-address",
+      "date": "2026-10-11",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Bot 전용 이메일 주소·승인 후 발송",
+      "summary": "Bot이 자기 메일 주소로 메일 수신, 보내는 메일은 초안 카드 승인 후 발송, 되돌릴 수 없는 행동 전 승인, X 검색, 앱 대화 카드(v0.70.2)",
+      "source": {
+        "title": "xAI – Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT03-018"
     }
   ]
 }
