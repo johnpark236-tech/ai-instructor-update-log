@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 104,
+  "count": 105,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-019",
+      "version": "v1.0",
+      "created_at": "2026-10-17 23:05 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "아침 메일 정리를 10분 안에 — Genspark GenMail(젠메일)로 '모닝 브리프 + 내 말투 답장 초안 + 예약 발송' 만들기",
+      "summary": "2026-07-20 Genspark AI Workspace 6.0과 함께 공개된 AI 메일·캘린더 앱 GenMail. Gmail·Outlook·NAVER·Daum·Kakao 메일 등 최대 20개 계정을 한곳에 연결, GenMail Agent가 받은 메일을 'Needs You·Upcoming Today·Worth a look·FYI·Other'로 분류, AI Write가 내 말투로 답장 초안 작성, Morning Brief 등 스킬(Skills)로 하루 요약. Mac·Windows·iOS·Android, 별도 요금제 없이 Genspark 계정 크레딧 사용(공식 소개 페이지는 '베타 기간 무료' 표기)",
+      "tool": "Genspark",
+      "feature": "GenMail(젠메일) — AI 메일·캘린더 앱: Gmail·Outlook·IMAP(NAVER·Daum·Kakao 메일 등) 최대 20개 계정 연결, GenMail Agent 받은편지함 자동 분류·요약, AI Write 내 말투 답장 초안(Simplify·Professional·Friendly), 스킬(Morning Brief·Catch Me Up·Plan My Week 등), Email Brain 프로필 Fix, 예약 발송·발송 취소, 통합 캘린더",
+      "company": "Genspark (MainFunc)",
+      "type": "new",
+      "released": "2026-07-20",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-EDU",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 받은편지함 Morning Brief 요약 1개 + ② AI Write로 만든 내 말투 답장 초안 1통(톤 바꾸기 포함) + ③ Email Brain 항목 1개 수정(Fix) + ④ 예약 발송(Schedule Send)으로 걸어 둔 메일 1통",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📬",
+      "one_liner": "메일 분류·요약·내 말투 답장까지"
+    },
     {
       "id": "AI-2026-10-CAT07-010",
       "version": "v1.0",

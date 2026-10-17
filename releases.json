@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 22:10 KST",
+  "updated_at": "2026-10-17 23:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2026-07-20-genmail",
+      "date": "2026-07-20",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "new",
+      "title": "GenMail — AI 메일·캘린더 앱(AI Workspace 6.0)",
+      "summary": "AI Workspace 6.0 Office Suite 신규 앱, Gmail·Outlook·IMAP(NAVER·Daum·Kakao 메일 등) 최대 20개 계정 통합, 받은편지함 자동 분류·Morning Brief 등 스킬·내 말투 답장 초안(AI Write)·Email Brain·예약 발송, Mac·Windows·iOS·Android",
+      "source": {
+        "title": "Genspark Help Center – GenMail",
+        "url": "https://www.genspark.ai/helpcenter/genmail"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT03-019"
+    },
     {
       "id": "github-copilot-2026-10-01-dynamic-workflows",
       "date": "2026-10-01",
