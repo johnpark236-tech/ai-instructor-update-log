@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 94,
+  "count": 95,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-016",
+      "version": "v1.0",
+      "created_at": "2026-10-17 13:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "같은 마스코트가 장면마다 등장하는 6초 수업 소개 영상 2편 만들기 — Grok Imagine Video 1.5 참조(References)·글로 영상 만들기·1080p",
+      "summary": "2026-07-31 xAI가 Imagine Video 1.5에 참조(References) 기능 추가. 인물·제품·장소 이미지를 역할별로 최대 7장 넣어 장면이 바뀌어도 같은 얼굴·물건·배경 유지, 목소리 샘플(음성 참조)로 같은 목소리 유지 가능. 시작 이미지 없이 글만으로 영상 만들기(Text-to-video)와 기본 1080p도 함께 정식 제공. 2026-10-12부터 Grok은 The X Subscription에 포함 — 영상 생성은 Premium(월 $30) 문구에 명시",
+      "tool": "Grok",
+      "feature": "Grok Imagine — Imagine Video 1.5 참조(References: 이미지 참조 최대 7장·역할 지정 Multi-Reference·음성 참조), 글로 영상 만들기(Text-to-video), 기본 1080p, API grok-imagine-video-1.5",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-07-31",
+      "categories": [
+        "CAT-05",
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-CRE",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 글로만 만든 6초 수업 소개 영상 1편 + ② 마스코트(캐릭터)·교실(장소) 참조로 만든 6초 영상 1편 + ③ 같은 참조에 동작만 바꾼 이어지는 장면 1편",
+      "access": "freemium",
+      "total_minutes": 54,
+      "notice": "",
+      "emoji": "🎬",
+      "one_liner": "같은 캐릭터로 여러 장면 영상 만들기"
+    },
     {
       "id": "AI-2026-10-CAT08-011",
       "version": "v1.0",

@@ -1,0 +1,577 @@
+{
+  "id": "AI-2026-10-CAT05-016",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-17 13:10 KST",
+  "checked": "2026-10-17",
+  "review_by": "2027-01-17",
+  "title": "같은 마스코트가 장면마다 등장하는 6초 수업 소개 영상 2편 만들기 — Grok Imagine Video 1.5 참조(References)·글로 영상 만들기·1080p",
+  "summary": "2026-07-31 xAI가 Imagine Video 1.5에 참조(References) 기능 추가. 인물·제품·장소 이미지를 역할별로 최대 7장 넣어 장면이 바뀌어도 같은 얼굴·물건·배경 유지, 목소리 샘플(음성 참조)로 같은 목소리 유지 가능. 시작 이미지 없이 글만으로 영상 만들기(Text-to-video)와 기본 1080p도 함께 정식 제공. 2026-10-12부터 Grok은 The X Subscription에 포함 — 영상 생성은 Premium(월 $30) 문구에 명시",
+  "glance": {
+    "emoji": "🎬",
+    "one_liner": "같은 캐릭터로 여러 장면 영상 만들기",
+    "cards": [
+      {
+        "icon": "🧩",
+        "title": "참조 최대 7장",
+        "text": "얼굴·제품·장소를 역할별로 고정"
+      },
+      {
+        "icon": "🎙️",
+        "title": "음성 참조",
+        "text": "목소리 샘플로 같은 목소리 유지"
+      },
+      {
+        "icon": "✍️",
+        "title": "글로 영상",
+        "text": "시작 이미지 없이 설명만으로 생성"
+      },
+      {
+        "icon": "🖥️",
+        "title": "기본 1080p",
+        "text": "글·이미지→영상 모두 1080p"
+      }
+    ],
+    "diagram": {
+      "title": "참조로 영상 만드는 흐름",
+      "nodes": [
+        {
+          "icon": "🖼️",
+          "label": "캐릭터 그림"
+        },
+        {
+          "icon": "🏷️",
+          "label": "역할 지정"
+        },
+        {
+          "icon": "💬",
+          "label": "동작 요청"
+        },
+        {
+          "icon": "🎬",
+          "label": "영상 생성"
+        },
+        {
+          "icon": "🔁",
+          "label": "동작만 변경"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "장면마다 다른 얼굴",
+        "text": "영상을 새로 만들 때마다 캐릭터 얼굴·옷이 바뀌어 이어 붙이기 어려움"
+      },
+      "after": {
+        "label": "같은 캐릭터 유지",
+        "text": "캐릭터·장소 참조를 고정하고 동작만 바꿔 연속 장면 확보"
+      }
+    },
+    "cautions": [
+      "실존 인물 얼굴·목소리 무단 사용 금지",
+      "본인 소유 이미지만 참조",
+      "AI 생성 영상 표기"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Imagine — Imagine Video 1.5 참조(References: 이미지 참조 최대 7장·역할 지정 Multi-Reference·음성 참조), 글로 영상 만들기(Text-to-video), 기본 1080p, API grok-imagine-video-1.5",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-07-31",
+  "categories": [
+    "CAT-05",
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-CRE",
+    "JOB-EDU",
+    "JOB-MKT",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 30,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Grok 계정(grok.com 또는 X 계정 로그인) — 영상 생성 문구가 명시된 Premium(월 $30) 이상 권장, Plus·Free 영상 생성 범위 [확인 필요]",
+    "PC 웹 브라우저(grok.com/imagine) 또는 iOS Grok 앱 — Android는 글로 영상·1080p만 공식 명시, 참조 기능 Android 지원 [확인 필요]",
+    "참조용 마스코트·캐릭터 그림 1장(본인이 만들었거나 권리 있는 그림, 실존 인물 사진 X) + 배경 사진 1장(선택)",
+    "강사: 수강생 요금제·영상 생성 가능 여부와 참조 기능 노출 여부 사전 확인"
+  ],
+  "outcome": "① 글로만 만든 6초 수업 소개 영상 1편 + ② 마스코트(캐릭터)·교실(장소) 참조로 만든 6초 영상 1편 + ③ 같은 참조에 동작만 바꾼 이어지는 장면 1편",
+  "objectives": [
+    "Imagine Video 1.5 참조 기능이 무엇이고 글로 영상 만들기와 무엇이 다른지 설명할 수 있음",
+    "참조 이미지에 캐릭터·장소 역할을 지정해 같은 캐릭터가 이어지는 장면 영상을 만들 수 있음",
+    "초상권·음성 도용 위험을 알고 본인 소유 자료만 써서 AI 생성 영상을 표기·검수할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "2026-10-12부터 Grok은 The X Subscription에 포함. Plus 월 $8에 Imagine 포함, 영상 생성('AI images & videos') 문구는 Premium 월 $30에 명시. Super 월 $100·Ultra 월 $200은 Premium 전체 + 더 많은 사용량. 참조 기능은 2026-07-31 미국 SuperGrok Heavy·Plus(구 요금제)부터 시작해 모든 등급으로 확대 예정이라고 발표 — 현재 요금제별 범위 [확인 필요]",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "매일 제한된 Grok 이용, Imagine 'Limited' 표기 — 영상 생성 가능 여부 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok Chat·Voice·Imagine·Build 포함 — 영상·참조 사용 범위 [확인 필요]"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "'AI 이미지·영상 만들기' 명시 + Plus의 4배 사용량 + SuperGrok·Grok Bot 혜택"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "Premium 전체 + Plus의 15배 사용량 + 혼잡 시간 우선 모델 접근"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "Super 전체 + Plus의 50배 사용량 + 새 제품·모델 먼저 이용"
+      }
+    ],
+    "note": "금액은 xAI 가격 페이지·The X Subscription 발표 기준(2026-10-17 확인, 미국 달러·세금 별도). 요금제별 영상 개수·길이 공개 없음 — 공용 사용량 한도에서 차감. API(grok-imagine-video-1.5)는 별도 과금, 초당 가격 [확인 필요]. API 음성 참조는 영업팀 신청 시에만 제공. 원화 가격·국내 결제 [확인 필요]",
+    "checked": "2026-10-17",
+    "sources": [
+      {
+        "title": "xAI – Pricing (The X Subscription)",
+        "url": "https://x.ai/pricing"
+      },
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI News – Imagine Video 1.5 with References",
+        "url": "https://x.ai/news/grok-imagine-video-1-5-references"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-06-17",
+      "text": "Imagine Video 1.5 일반 제공 — 움직임·물리·오디오 개선 (xAI 발표 '지난달 출시' 기준, 날짜는 보조 근거 GIGAZINE [확인 필요])"
+    },
+    {
+      "date": "2026-07-31",
+      "text": "Imagine Video 1.5 with References 공개 — 이미지·음성 참조, 참조 최대 7장, 글로 영상 만들기, 기본 1080p, API grok-imagine-video-1.5"
+    },
+    {
+      "date": "2026-08-07",
+      "text": "Imagine Image 2.0 공개 — Grok Imagine 이미지 기본 Quality Mode"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "The X Subscription 출시 — Plus(월 $8)에 Imagine 포함, Premium(월 $30)에 이미지·영상 생성 명시"
+    }
+  ],
+  "theory": {
+    "definition": "Imagine Video 1.5는 xAI의 영상 생성 모델임. 2026-07-31 업데이트로 참조(References) 입력이 추가되어 캐릭터 이미지·목소리 샘플을 주면 장면이 바뀌어도 같은 얼굴·같은 목소리가 유지됨. 시작 이미지 없이 글만으로 영상 만들기와 기본 1080p도 함께 정식 제공",
+    "analogy": "배우 프로필 사진과 촬영 장소 사진을 감독에게 건네고 '이번 컷은 손 흔드는 장면'처럼 동작만 바꿔 주문하는 것. 배우·세트는 그대로, 연기만 바뀜",
+    "comparison": {
+      "headers": [
+        "구분",
+        "글로 영상(Text-to-video)",
+        "이미지로 영상(Image-to-video)",
+        "참조로 영상(References)"
+      ],
+      "rows": [
+        [
+          "입력",
+          "설명 글만",
+          "시작 이미지 1장 + 글",
+          "역할별 이미지 최대 7장 + 글(+ 음성)"
+        ],
+        [
+          "잘하는 것",
+          "아이디어 빠르게 시각화",
+          "정한 첫 화면에서 움직임",
+          "장면이 바뀌어도 같은 캐릭터·제품·장소"
+        ],
+        [
+          "해상도",
+          "최대 1080p",
+          "최대 1080p",
+          "최대 1080p [확인 필요]"
+        ],
+        [
+          "주의",
+          "매번 캐릭터가 달라짐",
+          "첫 화면 밖 일관성 약함",
+          "참조 기능 순차 확대 — 노출 여부 확인"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "멀티 참조(Multi-Reference)",
+        "body": "① 참조 이미지 1장 = 요소 1개 고정(얼굴·제품·장소) ② 이미지마다 역할(Character·Scene 등) 지정 ③ 캐릭터·장면을 고정한 채 동작만 바꾸기 가능 ④ 한 번에 최대 7장"
+      },
+      {
+        "title": "음성 참조(Voice reference)",
+        "body": "① 목소리 샘플을 이미지와 별도로 입력 ② 장면이 바뀌어도 같은 목소리 유지 ③ 앱은 순차 확대, API는 영업팀 신청 시에만 제공 ④ 남의 목소리 사용 금지"
+      },
+      {
+        "title": "글로 영상·1080p",
+        "body": "① 시작 이미지 없이 설명만으로 생성 — 이미지 생성 + 이미지→영상을 이어 붙인 방식이라고 xAI가 설명 ② 글·이미지→영상 모두 기본 1080p ③ 웹·iOS·Android 정식 제공"
+      }
+    ],
+    "can": [
+      "설명 글만으로 짧은 영상 생성",
+      "캐릭터·제품·장소 이미지를 역할별로 넣어 일관된 장면 생성",
+      "같은 참조에 동작만 바꿔 이어지는 장면 만들기",
+      "목소리 샘플로 장면 간 같은 목소리 유지(순차 제공)",
+      "최대 1080p 영상 생성",
+      "API(grok-imagine-video-1.5)로 참조 이미지 영상 생성"
+    ],
+    "cannot": [
+      "참조 이미지 8장 이상 한 번에 사용",
+      "영상 길이·비율 선택지 확인 — 공식 발표에는 예시(6초·16:9)만 있음 [확인 필요]",
+      "요금제별 영상 개수 확인 — 공용 사용량 한도만 공개",
+      "API에서 음성 참조 바로 사용 — 영업팀 신청 필요",
+      "타인 얼굴·목소리·캐릭터 권리 문제를 대신 해결"
+    ],
+    "safety": [
+      "실존 인물(지인·수강생 포함) 얼굴·목소리를 본인 동의 없이 참조로 넣지 않을 것",
+      "유명 캐릭터·남의 로고·사진 대신 본인이 만든 그림·사진만 참조로 사용",
+      "목소리 참조는 본인 목소리만 — 음성 도용·사칭 영상은 범죄가 될 수 있음",
+      "완성 영상에 'AI 생성 영상' 표기, 기관·플랫폼 규정 확인",
+      "학생·미성년자 얼굴은 참조로 쓰지 않을 것",
+      "상업적 이용 범위는 xAI 이용약관 확인 [확인 필요]"
+    ]
+  },
+  "practice": {
+    "preview": "글로 6초 영상 1편 → 마스코트 그림을 Character, 교실 사진을 Scene으로 지정해 영상 1편 → 같은 참조로 동작만 바꾼 영상 1편 → 세 편 비교",
+    "follow": [
+      {
+        "title": "Grok Imagine 영상 모드 열기",
+        "minutes": 3,
+        "do": "grok.com/imagine 접속 → 로그인 → 영상(Video) 모드 선택 → 참조(Reference) 입력 칸 보이는지 확인",
+        "prompt": "",
+        "expect": "영상 생성 입력 화면 + 참조 추가 버튼",
+        "note": "메뉴 이름·위치 [확인 필요], 참조 버튼이 없으면 요금제·지역 순차 확대 대상일 수 있음"
+      },
+      {
+        "title": "글로만 영상 만들기",
+        "minutes": 7,
+        "do": "이미지 없이 아래 요청을 붙여 넣고 1080p로 생성",
+        "prompt": "A friendly round orange cat mascot wearing a small blue scarf waves hello in a bright classroom with a whiteboard. Warm morning light, soft 3D animation style, gentle camera push-in, 6 seconds.",
+        "expect": "마스코트가 손 흔드는 6초 영상 1편",
+        "note": "한 번 더 생성해 고양이 모습이 달라지는지 확인 → 참조가 필요한 이유 체감"
+      },
+      {
+        "title": "참조 2장으로 영상 만들기",
+        "minutes": 8,
+        "do": "1단계 영상에서 마음에 드는 장면을 캡처하거나 미리 만든 마스코트 그림 업로드 → 역할 Character 지정 → 교실 사진 업로드 → 역할 Scene 지정 → 아래 요청 입력",
+        "prompt": "The character from the reference picks up a marker and writes a big check mark on the whiteboard, then turns to the camera and smiles. Keep the character and the classroom exactly as in the references.",
+        "expect": "참조와 같은 마스코트·교실이 나오는 6초 영상",
+        "note": "역할 지정 방식 [확인 필요] — 화면에 역할 선택이 없으면 요청문에 'image 1 = character, image 2 = classroom' 명시"
+      },
+      {
+        "title": "동작만 바꿔 이어지는 장면",
+        "minutes": 5,
+        "do": "참조 2장은 그대로 두고 요청문의 동작만 바꿔 다시 생성",
+        "prompt": "Same character and same classroom. The character opens a book, points at a page, and nods as if explaining. Keep the character and the classroom exactly as in the references.",
+        "expect": "같은 캐릭터·교실, 다른 동작의 두 번째 장면",
+        "note": "두 영상을 이어 보면 캐릭터 얼굴·스카프 색이 같은지 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 수업 마스코트로 바꾸기",
+        "minutes": 4,
+        "do": "내 강좌·가게 마스코트(본인 제작 그림) + 실제 수업 장소 사진(사람 없는 사진)을 참조로 넣고 수업 첫 장면 동작으로 생성",
+        "prompt": "",
+        "expect": "내 수업 소개 영상 1편",
+        "note": "참조 최대 7장, 사람 얼굴이 찍힌 사진은 제외"
+      },
+      {
+        "title": "일관성 점검",
+        "minutes": 3,
+        "do": "만든 영상 2편을 나란히 놓고 ① 얼굴 ② 옷·색 ③ 배경 ④ 글자·소품 4가지가 같은지 체크",
+        "prompt": "",
+        "expect": "일관성 체크표 4칸 + 다시 만들 장면 메모",
+        "note": "글자(칠판 문구)는 깨지기 쉬움 — 자막은 편집 앱에서 넣을 것"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 요청으로 참조 없이 1편, 참조 넣고 1편 만들어 차이 1줄 기록"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Character·Scene에 Product(교재 표지 그림, 본인 제작) 참조 1장을 더해 3요소가 모두 유지되는 광고형 6초 영상 만들기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "같은 참조로 장면 3개(인사 → 설명 → 마무리)를 만들어 편집 앱에서 이어 붙이고 자막·'AI 생성' 표기를 넣은 18초 수업 예고편 완성"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 동작만 바꾼 두 장면을 이어 재생하고, 상대 영상에서 '같게 유지된 것' 1개 + '달라진 것' 1개 말하기",
+    "quiz": [
+      {
+        "q": "Imagine Video 1.5 참조 기능에서 한 번에 넣을 수 있는 참조 최대 개수는?",
+        "options": [
+          "3개",
+          "5개",
+          "7개",
+          "10개"
+        ],
+        "answer": 2,
+        "explain": "xAI 발표 기준 생성 1회에 참조 최대 7개, 음성 참조는 별도 입력"
+      },
+      {
+        "q": "장면이 바뀌어도 같은 캐릭터를 유지하려면 가장 알맞은 방법은?",
+        "options": [
+          "요청문을 더 길게 쓰기",
+          "캐릭터 이미지를 참조로 넣고 역할 지정",
+          "해상도를 720p로 낮추기",
+          "매번 새 대화 열기"
+        ],
+        "answer": 1,
+        "explain": "참조 이미지 1장이 요소 1개(얼굴·제품·장소)를 고정, 동작만 바꿔 요청"
+      },
+      {
+        "q": "2026-07-31 발표 기준, API에서 별도 신청이 필요한 기능은?",
+        "options": [
+          "글로 영상 만들기",
+          "1080p 생성",
+          "이미지 참조",
+          "음성 참조"
+        ],
+        "answer": 3,
+        "explain": "API 이미지 참조·글로 영상·1080p는 바로 제공, 음성 참조는 영업팀 신청 시 제공"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "참조 활용",
+        "high": "Character·Scene 역할 지정 + 동작만 바꾼 연속 장면 완성",
+        "mid": "참조 영상 1편만 완성",
+        "low": "글로 영상만 생성"
+      },
+      {
+        "criterion": "요청 설계",
+        "high": "동작·카메라·스타일·'참조 유지' 문구 모두 포함",
+        "mid": "동작만 지정",
+        "low": "주제만 입력"
+      },
+      {
+        "criterion": "검수·윤리",
+        "high": "일관성 체크표 + AI 생성 표기 + 본인 자료만 사용",
+        "mid": "일부 점검",
+        "low": "점검 없음"
+      }
+    ],
+    "next": [
+      "Grok Imagine Image 2.0으로 참조용 마스코트 그림 만들기 (AI-2026-10-CAT04-010)",
+      "Runway Seedance 2.5 초안 모드로 영상 초안 비교 (AI-2026-10-CAT05-007)",
+      "ElevenLabs 오디오 효과로 영상 내레이션 다듬기 (AI-2026-10-CAT05-015)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 참조 없이 만든 영상 2편(얼굴이 다름) vs 참조로 만든 2편(얼굴 같음) 비교 시연",
+        "note": "미리 만든 4편 준비"
+      },
+      {
+        "time": "5~18분",
+        "content": "1부 이론: 참조 최대 7장·역할 지정·음성 참조·글로 영상·1080p, 요금제, 초상권·음성 도용 주의",
+        "note": "수강생 요금제·참조 버튼 노출 확인"
+      },
+      {
+        "time": "18~41분",
+        "content": "따라 하기 1~4: 영상 모드 → 글로 영상 → 참조 2장 영상 → 동작만 바꾸기",
+        "note": "생성 대기 중 요청문 구조(동작·카메라·스타일·유지 문구) 설명"
+      },
+      {
+        "time": "41~48분",
+        "content": "내 것 만들기: 내 마스코트로 바꾸기 → 일관성 점검",
+        "note": "체크표 배부"
+      },
+      {
+        "time": "48~54분",
+        "content": "짝 공유·퀴즈·마무리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI로 영상을 만들면 장면마다 주인공 얼굴이 바뀌어서 이어 붙이기가 어려웠죠. 오늘은 같은 캐릭터가 계속 나오는 영상을 만들어 보겠습니다."
+      },
+      {
+        "label": "개념",
+        "text": "참조는 배우 사진과 촬영장 사진을 미리 건네주는 것과 같습니다. 사진 한 장이 얼굴이든 장소든 하나를 고정해 줍니다."
+      },
+      {
+        "label": "실습",
+        "text": "참조는 그대로 두고 요청문에서 동작만 바꿔 보세요. 같은 고양이가 칠판에 쓰다가, 이번엔 책을 펼칩니다."
+      },
+      {
+        "label": "안전",
+        "text": "친구 얼굴이나 유명인 사진, 남의 목소리는 절대 넣지 마세요. 직접 그린 그림과 내 목소리만 씁니다."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 장면들을 이어 붙이면 짧은 수업 예고편이 됩니다. 올릴 때는 AI로 만든 영상이라고 꼭 밝혀 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "참조(Reference) 버튼이 안 보임",
+        "response": "요금제·지역 순차 확대 대상일 수 있음 — 글로 영상 만들기 + 요청문에 캐릭터 특징을 자세히 반복하는 방식으로 진행, 참조 시연은 강사 화면으로"
+      },
+      {
+        "situation": "무료 계정에서 영상 생성이 막힘",
+        "response": "짝 또는 강사 계정으로 함께 생성, 수강생은 요청문 작성·일관성 점검 역할"
+      },
+      {
+        "situation": "생성 대기가 길어 시간 부족",
+        "response": "강사가 미리 만든 영상으로 비교·점검 실습 진행, 수강생은 요청문만 완성해 과제로 생성"
+      },
+      {
+        "situation": "사용량 한도 도달",
+        "response": "참조 영상 1편만 만들고 동작 변경은 요청문 작성으로 대체"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Imagine 영상 모드를 못 찾음",
+        "fix": "주소창에 grok.com/imagine 직접 입력, 앱은 Imagine 탭에서 영상 선택"
+      },
+      {
+        "issue": "참조를 넣었는데 캐릭터가 달라짐",
+        "fix": "'Keep the character exactly as in the reference' 문구 추가, 배경이 복잡한 캐릭터 그림은 단색 배경 그림으로 교체"
+      },
+      {
+        "issue": "역할 지정 메뉴가 없음",
+        "fix": "요청문에 'image 1 = character, image 2 = classroom'처럼 순서로 역할 적기"
+      },
+      {
+        "issue": "칠판 글자가 깨짐",
+        "fix": "영상 속 글자는 빼고 자막·글자는 편집 앱에서 넣기"
+      },
+      {
+        "issue": "움직임이 너무 많아 어색함",
+        "fix": "동작을 1~2개로 줄이고 'gentle, slow movement' 조건 추가"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로도 영상을 만들 수 있나요?",
+        "a": "가격 페이지에 Free는 Imagine 'Limited'만 표기, 영상 생성 가능 여부 [확인 필요]. 영상 생성 문구가 명시된 요금제는 Premium(월 $30)"
+      },
+      {
+        "q": "참조는 몇 장까지 넣을 수 있나요?",
+        "a": "생성 1회에 최대 7개, 이미지마다 얼굴·제품·장소 같은 요소 하나를 고정. 음성 참조는 별도 입력"
+      },
+      {
+        "q": "영상 길이와 비율은 고를 수 있나요?",
+        "a": "공식 발표에는 API 예시(6초·16:9·720p)만 있음 — 선택 가능한 길이·비율 [확인 필요]. 해상도는 최대 1080p"
+      },
+      {
+        "q": "Android에서도 참조를 쓸 수 있나요?",
+        "a": "공식 발표상 참조는 grok.com/imagine·iOS부터 시작, 글로 영상·1080p는 Android 포함. Android 참조 지원 [확인 필요]"
+      },
+      {
+        "q": "내 목소리로 캐릭터를 말하게 할 수 있나요?",
+        "a": "음성 참조로 같은 목소리 유지 가능하다고 발표 — 앱은 순차 확대, API는 영업팀 신청. 본인 목소리만 사용할 것"
+      },
+      {
+        "q": "만든 영상을 상업적으로 써도 되나요?",
+        "a": "xAI 이용약관 확인 필요 [확인 필요]. 타인 얼굴·캐릭터·로고·목소리가 들어가면 별도 권리 문제"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "글로 영상 1편 + 강사가 준비한 마스코트 그림으로 참조 영상 1편까지만"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ — 3장면 예고편 편집까지, API(grok-imagine-video-1.5) 참조 호출 시연 선택"
+      },
+      {
+        "level": "마케팅·소상공인 (JOB-MKT·JOB-BIZ)",
+        "guide": "제품 사진(Product) + 매장 사진(Scene) 참조로 상품 소개 6초 영상 만들기"
+      },
+      {
+        "level": "다문화·한국어 학습자 (JOB-GLB)",
+        "guide": "마스코트가 인사·감사 동작을 하는 장면을 만들고 한국어 자막('안녕하세요', '감사합니다')을 직접 넣기"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 참조 = '고정할 것'을 이미지로, 요청문 = '바꿀 것(동작)'만",
+      "참조 그림은 단색 배경·정면·전신일수록 일관성 좋음",
+      "영상 속 글자는 약함 — 자막은 편집 앱에서",
+      "참조 기능은 순차 확대 — 수업 전 수강생 계정 노출 여부 확인",
+      "2026-10-12 요금제 개편(The X Subscription) — 수업 전 최신 가격 재확인"
+    ],
+    "day_before": [
+      "강사 계정으로 따라 하기 4단계 리허설 — 생성 시간·결과 기록",
+      "영상 모드·참조 추가·역할 지정 버튼 위치 캡처 준비 [확인 필요]",
+      "참조용 마스코트 그림(단색 배경)과 사람 없는 교실 사진 배포용 준비",
+      "Plan B용 비교 영상 4편(참조 없음 2·참조 있음 2) 미리 생성",
+      "x.ai/pricing에서 요금제·영상 생성 범위 재확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 요금제별(Free·Plus) 영상 생성·참조 기능 사용 범위 — 가격 페이지는 Premium에만 영상 문구 명시",
+    "[확인 필요] 영상 모드·참조 추가·역할 지정 메뉴 이름과 위치, 한국어 화면 표기",
+    "[확인 필요] 선택 가능한 영상 길이·비율 — 공식 발표에는 API 예시(6초·16:9)만 있음",
+    "[확인 필요] Android 앱의 참조 기능 지원, 국내 계정 노출 여부",
+    "[확인 필요] API grok-imagine-video-1.5 초당 가격, 원화 가격·상업적 이용 범위",
+    "[확인 필요] Imagine Video 1.5 최초 일반 제공일 — 공식 발표는 '지난달'로만 표기, 날짜는 보조 근거(GIGAZINE)",
+    "교안 작성 중 실제 계정으로 영상을 생성·재현하지 못함 — xAI 공식 발표·가격 페이지 기준"
+  ],
+  "sources": [
+    {
+      "title": "xAI News – Imagine Video 1.5 with References",
+      "url": "https://x.ai/news/grok-imagine-video-1-5-references",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI – Pricing (The X Subscription)",
+      "url": "https://x.ai/pricing",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "xAI News 목록",
+      "url": "https://x.ai/news",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "GIGAZINE – Grok Imagine Video 1.5 一般提供開始 (보조 근거)",
+      "url": "https://gigazine.net/news/20260618-grok-imagine-video-1-5/",
+      "checked": "2026-10-17"
+    }
+  ]
+}

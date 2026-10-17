@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 10:10 KST",
+  "updated_at": "2026-10-17 13:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2566,6 +2566,21 @@
       },
       "checked": "2026-10-17",
       "lesson_id": "AI-2026-10-CAT08-010"
+    },
+    {
+      "id": "grok-2026-07-31-imagine-video-1-5-references",
+      "date": "2026-07-31",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Imagine Video 1.5 참조(References)·글로 영상·1080p",
+      "summary": "캐릭터·제품·장소 이미지를 역할별로 최대 7장, 목소리 샘플을 참조로 넣어 장면이 바뀌어도 같은 얼굴·목소리 유지, 글로 영상 만들기·기본 1080p 정식 제공, API grok-imagine-video-1.5 (참조는 미국 유료부터 순차 확대, API 음성 참조는 신청제)",
+      "source": {
+        "title": "xAI News – Imagine Video 1.5 with References",
+        "url": "https://x.ai/news/grok-imagine-video-1-5-references"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT05-016"
     }
   ]
 }
