@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 109,
+  "count": 110,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-014",
+      "version": "v1.0",
+      "created_at": "2026-10-18 04:00 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "ChatGPT 플러그인 여러 계정 연결(Connect multiple accounts)로 개인·업무 일정과 메일 한 번에 보기 — 두 계정 통합 주간 일정표 + 계정별 권한 설정표 만들기",
+      "summary": "ChatGPT 플러그인(Plugins) 하나에 개인 계정과 업무 계정을 함께 연결해 한 대화에서 두 계정 정보를 같이 쓰는 기능. 2026-08-28 Gmail·Google Calendar·Google Contacts 플러그인에 Plus·Pro·Business·Enterprise 대상 첫 출시 → 2026-09-17 모든 ChatGPT 요금제·더 많은 플러그인으로 확대(웹·모바일·데스크톱). 설정 > 플러그인(Plugins)에서 '다른 계정 연결(Connect another account)', 계정마다 권한(Permissions)을 따로 정할 수 있음. 어느 계정을 쓸지는 요청에 계정을 직접 적는 방식 권장",
+      "tool": "ChatGPT",
+      "feature": "플러그인 여러 계정 연결(Connect multiple accounts to plugins) — Gmail·Google Calendar·Google Contacts 등 한 플러그인에 개인·업무 계정 함께 연결, 설정 > 플러그인 '다른 계정 연결', 계정별 권한(Permissions: 항상 묻기·읽기 허용·저위험 허용), 요청에 계정 지정, 계정별 연결 해제",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-09-17",
+      "categories": [
+        "CAT-08",
+        "CAT-03",
+        "CAT-09"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 한 플러그인(Google Calendar)에 연결된 계정 2개 목록 화면 + ② 두 계정을 합친 이번 주 통합 일정표와 겹치지 않는 빈 시간 3개 + ③ 계정별 권한 설정표(개인·업무 계정 각각)",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🔗",
+      "one_liner": "개인·업무 계정을 한 대화에서 같이 씀"
+    },
     {
       "id": "AI-2026-10-CAT06-009",
       "version": "v1.0",

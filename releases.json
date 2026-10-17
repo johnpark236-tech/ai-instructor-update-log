@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 03:45 KST",
+  "updated_at": "2026-10-18 04:00 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1484,8 +1484,8 @@
         "title": "ChatGPT 릴리스 노트 (2026-09-17 항목)",
         "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       },
-      "checked": "2026-10-13",
-      "lesson_id": null
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT08-014"
     },
     {
       "id": "chatgpt-2026-09-17-3",
@@ -2746,6 +2746,21 @@
       },
       "checked": "2026-10-17",
       "lesson_id": "AI-2026-10-CAT03-018"
+    },
+    {
+      "id": "chatgpt-2026-08-28-multiple-google-accounts",
+      "date": "2026-08-28",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "Gmail·Calendar·Contacts 여러 Google 계정 연결",
+      "summary": "Gmail·Google Calendar·Google Contacts 플러그인에 Google 계정 여러 개를 연결해 한 대화에서 함께 사용 (Plus·Pro·Business·Enterprise, 웹·데스크톱·모바일)",
+      "source": {
+        "title": "ChatGPT 릴리스 노트",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT08-014"
     }
   ]
 }
