@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 105,
+  "count": 106,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-011",
+      "version": "v1.0",
+      "created_at": "2026-10-18 00:20 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "말 한마디로 행사 포스터·카드뉴스 완성 — Genspark Design(젠스파크 디자인)으로 '내 브랜드 포스터 + 디자인 시스템 + PNG 내보내기' 만들기",
+      "summary": "2026-07-20 Genspark AI Workspace 6.0 Build Suite 신규 기능으로 공개된 Genspark Design. 글로 설명하면 포스터·프로토타입·웹사이트·슬라이드·영상·플립북을 만들고, 캔버스에서 Tweaks·Edit·Comment·Draw로 고친 뒤 PNG·PSD·MP4·PPTX·PDF로 내보내기. 브랜드 설명·자료로 디자인 시스템(Design System)을 만들어 색·글꼴 통일. 모든 요금제에서 사용, 크레딧만 차감(Free Quota 미적용)",
+      "tool": "Genspark",
+      "feature": "Genspark Design(젠스파크 디자인) — 글로 만드는 포스터·프로토타입·웹사이트·슬라이드·영상·플립북, 캔버스 Tweaks·Edit·Comment·Draw 수정, 디자인 시스템(Design System), Figma·이미지·문서 첨부, Build it 실행형 웹, PNG·PSD·MP4·PPTX·PDF·ZIP 내보내기, 링크 공유(Viewer·Editor)",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2026-07-20",
+      "categories": [
+        "CAT-04",
+        "CAT-03",
+        "CAT-11"
+      ],
+      "jobs": [
+        "JOB-MKT",
+        "JOB-BIZ",
+        "JOB-EDU",
+        "JOB-CRE"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 행사(수업·가게 이벤트) 포스터 1장 PNG 파일 + ② 내 브랜드 색·글꼴을 담은 디자인 시스템 1개 + ③ 같은 디자인 시스템으로 만든 카드뉴스(정사각형) 1장 + ④ 보기 전용(Viewer) 공유 링크 또는 내려받은 파일",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎨",
+      "one_liner": "글로 설명하면 포스터·시안 완성"
+    },
     {
       "id": "AI-2026-10-CAT03-019",
       "version": "v1.0",

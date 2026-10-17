@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 23:05 KST",
+  "updated_at": "2026-10-18 00:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2026-07-20-design",
+      "date": "2026-07-20",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Genspark Design — 글로 만드는 포스터·프로토타입·영상(AI Workspace 6.0)",
+      "summary": "AI Workspace 6.0 Build Suite 신규 기능, 설명문으로 포스터·슬라이드·웹·프로토타입·영상·플립북 생성, 캔버스 Tweaks·Edit·Comment·Draw 수정, 디자인 시스템, PNG·PSD·MP4·PPTX·PDF 내보내기, 모든 요금제 크레딧 차감(Free Quota 미적용)",
+      "source": {
+        "title": "Genspark Help Center – Genspark Design",
+        "url": "https://www.genspark.ai/helpcenter/genspark-design"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT04-011"
+    },
     {
       "id": "genspark-2026-07-20-genmail",
       "date": "2026-07-20",
