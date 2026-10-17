@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 113,
+  "count": 114,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-013",
+      "version": "v1.0",
+      "created_at": "2026-10-18 08:20 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "통짜 AI 그림을 다시 고칠 수 있는 디자인으로 — Canva 매직 레이어(Magic Layers)로 '글자·날짜를 바꾼 행사 포스터 + 비포/애프터 비교판' 만들기",
+      "summary": "2026-03 Canva가 공개한 Magic Layers. 한 장으로 굳은 PNG·JPG 그림(AI 생성 이미지·남이 보낸 포스터·내보낸 디자인)을 AI가 읽어 글자는 고칠 수 있는 텍스트 상자로, 물체는 따로 움직이는 요소로, 배경은 뒤 레이어로 나눠 줌. 다시 그리기(재생성) 없이 오타·날짜·배치만 고칠 수 있음. 홈 > Magic Layers 또는 편집기 이미지 선택 > 수정 > Magic Layers. Premium AI 도구라 요금제별 월 AI 사용량에서 차감(Free 월 최대 20회 범위)",
+      "tool": "Canva",
+      "feature": "매직 레이어(Magic Layers) — 한 장짜리 PNG·JPG 이미지를 AI가 읽어 글자는 편집 가능한 텍스트 상자, 물체는 개별 요소, 배경은 뒤 레이어로 분리(Canva Design Model 기반), 홈 > Magic Layers > 미디어 선택 또는 편집기 이미지 선택 > 수정 > Magic Layers, 레이어별 이동·크기·삭제·효과·교체, 1쪽짜리 PNG·JPG·긴 변 5,000px 이하, Premium AI 도구(월 AI 사용량 차감), Gemini·ChatGPT 안 Canva 앱에서도 사용",
+      "company": "Canva",
+      "type": "update",
+      "released": "2026-03-11",
+      "categories": [
+        "CAT-04",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-MKT",
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① Magic Layers로 레이어가 나뉜 편집 가능한 행사 포스터 1개 + ② 날짜·장소·문구를 바꾸고 요소를 옮긴 수정본 PNG 1장 + ③ 원본과 수정본을 나란히 놓은 비포/애프터 비교판 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧅",
+      "one_liner": "통짜 그림을 레이어로 나눠 다시 편집"
+    },
     {
       "id": "AI-2026-10-CAT07-011",
       "version": "v1.0",
