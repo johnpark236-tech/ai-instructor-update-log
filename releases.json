@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 15:00 KST",
+  "updated_at": "2026-10-17 16:00 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-05-18-skills",
+      "date": "2026-05-18",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok 스킬(Skills) — 한 번 가르치면 모든 대화에서 기억",
+      "summary": "grok.com·iOS·Android에 스킬 공개(Grok 4.3), 기본 스킬 Word·발표 자료·스프레드시트·PDF·Skill Creator 포함, 대화·파일 업로드·직접 작성으로 맞춤 스킬 만들기, 기본 스킬 덮어쓰기",
+      "source": {
+        "title": "xAI News – Skills in web, iOS, and Android",
+        "url": "https://x.ai/news/grok-skills"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT02-005"
+    },
     {
       "id": "genspark-2026-07-20-agentbase",
       "date": "2026-07-20",
