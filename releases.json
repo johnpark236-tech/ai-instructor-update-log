@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-17 21:10 KST",
+  "updated_at": "2026-10-17 22:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "github-copilot-2026-10-01-dynamic-workflows",
+      "date": "2026-10-01",
+      "tool": "GitHub Copilot",
+      "company": "GitHub (Microsoft)",
+      "type": "update",
+      "title": "동적 워크플로(Dynamic workflows) 공개 미리보기",
+      "summary": "Copilot 앱·Copilot CLI·SDK에서 단계·병렬 하위 에이전트·검증·체크포인트를 코드로 정한 재사용 워크플로, 말로 만들기·이름으로 실행·일시 중지·이어 하기·AI 크레딧 상한, 모든 Copilot 요금제(기존 연간 Pro·Pro+ 제외)",
+      "source": {
+        "title": "GitHub Changelog – Dynamic workflows in Copilot CLI and the Copilot app",
+        "url": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app/"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT07-010"
+    },
     {
       "id": "acrobat-2026-10-01-express-designs",
       "date": "2026-10-01",

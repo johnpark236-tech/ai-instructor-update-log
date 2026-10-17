@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 103,
+  "count": 104,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-010",
+      "version": "v1.0",
+      "created_at": "2026-10-17 22:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "반복 작업을 '순서가 정해진 AI 팀'으로 — GitHub Copilot 동적 워크플로(Dynamic workflows)로 '수업 자료 폴더 점검 워크플로' 만들고 저장·재사용하기",
+      "summary": "2026-10-01 GitHub Copilot 앱·Copilot CLI에 동적 워크플로(Dynamic workflows) 공개 미리보기 출시. 단계·병렬 작업·검증·멈춤 지점을 코드(extension.mjs)로 정해 두고 여러 하위 에이전트(subagent)가 같은 순서로 일함. 말로 만들기·이름으로 다시 실행·일시 중지·이어 하기·AI 크레딧 상한 지정 가능, 모든 Copilot 요금제(기존 연간 Pro·Pro+ 제외)",
+      "tool": "GitHub Copilot",
+      "feature": "동적 워크플로(Dynamic workflows, 공개 미리보기) — Copilot 앱·Copilot CLI에서 단계·병렬 하위 에이전트·검증·체크포인트를 코드로 정한 재사용 워크플로, 말로 만들기·이름으로 실행·/workflows 일시 중지·이어 하기·AI 크레딧 상한·개인/저장소 공유",
+      "company": "GitHub (Microsoft)",
+      "type": "update",
+      "released": "2026-10-01",
+      "categories": [
+        "CAT-07",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 수업 자료 폴더를 파일별로 나눠 점검하는 동적 워크플로 'lesson-check' 1개 + ② 실행 결과 점검 보고서(파일별 문제·수정 제안 표) + ③ 개인 폴더(~/.copilot/extensions) 또는 저장소(.github/extensions)에 저장한 재사용 워크플로",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "순서 정한 AI 팀을 저장해 재사용"
+    },
     {
       "id": "AI-2026-10-CAT05-017",
       "version": "v1.0",
