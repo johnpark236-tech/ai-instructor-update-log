@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 102,
+  "count": 103,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-017",
+      "version": "v1.0",
+      "created_at": "2026-10-17 21:10 KST",
+      "checked": "2026-10-17",
+      "review_by": "2027-01-17",
+      "title": "Firefly 동영상 편집기에서 토글 하나로 영상 배경을 지우고, 단색·이미지 배경을 깔아 쇼츠용 소개 영상을 만들 수 있음",
+      "summary": "Adobe Firefly 동영상 편집기(Firefly video editor, 베타)의 배경 제거(Remove background) 기능으로 ① 타임라인 클립 선택 + ② 속성(Properties) 패널 토글 켜기 + ③ 크로마키(그린 스크린) 없이 인물·사물만 남은 새 클립 생성 + ④ 아래 트랙에 단색·이미지·영상 배경을 깔아 MP4로 내려받기 진행",
+      "tool": "Adobe Firefly",
+      "feature": "Firefly 동영상 편집기(Firefly video editor, 베타) 배경 제거(Remove background from video clips) — 타임라인 클립 배경 자동 제거, 속성 패널 토글·오른쪽 클릭 메뉴, 켜고 끄며 비교, MP4 내려받기",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-09-25",
+      "categories": [
+        "CAT-05",
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-EDU",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 배경을 지운 자기소개 클립 1개 + ② 단색 배경 버전과 이미지 배경 버전 2종 비교 + ③ 쇼츠용 세로(9:16) MP4 1개 + ④ 가장자리 점검 메모(머리카락·손·빠른 동작)",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎬",
+      "one_liner": "그린 스크린 없이 영상 배경 지우기"
+    },
     {
       "id": "AI-2026-10-CAT06-008",
       "version": "v1.0",

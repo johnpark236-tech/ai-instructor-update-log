@@ -1,0 +1,565 @@
+{
+  "id": "AI-2026-10-CAT05-017",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-17 21:10 KST",
+  "checked": "2026-10-17",
+  "review_by": "2027-01-17",
+  "title": "Firefly 동영상 편집기에서 토글 하나로 영상 배경을 지우고, 단색·이미지 배경을 깔아 쇼츠용 소개 영상을 만들 수 있음",
+  "summary": "Adobe Firefly 동영상 편집기(Firefly video editor, 베타)의 배경 제거(Remove background) 기능으로 ① 타임라인 클립 선택 + ② 속성(Properties) 패널 토글 켜기 + ③ 크로마키(그린 스크린) 없이 인물·사물만 남은 새 클립 생성 + ④ 아래 트랙에 단색·이미지·영상 배경을 깔아 MP4로 내려받기 진행",
+  "glance": {
+    "emoji": "🎬",
+    "one_liner": "그린 스크린 없이 영상 배경 지우기",
+    "cards": [
+      {
+        "icon": "🔘",
+        "title": "토글 한 번",
+        "text": "속성 패널에서 배경 제거 켜기"
+      },
+      {
+        "icon": "🧍",
+        "title": "주인공만 남김",
+        "text": "첫 프레임 속 인물·사물 자동 인식"
+      },
+      {
+        "icon": "🖼",
+        "title": "새 배경 깔기",
+        "text": "단색·이미지·영상을 아래 트랙에"
+      },
+      {
+        "icon": "⬇️",
+        "title": "MP4 저장",
+        "text": "오른쪽 위 Download로 내려받기"
+      }
+    ],
+    "diagram": {
+      "title": "배경 바꾸기 흐름",
+      "nodes": [
+        {
+          "icon": "📤",
+          "label": "영상 올리기"
+        },
+        {
+          "icon": "🎞",
+          "label": "클립 선택"
+        },
+        {
+          "icon": "✂️",
+          "label": "배경 제거 켜기"
+        },
+        {
+          "icon": "🖼",
+          "label": "새 배경 깔기"
+        },
+        {
+          "icon": "⬇️",
+          "label": "MP4 저장"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "기능 전",
+        "text": "그린 스크린 설치 + 조명 맞추기 + 프레임마다 마스크 손질"
+      },
+      "after": {
+        "label": "기능 후",
+        "text": "평소 찍은 영상 올리기 → 토글 켜기 → 새 배경 깔고 저장"
+      }
+    },
+    "cautions": [
+      "얼굴 나온 영상은 본인 동의 받기",
+      "타인 영상·영화 장면 사용 금지",
+      "머리카락·빠른 동작 가장자리 확인"
+    ]
+  },
+  "tool": "Adobe Firefly",
+  "feature": "Firefly 동영상 편집기(Firefly video editor, 베타) 배경 제거(Remove background from video clips) — 타임라인 클립 배경 자동 제거, 속성 패널 토글·오른쪽 클릭 메뉴, 켜고 끄며 비교, MP4 내려받기",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-09-25",
+  "categories": [
+    "CAT-05",
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-CRE",
+    "JOB-MKT",
+    "JOB-EDU",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Adobe 계정(Adobe ID, 무료 가입 가능)",
+    "PC 웹 브라우저(Chrome·Edge 권장) — Firefly 동영상 편집기는 설치 없이 브라우저에서 사용",
+    "실습용 영상 1개 — 휴대폰으로 찍은 본인 상반신 5~15초 자기소개 영상(가로 또는 세로), 배경과 옷 색이 다른 것",
+    "새 배경용 이미지 1장 — 직접 찍은 사진 또는 저작권 문제 없는 이미지",
+    "Plan B용: 강사가 미리 준비한 연습 영상(본인 동의를 받은 강사 영상)"
+  ],
+  "outcome": "① 배경을 지운 자기소개 클립 1개 + ② 단색 배경 버전과 이미지 배경 버전 2종 비교 + ③ 쇼츠용 세로(9:16) MP4 1개 + ④ 가장자리 점검 메모(머리카락·손·빠른 동작)",
+  "objectives": [
+    "Firefly 동영상 편집기의 배경 제거가 첫 프레임 속 주인공을 인식해 클립 전체 배경을 지우는 방식을 설명할 수 있음",
+    "타임라인 클립에 배경 제거를 적용하고 새 배경을 깔아 MP4로 내려받을 수 있음",
+    "결과 영상의 가장자리 품질과 초상권·저작권 문제를 점검할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Firefly Free는 이미지·영상·오디오 생성 하루 무료 횟수 제공. 유료 Standard·Pro·Pro Plus·Premium은 월 생성 크레딧 제공. 동영상 편집기는 베타. 무료 요금제에서 배경 제거 가능 여부·크레딧 차감 여부는 공식 도움말에 표기 없음 [확인 필요]",
+    "plans": [
+      {
+        "name": "Firefly Free",
+        "price": "$0",
+        "features": "이미지·영상·오디오 하루 무료 생성(매일 초기화) + 일부 협력사 모델 사용 + 동영상 편집기·배경 제거 사용 범위 [확인 필요]"
+      },
+      {
+        "name": "Firefly Standard",
+        "price": "$9.99/월",
+        "features": "월 생성 크레딧 2,000 + 5초 영상 최대 20개 + 기본 이미지 기능(생성형 채우기 등) 무제한 + Firefly Boards 무제한"
+      },
+      {
+        "name": "Firefly Pro",
+        "price": "$19.99/월",
+        "features": "월 생성 크레딧 4,000 + 5초 영상 최대 40개 + Adobe Express Premium + 웹·모바일 Photoshop"
+      },
+      {
+        "name": "Firefly Pro Plus",
+        "price": "$49.99/월",
+        "features": "월 생성 크레딧 10,000 + 5초 영상 최대 100개 + Pro 혜택 포함"
+      },
+      {
+        "name": "Firefly Premium",
+        "price": "$199.99/월",
+        "features": "월 생성 크레딧 50,000 + Generate Video에서 Firefly Video 모델 무제한 + Pro 혜택 포함"
+      }
+    ],
+    "note": "미국 달러 기준 Adobe Firefly 공식 요금 페이지 2026-10-17 확인, 원화 가격 미확인. Pro Plus·Premium은 첫해 30% 할인 행사 중(10월 21일 종료 표기, 각 $34.97·$139.91). 배경 제거 1회당 생성 크레딧 차감 여부 미확인 [확인 필요]. Adobe Express 쪽 배경 제거는 Express Premium 기능으로 안내됨",
+    "checked": "2026-10-17",
+    "sources": [
+      {
+        "title": "Adobe Firefly plans and pricing",
+        "url": "https://www.adobe.com/products/firefly/plans.html"
+      },
+      {
+        "title": "Adobe – No Green Screen Needed: Remove any Video Background",
+        "url": "https://www.adobe.com/in/products/firefly/discover/remove-background-from-video.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-02-27",
+      "text": "Firefly 동영상 편집기(베타) 소개 도움말 갱신 — 브라우저 다중 트랙 타임라인·대본 기반 편집·Firefly Video 모델 내장 [확인 필요: 첫 공개일]"
+    },
+    {
+      "date": "2026-08",
+      "text": "Firefly 8월 새 기능 — 타임라인 내레이션(Voiceover) 녹음·편집, SNS 비율 자동 맞춤(Auto reframe, 베타), 생성·편집 통합 화면(베타)"
+    },
+    {
+      "date": "2026-09-25",
+      "text": "Firefly 9월 새 기능 — 동영상 편집기 타임라인에서 영상 배경 제거(Remove background) 추가, 도움말 공개(갱신일 기준)"
+    }
+  ],
+  "theory": {
+    "definition": "Firefly 동영상 편집기 타임라인에 올린 영상 클립에서 인물·사물(주인공)만 남기고 배경을 자동으로 지워 새 클립으로 바꾸는 기능임. 속성 패널의 Remove background 토글 또는 클립 오른쪽 클릭 메뉴로 실행",
+    "analogy": "사진 배경 지우기를 영상 전체에 한 번에 해 주는 것과 같음. 첫 장면에서 '누가 주인공인지' 정하면 끝까지 그 사람만 오려 줌",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Firefly 동영상 편집기 배경 제거",
+        "Adobe Express 영상 배경 제거",
+        "그린 스크린 촬영"
+      ],
+      "rows": [
+        [
+          "준비물",
+          "평소 찍은 영상",
+          "평소 찍은 영상",
+          "초록 천·조명"
+        ],
+        [
+          "실행 방법",
+          "속성 패널 토글",
+          "영상 레이어 선택 후 Remove background",
+          "편집 프로그램 키잉"
+        ],
+        [
+          "새 배경",
+          "아래 트랙에 단색·이미지·영상",
+          "단색·이미지·스톡 영상 추가",
+          "자유"
+        ],
+        [
+          "요금",
+          "베타, 무료 범위 [확인 필요]",
+          "Express Premium 기능",
+          "장비 비용"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "첫 프레임 기준 인식",
+        "body": "① 선택 구간의 첫 프레임에서 주인공(1명 이상)을 찾음 ② 그 주인공을 클립 끝까지 유지하며 배경 제거 ③ 클립을 잘라(trim) 두었어도 배경은 클립 전체에서 지워지고, 주인공 선택만 잘린 구간 첫 프레임 기준"
+      },
+      {
+        "title": "새 클립으로 교체",
+        "body": "① 처리가 끝나면 새 클립이 캔버스의 원본을 대체 ② 타임라인 원본 클립 끝에 배경 제거 표시 아이콘 생김 ③ 토글을 껐다 켜며 원본과 비교 가능"
+      },
+      {
+        "title": "새 배경 깔기",
+        "body": "① 배경이 빠진 클립 아래 트랙에 단색·이미지·영상 배치 ② 쇼츠·릴스용은 프로젝트 시작 때 SNS 비율 프리셋(TikTok·Instagram·Facebook) 선택 ③ 완성본은 오른쪽 위 Download로 MP4 저장"
+      }
+    ],
+    "can": [
+      "그린 스크린 없이 찍은 영상에서 인물·제품 배경 지우기",
+      "배경을 지운 클립을 다른 클립처럼 자르기·속성 조절",
+      "토글을 켜고 끄며 원본과 결과 비교",
+      "아래 트랙에 단색·사진·영상 배경 깔기",
+      "완성본 MP4로 내려받기"
+    ],
+    "cannot": [
+      "가는 머리카락·비치는 옷·빠른 동작·어두운 영상·배경과 같은 색 옷은 정확도 떨어짐(Adobe 안내)",
+      "첫 프레임에 없던 사람이 중간에 등장하면 주인공으로 잡히지 않을 수 있음 [확인 필요]",
+      "동영상 편집기는 베타 — 메뉴·동작이 바뀔 수 있음",
+      "공식 도움말에 길이·해상도·파일 형식 제한 표기 없음 [확인 필요]"
+    ],
+    "safety": [
+      "다른 사람이 나온 영상은 촬영·편집·게시 전 본인 동의 받기 (초상권)",
+      "영화·방송·남의 SNS 영상을 가져와 배경을 바꾸지 않음 (저작권)",
+      "배경을 바꿔 실제와 다른 장소에 있었던 것처럼 속이는 영상 만들지 않음",
+      "집 안 주소·가족사진·문서가 비치는 원본 영상은 올리기 전에 확인",
+      "학생·아동 영상은 보호자 동의와 기관 지침 먼저 확인"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① 배경을 지운 자기소개 클립 + ② 단색·이미지 배경 2종 비교 + ③ 쇼츠용 세로 MP4 1개 + ④ 가장자리 점검 메모. 비포(그린 스크린·조명·마스크 손질)가 애프터(토글 하나 + 배경 한 장)로 바뀜",
+    "follow": [
+      {
+        "title": "새 프로젝트 만들기",
+        "minutes": 5,
+        "do": "firefly.adobe.com 로그인 → Timeline → Create new project → Get started 창에서 SNS 비율 프리셋(세로 9:16) 또는 Upload media 선택",
+        "prompt": "",
+        "expect": "빈 타임라인 프로젝트 열림",
+        "note": "[확인 필요: 한국어 화면 메뉴 이름 — 강의 전날 캡처]"
+      },
+      {
+        "title": "영상 올려 타임라인에 놓기",
+        "minutes": 5,
+        "do": "자기소개 영상 업로드 → 타임라인 영상 트랙에 끌어 놓기",
+        "prompt": "",
+        "expect": "타임라인에 영상 클립 1개",
+        "note": "첫 장면에 얼굴·상반신이 또렷이 나오게 앞부분을 다듬으면 인식이 안정됨"
+      },
+      {
+        "title": "배경 제거 켜기",
+        "minutes": 8,
+        "do": "타임라인에서 클립 선택 → 오른쪽 속성(Properties) 패널 Remove background 토글 켜기 → 같은 영역에서 진행 상황 확인",
+        "prompt": "",
+        "expect": "배경이 빠지고 인물만 남은 새 클립이 캔버스에 표시, 원본 클립 끝에 아이콘 생김",
+        "note": "다른 방법: 클립 오른쪽 클릭 → Remove background"
+      },
+      {
+        "title": "켜고 끄며 비교",
+        "minutes": 4,
+        "do": "토글을 껐다 켜며 원본과 결과 비교 → 머리카락·손·어깨 가장자리 메모",
+        "prompt": "",
+        "expect": "가장자리 점검 메모 1개",
+        "note": "재생하면서 빠른 동작 구간을 꼭 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "단색 배경 깔기",
+        "minutes": 8,
+        "do": "배경 빠진 클립 아래 트랙에 단색(브랜드 색) 배경 추가 → 전체 길이에 맞추기",
+        "prompt": "",
+        "expect": "단색 배경 자기소개 영상",
+        "note": "[확인 필요: 편집기 안 단색 배경 추가 메뉴 위치] 없으면 단색 이미지 1장을 만들어 올려 사용"
+      },
+      {
+        "title": "이미지 배경 버전 만들기",
+        "minutes": 10,
+        "do": "단색 대신 준비한 배경 이미지를 깔아 두 번째 버전 만들기 → 단색 버전과 비교",
+        "prompt": "",
+        "expect": "이미지 배경 버전 + 2종 비교 메모",
+        "note": "배경 이미지가 없으면 Firefly 이미지 생성으로 만들 수 있음(하루 무료 횟수 안에서)"
+      },
+      {
+        "title": "자막 한 줄 + 내려받기",
+        "minutes": 7,
+        "do": "텍스트 트랙에 이름·소개 한 줄 추가 → 오른쪽 위 Download → MP4 저장 → 휴대폰으로 재생 확인",
+        "prompt": "",
+        "expect": "쇼츠용 세로 MP4 1개",
+        "note": "Firefly 이미지 생성으로 배경을 만들 때 예시: 'soft pastel classroom background, blurred, no people, no text'"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "옷 색이 배경과 비슷한 영상과 다른 영상을 각각 처리해 가장자리 품질 비교하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "배경 이미지 대신 Firefly로 생성한 짧은 영상을 배경 트랙에 깔아 움직이는 배경 만들기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "완성 영상에 SNS 비율 자동 맞춤(Auto reframe, 베타)과 내레이션 녹음(Voiceover)을 더해 가로·세로 2종 홍보 영상 만들기 [확인 필요: 메뉴 위치]"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "조별로 단색·이미지 배경 버전을 나란히 재생하고, 가장자리가 가장 깔끔한 영상의 촬영 조건(조명·옷 색·움직임) 공유 진행",
+    "quiz": [
+      {
+        "q": "Firefly 동영상 편집기의 배경 제거가 주인공을 정하는 기준은?",
+        "options": [
+          "클립의 마지막 프레임",
+          "선택 구간의 첫 프레임",
+          "사용자가 그린 마스크",
+          "가장 밝은 프레임"
+        ],
+        "answer": 1,
+        "explain": "Adobe 도움말 기준 선택 구간 첫 프레임에서 주인공을 찾아 클립 전체 배경을 지움"
+      },
+      {
+        "q": "배경 제거를 켜는 곳으로 Adobe 도움말이 안내한 위치는?",
+        "options": [
+          "속성(Properties) 패널의 Remove background 토글",
+          "계정 설정 메뉴",
+          "Firefly 이미지 생성 화면",
+          "내려받기 창"
+        ],
+        "answer": 0,
+        "explain": "타임라인 클립 선택 후 속성 패널 토글, 또는 클립 오른쪽 클릭 메뉴 사용"
+      },
+      {
+        "q": "배경 제거 정확도가 떨어지기 쉬운 영상은?",
+        "options": [
+          "밝은 곳에서 천천히 말하는 영상",
+          "배경과 옷 색이 뚜렷이 다른 영상",
+          "어둡고 빠르게 움직이며 머리카락이 날리는 영상",
+          "상반신이 또렷한 영상"
+        ],
+        "answer": 2,
+        "explain": "Adobe 안내 기준 가는 머리카락·빠른 동작·어두운 영상·비슷한 색은 정확도 저하"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "배경 제거",
+        "high": "배경 제거 + 켜고 끄며 비교 완료",
+        "mid": "배경 제거만 완료",
+        "low": "적용 실패"
+      },
+      {
+        "criterion": "새 배경 구성",
+        "high": "단색·이미지 2종 + 자막",
+        "mid": "1종만 완성",
+        "low": "배경 없음"
+      },
+      {
+        "criterion": "점검·윤리",
+        "high": "가장자리 메모 + 동의·저작권 확인",
+        "mid": "둘 중 하나만",
+        "low": "점검 없음"
+      }
+    ],
+    "next": [
+      "Runway Seedance 2.5 초안 모드로 짧은 영상 만들기 (AI-2026-10-CAT05-007)",
+      "Manus Video Editor로 영상 편집하기 (AI-2026-10-CAT05-006)",
+      "Acrobat에서 Adobe Express AI Assistant로 홍보물 만들기 (AI-2026-10-CAT03-017)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 거실에서 찍은 영상이 교실 배경 영상으로 바뀌는 비포/애프터 시연",
+        "note": "강사 본인 영상 사용"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 기능 정의, 첫 프레임 인식 원리, 비교표, 요금제, 초상권·저작권",
+        "note": "무료 범위는 [확인 필요]로 안내"
+      },
+      {
+        "time": "35~57분",
+        "content": "2부 따라 하기: 프로젝트 만들기 → 영상 올리기 → 배경 제거 → 켜고 끄며 비교",
+        "note": "처리 대기 시간에 가장자리 점검 요령 설명"
+      },
+      {
+        "time": "57~85분",
+        "content": "2부 내 것 만들기: 단색 배경 → 이미지 배경 → 자막·MP4 저장",
+        "note": "휴대폰 재생 확인"
+      },
+      {
+        "time": "85~95분",
+        "content": "3부 정리: 조별 비교 재생, 퀴즈 3문제, 다음 단계",
+        "note": "전체 95분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "초록 천도, 조명도 없이 거실에서 휴대폰으로 찍은 영상입니다. 버튼 하나 켰더니 배경이 사라졌습니다. 오늘은 이걸 여러분 자기소개 영상으로 해 보겠습니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "이 기능은 첫 장면을 보고 '이 사람이 주인공이구나' 하고 정한 다음, 끝까지 그 사람만 남겨 줍니다. 그래서 첫 장면에 얼굴과 몸이 또렷하게 나오는 게 중요합니다."
+      },
+      {
+        "label": "보안 안내",
+        "text": "오늘은 본인이 나온 영상만 씁니다. 다른 사람이 나온 영상, 영화나 방송 장면은 쓰지 않습니다. 배경을 바꿔 다른 곳에 있었던 것처럼 속이는 용도도 안 됩니다."
+      },
+      {
+        "label": "마무리",
+        "text": "AI가 오려 준 결과는 머리카락이나 손끝에서 티가 날 수 있습니다. 올리기 전에 꼭 한 번 끝까지 재생해서 확인해 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Remove background 토글이 보이지 않음(베타·순차 제공 가능성)",
+        "response": "클립 오른쪽 클릭 메뉴 확인 → 그래도 없으면 Adobe Express에서 영상 레이어 선택 후 Remove background 시연(Express Premium 필요) 또는 강사 화면 시연"
+      },
+      {
+        "situation": "무료 계정 한도·크레딧 부족",
+        "response": "강사 계정 화면 시연으로 결과 공유, 수강생은 배경 이미지 고르기·자막 문구 작성까지 진행"
+      },
+      {
+        "situation": "수강생 휴대폰 영상이 없음·얼굴 공개를 원하지 않음",
+        "response": "손에 든 물건(컵·책) 소개 영상을 찍게 하거나 강사가 준비한 연습 영상 사용"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "처리가 오래 걸림",
+        "fix": "영상을 5~15초로 짧게 잘라 다시 시도, 처리 중에는 다른 클립 편집 계속 가능 여부 확인"
+      },
+      {
+        "issue": "배경 일부가 남거나 몸 일부가 지워짐",
+        "fix": "밝은 곳·배경과 다른 색 옷으로 다시 촬영, 첫 장면에 주인공이 또렷하게 나오게 앞부분 자르기"
+      },
+      {
+        "issue": "새 배경이 인물을 가림",
+        "fix": "배경 클립을 배경 제거 클립보다 아래 트랙으로 옮기기"
+      },
+      {
+        "issue": "세로 영상인데 프로젝트가 가로로 만들어짐",
+        "fix": "새 프로젝트 만들 때 SNS 비율 프리셋 선택, 또는 프로젝트 비율 설정 변경 [확인 필요: 메뉴 위치]"
+      },
+      {
+        "issue": "내려받기 버튼을 못 찾음",
+        "fix": "화면 오른쪽 위 Download 선택 → MP4로 저장"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로도 되나요?",
+        "a": "Firefly Free는 하루 무료 생성 제공. 동영상 편집기 배경 제거의 무료 사용 여부·크레딧 차감은 공식 도움말에 표기 없음 [확인 필요]"
+      },
+      {
+        "q": "여러 사람이 나온 영상도 되나요?",
+        "a": "도움말 기준 첫 프레임의 주인공 1명 이상을 인식함. 중간에 새로 등장하는 사람 처리는 [확인 필요]"
+      },
+      {
+        "q": "원본 영상은 사라지나요?",
+        "a": "새 클립이 캔버스의 원본을 대체하지만 토글을 끄면 원본과 비교 가능함"
+      },
+      {
+        "q": "투명 배경 영상으로 저장할 수 있나요?",
+        "a": "도움말은 MP4 내려받기만 안내함. 투명 배경 파일 저장 지원 여부 [확인 필요]"
+      },
+      {
+        "q": "Adobe Express의 배경 제거와 같은 건가요?",
+        "a": "Express는 영상 레이어 선택 후 Remove background 방식이며 Express Premium 기능으로 안내됨. Firefly 동영상 편집기는 타임라인 속성 패널 토글 방식"
+      },
+      {
+        "q": "만든 영상을 상업용 홍보에 써도 되나요?",
+        "a": "원본 영상·배경 이미지의 권리와 등장 인물 동의는 사용자 책임. Adobe 이용 약관 확인 필요 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "배경 제거 + 단색 배경 1종 + MP4 저장까지만"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "이미지·영상 배경 2종 + 자막 + 가로·세로 2종 홍보 영상"
+      },
+      {
+        "level": "시니어",
+        "guide": "강사가 준비한 영상으로 토글 켜기·끄기 비교 체험 후 단색 배경 1개만"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "'안녕하세요, 저는 ○○입니다' 자기소개 문장을 녹화해 배경을 고향 사진으로 바꾸는 활동, 자막에 한국어 한 줄 쓰기 연습"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지는 '촬영 조건이 결과를 정함' — 밝기·옷 색·첫 장면 구성 요령이 수업의 중심",
+      "소상공인 제품 소개·강사 강의 인트로·학생 자기소개 영상처럼 바로 쓰는 결과물이 나와 만족도가 높음",
+      "Runway·Manus Video Editor 교안과 묶어 'AI 영상 편집 도구 비교' 과정 설계 가능"
+    ],
+    "day_before": [
+      "개인 Adobe ID(무료)로 Firefly 동영상 편집기 접속 → Remove background 토글 위치·한국어 메뉴 이름 캡처",
+      "무료 계정에서 배경 제거 가능 여부·크레딧 차감 여부·처리 시간 확인",
+      "본인 동의를 받은 연습 영상 2개(배경과 옷 색이 다른 것·비슷한 것) 준비",
+      "배경용 이미지 3~4장 배포 준비(직접 찍은 사진 또는 저작권 확인된 이미지)",
+      "단색 배경 추가 메뉴·SNS 비율 프리셋 위치 확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 무료 Firefly 계정에서 동영상 편집기 배경 제거 사용 가능 여부, 1회당 생성 크레딧 차감 여부",
+    "[확인 필요] 처리 가능한 영상 길이·해상도·파일 형식 제한(도움말에 표기 없음), 투명 배경 내보내기 지원 여부",
+    "[확인 필요] 한국어 화면 메뉴 이름, 단색 배경 추가 메뉴 위치",
+    "[확인 필요] 출시일 2026-09-25는 도움말 갱신일 기준, What's new에는 2026년 9월로 표기",
+    "[실험 기능] Firefly 동영상 편집기는 베타 표기",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — Adobe 도움말·What's new·요금 페이지 기준"
+  ],
+  "sources": [
+    {
+      "title": "Adobe Firefly 도움말 – Remove background from video clips (2026-09-25 갱신)",
+      "url": "https://helpx.adobe.com/firefly/web/firefly-video-editor/add-and-organize-media/remove-background-from-video-clips-in-timeline.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "What's new in Adobe Firefly (2026-09-29 갱신, September 2026 – Remove background from videos)",
+      "url": "https://helpx.adobe.com/firefly/web/whats-new/new-features/whats-new.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Firefly 도움말 – About Firefly video editor (beta)",
+      "url": "https://helpx.adobe.com/firefly/web/firefly-video-editor/about-firefly-video-editor/about-firefly-video-editor.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Firefly 도움말 – Create a project",
+      "url": "https://helpx.adobe.com/ca/firefly/web/firefly-video-editor/set-up-your-project/create-a-project.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe – No Green Screen Needed: Remove any Video Background",
+      "url": "https://www.adobe.com/in/products/firefly/discover/remove-background-from-video.html",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Adobe Firefly plans and pricing",
+      "url": "https://www.adobe.com/products/firefly/plans.html",
+      "checked": "2026-10-17"
+    }
+  ]
+}

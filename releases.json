@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 20:05 KST",
+  "updated_at": "2026-10-17 21:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -16,6 +16,21 @@
       },
       "checked": "2026-10-17",
       "lesson_id": "AI-2026-10-CAT03-017"
+    },
+    {
+      "id": "firefly-2026-09-25-video-remove-background",
+      "date": "2026-09-25",
+      "tool": "Adobe Firefly",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Firefly 동영상 편집기 영상 배경 제거",
+      "summary": "Firefly 동영상 편집기(베타) 타임라인 클립의 속성 패널 토글로 첫 프레임 속 주인공만 남기고 클립 전체 배경을 자동 제거, 새 클립으로 교체·MP4 내려받기 (What's new 2026년 9월, 도움말 9-25 갱신)",
+      "source": {
+        "title": "Adobe Firefly 도움말 – Remove background from video clips",
+        "url": "https://helpx.adobe.com/firefly/web/firefly-video-editor/add-and-organize-media/remove-background-from-video-clips-in-timeline.html"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT05-017"
     },
     {
       "id": "grok-2026-05-18-skills",
