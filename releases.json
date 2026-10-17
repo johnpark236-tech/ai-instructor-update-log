@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 00:20 KST",
+  "updated_at": "2026-10-18 01:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -2039,8 +2039,8 @@
         "title": "Midjourney 버전 안내",
         "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
       },
-      "checked": "2026-10-11",
-      "lesson_id": null
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT04-012"
     },
     {
       "id": "gemini-2026-07-21-0",

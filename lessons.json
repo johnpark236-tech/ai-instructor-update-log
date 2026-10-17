@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 106,
+  "count": 107,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-012",
+      "version": "v1.0",
+      "created_at": "2026-10-18 01:10 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "미드저니 V8.2 개인화로 '내 취향 그림체' 만들기 — 좋아하는 그림 골라 프로필 만들고 --p 켜고 끄며 수업 포스터 3장 비교",
+      "summary": "2026-07-24 기본 모델이 된 Midjourney V8.2는 미적 품질·그림 품질·개인화(Personalization)에 집중한 버전임. Personalize 페이지에서 마음에 드는 그림을 고르면 내 취향 프로필이 생기고, 프롬프트 옆 Personalization 버튼이나 --p 로 그 취향을 그림에 입힘. --s(stylize) 값으로 취향 반영 강도를 조절함. 같은 프롬프트로 개인화 끔·켬·강하게 3장을 만들어 비교하고 프로필 코드 카드로 기록함",
+      "tool": "Midjourney",
+      "feature": "V8.2 기본 모델 · 개인화(Personalization) 프로필 — Personalize 페이지 그림 고르기·New Profile·Personalization 버튼/--p·프로필 코드(--p 코드)·--s로 반영 강도 조절",
+      "company": "Midjourney",
+      "type": "update",
+      "released": "2026-07-24",
+      "categories": [
+        "CAT-04",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 그림 고르기로 만든 '수업용' 개인화 프로필 1개 + ② 같은 프롬프트로 만든 포스터 그림 3장 비교 세트(개인화 끔 · 켬 --s 100 · 켬 --s 400) + ③ 프로필 코드·--s 값·버전을 적은 '내 그림체 카드' 1장",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎨",
+      "one_liner": "좋아하는 그림을 골라 내 그림체로 생성"
+    },
     {
       "id": "AI-2026-10-CAT04-011",
       "version": "v1.0",
