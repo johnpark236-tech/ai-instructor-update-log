@@ -989,8 +989,8 @@
         "title": "Manus 블로그 – Introducing Manus 2.0",
         "url": "https://manus.im/blog/introducing-manus-2-0"
       },
-      "checked": "2026-10-13",
-      "lesson_id": null
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-013"
     },
     {
       "id": "elevenlabs-2026-09-28-stt-edit",
@@ -2626,6 +2626,21 @@
       },
       "checked": "2026-10-17",
       "lesson_id": "AI-2026-10-CAT05-016"
+    },
+    {
+      "id": "manus-2026-05-18-scheduled-tasks-2",
+      "date": "2026-05-18",
+      "tool": "Manus",
+      "company": "Manus",
+      "type": "update",
+      "title": "Scheduled Tasks 2.0",
+      "summary": "예약 실행을 같은 작업에서 이어 가기, 프로젝트 파일·스킬·커넥터 재사용, 일정·달력 보기, 신뢰한 작업은 승인 없이 보내기·게시",
+      "source": {
+        "title": "Manus 블로그 – Introducing Scheduled Tasks 2.0",
+        "url": "https://manus.im/blog/manus-schedules"
+      },
+      "checked": "2026-10-17",
+      "lesson_id": "AI-2026-10-CAT08-013"
     }
   ]
 }
