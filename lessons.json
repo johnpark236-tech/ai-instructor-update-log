@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 117,
+  "count": 118,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT12-001",
+      "version": "v1.0",
+      "created_at": "2026-10-18 12:10 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "같은 질문, 다른 답 비교하기 — Microsoft 365 Copilot Chat 응답 다시 생성(Regenerate: 다시 시도·모델 전환)으로 '업무 안내문 2안 비교표 + 최종본' 만들기",
+      "summary": "Microsoft 365 Copilot Chat(웹) 응답 끝 '추가 옵션(More options)' 메뉴의 Regenerate 기능(2026-10-06 릴리스 노트). ① Try Again → 같은 프롬프트로 새 답 받기 ② Switch Model → 다른 AI 모델의 답 받기 → 프롬프트 다시 입력 없이 답 비교. Copilot Chat은 자격 있는 Microsoft 365 업무용 요금제에 추가 비용 없이 포함, 모델 전환 범위·라이선스 조건은 [확인 필요]",
+      "tool": "Microsoft 365 Copilot",
+      "feature": "응답 다시 생성(Regenerate response for alternative answers) — Copilot Chat 응답 끝 추가 옵션(More options) 메뉴: ① 다시 시도(Try Again) 새 답 받기 ② 모델 전환(Switch Model) 다른 AI 모델 답 받기, 프롬프트 다시 입력 없이 답 비교(웹)",
+      "company": "Microsoft",
+      "type": "update",
+      "released": "2026-10-06",
+      "categories": [
+        "CAT-12",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 같은 프롬프트로 받은 안내문 2~3안 + ② 다시 시도·모델 전환 답 비교표(정확성·말투·길이·빠진 내용) + ③ 좋은 부분을 합친 최종 안내문 1개",
+      "access": "freemium",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🔁",
+      "one_liner": "다시 묻지 않고 다른 답·다른 모델 비교"
+    },
     {
       "id": "AI-2026-10-CAT06-010",
       "version": "v1.0",
