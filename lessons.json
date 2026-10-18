@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 136,
+  "count": 137,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-020",
+      "version": "v1.0",
+      "created_at": "2026-10-19 07:20 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "큰 일을 여러 AI에게 나눠 맡기고 검증까지 받는 법 — Grok Build(그록 빌드, 터미널) 워크플로(Workflows)로 '파일 여러 개 동시 검토 + 검증 + 표로 합치기' 재사용 명령 만들기",
+      "summary": "2026-07-23 xAI가 공개한 Grok Build(터미널 코딩 에이전트) 워크플로. 큰 작업을 말로 설명하면 Grok이 ① 단계(phase)별 계획 + ② 단계마다 병렬 하위 에이전트 배치(기본 128개, 큰 작업 최대 1,024개) + ③ 독립 검증 에이전트 확인 + ④ 결과 합쳐 보고까지 백그라운드 실행. /workflows 실시간 현황판, /workflow pause·resume·stop·save, /create-workflow 로 재사용 명령 저장(.grok/workflows 팀 공유), /deep-research 출처 달린 조사 보고서. 2026-10-09 v1.0.51 /workflow 실행 목록·중지·재개 정비, 2026-10-12 v1.0.53 종료 시 실행 중 워크플로 경고",
+      "tool": "Grok",
+      "feature": "Grok Build(터미널 코딩 에이전트 CLI) 워크플로(Workflows) — 큰 작업을 단계별 병렬 하위 에이전트(기본 128개·최대 1,024개)로 나눠 백그라운드 실행 + 독립 검증 에이전트 확인 + 결과 합쳐 보고, /workflows 실시간 현황판(단계·에이전트별 토큰), /workflow <이름> [JSON 인수]·pause·resume·stop·save, --agent-budget·--effort, /create-workflow 로 .grok/workflows(팀 공유)·~/.grok/workflows(개인) 저장 → /<이름> 재사용, /deep-research 출처 달린 조사 보고서, [workflows] enabled·GROK_WORKFLOWS=0 끄기 · 2026-10-09 v1.0.51 /workflow 실행 목록·중지·재개 · 2026-10-12 v1.0.53 종료 시 실행 중 워크플로 경고",
+      "company": "xAI (SpaceXSI)",
+      "type": "update",
+      "released": "2026-07-23",
+      "categories": [
+        "CAT-08",
+        "CAT-07",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-DAT",
+        "JOB-EDU",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 가상 고객 후기 파일 6개를 파일별 에이전트가 요약·감정 분류하고 검증 에이전트가 재확인해 합친 표(summary.md) + ② /workflows 현황판 캡처 1장 + ③ 저장한 재사용 명령 1개(/review-check, .grok/workflows/review-check.rhai) + ④ /deep-research 출처 달린 짧은 조사 보고서 1개 + ⑤ 내 업무 워크플로 설계 카드(쪼개기·검증·합치기) 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🕸️",
+      "one_liner": "큰 일을 AI 팀에 나눠 맡기기"
+    },
     {
       "id": "AI-2026-10-CAT08-019",
       "version": "v1.0",

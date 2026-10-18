@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 06:40 KST",
+  "updated_at": "2026-10-19 07:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3166,6 +3166,21 @@
       },
       "checked": "2026-10-19",
       "lesson_id": "AI-2026-10-CAT05-020"
+    },
+    {
+      "id": "grok-build-2026-07-23-workflows",
+      "date": "2026-07-23",
+      "tool": "Grok",
+      "company": "xAI (SpaceXSI)",
+      "type": "update",
+      "title": "Grok Build 워크플로(Workflows) — 병렬 에이전트 분담·검증",
+      "summary": "터미널 코딩 에이전트 Grok Build가 큰 작업을 단계별 병렬 하위 에이전트(기본 128·최대 1,024)로 나눠 백그라운드 실행 + 독립 검증 + 결과 합치기, /workflows 현황판, .grok/workflows 저장·/이름 재사용, /deep-research",
+      "source": {
+        "title": "xAI News – Workflows in Grok Build",
+        "url": "https://x.ai/news/workflows"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT08-020"
     }
   ]
 }

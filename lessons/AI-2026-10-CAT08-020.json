@@ -1,0 +1,626 @@
+{
+  "id": "AI-2026-10-CAT08-020",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-19 07:20 KST",
+  "checked": "2026-10-19",
+  "review_by": "2027-01-19",
+  "title": "큰 일을 여러 AI에게 나눠 맡기고 검증까지 받는 법 — Grok Build(그록 빌드, 터미널) 워크플로(Workflows)로 '파일 여러 개 동시 검토 + 검증 + 표로 합치기' 재사용 명령 만들기",
+  "summary": "2026-07-23 xAI가 공개한 Grok Build(터미널 코딩 에이전트) 워크플로. 큰 작업을 말로 설명하면 Grok이 ① 단계(phase)별 계획 + ② 단계마다 병렬 하위 에이전트 배치(기본 128개, 큰 작업 최대 1,024개) + ③ 독립 검증 에이전트 확인 + ④ 결과 합쳐 보고까지 백그라운드 실행. /workflows 실시간 현황판, /workflow pause·resume·stop·save, /create-workflow 로 재사용 명령 저장(.grok/workflows 팀 공유), /deep-research 출처 달린 조사 보고서. 2026-10-09 v1.0.51 /workflow 실행 목록·중지·재개 정비, 2026-10-12 v1.0.53 종료 시 실행 중 워크플로 경고",
+  "glance": {
+    "emoji": "🕸️",
+    "one_liner": "큰 일을 AI 팀에 나눠 맡기기",
+    "cards": [
+      {
+        "icon": "🧩",
+        "title": "쪼개서 병렬",
+        "text": "단계별 하위 에이전트 동시 실행"
+      },
+      {
+        "icon": "🔍",
+        "title": "독립 검증",
+        "text": "검증 에이전트가 결과 재확인"
+      },
+      {
+        "icon": "📊",
+        "title": "/workflows",
+        "text": "단계·에이전트별 진행 실시간"
+      },
+      {
+        "icon": "💾",
+        "title": "재사용 명령",
+        "text": "저장하면 /이름 으로 다시 실행"
+      }
+    ],
+    "diagram": {
+      "title": "워크플로 실행 흐름",
+      "nodes": [
+        {
+          "icon": "🗣️",
+          "label": "말로 작업 설명"
+        },
+        {
+          "icon": "🗺️",
+          "label": "단계 계획"
+        },
+        {
+          "icon": "🧩",
+          "label": "병렬 에이전트"
+        },
+        {
+          "icon": "🔍",
+          "label": "검증 에이전트"
+        },
+        {
+          "icon": "📄",
+          "label": "합친 보고서"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "파일마다 따로",
+        "text": "파일 20개를 한 대화에서 하나씩 요청, 앞 내용 섞이고 검증은 사람이 전부"
+      },
+      "after": {
+        "label": "워크플로 1번",
+        "text": "파일별 에이전트가 동시 처리 + 검증 에이전트 확인 + 표 1장으로 합침"
+      }
+    },
+    "cautions": [
+      "실습은 빈 폴더·가상 자료만",
+      "에이전트 수 상한 꼭 걸 것",
+      "합친 결과는 원문과 대조"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Build(터미널 코딩 에이전트 CLI) 워크플로(Workflows) — 큰 작업을 단계별 병렬 하위 에이전트(기본 128개·최대 1,024개)로 나눠 백그라운드 실행 + 독립 검증 에이전트 확인 + 결과 합쳐 보고, /workflows 실시간 현황판(단계·에이전트별 토큰), /workflow <이름> [JSON 인수]·pause·resume·stop·save, --agent-budget·--effort, /create-workflow 로 .grok/workflows(팀 공유)·~/.grok/workflows(개인) 저장 → /<이름> 재사용, /deep-research 출처 달린 조사 보고서, [workflows] enabled·GROK_WORKFLOWS=0 끄기 · 2026-10-09 v1.0.51 /workflow 실행 목록·중지·재개 · 2026-10-12 v1.0.53 종료 시 실행 중 워크플로 경고",
+  "company": "xAI (SpaceXSI)",
+  "type": "update",
+  "released": "2026-07-23",
+  "categories": [
+    "CAT-08",
+    "CAT-07",
+    "CAT-06"
+  ],
+  "jobs": [
+    "JOB-DEV",
+    "JOB-DAT",
+    "JOB-EDU",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "macOS 또는 Linux 컴퓨터 + 터미널 — 설치 명령: curl -fsSL https://x.ai/cli/install.sh | bash (Windows는 WSL 사용 여부 [확인 필요])",
+    "xAI(Grok) 계정 — 설치 후 grok 실행 → 로그인, 공식 페이지 'Available to try for Free' 표기, 요금제별 워크플로 사용량 [확인 필요]",
+    "실습용 빈 폴더 1개(예: workflow-practice) — 실제 업무 저장소·실제 고객 자료 사용 금지",
+    "Grok Build 최신 버전(v1.0.51 이상 권장) — /release-notes 로 버전 확인",
+    "API 키·비밀번호·개인정보가 든 파일은 실습 폴더에 두지 않기"
+  ],
+  "outcome": "① 가상 고객 후기 파일 6개를 파일별 에이전트가 요약·감정 분류하고 검증 에이전트가 재확인해 합친 표(summary.md) + ② /workflows 현황판 캡처 1장 + ③ 저장한 재사용 명령 1개(/review-check, .grok/workflows/review-check.rhai) + ④ /deep-research 출처 달린 짧은 조사 보고서 1개 + ⑤ 내 업무 워크플로 설계 카드(쪼개기·검증·합치기) 1장",
+  "objectives": [
+    "워크플로가 일반 요청·하위 에이전트·/goal 과 무엇이 다른지(단계별 병렬 분담 + 독립 검증 + 결과 합치기 + 백그라운드 실행) 설명할 수 있음",
+    "말로 워크플로를 실행하고 /workflows·/workflow pause·resume·stop 으로 진행을 관리하며 에이전트 수 상한을 걸 수 있음",
+    "/create-workflow·/workflow save 로 재사용 명령을 만들고, 합친 결과를 원문과 대조해 검증할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "워크플로 전용 요금 없음 — Grok Build 사용량(토큰) 안에서 동작, 하위 에이전트가 많을수록 사용량 급증 → --agent-budget 으로 상한 권장. Grok Build는 공식 페이지에 '무료 체험 가능' 표기(한도 미공개). 2026-10-12부터 신규 가입은 The X Subscription: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200 — 요금제별 워크플로 사용량 [확인 필요]",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 매일 사용 + Cursor 시작 사용량 + 사용량 제한 — Grok Build 무료 체험 범위·워크플로 사용 가능 여부 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok·Cursor 기본 사용량 증가 + X 체크 표시·크리에이터 도구"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "SuperGrok + Cursor Pro + X Premium+ 포함 + Plus 대비 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "위 기능 전부 + Plus 대비 15배 사용량 — 에이전트 수 많은 워크플로에 유리"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "위 기능 전부 + Plus 대비 50배 사용량 — 최대 1,024개 에이전트 같은 큰 실행 대상"
+      }
+    ],
+    "note": "요금은 xAI 공식 발표 'Introducing The X Subscription'(2026-10-12) 미국 달러 기준(2026-10-19 확인), 원화·부가세 미확인. 워크플로 발표 페이지(2026-07-23)는 요금제·비용 안내 없이 'Try Free' 링크만 표시. 요금제별 최대 에이전트 수 제한 공식 안내 없음 [확인 필요]",
+    "checked": "2026-10-19",
+    "sources": [
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI – Grok Build",
+        "url": "https://x.ai/build"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-25",
+      "text": "Grok Build 터미널 코딩 에이전트 공개(초기 베타) — 계획 모드·병렬 하위 에이전트·헤드리스(-p)"
+    },
+    {
+      "date": "2026-07-15",
+      "text": "Grok Build 오픈 소스 공개(github.com/xai-org/grok-build) — 로컬 추론 연결 가능"
+    },
+    {
+      "date": "2026-07-22",
+      "text": "v0.2.111 — 워크플로 기본 켜짐(enabled by default)"
+    },
+    {
+      "date": "2026-07-23",
+      "text": "'Workflows in Grok Build' 발표 — 단계별 병렬 에이전트(기본 128·최대 1,024) + 독립 검증 + 백그라운드 실행, /workflows 현황판, .grok/workflows 저장·/이름 재사용, /deep-research"
+    },
+    {
+      "date": "2026-07-24",
+      "text": "v0.2.112 — 현황판에 에이전트별 진행 실시간 표시·현재 단계 자동 따라가기 + 실패한 실행 이어 하기"
+    },
+    {
+      "date": "2026-08-19",
+      "text": "v1.0.7 — 확장 창 Workflows 탭(설치된 워크플로 목록) + /workflow runs 실행 목록"
+    },
+    {
+      "date": "2026-08-24",
+      "text": "v1.0.9 — /workflow --agent-budget N(하위 에이전트 수 상한)·--effort LEVEL(추론 수준) + 저장한 워크플로를 에이전트가 이름으로 실행"
+    },
+    {
+      "date": "2026-10-09",
+      "text": "v1.0.51 — /workflow 로 백그라운드 실행 목록·중지·재개, stop·resume 이 현재 실행 대상 지정"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "v1.0.53 — 실행 중 워크플로가 있으면 종료 시 경고 후 두 번째 종료로 확인 + stop·pause 가 애매한 이름으로 실행 고르지 않음"
+    }
+  ],
+  "theory": {
+    "definition": "워크플로(Workflows)는 xAI 터미널 코딩 에이전트 Grok Build의 작업 분담(오케스트레이션) 기능임. 큰 작업을 말로 설명하면 Grok이 단계(phase)를 나누고 단계마다 하위 에이전트(subagent)를 여러 개 배치하는 스크립트(.rhai)를 작성·점검 후 백그라운드에서 실행 → 독립 검증 에이전트가 결과를 확인 → 합친 결과를 보고. 실행 중에도 대화창은 계속 사용 가능",
+    "analogy": "편집장 1명이 원고 묶음을 기자 여러 명에게 나눠 주고, 교열팀이 기사마다 사실을 다시 확인한 뒤, 편집장이 한 권으로 묶는 신문사 편집국. 한 번 잘 짠 분담 방식은 '업무 매뉴얼'로 저장해 다음에 이름만 부르면 그대로 돌아감",
+    "comparison": {
+      "headers": [
+        "구분",
+        "일반 요청",
+        "하위 에이전트(subagent)",
+        "/goal 목표 모드",
+        "워크플로(Workflows)"
+      ],
+      "rows": [
+        [
+          "일하는 AI 수",
+          "1개",
+          "몇 개(필요할 때 생성)",
+          "1개 + 검토 에이전트",
+          "단계별 다수(기본 128·최대 1,024)"
+        ],
+        [
+          "알맞은 일",
+          "짧은 질문·수정",
+          "곁가지 조사·탐색",
+          "끝 조건이 분명한 1개 큰 작업",
+          "같은 처리를 여러 대상에 반복 + 검증이 필요한 일"
+        ],
+        [
+          "검증",
+          "사람이 확인",
+          "사람이 확인",
+          "검토 에이전트 다수 동의",
+          "계획에 넣은 독립 검증 에이전트"
+        ],
+        [
+          "진행 보기",
+          "대화창",
+          "/tasks·Ctrl+G",
+          "/goal status",
+          "/workflows 현황판(단계·에이전트별 토큰)"
+        ],
+        [
+          "재사용",
+          "대화 복사",
+          "에이전트 정의(/agents)",
+          "목표 문장 다시 입력",
+          "저장 → /<이름> [인수] 명령"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "쪼개기 → 검증 → 합치기 3단계",
+        "body": "① 쪼개기(fan-out): 대상(파일·이슈·질문)마다 하위 에이전트 배정 ② 검증(verification): 다른 에이전트가 각 결과를 독립적으로 반박·재확인 — 한 번에 처리하는 요청으로는 어려운 점검 ③ 합치기: 결과를 표·보고서 1개로 정리. 공식 예시: PR 기능별 리뷰, 최근 이슈 100개 분류 후 상위 10개 조치 목록, 모든 라우트 인증 누락 점검 후 발견 사항마다 검증"
+      },
+      {
+        "title": "실행 관리 명령",
+        "body": "① 말로 요청('워크플로를 써서 ~') 또는 /workflow <이름> [JSON 인수] 또는 /<이름> 실행 ② /workflows: 실행 중·보관된 실행 현황판(전체 화면) ③ /workflow pause·resume·stop <실행>: 일시 중지·이어 하기(끝난 일 다시 안 함)·중지 ④ /workflow save <실행>: 실행을 워크플로로 저장 ⑤ --agent-budget N: 하위 에이전트 수 상한, --effort LEVEL: 추론 수준(v1.0.9) ⑥ 끄기: ~/.grok/config.toml [workflows] enabled = false 또는 GROK_WORKFLOWS=0"
+      },
+      {
+        "title": "재사용 명령 만들기와 공유",
+        "body": "① /create-workflow [설명]: Grok이 쪼개기 범위·검증 방법·범위를 질문 → 스크립트 작성·점검(smoke-check)·저장 ② 저장 위치: 프로젝트 .grok/workflows/<이름>.rhai(저장소에 올리면 팀 공유) 또는 ~/.grok/workflows/<이름>.rhai(내 모든 프로젝트) ③ 저장한 워크플로는 /<이름> 슬래시 명령 + 인수(예: /pr-review 5137) ④ 기본 내장: /deep-research <질문> — 조사 질문을 병렬 조사 에이전트에 나누고 주장마다 출처 대조 후 출처 달린 보고서"
+      }
+    ],
+    "can": [
+      "말로 설명한 큰 작업을 단계별 병렬 하위 에이전트로 나눠 백그라운드 실행 — 실행 중에도 대화 계속",
+      "독립 검증 에이전트가 각 결과를 다시 확인한 뒤 최종 보고서에 반영",
+      "/workflows 현황판에서 단계·에이전트별 진행과 토큰 사용량 실시간 확인",
+      "pause·resume·stop 으로 멈추기·이어 하기(끝난 일 다시 하지 않음)·중지, 실패한 실행도 이어 하기(v0.2.112)",
+      "/create-workflow·/workflow save 로 재사용 명령 저장, .grok/workflows 로 팀 공유",
+      "/deep-research 로 출처가 달린 조사 보고서 받기"
+    ],
+    "cannot": [
+      "웹·모바일 grok.com 빌드 모드(Build Mode)에서 워크플로 사용 — 이 교안은 터미널 CLI 기준, 별도 제품",
+      "하위 에이전트·워크플로 안에서 또 다른 워크플로 실행 — 최상위 세션에서만 실행(v1.0.8·v1.0.9)",
+      "검증 에이전트가 있다고 결과 정확성 보장 — 검증도 AI, 원문 대조는 사람 몫",
+      "사용량 무제한 병렬 실행 — 요금제 사용량 안에서만 동작, 에이전트 수만큼 토큰 소모",
+      "요금제별 최대 에이전트 수 사전 확인 — 공식 안내 없음 [확인 필요]"
+    ],
+    "safety": [
+      "에이전트가 많을수록 파일 접근·명령 실행이 동시에 많아짐 → 실습은 빈 폴더·가상 자료, 업무 저장소는 Git 브랜치·워크트리에서만",
+      "--agent-budget 으로 하위 에이전트 수 상한 + /workflows 로 토큰 확인 → 사용량 폭주 방지",
+      "실제 고객 후기·개인정보·사내 문서를 실습 자료로 쓰지 말 것 — 가상 자료만 사용",
+      ".grok/workflows 를 저장소에 올리면 팀 전체가 같은 명령 실행 → 올리기 전 스크립트 내용 검토",
+      "/deep-research 보고서의 출처는 직접 열어 확인, 승인 모드는 ask(묻기) 유지·always-approve 금지"
+    ]
+  },
+  "practice": {
+    "preview": "설치·빈 폴더 → 가상 후기 파일 6개 만들기 → 말로 워크플로 실행(파일별 요약·감정 분류 + 검증 + 표 합치기) → /workflows 현황판·일시 중지·재개 → 재사용 명령 저장·다시 실행 → 원문 대조 검증 → /deep-research. ① 합친 표 + ② 현황판 캡처 + ③ 재사용 명령 + ④ 조사 보고서 + ⑤ 설계 카드 완성",
+    "follow": [
+      {
+        "title": "설치·빈 폴더·실습 자료 만들기",
+        "minutes": 8,
+        "do": "터미널에서 설치 명령 실행 → mkdir workflow-practice && cd workflow-practice → grok 실행·로그인 → 승인 모드 ask 확인 → 아래 요청으로 가상 후기 파일 6개 생성",
+        "prompt": "reviews 폴더를 만들고, 가상의 한국어 카페 고객 후기 파일 6개(review1.txt~review6.txt)를 만들어 줘. 각 3~4문장, 긍정 2개·부정 2개·섞인 의견 2개. 실제 가게·사람 이름은 쓰지 마.",
+        "expect": "reviews 폴더에 후기 파일 6개 생성",
+        "note": "실제 고객 자료 금지. 설치가 막히면 강사 화면 시연으로 진행 [확인 필요: 로그인 화면 문구]"
+      },
+      {
+        "title": "말로 워크플로 실행하기",
+        "minutes": 12,
+        "do": "아래 요청 입력 → Grok이 단계 계획(파일별 분석 → 검증 → 합치기)을 보여 주면 읽고 승인 → 실행 시작 후에도 대화창이 열려 있는지 확인",
+        "prompt": "워크플로를 써서 reviews 폴더의 파일마다 ① 한 줄 요약 ② 감정(긍정·부정·섞임) ③ 근거 문장 1개를 뽑아 줘. 독립 검증 에이전트가 각 분류를 원문과 다시 대조해 틀리면 고치게 하고, 마지막에 summary.md 에 표 하나로 합쳐 줘. 하위 에이전트는 최대 12개만 써.",
+        "expect": "① 단계 계획 표시 + ② 백그라운드 실행 시작 + ③ 대화창 계속 사용 가능",
+        "note": "에이전트 수 상한을 문장에 꼭 넣기. 계획에 검증 단계가 빠지면 '검증 단계를 넣어 줘'로 수정 요청"
+      },
+      {
+        "title": "/workflows 현황판 보기",
+        "minutes": 6,
+        "do": "/workflows 입력 → 단계별 진행·에이전트별 토큰 확인 → 화면 캡처 → 현황판 닫기",
+        "prompt": "/workflows",
+        "expect": "현재 단계 자동 따라가기 + 에이전트별 진행·토큰 표시",
+        "note": "버전에 따라 /workflows 가 실행 현황판 또는 워크플로 목록 탭으로 열림 — 목록이면 /workflow runs 입력 [확인 필요]"
+      },
+      {
+        "title": "일시 중지·재개·결과 확인",
+        "minutes": 6,
+        "do": "/workflow pause <실행> → /workflow 로 Paused 확인 → /workflow resume <실행> → 완료 후 summary.md 열기",
+        "prompt": "/workflow pause",
+        "expect": "멈춤 표시 → resume 후 끝난 일은 건너뛰고 이어서 진행 → summary.md 표 6줄",
+        "note": "<실행> 이름은 자동 완성 목록에서 고르기(v1.0.8). 끝나기 전 grok 종료 시 경고 표시(v1.0.53)"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "재사용 명령으로 저장하기",
+        "minutes": 7,
+        "do": "아래처럼 /create-workflow 입력 → Grok 질문(쪼개기 범위·검증 방법·범위)에 답하기 → .grok/workflows/review-check.rhai 저장 확인 → 새 파일 review7.txt 를 추가하고 /review-check 로 다시 실행",
+        "prompt": "/create-workflow review-check: 지정한 폴더의 텍스트 파일마다 한 줄 요약·감정·근거 문장을 뽑고, 독립 검증 에이전트가 원문과 대조한 뒤 summary.md 표로 합친다. 인수로 폴더 이름을 받는다.",
+        "expect": "재사용 명령 /review-check 저장 + 새 파일 포함 표 다시 생성",
+        "note": "방금 실행을 그대로 저장하려면 /workflow save <실행> 사용. 인수 형식(JSON 등) [확인 필요]"
+      },
+      {
+        "title": "원문과 대조해 검증하기",
+        "minutes": 5,
+        "do": "summary.md 에서 아무 줄 2개 고르기 → 해당 review 파일 원문 열어 감정·근거 문장 대조 → 틀린 점·애매한 점 1줄 메모",
+        "prompt": "",
+        "expect": "표 2줄 대조 결과 메모",
+        "note": "'섞인 의견' 분류가 가장 자주 흔들림 — 검증 에이전트가 고친 곳이 있는지도 확인"
+      },
+      {
+        "title": "/deep-research 짧게 써 보기 + 설계 카드",
+        "minutes": 6,
+        "do": "아래 질문으로 조사 워크플로 실행(백그라운드) → 기다리는 동안 짝과 '내 업무 워크플로 카드'(대상 쪼개기 / 검증 방법 / 합칠 형식 / 에이전트 상한) 4칸 작성 → 보고서 출처 1개 직접 열어 확인",
+        "prompt": "/deep-research 2026년 한국 성인 대상 AI 활용 교육에서 많이 다루는 주제 3가지를 공식·공공 자료 위주로 출처와 함께 정리",
+        "expect": "출처 달린 조사 보고서 1개 + 4칸 설계 카드 1장",
+        "note": "조사 시간·사용량이 클 수 있음 — 시간 부족 시 강사 시연으로 대체"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 후기 분석을 워크플로 없이 일반 요청 1번으로 시키고, 결과 표와 워크플로 결과(검증 있음)를 비교해 다른 점 1줄 정리"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "/workflow review-check --agent-budget 3 처럼 에이전트 상한을 바꿔 실행하고 시간·토큰 차이를 /workflows 로 비교 [확인 필요: 저장 워크플로에 옵션 붙이는 형식]"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "실습 Git 저장소에 .grok/workflows/review-check.rhai 를 커밋해 짝의 컴퓨터에서 /review-check 로 실행해 보고, 팀 공유 전 점검 항목 3가지(권한·비용·데이터) 정리"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 summary.md 표와 /workflows 캡처를 보여 주고 '검증 에이전트가 고친 것 1개 / 내가 원문 대조로 찾은 것 1개 / 내 업무에 만들 재사용 명령 1개' 발표",
+    "quiz": [
+      {
+        "q": "워크플로가 일반 요청 1번과 가장 크게 다른 점은?",
+        "options": [
+          "답이 더 짧다",
+          "단계별로 여러 하위 에이전트가 나눠 일하고 독립 검증 후 결과를 합친다",
+          "인터넷을 쓰지 않는다",
+          "파일을 만들 수 없다"
+        ],
+        "answer": 1,
+        "explain": "쪼개기(병렬 하위 에이전트) → 독립 검증 → 합치기를 백그라운드에서 실행"
+      },
+      {
+        "q": "실행 중인 워크플로를 끝난 일은 유지한 채 잠시 멈췄다가 이어 하려면?",
+        "options": [
+          "/workflow stop 후 처음부터 다시 실행",
+          "/workflow pause 후 /workflow resume",
+          "/new",
+          "/goal clear"
+        ],
+        "answer": 1,
+        "explain": "pause·resume 은 끝난 작업을 다시 하지 않고 이어서 진행, stop 은 중지"
+      },
+      {
+        "q": "팀원 모두가 같은 워크플로를 /이름 으로 쓰게 하려면 어디에 저장해야 하나?",
+        "options": [
+          "~/.grok/workflows/",
+          "프로젝트의 .grok/workflows/ (저장소에 커밋)",
+          "바탕화면",
+          "/tmp 폴더"
+        ],
+        "answer": 1,
+        "explain": "프로젝트 .grok/workflows 는 저장소로 팀 공유, ~/.grok/workflows 는 내 모든 프로젝트용"
+      }
+    ],
+    "next": [
+      "Grok Build /goal 목표 모드로 완료 조건까지 맡기기 (AI-2026-10-CAT07-014)",
+      "Grok Build 메모리로 프로젝트 규칙 기억시키기 (AI-2026-10-CAT07-011)",
+      "GitHub Copilot 동적 워크플로와 비교하기 (AI-2026-10-CAT07-010)"
+    ],
+    "rubric": [
+      {
+        "criterion": "워크플로 요청",
+        "high": "쪼개기 대상 + 검증 단계 + 합칠 형식 + 에이전트 상한 모두 포함",
+        "mid": "대상·형식만 포함",
+        "low": "'알아서 분석해 줘' 수준"
+      },
+      {
+        "criterion": "진행 관리",
+        "high": "/workflows 확인 + pause·resume + 재사용 명령 저장·재실행",
+        "mid": "현황판만 확인",
+        "low": "진행 확인 안 함"
+      },
+      {
+        "criterion": "검증·안전",
+        "high": "원문 2줄 이상 대조 + 출처 직접 확인 + 가상 자료·ask 모드 유지",
+        "mid": "결과 표만 확인",
+        "low": "확인 없이 결과 사용"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: '파일 20개를 AI에게 하나씩 맡겨 본 적?' 질문 + 신문사 편집국 비유",
+        "note": "강사가 미리 돌린 /workflows 현황판 시연"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 정의·비교표(일반 요청·하위 에이전트·/goal·워크플로)·쪼개기→검증→합치기·관리 명령·재사용·요금·안전",
+        "note": "'검증 단계를 계획에 넣는 것이 핵심' 강조"
+      },
+      {
+        "time": "35~67분",
+        "content": "따라 하기 1~4: 설치·자료 만들기 → 말로 실행 → 현황판 → pause·resume·결과",
+        "note": "실행 대기 시간에 비교표 복습"
+      },
+      {
+        "time": "67~85분",
+        "content": "내 것 만들기: 재사용 명령 저장 → 원문 대조 → /deep-research + 설계 카드",
+        "note": "사용량 많으면 /deep-research 는 강사 시연"
+      },
+      {
+        "time": "85~90분",
+        "content": "짝 공유·퀴즈·실행 정리(/workflow stop)·로그아웃",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "후기 스무 개, 이슈 백 개를 AI에게 하나씩 붙여 넣어 본 적 있으신가요? 오늘은 Grok Build 워크플로로 그 일을 여러 AI에게 나눠 맡기고, 다른 AI가 검사까지 하게 만들어 보겠습니다."
+      },
+      {
+        "label": "핵심 원리",
+        "text": "워크플로는 신문사 편집국과 같습니다. 편집장이 기사를 기자 여럿에게 나누고, 교열팀이 하나하나 다시 확인하고, 마지막에 한 권으로 묶습니다. 이 세 단계, 쪼개기·검증·합치기를 기억하세요."
+      },
+      {
+        "label": "상한 걸기",
+        "text": "에이전트가 많을수록 빠르지만 사용량도 그만큼 듭니다. 요청할 때 '에이전트는 최대 몇 개'라고 꼭 적고, /workflows에서 토큰을 확인하세요."
+      },
+      {
+        "label": "재사용",
+        "text": "한 번 잘 돌아간 워크플로는 저장해 두면 이름만 불러 다시 씁니다. 팀 폴더에 넣으면 팀 전체의 업무 매뉴얼이 됩니다."
+      },
+      {
+        "label": "마무리",
+        "text": "검증 에이전트가 있어도 마지막 확인은 사람입니다. 표 두 줄은 꼭 원문과 대조하고, 실행 중인 워크플로를 정리한 뒤 로그아웃하세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "설치 스크립트가 실행되지 않음(Windows·회사 보안 정책)",
+        "response": "강사 macOS·Linux 화면 시연 + 수강생은 워크플로 설계 카드 작성·요청 문장 다듬기에 집중"
+      },
+      {
+        "situation": "요금제·사용량 한도로 워크플로 실행이 막힘",
+        "response": "강사 구독 계정으로 시연, 수강생은 짝 화면 참여 — 에이전트 상한을 3~4개로 낮춰 재시도"
+      },
+      {
+        "situation": "워크플로가 수업 시간 안에 끝나지 않음",
+        "response": "/workflow pause 후 강사가 미리 완료한 폴더의 summary.md 로 검증 단계 진행"
+      },
+      {
+        "situation": "워크플로 명령이 인식되지 않음",
+        "response": "grok 업데이트·/release-notes 버전 확인 + [workflows] enabled·GROK_WORKFLOWS=0 설정 여부 점검"
+      },
+      {
+        "situation": "인터넷·서버 장애로 응답 없음",
+        "response": "사전 녹화 현황판 화면으로 흐름 설명 후 '쪼개기·검증·합치기' 설계 카드 토론으로 대체"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "grok 명령을 찾을 수 없음",
+        "fix": "설치 후 터미널 새로 열기 → 설치 안내 경로 확인 [확인 필요]"
+      },
+      {
+        "issue": "계획에 검증 단계가 없음",
+        "fix": "승인 전 '각 결과를 독립 검증 에이전트가 원문과 대조하는 단계를 추가해 줘' 요청"
+      },
+      {
+        "issue": "/workflows 를 열었는데 실행이 안 보임",
+        "fix": "버전에 따라 목록 탭으로 열림 → /workflow 또는 /workflow runs 로 실행 목록 확인"
+      },
+      {
+        "issue": "저장한 워크플로가 'unknown workflow'로 나옴",
+        "fix": ".grok/workflows/<이름>.rhai 위치·이름 확인, v1.0.50 이상은 파싱 오류 내용 표시 → 오류 내용을 Grok에게 보여 주고 수정 요청"
+      },
+      {
+        "issue": "토큰이 빨리 소진됨",
+        "fix": "에이전트 상한(--agent-budget) 낮추기 + 대상 파일 수 줄이기 + --effort 낮추기"
+      }
+    ],
+    "faq": [
+      {
+        "q": "웹 grok.com 의 Grok Build(빌드 모드)에서도 워크플로를 쓰나요?",
+        "a": "이 교안은 터미널 CLI 기준, 웹·모바일 빌드 모드는 별도 제품(AI-2026-10-CAT07-008) — 웹 지원 여부 [확인 필요]"
+      },
+      {
+        "q": "무료로 쓸 수 있나요?",
+        "a": "워크플로 전용 요금 없음, Grok Build 사용량 안에서 동작. 공식 페이지는 '무료 체험 가능'만 표기, 요금제별 한도 [확인 필요]"
+      },
+      {
+        "q": "스크립트(.rhai)를 직접 써야 하나요?",
+        "a": "아님. 말로 설명하면 Grok이 작성·점검·실행(공식 발표), 저장은 /create-workflow 또는 /workflow save"
+      },
+      {
+        "q": "/goal 과 언제 나눠 쓰나요?",
+        "a": "/goal 은 끝 조건이 분명한 작업 1개를 끝까지, 워크플로는 같은 처리를 여러 대상에 동시에 + 독립 검증이 필요할 때"
+      },
+      {
+        "q": "코딩이 아닌 일에도 쓸 수 있나요?",
+        "a": "가능. 공식 예시에 이슈 100개 분류·조사(/deep-research) 포함, 폴더 안 텍스트 파일 처리도 가능 — 단, 터미널 사용은 필요"
+      },
+      {
+        "q": "워크플로를 끄려면?",
+        "a": "~/.grok/config.toml 의 [workflows] enabled = false 또는 환경 변수 GROK_WORKFLOWS=0"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급반",
+        "guide": "강사 시연 중심 — 수강생은 쪼개기·검증·합치기 설계 카드 작성 + summary.md 원문 대조만"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐⭐ 에이전트 상한 비교까지"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ 팀 저장소 공유 + 실제 PR 리뷰·이슈 분류 워크플로 설계(테스트 저장소)"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "가상 학생 글 6편을 파일별 피드백 + 검증 + 반 전체 표로 합치기 — 실제 학생 글 금지"
+      },
+      {
+        "level": "데이터·연구 (JOB-DAT)",
+        "guide": "/deep-research 로 문헌 조사 후 출처 3개 직접 확인, 설문 자유 응답 분류 워크플로 설계"
+      },
+      {
+        "level": "외국인·다문화 (JOB-GLB)",
+        "guide": "가상 한국어 작문 6편을 문법 오류 표시 + 검증 + 오류 유형 표로 합치기, 설명은 모국어로 요청"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 쪼개기 → 검증 → 합치기",
+      "요청 문장 4요소 = 대상 + 검증 방법 + 합칠 형식 + 에이전트 상한",
+      "잘 돌아간 워크플로는 저장해 /이름 으로 재사용, 팀 공유는 검토 후",
+      "검증 에이전트 뒤 사람 원문 대조가 최종 검수",
+      "실행 대기 시간은 설계 카드·비교표 토론으로 활용"
+    ],
+    "day_before": [
+      "강사 컴퓨터에서 설치·로그인·따라 하기 전 과정 리허설 → 완료 시간·사용 토큰 기록",
+      "현재 버전에서 /workflows 가 현황판인지 목록 탭인지 확인 + /workflow pause·resume 실행 이름 형식 확인",
+      "/create-workflow 질문 흐름과 인수 전달 형식(/review-check reviews 또는 JSON) 실제 확인",
+      "현재 요금제(The X Subscription)별 Grok Build·워크플로 사용 가능 여부 공식 페이지 재확인",
+      "/workflows 현황판·summary.md·/deep-research 보고서 화면 캡처 준비(실제 화면 캡처 필요)",
+      "완료된 실습 폴더 백업본 준비(시간 초과 대비) + 수강생 OS 조사"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 요금제별 워크플로 사용 범위·최대 에이전트 수 — 발표 페이지·요금 페이지에 안내 없음",
+    "[확인 필요] /workflows 동작 — 공식 문서는 '실행 현황판', v1.0.7 changelog는 'Workflows 목록 탭' + /workflow runs 로 안내(버전별 차이 가능)",
+    "[확인 필요] 저장 워크플로 실행 시 인수·--agent-budget 전달 형식(문서: /workflow <name> [JSON args])",
+    "[확인 필요] /create-workflow 질문 화면 문구·smoke-check 표시",
+    "[확인 필요] 로그인 화면 문구·설치 경로·Windows 지원 여부"
+  ],
+  "sources": [
+    {
+      "title": "xAI News – Workflows in Grok Build (2026-07-23)",
+      "url": "https://x.ai/news/workflows",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI Docs – Grok Build Modes and Commands (Workflows·/create-workflow·/workflow·/workflows·/deep-research)",
+      "url": "https://docs.x.ai/build/modes-and-commands",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI Docs – Grok Build Background Tasks",
+      "url": "https://docs.x.ai/build/features/background-tasks",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI – Grok Build Changelog (v0.2.111~v1.0.53 워크플로 항목)",
+      "url": "https://x.ai/build/changelog",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI – Grok Build (설치·무료 체험 안내)",
+      "url": "https://x.ai/build",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription (2026-10-12)",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-19"
+    }
+  ]
+}
