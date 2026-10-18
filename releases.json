@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-18 18:05 KST",
+  "updated_at": "2026-10-18 19:20 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "claude-code-2026-08-17-design-skill",
+      "date": "2026-08-17",
+      "tool": "Claude Code",
+      "company": "Anthropic",
+      "type": "update",
+      "title": "/design 스킬(연구 미리보기) — 아트보드 캔버스 시안 후 구현",
+      "summary": "요청문으로 편집 가능한 아트보드 캔버스를 Claude Design 아티팩트로 게시, 시안을 골라 다듬은 뒤 Claude Code가 코드로 구현 (Pro·Max·Team·Enterprise, v2.1.234 이상, Week 34 2026-08-17~21)",
+      "source": {
+        "title": "Claude Code Docs – What's new Week 34",
+        "url": "https://code.claude.com/docs/en/whats-new/2026-w34"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT07-013"
+    },
     {
       "id": "google-chat-2026-08-26-ask-gemini",
       "date": "2026-08-26",

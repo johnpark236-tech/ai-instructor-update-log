@@ -1,0 +1,606 @@
+{
+  "id": "AI-2026-10-CAT07-013",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-18 19:20 KST",
+  "checked": "2026-10-18",
+  "review_by": "2027-01-18",
+  "title": "Claude Code의 /design으로 '수업 신청 페이지' 화면 시안 여러 개를 받아 고르고, 고른 시안을 실제 웹페이지 파일로 만들 수 있음",
+  "summary": "/design은 Claude Design의 아트보드(artboard) 작업 방식을 Claude Code(터미널·데스크톱 앱)로 가져온 스킬임. ① 요청문 한 줄로 편집 가능한 시안 여러 장이 담긴 캔버스를 claude.ai에 아티팩트로 게시 ② 브라우저에서 시안 고르기·요소 직접 수정 ③ 고른 시안을 Claude Code가 내 폴더의 코드로 구현. 2026-08 주간(Week 34, v2.1.234) 연구 미리보기로 출시, Pro·Max·Team·Enterprise 대상. 무료 요금제는 Claude Code 미포함. 단독 Claude Design(claude.ai/design)은 2026-12-14 종료 예정",
+  "glance": {
+    "emoji": "🎨",
+    "one_liner": "한 줄 요청 → 화면 시안 → 코드 완성",
+    "cards": [
+      {
+        "icon": "🖼️",
+        "title": "시안 여러 장",
+        "text": "한 캔버스에 아트보드 여러 개"
+      },
+      {
+        "icon": "✋",
+        "title": "직접 고치기",
+        "text": "요소 선택·수정, 자동 저장"
+      },
+      {
+        "icon": "💻",
+        "title": "바로 구현",
+        "text": "고른 시안을 내 폴더 코드로"
+      },
+      {
+        "icon": "🔗",
+        "title": "링크 공유",
+        "text": "처음엔 나만 보기, 공유 선택"
+      }
+    ],
+    "diagram": {
+      "title": "/design 작동 흐름",
+      "nodes": [
+        {
+          "icon": "⌨️",
+          "label": "/design 요청"
+        },
+        {
+          "icon": "🖼️",
+          "label": "캔버스 게시"
+        },
+        {
+          "icon": "👆",
+          "label": "시안 고르기"
+        },
+        {
+          "icon": "✏️",
+          "label": "직접 다듬기"
+        },
+        {
+          "icon": "💻",
+          "label": "코드로 구현"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "/design 전",
+        "text": "말로 화면을 설명하고 코드부터 받은 뒤 마음에 안 들면 처음부터 다시 요청"
+      },
+      "after": {
+        "label": "/design 후",
+        "text": "시안 여러 장을 눈으로 비교해 고른 뒤 그 시안만 코드로 구현"
+      }
+    },
+    "cautions": [
+      "가상 기관명·가상 정보로 실습",
+      "공개 공유 전 내용 다시 확인",
+      "로고·실존 브랜드 흉내 금지"
+    ]
+  },
+  "tool": "Claude Code",
+  "feature": "/design 스킬(연구 미리보기) — 요청문으로 편집 가능한 아트보드 캔버스를 Claude Design 아티팩트로 게시, 시안 고르기·요소 직접 수정·PNG/PDF 내보내기, 고른 시안을 Claude Code가 코드로 구현, /design-sync로 코드베이스 디자인 시스템 가져오기",
+  "company": "Anthropic",
+  "type": "update",
+  "released": "2026-08-17",
+  "categories": [
+    "CAT-07",
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-DEV",
+    "JOB-EDU",
+    "JOB-BIZ",
+    "JOB-MKT"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 25,
+    "practice": 40,
+    "wrap": 8
+  },
+  "prerequisites": [
+    "Claude Pro·Max·Team·Enterprise 계정 (무료 요금제는 Claude Code 미포함)",
+    "Claude Code CLI 또는 Claude 데스크톱 앱 Code 탭, 최신 버전으로 업데이트 (/design은 v2.1.234 이상, 템플릿 기반 /design·/slides는 v2.1.265 이상)",
+    "/login으로 claude.ai 계정 로그인 상태 (API 키·Bedrock·Vertex 등 클라우드 제공자 연결은 아티팩트 게시 불가)",
+    "PC 웹 브라우저 (캔버스 검토·편집은 데스크톱 브라우저 권장)",
+    "빈 실습 폴더 1개 (예: design-practice), 가상 기관명·가상 강좌 정보 메모"
+  ],
+  "outcome": "① '수업 신청 페이지' 시안 3장이 담긴 Claude Design 캔버스 링크 1개 + ② 직접 고친 최종 시안 1장(PNG 또는 PDF) + ③ 고른 시안을 구현한 index.html 1개 + ④ 시안 고른 이유 3줄 메모",
+  "objectives": [
+    "/design이 일반 코드 생성 요청과 어떻게 다른지(시안 먼저 → 고르기 → 구현) 설명할 수 있음",
+    "/design 요청문으로 캔버스를 만들고, 시안을 골라 브라우저에서 직접 수정·내보내기를 할 수 있음",
+    "고른 시안을 Claude Code에 구현하게 하고 결과 파일을 브라우저에서 확인·수정할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "/design은 Claude Code 기능이라 Claude Code가 포함된 유료 요금제(Pro·Max·Team·Enterprise)에서 사용. 별도 추가 요금 없음, Claude·Claude Code와 같은 사용량 풀에서 차감. 무료 요금제는 claude.ai 대화 속 Claude Design만 가능",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Claude Code 미포함 → /design 불가. claude.ai 대화에서 Claude Design(디자인 템플릿)은 사용 가능"
+      },
+      {
+        "name": "Pro",
+        "price": "월 $20 (연간 결제 시 월 $17)",
+        "features": "Claude Code + /design + 아티팩트 게시, 공개 링크 공유 가능"
+      },
+      {
+        "name": "Max",
+        "price": "월 $100부터 (5x $100 · 20x $200)",
+        "features": "Pro의 5배·20배 사용량, 시안 반복 수정이 많은 작업에 유리"
+      },
+      {
+        "name": "Team",
+        "price": "좌석당 월 $20~ (좌석 종류별 상이)",
+        "features": "조직 디자인 시스템 자동 적용, 조직 안 공유·편집자 지정, 공개 공유는 소유자가 켜야 함"
+      },
+      {
+        "name": "Enterprise",
+        "price": "",
+        "features": "영업팀 문의. Design 템플릿은 소유자가 켜야 함(2026-10-15부터 기본 켜짐 안내) [확인 필요]"
+      }
+    ],
+    "note": "가격은 claude.com 요금 페이지 미국 달러 표기 기준(교안 AI-2026-10-CAT07-002 확인값 재사용, 2026-10-14), 부가세 별도일 수 있음. 원화 가격 [확인 필요]. 디자인 작업도 공용 사용 한도에서 차감되며 한도 도달 시 초기화 전까지 사용 불가(사용량 크레딧 켠 경우 제외)",
+    "checked": "2026-10-18",
+    "sources": [
+      {
+        "title": "Claude 요금제 (claude.com/pricing)",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "title": "Claude Code Docs – Share session output as artifacts (Availability)",
+        "url": "https://code.claude.com/docs/en/artifacts"
+      },
+      {
+        "title": "Claude 고객센터 – Get started with Claude Design",
+        "url": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-04-17",
+      "text": "Claude Design(Anthropic Labs) 공개 — 대화로 디자인·시제품 만들기 (단독 사이트 claude.ai/design)"
+    },
+    {
+      "date": "2026-06-18",
+      "text": "Claude Code 아티팩트(Artifacts) 베타 — 세션 결과를 claude.ai 공유 페이지로 게시 (Team·Enterprise 먼저)"
+    },
+    {
+      "date": "2026-08-17",
+      "text": "Week 34(2026-08-17~21, v2.1.234~): /design 스킬 연구 미리보기 출시 — Claude Code에서 아트보드 캔버스 게시 후 고른 시안 구현 (정확한 출시일은 주간 단위로만 공개 [확인 필요])"
+    },
+    {
+      "date": "2026-09",
+      "text": "템플릿 기반 /design·/slides — v2.1.265 이상 필요, Claude Design 아티팩트로 캔버스 생성 [확인 필요: 정확한 날짜]"
+    },
+    {
+      "date": "2026-10-15",
+      "text": "Enterprise 요금제 Claude Design 기본 켜짐 (고객센터 안내)"
+    },
+    {
+      "date": "2026-10-16",
+      "text": "Claude Code v2.1.302 — /design-sync·/design-login에 '단독 Claude Design 2026-12-14 종료' 안내 추가"
+    },
+    {
+      "date": "2026-12-14",
+      "text": "단독 Claude Design(claude.ai/design) 종료 예정, 이후 Claude 안 아티팩트로 일원화"
+    }
+  ],
+  "theory": {
+    "definition": "/design은 Claude Code 안에서 화면 디자인 시안을 먼저 그려 보여 주는 스킬임. 요청문을 받으면 Claude가 편집 가능한 아트보드 여러 장을 한 캔버스에 그려 claude.ai에 Claude Design 아티팩트로 게시하고 링크를 줌. 사용자가 시안을 고르고 다듬으면 Claude Code가 그 시안을 내 폴더의 코드로 구현함",
+    "analogy": "인테리어 업체가 공사 전에 투시도 3장을 먼저 보여 주고, 고객이 고른 1장대로 시공하는 것과 같음. 공사(코드)부터 하고 뜯어고치는 것보다 빠르고 덜 낭비됨",
+    "comparison": {
+      "headers": [
+        "구분",
+        "일반 코드 요청",
+        "claude.ai Claude Design",
+        "Claude Code /design"
+      ],
+      "rows": [
+        [
+          "시작 위치",
+          "터미널 대화",
+          "claude.ai 대화·Artifacts 탭",
+          "터미널·데스크톱 Code 탭"
+        ],
+        [
+          "첫 결과물",
+          "바로 코드 파일",
+          "디자인 캔버스",
+          "디자인 캔버스(아티팩트 링크)"
+        ],
+        [
+          "시안 비교",
+          "한 번에 하나",
+          "여러 시안 가능",
+          "아트보드 여러 장 한 화면"
+        ],
+        [
+          "코드로 옮기기",
+          "—",
+          "Claude Code로 보내기(handoff)",
+          "같은 세션에서 바로 구현"
+        ],
+        [
+          "내 프로젝트 맥락",
+          "읽음",
+          "업로드·연결한 것만",
+          "폴더 코드·디자인 시스템 읽음"
+        ],
+        [
+          "무료 요금제",
+          "Claude Code 없음",
+          "사용 가능",
+          "사용 불가"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "아트보드(artboard)와 캔버스",
+        "body": "① 아트보드 = 시안 한 장(화면 하나) ② 캔버스 = 아트보드 여러 장을 올려 둔 한 페이지 ③ 캔버스는 claude.ai 아티팩트로 게시되어 링크로 열림 ④ 데스크톱 브라우저에서 요소를 선택해 고치면 자동 저장 ⑤ 아트보드별 PNG·PDF 내보내기"
+      },
+      {
+        "title": "시안 → 고르기 → 구현",
+        "body": "① /design 뒤에 무엇을 그릴지 요청문 작성 ② Claude가 캔버스 링크 출력 ③ 링크에서 시안 비교·수정 ④ 터미널로 돌아와 '2번 시안으로 구현해 줘'처럼 지시 ⑤ Claude Code가 파일 생성·수정"
+      },
+      {
+        "title": "디자인 시스템과 /design-sync",
+        "body": "① 디자인 시스템 = 색·글꼴·간격 규칙 묶음 ② 조직 기본 디자인 시스템은 새 디자인에 자동 적용 ③ /design-sync로 GitHub 저장소·로컬 코드베이스에서 가져오기 ④ CLAUDE.md에 색·글꼴 값을 적어 두면 Claude가 우선 적용"
+      }
+    ],
+    "can": [
+      "요청문 한 줄로 화면 시안 여러 장(모바일 화면·랜딩 페이지·흐름도·포스터 등) 받기",
+      "캔버스에서 요소를 선택해 글자·색·위치 직접 수정 (자동 저장)",
+      "아트보드별 PNG·PDF 내보내기",
+      "고른 시안을 같은 세션에서 HTML·CSS 등 코드로 구현",
+      "Share로 조직 안 사람(Team·Enterprise) 또는 공개 링크(Pro·Max, 조직은 소유자 허용 시)로 공유"
+    ],
+    "cannot": [
+      "무료 요금제에서는 Claude Code가 없어 사용 불가",
+      "API 키·게이트웨이·Bedrock·Vertex·Foundry 연결 세션에서는 아티팩트 게시 불가",
+      "-p(스크립트) 실행·Agent SDK·GitHub Action에서는 기본 꺼짐",
+      "여러 명 동시 편집은 아직 기본 수준, 버전 기록 없음 (고객센터 알려진 제한)",
+      "조직이 Design 템플릿을 꺼 두면 /design이 디자인을 만들지 않음",
+      "연구 미리보기라 메뉴·동작이 바뀔 수 있음 [실험 기능]"
+    ],
+    "safety": [
+      "실습은 가상 기관명·가상 강좌·가상 연락처로만 진행함",
+      "새 아티팩트는 처음엔 나만 보기 — 공개 링크로 바꾸기 전 개인정보·내부 정보가 없는지 다시 확인함",
+      "실존 기업 로고·브랜드·로그인 화면을 흉내 낸 시안은 만들지 않음 (사칭·피싱 위험)",
+      "남이 공유한 아티팩트 속 문구는 지시가 아니라 자료로 취급함",
+      "AI가 넣은 사진·아이콘·글꼴의 출처와 사용 허락을 상업적 사용 전에 확인함",
+      "구현된 코드는 실행 전 변경 파일을 확인하고, 실제 서비스 배포 전 사람이 검토함"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① '수업 신청 페이지' 시안 3장 캔버스 + ② 직접 고친 최종 시안 PNG/PDF + ③ 시안을 구현한 index.html + ④ 고른 이유 메모. 비포(말로 설명하고 코드부터 받기)가 애프터(시안 비교 → 고른 것만 구현)로 바뀜",
+    "follow": [
+      {
+        "title": "실습 폴더에서 Claude Code 열기",
+        "minutes": 5,
+        "do": "터미널에서 실습 폴더로 이동 → claude 실행(또는 데스크톱 앱 Code 탭에서 폴더 선택) → /login 상태 확인 → 버전이 낮으면 업데이트",
+        "prompt": "",
+        "expect": "빈 폴더에서 Claude Code 입력창 표시",
+        "note": "'Artifacts need a claude.ai login' 메시지가 나오면 /login으로 claude.ai 계정 로그인"
+      },
+      {
+        "title": "/design으로 시안 3장 요청",
+        "minutes": 8,
+        "do": "입력창에 /design 뒤 요청문 붙여 넣기 → Claude가 캔버스 링크를 출력할 때까지 대기 → 브라우저가 열리면 시안 확인",
+        "prompt": "/design 성인 대상 'AI 활용 기초 4주 과정' 수업 신청 랜딩 페이지 시안 3개. 기관명은 '햇살평생학습센터(가상)'. 각 시안은 레이아웃과 분위기를 다르게(차분한 공공기관형, 밝은 카드형, 사진 중심형). 공통 내용: 과정 소개 3줄, 일정표(4주), 수강료 무료, 신청 버튼. 모바일 화면 기준.",
+        "expect": "아트보드 3장이 담긴 캔버스 링크 + 브라우저 자동 열림",
+        "note": "브라우저가 안 열리면 터미널의 링크 클릭 또는 Ctrl+]로 최근 아티팩트 다시 열기"
+      },
+      {
+        "title": "시안 고르고 직접 고치기",
+        "minutes": 8,
+        "do": "데스크톱 브라우저에서 3장 비교 → 마음에 드는 1장 선택 → 제목 글자·버튼 색 등 요소를 눌러 직접 수정 → 해당 아트보드 PNG 또는 PDF 내보내기",
+        "prompt": "",
+        "expect": "직접 고친 최종 시안 1장 + 내보낸 PNG/PDF 파일",
+        "note": "수정은 자동 저장. 큰 변경(배치 바꾸기)은 터미널에서 말로 요청하는 편이 빠름"
+      },
+      {
+        "title": "고른 시안을 코드로 구현",
+        "minutes": 7,
+        "do": "터미널로 돌아와 고른 시안 번호를 말하고 구현 요청 → 만들어진 index.html을 브라우저로 열어 시안과 비교",
+        "prompt": "캔버스에서 2번(밝은 카드형) 시안을 골랐어. 내가 고친 내용까지 반영해서 이 폴더에 index.html 한 파일로 구현해 줘. 외부 이미지 없이, 모바일·PC 화면 모두 깨지지 않게.",
+        "expect": "index.html 1개 생성 + 시안과 비슷한 화면",
+        "note": "번호 대신 '카드형 시안'처럼 특징으로 말해도 됨. 파일 생성 전 권한 확인 창이 뜨면 내용 보고 승인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 수업 페이지로 바꾸기",
+        "minutes": 6,
+        "do": "실제로 운영할(또는 운영하고 싶은) 강좌 1개로 요청문의 과정명·대상·일정만 바꿔 다시 /design 실행 → 시안 비교",
+        "prompt": "/design [내 강좌 이름] 수업 신청 페이지 시안 3개. 대상: [대상]. 강조할 점: [강조점 2가지]. 기관명은 가상으로. 시안마다 첫 화면 문구를 다르게 써서 비교할 수 있게.",
+        "expect": "내 강좌용 시안 3장 캔버스",
+        "note": "기관명·연락처는 가상 정보 유지"
+      },
+      {
+        "title": "디자인 규칙 적어 두기",
+        "minutes": 4,
+        "do": "폴더의 CLAUDE.md에 색·글꼴 규칙을 적게 한 뒤, 같은 규칙으로 시안 다시 요청",
+        "prompt": "이 폴더에 CLAUDE.md를 만들고 '## Design system' 제목 아래 기본색 #1a4d8f, 강조색 #f59e0b, 본문 글꼴 Noto Sans KR, 간격 8px 단위를 적어 줘. 그다음 이 규칙으로 /design 시안을 다시 1장 만들어 줘.",
+        "expect": "CLAUDE.md 1개 + 규칙이 반영된 시안 1장",
+        "note": "Claude는 요청문 > 디자인 시스템 > 자체 선택 순서로 따름"
+      },
+      {
+        "title": "고른 이유 메모",
+        "minutes": 2,
+        "do": "최종 시안을 고른 이유를 ① 읽기 쉬움 ② 대상에 맞는 분위기 ③ 신청 버튼 찾기 쉬움 기준으로 3줄 작성",
+        "prompt": "",
+        "expect": "시안 선택 이유 3줄 메모",
+        "note": "다음 수업 때 수강생 의견과 비교하는 자료로 씀"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "캔버스 Share에서 공유 범위를 확인하고(공개 전환은 하지 않음) 공유 시 누가 볼 수 있는지 1줄로 정리"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "/slides로 같은 강좌의 '수업 안내 슬라이드 5장'을 만들고 신청 페이지와 색·글꼴이 맞는지 비교"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "구현한 index.html에 '신청 마감 D-day 표시'를 추가하게 하고, 시안에 없던 요소를 /design 캔버스에도 반영해 달라고 요청해 디자인·코드 일치시키기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 시안 3장 중 고른 1장을 보여 주고, 고른 이유 메모와 코드로 옮겼을 때 달라진 점 1개를 말함",
+    "quiz": [
+      {
+        "q": "Claude Code에서 /design을 실행하면 가장 먼저 받는 결과물은?",
+        "options": [
+          "완성된 index.html 파일",
+          "아트보드 여러 장이 담긴 캔버스 링크",
+          "PowerPoint 파일",
+          "이미지 생성 크레딧"
+        ],
+        "answer": 1,
+        "explain": "Claude가 편집 가능한 아트보드 캔버스를 claude.ai에 아티팩트로 게시하고 링크를 줌. 코드 구현은 시안을 고른 뒤 따로 요청함"
+      },
+      {
+        "q": "다음 중 /design을 쓸 수 없는 경우는?",
+        "options": [
+          "Pro 요금제 + /login으로 로그인한 CLI",
+          "Max 요금제 + 데스크톱 앱 Code 탭",
+          "무료 요금제 계정",
+          "Team 요금제(관리자가 Design 템플릿을 켠 상태)"
+        ],
+        "answer": 2,
+        "explain": "무료 요금제에는 Claude Code가 없어 /design을 쓸 수 없음. 무료 사용자는 claude.ai 대화 속 Claude Design을 쓸 수 있음"
+      },
+      {
+        "q": "새로 게시된 디자인 캔버스의 기본 공유 상태는?",
+        "options": [
+          "누구나 볼 수 있는 공개 링크",
+          "조직 전체 공개",
+          "나만 볼 수 있음",
+          "같은 폴더 사용자만"
+        ],
+        "answer": 2,
+        "explain": "새 아티팩트는 작성자만 보임. 페이지 상단 Share에서 조직 안 공유나 공개 링크로 바꿀 수 있음"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "시안 활용",
+        "high": "시안 3장 비교 → 1장 선택·직접 수정·내보내기까지 완료",
+        "mid": "시안 받고 선택만 함",
+        "low": "시안 1장만 받음"
+      },
+      {
+        "criterion": "구현 확인",
+        "high": "index.html을 열어 시안과 차이를 찾아 수정 요청",
+        "mid": "파일만 생성",
+        "low": "구현 단계 미진행"
+      },
+      {
+        "criterion": "안전·공유",
+        "high": "가상 정보 사용 + 공유 범위 확인 + 출처 점검",
+        "mid": "가상 정보만 사용",
+        "low": "실제 개인정보·브랜드 사용"
+      }
+    ],
+    "next": [
+      "claude.ai 대화에서 Claude Design으로 원페이저 PDF 만들기 (AI-2026-10-CAT03-004)",
+      "Claude Code Mods로 화면·명령 맞춤 설정하기 (AI-2026-10-CAT07-002)",
+      "Claude Docs·Slides로 문서·슬라이드 만들기 (AI-2026-10-CAT03-001)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, '코드부터 받고 뜯어고치기' 사례, 출시 타임라인",
+        "note": "인테리어 투시도 비유"
+      },
+      {
+        "time": "5~30분",
+        "content": "1부 이론: 아트보드·캔버스, 시안→고르기→구현 흐름, claude.ai Design과 비교, 디자인 시스템·/design-sync, 사용 조건·제한, 단독 Design 종료 일정",
+        "note": "요금제·로그인 조건 먼저 확인"
+      },
+      {
+        "time": "30~58분",
+        "content": "2부 따라 하기: Claude Code 열기 → /design 시안 3장 → 고르고 고치기 → 코드 구현",
+        "note": "캔버스 생성에 몇 분 걸릴 수 있어 기다리는 동안 비교 기준 설명"
+      },
+      {
+        "time": "58~70분",
+        "content": "2부 내 것 만들기: 내 강좌 시안 → CLAUDE.md 디자인 규칙 → 고른 이유 메모",
+        "note": "가상 기관명 유지 확인"
+      },
+      {
+        "time": "70~78분",
+        "content": "3부 정리: 결과 공유, 퀴즈 3문제, 다음 단계",
+        "note": "전체 78분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI에게 웹페이지를 만들어 달라고 했는데 생각과 달라서 몇 번이나 다시 요청해 보신 적 있으시죠? 오늘은 코드부터 받지 않고, 시안 세 장을 먼저 눈으로 보고 고른 다음 그것만 만들게 해 보겠습니다."
+      },
+      {
+        "label": "조건 안내",
+        "text": "/design은 Claude Code 기능이라 Pro 이상 요금제가 필요하고, 반드시 claude.ai 계정으로 로그인해야 링크가 만들어집니다. 무료 계정인 분은 제 화면을 보시면서 요청문 설계를 같이 해 보겠습니다."
+      },
+      {
+        "label": "고르기 기준",
+        "text": "예쁜 시안을 고르는 게 아니라, 우리 수강생이 신청 버튼을 3초 안에 찾을 수 있는 시안을 고르는 겁니다. 고른 이유를 꼭 세 줄로 적어 보세요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 캔버스는 처음엔 나만 볼 수 있습니다. 동료에게 보여 주고 싶으면 Share를 누르되, 공개 링크로 바꾸기 전에 개인정보가 없는지 한 번 더 확인해 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생이 무료 요금제라 Claude Code가 없음",
+        "response": "claude.ai 대화에서 메시지 창 Output > Design으로 같은 요청문 실행(Claude Design은 무료 요금제 사용 가능), 구현 단계는 강사 시연으로 대체"
+      },
+      {
+        "situation": "/design 실행 후 링크 대신 로컬 HTML 파일만 생김",
+        "response": "아티팩트 사용 조건 미충족 — /login 여부, API 키 로그인 여부, 조직 설정 확인. 수업 중 해결이 어려우면 생성된 HTML을 브라우저로 열어 시안 비교만 진행"
+      },
+      {
+        "situation": "캔버스 생성이 오래 걸리거나 사용 한도 도달",
+        "response": "강사가 미리 만든 캔버스 링크를 조직 안 공유(또는 화면 공유)로 보여 주고 고르기·구현 단계부터 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "/design 명령이 목록에 안 보임",
+        "fix": "Claude Code 업데이트(v2.1.265 이상 권장) → 새 세션 시작 → 조직(Enterprise)이 Design 템플릿을 꺼 두었는지 관리자 확인"
+      },
+      {
+        "issue": "'Artifacts need a claude.ai login' 표시",
+        "fix": "/login으로 claude.ai 계정 로그인. API 키 로그인 상태면 계정 로그인으로 바꿔야 게시 가능"
+      },
+      {
+        "issue": "캔버스에서 요소 수정이 안 됨",
+        "fix": "휴대폰이 아니라 데스크톱 브라우저로 열기, 새로고침. 안 되면 터미널에서 말로 수정 요청"
+      },
+      {
+        "issue": "구현된 화면이 시안과 많이 다름",
+        "fix": "'제목 크기·버튼 색·카드 간격을 시안과 같게'처럼 다른 점을 구체적으로 짚어 다시 요청, 캔버스의 해당 아트보드 내보낸 PNG를 함께 첨부"
+      },
+      {
+        "issue": "브라우저가 자동으로 안 열림",
+        "fix": "터미널에 출력된 링크 클릭 또는 Ctrl+] 로 최근 아티팩트 열기, /artifacts 목록에서 o 키"
+      }
+    ],
+    "faq": [
+      {
+        "q": "claude.ai의 Claude Design과 무엇이 다른가요?",
+        "a": "만드는 캔버스는 같은 Claude Design 아티팩트임. /design은 Claude Code 안에서 실행되어 내 폴더 코드·디자인 시스템을 읽고, 고른 시안을 같은 세션에서 바로 코드로 구현하는 점이 다름"
+      },
+      {
+        "q": "무료 요금제로도 되나요?",
+        "a": "Claude Code가 무료 요금제에 없으므로 /design은 불가. claude.ai 대화 속 Claude Design은 무료 요금제에서도 사용 가능"
+      },
+      {
+        "q": "추가 요금이 드나요?",
+        "a": "별도 요금 없음. 다만 Claude·Claude Code와 같은 사용량 풀에서 차감되고, 시안 반복이 많을수록 더 많이 씀"
+      },
+      {
+        "q": "만든 시안을 PowerPoint나 PDF로 받을 수 있나요?",
+        "a": "Claude Code 문서는 아트보드별 PNG·PDF 내보내기를 안내함. 고객센터는 Export에서 .zip·PDF·PPTX·Google Slides·HTML도 안내함 — 화면에 보이는 메뉴 기준으로 확인 [확인 필요]"
+      },
+      {
+        "q": "claude.ai/design 사이트가 없어진다던데요?",
+        "a": "단독 Claude Design 사이트는 2026-12-14 종료 예정. 이후 디자인은 Claude 안 아티팩트로 만들고, 기존 디자인 시스템은 Artifacts 페이지에서 옮기기(Migrate) 가능. 프로젝트는 종료 전 Project HTML로 내려받기 권장"
+      },
+      {
+        "q": "한국어 요청문도 되나요?",
+        "a": "공식 문서 예시는 영어지만 한국어 요청문 사용에 제한 안내는 없음. 화면 속 한국어 글꼴 표시는 사전 확인 권장 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "따라 하기 4단계 + 내 강좌 시안까지, 구현은 index.html 한 파일로 제한"
+      },
+      {
+        "level": "고급(자동화·개발)",
+        "guide": "CLAUDE.md 디자인 규칙·/design-sync로 기존 프로젝트 디자인 시스템 연결, 구현 후 디자인·코드 일치 도전과제"
+      },
+      {
+        "level": "초급(처음 사용)",
+        "guide": "Claude Code 설치 부담이 크면 claude.ai 대화 속 Claude Design으로 시안 고르기까지만 체험 (Plan B 경로)"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "요청문 빈칸(강좌명·대상·강조점) 채우기 카드 제공, '고르다·고치다·만들다' 동사로 단계 이름 붙이기"
+      }
+    ],
+    "pro_points": [
+      "핵심은 '시안 먼저 → 고르기 → 고른 것만 구현' 순서 하나",
+      "시안 비교 기준(읽기 쉬움·대상 분위기·버튼 찾기)을 미리 주면 수강생 선택이 빨라짐",
+      "단독 Claude Design 종료(2026-12-14) 일정을 함께 안내하면 기존 사용자 이전 질문에 대비 가능",
+      "claude.ai Claude Design 교안(CAT03-004)과 묶어 '비개발자 → 개발자' 2차시 디자인 과정으로 설계 가능"
+    ],
+    "day_before": [
+      "강사 계정에서 Claude Code 최신 버전·/login·/design 표시 여부 확인",
+      "따라 하기 요청문을 미리 실행해 캔버스 생성 시간·결과 확인, 화면 캡처 준비",
+      "Plan B용 강사 캔버스 링크·구현된 index.html 예시 준비",
+      "수강생 요금제(Pro 이상 여부) 사전 조사, 무료 사용자용 claude.ai Design 경로 안내문 준비",
+      "한국어 요청문·한국어 글꼴 표시 상태 확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] /design 정확한 출시일 — 공식 문서는 Week 34(2026-08-17~21), v2.1.234 이상으로만 표기",
+    "[확인 필요] 템플릿 기반 /design·/slides가 v2.1.265를 요구하게 된 날짜",
+    "[확인 필요] 캔버스 Export 메뉴 형식 — Claude Code 문서(PNG·PDF)와 고객센터(.zip·PDF·PPTX·Google Slides·HTML) 표기가 다름",
+    "[실험 기능] /design은 연구 미리보기(research preview)",
+    "[확인 필요] 원화 가격, Team 좌석별 정확한 가격",
+    "교안 작성 중 실제 Claude Code 계정으로 /design을 재현하지 못함 — Claude Code Docs(What's new Week 34·Artifacts·Changelog)·Claude 고객센터 기준"
+  ],
+  "sources": [
+    {
+      "title": "Claude Code Docs – What's new Week 34 · August 17–21, 2026 (/design)",
+      "url": "https://code.claude.com/docs/en/whats-new/2026-w34",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Claude Code Docs – Share session output as artifacts (Start from a Slides, Design, or Docs template · Availability)",
+      "url": "https://code.claude.com/docs/en/artifacts",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Claude Code Docs – Changelog (v2.1.302, 2026-10-16)",
+      "url": "https://code.claude.com/docs/en/changelog",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Claude 고객센터 – Get started with Claude Design",
+      "url": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Claude 고객센터 – Migrate from standalone Claude Design to Claude",
+      "url": "https://support.claude.com/en/articles/17440474-migrate-from-standalone-claude-design-to-claude",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Claude 블로그 – Claude Code now supports artifacts (2026-06-18)",
+      "url": "https://claude.com/blog/artifacts-in-claude-code",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Claude 요금제 (claude.com/pricing, 교안 AI-2026-10-CAT07-002 확인값)",
+      "url": "https://claude.com/pricing",
+      "checked": "2026-10-14"
+    }
+  ]
+}

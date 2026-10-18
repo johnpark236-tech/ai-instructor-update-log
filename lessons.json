@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 124,
+  "count": 125,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-013",
+      "version": "v1.0",
+      "created_at": "2026-10-18 19:20 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "Claude Code의 /design으로 '수업 신청 페이지' 화면 시안 여러 개를 받아 고르고, 고른 시안을 실제 웹페이지 파일로 만들 수 있음",
+      "summary": "/design은 Claude Design의 아트보드(artboard) 작업 방식을 Claude Code(터미널·데스크톱 앱)로 가져온 스킬임. ① 요청문 한 줄로 편집 가능한 시안 여러 장이 담긴 캔버스를 claude.ai에 아티팩트로 게시 ② 브라우저에서 시안 고르기·요소 직접 수정 ③ 고른 시안을 Claude Code가 내 폴더의 코드로 구현. 2026-08 주간(Week 34, v2.1.234) 연구 미리보기로 출시, Pro·Max·Team·Enterprise 대상. 무료 요금제는 Claude Code 미포함. 단독 Claude Design(claude.ai/design)은 2026-12-14 종료 예정",
+      "tool": "Claude Code",
+      "feature": "/design 스킬(연구 미리보기) — 요청문으로 편집 가능한 아트보드 캔버스를 Claude Design 아티팩트로 게시, 시안 고르기·요소 직접 수정·PNG/PDF 내보내기, 고른 시안을 Claude Code가 코드로 구현, /design-sync로 코드베이스 디자인 시스템 가져오기",
+      "company": "Anthropic",
+      "type": "update",
+      "released": "2026-08-17",
+      "categories": [
+        "CAT-07",
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① '수업 신청 페이지' 시안 3장이 담긴 Claude Design 캔버스 링크 1개 + ② 직접 고친 최종 시안 1장(PNG 또는 PDF) + ③ 고른 시안을 구현한 index.html 1개 + ④ 시안 고른 이유 3줄 메모",
+      "access": "paid",
+      "total_minutes": 73,
+      "notice": "",
+      "emoji": "🎨",
+      "one_liner": "한 줄 요청 → 화면 시안 → 코드 완성"
+    },
     {
       "id": "AI-2026-10-CAT03-021",
       "version": "v1.0",
