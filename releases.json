@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 21:05 KST",
+  "updated_at": "2026-10-18 22:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3031,6 +3031,21 @@
       },
       "checked": "2026-10-18",
       "lesson_id": "AI-2026-10-CAT06-012"
+    },
+    {
+      "id": "google-docs-2026-10-05-markdown",
+      "date": "2026-10-05",
+      "tool": "Google Docs",
+      "company": "Google",
+      "type": "update",
+      "title": "Drive·Docs Markdown(.md) 기본 지원",
+      "summary": "Drive 미리보기에서 .md 파일을 서식대로 보고(Markdown·Preview 전환), Docs Markdown Mode에서 변환 없이 편집·공동 작업·댓글, 개인 계정·모든 Workspace 대상, 최대 15일 순차 출시",
+      "source": {
+        "title": "Google Workspace Updates – Preview, edit and collaborate on Markdown (.md) files natively across Drive and Docs",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT03-022"
     }
   ]
 }

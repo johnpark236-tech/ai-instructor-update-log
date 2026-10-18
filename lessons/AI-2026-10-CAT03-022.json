@@ -1,0 +1,554 @@
+{
+  "id": "AI-2026-10-CAT03-022",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-18 22:10 KST",
+  "checked": "2026-10-18",
+  "review_by": "2027-01-18",
+  "title": "AI가 만든 Markdown(.md) 답변 파일을 변환 없이 Google Docs에서 열어 고치고, 댓글로 함께 다듬고, Drive 미리보기로 바로 공유할 수 있음",
+  "summary": "Google Docs·Drive가 Markdown(.md·.markdown) 파일을 기본 지원함. ① Drive 미리보기에서 Markdown·Preview 전환(제목·표·클릭 가능한 링크 표시) ② 더블클릭하면 Docs의 Markdown Mode로 열림(제목 옆 .md 태그) ③ 변환 없이 .md 파일 그대로 실시간 공동 편집·댓글 ④ 버전 기록으로 되돌리기. 2026-10-05부터 순차 출시(최대 15일), 무료 개인 Google 계정 + 모든 Workspace 요금제, 켜고 끄는 설정 없음",
+  "glance": {
+    "emoji": "📝",
+    "one_liner": "AI 답변 .md 파일을 Docs에서 바로 편집",
+    "cards": [
+      {
+        "icon": "👀",
+        "title": "Drive 미리보기",
+        "text": "제목·표·링크를 서식대로 표시"
+      },
+      {
+        "icon": "✏️",
+        "title": "마크다운 모드",
+        "text": "변환 없이 .md 그대로 편집"
+      },
+      {
+        "icon": "💬",
+        "title": "함께 다듬기",
+        "text": "공유·실시간 편집·댓글"
+      },
+      {
+        "icon": "⏪",
+        "title": "버전 기록",
+        "text": "잘못 고친 부분 되돌리기"
+      }
+    ],
+    "diagram": {
+      "title": "AI 답변 → 팀 문서 흐름",
+      "nodes": [
+        {
+          "icon": "🤖",
+          "label": "AI로 .md 작성"
+        },
+        {
+          "icon": "☁️",
+          "label": "Drive 업로드"
+        },
+        {
+          "icon": "👀",
+          "label": "미리보기 확인"
+        },
+        {
+          "icon": "✏️",
+          "label": "Docs에서 편집"
+        },
+        {
+          "icon": "🤝",
+          "label": "공유·댓글"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "기본 지원 전",
+        "text": "Drive에서 # 기호 그대로 보임, Docs로 변환하면 서식·댓글이 깨짐"
+      },
+      "after": {
+        "label": "기본 지원 후",
+        "text": ".md 파일 그대로 서식 미리보기 + Docs 편집·댓글"
+      }
+    },
+    "cautions": [
+      "실습 파일엔 개인정보 넣지 않기",
+      "AI 답변 사실·숫자 직접 확인",
+      "공유 범위·권한 꼭 확인"
+    ]
+  },
+  "tool": "Google Docs",
+  "feature": "Markdown(.md) 파일 기본 지원(Preview, edit and collaborate on Markdown files natively across Drive and Docs) — Drive 미리보기 Markdown·Preview 전환(제목·표·클릭 가능한 링크), 더블클릭 시 Docs Markdown Mode(.md 태그)로 변환 없이 편집, 공유·실시간 공동 편집·댓글 유지, 버전 기록 되돌리기, 스마트 칩·HTML 서식·글자색·강조·정렬은 제외, 관리자·사용자 설정 없음",
+  "company": "Google",
+  "type": "update",
+  "released": "2026-10-05",
+  "categories": [
+    "CAT-03",
+    "CAT-01"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-WRI",
+    "JOB-DEV"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 30,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Google 계정 (무료 개인 계정 또는 Workspace 계정)",
+    "PC 웹 브라우저 + Google Drive(drive.google.com)",
+    "Markdown 답변을 만들어 줄 AI 1개 (ChatGPT·Claude·Gemini 중 무료 이용 가능한 것) 또는 메모장",
+    "연습용 가상 주제 1개 (예: '가상 AI 활용 수업 안내문')",
+    "공유 실습용 짝 1명 또는 강사 보조 계정"
+  ],
+  "outcome": "① AI로 만든 수업 안내문 Markdown 파일 1개(class-guide.md) + ② Drive 미리보기 확인 + ③ Docs Markdown Mode에서 고친 최종본 + ④ 짝과 주고받은 댓글 2개 + ⑤ 버전 기록 되돌리기 1회",
+  "objectives": [
+    "Markdown(.md)이 무엇이고 AI 답변·Drive·Docs에서 왜 유용한지 설명할 수 있음",
+    "AI가 만든 .md 파일을 Drive에 올려 미리보기로 확인하고 Docs Markdown Mode에서 편집할 수 있음",
+    "공유·댓글·버전 기록으로 .md 문서를 팀과 함께 다듬는 업무 흐름을 설계할 수 있음"
+  ],
+  "pricing": {
+    "access": "free",
+    "summary": "무료 개인 Google 계정 + 모든 Google Workspace 요금제에서 추가 요금 없이 사용. 관리자·사용자 설정 없이 자동 적용, 2026-10-05부터 순차 출시(표시까지 최대 15일)",
+    "plans": [
+      {
+        "name": "무료 개인 Google 계정",
+        "price": "$0",
+        "features": "Drive 미리보기 + Docs Markdown Mode 편집·공유·댓글 + 버전 기록"
+      },
+      {
+        "name": "Workspace Business Starter",
+        "price": "$7/사용자/월 (연간 약정)",
+        "features": "개인 계정과 같은 Markdown 기능 + 업무용 Drive 저장 공간"
+      },
+      {
+        "name": "Workspace Business Standard",
+        "price": "$14/사용자/월 (연간 약정)",
+        "features": "같은 Markdown 기능 + 더 큰 저장 공간·Gemini 기능"
+      },
+      {
+        "name": "Workspace Business Plus",
+        "price": "$22/사용자/월 (연간 약정)",
+        "features": "같은 Markdown 기능 + 보안·보관 기능 강화"
+      }
+    ],
+    "note": "Markdown 지원 자체는 모든 요금제 동일(Workspace Updates 2026-10-05 Availability 기준). Workspace 가격은 교안 AI-2026-10-CAT03-014 확인값(연간 약정, 2026-10-17) 재사용, 원화 가격 [확인 필요]",
+    "checked": "2026-10-18",
+    "sources": [
+      {
+        "title": "Google Workspace Updates – Preview, edit and collaborate on Markdown (.md) files natively across Drive and Docs",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html"
+      },
+      {
+        "title": "Google Docs 편집기 고객센터 – View and edit Markdown (.md) files in Google Docs",
+        "url": "https://support.google.com/docs/answer/18289341?hl=en"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2024",
+      "text": "Google Docs Markdown 가져오기·내보내기 지원 (Docs 형식으로 변환하는 방식) [확인 필요: 정확한 날짜]"
+    },
+    {
+      "date": "2026-10-05",
+      "text": "Drive·Docs Markdown(.md) 기본 지원 발표 + Rapid·Scheduled Release 순차 출시 시작 (표시까지 최대 15일)"
+    },
+    {
+      "date": "2026-10-20 무렵",
+      "text": "순차 출시 15일 경과 — 대부분 계정 표시 예상 [미검증]"
+    }
+  ],
+  "theory": {
+    "definition": "Markdown(마크다운)은 # 제목, - 목록, | 표 | 같은 간단한 기호로 문서 구조를 적는 글 형식임. ChatGPT·Claude·Gemini 같은 AI 답변도 대부분 Markdown으로 만들어짐. 이번 업데이트로 .md 파일을 Docs 형식으로 바꾸지 않고 Drive에서 서식대로 보고 Docs에서 바로 고칠 수 있음",
+    "analogy": "외국어 원서를 번역본으로 바꾸지 않고 원서 그대로 펴서 밑줄 긋고 메모하는 것과 같음. 번역(변환) 과정에서 생기던 서식 깨짐이 없음",
+    "comparison": {
+      "headers": [
+        "구분",
+        "AI 답변 복사·붙여넣기",
+        "Docs로 가져오기(변환)",
+        "Markdown Mode(신규)"
+      ],
+      "rows": [
+        [
+          "파일 형식",
+          "Docs 문서로 새로 만듦",
+          "Google Docs 형식으로 바뀜",
+          ".md 파일 그대로 유지"
+        ],
+        [
+          "서식",
+          "붙여넣기마다 달라짐",
+          "서식이 바뀔 수 있음",
+          "제목·목록·표 구조 유지"
+        ],
+        [
+          "Drive 미리보기",
+          "—",
+          "Docs 화면",
+          "Markdown·Preview 전환"
+        ],
+        [
+          "댓글",
+          "가능",
+          "변환 시 댓글 사라질 수 있음",
+          "댓글 유지 (다시 열어도 남음)"
+        ],
+        [
+          "다른 도구로 다시 쓰기",
+          "내보내기 필요",
+          "내보내기 필요",
+          ".md 그대로 AI·개발 도구에서 재사용"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "Drive 미리보기",
+        "body": "① 파일 오른쪽 클릭 > 연결 앱(Open with) > 미리보기(Preview) ② 상단에서 Markdown(기호 원문) ↔ Preview(서식 화면) 전환 ③ 링크 클릭 가능 + 표 정돈된 모양으로 표시"
+      },
+      {
+        "title": "Markdown Mode",
+        "body": "① Drive에서 .md 파일 더블클릭 → Docs에서 Markdown Mode로 열림 ② 제목 옆 .md 태그로 구분 ③ 저장해도 Docs 파일로 바뀌지 않고 .md 파일 유지"
+      },
+      {
+        "title": "빠지는 서식",
+        "body": "① 스마트 칩 → 일반 글자·링크 ② HTML 서식 → 일반 글자 ③ 글자색·강조색·정렬 → 제거. Markdown에 없는 꾸밈은 남지 않음"
+      }
+    ],
+    "can": [
+      "AI가 만든 .md 답변·회의록·수업 안내문을 Drive에 올려 서식대로 미리보기",
+      "Docs Markdown Mode에서 변환 없이 문장·제목·목록·표 고치기",
+      "다른 사람과 공유해 실시간 공동 편집·댓글 달기 (댓글은 다시 열어도 유지)",
+      "파일 > 버전 기록(Version history)으로 이전 상태 되돌리기",
+      "고친 .md 파일을 다시 AI·노트 앱(Obsidian 등)·개발 도구에 그대로 사용"
+    ],
+    "cannot": [
+      "글자색·강조색·정렬 같은 꾸밈 유지 불가 (제거됨)",
+      "스마트 칩(사람·날짜 칩 등)은 일반 글자·링크로 바뀜",
+      "관리자·사용자가 켜고 끄는 설정 없음 — 순차 출시로 최대 15일 동안 안 보일 수 있음",
+      "지원 Markdown 문법 전체 목록은 공식 문서에 없음 [확인 필요]",
+      "모바일 앱 지원·파일 크기 제한은 공식 문서에 없음 [확인 필요]",
+      "Markdown Mode에서 Docs 측면 패널 Gemini 사용 가능 여부 미명시 [확인 필요]"
+    ],
+    "safety": [
+      "실습 파일에는 실명·연락처·학생 정보 같은 개인정보를 넣지 않음",
+      "AI가 만든 날짜·숫자·사실은 Docs에서 고치기 전에 직접 확인함",
+      "공유 시 '링크가 있는 모든 사용자' 대신 필요한 사람만 지정하고 권한(뷰어·댓글 작성자·편집자)을 확인함",
+      ".md 파일은 다른 도구로 쉽게 옮겨지므로 기밀 문서는 업로드 전 조직 규정 확인",
+      "AI 답변을 그대로 배포하지 않고 출처·저작권(인용한 글·이미지) 확인 후 사용"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① AI가 쓴 수업 안내문 class-guide.md + ② Drive 미리보기 + ③ Docs Markdown Mode 최종본 + ④ 짝과 댓글 2개 + ⑤ 버전 되돌리기. 비포(# 기호가 그대로 보이거나 변환하며 서식이 깨짐)가 애프터(.md 그대로 보기·편집·댓글)로 바뀜",
+    "follow": [
+      {
+        "title": "AI로 Markdown 답변 만들기",
+        "minutes": 5,
+        "do": "ChatGPT·Claude·Gemini 중 하나에 요청 → 답변의 코드 블록 복사 → 메모장에 붙여 넣고 class-guide.md 이름으로 저장 (파일 형식: 모든 파일, 인코딩 UTF-8)",
+        "prompt": "가상의 'AI 활용 기초 수업' 안내문을 Markdown 형식으로 써 줘. 제목(#), 소제목(##) 3개(수업 소개·준비물·일정), 준비물은 글머리 목록, 일정은 날짜·주제·장소 3열 표로 만들고, 참고 링크 1개를 [텍스트](주소) 형식으로 넣어 줘. 실제 사람 이름은 쓰지 말고 코드 블록 하나로만 답해 줘.",
+        "expect": "#·##·-·| 기호가 들어간 class-guide.md 파일 1개",
+        "note": "AI가 '파일 내려받기'를 주면 그대로 받아도 됨. 확장자가 .md.txt가 되지 않게 확인"
+      },
+      {
+        "title": "Drive에 올리고 미리보기",
+        "minutes": 5,
+        "do": "drive.google.com > 새로 만들기 > 파일 업로드 → class-guide.md 선택 → 파일 오른쪽 클릭 > 연결 앱(Open with) > 미리보기(Preview) → 상단 Markdown ↔ Preview 전환",
+        "prompt": "",
+        "expect": "Preview에서 제목·목록·표가 서식대로, 링크는 클릭 가능하게 표시",
+        "note": "Preview 전환이 없으면 순차 출시 미적용 상태(최대 15일). Plan B 참고 [확인 필요: 메뉴 한국어 표기]"
+      },
+      {
+        "title": "Docs Markdown Mode로 열기",
+        "minutes": 5,
+        "do": "Drive에서 파일 더블클릭 → Google Docs에서 열림 확인 → 문서 제목 옆 .md 태그 확인 → 소제목 1개 문구 수정, 표에 일정 1줄 추가",
+        "prompt": "",
+        "expect": ".md 태그가 붙은 Docs 화면 + 수정 내용 반영",
+        "note": "Drive 목록에 Google Docs 파일이 새로 생기지 않고 .md 파일 하나만 있는지 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "짝과 공유·댓글",
+        "minutes": 6,
+        "do": "오른쪽 위 공유 → 짝 계정 추가(권한: 댓글 작성자 또는 편집자) → 짝은 일정 표에 댓글 1개, 나는 답글 1개 → 댓글 반영 후 해결",
+        "prompt": "",
+        "expect": "댓글 2개(질문 1 + 답글 1) + 반영된 표",
+        "note": "Docs를 닫고 다시 열어 댓글이 남아 있는지 확인 — 이번 기능의 핵심"
+      },
+      {
+        "title": "내 업무 문서로 바꾸기",
+        "minutes": 5,
+        "do": "내 실제 업무 하나(예: 회의록 틀, 수업 계획, 주간 보고)를 골라 AI에 Markdown 템플릿 요청 → .md로 저장 → Drive 업로드 → Docs에서 내 내용 채우기",
+        "prompt": "매주 쓰는 [주간 보고/회의록/수업 계획] 템플릿을 Markdown으로 만들어 줘. 제목, 날짜 칸, 3개 소제목, 할 일 체크리스트(- [ ]), 진행 상황 표(항목·담당·상태)를 넣고 빈칸은 [ ]로 표시해 줘.",
+        "expect": "내 업무용 .md 템플릿 1개 + Docs에서 채운 1회분",
+        "note": "체크리스트(- [ ]) 표시 방식은 공식 문서 미명시 — 결과 화면으로 확인 [확인 필요]"
+      },
+      {
+        "title": "버전 기록으로 되돌리기",
+        "minutes": 4,
+        "do": "일부러 소제목 하나 삭제 → 파일 > 버전 기록(Version history) > 버전 기록 보기 → 삭제 전 버전 선택 → 이 버전 복원",
+        "prompt": "",
+        "expect": "삭제한 소제목이 돌아온 문서",
+        "note": "공동 편집 중이면 짝에게 복원 사실 알림"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "Docs에서 글자색·가운데 정렬을 넣고 닫았음 다시 열어 어떤 꾸밈이 빠지는지 확인 + 메모 1줄"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Docs에서 고친 class-guide.md를 내려받아 다시 AI에 붙여 넣고 '이 안내문을 학부모용으로 쉽게 바꿔 줘' 요청 → 새 .md로 저장해 Drive에서 두 파일 비교"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "팀 공유 드라이브에 '.md 문서 규칙' 폴더 만들기: 템플릿 .md 3개 + 사용 안내 README.md, 동료 1명이 Docs에서 바로 편집하도록 공유"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 '내 업무 문서' .md 결과를 보여 주고, 예전 복사·붙여넣기보다 줄어든 손질과 빠진 꾸밈 1개를 말함",
+    "quiz": [
+      {
+        "q": "Drive에 올린 .md 파일을 더블클릭하면 어떻게 열리나요?",
+        "options": [
+          "메모장처럼 기호 원문만 보임",
+          "Google Docs 파일로 자동 변환됨",
+          "Docs의 Markdown Mode로 열리고 .md 파일이 유지됨",
+          "내려받기만 가능함"
+        ],
+        "answer": 2,
+        "explain": "더블클릭하면 Docs에서 Markdown Mode로 열리고 제목 옆에 .md 태그가 붙음. 파일은 Docs 형식으로 바뀌지 않음"
+      },
+      {
+        "q": "Markdown Mode에서 저장 후 남지 않는 것은?",
+        "options": [
+          "제목(#)",
+          "표",
+          "링크",
+          "글자색·강조색·정렬"
+        ],
+        "answer": 3,
+        "explain": "글자색·강조색·정렬은 제거되고, 스마트 칩은 일반 글자·링크로, HTML 서식은 일반 글자로 바뀜"
+      },
+      {
+        "q": "기능이 아직 안 보일 때 올바른 대응은?",
+        "options": [
+          "설정에서 Markdown 켜기 버튼을 찾음",
+          "관리자에게 켜 달라고 요청함",
+          "순차 출시 중이므로 최대 15일 기다리며 Plan B로 실습함",
+          "유료 요금제로 바꿈"
+        ],
+        "answer": 2,
+        "explain": "관리자·사용자 설정이 없고 모든 요금제 대상임. 2026-10-05부터 최대 15일에 걸쳐 순차 표시됨"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "기능 활용",
+        "high": "업로드·미리보기·Markdown Mode 편집·댓글·버전 복원 모두 완료",
+        "mid": "3~4가지 완료",
+        "low": "2가지 이하"
+      },
+      {
+        "criterion": "검증",
+        "high": "AI 답변 사실 확인 + 빠지는 꾸밈 확인 + 공유 권한 확인",
+        "mid": "1~2가지 확인",
+        "low": "확인 없음"
+      },
+      {
+        "criterion": "업무 흐름 설계",
+        "high": "내 업무용 .md 템플릿을 만들고 1회분 채움",
+        "mid": "템플릿만 만듦",
+        "low": "설계 없음"
+      }
+    ],
+    "next": [
+      "Gemini in Workspace 측면 패널로 앱 어디서나 문서·메일·일정 처리 (AI-2026-10-CAT03-014)",
+      "Claude for Google Workspace로 Docs·Sheets·Slides 함께 쓰기 (AI-2026-10-CAT06-001)",
+      "ChatGPT Pages로 대화를 편집 가능한 문서로 만들기 (AI-2026-10-CAT03-013)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~4분",
+        "content": "오프닝: AI 답변을 Docs에 붙여 넣었다가 서식이 깨진 경험 묻기",
+        "note": "원서·번역본 비유"
+      },
+      {
+        "time": "4~18분",
+        "content": "1부 이론: Markdown 기호 5개(#·##·-·|·[ ]( )), 미리보기·Markdown Mode·빠지는 서식, 출시 일정",
+        "note": "기호는 칠판에 크게"
+      },
+      {
+        "time": "18~33분",
+        "content": "2부 따라 하기: AI로 .md 만들기 → Drive 미리보기 → Docs Markdown Mode 편집",
+        "note": ".md.txt 확장자 실수 순회 점검"
+      },
+      {
+        "time": "33~48분",
+        "content": "2부 내 것 만들기: 짝 공유·댓글 → 내 업무 템플릿 → 버전 복원",
+        "note": "짝 없는 수강생은 강사 보조 계정과 연결"
+      },
+      {
+        "time": "48~54분",
+        "content": "3부 정리: 결과 공유, 퀴즈 3문제, 다음 단계",
+        "note": "전체 54분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI에게 받은 답을 Google 문서에 붙여 넣었더니 샵(#)이랑 별표(*)가 그대로 보였던 적 있으시죠? 오늘은 그 기호들이 원래 뜻대로 보이게, 그리고 파일 그대로 함께 고칠 수 있게 해 보겠습니다."
+      },
+      {
+        "label": "Markdown 설명",
+        "text": "Markdown은 어려운 코딩이 아닙니다. 샵 하나는 큰 제목, 샵 두 개는 작은 제목, 빼기 기호는 목록, 세로줄은 표입니다. 이 네 가지만 알면 AI 답변 구조가 다 보입니다."
+      },
+      {
+        "label": "검증 습관",
+        "text": "Docs에서 예쁘게 보인다고 내용이 맞는 건 아닙니다. 날짜와 장소는 꼭 직접 확인하시고, 공유할 때는 필요한 사람만 넣어 주세요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 업무 템플릿은 Drive에 두세요. 다음부터는 AI에게 'Markdown으로 써 줘'라고 하고, 그 파일을 그대로 올려서 팀과 고치시면 됩니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "순차 출시 미적용으로 Preview 전환·Markdown Mode가 안 보임",
+        "response": "강사 화면 시연 + 수강생은 기존 방식(Docs 새 문서 > 파일 > 열기로 .md 가져오기 또는 Markdown 붙여넣기)으로 실습 후 차이 비교 [확인 필요: 기존 메뉴 이름]"
+      },
+      {
+        "situation": "메모장에서 .md 저장이 어려움 (확장자 .txt로 저장됨)",
+        "response": "AI의 파일 내려받기 기능 사용 또는 강사가 미리 만든 class-guide.md를 공유 폴더로 배포"
+      },
+      {
+        "situation": "공유 실습 짝이 없음 (Google 계정 1개뿐)",
+        "response": "강사 보조 계정과 공유하거나, 댓글은 본인이 달고 해결하는 흐름만 실습"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Drive에서 미리보기가 기호 원문만 보임",
+        "fix": "미리보기 상단 Markdown ↔ Preview 전환 확인 → 없으면 순차 출시 대기(최대 15일), 파일 확장자가 .md 또는 .markdown인지 확인"
+      },
+      {
+        "issue": "더블클릭했더니 다른 앱으로 열림",
+        "fix": "오른쪽 클릭 > 연결 앱(Open with) > Google Docs 선택 [확인 필요]"
+      },
+      {
+        "issue": "한글이 깨져 보임",
+        "fix": "메모장 저장 시 인코딩 UTF-8 선택 후 다시 업로드"
+      },
+      {
+        "issue": "넣은 글자색·가운데 정렬이 사라짐",
+        "fix": "정상 동작. Markdown에 없는 꾸밈은 제거됨, 강조는 **굵게**·제목 단계로 표현"
+      },
+      {
+        "issue": "실수로 내용을 지움",
+        "fix": "파일 > 버전 기록(Version history)에서 이전 버전 복원"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 Gmail 계정으로도 되나요?",
+        "a": "됨. 개인 Google 계정과 모든 Workspace 요금제 대상, 추가 요금 없음"
+      },
+      {
+        "q": "켜는 설정이 있나요?",
+        "a": "없음. 관리자·사용자 설정 없이 순차 출시로 자동 적용, 2026-10-05부터 최대 15일"
+      },
+      {
+        "q": "Docs에서 고치면 Google 문서로 바뀌나요?",
+        "a": "안 바뀜. 파일은 Drive에서 .md로 유지되고 제목 옆 .md 태그로 구분됨"
+      },
+      {
+        "q": "댓글은 다른 앱에서 열어도 남나요?",
+        "a": "고객센터는 Docs·다른 도구로 다시 열어도 댓글·서식이 유지된다고 안내. 다른 앱에서 댓글이 어떻게 보이는지는 앱마다 다를 수 있음 [확인 필요]"
+      },
+      {
+        "q": "Markdown Mode에서 Gemini로 다듬을 수 있나요?",
+        "a": "공식 문서에 명시 없음 [확인 필요]. 안 되면 AI 채팅에서 다듬은 뒤 .md를 다시 올림"
+      },
+      {
+        "q": "휴대폰에서도 되나요?",
+        "a": "공식 안내는 PC 웹 기준. 모바일 앱 지원은 미명시 [확인 필요]"
+      },
+      {
+        "q": "예전 '.md 가져오기'와 무엇이 다른가요?",
+        "a": "예전 방식은 Docs 형식으로 변환되어 서식·댓글이 바뀔 수 있었음. 새 방식은 .md 파일 그대로 편집·댓글"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "강사가 배포한 .md 파일로 업로드·미리보기·Docs 편집 3단계만, Markdown 기호 카드 제공"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "내 업무 템플릿 + 공유·댓글 + ⭐⭐ AI 재활용 도전"
+      },
+      {
+        "level": "시니어",
+        "guide": "AI 요청·저장은 강사가 대신 준비, 더블클릭으로 열기·글자 고치기·되돌리기만 실습"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "'제목·목록·표·링크' 낱말 카드와 기호를 짝지어 익힘, 쉬운 안내문(반 모임 일정) 예시 사용"
+      }
+    ],
+    "pro_points": [
+      "핵심은 'AI에 Markdown으로 써 달라 → .md 그대로 Drive → Docs에서 함께 고치기' 한 흐름",
+      "예전 변환 방식과 나란히 시연하면 댓글·서식 유지 차이가 바로 보임",
+      "AI 문서 도구 교안(Claude for Google Workspace, ChatGPT Pages)과 묶어 'AI 문서 협업' 2차시로 설계 가능"
+    ],
+    "day_before": [
+      "강사 계정에서 Drive 미리보기 Markdown·Preview 전환과 Docs .md 태그 표시 여부 확인, 화면 캡처 준비",
+      "class-guide.md 견본 파일과 공유 폴더 준비 (저장 실패 수강생용)",
+      "메뉴 한국어 표기(연결 앱·미리보기·버전 기록) 실제 화면으로 확인",
+      "체크리스트(- [ ])·굵게(**)·인용(>) 등 문법 표시 결과 미리 시험",
+      "강사 보조 계정 준비 (공유·댓글 실습용)"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 지원 Markdown 문법 전체 목록 — 공식 문서는 링크·표만 명시, 제목·목록은 발표문 기준",
+    "[확인 필요] 모바일 앱 지원·파일 크기 제한",
+    "[확인 필요] Markdown Mode에서 Gemini in Docs 사용 가능 여부",
+    "[확인 필요] 한국어 화면 메뉴 이름(연결 앱·미리보기·버전 기록)",
+    "[확인 필요] 2024년 Docs Markdown 가져오기·내보내기 정확한 날짜 — 보조 기사(How-To Geek) 기준",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — Workspace Updates 블로그·Docs 고객센터 기준"
+  ],
+  "sources": [
+    {
+      "title": "Google Workspace Updates – Preview, edit and collaborate on Markdown (.md) files natively across Drive and Docs (2026-10-05)",
+      "url": "https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Google Docs 편집기 고객센터 – View and edit Markdown (.md) files in Google Docs",
+      "url": "https://support.google.com/docs/answer/18289341?hl=en",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "gHacks – Google Docs Adds Native Markdown File Editing, With Rendered .md Previews in Google Drive (보조 근거)",
+      "url": "https://www.ghacks.net/2026/10/06/google-docs-adds-native-markdown-file-editing-with-rendered-md-previews-in-google-drive/",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "How-To Geek – Google Docs Can Now Import and Export Markdown (보조 근거, 2024 가져오기·내보내기)",
+      "url": "https://www.howtogeek.com/google-docs-markdown-import-export/",
+      "checked": "2026-10-18"
+    }
+  ]
+}
