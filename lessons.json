@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 125,
+  "count": 126,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-014",
+      "version": "v1.0",
+      "created_at": "2026-10-18 20:10 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "'끝'의 기준만 정하면 알아서 끝까지 해내는 코딩 에이전트 — Grok Build(그록 빌드, 터미널) /goal 목표 모드로 '완료 조건 쓰기 + 진행 확인 + 일시 중지·재개' 해 보기",
+      "summary": "2026-06-22 xAI가 공개한 Grok Build(터미널 코딩 에이전트) /goal 목표 모드. 완료 조건을 담은 목표 1줄을 주면 ① 계획·진행 체크리스트 작성 + ② 라운드마다 스스로 진행 점검 + ③ 끝났다고 판단되면 검토 하위 에이전트 여러 개가 증거로 확인(다수 동의 시 완료) + ④ 막히면 일시 중지 후 빠진 점 표시. /goal status·pause·resume·clear, --budget 토큰 상한. 2026-10-09 v1.0.51에서 Ctrl+C 일시 중지·대화 다시 열면 자동 재개·헤드리스(grok -p) 목표 완료 대기 추가",
+      "tool": "Grok",
+      "feature": "Grok Build(터미널 코딩 에이전트 CLI) /goal 목표 모드(Goal Mode) — 완료 조건까지 장시간 자율 실행: 계획·진행 체크리스트, 라운드마다 자체 점검(계속·질문·완료), 검토 하위 에이전트 다수 동의 시 Complete, 막히면 일시 중지·빠진 점 표시, /goal <목표> --budget <토큰>·/goal status·pause·resume·clear, [goal] enabled·GROK_GOAL 설정 · 2026-10-09 v1.0.51 Ctrl+C 일시 중지·대화 다시 열면 재개·헤드리스 grok -p 목표 완료 대기",
+      "company": "xAI (SpaceXSI)",
+      "type": "update",
+      "released": "2026-06-22",
+      "categories": [
+        "CAT-07",
+        "CAT-08",
+        "CAT-02"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-DAT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 완료 조건이 들어간 /goal 목표 문장 1개 + ② Grok이 끝까지 만든 '한국어 단어 퀴즈' 프로그램(word_quiz.py)과 자동 테스트(test_word_quiz.py) 통과 결과 + ③ /goal status 진행 화면(Complete) 캡처 1장 + ④ 내 업무용 '좋은 목표 문장' 카드 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎯",
+      "one_liner": "완료 조건까지 알아서 일하는 AI"
+    },
     {
       "id": "AI-2026-10-CAT07-013",
       "version": "v1.0",

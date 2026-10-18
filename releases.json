@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-18 19:20 KST",
+  "updated_at": "2026-10-18 20:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-build-2026-06-22-goal",
+      "date": "2026-06-22",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Build /goal 목표 모드",
+      "summary": "터미널 코딩 에이전트 Grok Build에 완료·검증될 때까지 장시간 자율 실행하는 /goal 추가 — 진행 체크리스트, 검토 하위 에이전트 확인, /goal status·pause·resume·clear",
+      "source": {
+        "title": "xAI News – Introducing /goal",
+        "url": "https://x.ai/news/introducing-goal"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT07-014"
+    },
+    {
+      "id": "grok-build-2026-10-09-goal-background",
+      "date": "2026-10-09",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Build v1.0.51 목표 일시 중지·재개·헤드리스 대기",
+      "summary": "Ctrl+C로 목표 일시 중지, 목표가 있던 대화를 다시 열면 재개, 헤드리스 grok -p가 백그라운드 목표 완료까지 기다려 결과 보고, /workflow 실행 목록·중지·재개",
+      "source": {
+        "title": "xAI – Grok Build Changelog",
+        "url": "https://x.ai/build/changelog"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT07-014"
+    },
     {
       "id": "claude-code-2026-08-17-design-skill",
       "date": "2026-08-17",
