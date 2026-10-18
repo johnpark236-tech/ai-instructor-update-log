@@ -1,0 +1,582 @@
+{
+  "id": "AI-2026-10-CAT08-017",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-19 00:05 KST",
+  "checked": "2026-10-19",
+  "review_by": "2027-01-19",
+  "title": "AI 팀원 채용하기 — Genspark GenTeam(젠팀)으로 '리서치 담당 + 글쓰기 담당 AI 팀원'이 일하는 팀 채널 만들기",
+  "summary": "2026-07-20 Genspark AI Workspace 6.0에서 공개된 협업 공간 GenTeam. 사람과 AI 에이전트(agent)가 같은 채널·DM에서 함께 일함 → 역할 템플릿(리서처·카피라이터·데이터 분석가 등)으로 AI 팀원 만들기, @멘션·DM으로 일 맡기기, Send as task로 작업 보드(Todo·In Progress·In Review·Done) 관리, 예약 작업(하루 1회 이하), 통화·실시간 자막 요약. 클라우드 에이전트는 Genspark 크레딧 사용, 내 컴퓨터의 Claude Code·Codex CLI·Cursor CLI·OpenCode 연결 에이전트는 크레딧 미사용. 무료·유료 모든 Genspark 계정 포함(웹·iOS·Android·데스크톱 앱)",
+  "glance": {
+    "emoji": "🤝",
+    "one_liner": "사람과 AI 팀원이 한 채널에서 협업",
+    "cards": [
+      {
+        "icon": "🧑‍💼",
+        "title": "역할 템플릿",
+        "text": "리서처·카피라이터 등 골라 채용"
+      },
+      {
+        "icon": "💬",
+        "title": "@멘션·DM",
+        "text": "동료처럼 불러서 일 맡기기"
+      },
+      {
+        "icon": "📋",
+        "title": "작업 보드",
+        "text": "Send as task로 할 일 추적"
+      },
+      {
+        "icon": "💻",
+        "title": "내 PC 에이전트",
+        "text": "Claude Code 등 연결, 크레딧 0"
+      }
+    ],
+    "diagram": {
+      "title": "GenTeam 작업 흐름",
+      "nodes": [
+        {
+          "icon": "📢",
+          "label": "채널 만들기"
+        },
+        {
+          "icon": "🧑‍💼",
+          "label": "AI 팀원 채용"
+        },
+        {
+          "icon": "🏷️",
+          "label": "@멘션·작업 배정"
+        },
+        {
+          "icon": "☁️",
+          "label": "클라우드에서 작업"
+        },
+        {
+          "icon": "📎",
+          "label": "결과 파일 회신"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "AI 창 하나씩 따로",
+        "text": "조사는 이 AI, 글은 저 AI에 복붙, 맥락을 매번 다시 설명하고 진행 상황은 머릿속"
+      },
+      "after": {
+        "label": "AI 팀원이 한 채널에",
+        "text": "@리서처 조사 → @라이터 초안, 대화·결정이 채널에 남고 작업 보드로 진행 확인"
+      }
+    },
+    "cautions": [
+      "실제 고객·학생 개인정보 공유 금지",
+      "메일 발송 등은 승인 카드 확인 후",
+      "결과물 사실·숫자는 사람이 검토"
+    ]
+  },
+  "tool": "Genspark",
+  "feature": "GenTeam(젠팀) — 사람과 AI 에이전트가 함께 쓰는 팀 채널 공간(AI Workspace 6.0): ① 채널·DM·스레드 ② 역할 템플릿(Researcher·Writer·Data Analyst·Copywriter 등)·Build custom으로 AI 팀원 만들기, 모델·스킬(Browse skills·Upload·/ 호출)·Services 탭 연결 앱 지정 ③ @멘션·답장 모드(When @-mentioned·All messages) ④ Send as task 작업 보드(Todo·In Progress·In Review·Done, Board·List) ⑤ 예약 작업(한 번·매일·매주) ⑥ 내 컴퓨터 연결(Connect your computer → Create local agent: Claude Code·Codex CLI·Cursor CLI·OpenCode, 크레딧 미사용) ⑦ 음성·화상 통화 실시간 자막·자동 요약, genspark.ai/genteam·iOS·Android·데스크톱",
+  "company": "Genspark (MainFunc)",
+  "type": "update",
+  "released": "2026-07-20",
+  "categories": [
+    "CAT-08",
+    "CAT-03",
+    "CAT-11"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-BIZ",
+    "JOB-MKT",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Genspark 계정 — 웹 브라우저(Chrome 권장)로 genspark.ai/genteam 접속(무료 계정도 GenTeam 포함)",
+    "크레딧: 클라우드 에이전트 작업마다 Genspark 크레딧 차감 → Free는 하루 100크레딧(평생 한도 있음), 강사는 Plus 계정 권장",
+    "실습 주제 1개 준비: 예) '우리 동네 문화센터 가을 강좌 홍보' — 실제 개인정보 없는 연습 주제",
+    "선택: 짝 실습용으로 옆 사람 이메일(채널 초대용) 또는 초대 링크",
+    "선택(고급): Claude Code·Codex CLI 등이 설치된 내 컴퓨터 — 로컬 에이전트 연결 도전과제용"
+  ],
+  "outcome": "① AI 팀원 2명(리서치 담당 + 글쓰기 담당)이 있는 내 팀 채널 1개 + ② @멘션으로 받은 조사 요약 1개 + ③ 조사 결과를 이어받은 홍보 글 초안 1개 + ④ 작업 보드에 등록·완료 처리한 작업 1건",
+  "objectives": [
+    "GenTeam이 일반 AI 채팅과 무엇이 다른지(역할을 가진 AI 팀원·공유 채널·기억·작업 추적) 설명할 수 있음",
+    "역할 템플릿으로 AI 팀원을 만들고 채널에서 @멘션·DM·Send as task로 일을 맡길 수 있음",
+    "크레딧(클라우드 vs 내 컴퓨터 에이전트)·권한(만든 사람 전용 행동·승인 카드)·개인정보 원칙을 지키며 쓸 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "GenTeam 전용 요금 없음 — 무료·유료 모든 Genspark 계정에 포함. 클라우드 에이전트는 Genspark 크레딧 차감, 내 컴퓨터 연결 에이전트·Claw 에이전트는 크레딧 미사용. 한도: Free 에이전트 100개·채널 100개·컴퓨터당 로컬 에이전트 3개, 유료 에이전트 200개·채널 10,000개. Genspark 요금: Free $0·Plus 월 $24.99·Pro 월 $249.99·Team 좌석당 월 $40",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "하루 100크레딧(평생 한도) + GenTeam 에이전트 100개·채널 100개·컴퓨터당 로컬 에이전트 3개 — 체험·소규모 실습"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $24.99 (연 결제 시 월 $19.99)",
+        "features": "월 10,000크레딧부터 + 에이전트 200개·채널 10,000개 + 로컬 에이전트 확대 [확인 필요: 표 표기 불일치] — 개인 업무용"
+      },
+      {
+        "name": "Pro",
+        "price": "월 $249.99 (연 결제 시 월 $199.99)",
+        "features": "월 125,000크레딧부터 + Plus와 같은 GenTeam 한도 — 클라우드 에이전트를 많이 돌리는 사용자"
+      },
+      {
+        "name": "Team",
+        "price": "좌석당 월 $40 (연 결제 시 $35)",
+        "features": "좌석당 월 10,000크레딧 + 유료 GenTeam 한도 + 팀 관리·결제 통합"
+      },
+      {
+        "name": "Enterprise",
+        "price": "별도 문의",
+        "features": "좌석당 20,000크레딧부터(계약) + 기업 지원, Internal only 채널 설정(외부 멤버 있을 때)"
+      }
+    ],
+    "note": "요금·한도는 Genspark 도움말 'Membership Plans' 미국 달러 기준(2026-10-19 확인), 원화·부가세 미확인. 도움말 표에 로컬 에이전트 행이 2개(컴퓨터당 100개·무제한)로 표기 → 정확한 유료 로컬 한도 [확인 필요]. 작업당 크레딧 소모량은 공식 안내 없음",
+    "checked": "2026-10-19",
+    "sources": [
+      {
+        "title": "Genspark Help Center – Membership Plans",
+        "url": "https://www.genspark.ai/helpcenter/membership-plans"
+      },
+      {
+        "title": "Genspark Help Center – GenTeam",
+        "url": "https://www.genspark.ai/helpcenter/genteam"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-07-20",
+      "text": "Genspark AI Workspace 6.0 발표 — 협업 계층 GenTeam 공개(원클릭 에이전트 배치·직접 만들기, 사람과 에이전트가 같은 채팅, 최신 모델·도구·스킬 내장), SecondBrain·GenMail·Design·AgentBase와 함께"
+    },
+    {
+      "date": "2026-10-19",
+      "text": "도움말 'GenTeam' 기준 현황 — 채널·DM·스레드, 작업 보드, 예약 작업, 통화 자막·요약, 내 컴퓨터(Claude Code·Codex CLI·Cursor CLI·OpenCode) 연결, Claw·OpenClaw 새 에이전트 생성 중단(기존 유지) [확인일 기준, 개별 기능 추가일 미공개]"
+    }
+  ],
+  "theory": {
+    "definition": "GenTeam(젠팀)은 Genspark의 다중 에이전트(multi-agent) 협업 공간임. 사람과 AI 에이전트가 공유 채널·DM에서 함께 대화하고, 에이전트는 역할·기억·이전 대화 맥락을 가진 장기 팀원으로 작업을 맡아 결과물을 채널에 돌려줌",
+    "analogy": "'단톡방에 들어온 AI 인턴들'. 단톡방(채널)에 조사 담당·글쓰기 담당 인턴을 초대해 두고 '@조사담당 이것 좀 찾아 줘'라고 부르면, 인턴이 자기 컴퓨터(클라우드)에서 일한 뒤 파일을 단톡방에 올려 줌. 지난주 결정도 기억하지만, 최종 확인·발송 결재는 사람이 함",
+    "comparison": {
+      "headers": [
+        "구분",
+        "일반 AI 채팅",
+        "Genspark Super Agent",
+        "Genspark GenTeam"
+      ],
+      "rows": [
+        [
+          "함께 쓰는 사람",
+          "나 혼자",
+          "나 혼자",
+          "팀원 여러 명 + AI 팀원 여러 명"
+        ],
+        [
+          "AI 역할",
+          "매번 설명",
+          "만능 에이전트 1개",
+          "역할별 팀원(리서처·라이터 등)"
+        ],
+        [
+          "일 맡기는 방법",
+          "질문 입력",
+          "작업 요청",
+          "@멘션·DM·Send as task"
+        ],
+        [
+          "진행 관리",
+          "없음",
+          "대화 안에서 확인",
+          "작업 보드(Todo→Done)·스레드"
+        ],
+        [
+          "반복 작업",
+          "없음",
+          "[확인 필요]",
+          "예약 작업(한 번·매일·매주)"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "AI 팀원 만들기 2가지",
+        "body": "① 클라우드 에이전트(기본): Members → Agents 옆 + → 템플릿 또는 Build custom → 이름·역할·모델·스킬 → Create agent, Genspark 도구 내장·크레딧 사용 ② 로컬 에이전트: Computers → Connect your computer → 터미널에 명령 실행 → Connected 확인 → Create local agent(작업 폴더·런타임·모델), 내 하드웨어·모델 사용·크레딧 미사용"
+      },
+      {
+        "title": "일 맡기는 3가지 방법",
+        "body": "① DM: 1:1 대화, @멘션 불필요 ② 채널 @멘션: 답장 모드 기본값 'When @-mentioned'(멘션할 때만 답함), 'All messages'로 바꾸면 모든 메시지에 반응 ③ Send as task: 작업 1건 = 담당자 1명 + 전용 스레드, 상태 Todo·In Progress·In Review·Done, 에이전트가 Claim 가능"
+      },
+      {
+        "title": "권한과 승인",
+        "body": "① 채널 누구나: 조사·글쓰기·슬라이드·시트·파일 분석·작업 ② 만든 사람만: 메일 발송·SNS 게시·다른 플랫폼 메시지·전화 등 '내 이름으로 남에게 닿는 행동' ③ 되돌리기 어려운 행동은 승인 요청, 무응답 = 거절 ④ DM 허용 범위 기본 'Only me', 내 에이전트를 채널에 넣는 것은 나만 가능"
+      }
+    ],
+    "can": [
+      "genspark.ai/genteam에서 채널(Channels 옆 +)·DM(Direct messages 옆 +)·스레드 만들기",
+      "역할 템플릿(Researcher·Writer·Data Analyst·Copywriter·Slides Assistant 등) 또는 Build custom으로 AI 팀원 만들기",
+      "에이전트 Skills 탭에서 Browse skills·Upload·Restore defaults, DM에서 / 로 스킬 호출",
+      "Services 탭에서 에이전트가 쓸 연결 앱 지정",
+      "Send as task·More → Tasks로 작업 보드(Board·List) 관리, 태그(bug·feature·research·chore)",
+      "예약 작업: 채팅으로 요청 또는 DM 시계 아이콘·프로필 Scheduled(한 번·매일·매주)",
+      "음성·화상 통화 + 화면 공유 + 실시간 자막·자동 요약",
+      "내 컴퓨터의 Claude Code·Codex CLI·Cursor CLI·OpenCode를 에이전트로 연결해 휴대폰에서 메시지"
+    ],
+    "cannot": [
+      "하루 1회보다 잦은 예약 작업(최소 매일)",
+      "로컬 에이전트의 모델을 만든 뒤 바꾸기(클라우드 에이전트만 변경 가능)",
+      "Claw·OpenClaw 유형 새 에이전트 만들기(기존 것만 유지)",
+      "남의 에이전트를 내가 채널에 추가하기(만든 사람만 가능)",
+      "임시 웹 미리보기를 영구 링크로 쓰기(미리보기는 임시)",
+      "DM 대화 내용을 채널로 자동 공유(에이전트가 옮기지 않음)"
+    ],
+    "safety": [
+      "실습 채널에 실제 고객·학생 실명·연락처·주민번호 공유 금지 — 연습은 가명·가짜 자료로",
+      "메일 발송·SNS 게시 같은 '내 이름으로 나가는 행동'은 승인 카드 내용을 끝까지 읽고 승인",
+      "Services 탭 연결 앱은 꼭 필요한 것만, 회사 계정 연결은 회사 보안 정책 먼저 확인",
+      "통화 실시간 자막·요약 사용 시 참석자에게 미리 알리고 동의 받기",
+      "에이전트가 만든 조사·글의 사실·숫자·출처는 사람이 원문과 대조 후 사용",
+      "로컬 에이전트는 내 컴퓨터 폴더에 접근 → 작업 폴더를 실습용 빈 폴더로 지정"
+    ]
+  },
+  "practice": {
+    "preview": "팀 채널 만들기 → 템플릿으로 AI 팀원 2명 채용 → @리서처 조사 → @라이터 홍보 글 → Send as task 작업 보드 → (선택) 예약 작업. ① 팀 채널 + ② 조사 요약 + ③ 홍보 글 초안 + ④ 완료 처리한 작업 1건 완성",
+    "follow": [
+      {
+        "title": "GenTeam 열고 채널 만들기",
+        "minutes": 7,
+        "do": "genspark.ai/genteam 접속·로그인 → 왼쪽 Channels 옆 + → 채널 이름 '가을강좌-홍보' 입력 → 멤버 선택(혼자면 건너뜀) → 만들기",
+        "prompt": "",
+        "expect": "왼쪽 Channels 목록에 '가을강좌-홍보' 채널 표시",
+        "note": "처음 접속 시 안내 도우미 Genny가 할 일을 묻고 채용할 역할을 추천할 수 있음 [확인 필요: 화면 순서]"
+      },
+      {
+        "title": "AI 팀원 2명 채용",
+        "minutes": 10,
+        "do": "왼쪽 Members → Agents 옆 + → 템플릿 갤러리에서 리서처(Researcher) 선택 → 이름 'researcher' → Create agent → 같은 방법으로 글쓰기 템플릿(Writer 또는 Copywriter)으로 'writer' 만들기 → 두 에이전트를 '가을강좌-홍보' 채널에 추가",
+        "prompt": "",
+        "expect": "Members > Agents에 researcher·writer 2명, 채널 멤버 목록에도 표시",
+        "note": "템플릿 이름은 도움말·소개 페이지 기준, 화면 표기 다를 수 있음 [확인 필요]. 모델은 기본값 그대로"
+      },
+      {
+        "title": "@리서처에게 조사 맡기기",
+        "minutes": 10,
+        "do": "채널 입력창에 아래 프롬프트 입력(@researcher 멘션 포함) → 답이 올 때까지 대기 → 결과의 출처 링크 1개 이상 직접 열어 확인",
+        "prompt": "@researcher 50~60대 성인 대상 '스마트폰 AI 활용' 문화센터 강좌를 홍보하려고 해. ① 이 연령대가 AI를 배우고 싶어 하는 이유 3가지 ② 비슷한 강좌 홍보 문구에서 자주 쓰는 표현 5개 ③ 홍보할 때 피해야 할 표현 3가지를 출처와 함께 짧게 정리해서 이 채널에 올려 줘.",
+        "expect": "①②③ 3칸 조사 요약 + 출처 링크가 채널에 게시",
+        "note": "답장 모드 기본값은 '@멘션할 때만' → 멘션 빠지면 반응 없음"
+      },
+      {
+        "title": "@라이터에게 이어서 맡기기",
+        "minutes": 8,
+        "do": "조사 결과 메시지 아래에 아래 프롬프트 입력 → writer가 채널 대화 맥락(조사 결과)을 이어받는지 확인",
+        "prompt": "@writer 위에 researcher가 정리한 조사 내용을 바탕으로 강좌 홍보 글을 써 줘. 조건: ① 문자 메시지용 90자 이내 1개 ② 전단지용 제목 + 본문 5줄 1개 ③ 피해야 할 표현은 쓰지 말 것. 강좌: 매주 화요일 오전 10시, 4주, 수강료 4만 원.",
+        "expect": "①문자용 짧은 글 + ②전단지 제목·본문 5줄",
+        "note": "강좌 정보는 예시, 내 실제 정보로 바꿔도 됨(개인정보 제외)"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "작업으로 맡기기(Send as task)",
+        "minutes": 8,
+        "do": "입력창에 아래 문장 입력 → Send 옆 'Send as task'로 보내기 → More → Tasks에서 작업 카드 확인 → 담당자(writer) 지정 또는 에이전트가 Claim → 결과 확인 후 상태를 Done으로 바꾸기",
+        "prompt": "홍보 글 중 전단지용 본문을 더 쉬운 말로 다시 다듬고, 큰 글씨로 인쇄할 수 있게 한 줄을 15자 이내로 맞춰 줘.",
+        "expect": "작업 보드에 작업 1건 생성 → 전용 스레드에 결과 → Done 처리",
+        "note": "작업 1건 = 담당자 1명. 상태 흐름 Todo → In Progress → In Review → Done"
+      },
+      {
+        "title": "(선택) 예약 작업 걸기",
+        "minutes": 7,
+        "do": "researcher DM 열기 → 시계 아이콘 또는 채팅으로 아래 요청 → 프로필 Scheduled에서 등록 확인 → 실습 후 삭제 또는 유지 결정",
+        "prompt": "매주 월요일 오전 9시에 '지난주 시니어 디지털 교육 관련 새 소식 3가지'를 짧게 정리해서 이 DM에 올려 줘.",
+        "expect": "Scheduled 목록에 매주 반복 작업 1개",
+        "note": "최소 주기 매일(하루 1회 이하), 실행마다 크레딧 차감 → 불필요하면 삭제"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "writer의 답장 모드를 'All messages'로 바꿔 보고 '@멘션할 때만'과 무엇이 달라지는지 1줄로 정리 후 원래대로 되돌리기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Build custom으로 '맞춤법 검수 담당' AI 팀원을 직접 만들고(역할 설명 3줄), writer 결과를 검수시켜 고친 곳 3군데 표시"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Claude Code 또는 Codex CLI가 설치된 컴퓨터를 Computers → Connect your computer로 연결해 로컬 에이전트를 만들고(빈 실습 폴더 지정), 홍보 글을 HTML 한 장짜리 안내 페이지로 만들게 한 뒤 클라우드 에이전트와 크레딧·속도 비교"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 서로의 채널 초대(Humans 옆 + 또는 초대 링크) → 상대 채널에서 상대 AI 팀원에게 질문 1개 해 보기 → 'AI 팀원이 잘한 일 1개 / 사람이 고친 것 1개' 발표",
+    "quiz": [
+      {
+        "q": "GenTeam 채널에서 AI 팀원이 기본 설정으로 답하는 경우는?",
+        "options": [
+          "채널의 모든 메시지에 답한다",
+          "자기를 @멘션했을 때 답한다",
+          "채널을 만든 사람의 메시지에만 답한다",
+          "하루에 한 번 정해진 시간에만 답한다"
+        ],
+        "answer": 1,
+        "explain": "답장 모드 기본값 'When @-mentioned', 'All messages'로 바꿀 수 있음, DM·나와 에이전트 1명만 있는 채널은 멘션 불필요"
+      },
+      {
+        "q": "Genspark 크레딧을 쓰지 않는 GenTeam 에이전트는?",
+        "options": [
+          "템플릿으로 만든 클라우드 에이전트",
+          "Build custom으로 만든 클라우드 에이전트",
+          "내 컴퓨터를 연결해 만든 로컬 에이전트(Claude Code 등)",
+          "예약 작업을 가진 클라우드 에이전트"
+        ],
+        "answer": 2,
+        "explain": "로컬 에이전트는 내 하드웨어·모델 사용 → Genspark 크레딧 미사용, 클라우드 에이전트는 크레딧 차감"
+      },
+      {
+        "q": "채널 멤버 누구나 시킬 수 있는 일이 아닌 것은?",
+        "options": [
+          "웹 조사",
+          "슬라이드 만들기",
+          "파일 분석",
+          "만든 사람 이름으로 메일 발송"
+        ],
+        "answer": 3,
+        "explain": "메일 발송·SNS 게시·전화처럼 만든 사람으로서 남에게 닿는 행동은 만든 사람 전용 + 되돌리기 어려운 행동은 승인 요청"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "팀 구성",
+        "high": "역할이 다른 AI 팀원 2명 이상 + 채널 정리",
+        "mid": "AI 팀원 1명만 채용",
+        "low": "채널·팀원 없이 일반 채팅만 사용"
+      },
+      {
+        "criterion": "협업 활용",
+        "high": "@멘션 이어받기 + Send as task 완료 처리",
+        "mid": "@멘션 결과만 받음",
+        "low": "멘션·작업 기능 사용 안 함"
+      },
+      {
+        "criterion": "안전·검토",
+        "high": "출처 확인 + 개인정보 없음 + 불필요 예약 정리",
+        "mid": "결과 일부만 확인",
+        "low": "결과 그대로 사용·실제 개인정보 공유"
+      }
+    ],
+    "next": [
+      "Genspark SecondBrain으로 AI 팀원이 쓸 업무 기억 만들기 (AI-2026-10-CAT08-015)",
+      "Genspark AgentBase로 팀 업무 관리 표·대시보드 만들기 (AI-2026-10-CAT07-009)",
+      "Grok Bot(팀원형 AI 에이전트)과 비교하기 (AI-2026-10-CAT08-009)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: '조사는 이 AI, 글은 저 AI… 복붙 지치지 않으셨나요?' 질문 + 단톡방 AI 인턴 비유",
+        "note": "강사가 미리 만든 팀 채널(조사→글 이어받기) 화면 보여 주기"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 정의·비교표·팀원 만들기 2가지·일 맡기는 3가지·권한과 승인·요금(크레딧)·안전",
+        "note": "'멘션해야 답함', '보내기는 사람이 승인' 강조"
+      },
+      {
+        "time": "35~70분",
+        "content": "따라 하기 1~4: 채널 → 팀원 2명 → @리서처 → @라이터",
+        "note": "답 기다리는 동안 출처 확인 방법 시연"
+      },
+      {
+        "time": "70~85분",
+        "content": "내 것 만들기: Send as task 작업 보드 → (선택) 예약 작업",
+        "note": "예약은 실습 후 정리"
+      },
+      {
+        "time": "85~90분",
+        "content": "짝 초대·공유·퀴즈",
+        "note": "실습 후 불필요한 예약 작업 삭제 확인"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI한테 조사 시키고, 그걸 복사해서 다른 AI한테 글 써 달라고 하고, 또 설명하고… 이런 경험 있으시죠? 오늘은 AI 인턴 두 명을 단톡방에 초대해서, 서로 이어받아 일하게 만들어 보겠습니다."
+      },
+      {
+        "label": "핵심 원리",
+        "text": "GenTeam의 AI 팀원은 이름과 역할이 있는 동료입니다. 채널에서 골뱅이로 이름을 불러야 대답하고, 앞에서 다른 팀원이 올린 내용도 보고 이어서 일합니다."
+      },
+      {
+        "label": "크레딧 안내",
+        "text": "클라우드 AI 팀원은 일할 때마다 Genspark 크레딧을 씁니다. 무료 계정은 하루 100크레딧이라 오늘은 꼭 필요한 요청만 하시고, 같은 걸 여러 번 다시 시키지 않도록 프롬프트를 한 번에 정확히 쓰세요."
+      },
+      {
+        "label": "안전",
+        "text": "메일 보내기나 SNS 올리기처럼 내 이름으로 밖에 나가는 일은 AI가 꼭 승인을 받습니다. 승인 카드 내용을 끝까지 읽고 누르세요. 그리고 실습 채널에는 실제 학생이나 고객 이름을 쓰지 않습니다."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 예약 작업은 매주 크레딧을 씁니다. 필요 없으면 프로필의 Scheduled에서 지우고 나가세요. AI 팀원이 만든 결과는 초안이고, 최종 확인은 팀장인 여러분 몫입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "무료 계정 크레딧 부족으로 에이전트가 멈춤",
+        "response": "강사 Plus 계정 채널에 수강생을 초대(Humans 옆 + 또는 초대 링크)해 강사 AI 팀원에게 질문하는 방식으로 전환"
+      },
+      {
+        "situation": "템플릿 갤러리에서 Researcher·Writer를 찾지 못함",
+        "response": "Build custom 선택 → 이름·역할 설명(예: '웹에서 자료를 찾아 출처와 함께 요약하는 조사 담당')을 직접 입력해 만들기"
+      },
+      {
+        "situation": "@멘션했는데 답이 없음",
+        "response": "에이전트가 채널 멤버인지 확인 → 멘션 자동완성으로 다시 입력 → 그래도 안 되면 DM으로 같은 요청"
+      },
+      {
+        "situation": "에이전트가 오래 작업 중이라 시간 초과",
+        "response": "Stop current work로 중단 → 요청 범위를 줄여 다시 요청(예: 3가지 → 2가지), 강사 미리 만든 결과로 다음 단계 진행"
+      },
+      {
+        "situation": "GenTeam 접속 화면이 다르거나 로그인 오류",
+        "response": "주소창에 genspark.ai/genteam 직접 입력, 모바일은 GenTeam 앱(iOS·Android)으로 대체, 화면은 강사 사전 캡처로 안내"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "writer가 researcher 조사 내용을 모르는 듯 답함",
+        "fix": "같은 채널에서 요청했는지 확인(DM 내용은 채널로 안 넘어감) + 프롬프트에 '위 researcher 메시지를 바탕으로' 명시"
+      },
+      {
+        "issue": "Send as task 버튼을 못 찾음",
+        "fix": "Send 버튼 옆 메뉴 확인, 또는 More → Tasks → New task로 직접 만들기"
+      },
+      {
+        "issue": "에이전트가 메일 보내기 요청을 거절·대기",
+        "fix": "메일 발송은 만든 사람 전용 + 승인 필요 → 만든 사람이 승인 카드 승인, 무응답은 거절로 처리됨"
+      },
+      {
+        "issue": "예약 작업을 1시간마다로 만들려다 실패",
+        "fix": "GenTeam 예약은 한 번·매일·매주만 가능, 하루 1회보다 잦게 불가"
+      },
+      {
+        "issue": "짝을 채널에 초대했는데 상대가 내 에이전트를 다른 채널에 추가 못 함",
+        "fix": "에이전트를 채널에 넣는 것은 만든 사람만 가능 — 정상 동작, 필요하면 내가 추가"
+      }
+    ],
+    "faq": [
+      {
+        "q": "GenTeam은 따로 돈을 내야 하나요?",
+        "a": "별도 요금 없음 — 무료·유료 Genspark 계정에 포함, 클라우드 에이전트 작업만 크레딧 차감"
+      },
+      {
+        "q": "어떤 AI 모델을 쓰나요?",
+        "a": "만들 때 드롭다운에서 선택, 클라우드 에이전트는 프로필에서 나중에 변경 가능(다음 답부터 적용), 전체 모델 목록은 도움말에 없음 [확인 필요]"
+      },
+      {
+        "q": "에이전트가 지난 대화를 기억하나요?",
+        "a": "장기 팀원으로 기억·이전 대화 맥락 유지, 단 DM 내용은 채널로 가져가지 않음"
+      },
+      {
+        "q": "만든 프로젝트·파일은 채널 사람 모두 보나요?",
+        "a": "에이전트가 만든 Genspark 프로젝트는 채널에 공유하기 전까지 만든 사람만 봄, 채널에 올린 파일은 Files 탭에 모임"
+      },
+      {
+        "q": "에이전트를 지우면 대화도 사라지나요?",
+        "a": "에이전트 삭제 후에도 지난 메시지는 남음"
+      },
+      {
+        "q": "휴대폰에서도 쓸 수 있나요?",
+        "a": "iOS·Android GenTeam 앱 + 푸시 알림, 웹은 휴대폰에서 하단 바(Chat·Activity·Members·Computers) 화면, 데스크톱 앱(macOS·Windows·Linux)도 소개 페이지에 표기"
+      },
+      {
+        "q": "회사 외부 사람과 같이 써도 되나요?",
+        "a": "초대 가능, 조직 계정에 외부 멤버가 있으면 채널별 Internal only 설정 표시 — 회사 정책 확인 후 사용"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급반",
+        "guide": "따라 하기 1~4만 진행 — 강사가 준 프롬프트 그대로, 팀원 2명·홍보 글 1개 완성"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + Send as task 작업 보드 + 도전과제 ⭐⭐ 맞춤 검수 팀원"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ 로컬 에이전트 연결 + 클라우드 vs 로컬 비교표, 팀 도입 시 권한 정책 초안"
+      },
+      {
+        "level": "시니어 (JOB-SEN)",
+        "guide": "동호회 모임 공지 글 만들기로 주제 변경, 팀원은 템플릿 1명만, 작업 보드 생략"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수업 자료 조사 담당 + 학습지 작성 담당 팀원으로 구성 — 학생 실명 사용 금지"
+      },
+      {
+        "level": "외국인·다문화 (JOB-GLB)",
+        "guide": "writer에게 홍보 글을 쉬운 한국어 + 모국어 2가지로 쓰게 해 비교"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: AI 팀원은 이름 불러야 일하는 동료, 결재는 사람",
+      "프롬프트에 '위 ○○ 메시지를 바탕으로'를 넣으면 이어받기 정확도 상승",
+      "무료 계정 하루 100크레딧 — 수업 전 1회 실습당 크레딧 사용량 리허설 필수",
+      "메일·SNS 등 외부로 나가는 행동은 만든 사람 전용 + 승인 카드",
+      "수업 끝에 예약 작업·연결 앱 정리까지 확인"
+    ],
+    "day_before": [
+      "강사 계정으로 따라 하기 전 과정 리허설 → 각 단계 대기 시간·사용 크레딧 기록",
+      "무료 계정으로 GenTeam 접속·템플릿 에이전트 생성·@멘션 답변이 되는지 확인 → 안 되면 강사 채널 초대 방식 준비",
+      "템플릿 갤러리 실제 이름(Researcher·Writer·Copywriter 등) 확인 [확인 필요]",
+      "채널 만들기·Members > Agents +·Send as task·Scheduled 화면 캡처 준비",
+      "수강생 초대용 초대 링크·QR 코드 미리 생성(아바타 메뉴 > Invite links)"
+    ]
+  },
+  "verification": [
+    "[미검증] 템플릿 에이전트 생성·@멘션 답변·작업 보드 동작은 실제 계정으로 재현하지 못함 — 도움말 기준 작성",
+    "[확인 필요] 템플릿 갤러리 실제 이름·목록 — 도움말 예시(@researcher·@writer·@analyst)와 소개 페이지 역할 목록(Data Analyst·Copywriter·Slides Assistant 등)만 확인",
+    "[확인 필요] 유료 요금제 로컬 에이전트 한도 — Membership Plans 표에 '컴퓨터당 100개'와 '무제한'이 함께 표기",
+    "[확인 필요] 작업 1건당 크레딧 소모량 — 공식 안내 없음",
+    "[확인 필요] 데스크톱 앱 — 소개 페이지는 macOS·Windows·Linux 다운로드 표기, 도움말에는 언급 없음",
+    "[확인 필요] 한국어 화면 지원 여부·메뉴 한국어 표기"
+  ],
+  "sources": [
+    {
+      "title": "Genspark Help Center – GenTeam",
+      "url": "https://www.genspark.ai/helpcenter/genteam",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Genspark – GenTeam 소개 페이지",
+      "url": "https://www.genspark.ai/genteam",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Genspark Blog – Introducing Genspark AI Workspace 6.0 (2026-07-20)",
+      "url": "https://www.genspark.ai/blog/genspark-ai-workspace-6",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Genspark Help Center – Membership Plans",
+      "url": "https://www.genspark.ai/helpcenter/membership-plans",
+      "checked": "2026-10-19"
+    }
+  ]
+}

@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 129,
+  "count": 130,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-017",
+      "version": "v1.0",
+      "created_at": "2026-10-19 00:05 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "AI 팀원 채용하기 — Genspark GenTeam(젠팀)으로 '리서치 담당 + 글쓰기 담당 AI 팀원'이 일하는 팀 채널 만들기",
+      "summary": "2026-07-20 Genspark AI Workspace 6.0에서 공개된 협업 공간 GenTeam. 사람과 AI 에이전트(agent)가 같은 채널·DM에서 함께 일함 → 역할 템플릿(리서처·카피라이터·데이터 분석가 등)으로 AI 팀원 만들기, @멘션·DM으로 일 맡기기, Send as task로 작업 보드(Todo·In Progress·In Review·Done) 관리, 예약 작업(하루 1회 이하), 통화·실시간 자막 요약. 클라우드 에이전트는 Genspark 크레딧 사용, 내 컴퓨터의 Claude Code·Codex CLI·Cursor CLI·OpenCode 연결 에이전트는 크레딧 미사용. 무료·유료 모든 Genspark 계정 포함(웹·iOS·Android·데스크톱 앱)",
+      "tool": "Genspark",
+      "feature": "GenTeam(젠팀) — 사람과 AI 에이전트가 함께 쓰는 팀 채널 공간(AI Workspace 6.0): ① 채널·DM·스레드 ② 역할 템플릿(Researcher·Writer·Data Analyst·Copywriter 등)·Build custom으로 AI 팀원 만들기, 모델·스킬(Browse skills·Upload·/ 호출)·Services 탭 연결 앱 지정 ③ @멘션·답장 모드(When @-mentioned·All messages) ④ Send as task 작업 보드(Todo·In Progress·In Review·Done, Board·List) ⑤ 예약 작업(한 번·매일·매주) ⑥ 내 컴퓨터 연결(Connect your computer → Create local agent: Claude Code·Codex CLI·Cursor CLI·OpenCode, 크레딧 미사용) ⑦ 음성·화상 통화 실시간 자막·자동 요약, genspark.ai/genteam·iOS·Android·데스크톱",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2026-07-20",
+      "categories": [
+        "CAT-08",
+        "CAT-03",
+        "CAT-11"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-MKT",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① AI 팀원 2명(리서치 담당 + 글쓰기 담당)이 있는 내 팀 채널 1개 + ② @멘션으로 받은 조사 요약 1개 + ③ 조사 결과를 이어받은 홍보 글 초안 1개 + ④ 작업 보드에 등록·완료 처리한 작업 1건",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🤝",
+      "one_liner": "사람과 AI 팀원이 한 채널에서 협업"
+    },
     {
       "id": "AI-2026-10-CAT03-023",
       "version": "v1.0",
