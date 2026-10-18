@@ -1,0 +1,324 @@
+{
+  "id": "AI-2026-10-CAT03-020",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-18 09:20 KST",
+  "checked": "2026-10-18",
+  "review_by": "2027-01-18",
+  "title": "말로 시키는 엑셀 — Grok for Excel(그록 엑셀 추가 기능)로 '월별 매출표 분석 + 수식 + 차트 + 나쁜 경우 시나리오' 만들기",
+  "summary": "2026-07-20 xAI가 공개한 Grok for Excel. Microsoft 365 무료 추가 기능(add-in)으로 Excel 옆 패널에서 Grok에게 말로 요청 → 고른 범위만 읽고 답하며 근거 셀 표시, 수식은 수식 입력줄에 실제 수식으로 들어가고, 차트는 시트에 바로 삽입, 한 줄 요청으로 시나리오(나쁜 경우·예측) 다시 계산 + 바뀐 셀 표시. Microsoft Marketplace 'Add to Excel'로 설치 → 홈 탭에서 열고 Grok 계정으로 한 번 로그인. 추가 기능 자체는 무료, Grok 사용량은 내 Grok 요금제 범위",
+  "glance": {
+    "emoji": "📊",
+    "one_liner": "Excel 옆 Grok에게 말로 분석·수식 요청",
+    "cards": [
+      {"icon": "🔎", "title": "데이터 질문", "text": "고른 범위만 읽고 근거 셀 표시"},
+      {"icon": "🧮", "title": "수식 작성", "text": "말하면 실제 수식이 셀에 입력"},
+      {"icon": "📈", "title": "차트 삽입", "text": "차트가 시트 안에 바로 들어감"},
+      {"icon": "🔁", "title": "시나리오", "text": "한 줄로 다시 계산, 바뀐 셀 표시"}
+    ],
+    "diagram": {
+      "title": "Grok for Excel 작동 흐름",
+      "nodes": [
+        {"icon": "🛒", "label": "추가 기능 설치"},
+        {"icon": "🔐", "label": "Grok 로그인"},
+        {"icon": "🖱️", "label": "범위 선택"},
+        {"icon": "💬", "label": "말로 요청"},
+        {"icon": "✅", "label": "셀 결과 확인"}
+      ]
+    },
+    "before_after": {
+      "before": {"label": "함수 검색하며 입력", "text": "SUMIFS 문법을 찾아보고 셀마다 직접 입력, 차트도 메뉴로 하나씩 만듦"},
+      "after": {"label": "말로 요청 후 검토", "text": "'지역별 합계 넣어 줘' 한 줄로 수식 입력, 근거 셀로 확인만 함"}
+    },
+    "cautions": [
+      "회사 기밀·개인정보 시트는 쓰지 말 것",
+      "AI가 넣은 수식은 셀마다 검산할 것",
+      "원본 파일은 복사본으로 실습할 것"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok for Excel(Microsoft 365 추가 기능, Grok by SpaceXAI for Excel) — Excel 옆 패널에서 말로 요청: ① 데이터 질문(고른 범위만 읽음·답에 근거 셀 표시·차트 시트에 삽입) ② 수식 작성(수식 입력줄에 실제 수식·채우기·정렬도 일반 편집으로 기록) ③ 시나리오 실행(한 줄로 다시 계산·바뀐 셀 표시), 메일·SharePoint·Google Drive 커넥터 맥락 활용, Microsoft Marketplace 'Add to Excel' 무료 설치·관리자 조직 배포, 홈 탭에서 열기·한 번 로그인, Word·PowerPoint용도 제공",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-07-20",
+  "categories": ["CAT-03", "CAT-06"],
+  "jobs": ["JOB-OFF", "JOB-DAT", "JOB-BIZ", "JOB-MKT"],
+  "learner_levels": ["초급", "중급"],
+  "instructor_levels": ["초보강사", "중급강사"],
+  "minutes": {"theory": 30, "practice": 50, "wrap": 10},
+  "prerequisites": [
+    "Excel — Microsoft 365 추가 기능을 쓸 수 있는 Excel(웹 Excel·Windows·Mac) [확인 필요: 지원 버전·무료 웹 Excel 사용 가능 여부]",
+    "Grok 계정 — grok.com 가입(Free 요금제 가능), 추가 기능에서 한 번 로그인",
+    "Microsoft Marketplace에서 'Grok by SpaceXAI for Excel' 추가 기능 설치 권한(회사 계정은 관리자 차단 여부 확인)",
+    "실습 파일: 강사가 나눠 주는 가상 '월별 지역 매출표' Excel 파일(개인정보·실제 회사 숫자 없음)",
+    "선택: grok.com/connectors 에서 Google Drive·SharePoint·OneDrive 커넥터 연결(도전과제용)"
+  ],
+  "outcome": "① 근거 셀이 표시된 매출표 분석 요약 3줄 + ② Grok이 넣은 지역별 합계·평균 수식(검산 표시 포함) + ③ 시트 안 월별 매출 차트 1개 + ④ '매출 20% 감소' 나쁜 경우 시나리오 시트 1장",
+  "objectives": [
+    "Grok for Excel이 일반 Grok 대화창과 무엇이 다른지(Excel 안에서 고른 범위만 읽고 셀에 직접 결과를 넣음) 설명할 수 있음",
+    "추가 기능을 설치·로그인하고, 말로 데이터 질문·수식 작성·차트 삽입·시나리오 계산을 요청할 수 있음",
+    "AI가 넣은 수식·숫자를 근거 셀과 검산으로 확인하고, 업무 파일 보안 기준에 맞게 사용 범위를 정할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Grok for Excel 추가 기능은 무료(xAI 공식 'a free Microsoft 365 add-in') — Grok 계정 로그인 필요, 사용량은 내 Grok 요금제 범위 [확인 필요: 요금제별 추가 기능 사용 한도]. 2026-10-12부터 신규 가입은 The X Subscription 요금제: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200. Excel 자체는 Microsoft 365 라이선스 별도",
+    "plans": [
+      {"name": "Free", "price": "$0", "features": "Grok 매일 사용 + 사용량 제한 — 추가 기능 로그인·체험 범위 [확인 필요]"},
+      {"name": "Plus", "price": "월 $8", "features": "Grok·Cursor 기본 사용량 증가 + X 체크 표시·크리에이터 도구·광고 감소"},
+      {"name": "Premium", "price": "월 $30", "features": "SuperGrok + Cursor Pro + X Premium+ 포함 + Plus 대비 4배 사용량"},
+      {"name": "Super", "price": "월 $100", "features": "위 기능 전부 + Plus 대비 15배 사용량"},
+      {"name": "Ultra", "price": "월 $200", "features": "위 기능 전부 + Plus 대비 50배 사용량"}
+    ],
+    "note": "요금은 xAI 공식 발표 'Introducing The X Subscription'(2026-10-12) 미국 달러 기준(2026-10-18 확인), 원화·부가세 미확인. 추가 기능 무료 표기는 x.ai/grok/excel·출시 글 기준. Grok Business·Enterprise는 관리자가 조직 전체에 배포 가능. Microsoft 365(Excel) 구독료는 별도",
+    "checked": "2026-10-18",
+    "sources": [
+      {"title": "xAI – Grok for Excel", "url": "https://x.ai/grok/excel"},
+      {"title": "xAI News – Introducing Grok for Excel", "url": "https://x.ai/news/introducing-excel-addin"},
+      {"title": "xAI News – Introducing The X Subscription", "url": "https://x.ai/news/x-subscription"}
+    ]
+  },
+  "timeline": [
+    {"date": "2026-06-18", "text": "Grok for Word 공개 — Grok 첫 Microsoft 365 추가 기능(무료), 문서 안에서 Grok 사용"},
+    {"date": "2026-07-20", "text": "Grok for Excel 공개 — 데이터 질문(근거 셀)·수식 작성·시나리오 실행, 메일·SharePoint·Google Drive 맥락 활용, Microsoft Marketplace 무료 설치"},
+    {"date": "2026-07-21", "text": "Grok for Outlook 공개, 2026-07-24 Grok in Google Workspace 추가 기능 공개 — 오피스 앱 안 Grok 확대"},
+    {"date": "2026-10-12", "text": "The X Subscription 출시 — Grok 요금제가 Free·Plus·Premium·Super·Ultra로 개편(신규 가입 기준)"},
+    {"date": "2026-10-18", "text": "공식 소개 페이지 기준 현황 — 무료 추가 기능, 홈 탭에서 열기·한 번 로그인, 관리자 조직 배포 가능, Word·PowerPoint용도 제공"}
+  ],
+  "theory": {
+    "definition": "Grok for Excel은 xAI의 AI Grok을 Microsoft Excel 안 옆 패널(side panel)로 불러오는 무료 Microsoft 365 추가 기능임. 사용자가 범위를 고르고 말로 요청하면 Grok이 그 범위만 읽어 답하고, 수식·채우기·정렬·차트를 시트에 일반 편집처럼 직접 넣음",
+    "analogy": "엑셀 옆자리에 앉은 '수식 잘 아는 동료'. '이 칸들 합계 좀' 하면 동료가 직접 수식을 쳐 주고 어느 칸을 봤는지 짚어 줌. 단, 동료도 틀릴 수 있으니 결과는 내가 한 번 더 확인",
+    "comparison": {
+      "headers": ["구분", "grok.com 대화창에 표 붙여넣기", "Excel 기본 함수 직접 입력", "Grok for Excel"],
+      "rows": [
+        ["작업 위치", "브라우저 대화창", "Excel 셀", "Excel 옆 패널 + 셀"],
+        ["데이터 읽기", "복사한 내용 전체", "해당 없음", "고른 범위만"],
+        ["결과 형태", "글·표(다시 복사 필요)", "내가 쓴 수식", "실제 수식·차트가 시트에 입력"],
+        ["근거 확인", "어려움", "직접 추적", "답에 근거 셀 표시"],
+        ["시나리오", "다시 질문", "직접 수정", "한 줄 요청, 바뀐 셀 표시"]
+      ]
+    },
+    "concepts": [
+      {"title": "세 가지 기본 기능", "body": "① 데이터 질문(Ask Questions): 고른 범위만 읽고, 답에 근거 셀 표시, 차트를 시트에 삽입 ② 수식 작성(Write Formulas): 결과를 말하면 수식 입력줄에 실제 수식, 채우기·정렬도 셀 단위 일반 편집 ③ 시나리오(Run Scenarios): 한 줄로 시나리오 다시 계산, 바뀐 셀 표시 (x.ai/grok/excel 기준)"},
+      {"title": "설치·시작 경로", "body": "① Microsoft Marketplace 'Grok by SpaceXAI for Excel' → 'Add to Excel' ② Excel 홈 탭에서 Grok 열기 → 옆 패널 표시 ③ Grok 계정으로 한 번 로그인 → 범위 선택 후 요청. 관리자는 조직 전체 배포 가능 [확인 필요: 홈 탭 버튼 이름]"},
+      {"title": "근거 셀과 일반 편집", "body": "Grok의 수정은 '일반 편집(normal edit)'으로 기록 → 수식 입력줄에서 확인·수정, 실행 취소 가능 [확인 필요: 실행 취소 범위]. 답의 근거 셀을 눌러 원본 숫자와 대조하는 습관이 핵심"}
+    ],
+    "can": [
+      "고른 범위의 변화·원인·눈에 띄는 점을 말로 질문하고 근거 셀과 함께 답 받기",
+      "'지역별 합계', '월 평균' 처럼 결과만 말해 실제 Excel 수식 입력 받기",
+      "채우기·정렬을 말로 시키기 — 셀 단위 일반 편집으로 기록",
+      "데이터 옆에 차트 바로 삽입",
+      "'매출 20% 감소' 같은 시나리오를 한 줄로 다시 계산하고 바뀐 셀 확인",
+      "커넥터로 최근 메일·SharePoint·Google Drive 파일 맥락 참고 [확인 필요: 커넥터 연결 방법]"
+    ],
+    "cannot": [
+      "고르지 않은 범위·다른 파일까지 알아서 모두 읽기(고른 범위만 읽음)",
+      "수식·숫자의 정답 보장 — 사람이 검산해야 함",
+      "Grok 계정 로그인 없이 사용",
+      "회사 관리자가 추가 기능을 막은 계정에서 설치",
+      "피벗 테이블·매크로(VBA) 지원 여부 공식 안내 없음 [확인 필요]",
+      "요금제별 사용 한도 공식 안내 없음 [확인 필요]"
+    ],
+    "safety": [
+      "고객 명단·주민번호·급여 등 개인정보가 든 시트는 실습·업무 모두 넣지 말 것",
+      "회사 파일은 회사 보안 정책·관리자 승인 확인 후 사용 — Business·Enterprise는 관리자 배포 경로 이용",
+      "xAI는 'Data never leaves the workbook'(시나리오 기능 설명)이라 안내하지만 질문 처리 범위는 개인정보 처리방침에서 확인할 것 [확인 필요]",
+      "AI가 넣은 수식은 셀 2~3개를 손계산·기존 함수로 검산 후 보고서에 사용",
+      "원본 파일은 복사본으로 작업 — 정렬·채우기가 원본 데이터를 바꿀 수 있음",
+      "외부 공유 보고서에는 AI 도움 사용 여부를 기관 규칙에 맞게 표기"
+    ]
+  },
+  "practice": {
+    "preview": "추가 기능 설치·로그인 → 매출표 범위 선택 → 데이터 질문 → 합계·평균 수식 요청 → 검산 → 차트 삽입 → 나쁜 경우 시나리오 시트 완성. ① 분석 요약 + ② 수식 + ③ 차트 + ④ 시나리오",
+    "follow": [
+      {
+        "title": "추가 기능 설치·로그인",
+        "minutes": 8,
+        "do": "Microsoft Marketplace에서 'Grok by SpaceXAI for Excel' 검색 → 'Add to Excel' → Excel 열기 → 홈 탭에서 Grok 열기 → 옆 패널에서 Grok 계정 로그인 [확인 필요: 버튼 이름·위치]",
+        "prompt": "",
+        "expect": "Excel 오른쪽에 Grok 패널 표시 + 로그인 완료",
+        "note": "Excel 안에서 설치할 때: 홈 > 추가 기능(Add-ins) > 'Grok' 검색도 가능 [확인 필요]"
+      },
+      {
+        "title": "데이터 질문하기",
+        "minutes": 8,
+        "do": "실습 파일 '월별 지역 매출표' 열기 → 표 전체 범위 선택 → 패널에 아래 프롬프트 입력",
+        "prompt": "선택한 매출표를 분석해 줘. 1) 매출이 가장 많이 늘어난 달과 지역 2) 가장 많이 줄어든 달과 지역 3) 눈에 띄는 점 1가지를 각각 한 줄로, 근거가 된 셀 주소와 함께 알려 줘.",
+        "expect": "3줄 요약 + 각 줄의 근거 셀 주소(예: C5, F9)",
+        "note": "근거 셀을 눌러 실제 숫자와 같은지 바로 확인"
+      },
+      {
+        "title": "수식 넣기",
+        "minutes": 8,
+        "do": "표 오른쪽 빈 열 머리글 셀 선택 → 아래 프롬프트 입력 → 들어간 수식을 수식 입력줄에서 확인",
+        "prompt": "각 지역의 1~6월 매출 합계를 H열에, 월평균을 I열에 Excel 수식으로 넣어 줘. 머리글은 '합계', '월평균'으로 해 줘.",
+        "expect": "H·I열에 SUM·AVERAGE 계열 실제 수식 입력",
+        "note": "값만 들어갔는지 수식이 들어갔는지 셀 클릭으로 구분"
+      },
+      {
+        "title": "검산하기",
+        "minutes": 6,
+        "do": "지역 1개를 골라 계산기 또는 상태 표시줄(범위 선택 시 하단 합계)로 직접 합계 확인 → Grok 결과와 비교 → 맞으면 셀 옆에 '검산 ✓' 메모",
+        "prompt": "",
+        "expect": "Grok 수식 결과와 직접 계산 결과 일치 확인",
+        "note": "틀리면 패널에 '어느 범위를 더했는지 설명해 줘'로 다시 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "차트 넣기",
+        "minutes": 7,
+        "do": "월·지역 매출 범위 선택 → 아래 프롬프트 입력 → 삽입된 차트 제목·축 확인",
+        "prompt": "선택한 범위로 월별 지역 매출을 비교하는 꺾은선 차트를 이 시트 표 아래에 넣어 줘. 차트 제목은 '2026 상반기 지역별 매출'로 해 줘.",
+        "expect": "시트 안에 제목이 들어간 꺾은선 차트 1개",
+        "note": "차트 종류가 다르면 '막대 차트로 바꿔 줘'로 수정"
+      },
+      {
+        "title": "나쁜 경우 시나리오",
+        "minutes": 8,
+        "do": "시트를 복사해 '시나리오' 시트 만들기 → 아래 프롬프트 입력 → 바뀐 셀 표시 확인",
+        "prompt": "이 시트에서 7~9월 매출이 6월보다 매달 20%씩 줄어드는 나쁜 경우(downside) 시나리오를 만들어 줘. 바뀐 셀이 어디인지 알려 주고, 3분기 합계가 상반기 월평균 대비 얼마나 줄어드는지 한 줄로 요약해 줘.",
+        "expect": "7~9월 예측 열 + 바뀐 셀 표시 + 요약 한 줄",
+        "note": "원본 시트가 아닌 복사본에서 실행할 것"
+      },
+      {
+        "title": "내 업무 표로 바꿔 보기",
+        "minutes": 5,
+        "do": "내 업무와 비슷한 가상 표(수강생 출석·재고·월 지출 등, 실제 개인정보 없이) 5행 만들기 → 질문 1개 + 수식 1개 요청",
+        "prompt": "선택한 표에서 가장 큰 값과 가장 작은 값을 찾아 주고, 전체 평균을 구하는 수식을 표 아래 칸에 넣어 줘.",
+        "expect": "내 표에 맞는 답 + 평균 수식 1개",
+        "note": "실제 이름·연락처 대신 'A반·B반' 처럼 가명 사용"
+      }
+    ],
+    "challenges": [
+      {"level": "⭐", "mission": "같은 질문을 grok.com 대화창에 표를 붙여넣어 물어보고, Grok for Excel 답과 근거 표시·작업 단계 차이를 1줄로 정리"},
+      {"level": "⭐⭐", "mission": "Grok이 넣은 수식 3개를 골라 직접 같은 결과를 내는 함수(SUMIFS·AVERAGEIF 등)로 다시 써 보고, 결과가 같은지 표로 비교"},
+      {"level": "⭐⭐⭐", "mission": "grok.com/connectors 에서 Google Drive 또는 SharePoint를 연결한 뒤, 드라이브의 가상 '목표 매출' 파일을 참고해 실적 대비 달성률 열을 만들어 달라고 요청 [확인 필요: 추가 기능에서 커넥터 호출 방법]"}
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 차트·시나리오 시트를 보여 주고 '가장 편했던 요청 1개 / 검산에서 발견한 점 1개 / 내 업무에 쓸 장면 1개' 발표",
+    "quiz": [
+      {
+        "q": "Grok for Excel이 데이터를 읽는 방식으로 알맞은 것은?",
+        "options": [
+          "컴퓨터의 모든 Excel 파일을 자동으로 읽는다",
+          "사용자가 고른 범위만 읽고 답에 근거 셀을 표시한다",
+          "시트를 이미지로 캡처해 읽는다",
+          "인터넷에 공개된 표만 읽는다"
+        ],
+        "answer": 1,
+        "explain": "공식 소개 기준 '고른 범위만 읽음(Reads only the ranges you pick)', 답에는 근거 셀 표시"
+      },
+      {
+        "q": "Grok for Excel로 수식을 요청했을 때의 결과로 맞는 것은?",
+        "options": [
+          "답이 글로만 나와서 직접 복사해야 한다",
+          "수식 입력줄에 실제 Excel 수식이 들어간다",
+          "새 파일이 자동으로 만들어진다",
+          "수식은 볼 수 없고 숫자만 들어간다"
+        ],
+        "answer": 1,
+        "explain": "수식은 수식 입력줄에 실제 수식으로 입력, 채우기·정렬도 일반 편집으로 기록"
+      },
+      {
+        "q": "Grok for Excel을 업무에 쓸 때 가장 알맞은 습관은?",
+        "options": [
+          "AI 결과는 항상 맞으니 바로 보고서에 쓴다",
+          "고객 개인정보 시트로 연습한다",
+          "복사본에서 작업하고 수식 결과를 몇 개 검산한다",
+          "회사 관리자 승인 없이 아무 계정에나 설치한다"
+        ],
+        "answer": 2,
+        "explain": "원본 보호를 위해 복사본 사용 + AI 수식 검산 + 개인정보·회사 정책 확인이 기본"
+      }
+    ],
+    "rubric": [
+      {"criterion": "기능 활용", "high": "질문·수식·차트·시나리오 4가지 모두 수행", "mid": "2~3가지 수행", "low": "설치·로그인만 완료"},
+      {"criterion": "검산·근거 확인", "high": "근거 셀 대조 + 수식 2개 이상 검산 기록", "mid": "1개 검산", "low": "검산 없이 결과 사용"},
+      {"criterion": "보안·윤리", "high": "가상 데이터·복사본 사용 + 사용 범위 정리", "mid": "가상 데이터만 사용", "low": "개인정보·원본 파일 사용"}
+    ],
+    "next": [
+      "Copilot Notebooks 참조 파일·추천 산출물 (AI-2026-10-CAT06-006)",
+      "Grok 자동화(Automations)로 정기 보고 받기 (AI-2026-10-CAT08-010)",
+      "Grok Bot 슬라이드 덱 만들기 (AI-2026-10-CAT03-018)",
+      "Genspark GenOffice 무료 AI 오피스 (AI-2026-10-CAT03-012)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {"time": "00:00~00:10", "content": "도입 — 'SUMIFS 문법 기억나시나요?' 질문, 비포/애프터 시연(말 한 줄로 수식 입력)", "note": "강사 화면에 미리 설치된 Grok 패널 띄워 두기"},
+      {"time": "00:10~00:30", "content": "이론 — 정의·비교표·세 가지 기능·근거 셀·요금·보안", "note": "'고른 범위만 읽음' 을 강조"},
+      {"time": "00:30~01:00", "content": "따라 하기 1~4 — 설치·로그인·데이터 질문·수식·검산", "note": "설치가 막힌 수강생은 Plan B로 2인 1조"},
+      {"time": "01:00~01:20", "content": "내 것 만들기 — 차트·나쁜 경우 시나리오·내 업무 표", "note": "빠른 수강생은 도전과제 ⭐⭐"},
+      {"time": "01:20~01:30", "content": "정리 — 2인 발표·퀴즈 3문제·검산 습관 다짐", "note": "업무 파일 사용 전 회사 정책 확인 안내"}
+    ],
+    "script": [
+      {"label": "도입", "text": "엑셀에서 함수 이름이 기억 안 나서 검색해 본 적 있으시죠? 오늘은 엑셀 옆에 Grok을 앉혀 놓고, 원하는 결과를 말로만 시켜 보겠습니다."},
+      {"label": "핵심 개념", "text": "Grok for Excel은 수식 잘 아는 옆자리 동료예요. 내가 고른 칸만 보고, 어느 칸을 봤는지 짚어 주고, 수식을 직접 쳐 줍니다."},
+      {"label": "주의", "text": "동료도 실수합니다. Grok이 넣은 수식은 꼭 두세 개 직접 검산하고, 고객 개인정보가 든 파일은 넣지 마세요."},
+      {"label": "마무리", "text": "말로 시키고, 근거 셀로 확인하고, 검산으로 마무리. 이 세 단계만 기억하시면 됩니다."}
+    ],
+    "plan_b": [
+      {"situation": "회사·기관 계정에서 추가 기능 설치가 막힘", "response": "개인 Microsoft 계정으로 웹 Excel(office.com) 로그인 후 설치 시도, 안 되면 강사 화면 시연 + 2인 1조 [확인 필요: 개인 계정 웹 Excel 지원]"},
+      {"situation": "Grok 로그인 오류", "response": "grok.com에서 먼저 로그인 확인 → 브라우저 팝업 차단 해제 후 다시 시도"},
+      {"situation": "Grok 사용량 한도 도달(Free)", "response": "강사 계정 시연으로 전환, 수강생은 grok.com 대화창에 표 붙여넣기로 같은 질문 체험"},
+      {"situation": "Marketplace에서 추가 기능이 검색 안 됨", "response": "x.ai/grok/excel 페이지의 'Add to Excel' 링크로 바로 이동"},
+      {"situation": "수식 대신 값만 들어감", "response": "'값이 아니라 Excel 수식으로 넣어 줘'로 다시 요청"}
+    ],
+    "stuck": [
+      {"issue": "홈 탭에 Grok 버튼이 안 보임", "fix": "Excel 다시 열기 → 홈 > 추가 기능에서 Grok 찾기, 웹 Excel이면 새로 고침 [확인 필요]"},
+      {"issue": "범위를 안 고르고 질문해 엉뚱한 답", "fix": "표 전체를 먼저 드래그로 선택한 뒤 다시 질문"},
+      {"issue": "한국어 머리글을 잘못 해석", "fix": "프롬프트에 'B열은 1월, C열은 2월' 처럼 열 의미를 함께 적기"},
+      {"issue": "차트가 다른 곳에 들어감", "fix": "'표 아래 A15 셀 위치에 넣어 줘' 처럼 위치 지정"},
+      {"issue": "시나리오가 원본 숫자를 바꿔 버림", "fix": "실행 취소(Ctrl+Z) 후 시트 복사본에서 다시 실행"}
+    ],
+    "faq": [
+      {"q": "무료인가요?", "a": "추가 기능은 무료(xAI 공식 표기). 단 Grok 계정 로그인 필요, 사용량은 Grok 요금제 범위 [확인 필요: 요금제별 한도]"},
+      {"q": "한국에서도 되나요?", "a": "공식 글에 지역 제한 표기 없음, Microsoft Marketplace 기준 설치 가능 여부는 수업 전 한국 계정으로 확인 [확인 필요]"},
+      {"q": "Microsoft Copilot과 뭐가 다른가요?", "a": "둘 다 Excel 안 AI 도우미. Copilot은 Microsoft 365 Copilot 라이선스, Grok for Excel은 Grok 계정으로 쓰는 무료 추가 기능 — 기능 범위 비교는 직접 확인 권장"},
+      {"q": "내 데이터가 학습에 쓰이나요?", "a": "추가 기능 전용 안내는 공식 페이지에 없음 → xAI 개인정보 처리방침·Grok 설정의 데이터 사용 항목 확인, 회사 데이터는 Business·Enterprise 경로 권장 [확인 필요]"},
+      {"q": "Word·PowerPoint에서도 되나요?", "a": "Grok for Word(2026-06-18)·PowerPoint용 추가 기능도 제공, Outlook·Google Workspace용도 있음"},
+      {"q": "수식이 틀리면 어떻게 하나요?", "a": "수식 입력줄에서 직접 고치거나 '어느 범위를 썼는지 설명하고 고쳐 줘'로 다시 요청, 일반 편집이라 실행 취소 가능 [확인 필요]"}
+    ],
+    "level_guide": [
+      {"level": "🟢 초급반", "guide": "강사 실습 파일로 데이터 질문·수식 1개·검산까지, '말로 시키고 확인하기' 경험이 목표"},
+      {"level": "🟡 중급반", "guide": "내 것 만들기 전부 + 도전과제 ⭐⭐ 함수 비교"},
+      {"level": "🔴 고급반", "guide": "도전과제 ⭐⭐⭐ 커넥터 연결 + 팀 보고서 템플릿에 쓸 프롬프트 모음 정리"},
+      {"level": "시니어 (JOB-SEN)", "guide": "가계부 5줄 표로 '이번 달 합계 구해 줘' 한 가지만, 글자 크게·패널 넓게"},
+      {"level": "교사·강사 (JOB-EDU)", "guide": "가명 성적표로 평균·최고점 수식 요청, 실제 학생 이름·점수 사용 금지"},
+      {"level": "외국인·다문화 (JOB-GLB)", "guide": "쉬운 한국어 요청문 연습 — '합계를 구해 줘', '차트를 만들어 줘' 문장 카드 제공"}
+    ],
+    "pro_points": [
+      "핵심 메시지: 말로 시키고 → 근거 셀로 확인하고 → 검산으로 마무리",
+      "설치 단계에서 시간이 가장 많이 걸림 — 수업 전 설치 링크·QR 준비",
+      "가상 데이터 파일을 강사가 배포해 개인정보 사고 예방",
+      "같은 요청을 대화창과 비교시키면 '엑셀 안 AI' 장점이 바로 이해됨",
+      "Microsoft Copilot 사용 기관이면 두 도구 비교를 질문으로 받을 준비"
+    ],
+    "day_before": [
+      "강사 계정·무료 테스트 계정으로 Microsoft Marketplace 설치·홈 탭 열기·로그인 전 과정 확인(한국 계정, 웹·데스크톱)",
+      "가상 '월별 지역 매출표'(4개 지역 × 6개월) 실습 파일 만들어 배포 링크 준비",
+      "따라 하기 프롬프트 4개를 미리 실행해 결과·근거 셀 표시 방식·차트 위치 확인",
+      "Grok 패널·로그인 화면·근거 셀 표시·바뀐 셀 표시 화면 캡처 준비",
+      "기관 PC의 추가 기능 설치 차단 여부를 담당자에게 확인"
+    ]
+  },
+  "verification": [
+    "[미검증] 실제 패널 화면·근거 셀 표시 방식·시나리오 결과는 자동 작성 환경에서 재현하지 못함",
+    "[확인 필요] 지원 Excel 버전(웹·Windows·Mac·iPad) — 공식 페이지에 'Microsoft 365 add-in' 표기만 있음",
+    "[확인 필요] 요금제별 추가 기능 사용 한도 — 공식 페이지에 '무료' 표기만 있음",
+    "[확인 필요] 홈 탭 버튼 이름·Marketplace 설치 화면 문구",
+    "[확인 필요] 추가 기능 안 데이터 처리·학습 사용 여부 — 공식 페이지는 시나리오 기능에 'Data never leaves the workbook' 만 표기",
+    "[확인 필요] 한국 계정 Marketplace 설치 가능 여부",
+    "[확인 필요] Microsoft Marketplace 등록 페이지 직접 열람 실패(2026-10-18) — 앱 이름은 검색 결과 'Grok by SpaceXAI for Excel' 기준"
+  ],
+  "sources": [
+    {"title": "xAI – Grok for Excel", "url": "https://x.ai/grok/excel", "checked": "2026-10-18"},
+    {"title": "xAI News – Introducing Grok for Excel (2026-07-20)", "url": "https://x.ai/news/introducing-excel-addin", "checked": "2026-10-18"},
+    {"title": "Microsoft Marketplace – Grok by SpaceXAI for Excel", "url": "https://marketplace.microsoft.com/en-us/product/office/WA200011056?tab=Overview", "checked": "2026-10-18"},
+    {"title": "xAI News – Introducing Grok for Word (2026-06-18)", "url": "https://x.ai/news/introducing-word-addin", "checked": "2026-10-18"},
+    {"title": "xAI Docs – Connectors", "url": "https://docs.x.ai/grok/connectors", "checked": "2026-10-18"},
+    {"title": "xAI News – Introducing The X Subscription", "url": "https://x.ai/news/x-subscription", "checked": "2026-10-18"},
+    {"title": "xAI News (목록) – Grok for Outlook·Google Workspace 공개일", "url": "https://x.ai/news", "checked": "2026-10-18"}
+  ]
+}

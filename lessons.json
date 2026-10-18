@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 114,
+  "count": 115,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-020",
+      "version": "v1.0",
+      "created_at": "2026-10-18 09:20 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "말로 시키는 엑셀 — Grok for Excel(그록 엑셀 추가 기능)로 '월별 매출표 분석 + 수식 + 차트 + 나쁜 경우 시나리오' 만들기",
+      "summary": "2026-07-20 xAI가 공개한 Grok for Excel. Microsoft 365 무료 추가 기능(add-in)으로 Excel 옆 패널에서 Grok에게 말로 요청 → 고른 범위만 읽고 답하며 근거 셀 표시, 수식은 수식 입력줄에 실제 수식으로 들어가고, 차트는 시트에 바로 삽입, 한 줄 요청으로 시나리오(나쁜 경우·예측) 다시 계산 + 바뀐 셀 표시. Microsoft Marketplace 'Add to Excel'로 설치 → 홈 탭에서 열고 Grok 계정으로 한 번 로그인. 추가 기능 자체는 무료, Grok 사용량은 내 Grok 요금제 범위",
+      "tool": "Grok",
+      "feature": "Grok for Excel(Microsoft 365 추가 기능, Grok by SpaceXAI for Excel) — Excel 옆 패널에서 말로 요청: ① 데이터 질문(고른 범위만 읽음·답에 근거 셀 표시·차트 시트에 삽입) ② 수식 작성(수식 입력줄에 실제 수식·채우기·정렬도 일반 편집으로 기록) ③ 시나리오 실행(한 줄로 다시 계산·바뀐 셀 표시), 메일·SharePoint·Google Drive 커넥터 맥락 활용, Microsoft Marketplace 'Add to Excel' 무료 설치·관리자 조직 배포, 홈 탭에서 열기·한 번 로그인, Word·PowerPoint용도 제공",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-07-20",
+      "categories": [
+        "CAT-03",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-DAT",
+        "JOB-BIZ",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 근거 셀이 표시된 매출표 분석 요약 3줄 + ② Grok이 넣은 지역별 합계·평균 수식(검산 표시 포함) + ③ 시트 안 월별 매출 차트 1개 + ④ '매출 20% 감소' 나쁜 경우 시나리오 시트 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "Excel 옆 Grok에게 말로 분석·수식 요청"
+    },
     {
       "id": "AI-2026-10-CAT04-013",
       "version": "v1.0",

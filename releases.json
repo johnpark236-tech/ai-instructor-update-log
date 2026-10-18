@@ -2806,6 +2806,21 @@
       },
       "checked": "2026-10-18",
       "lesson_id": "AI-2026-10-CAT08-014"
+    },
+    {
+      "id": "grok-2026-07-20-excel-addin",
+      "date": "2026-07-20",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok for Excel — Excel 안 무료 추가 기능",
+      "summary": "Microsoft 365 무료 추가 기능으로 Excel 옆 패널에서 말로 데이터 질문(근거 셀 표시)·수식 작성·차트 삽입·시나리오 실행, 메일·SharePoint·Google Drive 맥락 활용",
+      "source": {
+        "title": "xAI News – Introducing Grok for Excel",
+        "url": "https://x.ai/news/introducing-excel-addin"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT03-020"
     }
   ]
 }
