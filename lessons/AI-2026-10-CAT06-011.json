@@ -1,0 +1,573 @@
+{
+  "id": "AI-2026-10-CAT06-011",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-18 14:10 KST",
+  "checked": "2026-10-18",
+  "review_by": "2027-01-18",
+  "title": "찾고 바로 묻기 — Microsoft 365 Copilot Search 검색 속 채팅(Seamless Search and Chat Integration)으로 '근거 파일 요약표 + 후속 질문 3개 + 팀 공유 메일 초안' 만들기",
+  "summary": "Microsoft 365 Copilot Search(Microsoft Copilot 앱의 Search 탭)에 대화형 채팅이 들어옴(2026-10-06 릴리스 노트, Windows·Web). ① 검색어 입력 → 회사 메일·파일·회의·사람 결과 확인 ② 결과를 근거로 채팅에서 후속 질문 ③ 요약·메일 초안 생성까지 한 화면에서 진행. 자격 있는 Microsoft Copilot 라이선스 사용자에게 추가 비용 없이 제공, 채팅 창 위치·한국어 메뉴 표기는 [확인 필요]",
+  "glance": {
+    "emoji": "🔎",
+    "one_liner": "회사 자료 검색 후 그 자리에서 바로 질문",
+    "cards": [
+      {
+        "icon": "🔎",
+        "title": "통합 검색",
+        "text": "메일·파일·회의·사람 한 번에"
+      },
+      {
+        "icon": "✨",
+        "title": "Copilot 답변",
+        "text": "검색 결과 위 AI 요약 답"
+      },
+      {
+        "icon": "💬",
+        "title": "검색 속 채팅",
+        "text": "결과 근거로 후속 질문"
+      },
+      {
+        "icon": "✉️",
+        "title": "바로 결과물",
+        "text": "요약·메일 초안까지 생성"
+      }
+    ],
+    "diagram": {
+      "title": "검색 → 채팅 흐름",
+      "nodes": [
+        {
+          "icon": "⌨️",
+          "label": "검색어 입력"
+        },
+        {
+          "icon": "📂",
+          "label": "결과 확인"
+        },
+        {
+          "icon": "💬",
+          "label": "채팅으로 질문"
+        },
+        {
+          "icon": "📝",
+          "label": "요약·초안 생성"
+        },
+        {
+          "icon": "✅",
+          "label": "원문 확인"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "검색·채팅 따로",
+        "text": "검색에서 찾고 채팅으로 옮겨 다시 설명해야 했음"
+      },
+      "after": {
+        "label": "검색 화면에서 이어 묻기",
+        "text": "검색 결과를 근거로 바로 후속 질문·요약·초안 생성"
+      }
+    },
+    "cautions": [
+      "답의 근거 파일은 직접 열어 확인",
+      "권한 없는 자료는 안 보임이 정상",
+      "기밀은 조직 정책 범위 안에서만"
+    ]
+  },
+  "tool": "Microsoft 365 Copilot",
+  "feature": "Copilot Search 검색 속 채팅(Seamless Search and Chat Integration) — Microsoft Copilot 앱 Search 탭: ① 메일·파일·회의·사람·사이트 통합 검색 ② 결과 위 Copilot 답변(Copilot Answers) ③ 검색 결과를 근거로 채팅에서 후속 질문·요약·콘텐츠 생성(Windows·Web)",
+  "company": "Microsoft",
+  "type": "update",
+  "released": "2026-10-06",
+  "categories": [
+    "CAT-06",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-PUB",
+    "JOB-EDU",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 32,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Microsoft 365 회사·학교 계정(Entra ID) + 자격 있는 Microsoft Copilot 라이선스(Search 탭이 보여야 함)",
+    "PC 웹 브라우저(microsoft365.com) 또는 Windows용 Microsoft Copilot 앱 — 릴리스 노트 플랫폼 표기: Windows·Web",
+    "검색할 실습 자료: 내 OneDrive에 올린 샘플 문서 2~3개(예: '2026 하반기 교육 계획', '11월 행사 회의록') — 강사가 미리 배포",
+    "결과 기록용 빈 표(종이·Word·Excel 중 하나)"
+  ],
+  "outcome": "① 검색 결과 근거 파일 요약표(파일 이름·핵심 내용·날짜) + ② 채팅 후속 질문 3개와 답 + ③ 근거 파일을 밝힌 팀 공유 메일 초안 1개",
+  "objectives": [
+    "Microsoft Copilot 앱 Search 탭에서 메일·파일·회의·사람 결과를 찾고 Copilot 답변을 확인할 수 있음",
+    "검색 결과를 근거로 채팅에서 후속 질문·요약·메일 초안을 만들 수 있음",
+    "AI 답의 근거 파일을 직접 열어 사실을 확인하고 권한·기밀 원칙을 지킬 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "Copilot Search(검색 속 채팅 포함)는 자격 있는 Microsoft Copilot 라이선스 사용자에게 추가 비용 없이 제공(Learn 문서). 라이선스 없는 Entra ID 사용자는 무료 Microsoft Search만(채팅 통합 없음). 개인용 Microsoft 365 제공 여부 [확인 필요]",
+    "plans": [
+      {
+        "name": "Microsoft Search (라이선스 없는 업무용 계정)",
+        "price": "0달러 (Entra ID 사용자 무료)",
+        "features": "메일·파일·사람 기본 검색 + 검색 속 채팅·Copilot 답변 없음"
+      },
+      {
+        "name": "Microsoft 365 Copilot Business (추가 구독)",
+        "price": "사용자당 월 21달러 연간 결제 (2026-07-01~12-31 첫해 18달러 프로모션), 월 결제 25.20달러",
+        "features": "Work IQ + Teams·Microsoft 365 앱 안 Copilot + Researcher·Analyst·Facilitator 에이전트"
+      },
+      {
+        "name": "Microsoft 365 Business Standard with Copilot",
+        "price": "사용자당 월 23.50달러 연간 결제 (월 결제 28.20달러)",
+        "features": "Office 앱·메일·Teams·저장 공간 + Copilot 묶음"
+      },
+      {
+        "name": "Microsoft 365 Business Premium with Copilot",
+        "price": "사용자당 월 32.00달러 연간 결제 (월 결제 38.40달러)",
+        "features": "Business Premium 보안·관리 + Copilot 묶음"
+      },
+      {
+        "name": "Microsoft 365 Copilot (Enterprise 추가 구독)",
+        "price": "사용자당 월 30달러 (연간 결제)",
+        "features": "대기업용 + 별도 Microsoft 365 요금제 필요"
+      }
+    ],
+    "note": "가격은 미국 공식 페이지 기준(Business 2026-10-18 확인, Enterprise는 교안 AI-2026-10-CAT08-011 확인값 2026-10-17), 원화 가격 [확인 필요]. 어느 라이선스가 '자격 있는 Microsoft Copilot 라이선스'에 해당하는지 세부 목록 [확인 필요]",
+    "checked": "2026-10-18",
+    "sources": [
+      {
+        "title": "Microsoft Learn – Microsoft Copilot Search",
+        "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-search"
+      },
+      {
+        "title": "Microsoft – Copilot Plans and Pricing for Business",
+        "url": "https://www.microsoft.com/en-us/copilot/pricing/business"
+      },
+      {
+        "title": "Microsoft – Copilot Plans and Pricing (Enterprise)",
+        "url": "https://www.microsoft.com/en-us/copilot/pricing/enterprise"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-10-10",
+      "text": "Microsoft 365 로드맵 512429 'Seamless Search and Chat Integration' 등록 — 미리 보기 2026-01, 출시 2026-03 예정 표기(로드맵 요약 사이트 기준 [확인 필요])"
+    },
+    {
+      "date": "2026-08-18",
+      "text": "Microsoft Learn 'Microsoft Copilot Search' 문서 — Search는 Microsoft Copilot 앱의 전용 모듈, 자격 있는 라이선스 사용자에게 추가 비용 없이 제공"
+    },
+    {
+      "date": "2026-10-06",
+      "text": "Microsoft 365 Copilot 릴리스 노트 — Copilot Search 안 채팅 통합(Seamless Search and Chat Integration) 출시 (Windows·Web)"
+    },
+    {
+      "date": "2026-10-18",
+      "text": "교안 기준일 — 릴리스 노트·Learn 문서·지원 문서·Business 요금 페이지 재확인"
+    }
+  ],
+  "theory": {
+    "definition": "Copilot Search 검색 속 채팅은 Microsoft Copilot 앱의 Search 탭에서 회사 자료를 검색한 뒤, 그 검색 결과를 근거로 같은 화면의 채팅에서 후속 질문·요약·콘텐츠 생성까지 이어 가는 기능임. 예전에는 검색과 채팅 도구를 따로 오가야 했음",
+    "analogy": "'도서관 사서에게 책을 찾아 달라고 한 뒤, 그 자리에서 책 내용을 물어보기'. 예전엔 책을 찾아 들고 다른 방의 전문가에게 다시 설명해야 했음",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Microsoft Search(무료)",
+        "Copilot Search(검색만)",
+        "Copilot Search + 채팅"
+      ],
+      "rows": [
+        [
+          "대상",
+          "라이선스 없는 Entra ID 사용자",
+          "Microsoft Copilot 라이선스",
+          "Microsoft Copilot 라이선스"
+        ],
+        [
+          "결과",
+          "메일·파일·사람 목록",
+          "목록 + 위쪽 Copilot 답변",
+          "목록 + 답변 + 후속 대화"
+        ],
+        [
+          "할 수 있는 일",
+          "찾기",
+          "찾기 + 짧은 요약",
+          "찾기 + 질문 + 요약·초안 생성"
+        ],
+        [
+          "쓰기 좋은 때",
+          "파일 이름을 알 때",
+          "빠른 사실 확인",
+          "찾은 자료로 바로 일할 때"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "Copilot Search(Search 탭)",
+        "body": "Microsoft Copilot 앱의 전용 검색 모듈. 메일·파일·채팅·회의·사람·SharePoint 사이트 + 연결된 외부 데이터(커넥터)까지 한곳에서 검색. 내가 볼 권한이 있는 자료만 결과에 나옴 [확인 필요: 권한 필터 공식 문구]"
+      },
+      {
+        "title": "Copilot 답변(Copilot Answers)",
+        "body": "자연어 질문을 검색하면 결과 맨 위에 Copilot Chat 기반의 짧은 AI 답이 나옴. 조직 설정에 따라 웹(Bing) 근거가 섞일 수 있음 → 답의 출처 표시 확인"
+      },
+      {
+        "title": "검색 속 채팅(이번 업데이트)",
+        "body": "검색 결과를 대화의 바탕으로 삼아 후속 질문·여러 결과 종합·요약·초안 생성. 검색어를 채팅에 다시 설명할 필요 없음. 채팅 창의 정확한 위치·이름은 화면에서 확인 [확인 필요]"
+      }
+    ],
+    "can": [
+      "메일·파일·회의·사람 결과를 한 번에 검색",
+      "결과 위 Copilot 답변으로 빠른 확인",
+      "검색 결과를 근거로 후속 질문",
+      "여러 결과를 묶어 요약·비교",
+      "찾은 자료로 메일·안내문 초안 생성"
+    ],
+    "cannot": [
+      "권한 없는 자료 검색(보이지 않음이 정상)",
+      "라이선스 없이 Search 탭 사용(무료 Microsoft Search는 채팅 없음)",
+      "답의 사실 여부 자동 보장",
+      "Mac·모바일 앱의 같은 채팅 통합 보장 [확인 필요]",
+      "한국어 검색 품질 공식 보장 [확인 필요]"
+    ],
+    "safety": [
+      "AI 답·요약은 근거 파일을 직접 열어 날짜·숫자 확인",
+      "검색에 남의 메일·파일이 보이면 공유 설정 문제일 수 있음 → 열람·전달 전에 IT·담당자 확인",
+      "기밀·개인정보가 담긴 결과를 외부 메일·외부 AI로 옮기지 말 것",
+      "웹 근거가 섞인 답은 사내 자료와 구분해서 사용",
+      "팀 공유 메일에는 'AI 초안 → 사람 검토'와 근거 파일 이름 표기"
+    ]
+  },
+  "practice": {
+    "preview": "Search 탭 열기 → 검색 → 결과·Copilot 답변 확인 → 채팅 후속 질문 3개 → 요약표 → 메일 초안 → 원문 확인. ① 근거 파일 요약표 + ② 후속 질문 3개 + ③ 팀 공유 메일 초안",
+    "follow": [
+      {
+        "title": "Search 탭 열기",
+        "minutes": 4,
+        "do": "브라우저에서 microsoft365.com 접속(또는 작업 표시줄 Copilot 아이콘) → 회사·학교 계정 로그인 → 왼쪽 메뉴 Search(검색) 선택",
+        "prompt": "",
+        "expect": "Search 화면 + Recommended·Quick access(Recent·Shared·Favorites) 표시",
+        "note": "Search 탭이 없으면 라이선스 없음 가능성 → Plan B"
+      },
+      {
+        "title": "검색하고 결과 보기",
+        "minutes": 6,
+        "do": "아래 검색어 입력 → Search(→) 선택 → 결과 목록에서 파일·메일·회의 종류 확인, 맨 위 Copilot 답변 읽기",
+        "prompt": "2026 하반기 교육 계획 일정",
+        "expect": "샘플 파일·관련 메일 결과 + 위쪽 Copilot 답변(자연어 질문일 때)",
+        "note": "검색어를 '하반기 교육 일정은 언제야?'처럼 질문형으로도 바꿔 비교"
+      },
+      {
+        "title": "채팅으로 후속 질문",
+        "minutes": 7,
+        "do": "검색 결과 화면의 채팅(채팅 창 또는 '채팅에서 계속') 열기 [확인 필요: 실제 버튼 이름·위치] → 아래 프롬프트 입력",
+        "prompt": "방금 검색 결과에 나온 파일들을 바탕으로 하반기 교육 일정을 월별 표로 정리해 줘. 각 줄에 근거 파일 이름을 함께 적어 줘.",
+        "expect": "월별 일정 표 + 근거 파일 이름",
+        "note": "근거 파일 이름이 실제 결과 목록에 있는지 대조"
+      },
+      {
+        "title": "후속 질문 2개 더",
+        "minutes": 5,
+        "do": "같은 채팅에서 이어서 질문 → 답을 기록표에 요약",
+        "prompt": "이 일정 중에 장소나 날짜가 바뀐 내용이 있으면 무엇이 언제 바뀌었는지 알려 줘. 그리고 아직 담당자가 정해지지 않은 항목이 있는지도 찾아 줘.",
+        "expect": "변경 사항 + 미정 항목 목록",
+        "note": "'없음'이라는 답도 원문으로 확인할 것"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "근거 파일 요약표 + 원문 확인",
+        "minutes": 5,
+        "do": "답에 나온 근거 파일 2개를 직접 열어 날짜·장소 대조 → 요약표(파일 이름·핵심 내용·날짜·확인 결과) 작성",
+        "prompt": "지금까지 대화에서 쓴 근거 파일을 표로 정리해 줘. 열: 파일 이름, 핵심 내용 한 줄, 문서 날짜.",
+        "expect": "근거 파일 요약표",
+        "note": "AI 표와 내가 원문에서 본 내용이 다르면 원문 기준으로 수정"
+      },
+      {
+        "title": "팀 공유 메일 초안 + 내 업무 적용",
+        "minutes": 5,
+        "do": "메일 초안 요청 → 내 업무 검색어로 검색 → 채팅 → 초안 과정 1회 반복",
+        "prompt": "위 일정 표를 바탕으로 팀원들에게 보낼 공유 메일 초안을 써 줘. 조건: 제목 포함, 6문장 이내, 바뀐 일정은 굵게, 마지막 줄에 근거 파일 이름 목록.",
+        "expect": "제목 + 6문장 이내 메일 초안 + 근거 파일 목록",
+        "note": "내 업무 검색어는 기밀·개인정보 없는 주제로"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 내용을 키워드형('교육 일정')과 질문형('교육 일정 언제야?')으로 검색해 Copilot 답변 차이 1줄 정리"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "사람 이름 + 주제로 검색(예: 담당자 이름 + 행사)해 관련 메일·회의만 모으고 채팅으로 '내가 답해야 할 일' 목록 만들기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "팀용 '검색 → 채팅 → 원문 확인' 업무 체크리스트 1쪽 + 검색어 잘 쓰는 규칙 3줄(기간·사람·문서 종류 넣기)"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 요약표·메일 초안 보여 주고 '가장 쓸모 있던 후속 질문 / 원문 확인에서 찾은 차이 / 내 업무 적용 아이디어' 발표",
+    "quiz": [
+      {
+        "q": "Copilot Search 검색 속 채팅(Seamless Search and Chat Integration)으로 달라진 점은?",
+        "options": [
+          "검색 기능이 없어지고 채팅만 남았다",
+          "검색 결과를 근거로 같은 화면에서 후속 질문·요약·초안 생성을 이어 갈 수 있다",
+          "모든 회사 직원의 메일을 볼 수 있게 됐다",
+          "인터넷 검색만 할 수 있게 됐다"
+        ],
+        "answer": 1,
+        "explain": "릴리스 노트: 검색 결과가 대화의 바탕이 되어 후속 질문·종합·콘텐츠 생성을 한 화면에서 진행"
+      },
+      {
+        "q": "검색 결과에 동료 파일이 안 보인다. 가장 알맞은 설명은?",
+        "options": [
+          "Copilot이 고장 났다",
+          "내가 볼 권한이 있는 자료만 결과에 나온다",
+          "유료 요금제를 하나 더 사야 한다",
+          "검색어가 영어가 아니라서다"
+        ],
+        "answer": 1,
+        "explain": "Copilot Search는 Copilot과 같은 보안·권한 설정을 따름 → 권한 없는 자료는 안 보임"
+      },
+      {
+        "q": "채팅이 만든 일정 표를 팀 메일에 쓰기 전 해야 할 일은?",
+        "options": [
+          "그대로 보낸다",
+          "근거 파일을 직접 열어 날짜·장소를 확인한다",
+          "더 긴 표를 다시 요청한다",
+          "Copilot 답변이 있으니 확인할 필요 없다"
+        ],
+        "answer": 1,
+        "explain": "AI 요약은 틀릴 수 있음 → 근거 파일 원문 대조 후 사용"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "기능 활용",
+        "high": "검색 → 채팅 후속 질문 3개 → 초안까지 완료",
+        "mid": "후속 질문 1~2개",
+        "low": "검색만"
+      },
+      {
+        "criterion": "근거 관리",
+        "high": "근거 파일 요약표 + 원문 대조 2개 이상",
+        "mid": "요약표만",
+        "low": "근거 표시 없음"
+      },
+      {
+        "criterion": "검증·보안",
+        "high": "차이 수정 + 기밀 없음 + AI 초안 표기",
+        "mid": "일부 확인",
+        "low": "확인 없음·기밀 포함"
+      }
+    ],
+    "next": [
+      "Microsoft 365 Copilot 응답 다시 생성 — 다시 시도·모델 전환 (AI-2026-10-CAT12-001)",
+      "Microsoft 365 Copilot Notebooks (AI-2026-10-CAT06-006)",
+      "Planner Agent 채팅으로 작업 관리 (AI-2026-10-CAT08-011)",
+      "Microsoft 365 Copilot 비전 — 화면·카메라 공유 (AI-2026-10-CAT01-007)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "00:00~00:06",
+        "content": "도입 — 검색 후 채팅에 다시 설명하던 예전 방식 vs 검색 화면에서 바로 묻기 비교 시연",
+        "note": "강사 계정 샘플 파일로 미리 준비"
+      },
+      {
+        "time": "00:06~00:18",
+        "content": "이론 — 정의·비교표(무료 Search vs Copilot Search)·Copilot 답변·권한",
+        "note": "'안 보이면 권한 때문' 먼저 강조"
+      },
+      {
+        "time": "00:18~00:40",
+        "content": "따라 하기 1~4 — Search 열기·검색·채팅 후속 질문",
+        "note": "채팅 버튼 위치를 화면 확대로 시연"
+      },
+      {
+        "time": "00:40~00:50",
+        "content": "내 것 만들기 — 요약표·원문 확인·메일 초안",
+        "note": "원문과 다른 곳 찾기 활동"
+      },
+      {
+        "time": "00:50~01:00",
+        "content": "정리 — 2인 발표·퀴즈 3문제",
+        "note": "공용 PC 로그아웃 안내"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "파일을 검색해서 찾은 다음, 다시 Copilot 채팅 창을 열고 그 파일 이야기를 처음부터 설명하셨죠? 이제는 검색한 그 화면에서 바로 질문하면 됩니다."
+      },
+      {
+        "label": "핵심 개념",
+        "text": "검색은 자료를 모으는 단계, 채팅은 그 자료로 일하는 단계입니다. 이번 업데이트로 두 단계가 한 화면에 붙었습니다."
+      },
+      {
+        "label": "주의",
+        "text": "검색 결과에는 내가 볼 수 있는 자료만 나옵니다. 그리고 Copilot이 정리한 날짜는 꼭 원래 파일을 열어 확인하세요."
+      },
+      {
+        "label": "마무리",
+        "text": "찾고, 묻고, 정리하고, 원문으로 확인한다. 이 네 단계가 오늘의 업무 루틴입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Search 탭이 안 보임(라이선스 없음)",
+        "response": "강사 화면 시연 + 라이선스 있는 수강생과 2인 1조, 무료 Microsoft Search로 '찾기'만 비교 체험"
+      },
+      {
+        "situation": "검색 결과에 샘플 파일이 안 나옴(색인 지연)",
+        "response": "파일 업로드 후 색인까지 시간이 걸릴 수 있음 → 전날 업로드, 당일은 파일 이름 그대로 검색 [확인 필요: 색인 소요 시간]"
+      },
+      {
+        "situation": "검색 속 채팅이 아직 안 보임(순차 배포)",
+        "response": "결과의 추천 프롬프트 또는 Copilot Chat으로 이동해 같은 질문 진행, 비교는 강사 캡처로"
+      },
+      {
+        "situation": "로그인·조건부 액세스 차단",
+        "response": "기관 IT 정책 문제 → 수업 중 해결 시도하지 말고 2인 1조 전환"
+      },
+      {
+        "situation": "서비스 지연",
+        "response": "미리 캡처한 검색·채팅 결과로 요약표·원문 대조 활동 먼저 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Search 메뉴 위치를 못 찾음",
+        "fix": "Microsoft Copilot 앱 왼쪽 탐색 창의 Search 확인, 앱 화면이 좁으면 메뉴 펼치기"
+      },
+      {
+        "issue": "검색 결과가 너무 많음",
+        "fix": "기간·사람·문서 종류를 검색어에 추가, Quick access 필터(Location·Shared by·Owned by) 사용"
+      },
+      {
+        "issue": "채팅 버튼을 못 찾음",
+        "fix": "결과 위 Copilot 답변 또는 추천 프롬프트 선택 → 채팅으로 이어짐 [확인 필요: 실제 버튼 이름]"
+      },
+      {
+        "issue": "답에 근거 파일 이름이 없음",
+        "fix": "프롬프트에 '근거 파일 이름을 함께 적어 줘' 추가"
+      },
+      {
+        "issue": "답과 원문 날짜가 다름",
+        "fix": "원문 기준으로 표 수정, '파일에 있는 날짜만 쓰고 추측하지 말 것' 조건 추가"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로 쓸 수 있나요?",
+        "a": "Copilot Search는 자격 있는 Microsoft Copilot 라이선스 사용자에게 추가 비용 없이 제공. 라이선스 없는 Entra ID 사용자는 무료 Microsoft Search(채팅 통합 없음)만 사용"
+      },
+      {
+        "q": "다른 사람 메일도 검색되나요?",
+        "a": "아니요. Copilot과 같은 보안·권한 설정을 따름 → 내가 볼 수 있는 자료만 나옴. 남의 자료가 보이면 공유 설정 확인 필요"
+      },
+      {
+        "q": "개인용 Microsoft 계정에서도 되나요?",
+        "a": "이번 기능은 Microsoft 365 Copilot(업무용) 릴리스 노트 기준. 개인용 제공 여부 [확인 필요]"
+      },
+      {
+        "q": "Mac·모바일에서도 되나요?",
+        "a": "릴리스 노트 플랫폼 표기는 Windows·Web. Mac·모바일 채팅 통합 [확인 필요]"
+      },
+      {
+        "q": "인터넷 정보도 섞이나요?",
+        "a": "Copilot 답변은 조직의 Copilot Chat 근거 설정을 따르며 웹(Bing) 근거가 포함될 수 있음 → 출처 표시 확인"
+      },
+      {
+        "q": "외부 서비스 자료도 검색되나요?",
+        "a": "관리자가 연결한 Copilot 커넥터(100개 이상 카탈로그)가 있으면 외부 데이터도 검색 가능. 기관 연결 현황은 IT 확인"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급",
+        "guide": "검색 1회 + 후속 질문 1개 + 근거 파일 1개 원문 확인까지"
+      },
+      {
+        "level": "중급",
+        "guide": "후속 질문 3개 + 요약표 + 메일 초안 + 내 업무 적용"
+      },
+      {
+        "level": "고급",
+        "guide": "사람·기간·문서 종류 조합 검색어 설계, 팀 체크리스트·커넥터 활용 계획"
+      },
+      {
+        "level": "시니어",
+        "guide": "Search 메뉴 위치를 종이 그림으로 배포, '찾고 한 가지 묻기'만 진행"
+      },
+      {
+        "level": "다문화(한국어 학습자)",
+        "guide": "검색어를 명사형(교육 일정)과 질문형(교육 일정이 언제예요?)으로 바꿔 보며 의문문 표현 연습"
+      }
+    ],
+    "pro_points": [
+      "검색어 3요소(주제 + 기간 + 사람·문서 종류) 공식으로 가르치면 결과 품질이 크게 좋아짐",
+      "'안 보이는 것 = 권한' 원칙을 먼저 알려 주면 수강생 불안·질문이 줄어듦",
+      "모든 AI 결과물 끝에 근거 파일 이름 요청 → 원문 확인 습관화"
+    ],
+    "day_before": [
+      "강사 업무 계정으로 Search 탭·검색 속 채팅 실제 위치·한국어 표기 확인 후 캡처",
+      "실습 샘플 문서 2~3개(일정·회의록)를 수강생 OneDrive 또는 공유 폴더에 전날 업로드(색인 대기)",
+      "검색 → 채팅 → 메일 초안 결과 미리 생성·캡처(Plan B용)",
+      "수강생 라이선스(Search 탭 보임 여부) 사전 확인 후 2인 1조 편성",
+      "기관 Copilot 웹 근거·커넥터 설정 여부를 IT에 확인"
+    ]
+  },
+  "verification": [
+    "검색 속 채팅 창의 실제 위치·버튼 이름·한국어 표기 [확인 필요]",
+    "권한 필터(내가 볼 수 있는 자료만) 공식 문구 — Learn 문서는 'Copilot과 같은 보안 설정' 표현만 확인 [확인 필요]",
+    "Mac·모바일 앱 제공 여부(릴리스 노트는 Windows·Web만) [확인 필요]",
+    "로드맵 512429 일정(미리 보기 2026-01·출시 2026-03)은 로드맵 요약 사이트 기준 [확인 필요]",
+    "업로드 파일 색인 소요 시간 [확인 필요]",
+    "원화 가격 [확인 필요]"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Learn – Release Notes for Microsoft 365 Copilot (2026-10-06 Seamless Search and Chat Integration)",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Microsoft Learn – Microsoft Copilot Search",
+      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-search",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Microsoft Support – Get started with Search in the Microsoft 365 Copilot app",
+      "url": "https://support.microsoft.com/en-US/Microsoft-365-Copilot/get-started-with-search-in-the-microsoft-365-copilot-app",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Microsoft 365 Roadmap – 512429",
+      "url": "https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=512429",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Microsoft – Copilot Plans and Pricing for Business",
+      "url": "https://www.microsoft.com/en-us/copilot/pricing/business",
+      "checked": "2026-10-18"
+    }
+  ]
+}
