@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-18 12:10 KST",
+  "updated_at": "2026-10-18 13:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "cursor-2026-10-16-cloud-agent-canvases",
+      "date": "2026-10-16",
+      "tool": "Cursor",
+      "company": "Anysphere",
+      "type": "update",
+      "title": "클라우드 에이전트 캔버스·Environments API(베타)",
+      "summary": "클라우드 에이전트가 작업 중 인터랙티브 캔버스를 만들고 링크로 팀에 공유, Environments API 베타·환경당 저장소 300개·대형 환경 5배 빠른 로딩",
+      "source": {
+        "title": "Cursor Changelog – Cloud Agent Canvases and Environment Improvements",
+        "url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT07-012"
+    },
     {
       "id": "m365copilot-2026-10-06-regenerate",
       "date": "2026-10-06",

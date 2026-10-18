@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 118,
+  "count": 119,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-012",
+      "version": "v1.0",
+      "created_at": "2026-10-18 13:05 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "클라우드 에이전트가 만든 대시보드를 링크 하나로 팀에 공유하기 — Cursor 캔버스(Canvases)로 저장소 현황판 완성",
+      "summary": "Cursor 클라우드 에이전트(Cloud Agents)가 작업 중 인터랙티브 캔버스를 만들 수 있게 됨(2026-10-16). 긴 표·코드 대신 표·통계·차트가 있는 현황판을 받고, Publish 링크로 팀원에게 읽기 전용 스냅숏 공유까지 진행",
+      "tool": "Cursor",
+      "feature": "클라우드 에이전트 캔버스(Cloud Agent Canvases) — 클라우드 에이전트가 만드는 인터랙티브 캔버스(표·통계·차트 현황판), 말로 수정·재실행, Publish 링크로 팀 읽기 전용 공유, 스킬로 반복 생성",
+      "company": "Anysphere",
+      "type": "update",
+      "released": "2026-10-16",
+      "categories": [
+        "CAT-07",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-DAT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 클라우드 에이전트가 만든 '저장소 현황판' 캔버스 1개(요약 통계 + 파일별 TODO 표 + 차트) ② 팀원에게 보낼 Publish 공유 링크 1개 ③ 같은 현황판을 다시 만드는 스킬 초안 1개",
+      "access": "paid",
+      "total_minutes": 72,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "클라우드 에이전트 결과를 현황판으로 공유"
+    },
     {
       "id": "AI-2026-10-CAT12-001",
       "version": "v1.0",
