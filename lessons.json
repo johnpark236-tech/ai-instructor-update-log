@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 133,
+  "count": 134,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-025",
+      "version": "v1.0",
+      "created_at": "2026-10-19 04:25 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "무료 Grok 부가기능 하나로 Google 문서·시트·프레젠테이션 옆 패널에서 회의 메모 정리 → 예산표 분석 → 발표 자료 5장까지 한 번에 만들 수 있음",
+      "summary": "Grok in Google Workspace — ① Marketplace 무료 부가기능 1번 설치로 Docs·Sheets·Slides 모두 사용 + ② 확장 프로그램 메뉴 → 옆 패널, 한 번 로그인 + ③ Docs 메모→제목·목록 문서, Sheets 근거 셀 표시 답·실제 수식·차트, Slides 개요→테마 맞춘 슬라이드 + ④ 모든 변경은 일반 편집이라 되돌리기 가능",
+      "tool": "Grok",
+      "feature": "Grok in Google Workspace(Grok for Google Workspace 부가기능, SpaceXAI) — Google Workspace Marketplace 무료 설치 1번으로 Docs·Sheets·Slides 옆 패널 사용: ① Docs 메모→실제 제목·목록 문서·맞춤법·문체 통일, 커넥터로 최근 메일·Drive 파일 참고 ② Sheets 선택 범위 질문(근거 셀 표시)·수식 작성·채우기·차트 삽입·시나리오 재계산 ③ Slides 한 줄·개요로 덱 생성, 기존 테마·마스터 맞춤 슬라이드 추가, 웹·X 조사, 도식·이미지, 핵심 문장 제목, 확장 프로그램 메뉴로 열기·한 번 로그인, 관리자 도메인 전체 배포(2026-07-24)",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-07-24",
+      "categories": [
+        "CAT-03",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-STU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 회의 메모를 제목·목록으로 정리한 '월간 운영 보고' Docs 1쪽 + ② 근거 셀이 표시된 예산 분석 답·합계 수식·막대 차트가 들어간 Sheets + ③ 보고 내용으로 만든 Slides 5장(핵심 문장 제목) + ④ 권한·확인 점검표",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "문서·시트·슬라이드 옆에 Grok"
+    },
     {
       "id": "AI-2026-10-CAT08-018",
       "version": "v1.0",

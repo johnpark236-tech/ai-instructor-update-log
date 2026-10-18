@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-19 03:10 KST",
+  "updated_at": "2026-10-19 04:25 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-07-24-google-workspace-addon",
+      "date": "2026-07-24",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok in Google Workspace — Docs·Sheets·Slides 무료 부가기능",
+      "summary": "부가기능 1개로 Google Docs·Sheets·Slides 옆 패널에서 Grok 사용: 문서 정리·근거 셀 표시·수식·차트·테마 맞춘 슬라이드, Marketplace 무료 설치",
+      "source": {
+        "title": "xAI News – Grok in Google Workspace",
+        "url": "https://x.ai/news/introducing-google-workspace-addon"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT03-025"
+    },
+    {
+      "id": "grok-2026-07-21-outlook-addin",
+      "date": "2026-07-21",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok for Outlook — 메일함 옆 Grok 추가 기능",
+      "summary": "긴 스레드 요약(결정·담당·내 할 일), 메일 일괄 정리(보관·정크·답장 필요 표시), 첨부 읽기·웹/X 검색, 내 말투 답장 초안(발송은 사용자), 유료 X·SuperGrok 사용자",
+      "source": {
+        "title": "xAI News – Introducing Grok for Outlook",
+        "url": "https://x.ai/news/introducing-outlook-addin"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": null
+    },
     {
       "id": "grokbot-2026-10-14-plus-aliases",
       "date": "2026-10-14",

@@ -1,0 +1,614 @@
+{
+  "id": "AI-2026-10-CAT03-025",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-19 04:25 KST",
+  "checked": "2026-10-19",
+  "review_by": "2027-01-19",
+  "title": "무료 Grok 부가기능 하나로 Google 문서·시트·프레젠테이션 옆 패널에서 회의 메모 정리 → 예산표 분석 → 발표 자료 5장까지 한 번에 만들 수 있음",
+  "summary": "Grok in Google Workspace — ① Marketplace 무료 부가기능 1번 설치로 Docs·Sheets·Slides 모두 사용 + ② 확장 프로그램 메뉴 → 옆 패널, 한 번 로그인 + ③ Docs 메모→제목·목록 문서, Sheets 근거 셀 표시 답·실제 수식·차트, Slides 개요→테마 맞춘 슬라이드 + ④ 모든 변경은 일반 편집이라 되돌리기 가능",
+  "glance": {
+    "emoji": "🧩",
+    "one_liner": "문서·시트·슬라이드 옆에 Grok",
+    "cards": [
+      {
+        "icon": "📝",
+        "title": "Docs",
+        "text": "메모를 제목·목록 문서로 정리"
+      },
+      {
+        "icon": "📊",
+        "title": "Sheets",
+        "text": "근거 셀 표시 답 + 실제 수식"
+      },
+      {
+        "icon": "🖼",
+        "title": "Slides",
+        "text": "개요로 테마 맞춘 슬라이드"
+      },
+      {
+        "icon": "🆓",
+        "title": "무료 설치",
+        "text": "부가기능 1개로 3개 앱 사용"
+      }
+    ],
+    "diagram": {
+      "title": "부가기능 작동 흐름",
+      "nodes": [
+        {
+          "icon": "🛒",
+          "label": "마켓에서 설치"
+        },
+        {
+          "icon": "🧩",
+          "label": "확장 프로그램 열기"
+        },
+        {
+          "icon": "🔑",
+          "label": "Grok 로그인"
+        },
+        {
+          "icon": "💬",
+          "label": "옆 패널에 요청"
+        },
+        {
+          "icon": "✏️",
+          "label": "파일에 바로 편집"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "기능 전",
+        "text": "grok.com에 복사·붙여넣기 → 답을 다시 문서·시트에 옮기고 서식 손질"
+      },
+      "after": {
+        "label": "기능 후",
+        "text": "열린 파일 옆 패널에서 요청 → 제목·수식·슬라이드가 파일에 바로 들어감"
+      }
+    },
+    "cautions": [
+      "개인정보 파일엔 쓰지 않음",
+      "권한 요청 화면 꼭 읽고 설치",
+      "수식·숫자는 근거 셀로 확인"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok in Google Workspace(Grok for Google Workspace 부가기능, SpaceXAI) — Google Workspace Marketplace 무료 설치 1번으로 Docs·Sheets·Slides 옆 패널 사용: ① Docs 메모→실제 제목·목록 문서·맞춤법·문체 통일, 커넥터로 최근 메일·Drive 파일 참고 ② Sheets 선택 범위 질문(근거 셀 표시)·수식 작성·채우기·차트 삽입·시나리오 재계산 ③ Slides 한 줄·개요로 덱 생성, 기존 테마·마스터 맞춤 슬라이드 추가, 웹·X 조사, 도식·이미지, 핵심 문장 제목, 확장 프로그램 메뉴로 열기·한 번 로그인, 관리자 도메인 전체 배포(2026-07-24)",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-07-24",
+  "categories": [
+    "CAT-03",
+    "CAT-06"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-PUB",
+    "JOB-STU"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Google 계정(개인 Gmail 가능) — 회사·학교 Workspace 계정은 관리자가 부가기능 설치를 막았는지 확인",
+    "Grok 계정 — grok.com 가입(Free 가능), 부가기능에서 한 번 로그인 [확인 필요: Free 요금제 부가기능 사용 한도]",
+    "PC 브라우저(Chrome 권장)로 Google Docs·Sheets·Slides 접속",
+    "실습 파일 3개(강사 배포, 가상 데이터): ① 회의 메모 Docs ② 월별 예산 Sheets ③ 빈 Slides",
+    "선택: grok.com/connectors 에서 Gmail·Google Drive 커넥터 연결(도전과제용)"
+  ],
+  "outcome": "① 회의 메모를 제목·목록으로 정리한 '월간 운영 보고' Docs 1쪽 + ② 근거 셀이 표시된 예산 분석 답·합계 수식·막대 차트가 들어간 Sheets + ③ 보고 내용으로 만든 Slides 5장(핵심 문장 제목) + ④ 권한·확인 점검표",
+  "objectives": [
+    "Grok in Google Workspace 부가기능이 '설치 1번 → 확장 프로그램 → 옆 패널 요청 → 파일에 일반 편집'으로 작동하는 구조를 설명할 수 있음",
+    "Docs·Sheets·Slides에서 각각 문서 정리·근거 셀 확인·수식·차트·슬라이드 생성을 요청하고 결과를 되돌리거나 고칠 수 있음",
+    "설치 시 권한 범위·개인정보 주의·숫자 검증 원칙을 이해하고 부가기능을 안전하게 관리·삭제할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "부가기능 설치는 무료(Marketplace 'Free of charge'·xAI 공식 'free') — Grok 계정 로그인 필요, 사용량은 내 Grok 요금제 범위 [확인 필요: 요금제별 부가기능 사용 한도]. 2026-10-12부터 신규 가입은 The X Subscription: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200. Google 계정·Workspace 요금은 별도",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 매일 제한된 사용 — 부가기능 로그인·체험 범위 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok·Cursor 기본 사용량 증가 + X 체크 표시"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "SuperGrok + Cursor Pro + X Premium+ + Grok Bot 포함, Plus 대비 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "Premium 전체 + Plus 대비 15배 사용량"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "Super 전체 + Plus 대비 50배 사용량"
+      }
+    ],
+    "note": "요금은 xAI 공식 발표·요금 페이지 미국 달러 기준(2026-10-19 확인, 세금 별도·원화 미확인). 부가기능 무료 표기는 Marketplace·x.ai/grok/workspace·출시 글 기준. Grok Business(사용자당 월 $30)·Enterprise는 관리자가 도메인 전체 배포 가능. 같은 회사의 Grok for Outlook은 유료 X·SuperGrok 사용자 대상(별도 제품)",
+    "checked": "2026-10-19",
+    "sources": [
+      {
+        "title": "Google Workspace Marketplace – Grok (SpaceXAI)",
+        "url": "https://workspace.google.com/marketplace/app/grok/660927092109",
+        "checked": "2026-10-19"
+      },
+      {
+        "title": "xAI – Grok for Google Workspace (Google Workspace Add-on 소개 페이지)",
+        "url": "https://x.ai/grok/workspace",
+        "checked": "2026-10-19"
+      },
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription",
+        "checked": "2026-10-19"
+      },
+      {
+        "title": "xAI – Pricing",
+        "url": "https://x.ai/pricing",
+        "checked": "2026-10-19"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-06-18",
+      "text": "Grok for Word 공개 — Grok 첫 오피스 추가 기능(무료)"
+    },
+    {
+      "date": "2026-07-20",
+      "text": "Grok for Excel 공개 — 근거 셀 표시·수식·시나리오"
+    },
+    {
+      "date": "2026-07-21",
+      "text": "Grok for Outlook 공개(유료 X·SuperGrok 사용자) + Marketplace Grok 부가기능 등록 정보 갱신일"
+    },
+    {
+      "date": "2026-07-24",
+      "text": "Grok in Google Workspace 공개 — 부가기능 1개로 Docs·Sheets·Slides, 무료 설치"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "The X Subscription 출시 — Grok 요금제 Free·Plus·Premium·Super·Ultra로 개편(신규 가입 기준)"
+    },
+    {
+      "date": "2026-10-19",
+      "text": "Marketplace 기준 현황 — 설치 4.5만+ 회, 무료, Docs·Sheets·Slides 지원(Gmail 미지원)"
+    }
+  ],
+  "theory": {
+    "definition": "xAI(SpaceXAI)의 AI Grok을 Google Docs·Sheets·Slides 안 옆 패널(사이드바)로 불러 쓰는 무료 Google Workspace 부가기능(Add-on)임. ① Marketplace에서 1번 설치하면 3개 앱 모두 사용 ② 확장 프로그램 메뉴로 열고 한 번 로그인 ③ 요청하면 열린 파일에 직접 편집 ④ 결과는 실제 제목·목록·수식·슬라이드라 일반 편집처럼 되돌리기 가능",
+    "analogy": "사무실 책상 옆에 앉은 보조 직원과 같음 — 서류를 들고 다른 방(grok.com)에 갈 필요 없이, 펼쳐 둔 문서를 같이 보며 '이 메모 정리해 줘, 이 표 합계 내 줘'라고 말하면 바로 그 종이에 써 줌",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Grok in Google Workspace",
+        "Google Docs·Sheets 속 Gemini",
+        "grok.com 대화창"
+      ],
+      "rows": [
+        [
+          "설치·비용",
+          "Marketplace 무료 부가기능 + Grok 계정",
+          "Google AI 요금제·Workspace 요금제에 포함 [확인 필요: 요금제별]",
+          "설치 없음, Grok 요금제"
+        ],
+        [
+          "여는 곳",
+          "확장 프로그램 메뉴 → 옆 패널",
+          "오른쪽 위 Gemini 아이콘 → 측면 패널",
+          "별도 브라우저 탭"
+        ],
+        [
+          "결과 반영",
+          "열린 파일에 바로 편집(제목·수식·슬라이드)",
+          "파일에 삽입·편집",
+          "복사해서 옮겨야 함"
+        ],
+        [
+          "추가 자료",
+          "커넥터로 최근 메일·Drive 파일(선택)",
+          "Gmail·Drive 등 Workspace 자료",
+          "커넥터·파일 업로드"
+        ],
+        [
+          "알맞은 경우",
+          "Grok을 이미 쓰거나 다른 AI와 비교할 때",
+          "회사 Workspace 표준 AI",
+          "파일 없이 아이디어·조사"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "설치 1번, 앱 3개",
+        "body": "① Google Workspace Marketplace 'Grok'(개발사 SpaceXAI) 설치 ② Docs·Sheets·Slides 모두 같은 부가기능으로 사용 ③ 확장 프로그램 메뉴에서 열면 옆 패널 표시 ④ 한 번 로그인하면 지원 편집기 모두 사용 ⑤ Gmail·Drive 화면 자체에는 없음 — 커넥터로만 메일·Drive 자료 참고"
+      },
+      {
+        "title": "앱별로 잘하는 일",
+        "body": "① Docs: 메모를 실제 제목(Heading)·목록 문서로, 맞춤법 수정, 긴 문서 문체 통일 ② Sheets: 선택 범위 질문 + 답에 근거 셀 표시, 수식 입력줄에 실제 수식, 차트 삽입, 가정 바꾸면 다시 계산 ③ Slides: 한 줄·개요로 덱 생성, 기존 테마·마스터 맞춤 추가, 웹·X 조사, 도식·이미지, 핵심을 말하는 제목"
+      },
+      {
+        "title": "권한과 되돌리기",
+        "body": "① 설치 시 Docs·Slides 전체 보기·편집, 앱에서 쓴 Drive 파일, 설치한 시트 관리, 외부 서비스 연결, 기본 이메일 주소 확인 권한 요청 ② 모든 변경은 일반 편집 → 실행 취소(Ctrl+Z)·버전 기록으로 복원 ③ 필요 없으면 부가기능 관리에서 삭제 + Google 계정 > 보안 > 서드파티 연결에서 접근 해제"
+      }
+    ],
+    "can": [
+      "Docs — 회의 메모를 제목·목록 갖춘 문서로 정리, 맞춤법·문체 통일",
+      "Sheets — 고른 범위에 질문하고 근거 셀 확인, 합계·평균 등 실제 수식 작성·채우기, 차트 삽입",
+      "Sheets — '광고비 20% 줄이면?'처럼 가정 바꿔 다시 계산",
+      "Slides — 한 줄 요청·개요로 슬라이드 만들기, 기존 덱에 같은 테마로 추가, 제목을 핵심 문장으로 고치기",
+      "커넥터(grok.com/connectors) 켜면 최근 메일·Google Drive 파일 참고해 Docs 초안 작성",
+      "관리자가 도메인 전체에 배포"
+    ],
+    "cannot": [
+      "Gmail·Google Drive 화면 안에서는 부가기능 사용 불가(공식 지원 앱은 Docs·Sheets·Slides)",
+      "Grok 계정 로그인 없이 사용 불가",
+      "관리자가 부가기능을 막은 회사·학교 계정에서는 설치 불가",
+      "결과 정확성 보장 없음 — 숫자·사실은 근거 셀·원자료로 직접 확인 필요",
+      "휴대폰 Docs·Sheets·Slides 앱 지원 여부 미확인 [확인 필요]"
+    ],
+    "safety": [
+      "설치 전 권한 화면을 끝까지 읽음 — Docs·Slides 전체 편집 권한이 포함됨, 업무 계정은 기관 보안 담당자 확인 후 설치",
+      "주민번호·성적·건강·고객 명단이 든 파일에서는 부가기능을 열지 않음",
+      "Sheets 답의 근거 셀·수식을 직접 눌러 확인한 뒤 보고서에 씀",
+      "Slides에 들어간 이미지·조사 내용은 출처와 저작권을 확인하고, 발표 전 사실 확인",
+      "다 쓴 뒤 필요 없으면 부가기능 삭제 + Google 계정 서드파티 연결 해제"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① 회의 메모 → '월간 운영 보고' Docs 1쪽 + ② 근거 셀 답·합계 수식·막대 차트 들어간 예산 Sheets + ③ 보고 내용으로 만든 Slides 5장 + ④ 권한·확인 점검표. 비포(grok.com에 복사·붙여넣기 후 옮기기)가 애프터(파일 옆 패널에서 바로 편집)로 바뀜",
+    "follow": [
+      {
+        "title": "부가기능 설치",
+        "minutes": 6,
+        "do": "Google Docs 실습 파일 열기 → 확장 프로그램 > 부가기능 > 부가기능 설치하기 → 'Grok' 검색(개발사 SpaceXAI 확인) → 설치 → 권한 화면 읽고 계속",
+        "prompt": "",
+        "expect": "설치 완료 안내 + 확장 프로그램 메뉴에 Grok 표시",
+        "note": "메뉴 이름은 한국어 화면 기준 [확인 필요]. 개발사 이름이 SpaceXAI(x.ai)인지 꼭 확인 — 비슷한 이름의 다른 앱 주의"
+      },
+      {
+        "title": "옆 패널 열고 로그인",
+        "minutes": 4,
+        "do": "확장 프로그램 > Grok > 열기 → 옆 패널에서 Grok 계정 로그인(한 번만) → 패널 입력창 확인",
+        "prompt": "",
+        "expect": "오른쪽 옆 패널에 Grok 입력창",
+        "note": "팝업 차단 시 주소창 오른쪽 팝업 허용. 한 번 로그인하면 Sheets·Slides에서도 그대로 사용"
+      },
+      {
+        "title": "Docs — 회의 메모 정리",
+        "minutes": 8,
+        "do": "회의 메모 Docs에서 아래 프롬프트 입력 → 문서가 제목·목록으로 바뀌는지 확인 → 마음에 안 들면 Ctrl+Z",
+        "prompt": "이 문서의 회의 메모를 '월간 운영 보고' 형식으로 정리해 줘.\n- 제목 1개, 소제목 3개(지난달 결과 / 문제점 / 다음 달 할 일)\n- 각 소제목 아래 글머리 기호 3개 이내\n- 맞춤법도 고쳐 줘. 메모에 없는 내용은 지어내지 마.",
+        "expect": "제목·소제목(실제 제목 스타일)·글머리 기호로 정리된 1쪽 문서",
+        "note": "왼쪽 문서 개요(제목 목록)에 소제목이 뜨면 실제 제목 스타일이 적용된 것"
+      },
+      {
+        "title": "Sheets — 근거 셀 확인·수식·차트",
+        "minutes": 8,
+        "do": "예산 Sheets 열기 → 표 범위 선택 → 확장 프로그램 > Grok > 열기 → 아래 프롬프트 → 답에 표시된 셀을 직접 눌러 확인 → 합계 칸의 수식 입력줄 확인",
+        "prompt": "선택한 표에서 지출이 가장 많은 항목 2개를 알려 주고, 근거가 된 셀을 표시해 줘. 그다음 맨 아래 행에 월별 합계 수식을 넣고, 항목별 지출 막대 차트를 이 시트에 넣어 줘.",
+        "expect": "답 + 근거 셀 표시 + 합계 행(=SUM 수식) + 막대 차트 1개",
+        "note": "합계 셀을 눌러 수식 입력줄에 =SUM(...)이 보이는지 확인 — 숫자만 들어갔다면 수식으로 다시 요청"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "Sheets — 시나리오 다시 계산",
+        "minutes": 6,
+        "do": "같은 시트에서 가정 바꾸기 요청 → 바뀐 셀 확인 → 원래대로 되돌리기 연습",
+        "prompt": "홍보비를 20% 줄이면 월별 합계가 얼마나 바뀌는지 새 열에 계산해 줘. 원래 숫자는 지우지 마.",
+        "expect": "새 열에 바뀐 금액 + 원래 열 그대로",
+        "note": "원본 보호 문장('지우지 마')을 꼭 넣는 습관"
+      },
+      {
+        "title": "Slides — 보고서로 5장 만들기",
+        "minutes": 10,
+        "do": "빈 Slides 열기 → 확장 프로그램 > Grok > 열기 → 앞에서 정리한 Docs 내용을 붙여 넣고 아래 프롬프트 → 제목·테마 확인",
+        "prompt": "아래 '월간 운영 보고' 내용으로 발표 슬라이드 5장을 만들어 줘.\n1장 표지, 2장 지난달 결과, 3장 문제점, 4장 다음 달 할 일, 5장 요청 사항.\n각 슬라이드 제목은 핵심을 말하는 한 문장으로, 본문은 3줄 이내로.\n\n(여기에 보고 내용 붙여넣기)",
+        "expect": "편집 가능한 슬라이드 5장, 제목이 핵심 문장",
+        "note": "이미지가 들어가면 출처·저작권 확인. 기존 덱이 있으면 '같은 테마로 1장 추가'도 시험"
+      },
+      {
+        "title": "권한·확인 점검표",
+        "minutes": 4,
+        "do": "아래 점검표를 Docs 맨 끝에 적고 체크 → Google 계정 > 보안 > 서드파티 연결에서 Grok 접근 항목 확인",
+        "prompt": "",
+        "expect": "점검표 4칸 체크: ① 개발사 SpaceXAI 확인 ② 개인정보 없는 파일 ③ 수식·근거 셀 확인 ④ 삭제 방법 확인",
+        "note": "실습 후 계속 쓰지 않을 사람은 부가기능 관리에서 삭제까지 진행"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "Docs 보고서를 '쉬운 한국어 3줄 요약'으로 문서 맨 위에 추가하게 하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "grok.com/connectors 에서 Google Drive를 연결하고 '지난달 보고서 파일을 참고해 이번 달과 비교 문단 쓰기' 요청 — 참고한 파일 이름을 밝히게 할 것"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "같은 회의 메모로 Docs 속 Gemini와 Grok 부가기능 결과를 나란히 만들어 '정확성·서식·속도' 3기준 비교표 작성"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 Sheets 화면을 바꿔 보며 ① 근거 셀이 맞는지 ② 합계가 수식인지 ③ 슬라이드 제목이 핵심 문장인지 3가지를 서로 체크 진행",
+    "quiz": [
+      {
+        "q": "Grok in Google Workspace 부가기능을 한 번 설치하면 쓸 수 있는 앱 조합은? (xAI 공식 기준)",
+        "options": [
+          "Gmail·Drive·Calendar",
+          "Docs·Sheets·Slides",
+          "Docs만",
+          "Sheets·Gmail"
+        ],
+        "answer": 1,
+        "explain": "공식 소개: 부가기능 1개로 Sheets·Slides·Docs 모두 사용, Gmail·Drive는 커넥터로 자료만 참고"
+      },
+      {
+        "q": "Sheets에서 Grok이 넣은 합계가 믿을 만한지 가장 먼저 확인할 것은?",
+        "options": [
+          "답이 길게 나왔는지",
+          "합계 셀의 수식 입력줄과 표시된 근거 셀",
+          "차트 색깔",
+          "Grok 요금제 이름"
+        ],
+        "answer": 1,
+        "explain": "Grok은 근거 셀을 표시하고 실제 수식을 넣음 — 수식 입력줄과 근거 셀을 직접 눌러 확인"
+      },
+      {
+        "q": "Grok이 문서를 마음에 들지 않게 바꿨을 때 올바른 대처는?",
+        "options": [
+          "부가기능을 지우면 원래대로 돌아옴",
+          "실행 취소(Ctrl+Z)나 버전 기록으로 되돌림",
+          "grok.com에 문의해야만 복구됨",
+          "되돌릴 수 없음"
+        ],
+        "answer": 1,
+        "explain": "부가기능의 변경은 일반 편집 → 실행 취소·버전 기록으로 복원 가능"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Docs 정리",
+        "high": "제목·소제목 3개·글머리 기호 + 지어낸 내용 없음",
+        "mid": "정리는 됐으나 제목 스타일 미적용",
+        "low": "정리 안 됨"
+      },
+      {
+        "criterion": "Sheets 검증",
+        "high": "근거 셀 확인 + =SUM 수식 + 차트 + 시나리오 새 열",
+        "mid": "답·차트만, 수식 확인 안 함",
+        "low": "결과 확인 없음"
+      },
+      {
+        "criterion": "Slides·안전",
+        "high": "핵심 문장 제목 5장 + 점검표 4칸 체크",
+        "mid": "슬라이드만 완성",
+        "low": "슬라이드 미완성·점검 안 함"
+      }
+    ],
+    "next": [
+      "Grok for Excel — Microsoft 365 Excel 추가 기능 (AI-2026-10-CAT03-020)",
+      "Genspark for Word·Excel·PowerPoint 추가 기능과 비교 (AI-2026-10-CAT03-023)",
+      "Gemini in Workspace 측면 패널 통합 (AI-2026-10-CAT03-014)",
+      "Claude for Google Docs·Sheets·Slides 부가기능 (AI-2026-10-CAT06-001)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 지저분한 회의 메모가 옆 패널 요청 한 번으로 보고서가 되는 시연",
+        "note": "비포/애프터"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 부가기능 정의, 설치 1번·앱 3개, 앱별 기능, 권한·되돌리기, 요금, Gemini·grok.com 비교, 안전",
+        "note": "권한 화면 캡처로 설명"
+      },
+      {
+        "time": "35~61분",
+        "content": "2부 따라 하기: 설치 → 로그인 → Docs 메모 정리 → Sheets 근거 셀·수식·차트",
+        "note": "설치 막히는 수강생 먼저 확인"
+      },
+      {
+        "time": "61~81분",
+        "content": "2부 내 것 만들기: 시나리오 계산 → Slides 5장 → 권한·확인 점검표",
+        "note": "이미지 저작권 한마디"
+      },
+      {
+        "time": "81~90분",
+        "content": "3부 정리: 서로 3가지 체크, 퀴즈 3문제, 다음 단계",
+        "note": "전체 90분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "보통은 AI 사이트에 글을 복사해 넣고, 답을 다시 문서로 옮기죠. 오늘은 문서 옆에 Grok을 앉혀 두고, 말 한마디로 이 메모를 바로 보고서로 바꿔 보겠습니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "설치는 한 번입니다. 그러면 문서, 시트, 슬라이드 세 곳 모두에서 확장 프로그램 메뉴로 Grok을 부를 수 있습니다. 그리고 Grok이 바꾼 건 모두 평소 편집과 똑같아서 Ctrl+Z로 되돌릴 수 있습니다."
+      },
+      {
+        "label": "보안 안내",
+        "text": "설치할 때 나오는 권한 화면을 꼭 읽어 주세요. 문서 전체를 보고 고칠 수 있는 권한입니다. 그래서 개인정보가 든 파일에서는 열지 않는 게 원칙입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "AI가 넣은 숫자는 근거 셀과 수식을 눌러 확인하고 쓰세요. 쓰지 않게 되면 부가기능을 지우고 연결도 해제하면 됩니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "회사·학교 계정에서 부가기능 설치가 막힘",
+        "response": "개인 Google 계정으로 실습 파일 사본 만들어 진행, 또는 짝 실습"
+      },
+      {
+        "situation": "Grok 로그인 팝업이 안 뜨거나 Free 계정 한도 초과",
+        "response": "팝업 허용 후 재시도 → 그래도 안 되면 강사 화면 시연 + 수강생은 grok.com에서 같은 프롬프트로 결과 비교"
+      },
+      {
+        "situation": "Marketplace에서 'Grok'이 검색되지 않음(지역·언어 차이)",
+        "response": "강사가 Marketplace 주소(workspace.google.com/marketplace/app/grok/660927092109)를 채팅으로 공유해 바로 열기"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "확장 프로그램 메뉴에 Grok이 안 보임",
+        "fix": "설치 후 문서 새로고침(F5) → 그래도 없으면 부가기능 관리에서 설치 여부 확인"
+      },
+      {
+        "issue": "Sheets 합계가 수식이 아닌 숫자로 들어감",
+        "fix": "'합계를 =SUM 수식으로 넣어 줘'라고 다시 요청 → 수식 입력줄 확인"
+      },
+      {
+        "issue": "Docs 정리 결과에 메모에 없던 내용이 들어감",
+        "fix": "Ctrl+Z로 되돌리고 '메모에 없는 내용은 쓰지 마' 문장 추가해 재요청"
+      },
+      {
+        "issue": "Slides가 기존 테마와 다르게 나옴",
+        "fix": "기존 슬라이드 1장을 먼저 선택하고 '이 슬라이드와 같은 테마로' 요청"
+      },
+      {
+        "issue": "옆 패널이 좁아 결과를 읽기 어려움",
+        "fix": "브라우저 확대 비율 90%로 낮추거나 패널 내용 복사해 메모장에서 확인"
+      }
+    ],
+    "faq": [
+      {
+        "q": "정말 무료인가요?",
+        "a": "부가기능 설치는 무료(Marketplace 'Free of charge'). 다만 Grok 계정 로그인이 필요하고 사용량은 내 Grok 요금제 범위 — Free 계정 한도는 [확인 필요]"
+      },
+      {
+        "q": "Gmail에서도 쓸 수 있나요?",
+        "a": "공식 지원 앱은 Docs·Sheets·Slides. Gmail 화면용은 없고, 커넥터를 켜면 Docs에서 최근 메일을 참고해 초안 작성 가능. 메일함 정리는 별도 제품 Grok for Outlook(Outlook용, 유료 사용자)"
+      },
+      {
+        "q": "Grok이 바꾼 내용을 되돌릴 수 있나요?",
+        "a": "가능. 모든 변경은 일반 편집이라 실행 취소(Ctrl+Z)나 파일 > 버전 기록으로 복원"
+      },
+      {
+        "q": "설치하면 Grok이 내 모든 문서를 읽나요?",
+        "a": "권한상 Docs·Slides 전체 보기·편집, Drive는 앱에서 쓴 파일만, Sheets는 설치한 시트 관리 범위. 실제로 요청할 때 열린 파일을 다룸 — 민감 파일에서는 열지 말 것"
+      },
+      {
+        "q": "Gemini가 이미 있는데 왜 Grok 부가기능을 쓰나요?",
+        "a": "Grok 요금제를 이미 쓰거나, 같은 자료로 두 AI 결과를 비교하고 싶을 때 유용. 회사 표준 AI가 정해져 있으면 그 지침을 따를 것"
+      },
+      {
+        "q": "어떤 Grok 모델이 쓰이나요?",
+        "a": "공식 소개 페이지에 모델 이름 표기 없음. Grok 4.5라는 보도가 있으나 [미검증]"
+      },
+      {
+        "q": "삭제는 어떻게 하나요?",
+        "a": "확장 프로그램 > 부가기능 > 부가기능 관리에서 Grok 삭제 + Google 계정 > 보안 > 서드파티 연결에서 접근 권한 해제"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "설치 → Docs 메모 정리 1번 → Ctrl+Z 되돌리기 체험까지"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "3개 앱 모두 + 시나리오 계산 + 커넥터로 지난 보고서 참고(도전과제 ⭐⭐)"
+      },
+      {
+        "level": "시니어",
+        "guide": "'동네 모임 회비 표' Sheets 하나로 합계 수식·차트만 실습, 권한 화면 읽기 연습"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "Docs에서 '쉬운 한국어로 고쳐 줘' + 맞춤법 수정 전후 비교로 문장 공부"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: '설치 1번, 앱 3개' + '바뀐 건 일반 편집이라 되돌리기 가능' + '숫자는 근거 셀로 확인'",
+      "Gemini·Claude·Genspark 오피스 부가기능과 묶어 'AI 오피스 도우미 4종 비교' 과정 설계 가능",
+      "권한 화면 읽기는 디지털 보안 교육 소재로 좋음 — 서드파티 연결 해제까지 꼭 실습",
+      "평생교육·공공기관의 월간 보고서 작성 시간 줄이기 사례로 반응 좋음"
+    ],
+    "day_before": [
+      "실습 파일 3개(회의 메모 Docs·예산 Sheets·빈 Slides) 사본 링크 준비, 개인정보 없는 가상 데이터 확인",
+      "시연 계정에 부가기능 설치·로그인 상태 점검, 한국어 메뉴 이름(확장 프로그램 > 부가기능) 실제 확인",
+      "설치 권한 화면·옆 패널·근거 셀 표시·수식 입력줄 화면 캡처 준비",
+      "Free Grok 계정으로 부가기능 사용 가능 여부·한도 직접 시험",
+      "수강생 계정 종류(개인·회사·학교) 미리 조사 → 설치 막힘 대비 짝 편성"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Free Grok 계정의 부가기능 사용 가능 여부·한도 — 공식 페이지는 '무료 설치'만 명시",
+    "[확인 필요] 한국어 화면 메뉴 경로(확장 프로그램 > 부가기능 > 부가기능 설치하기, 확장 프로그램 > Grok > 열기)",
+    "[확인 필요] Docs 편집이 '변경 내용 표시(수정 제안)'로 남는지 여부 — 소개 페이지는 'visible revisions' 표현",
+    "[확인 필요] 휴대폰 앱 지원 여부",
+    "[미검증] 사용 모델(Grok 4.5) — 보조 근거(Basenor) 기준, 공식 표기 없음",
+    "Marketplace 정보(개발사 SpaceXAI·무료·권한 목록·설치 4.5만+·갱신일 2026-07-21)는 2026-10-19 확인",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — xAI 공식 출시 글·소개 페이지·Marketplace 등록 정보 기준"
+  ],
+  "sources": [
+    {
+      "title": "xAI News – Grok in Google Workspace (2026-07-24)",
+      "url": "https://x.ai/news/introducing-google-workspace-addon",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI – Grok for Google Workspace (Google Workspace Add-on 소개 페이지)",
+      "url": "https://x.ai/grok/workspace",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Google Workspace Marketplace – Grok (SpaceXAI)",
+      "url": "https://workspace.google.com/marketplace/app/grok/660927092109",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI – Grok Connectors",
+      "url": "https://grok.com/connectors",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI – Pricing",
+      "url": "https://x.ai/pricing",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI News – Introducing Grok for Outlook (2026-07-21, 비교용)",
+      "url": "https://x.ai/news/introducing-outlook-addin",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "(보조 근거) Basenor – Grok in Google Workspace: 5 Details That Matter",
+      "url": "https://www.basenor.com/blogs/news/grok-in-google-workspace-5-details-that-matter",
+      "checked": "2026-10-19"
+    }
+  ]
+}
