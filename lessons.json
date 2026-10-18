@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 128,
+  "count": 129,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-023",
+      "version": "v1.0",
+      "created_at": "2026-10-18 23:15 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "Office 안의 젠스파크 — Genspark for Word·Excel·PowerPoint(젠스파크 오피스 추가 기능)로 '보고서 초안 + 차트 + 발표 3장' 한 번에 만들기",
+      "summary": "2026-04-08 Genspark AI Workspace 4.0에서 공개된 Microsoft Office 추가 기능(add-in) 3종. Word·Excel·PowerPoint 오른쪽 작업 창(task pane)에서 Genspark 에이전트에게 말로 요청 → Word는 초안·요약·문체 수정·서식·수식·그림, Excel은 수식 생성·설명·네이티브 차트·추세 분석·웹 조사 결과 채우기, PowerPoint는 회사 마스터 슬라이드 맞춤 덱·선택 요소 수정·발표자 노트·편집 가능한 차트. AppSource 또는 앱 안 '추가 기능'에서 설치 → Microsoft·Genspark 두 번 로그인(브라우저 기기 코드 승인). Windows·Mac·웹 Office 지원, Genspark 계정 무료 가입 가능, 요금제별 사용 범위는 공식 안내 없음 [확인 필요]",
+      "tool": "Genspark",
+      "feature": "Genspark for Microsoft Office 추가 기능(Genspark for Word·Excel·PowerPoint, AI Workspace 4.0) — 각 앱 오른쪽 작업 창에서 Genspark 에이전트 사용: ① Word 초안·개요 확장·요약·문체 수정, 분량·구조 분석, 스타일·제목·표·목록 서식, Office 수식, 그림·도식, 웹 조사 ② Excel 말로 수식 생성·기존 수식 설명·셀 입력, 범위로 네이티브 차트(막대·꺾은선·피벗·혼합), 추세·이상값·요약, 웹 조사 결과 채우기 ③ PowerPoint 회사 마스터 슬라이드 맞춤, 개요·흐름·레이아웃, 선택 요소 수정, 발표자 노트·음성 해설, 편집 가능한 차트, 웹 이미지·AI 그림, AppSource(wa200010470·wa200010472·wa200010473) 또는 홈 > 추가 기능 설치, Microsoft·Genspark 이중 로그인(기기 코드), Windows·Mac·웹",
+      "company": "Genspark",
+      "type": "update",
+      "released": "2026-04-08",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① Word 1쪽 결과 보고서 초안(제목·표·요약 서식 포함) + ② Excel 만족도 막대 차트 1개 + 설명이 붙은 평균 수식 + ③ PowerPoint 발표 3장(발표자 노트 포함)",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "Word·Excel·PPT 옆 젠스파크에게 말로 요청"
+    },
     {
       "id": "AI-2026-10-CAT03-022",
       "version": "v1.0",

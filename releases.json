@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-18 22:15 KST",
+  "updated_at": "2026-10-18 23:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2026-04-08-office-addins",
+      "date": "2026-04-08",
+      "tool": "Genspark",
+      "company": "Genspark",
+      "type": "update",
+      "title": "Genspark for Word·Excel·PowerPoint — Office 추가 기능(AI Workspace 4.0)",
+      "summary": "Word·Excel·PowerPoint 오른쪽 작업 창에서 Genspark 에이전트로 초안·서식·수식·네이티브 차트·회사 템플릿 맞춤 슬라이드 생성, AppSource·앱 안 설치, Microsoft·Genspark 이중 로그인, Windows·Mac·웹 지원",
+      "source": {
+        "title": "Genspark Help Center – Microsoft Office Plugin",
+        "url": "https://www.genspark.ai/helpcenter/microsoft-office-plugin"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT03-023"
+    },
     {
       "id": "grok-build-2026-06-22-goal",
       "date": "2026-06-22",
