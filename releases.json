@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 23:15 KST",
+  "updated_at": "2026-10-19 01:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3076,6 +3076,21 @@
       },
       "checked": "2026-10-19",
       "lesson_id": "AI-2026-10-CAT08-017"
+    },
+    {
+      "id": "suno-2026-10-15-collaboration",
+      "date": "2026-10-15",
+      "tool": "Suno",
+      "company": "Suno",
+      "type": "update",
+      "title": "Collaboration on Suno — 공유 워크스페이스·공유 맞춤 모델",
+      "summary": "초대한 사람만 접근하는 팀 공동 곡 보관함(Shareable Workspaces, Pro·Premier) + 맞춤 모델 협업자 공유·입력 2배(Premier), 웹",
+      "source": {
+        "title": "Suno Release Notes – Collaboration on Suno",
+        "url": "https://suno.com/release-notes/collaboration-on-suno"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT05-020"
     }
   ]
 }
