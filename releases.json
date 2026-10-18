@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-18 10:10 KST",
+  "updated_at": "2026-10-18 11:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "perplexity-2026-10-05-inline-visualizations",
+      "date": "2026-10-05",
+      "tool": "Perplexity",
+      "company": "Perplexity",
+      "type": "update",
+      "title": "Computer 인라인 시각화 — 스레드 안 인터랙티브 차트·3D",
+      "summary": "Perplexity Computer가 대화 스레드 안에 인터랙티브 차트·3D 개념 설명을 그리고, 금융 데이터는 TradingView Lightweight Charts(캔들·거래량·이동평균)로 표시, CSV를 인터랙티브 차트로 변환",
+      "source": {
+        "title": "Perplexity Changelog – Automations, inline visualizations, and GPT-6.1 Sol",
+        "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT06-010"
+    },
     {
       "id": "firefly-2026-10-01-ai-assistant-all-cc",
       "date": "2026-10-01",

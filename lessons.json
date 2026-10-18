@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 116,
+  "count": 117,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-010",
+      "version": "v1.0",
+      "created_at": "2026-10-18 11:05 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "표 대신 움직이는 그림으로 — Perplexity Computer 인라인 시각화(Inline visualizations)로 '가상 카페 매출 인터랙티브 차트 + 3D 개념 설명 + 주가 캔들 차트' 만들기",
+      "summary": "Perplexity Computer가 대화(스레드) 안에 바로 띄우는 인터랙티브 차트·3D 시각화(2026-10-05 체인지로그). ① CSV를 올려 마우스로 눌러 보는 차트 ② 엔진 단면 같은 3D 개념 설명 ③ TradingView Lightweight Charts 기반 금융 차트(캔들·거래량·이동평균) 생성. Computer는 유료 구독(Pro·Max·Enterprise 등) 기능, 실행량만큼 크레딧 사용",
+      "tool": "Perplexity",
+      "feature": "인라인 시각화(Inline visualizations, Computer) — 스레드 안 인터랙티브 차트·3D 개념 설명, TradingView Lightweight Charts 금융 차트(캔들·거래량·이동평균), CSV → 인터랙티브 차트",
+      "company": "Perplexity",
+      "type": "update",
+      "released": "2026-10-05",
+      "categories": [
+        "CAT-06",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-DAT",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 가상 카페 월별 매출 인터랙티브 차트 + ② 수업용 3D 개념 설명 1개 + ③ 관심 종목 캔들 차트 1개 + ④ 차트 해석 3줄 메모",
+      "access": "paid",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "📈",
+      "one_liner": "말 한 줄로 대화창에 움직이는 차트"
+    },
     {
       "id": "AI-2026-10-CAT04-014",
       "version": "v1.0",

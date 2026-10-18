@@ -1,0 +1,568 @@
+{
+  "id": "AI-2026-10-CAT06-010",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-18 11:05 KST",
+  "checked": "2026-10-18",
+  "review_by": "2027-01-18",
+  "title": "표 대신 움직이는 그림으로 — Perplexity Computer 인라인 시각화(Inline visualizations)로 '가상 카페 매출 인터랙티브 차트 + 3D 개념 설명 + 주가 캔들 차트' 만들기",
+  "summary": "Perplexity Computer가 대화(스레드) 안에 바로 띄우는 인터랙티브 차트·3D 시각화(2026-10-05 체인지로그). ① CSV를 올려 마우스로 눌러 보는 차트 ② 엔진 단면 같은 3D 개념 설명 ③ TradingView Lightweight Charts 기반 금융 차트(캔들·거래량·이동평균) 생성. Computer는 유료 구독(Pro·Max·Enterprise 등) 기능, 실행량만큼 크레딧 사용",
+  "glance": {
+    "emoji": "📈",
+    "one_liner": "말 한 줄로 대화창에 움직이는 차트",
+    "cards": [
+      {
+        "icon": "📊",
+        "title": "CSV → 차트",
+        "text": "표 파일을 눌러 보는 차트로 변환"
+      },
+      {
+        "icon": "🧊",
+        "title": "3D 개념 설명",
+        "text": "엔진 단면처럼 돌려 보는 3D 그림"
+      },
+      {
+        "icon": "🕯️",
+        "title": "금융 차트",
+        "text": "캔들·거래량·이동평균 한 화면"
+      },
+      {
+        "icon": "💬",
+        "title": "대화로 수정",
+        "text": "색·기간·종류를 말로 바꿈"
+      }
+    ],
+    "diagram": {
+      "title": "인라인 시각화 작동 흐름",
+      "nodes": [
+        {
+          "icon": "📎",
+          "label": "자료·질문 입력"
+        },
+        {
+          "icon": "🧠",
+          "label": "Computer 분석"
+        },
+        {
+          "icon": "📈",
+          "label": "스레드에 차트"
+        },
+        {
+          "icon": "🖱️",
+          "label": "눌러 보며 확인"
+        },
+        {
+          "icon": "🔁",
+          "label": "말로 다듬기"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "표만 받는 답변",
+        "text": "숫자 표를 받아 엑셀로 옮겨 직접 그래프를 그림"
+      },
+      "after": {
+        "label": "대화 안 인터랙티브",
+        "text": "스레드에 바로 차트가 뜨고 마우스로 값·구간 확인"
+      }
+    },
+    "cautions": [
+      "차트 숫자는 원본과 대조할 것",
+      "금융 차트는 투자 조언 아님",
+      "개인·회사 기밀 CSV 업로드 주의"
+    ]
+  },
+  "tool": "Perplexity",
+  "feature": "인라인 시각화(Inline visualizations, Computer) — 스레드 안 인터랙티브 차트·3D 개념 설명, TradingView Lightweight Charts 금융 차트(캔들·거래량·이동평균), CSV → 인터랙티브 차트",
+  "company": "Perplexity",
+  "type": "update",
+  "released": "2026-10-05",
+  "categories": [
+    "CAT-06",
+    "CAT-10"
+  ],
+  "jobs": [
+    "JOB-DAT",
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 20,
+    "practice": 32,
+    "wrap": 8
+  },
+  "prerequisites": [
+    "Perplexity 유료 계정(Pro·Max·Education Pro·Enterprise 중 하나, Computer 사용 가능)",
+    "PC 웹 브라우저(perplexity.ai) — 모바일 앱도 Computer 지원",
+    "실습용 가상 CSV 1개(강사 배포: 가상 카페 월별 매출)",
+    "남은 크레딧 확인(perplexity.ai/account/usage)"
+  ],
+  "outcome": "① 가상 카페 월별 매출 인터랙티브 차트 + ② 수업용 3D 개념 설명 1개 + ③ 관심 종목 캔들 차트 1개 + ④ 차트 해석 3줄 메모",
+  "objectives": [
+    "Perplexity Computer에서 CSV를 올려 인터랙티브 차트를 만들고 대화로 고칠 수 있음",
+    "3D 시각화로 어려운 개념(기계 구조 등)을 설명하는 자료를 만들 수 있음",
+    "AI가 그린 차트의 숫자·출처를 원본과 대조해 검증할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "인라인 시각화는 Computer 안 기능 → Computer가 포함된 유료 구독 필요. 무료 요금제는 Computer 미포함. Computer 작업은 실행량만큼 크레딧 차감(일반 검색 Ask는 크레딧 없음)",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "검색·출처 답변만, Computer·인라인 시각화 미포함(신규 무료 웹 계정 첫 작업 안내 온보딩 범위 [확인 필요])"
+      },
+      {
+        "name": "Education Pro",
+        "price": "$10/월 (SheerID 인증)",
+        "features": "Computer 이용 포함 (요금제 비교 도움말 기준)"
+      },
+      {
+        "name": "Pro",
+        "price": "$17/월 (연간 결제 기준)",
+        "features": "Computer 확장 이용 + 가입 보너스 4,000 크레딧(30일)"
+      },
+      {
+        "name": "Max",
+        "price": "$167/월 (연간 결제 기준)",
+        "features": "Computer 최대 이용 + 매월 10,000 크레딧 + 가입 보너스 35,000 크레딧"
+      }
+    ],
+    "note": "Pro·Max 가격은 요금 페이지의 연간 결제 월 환산값(2026-10-18 확인), 월 결제 가격·원화 가격 [확인 필요]. Education Pro 가격은 교안 AI-2026-10-CAT08-004 확인값(2026-10-14). 체인지로그에 인라인 시각화 전용 요금제·플랫폼 조건 표기 없음 → Computer 사용 가능 요금제 기준으로 정리. 크레딧은 100크레딧 = $1, 잔액은 perplexity.ai/account/usage",
+    "checked": "2026-10-18",
+    "sources": [
+      {
+        "title": "Perplexity 요금 페이지",
+        "url": "https://www.perplexity.ai/hub/pricing"
+      },
+      {
+        "title": "Perplexity 도움말 – What is Computer?",
+        "url": "https://www.perplexity.ai/help-center/en/articles/13837784-what-is-computer"
+      },
+      {
+        "title": "Perplexity 도움말 – How credits work on Perplexity",
+        "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-10-05",
+      "text": "체인지로그 'Automations, inline visualizations, and GPT-6.1 Sol' — Computer 스레드 안 인터랙티브 차트·3D 시각화, TradingView Lightweight Charts 금융 차트 공개"
+    },
+    {
+      "date": "2026-10-05",
+      "text": "같은 체인지로그 — Computer 자동화(Automations)·영상 생성·모바일 노력 모드 함께 발표 (자동화는 교안 AI-2026-10-CAT08-004)"
+    },
+    {
+      "date": "2026-10-18",
+      "text": "교안 기준일 — 요금 페이지·Computer 도움말 재확인"
+    }
+  ],
+  "theory": {
+    "definition": "인라인 시각화는 Perplexity Computer가 답을 글·표로만 주지 않고, 대화 스레드 안에 마우스로 조작하는 차트·3D 그림을 바로 그려 주는 기능임. 자료(CSV 등)나 질문을 주면 Computer가 분석 → 차트 종류를 골라 표시 → 말로 수정 가능",
+    "analogy": "'그래프 잘 그리는 조수'. 표를 건네며 '월별 추이 보여 줘' 하면 엑셀 없이 그 자리에서 눌러 보는 그래프를 펼쳐 줌. 숫자가 맞는지는 내가 확인함",
+    "comparison": {
+      "headers": [
+        "구분",
+        "일반 검색(Ask)",
+        "엑셀 직접 차트",
+        "Computer 인라인 시각화"
+      ],
+      "rows": [
+        [
+          "입력",
+          "질문",
+          "데이터 + 메뉴 조작",
+          "질문·CSV + 말로 요청"
+        ],
+        [
+          "결과",
+          "글·표·출처",
+          "정적 차트",
+          "스레드 안 인터랙티브 차트·3D"
+        ],
+        [
+          "수정",
+          "다시 질문",
+          "서식 직접 변경",
+          "'막대로 바꿔 줘' 대화"
+        ],
+        [
+          "금융 데이터",
+          "글로 요약",
+          "데이터 직접 구함",
+          "캔들·거래량·이동평균 차트"
+        ],
+        [
+          "비용",
+          "크레딧 없음",
+          "프로그램 비용",
+          "Computer 크레딧 차감"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "인터랙티브 차트",
+        "body": "막대·선 등 차트를 스레드 안에 표시, 마우스로 값 확인·구간 보기 가능. 체인지로그 예시 → ① 시장 데이터 차트 ② CSV → 인터랙티브 차트 [확인 필요: 확대·내려받기 버튼 종류]"
+      },
+      {
+        "title": "3D 개념 설명",
+        "body": "기계 구조처럼 말로 어려운 개념을 돌려 보는 3D 그림으로 설명. 공식 예시 → 엔진 단면(engine cutaway)·기계 작동 원리. 수업 자료·교육용 설명에 적합"
+      },
+      {
+        "title": "TradingView 금융 차트",
+        "body": "금융 데이터는 TradingView Lightweight Charts로 표시 → ① 캔들스틱 ② 거래량 ③ 이동평균. 데이터 출처·기준 시각을 함께 확인할 것, 투자 판단 근거로 단독 사용 금지"
+      }
+    ],
+    "can": [
+      "CSV 파일을 올려 인터랙티브 차트로 변환",
+      "시장 데이터 캔들·거래량·이동평균 차트",
+      "엔진 단면 같은 3D 개념 설명",
+      "대화로 차트 종류·기간·색 수정",
+      "같은 스레드에서 차트 + 해석 글 함께 받기"
+    ],
+    "cannot": [
+      "무료 요금제에서 사용(Computer 미포함)",
+      "크레딧 없이 무제한 생성",
+      "차트 숫자 정확성 자동 보장(원본 대조 필요)",
+      "투자 수익 예측·조언",
+      "인라인 시각화 전용 요금·플랫폼 조건 공식 명시 [확인 필요]"
+    ],
+    "safety": [
+      "업로드 CSV에 개인정보(이름·연락처)·회사 기밀 제거 후 사용",
+      "AI 차트의 숫자·축·단위를 원본 데이터와 대조",
+      "금융 차트는 정보 확인용, 투자 조언·권유로 쓰지 말 것",
+      "3D 설명도 단순화 그림임 → 중요한 내용은 교과서·공식 자료로 확인",
+      "수업·보고서에 쓸 때 'AI 생성 차트' + 데이터 출처 표기"
+    ]
+  },
+  "practice": {
+    "preview": "Computer 열기 → 가상 카페 CSV 업로드·차트 → 대화로 수정 → 3D 개념 설명 → 캔들 차트 → 해석 메모. ① 매출 차트 + ② 3D 설명 + ③ 캔들 차트 + ④ 해석 3줄",
+    "follow": [
+      {
+        "title": "Computer 열기",
+        "minutes": 4,
+        "do": "perplexity.ai 로그인 → 홈(Home)에서 Computer 아이콘 선택 → Computer 패널의 'Start a task' 입력란 선택 (공식 도움말 경로)",
+        "prompt": "",
+        "expect": "Computer 작업 입력란 표시",
+        "note": "아이콘이 없으면 무료 계정 가능성 → Plan B. 잔액은 perplexity.ai/account/usage"
+      },
+      {
+        "title": "CSV로 인터랙티브 차트",
+        "minutes": 8,
+        "do": "강사가 배포한 '가상 카페 월별 매출.csv' 첨부 → 아래 프롬프트 입력",
+        "prompt": "첨부한 CSV는 가상 카페 '달빛로스터리'의 1~12월 매출과 메뉴별 판매량이야. 1) 월별 매출 추이를 인터랙티브 선 차트로 이 대화 안에 보여 주고 2) 메뉴별 판매량은 막대 차트로 보여 줘. 3) 가장 매출이 높은 달과 낮은 달을 한 줄로 알려 줘.",
+        "expect": "스레드 안 선 차트 + 막대 차트 + 최고·최저 달 요약",
+        "note": "차트 위에 마우스를 올려 값 확인 → CSV 원본과 2개 이상 대조"
+      },
+      {
+        "title": "대화로 차트 다듬기",
+        "minutes": 5,
+        "do": "같은 스레드에서 수정 요청",
+        "prompt": "선 차트에 3개월 이동평균선을 추가하고, 여름(6~8월) 구간을 다른 색으로 강조해 줘. 축 제목은 '월'과 '매출(만 원)'로 바꿔 줘.",
+        "expect": "이동평균선 + 여름 강조 + 축 제목 바뀐 차트",
+        "note": "원하는 대로 안 바뀌면 한 번에 한 가지씩 요청"
+      },
+      {
+        "title": "3D 개념 설명",
+        "minutes": 6,
+        "do": "새 요청 입력 → 3D 그림을 마우스로 돌려 보기",
+        "prompt": "자동차 4행정 엔진이 어떻게 작동하는지 3D 단면(cutaway) 시각화로 이 대화 안에 보여 줘. 흡입-압축-폭발-배기 단계를 초등학생도 이해할 수 있게 짧게 설명해 줘.",
+        "expect": "돌려 볼 수 있는 엔진 단면 3D + 4단계 짧은 설명",
+        "note": "3D가 안 뜨고 글만 나오면 '인터랙티브 3D로 보여 줘'를 다시 요청 [확인 필요: 3D 조작 방식]"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "관심 종목 캔들 차트",
+        "minutes": 5,
+        "do": "관심 있는 상장 기업 1곳을 골라 요청",
+        "prompt": "애플(AAPL)의 최근 6개월 주가를 캔들스틱 차트로 보여 주고, 거래량과 20일 이동평균선을 함께 표시해 줘. 데이터 출처와 기준 날짜도 알려 줘. 투자 추천은 하지 말아 줘.",
+        "expect": "TradingView 기반 캔들 + 거래량 + 이동평균 차트 + 출처·기준일",
+        "note": "정보 확인용 실습, 투자 판단 근거 아님 강조"
+      },
+      {
+        "title": "내 업무 데이터 차트",
+        "minutes": 4,
+        "do": "내 일의 표(개인정보 지운 가상 데이터)로 차트 1개 만들기 → 해석 3줄 메모",
+        "prompt": "첨부한 표로 내 업무에서 가장 중요한 변화를 보여 주는 인터랙티브 차트 1개를 골라 만들어 줘. 왜 그 차트 종류를 골랐는지 한 줄로 설명하고, 숫자로 확인할 해석 3가지를 짧게 정리해 줘.",
+        "expect": "차트 1개 + 차트 선택 이유 + 해석 3줄",
+        "note": "교사는 성적 대신 가상 출석·과제 제출률 데이터 사용"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "같은 CSV로 일반 검색(Ask)과 Computer 결과를 비교해 차이 1줄 정리"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "수업 주제 1개(예: 자전거 기어·태양계)를 3D 개념 설명으로 만들고 학생용 질문 2개 붙이기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Computer 자동화(Automations)와 엮어 '매주 월요일 지난주 매출 차트 갱신' 흐름 설계 + 크레딧 예상 메모 [확인 필요: 자동화 결과에 차트 포함 여부]"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 차트 1개를 보여 주고 '원본과 대조한 숫자 1개 / AI가 고른 차트 종류 평가 / 내 일에 쓸 장면 1개' 발표",
+    "quiz": [
+      {
+        "q": "Perplexity 인라인 시각화(2026-10-05)에 대한 설명으로 맞는 것은?",
+        "options": [
+          "일반 검색 Ask에서 무료로 무제한 사용한다",
+          "Computer 스레드 안에 인터랙티브 차트와 3D 시각화를 그려 준다",
+          "엑셀 파일로만 결과를 내려받을 수 있다",
+          "금융 차트는 지원하지 않는다"
+        ],
+        "answer": 1,
+        "explain": "공식 체인지로그: Computer 스레드 안 인터랙티브 차트·3D 시각화 + 금융 차트 지원"
+      },
+      {
+        "q": "금융 데이터 차트에 쓰이는 도구와 표시 항목으로 맞는 것은?",
+        "options": [
+          "Google Sheets — 원그래프",
+          "TradingView Lightweight Charts — 캔들스틱·거래량·이동평균",
+          "Excel — 히트맵",
+          "Canva — 인포그래픽"
+        ],
+        "answer": 1,
+        "explain": "체인지로그 명시: TradingView Lightweight Charts로 캔들·거래량·이동평균"
+      },
+      {
+        "q": "AI가 만든 매출 차트를 보고서에 쓰기 전 가장 먼저 할 일은?",
+        "options": [
+          "색을 화려하게 바꾼다",
+          "차트 숫자를 원본 CSV와 대조하고 출처를 표기한다",
+          "AI가 만들었으니 그대로 쓴다",
+          "개인정보가 든 원본을 다시 올린다"
+        ],
+        "answer": 1,
+        "explain": "AI 차트도 오류 가능 → 원본 대조 + 데이터 출처·AI 생성 표기"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "기능 활용",
+        "high": "CSV 차트·3D 설명·캔들 차트 3가지 완성",
+        "mid": "2가지 완성",
+        "low": "1가지 이하"
+      },
+      {
+        "criterion": "검증",
+        "high": "원본과 숫자 2개 이상 대조 + 출처 기록",
+        "mid": "숫자 1개 대조",
+        "low": "대조 없음"
+      },
+      {
+        "criterion": "안전·윤리",
+        "high": "개인정보 제거 + 투자 조언 아님 표기 + AI 생성 표기",
+        "mid": "2가지 지킴",
+        "low": "개인정보 포함·투자 단정"
+      }
+    ],
+    "next": [
+      "Perplexity Computer 자동화로 반복 작업 맡기기 (AI-2026-10-CAT08-004)",
+      "Perplexity 노력 모드·사이드 챗 (AI-2026-10-CAT08-008)",
+      "Claude Dashboards 자동 갱신 대시보드 (AI-2026-10-CAT06-004)",
+      "Perplexity Wiley 학술 자료 인용 (AI-2026-10-CAT06-002)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "00:00~00:08",
+        "content": "도입 — 숫자 표 답변 vs 스레드 안 인터랙티브 차트 비포/애프터 시연",
+        "note": "강사 계정으로 미리 만든 매출 차트 띄워 두기"
+      },
+      {
+        "time": "00:08~00:20",
+        "content": "이론 — 정의·비교표·차트/3D/금융 차트·요금·크레딧",
+        "note": "'Computer 전용·유료·크레딧' 3가지 강조"
+      },
+      {
+        "time": "00:20~00:43",
+        "content": "따라 하기 1~4 — 열기·CSV 차트·수정·3D 설명",
+        "note": "무료 계정 수강생은 2인 1조"
+      },
+      {
+        "time": "00:43~00:52",
+        "content": "내 것 만들기 — 캔들 차트·내 업무 데이터 차트",
+        "note": "투자 조언 아님 반복 안내"
+      },
+      {
+        "time": "00:52~01:00",
+        "content": "정리 — 2인 발표·퀴즈 3문제·검증 점검",
+        "note": "공용 PC 로그아웃·업로드 파일 삭제 안내"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "AI한테 매출을 물으면 보통 표가 나오죠. 그걸 엑셀에 옮겨 그래프를 그리느라 시간을 쓰셨을 거예요. 오늘은 대화창 안에서 바로 눌러 보는 차트를 받아 보겠습니다."
+      },
+      {
+        "label": "핵심 개념",
+        "text": "인라인 시각화는 Perplexity Computer가 대화 안에 차트와 3D 그림을 그려 주는 기능입니다. 말로 '막대로 바꿔 줘'라고 하면 바로 고쳐 줍니다."
+      },
+      {
+        "label": "주의",
+        "text": "AI가 그린 차트도 숫자가 틀릴 수 있습니다. 원본 표와 꼭 두 개 이상 맞춰 보시고, 주가 차트는 정보 확인용이지 투자 조언이 아니라는 점 기억하세요."
+      },
+      {
+        "label": "마무리",
+        "text": "자료를 주고, 차트를 받고, 말로 다듬고, 원본과 대조한다. 이 네 단계면 보고서와 수업 자료 그림이 훨씬 빨라집니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "무료 계정이라 Computer 아이콘이 없음",
+        "response": "강사 화면 시연 + 유료 계정 수강생과 2인 1조, 본인은 프롬프트 작성·숫자 대조 역할"
+      },
+      {
+        "situation": "크레딧 부족으로 작업 일시정지",
+        "response": "남은 단계는 강사 시연, 크레딧 충전은 수업 중 권하지 않음"
+      },
+      {
+        "situation": "차트 대신 표·글만 나옴",
+        "response": "'이 대화 안에 인터랙티브 차트로 보여 줘'를 명시해 재요청, 그래도 안 되면 강사가 미리 만든 결과 공유"
+      },
+      {
+        "situation": "CSV 업로드 실패",
+        "response": "CSV 내용을 복사해 입력창에 붙여 넣고 같은 요청"
+      },
+      {
+        "situation": "인터넷·서비스 지연",
+        "response": "미리 캡처한 결과 화면으로 해석·검증 활동 먼저 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Computer 입구를 못 찾음",
+        "fix": "홈(Home) 화면 Computer 아이콘 → 'Start a task' 입력란 (공식 도움말)"
+      },
+      {
+        "issue": "차트 값이 CSV와 다름",
+        "fix": "열 이름·단위를 프롬프트에 명시하고 '원본 숫자 그대로 써 줘'로 재요청"
+      },
+      {
+        "issue": "한글 축 제목·범례 깨짐",
+        "fix": "영문 축 제목으로 바꾸거나 수정 요청 1회 더 [확인 필요]"
+      },
+      {
+        "issue": "3D가 돌아가지 않음",
+        "fix": "PC 브라우저 최신 버전 사용, 다른 브라우저로 다시 열기 [확인 필요]"
+      },
+      {
+        "issue": "크레딧이 얼마나 썼는지 모름",
+        "fix": "perplexity.ai/account/usage 에서 잔액 확인"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료로 쓸 수 있나요?",
+        "a": "무료 요금제는 Computer 미포함 → 인라인 시각화도 유료 구독 필요 (요금 페이지)"
+      },
+      {
+        "q": "일반 검색에서도 차트가 나오나요?",
+        "a": "이번 체인지로그의 인라인 시각화는 Computer 기능으로 발표됨. 일반 검색 차트 동작은 [확인 필요]"
+      },
+      {
+        "q": "차트를 파일로 내려받을 수 있나요?",
+        "a": "체인지로그에 내려받기 방식 언급 없음 [확인 필요]. 강의 전 직접 확인, 안 되면 화면 캡처"
+      },
+      {
+        "q": "주가 차트를 투자에 써도 되나요?",
+        "a": "정보 확인용으로만. 데이터 출처·기준 시각 확인, 투자 판단은 본인 책임"
+      },
+      {
+        "q": "업로드한 CSV는 안전한가요?",
+        "a": "개인정보·기밀은 지우고 가상 데이터로 실습할 것. 데이터 처리 정책은 Perplexity 개인정보처리방침 확인"
+      },
+      {
+        "q": "모바일에서도 되나요?",
+        "a": "Computer는 웹·iOS·Android 지원(도움말). 인라인 시각화의 모바일 표시 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급",
+        "guide": "강사 CSV 1개로 선 차트·막대 차트까지만, 수정 요청 1회"
+      },
+      {
+        "level": "중급",
+        "guide": "내 업무 데이터 차트 + 이동평균·구간 강조, 원본 대조 2개 이상"
+      },
+      {
+        "level": "고급",
+        "guide": "자동화와 엮은 주간 차트 보고 흐름 설계, 크레딧 비용 추정"
+      },
+      {
+        "level": "시니어",
+        "guide": "3D 엔진 설명처럼 보는 활동 위주, 입력은 강사가 대신 붙여 넣기"
+      },
+      {
+        "level": "다문화(한국어 학습자)",
+        "guide": "차트 축·범례를 한국어로 바꿔 달라 요청하며 '늘다·줄다·가장 높다' 표현 연습"
+      }
+    ],
+    "pro_points": [
+      "'이 대화 안에(in this thread)' + 차트 종류를 명시하면 시각화 확률이 높음",
+      "차트 → 해석 → 원본 대조 3단 흐름을 수업 루틴으로 고정",
+      "금융·건강 등 민감 분야는 반드시 '조언 아님' 문구를 같이 요청"
+    ],
+    "day_before": [
+      "강사 계정 Computer 접속·크레딧 잔액 확인",
+      "가상 카페 월별 매출 CSV 준비·배포 링크 만들기",
+      "CSV 차트·3D·캔들 결과 미리 생성 후 캡처 준비(Plan B용)",
+      "차트 내려받기·확대 버튼 실제 화면 확인 → [확인 필요] 항목 정리",
+      "수강생 요금제(무료/유료) 사전 조사 후 2인 1조 편성"
+    ]
+  },
+  "verification": [
+    "체인지로그에 인라인 시각화의 요금제·플랫폼 조건 표기 없음 → Computer 사용 요금제 기준 [확인 필요]",
+    "차트 내려받기·공유 방식, 3D 조작 방식 [확인 필요]",
+    "신규 무료 웹 계정 Computer 온보딩의 시각화 체험 가능 여부 [확인 필요]",
+    "Pro·Max 월 결제·원화 가격 [확인 필요]"
+  ],
+  "sources": [
+    {
+      "title": "Perplexity Changelog – Automations, inline visualizations, and GPT-6.1 Sol",
+      "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Perplexity 도움말 – What is Computer?",
+      "url": "https://www.perplexity.ai/help-center/en/articles/13837784-what-is-computer",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Perplexity 요금 페이지",
+      "url": "https://www.perplexity.ai/hub/pricing",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "Perplexity 도움말 – How credits work on Perplexity",
+      "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity",
+      "checked": "2026-10-14"
+    },
+    {
+      "title": "Perplexity 공식 X – Computer interactive charts and visualizations (보조 근거)",
+      "url": "https://x.com/perplexity_ai/status/2105692220280226296",
+      "checked": "2026-10-18"
+    }
+  ]
+}
