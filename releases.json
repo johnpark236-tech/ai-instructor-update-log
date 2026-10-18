@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 20:10 KST",
+  "updated_at": "2026-10-18 21:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3001,6 +3001,36 @@
       },
       "checked": "2026-10-18",
       "lesson_id": "AI-2026-10-CAT03-020"
+    },
+    {
+      "id": "grok-2026-10-11-bot-x-search",
+      "date": "2026-10-11",
+      "tool": "Grok",
+      "company": "xAI (SpaceXSI)",
+      "type": "update",
+      "title": "Grok Bot X 검색 — 계정 연결 없이 게시물·프로필 읽기",
+      "summary": "v0.70.2(0.69.0~0.70.2 묶음): Bot이 X 계정 연결 없이 X 검색·게시물·프로필 읽기, 웹 페이지 PDF 저장·오디오 파일 보내기",
+      "source": {
+        "title": "xAI – Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT06-012"
+    },
+    {
+      "id": "grok-2026-08-29-bot-and-x",
+      "date": "2026-08-29",
+      "tool": "Grok",
+      "company": "xAI (SpaceXSI)",
+      "type": "update",
+      "title": "Grok Bot X 연결 — 타임라인·멘션·트렌드·북마크",
+      "summary": "X 커넥터로 게시물 검색·타임라인·멘션 확인·X 동향 요약, X 플러그인으로 트렌드·북마크, 개발자 계정 자동 생성, 유료 사용자 X API 크레딧 제공",
+      "source": {
+        "title": "xAI News – Grok Bot now works with X",
+        "url": "https://x.ai/news/grok-bot-and-x"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT06-012"
     }
   ]
 }
