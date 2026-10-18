@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 134,
+  "count": 135,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-026",
+      "version": "v1.0",
+      "created_at": "2026-10-19 05:10 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Outlook 메일함 옆 Grok 패널로 긴 메일 스레드 요약 → 내 할 일 뽑기 → 내 말투 답장 초안 → 받은편지함 정리까지 한 번에 할 수 있음",
+      "summary": "Grok for Outlook — ① Microsoft Marketplace에서 Outlook 추가 기능 설치, 홈 탭에서 열고 한 번 로그인 + ② 긴 스레드 요약: 결정·담당자·나를 기다리는 일 + ③ 거친 메모 몇 단어로 내 말투 답장 초안(제목·받는 사람·참조까지), 보내기는 사용자가 직접 + ④ 최근 메일 정리: 끝난 메일 보관·정크·답장 필요 표시, 한 일을 보고 + ⑤ 첨부 읽기·웹/X 검색. 유료 X·SuperGrok 사용자 대상",
+      "tool": "Grok",
+      "feature": "Grok for Outlook(Grok by SpaceXAI for Outlook, Microsoft 365 Outlook 추가 기능) — 메일함 옆 패널: ① 긴 스레드(첨부 포함) 요약 → 결정·담당자·나를 기다리는 일 ② 거친 메모로 내 말투 답장·새 메일 초안, 제목·받는 사람·참조 설정, 어조·제목 고치기, 보내기는 사용자 ③ 최근 메일 정리(끝난 메일 보관·정크·답장 필요 표시, 한 일 보고) ④ 첨부 읽기·웹/X 검색, Microsoft Marketplace 'Add to Outlook'·홈 탭에서 열기·한 번 로그인, 관리자 조직 배포, 유료 X·SuperGrok 사용자(2026-07-21)",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-07-21",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-PUB",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 행사 준비 스레드 요약(결정 3·담당자·내 할 일 목록) + ② 메모 한 줄로 만든 내 말투 답장 초안 1통(어조 1번 고침) + ③ 최근 메일 정리 결과 보고와 내가 확인한 점검 기록 + ④ 권한·보내기 전 확인 점검표",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📬",
+      "one_liner": "Outlook 메일함 옆에 Grok 비서"
+    },
     {
       "id": "AI-2026-10-CAT03-025",
       "version": "v1.0",

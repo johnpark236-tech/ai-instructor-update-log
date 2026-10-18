@@ -1,0 +1,616 @@
+{
+  "id": "AI-2026-10-CAT03-026",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-19 05:10 KST",
+  "checked": "2026-10-19",
+  "review_by": "2027-01-19",
+  "title": "Outlook 메일함 옆 Grok 패널로 긴 메일 스레드 요약 → 내 할 일 뽑기 → 내 말투 답장 초안 → 받은편지함 정리까지 한 번에 할 수 있음",
+  "summary": "Grok for Outlook — ① Microsoft Marketplace에서 Outlook 추가 기능 설치, 홈 탭에서 열고 한 번 로그인 + ② 긴 스레드 요약: 결정·담당자·나를 기다리는 일 + ③ 거친 메모 몇 단어로 내 말투 답장 초안(제목·받는 사람·참조까지), 보내기는 사용자가 직접 + ④ 최근 메일 정리: 끝난 메일 보관·정크·답장 필요 표시, 한 일을 보고 + ⑤ 첨부 읽기·웹/X 검색. 유료 X·SuperGrok 사용자 대상",
+  "glance": {
+    "emoji": "📬",
+    "one_liner": "Outlook 메일함 옆에 Grok 비서",
+    "cards": [
+      {
+        "icon": "🧵",
+        "title": "스레드 요약",
+        "text": "결정·담당·내 할 일 정리"
+      },
+      {
+        "icon": "✍️",
+        "title": "답장 초안",
+        "text": "몇 단어 메모로 내 말투 답장"
+      },
+      {
+        "icon": "🧹",
+        "title": "메일함 정리",
+        "text": "보관·정크·답장 필요 표시"
+      },
+      {
+        "icon": "📎",
+        "title": "첨부·검색",
+        "text": "첨부 읽기 + 웹·X 검색"
+      }
+    ],
+    "diagram": {
+      "title": "추가 기능 작동 흐름",
+      "nodes": [
+        {
+          "icon": "🛒",
+          "label": "마켓에서 추가"
+        },
+        {
+          "icon": "🏠",
+          "label": "홈 탭에서 열기"
+        },
+        {
+          "icon": "🔑",
+          "label": "Grok 로그인"
+        },
+        {
+          "icon": "💬",
+          "label": "옆 패널에 요청"
+        },
+        {
+          "icon": "✅",
+          "label": "내가 보고 보냄"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "기능 전",
+        "text": "긴 스레드를 처음부터 읽고 할 일을 따로 적은 뒤 답장을 처음부터 씀"
+      },
+      "after": {
+        "label": "기능 후",
+        "text": "패널에서 요약·할 일 확인 → 메모 몇 단어로 답장 초안 → 검토 후 보냄"
+      }
+    },
+    "cautions": [
+      "보내기 전 초안 직접 확인",
+      "정리 결과 보관함에서 점검",
+      "개인정보 메일엔 쓰지 않음"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok for Outlook(Grok by SpaceXAI for Outlook, Microsoft 365 Outlook 추가 기능) — 메일함 옆 패널: ① 긴 스레드(첨부 포함) 요약 → 결정·담당자·나를 기다리는 일 ② 거친 메모로 내 말투 답장·새 메일 초안, 제목·받는 사람·참조 설정, 어조·제목 고치기, 보내기는 사용자 ③ 최근 메일 정리(끝난 메일 보관·정크·답장 필요 표시, 한 일 보고) ④ 첨부 읽기·웹/X 검색, Microsoft Marketplace 'Add to Outlook'·홈 탭에서 열기·한 번 로그인, 관리자 조직 배포, 유료 X·SuperGrok 사용자(2026-07-21)",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-07-21",
+  "categories": [
+    "CAT-03",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-BIZ",
+    "JOB-PUB",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Microsoft 365 계정(Outlook 추가 기능 설치 가능) — 회사·학교 계정은 관리자가 추가 기능을 막았는지 확인 [확인 필요: 개인 Outlook.com 계정 지원 여부]",
+    "유료 X 또는 SuperGrok 요금제 Grok 계정 — Marketplace 기준 'active paid X or SuperGrok subscription' 필요, 사용량 제한 있음",
+    "Outlook 실행 환경: 새 Outlook for Windows·웹용 Outlook(outlook.office.com)·클래식 Outlook·Mac 중 하나 [확인 필요: 지원 클라이언트 범위]",
+    "실습용 메일(강사 배포, 가상 내용): ① 답장 8개짜리 행사 준비 스레드(첨부 일정표 PDF 1개) ② 뉴스레터·광고 메일 5통 ③ 답장이 필요한 문의 메일 2통",
+    "요금제 없는 수강생용 Plan B: grok.com 대화창(복사·붙여넣기) 또는 강사 화면 시연 관찰"
+  ],
+  "outcome": "① 행사 준비 스레드 요약(결정 3·담당자·내 할 일 목록) + ② 메모 한 줄로 만든 내 말투 답장 초안 1통(어조 1번 고침) + ③ 최근 메일 정리 결과 보고와 내가 확인한 점검 기록 + ④ 권한·보내기 전 확인 점검표",
+  "objectives": [
+    "Grok for Outlook이 '추가 기능 설치 → 홈 탭에서 열기 → 옆 패널 요청 → 초안·정리 결과를 내가 확인'으로 작동하는 구조를 설명할 수 있음",
+    "긴 스레드 요약에서 결정·담당자·내 할 일을 뽑고, 거친 메모로 답장 초안을 만든 뒤 어조·제목·받는 사람을 고칠 수 있음",
+    "추가 기능 권한 범위와 메일함 정리(보관·정크) 결과 점검·되돌리기 원칙을 이해하고 안전하게 쓰거나 삭제할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "Outlook 추가 기능 설치 자체는 Marketplace에서 'free'(x.ai/grok/outlook 기준) — 다만 사용은 유료 X·SuperGrok 사용자 대상(xAI 출시 글·Marketplace), 사용량 제한 있음. 2026-10-12부터 신규 가입은 The X Subscription: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200 [확인 필요: 새 요금제 중 어느 등급부터 Outlook 추가 기능 사용 가능한지]. Microsoft 365 구독료 별도",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 채팅·에이전트 요청 제한 — Outlook 추가 기능은 유료 대상이라 사용 불가로 안내 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok Chat·Voice·Imagine·Build + 공유 사용량 + X 체크 표시 — 유료 X 요금제라 사용 가능 추정 [확인 필요]"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "Plus 전체 + Grok Bot·최신 Grok 모델·클라우드 에이전트·자동화, Plus 대비 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "Premium 전체 + 혼잡 시간 우선 모델 사용, Plus 대비 15배 사용량"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "Super 전체 + Plus 대비 50배 사용량"
+      }
+    ],
+    "note": "요금은 x.ai/pricing·The X Subscription 발표 미국 달러 기준(2026-10-19 확인, 세금 별도·원화 미확인). 기존 SuperGrok 구독자도 대상(출시 글). Teams(사용자당 월 $30부터)·Enterprise는 관리자가 조직 전체 배포 가능. 같은 회사의 Grok for Word·Excel·Google Workspace 부가기능은 무료 계정도 설치 가능한 것과 달리 Outlook은 유료 대상",
+    "checked": "2026-10-19",
+    "sources": [
+      {
+        "title": "xAI News – Introducing Grok for Outlook (2026-07-21)",
+        "url": "https://x.ai/news/introducing-outlook-addin",
+        "checked": "2026-10-19"
+      },
+      {
+        "title": "Microsoft Marketplace – Grok by SpaceXAI for Outlook",
+        "url": "https://marketplace.microsoft.com/en-us/product/office/wa200011330",
+        "checked": "2026-10-19"
+      },
+      {
+        "title": "xAI – Pricing",
+        "url": "https://x.ai/pricing",
+        "checked": "2026-10-19"
+      },
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription",
+        "checked": "2026-10-19"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-06-18",
+      "text": "Grok for Word 공개 — Grok 첫 Microsoft 365 추가 기능"
+    },
+    {
+      "date": "2026-07-20",
+      "text": "Grok for Excel 공개 — 근거 셀 표시·수식·시나리오"
+    },
+    {
+      "date": "2026-07-21",
+      "text": "Grok for Outlook 공개 — 스레드 요약·답장 초안·메일함 정리·첨부·웹/X 검색, 유료 X·SuperGrok 사용자"
+    },
+    {
+      "date": "2026-07-24",
+      "text": "Grok in Google Workspace 공개 — Docs·Sheets·Slides 무료 부가기능"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "The X Subscription 출시 — Grok 요금제 Free·Plus·Premium·Super·Ultra로 개편(신규 가입 기준)"
+    },
+    {
+      "date": "2026-10-19",
+      "text": "Marketplace 기준 현황 — 제품명 Grok by SpaceXAI for Outlook, 유료 X·SuperGrok 구독 필요"
+    }
+  ],
+  "theory": {
+    "definition": "xAI(SpaceXAI)의 AI Grok을 Microsoft Outlook 메일함 옆 패널로 불러 쓰는 Microsoft 365 추가 기능(Add-in)임. ① Microsoft Marketplace에서 'Add to Outlook'으로 추가 ② 홈 탭 도구 모음에서 열고 한 번 로그인 ③ 스레드 요약·답장 초안·메일함 정리·첨부 읽기·웹/X 검색 ④ 초안은 사용자가 보내기 전까지 발송되지 않음",
+    "analogy": "메일 담당 비서와 같음 — 두꺼운 메일 묶음을 건네면 '정해진 것·누가 할 일·당신이 답할 것'을 한 장으로 정리해 주고, '목요일 가능, 장소는 2층'이라고만 말하면 내 말투로 답장 초안을 써서 책상에 올려 둠. 봉투에 넣어 보내는 건 여전히 내가 함",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Grok for Outlook 추가 기능",
+        "grok.com Outlook 커넥터",
+        "Outlook 속 Microsoft 365 Copilot"
+      ],
+      "rows": [
+        [
+          "여는 곳",
+          "Outlook 홈 탭 → 메일함 옆 패널",
+          "grok.com 대화창에서 메일 질문",
+          "Outlook 안 Copilot 단추·창"
+        ],
+        [
+          "대상·비용",
+          "유료 X·SuperGrok 사용자, 설치 무료",
+          "Grok 계정 + Microsoft 회사·학교 계정 로그인 [확인 필요: 요금제별]",
+          "Microsoft 365 Copilot 라이선스·요금제 [확인 필요: 요금제별]"
+        ],
+        [
+          "잘하는 일",
+          "보고 있는 메일 요약·초안을 Outlook 작성 창에 바로",
+          "메일 검색·읽기·초안·보내기·폴더 정리 + 일정(별도 커넥터)",
+          "Microsoft 365 자료 전체와 연결한 요약·초안"
+        ],
+        [
+          "보내기",
+          "사용자가 직접 보냄",
+          "커넥터 권한에 보내기·전달 포함 — 승인 확인 필요",
+          "사용자가 직접 보냄"
+        ],
+        [
+          "알맞은 경우",
+          "Grok을 이미 쓰고 Outlook에서 바로 쓰고 싶을 때",
+          "Outlook을 열지 않고 Grok에서 메일 처리",
+          "회사 표준 AI가 Copilot일 때"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "스레드 요약 → 내 할 일",
+        "body": "① 첨부까지 포함해 스레드 전체를 읽음 ② 결정된 것·담당자(owner)·아직 나를 기다리는 일을 뽑음 ③ 필요하면 웹·X 검색으로 배경 보충 ④ 요약은 원문 메일과 대조해 확인"
+      },
+      {
+        "title": "답장 초안은 Outlook 작성 창에",
+        "body": "① 거친 메모 몇 단어로 요청 ② 내 글 말투에 맞춰 답장·새 메일 작성 ③ 제목·받는 사람(To)·참조(Cc) 설정 ④ '제목 짧게, 더 따뜻하게' 같은 수정 요청 가능 ⑤ 'Nothing sends until you send' — 보내기는 사용자"
+      },
+      {
+        "title": "메일함 정리와 권한",
+        "body": "① 최근 메일 훑어 끝난 대화 보관·광고성 메일 정크·답장 필요 표시, 삭제·이동도 가능 ② 한 일을 하나씩 보고 → 보관함·정크 폴더에서 직접 점검 ③ Marketplace 권한: 인터넷으로 데이터 전송 + 열려 있는 메시지의 본문·제목·보낸 사람·받는 사람·첨부 정보 읽기·수정 ④ 필요 없으면 More Apps > Add apps > Manage your apps에서 제거"
+      }
+    ],
+    "can": [
+      "답장 여러 개인 긴 스레드를 결정·담당자·내 할 일로 요약",
+      "첨부 파일 내용까지 읽고 질문에 답하기",
+      "몇 단어 메모로 내 말투 답장·새 메일 초안 작성, 제목·받는 사람·참조 설정",
+      "초안 어조·제목·받는 사람을 말로 고치기",
+      "최근 메일을 훑어 끝난 메일 보관·정크 이동·답장 필요 표시 후 한 일 보고",
+      "웹·X 검색으로 메일 배경 정보 찾기",
+      "관리자가 조직 전체에 배포"
+    ],
+    "cannot": [
+      "Free Grok 계정으로 사용 불가 — 유료 X·SuperGrok 구독 필요(Marketplace 기준)",
+      "사용자 대신 메일을 자동 발송하지 않음 — 보내기는 사용자",
+      "관리자가 추가 기능을 막은 회사·학교 계정에서는 설치 불가",
+      "요약·초안 정확성 보장 없음 — 날짜·금액·이름은 원문으로 확인 필요",
+      "일정(캘린더) 만들기·응답은 공식 기능 목록에 없음 — grok.com Outlook Calendar 커넥터는 별도 [확인 필요]",
+      "휴대폰 Outlook 앱 지원 여부 미확인 [확인 필요]"
+    ],
+    "safety": [
+      "설치 전 권한 화면을 끝까지 읽음 — 열린 메시지 본문·받는 사람·첨부 정보 읽기·수정, 인터넷 전송 포함. 업무 계정은 보안 담당자 확인 후 설치",
+      "주민번호·건강·성적·계약서·고객 명단이 든 메일에서는 패널을 열지 않음",
+      "답장 초안의 받는 사람·참조·날짜·금액을 보내기 전 직접 확인 — 잘못 보낸 메일은 되돌리기 어려움",
+      "메일함 정리 후 보관·정크 폴더를 꼭 열어 중요한 메일이 섞이지 않았는지 점검, 처음엔 범위를 '최근 메일 몇 통'으로 좁혀 요청",
+      "웹·X 검색 결과를 메일에 옮길 때 출처를 확인하고 사실이 아닌 내용은 지움",
+      "다 쓴 뒤 필요 없으면 추가 기능 제거 + Grok 계정 로그아웃"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① 행사 준비 스레드 요약(결정 3개·담당자·내 할 일) + ② 메모 한 줄로 만든 내 말투 답장 초안 1통 + ③ 메일함 정리 보고와 점검 기록 + ④ 권한·보내기 전 확인 점검표. 비포(스레드 처음부터 읽고 답장 직접 작성)가 애프터(패널 요약·초안 → 검토 후 내가 보냄)로 바뀜",
+    "follow": [
+      {
+        "title": "추가 기능 추가",
+        "minutes": 6,
+        "do": "Outlook 열기 → 새 Outlook·웹: More Apps(앱) > Add apps / 클래식 Outlook: 홈 > All Apps > Get Add-ins / Mac: 홈 > Get Add-ins → 'Grok' 검색(제작사 SpaceXAI 확인) → Add → 권한 화면 읽고 계속",
+        "prompt": "",
+        "expect": "설치 완료 + 홈 탭 도구 모음에 Grok 단추",
+        "note": "Microsoft 지원 문서 기준 메뉴 이름, 한국어 화면 표기 [확인 필요]. x.ai/grok/outlook 의 'Add to Outlook' 링크로 들어가도 됨. 비슷한 이름 앱 주의"
+      },
+      {
+        "title": "패널 열고 로그인",
+        "minutes": 4,
+        "do": "메일 하나 열기 → 홈 탭 Grok 단추 → 옆 패널에서 Grok 계정 로그인(한 번만) → 입력창 확인",
+        "prompt": "",
+        "expect": "메일 오른쪽 옆 패널에 Grok 입력창 + 'Summarize the thread' 같은 바로가기",
+        "note": "유료 X·SuperGrok 계정이 아니면 사용 안내가 뜰 수 있음 → Plan B로 전환"
+      },
+      {
+        "title": "긴 스레드 요약",
+        "minutes": 8,
+        "do": "행사 준비 스레드(답장 8개) 열기 → 패널에 요청 → 원문 메일과 결정·날짜 대조",
+        "prompt": "이 스레드 전체를 요약해 줘. ① 결정된 것 ② 담당자별 할 일 ③ 아직 내가 답하거나 해야 할 일 — 세 묶음으로 나눠서, 날짜와 사람 이름은 메일 원문 그대로 적어 줘. 첨부 일정표 내용도 포함해 줘.",
+        "expect": "결정 3개 내외·담당자 목록·내 할 일 목록",
+        "note": "요약에 원문에 없는 날짜·이름이 있으면 '근거 메일이 어느 것인지 알려 줘'로 다시 확인"
+      },
+      {
+        "title": "메모로 답장 초안",
+        "minutes": 8,
+        "do": "같은 스레드에서 답장 요청 → Outlook 작성 창에 들어간 초안 확인 → 어조 1번 고치기 → 보내지 말고 임시 보관",
+        "prompt": "답장 초안을 써 줘. 내 메모: '목요일 리허설 가능, 장소는 2층 세미나실, 간식은 내가 준비'. 내가 평소 쓰는 말투로, 다섯 줄 이내로.",
+        "expect": "작성 창에 제목·받는 사람이 채워진 답장 초안",
+        "note": "이어서 '조금 더 따뜻하게, 제목은 짧게'로 수정 요청. 받는 사람·참조를 반드시 눈으로 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 문의 메일 답장",
+        "minutes": 8,
+        "do": "답장 필요한 문의 메일 2통 중 1통 골라 내 메모로 답장 초안 → 첨부·웹 검색이 필요한 질문이면 함께 요청",
+        "prompt": "이 문의에 답장 초안을 써 줘. 내 메모: '(내가 답할 내용 한 줄)'. 확실하지 않은 내용은 [확인 필요]라고 표시해 줘.",
+        "expect": "내 말투 답장 초안 1통 + 확인 필요 표시",
+        "note": "보내기 전 점검표 4칸(받는 사람·날짜·금액·첨부) 체크"
+      },
+      {
+        "title": "메일함 정리 맡기기",
+        "minutes": 10,
+        "do": "뉴스레터·광고 5통이 든 실습 메일함에서 정리 요청 → 보고 내용과 보관·정크 폴더 직접 비교 → 잘못 옮긴 메일은 받은편지함으로 되돌리기",
+        "prompt": "최근 메일 10통만 훑어서 끝난 대화는 보관, 광고성 메일은 정크로 옮기고, 답장이 필요한 메일에는 표시해 줘. 삭제는 하지 마. 무엇을 했는지 목록으로 보고해 줘.",
+        "expect": "메일별 처리 보고(보관·정크·답장 필요)",
+        "note": "Marketplace 권한 설명(열린 메시지만)과 공식 소개(최근 메일 정리)가 달라 범위가 다를 수 있음 [확인 필요]. 처음엔 반드시 '삭제는 하지 마' 포함"
+      },
+      {
+        "title": "점검표 완성",
+        "minutes": 6,
+        "do": "메모장·Word에 점검표 작성: ① 설치 시 본 권한 ② 요약에서 원문과 다른 곳 ③ 보내기 전 고친 곳 ④ 정리 후 되돌린 메일",
+        "prompt": "",
+        "expect": "4칸 점검표",
+        "note": "수업 후 필요 없으면 추가 기능 제거 방법도 기록"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "요약 결과를 '쉬운 한국어 3줄'로 다시 받아 동료에게 보낼 새 메일 초안으로 만들기(보내지 말 것)"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "첨부 일정표 PDF를 읽게 하고 '메일 본문과 일정표가 서로 다른 날짜' 찾기 — 근거 메일·쪽수를 밝히게 할 것"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "같은 스레드로 Grok for Outlook과 Outlook 속 Copilot(또는 grok.com 커넥터) 요약을 나란히 만들어 '정확성·내 할 일 뽑기·초안 말투' 3기준 비교표 작성"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 답장 초안을 바꿔 보며 ① 받는 사람·참조가 맞는지 ② 날짜·장소가 원문과 같은지 ③ 정리 후 보관·정크 폴더를 확인했는지 3가지를 서로 체크 진행",
+    "quiz": [
+      {
+        "q": "Grok for Outlook으로 만든 답장 초안은 언제 발송될까요? (xAI 공식 기준)",
+        "options": [
+          "Grok이 초안을 만들면 바로 발송된다",
+          "사용자가 직접 보내기를 눌러야 발송된다",
+          "1시간 뒤 자동 발송된다",
+          "관리자가 승인하면 발송된다"
+        ],
+        "answer": 1,
+        "explain": "공식 소개 'Nothing sends until you send' — 초안 검토·발송은 사용자"
+      },
+      {
+        "q": "Microsoft Marketplace 기준 Grok for Outlook을 쓰려면 필요한 것은?",
+        "options": [
+          "Grok Free 계정만 있으면 된다",
+          "유료 X 또는 SuperGrok 구독",
+          "Microsoft Teams 라이선스",
+          "Google Workspace 계정"
+        ],
+        "answer": 1,
+        "explain": "Marketplace 설명: 'active paid X or SuperGrok subscription' 필요, 사용량 제한 있음"
+      },
+      {
+        "q": "메일함 정리(보관·정크)를 맡긴 뒤 가장 먼저 할 일은?",
+        "options": [
+          "바로 추가 기능을 삭제한다",
+          "보관·정크 폴더를 열어 중요한 메일이 섞이지 않았는지 확인한다",
+          "정크 폴더를 비운다",
+          "같은 요청을 한 번 더 한다"
+        ],
+        "answer": 1,
+        "explain": "Grok이 한 일을 보고하지만 결과 점검은 사용자 몫 — 잘못 옮긴 메일은 받은편지함으로 되돌림"
+      }
+    ],
+    "next": [
+      "Grok for Excel — Microsoft 365 Excel 추가 기능 (AI-2026-10-CAT03-020)",
+      "Grok in Google Workspace 부가기능 (AI-2026-10-CAT03-025)",
+      "Grok Bot 메일 루틴·메일 별칭 (AI-2026-10-CAT08-018)",
+      "GenMail — AI 메일·캘린더 앱과 비교 (AI-2026-10-CAT03-019)"
+    ],
+    "rubric": [
+      {
+        "criterion": "스레드 요약",
+        "high": "결정·담당자·내 할 일 3묶음 + 원문 대조로 틀린 곳 0개 확인",
+        "mid": "요약은 했으나 원문 대조 안 함",
+        "low": "요약 실패"
+      },
+      {
+        "criterion": "답장 초안",
+        "high": "메모 기반 초안 + 어조 수정 1회 + 받는 사람·날짜 확인 후 임시 보관",
+        "mid": "초안만 만들고 확인 안 함",
+        "low": "초안 없음 또는 확인 없이 발송"
+      },
+      {
+        "criterion": "정리·안전",
+        "high": "정리 보고와 폴더 직접 비교 + 되돌리기 + 점검표 4칸",
+        "mid": "정리만 맡기고 폴더 확인 안 함",
+        "low": "점검 없음"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 답장 8개 스레드가 패널 요청 한 번으로 '내 할 일 3개'가 되는 시연",
+        "note": "비포/애프터"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 추가 기능 정의, 요약·초안·정리·첨부/검색 4기능, 권한, 요금(유료 대상), Copilot·grok.com 커넥터 비교, 안전",
+        "note": "권한 화면 캡처로 설명"
+      },
+      {
+        "time": "35~61분",
+        "content": "2부 따라 하기: 추가 → 로그인 → 스레드 요약 → 메모로 답장 초안·어조 고치기",
+        "note": "유료 계정 없는 수강생은 Plan B 짝 실습"
+      },
+      {
+        "time": "61~81분",
+        "content": "2부 내 것 만들기: 문의 메일 답장 → 메일함 정리·되돌리기 → 점검표",
+        "note": "'삭제는 하지 마' 문구 강조"
+      },
+      {
+        "time": "81~90분",
+        "content": "3부 정리: 서로 3가지 체크, 퀴즈 3문제, 다음 단계",
+        "note": "전체 90분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "답장이 여덟 개 달린 메일, 처음부터 다 읽어 보신 적 있으시죠? 오늘은 메일함 옆에 Grok을 앉혀 두고, 이 긴 메일에서 '내가 해야 할 일'만 뽑아 보겠습니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "Grok for Outlook은 Outlook에 붙이는 추가 기능입니다. 요약하고, 답장 초안을 쓰고, 메일함을 정리해 줍니다. 그런데 보내기 버튼은 끝까지 우리가 누릅니다. 이게 오늘의 핵심 안전 원칙입니다."
+      },
+      {
+        "label": "실습 전환",
+        "text": "이제 각자 행사 준비 메일을 열고, 프롬프트를 복사해서 요약을 받아 보세요. 받은 요약의 날짜와 이름을 원래 메일과 꼭 맞춰 보시고요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 답장은 아직 보내지 않았습니다. 받는 사람, 날짜, 장소를 한 번 더 확인하고 보내는 습관, 이게 AI 메일 비서를 쓰는 가장 중요한 기술입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 Grok 계정이 무료라 추가 기능 사용 불가",
+        "response": "유료 계정 수강생과 짝 실습, 또는 grok.com 대화창에 가상 스레드를 붙여 넣어 같은 프롬프트로 요약·초안 체험"
+      },
+      {
+        "situation": "회사·학교 계정에서 추가 기능 설치가 막힘",
+        "response": "강사 화면 시연으로 진행 + 개인 Microsoft 365 계정으로 과제 안내, 기관은 관리자 조직 배포 가능함 안내"
+      },
+      {
+        "situation": "Marketplace에서 Grok이 검색되지 않음",
+        "response": "x.ai/grok/outlook 의 'Add to Outlook' 링크 주소를 칠판·채팅에 공유"
+      },
+      {
+        "situation": "사용량 제한 메시지",
+        "response": "요약 1번·초안 1번만 개인 실습, 나머지는 강사 시연 관찰"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "홈 탭에 Grok 단추가 안 보임",
+        "fix": "메일을 하나 연 상태에서 도구 모음 '…'(더 보기)·앱 메뉴 확인, Outlook 새로 고침"
+      },
+      {
+        "issue": "로그인 팝업이 안 뜸",
+        "fix": "브라우저 팝업 차단 해제, 웹용 Outlook이면 다른 브라우저로 재시도"
+      },
+      {
+        "issue": "요약에 원문에 없는 날짜가 나옴",
+        "fix": "'그 날짜가 나온 메일을 알려 줘'로 근거 확인, 없으면 직접 지우고 기록"
+      },
+      {
+        "issue": "초안이 작성 창이 아니라 패널에만 표시",
+        "fix": "'답장 창에 넣어 줘' 요청 또는 복사해 답장 창에 붙여 넣기 [확인 필요: 화면 동작]"
+      },
+      {
+        "issue": "정리 후 중요한 메일이 사라진 것 같음",
+        "fix": "보관(Archive)·정크 메일 폴더 확인 → 받은편지함으로 이동, 다음엔 범위·'삭제 금지' 명시"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 Grok 계정으로도 되나요?",
+        "a": "Marketplace·출시 글 기준 유료 X·SuperGrok 사용자 대상. 새 요금제(Plus 등) 중 어디부터인지는 [확인 필요]"
+      },
+      {
+        "q": "Grok이 메일을 마음대로 보내나요?",
+        "a": "아님. 공식 소개 'Nothing sends until you send' — 초안만 만들고 보내기는 사용자"
+      },
+      {
+        "q": "내 메일함 전체를 읽나요?",
+        "a": "Marketplace 권한은 '열린 메시지' 본문·제목·받는 사람·첨부 정보 읽기·수정으로 표기, 공식 소개는 최근 메일 정리 기능도 설명 — 실제 범위는 [확인 필요], 민감한 메일은 쓰지 않을 것"
+      },
+      {
+        "q": "Outlook 속 Copilot과 무엇이 다른가요?",
+        "a": "Copilot은 Microsoft 365 라이선스·자료 연결, Grok for Outlook은 Grok 계정·웹/X 검색 결합. 회사 표준 도구와 정책을 먼저 확인할 것"
+      },
+      {
+        "q": "grok.com의 Outlook 커넥터와 같은 건가요?",
+        "a": "다름. 커넥터는 grok.com 대화창에서 메일·일정을 다루는 연결(메일·캘린더 별도 로그인), 추가 기능은 Outlook 화면 안 옆 패널"
+      },
+      {
+        "q": "지우고 싶으면?",
+        "a": "새 Outlook·웹: More Apps > Add apps > Manage your apps > 더 보기 > Remove(Microsoft 지원 문서 기준)"
+      },
+      {
+        "q": "한국어 메일도 되나요?",
+        "a": "공식 문서에 지원 언어 명시 없음 [확인 필요] — 수업 전 강사가 한국어 스레드로 시험할 것"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "추가 → 스레드 요약 1번 → 원문 대조까지, 답장 초안은 보내지 않고 임시 보관만"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "요약·초안·메일함 정리 전부 + 첨부 대조 도전과제 ⭐⭐ + 업무 메일 규칙 정하기"
+      },
+      {
+        "level": "시니어",
+        "guide": "'동창회 모임 공지 메일' 스레드로 요약 1번 + 답장 초안 1번만, 보내기 전 받는 사람 확인 연습"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "초안을 '쉬운 한국어로' 다시 받기 + 공손한 표현(-아/어 주시겠어요?) 전후 비교로 메일 문장 공부"
+      }
+    ],
+    "pro_points": [
+      "보내기는 사람 몫 — AI 메일 비서 수업의 핵심 메시지로 처음과 끝에 반복",
+      "같은 회사 Word·Excel·Workspace 부가기능은 무료 계정 설치 가능, Outlook만 유료 대상이라는 차이를 요금 슬라이드에 표시",
+      "Marketplace 권한 설명과 공식 기능 소개의 범위 차이를 '확인할 점'으로 솔직히 안내",
+      "실습 메일은 반드시 가상 내용으로 준비 — 수강생 실제 업무 메일 사용 금지"
+    ],
+    "day_before": [
+      "유료 X·SuperGrok 계정으로 추가 기능 설치·로그인·요약·초안·정리를 직접 재현하고 화면 캡처 준비",
+      "한국어 메뉴 이름(More Apps > Add apps, 홈 > Get Add-ins 등) 확인 후 슬라이드 수정",
+      "가상 실습 메일(스레드 8개 답장·첨부 PDF, 광고 5통, 문의 2통)을 실습 계정에 미리 보내 두기",
+      "기관 계정 추가 기능 설치 허용 여부를 담당자에게 확인",
+      "한국어 스레드 요약 품질 시험 + 사용량 제한 메시지 캡처"
+    ]
+  },
+  "verification": [
+    "[확인 필요] The X Subscription 새 요금제 중 Outlook 추가 기능 사용 가능 등급 — 공식 표기는 'paid X and SuperGrok users'",
+    "[확인 필요] 메일함 정리 범위 — Marketplace 권한은 '열린 메시지만 읽기·수정, 다른 메일함 항목은 불가', xAI 소개는 최근 메일 훑어 보관·정크·답장 필요 표시 설명 → 서로 다름",
+    "[확인 필요] 지원 클라이언트(새 Outlook·웹·클래식·Mac·모바일)와 개인 Outlook.com 계정 지원 여부",
+    "[확인 필요] 한국어 화면 메뉴 경로와 한국어 메일 요약 품질",
+    "[확인 필요] 초안이 작성 창에 바로 들어가는지(소개 페이지는 'inside Outlook's compose window' 표현)",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — xAI 출시 글·소개 페이지·Microsoft Marketplace·Microsoft 지원 문서 기준(2026-10-19 확인)"
+  ],
+  "notice": null,
+  "sources": [
+    {
+      "title": "xAI News – Introducing Grok for Outlook (2026-07-21)",
+      "url": "https://x.ai/news/introducing-outlook-addin",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI – Grok for Outlook (Office Add-in 소개 페이지)",
+      "url": "https://x.ai/grok/outlook",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Microsoft Marketplace – Grok by SpaceXAI for Outlook",
+      "url": "https://marketplace.microsoft.com/en-us/product/office/wa200011330",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Microsoft Support – Use add-ins in Outlook",
+      "url": "https://support.microsoft.com/office/1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI Docs – Outlook Mail & Calendar connector (비교용)",
+      "url": "https://docs.x.ai/grok/connectors/outlook",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI – Pricing",
+      "url": "https://x.ai/pricing",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-19"
+    }
+  ]
+}
