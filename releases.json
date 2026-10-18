@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 07:20 KST",
+  "updated_at": "2026-10-19 08:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3181,6 +3181,36 @@
       },
       "checked": "2026-10-19",
       "lesson_id": "AI-2026-10-CAT08-020"
+    },
+    {
+      "id": "genspark-2026-01-28-speakly",
+      "date": "2026-01-28",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Speakly — AI 음성 입력 앱(AI Workspace 2.0)",
+      "summary": "어느 앱에서나 말로 글쓰기, 군말 제거·서식 정리, 선택 문장 음성 명령(번역·다듬기), Agent Mode, Mac·Windows(이후 iPhone·Android), 무료 주당 4,000단어",
+      "source": {
+        "title": "Genspark Blog – Genspark AI Workspace 2.0",
+        "url": "https://www.genspark.ai/blog/genspark-ai-workspace-2"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT05-021"
+    },
+    {
+      "id": "genspark-2026-04-08-speakly-live-translation",
+      "date": "2026-04-08",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Speakly 실시간 번역(Live Translation)·AI 회의 노트(AI Workspace 4.0)",
+      "summary": "온라인 회의·영상 재생 실시간 다국어 번역 떠 있는 자막 창(15개+ 대상 언어, 마이크·시스템 소리), 녹음·파일 전사 요약, 크레딧 차감",
+      "source": {
+        "title": "Genspark Blog – Introducing Genspark AI Workspace 4.0",
+        "url": "https://www.genspark.ai/blog/genspark-ai-workspace-4"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT05-021"
     }
   ]
 }
