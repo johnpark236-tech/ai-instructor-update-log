@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 122,
+  "count": 123,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT09-005",
+      "version": "v1.0",
+      "created_at": "2026-10-18 17:05 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "Notion 데이터베이스 속성 권한(Property access)으로 한 표 안의 민감한 열만 사람·AI 에이전트별로 숨기거나 보기 전용으로 잠글 수 있음",
+      "summary": "Notion 3.8(2026-10-13)의 열 권한(Column permissions in databases)은 데이터베이스 열(속성)마다 ① 기본 접근 수준 + ② 사람·그룹·사람 속성·에이전트별 예외 + ③ 미리보기(Preview)로 결과 확인을 지원함. Notion AI는 사용자 권한을 따르므로 숨긴 열은 AI도 못 읽음. Business·Enterprise 전용, 웹·데스크톱에서 설정",
+      "tool": "Notion",
+      "feature": "데이터베이스 속성 권한(Property access, 열 권한 Column permissions in databases) — 열(속성)마다 기본 접근 수준·사람·그룹·사람 속성·에이전트별 예외 지정, 6단계 접근 수준(데이터베이스 따름·속성·값 편집·값만 편집·속성만 보기·속성·값 보기·접근 없음), Preview로 특정 사람 화면 확인, Notion AI는 사용자 권한 상속, 최대 20개 속성, Business·Enterprise",
+      "company": "Notion",
+      "type": "update",
+      "released": "2026-10-13",
+      "categories": [
+        "CAT-09",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 열 4개 이상 연습용 '수강생 관리' 표 + ② 민감한 열 2개(연락처·평가 메모)에 속성 권한 규칙 적용 + ③ Preview로 확인한 사람별 화면 비교 메모 + ④ Notion AI에게 숨긴 열을 물어본 결과 기록 1장",
+      "access": "paid",
+      "total_minutes": 73,
+      "notice": "",
+      "emoji": "🔒",
+      "one_liner": "한 표에서 민감한 열만 골라 잠그기"
+    },
     {
       "id": "AI-2026-10-CAT08-016",
       "version": "v1.0",

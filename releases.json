@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-18 16:05 KST",
+  "updated_at": "2026-10-18 17:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "notion-2026-10-13-property-access",
+      "date": "2026-10-13",
+      "tool": "Notion",
+      "company": "Notion",
+      "type": "update",
+      "title": "데이터베이스 열 권한(Property access)",
+      "summary": "데이터베이스 열(속성)마다 기본 접근 수준과 사람·그룹·에이전트별 예외를 지정해 민감한 열을 숨기거나 보기 전용으로 설정, Preview로 확인, Notion AI는 사용자 권한 상속 (Business·Enterprise)",
+      "source": {
+        "title": "Notion Releases – Notion 3.8 (2026-10-13)",
+        "url": "https://www.notion.com/releases/2026-10-13"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT09-005"
+    },
     {
       "id": "grok-2026-10-02-bot-connect-apps",
       "date": "2026-10-02",
