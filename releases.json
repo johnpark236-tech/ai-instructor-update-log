@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-18 07:20 KST",
+  "updated_at": "2026-10-18 10:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "firefly-2026-10-01-ai-assistant-all-cc",
+      "date": "2026-10-01",
+      "tool": "Adobe Firefly",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Firefly AI Assistant 모든 Creative Cloud 요금제 확대·AI 크레딧 차감 시작",
+      "summary": "Firefly AI Assistant(베타)를 모든 Creative Cloud 요금제 사용자에게 제공, 유료 사용자의 생성·편집 작업은 AI 크레딧 차감(도입 요율), 일부 지역 무료 계정은 하루 제한 체험",
+      "source": {
+        "title": "Adobe 도움말 – Firefly AI Assistant FAQ",
+        "url": "https://helpx.adobe.com/firefly/web/firefly-ai-assistant/ai-assistant-faq.html"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT04-014"
+    },
+    {
+      "id": "firefly-2026-04-27-ai-assistant-beta",
+      "date": "2026-04-27",
+      "tool": "Adobe Firefly",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Firefly AI Assistant 공개 베타 — 대화형 창작 에이전트",
+      "summary": "목표를 말하면 Photoshop·Lightroom·Illustrator·Premiere·Firefly 도구로 여러 단계 작업을 계획·실행, 크리에이티브 스킬(Portrait Retouch·Social Media Assets·Mockup Studio), Firefly 웹 전용, Creative Cloud Pro·Firefly Pro·Pro Plus·Premium 대상으로 시작",
+      "source": {
+        "title": "Adobe – Firefly AI Assistant",
+        "url": "https://www.adobe.com/products/firefly/features/ai-assistant.html"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT04-014"
+    },
     {
       "id": "canva-2026-03-11-magic-layers",
       "date": "2026-03-11",

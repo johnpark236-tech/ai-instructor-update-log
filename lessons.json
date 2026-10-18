@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 115,
+  "count": 116,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-014",
+      "version": "v1.0",
+      "created_at": "2026-10-18 10:05 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "말로 시키는 디자인 팀 — Firefly AI Assistant(파이어플라이 AI 어시스턴트)로 '가상 카페 브랜드 키트 + 상품 사진 보정 + 목업 + SNS 크기별 홍보 이미지' 만들기",
+      "summary": "Adobe Firefly 웹의 대화형 창작 에이전트 Firefly AI Assistant(베타). 원하는 결과를 말하면 Photoshop·Lightroom·Illustrator·Premiere·Firefly 도구를 골라 여러 단계 작업을 계획·실행함 → 사진 보정·일괄 편집, 브랜드 키트(로고·색·글꼴), 목업, SNS 크기별 변형, 짧은 홍보 영상까지 한 대화에서 진행. 2026-04-27 공개 베타(유료 일부 요금제) → 2026-10-01부터 모든 Creative Cloud 요금제 포함 + 생성·편집에 AI 크레딧 차감 시작, 무료 계정은 일부 지역에서 하루 제한 체험",
+      "tool": "Adobe Firefly",
+      "feature": "Firefly AI Assistant(베타) — Firefly 웹(firefly.adobe.com/ai-assistant)의 대화형 창작 에이전트: ① 목표를 말하면 단계 계획 후 Photoshop·Lightroom·Illustrator·Premiere·Firefly 도구 실행 ② 크리에이티브 스킬(Portrait Retouch·Social Media Assets·Mockup Studio 등, /명령 호출) ③ 브랜드 키트(로고·색·글꼴·가이드) Creative Cloud 브랜드에 자동 저장 ④ 개인 선호(Preferences) 기억 ⑤ 결과 Creative Cloud 저장·내려받기, 2026-10-01부터 모든 Creative Cloud 요금제 포함·AI 크레딧 차감",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-04-27",
+      "categories": [
+        "CAT-04",
+        "CAT-08",
+        "CAT-11"
+      ],
+      "jobs": [
+        "JOB-MKT",
+        "JOB-CRE",
+        "JOB-BIZ",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 조명·색감을 맞춘 상품 사진 2~3장 + ② 가상 카페 브랜드 키트(로고 1개·색 팔레트·글꼴) + ③ 테이크아웃 컵·에코백 목업 2종 + ④ 인스타그램·페이스북 크기별 홍보 이미지 세트",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎨",
+      "one_liner": "말 한마디로 보정·로고·목업·SNS까지"
+    },
     {
       "id": "AI-2026-10-CAT03-020",
       "version": "v1.0",
