@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 131,
+  "count": 132,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-024",
+      "version": "v1.0",
+      "created_at": "2026-10-19 02:15 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "ChatGPT 라이브러리(Library)에 수업·업무 자료 폴더를 만들어 동료와 보기·편집 권한으로 공유하고, Google Drive·Box·Dropbox·SharePoint 파일을 다시 올리지 않고 대화에 넣어 쓸 수 있음",
+      "summary": "ChatGPT 라이브러리가 파일 보관함에서 공유·연결 허브로 바뀜. ① 2026-09-09 파일·폴더 공유(특정 사람 Viewer·Editor 또는 워크스페이스 전체, Shared with me에서 확인) ② 2026-09-10 Box·Dropbox·SharePoint 연결(Google Drive는 2026-08-13) — 다시 올리지 않고 대화에 넣고 채팅 옆에 열어 둠 ③ 작성기 메뉴 Add from library로 저장 파일 재사용. 라이브러리는 Free~Enterprise 웹, 클라우드 연결은 웹 전용(모바일 추후)",
+      "tool": "ChatGPT",
+      "feature": "라이브러리(Library) 파일·폴더 공유(Share files and folders from your Library, 2026-09-09)·Box·Dropbox·SharePoint 연결(2026-09-10, Google Drive 2026-08-13) — Viewer·Editor 권한·워크스페이스 공유·Shared with me, 다시 올리지 않고 대화에 넣기·채팅 옆에 열어 두기, Add from library, 폴더 단위 질문, 요금제별 저장 공간",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-09-09",
+      "categories": [
+        "CAT-03",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 라이브러리 '가상 수업 자료' 폴더 1개(파일 2~3개) + ② 짝과 Viewer 또는 Editor 권한 공유 1회 + ③ Add from library로 넣어 만든 요약·체크리스트 답변 1개 + ④ (유료 시) 클라우드 파일 1개를 다시 올리지 않고 대화에 넣은 결과",
+      "access": "freemium",
+      "total_minutes": 54,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "라이브러리 폴더 공유·클라우드 파일 연결"
+    },
     {
       "id": "AI-2026-10-CAT05-020",
       "version": "v1.0",
