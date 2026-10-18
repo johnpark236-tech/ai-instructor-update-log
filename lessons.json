@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 123,
+  "count": 124,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-021",
+      "version": "v1.0",
+      "created_at": "2026-10-18 18:05 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "Google Chat의 Ask Gemini로 메일·드라이브·일정을 한 입력창에서 찾고, 문서·시트·할 일·회의까지 말로 만들 수 있음",
+      "summary": "Google Chat 왼쪽 바로가기(Shortcuts)의 Ask Gemini는 Workspace Intelligence 기반 통합 명령창임. ① Gmail·Drive·Calendar·웹 검색 + 인용 ② 메일 초안·Docs·Sheets·Slides·이미지 생성 ③ 할 일·회의 예약 ④ 안 읽은 메시지 따라잡기·Daily brief ⑤ 주제별 세션(Session) 지원. Chat 측면 패널 대체, 2026-08-26부터 순차 출시, Workspace Business·Enterprise Standard/Plus, 현재 영어 계정 언어만",
+      "tool": "Google Chat",
+      "feature": "Ask Gemini in Google Chat(Chat 통합 명령창) — 바로가기·Ctrl/Command+g·검색창 옆 아이콘으로 열기, Workspace(Gmail·Drive·Calendar)·웹 검색과 인용, 메일 초안·Docs·Sheets·Slides·이미지 생성, 할 일·회의 예약, 안 읽은 메시지 따라잡기·Daily brief, 주제별 세션, @앱·@스킬(Workspace Studio)·Deep Research, Chat 측면 패널 대체(영어 계정 언어만)",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-08-26",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① Ask Gemini 세션 '연습-과정 준비' 1개 + ② 인용 링크가 붙은 Drive 자료 찾기 답변 + ③ 수강 관리용 Google Sheets 1개 + ④ 할 일 1개·30분 연습 회의 1개 + ⑤ 진행 상황 메일 초안 1개(보내지 않음)",
+      "access": "paid",
+      "total_minutes": 73,
+      "notice": "",
+      "emoji": "💬",
+      "one_liner": "Chat 입력창 하나로 찾고 만들고 예약"
+    },
     {
       "id": "AI-2026-10-CAT09-005",
       "version": "v1.0",

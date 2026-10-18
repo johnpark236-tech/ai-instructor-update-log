@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-18 17:05 KST",
+  "updated_at": "2026-10-18 18:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "google-chat-2026-08-26-ask-gemini",
+      "date": "2026-08-26",
+      "tool": "Google Chat",
+      "company": "Google",
+      "type": "update",
+      "title": "Google Chat Ask Gemini 통합 명령창",
+      "summary": "Chat 왼쪽 바로가기·Ctrl+g로 여는 Gemini 명령창, Workspace 검색·문서·시트·메일 초안·할 일·회의 예약·세션 지원, Chat 측면 패널 대체 (Business·Enterprise Standard/Plus, 영어 계정 언어만)",
+      "source": {
+        "title": "Google Workspace Updates – Introducing Ask Gemini in Chat",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html"
+      },
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT03-021"
+    },
     {
       "id": "notion-2026-10-13-property-access",
       "date": "2026-10-13",
