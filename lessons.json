@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 132,
+  "count": 133,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-018",
+      "version": "v1.0",
+      "created_at": "2026-10-19 03:10 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Grok Bot 전용 메일 주소에 별칭(+news 등)을 붙여 받은 메일만 골라 자동 요약하는 메일 루틴을 만들고, 답장은 내 승인 후 발송할 수 있음",
+      "summary": "Grok Bot 메일 루틴 — ① Bot 전용 주소(이름@mail.grokbot.com)로 온 메일을 루틴이 받아 읽기·요약·답장 초안 + ② 보낸 사람·도메인으로 거르기(제목 필터 없음) + ③ 2026-10-14 공개 메일 별칭(이름+태그@)으로 용도별 메일함 나누기 + ④ 보내는 메일은 항상 초안 승인",
+      "tool": "Grok",
+      "feature": "Grok Bot 메일 루틴(Email-triggered routines)·메일 별칭(Plus aliases) — Bot 전용 주소(@mail.grokbot.com)로 온 메일에 루틴 자동 실행, 보낸 사람·도메인 필터, 별칭(이름+태그@)별 루틴, 읽기·요약·답장 초안, 발송은 초안 승인(2026-10-14 별칭 공개)",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-10-14",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-EDU",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 별칭 2개(+news·+receipts)를 정한 Bot 메일 주소 메모 + ② '+news 로 온 메일 3줄 요약' 메일 루틴 1개 + ③ 테스트 메일 2통으로 확인한 요약 결과 + ④ 답장 초안 1통(승인 또는 거절 연습) + ⑤ 루틴 일시 중지·삭제 점검표",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📨",
+      "one_liner": "메일 오면 Bot이 알아서 요약"
+    },
     {
       "id": "AI-2026-10-CAT03-024",
       "version": "v1.0",

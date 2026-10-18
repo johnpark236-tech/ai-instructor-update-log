@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-19 02:20 KST",
+  "updated_at": "2026-10-19 03:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grokbot-2026-10-14-plus-aliases",
+      "date": "2026-10-14",
+      "tool": "Grok Bot",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Bot 메일 별칭·별칭별 메일 루틴",
+      "summary": "Bot 전용 메일 주소에 +태그 별칭을 붙여 용도별로 메일을 주고받고, 특정 별칭으로 온 메일에만 루틴이 실행되게 설정 (2026-10-16 공식 @bot 업데이트 스레드에서 X Chat 연결·새 커넥터와 함께 안내)",
+      "source": {
+        "title": "Grok Bot 공식 X 계정(@bot) – 2026-10-16 업데이트 스레드(메일 별칭·X Chat·새 커넥터)",
+        "url": "https://x.com/bot/status/2111184270819803351"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT08-018"
+    },
     {
       "id": "genspark-2026-04-08-office-addins",
       "date": "2026-04-08",
