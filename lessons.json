@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 121,
+  "count": 122,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-016",
+      "version": "v1.0",
+      "created_at": "2026-10-18 16:05 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "Grok Bot의 Connect Apps에서 Notion·Canva 같은 앱을 연결하고, @로 붙여 대화 속 앱 카드로 결과를 확인하며, 하고 싶은 일을 말해 맞는 Bot 템플릿을 추천받을 수 있음",
+      "summary": "Grok Bot 앱 연결 업데이트 — ① Marketplace가 Connect Apps로 개편(검색 아래 카테고리 칩·Recommended for you, v0.67.0) + ② 앱이 딸린 커넥터(Figma·Notion·Canva)는 대화 속 인터랙티브 카드로 표시(v0.70.2) + ③ 하는 일을 말하면 Bot이 맞는 Bot 템플릿을 찾아 링크 + ④ 커넥터 링크를 주면 카탈로그의 플러그인 자동 설치, 많이 설치된 순 정렬·설명 검색(v0.70.2)",
+      "tool": "Grok",
+      "feature": "Grok Bot 앱 연결(Connect Apps)·대화 속 앱 카드(interactive card)·Bot 템플릿 추천 — Marketplace → Connect Apps 개편(카테고리 칩·Recommended for you·Bot templates, v0.67.0), Figma·Notion·Canva 앱 카드, 커넥터 링크로 플러그인 자동 설치, 설치 많은 순 정렬·설명 검색, QuickBooks Online 연결(v0.70.2), @ 커넥터 붙이기",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-10-02",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-MKT",
+        "JOB-BIZ",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① Connect Apps로 연결한 앱 1개(Notion 또는 Canva) + ② @로 붙여 만든 결과물 1개(Notion 체크리스트 페이지 또는 Canva 안내 포스터 초안)와 대화 속 앱 카드 확인 + ③ Bot이 추천한 Bot 템플릿 링크 1개 + ④ 내 앱 연결 점검표(연결 앱·권한·해제 방법)",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🔌",
+      "one_liner": "Bot에 내 앱을 꽂아 일 시키기"
+    },
     {
       "id": "AI-2026-10-CAT05-019",
       "version": "v1.0",

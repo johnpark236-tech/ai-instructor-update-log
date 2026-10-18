@@ -1,0 +1,595 @@
+{
+  "id": "AI-2026-10-CAT08-016",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-18 16:05 KST",
+  "checked": "2026-10-18",
+  "review_by": "2027-01-18",
+  "title": "Grok Bot의 Connect Apps에서 Notion·Canva 같은 앱을 연결하고, @로 붙여 대화 속 앱 카드로 결과를 확인하며, 하고 싶은 일을 말해 맞는 Bot 템플릿을 추천받을 수 있음",
+  "summary": "Grok Bot 앱 연결 업데이트 — ① Marketplace가 Connect Apps로 개편(검색 아래 카테고리 칩·Recommended for you, v0.67.0) + ② 앱이 딸린 커넥터(Figma·Notion·Canva)는 대화 속 인터랙티브 카드로 표시(v0.70.2) + ③ 하는 일을 말하면 Bot이 맞는 Bot 템플릿을 찾아 링크 + ④ 커넥터 링크를 주면 카탈로그의 플러그인 자동 설치, 많이 설치된 순 정렬·설명 검색(v0.70.2)",
+  "glance": {
+    "emoji": "🔌",
+    "one_liner": "Bot에 내 앱을 꽂아 일 시키기",
+    "cards": [
+      {
+        "icon": "🔌",
+        "title": "Connect Apps",
+        "text": "카테고리 칩·추천으로 앱 찾기"
+      },
+      {
+        "icon": "@",
+        "title": "@로 붙이기",
+        "text": "대화에 @앱 붙여 작업 지시"
+      },
+      {
+        "icon": "🃏",
+        "title": "앱 카드",
+        "text": "Notion·Canva 결과를 대화 속 카드로"
+      },
+      {
+        "icon": "🤖",
+        "title": "템플릿 추천",
+        "text": "할 일 말하면 맞는 Bot 링크"
+      }
+    ],
+    "diagram": {
+      "title": "앱 연결 흐름",
+      "nodes": [
+        {
+          "icon": "🔍",
+          "label": "Connect Apps"
+        },
+        {
+          "icon": "➕",
+          "label": "Add·로그인"
+        },
+        {
+          "icon": "@",
+          "label": "@로 붙이기"
+        },
+        {
+          "icon": "🃏",
+          "label": "앱 카드 확인"
+        },
+        {
+          "icon": "✅",
+          "label": "승인·마무리"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "기능 전",
+        "text": "Bot이 브라우저로 사이트를 하나씩 눌러 가며 작업, 결과는 앱을 따로 열어 확인"
+      },
+      "after": {
+        "label": "기능 후",
+        "text": "커넥터로 바로 작업 + 대화 속 앱 카드로 결과 확인 + 템플릿 추천"
+      }
+    },
+    "cautions": [
+      "꼭 필요한 앱만 최소로 연결",
+      "연결 앱은 모든 내 Bot이 같이 씀",
+      "비밀번호는 채팅 말고 보안 입력창"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Bot 앱 연결(Connect Apps)·대화 속 앱 카드(interactive card)·Bot 템플릿 추천 — Marketplace → Connect Apps 개편(카테고리 칩·Recommended for you·Bot templates, v0.67.0), Figma·Notion·Canva 앱 카드, 커넥터 링크로 플러그인 자동 설치, 설치 많은 순 정렬·설명 검색, QuickBooks Online 연결(v0.70.2), @ 커넥터 붙이기",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-10-02",
+  "categories": [
+    "CAT-08",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-MKT",
+    "JOB-BIZ",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Grok Bot 포함 요금제 — The X Subscription Premium(월 $30) 이상, 또는 기존 SuperGrok·Cursor 유료 요금제 연결",
+    "Grok Bot 데스크톱 앱 최신 버전 — Connect Apps는 0.67.0 이상, 앱 카드·템플릿 추천은 0.70.2 이상(변경 기록 기준)",
+    "연결해 볼 실습용 계정 1개 — Notion 또는 Canva 무료 계정 (업무·개인 자료가 없는 새 계정 권장)",
+    "실습 소재 메모 1개 — 개인정보 없는 강좌·행사 준비 할 일 (예: '가을 AI 특강 준비 체크리스트' 5줄)",
+    "강사: 시연 전용 Grok Bot 계정 — 개인 메일·SNS·금융 앱이 연결된 계정으로 시연하지 않음"
+  ],
+  "outcome": "① Connect Apps로 연결한 앱 1개(Notion 또는 Canva) + ② @로 붙여 만든 결과물 1개(Notion 체크리스트 페이지 또는 Canva 안내 포스터 초안)와 대화 속 앱 카드 확인 + ③ Bot이 추천한 Bot 템플릿 링크 1개 + ④ 내 앱 연결 점검표(연결 앱·권한·해제 방법)",
+  "objectives": [
+    "Connect Apps(앱 연결)·커넥터·브라우저 작업의 차이와 연결 앱이 계정 전체 Bot에 공유되는 구조를 설명할 수 있음",
+    "Connect Apps에서 앱을 찾아 Add·로그인하고, @로 붙여 작업을 맡긴 뒤 대화 속 앱 카드로 결과를 확인할 수 있음",
+    "하는 일을 말해 Bot 템플릿을 추천받고, 필요 없는 연결은 해제·권한 회수하는 점검 습관을 지킬 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "무료·Plus 요금제에는 Grok Bot 미포함. The X Subscription Premium 월 $30부터 포함, Super·Ultra는 사용량 확대. Grok Bot 사용량은 Grok·Cursor와 함께 쓰는 주간 공유 사용량에서 차감, 초과분은 API 정가로 충전(Top-up)",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "매일 제한된 Grok 이용 + Cursor 코딩 에이전트 맛보기 — Grok Bot 언급 없음"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8 (연 $80)",
+        "features": "Grok·Cursor 기본 사용량 + X 체크 표시·크리에이터 도구 — Grok Bot 미포함"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30 (연 $300)",
+        "features": "Grok Bot 포함 — Bot 전용 컴퓨터·도구 로그인·예약 루틴·데스크톱·모바일, Plus의 4배 사용량, SuperGrok·Cursor Pro·X Premium+ 혜택"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100 (연 $1,000)",
+        "features": "Premium 전체 + Plus의 15배 사용량, 사용량 몰릴 때 모델 우선 이용"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200 (연 $2,000)",
+        "features": "Super 전체 + Plus의 50배 사용량, 신제품·신모델 가장 먼저 이용"
+      }
+    ],
+    "note": "The X Subscription 요금은 xAI 공식 발표·문서 기준(2026-10-17 확인, 미국 달러·세금 별도). 팀 좌석은 Premium·Super·Ultra 좌석당 같은 가격, Team Bots는 Teams·Enterprise 요금제 공개 베타. 기존 SuperGrok·SuperGrok Plus·SuperGrok Heavy, Cursor Pro·Pro+·Ultra·Teams 구독자도 Grok Bot 사용 가능(기존 요금제 유지 또는 전환 선택, 계정 통합은 되돌릴 수 없음). 기본 사용량의 실제 양·원화 가격·국내 결제 여부 [확인 필요]. Connect Apps 플러그인 자체 추가 요금은 공식 문서에 표기 없음, 연결하는 서비스(Notion·Canva·QuickBooks 등)는 각 서비스 계정·요금제 필요",
+    "checked": "2026-10-17",
+    "sources": [
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI Docs – The X Subscription Pricing",
+        "url": "https://docs.x.ai/x-subscription/pricing"
+      },
+      {
+        "title": "xAI Docs – Grok Bot on The X Subscription",
+        "url": "https://docs.x.ai/x-subscription/grok-bot"
+      },
+      {
+        "title": "xAI – Grok Bot (AI teammates that finish the work)",
+        "url": "https://x.ai/bot"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-08-11",
+      "text": "Grok Bot 베타 공개 — Bot마다 클라우드 컴퓨터, 도구 로그인·루틴"
+    },
+    {
+      "date": "2026-09-04",
+      "text": "v0.41.0 — Marketplace에 플러그인 + 추가할 수 있는 Bot 목록·카테고리·검색, Grok Bot 팀 제작 Bot에 Verified 배지"
+    },
+    {
+      "date": "2026-09-09",
+      "text": "v0.48.0 — Marketplace 홈 하나로 플러그인·Bot 통합, 입력하면서 검색, API 키 커넥터는 연결 후 Connected 표시"
+    },
+    {
+      "date": "2026-10-02",
+      "text": "v0.67.0 — Marketplace → Connect Apps 이름 변경, 검색 아래 카테고리 칩·Recommended for you 먼저·웹에서 Bot templates, 재로그인 필요 카드에 Authorize 버튼, Google 계정은 메일 주소로 표시"
+    },
+    {
+      "date": "2026-10-11",
+      "text": "v0.70.2 — Figma·Notion·Canva처럼 앱이 딸린 커넥터는 대화 속 인터랙티브 카드로 표시, 설명하면 맞는 Bot 템플릿 링크, 커넥터 링크로 플러그인 자동 설치, 설치 많은 순 정렬·설명 검색, QuickBooks Online 연결"
+    },
+    {
+      "date": "2026-10-16",
+      "text": "Robinhood·Coinbase·Trello·PostHog·beehiiv·eToro 커넥터 추가, 팀이 직접 통합을 올리는 커넥터 마켓플레이스, X Chat 연결 (보조 근거: iPhone in Canada 보도, 공식 변경 기록 미반영) [확인 필요]"
+    }
+  ],
+  "theory": {
+    "definition": "Grok Bot(자기 클라우드 컴퓨터를 가진 xAI의 상시 AI 팀원)이 다른 서비스와 일하는 통로를 정리한 기능임. ① Connect Apps: 사이드바에서 플러그인(커넥터)을 찾아 Add하고 브라우저에서 로그인 ② @: 대화에서 @로 커넥터를 작업에 붙임 ③ 앱 카드: Figma·Notion·Canva처럼 앱이 딸린 커넥터는 결과를 대화 속 인터랙티브 카드로 보여 줌 ④ Bot 템플릿: 할 일을 설명하면 맞는 Bot 템플릿을 찾아 링크",
+    "analogy": "새 비서에게 회사 시스템 출입증을 발급해 주는 것과 같음. 출입증(커넥터)이 있으면 문을 하나씩 두드리며 돌아다니지(브라우저) 않고 바로 들어가 일함. 단 출입증은 내 모든 비서가 함께 쓰므로 꼭 필요한 곳만 발급하고, 다 쓰면 회수함",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Connect Apps 커넥터",
+        "브라우저로 사이트 직접 조작",
+        "Grok(grok.com) 커넥터(@)"
+      ],
+      "rows": [
+        [
+          "작업 방식",
+          "서비스와 정해진 방식으로 바로 작업(공식 권장)",
+          "Bot이 화면을 보며 클릭",
+          "대화 중 커넥터 참고"
+        ],
+        [
+          "결과 확인",
+          "앱 카드로 대화 속 표시(Figma·Notion·Canva)",
+          "스크린샷·설명",
+          "답변 글로 표시"
+        ],
+        [
+          "알맞은 경우",
+          "커넥터가 있는 서비스",
+          "커넥터가 없거나 화면 작업이 필요한 서비스",
+          "질문·요약 중심 작업"
+        ],
+        [
+          "범위",
+          "계정 전체 — 내 모든 Bot이 공유",
+          "공유 클라우드 컴퓨터의 브라우저 로그인",
+          "대화 단위 [확인 필요]"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "Connect Apps",
+        "body": "① 사이드바 'Connect apps'에서 플러그인 찾기 → Add → 브라우저 인증 ② 검색 아래 카테고리 칩, Recommended for you 먼저, 많이 설치된 순 정렬 ③ 검색은 이름뿐 아니라 설명도 찾음 ④ 커넥터 링크를 Bot에 주면 카탈로그의 플러그인 자동 설치"
+      },
+      {
+        "title": "대화 속 앱 카드",
+        "body": "① Figma·Notion·Canva처럼 앱이 딸린 커넥터는 결과를 인터랙티브 카드로 대화에 표시(v0.70.2) ② 앱을 따로 열지 않고 대화에서 결과 확인 ③ 카드 안에서 할 수 있는 조작 범위는 [확인 필요]"
+      },
+      {
+        "title": "계정 전체 공유·해제",
+        "body": "① 설치한 커넥터는 계정 전체 범위 — 특정 Bot만 쓰게 나눌 수 없음(공식 문서 기준) ② 브라우저 로그인·명령줄 자격 증명도 공유 클라우드 컴퓨터에서 모든 Bot이 함께 씀 ③ 끊을 때는 커넥터 제거 + 원래 서비스에서 권한 회수"
+      }
+    ],
+    "can": [
+      "Connect Apps에서 카테고리 칩·추천·검색으로 플러그인 찾아 Add",
+      "대화에서 @로 커넥터를 붙여 작업 맡기기",
+      "Figma·Notion·Canva 결과를 대화 속 앱 카드로 확인",
+      "하는 일을 설명해 맞는 Bot 템플릿 링크 받기",
+      "커넥터 링크만 주고 플러그인 자동 설치 요청, QuickBooks Online 연결(v0.70.2)"
+    ],
+    "cannot": [
+      "무료·Plus 요금제에서는 Grok Bot 사용 불가(The X Subscription 기준)",
+      "커넥터를 특정 Bot에만 허용하는 설정은 공식 문서에 없음 — 계정 전체 공유",
+      "공식 지원 앱 전체 목록은 공식 문서에 없음 [확인 필요]",
+      "앱 카드 안에서 편집까지 되는지 공식 문서로 확인 못함 [확인 필요]",
+      "연결 앱 쪽 요금·권한 제한은 Grok Bot이 바꿀 수 없음 — 각 서비스 요금제 따름"
+    ],
+    "safety": [
+      "꼭 필요한 앱만 연결 — 연결 앱은 내 모든 Bot이 함께 씀 (공식 문서 기준)",
+      "비밀번호·인증 코드는 채팅에 붙여 넣지 않고 보안 비밀 입력창(secure secret request)에만 입력",
+      "보내기·게시·삭제·구매·권한 변경은 승인 카드에서 Allow once·Always allow·Deny 중 신중히 선택, 외부 메일은 Auto-review 'Ask first' 규칙 권장",
+      "금융·투자 앱(QuickBooks 등) 연결은 실습에서 하지 않음",
+      "수강생 명단·성적 등 개인정보가 든 Notion 페이지·Canva 폴더는 연결하지 않음",
+      "다 쓴 연결은 제거 + 원래 서비스 설정에서 권한(authorization) 회수"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① Connect Apps로 연결한 Notion(또는 Canva) + ② @로 붙여 만든 '특강 준비 체크리스트' Notion 페이지(또는 Canva 안내 포스터 초안)와 대화 속 앱 카드 + ③ 추천받은 Bot 템플릿 링크 1개 + ④ 앱 연결 점검표. 비포(앱 따로 열어 복사·붙여 넣기 20분)가 애프터(요청 1번 + 카드 확인)로 바뀜",
+    "follow": [
+      {
+        "title": "버전 확인 + Connect Apps 열기",
+        "minutes": 5,
+        "do": "Grok Bot 데스크톱 앱 실행 → 앱 버전 0.70.2 이상 확인 → 사이드바 'Connect apps' 열기 → 검색 아래 카테고리 칩·Recommended for you 살펴보기",
+        "prompt": "",
+        "expect": "Connect Apps 화면(카테고리 칩·추천 목록)",
+        "note": "[확인 필요: 버전 표시 위치] 자동 업데이트 기본 켜짐(v0.65.0)"
+      },
+      {
+        "title": "앱 찾아 Add·로그인",
+        "minutes": 8,
+        "do": "검색창에 'Notion'(또는 'Canva') 입력 → Add → 브라우저 창에서 실습용 계정으로 로그인·허용 → Connect Apps에 연결 표시 확인",
+        "prompt": "",
+        "expect": "Notion(또는 Canva) 연결 완료 표시",
+        "note": "재로그인이 필요한 카드는 Authorize 버튼 표시(v0.67.0)"
+      },
+      {
+        "title": "@로 붙여 작업 맡기기",
+        "minutes": 8,
+        "do": "Bot 대화창에서 @ 입력 → Notion 선택 → 아래 프롬프트 입력",
+        "prompt": "@Notion 에 '가을 AI 특강 준비' 페이지를 새로 만들고 아래 할 일을 체크리스트로 넣어 줘. 메모에 없는 날짜는 지어내지 말아 줘.\n\n- 강의실 예약 확인\n- 안내 포스터 만들기\n- 신청자 명단 양식 만들기(빈 양식)\n- 노트북 5대 충전\n- 당일 출석부 출력",
+        "expect": "대화 속 Notion 앱 카드 + Notion에 체크리스트 페이지 생성",
+        "note": "Canva로 할 경우 '@Canva 로 이 할 일 목록을 A4 안내 포스터 초안으로 만들어 줘' 요청"
+      },
+      {
+        "title": "앱 카드로 결과 확인",
+        "minutes": 5,
+        "do": "대화 속 앱 카드에서 페이지 제목·항목 5개 확인 → Notion에서도 열어 실제 생성 여부 대조",
+        "prompt": "",
+        "expect": "카드 내용 = Notion 페이지 내용 확인",
+        "note": "카드가 안 나오면 글 답변 + 링크로 표시될 수 있음 [확인 필요]"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 일로 바꿔 다시 맡기기",
+        "minutes": 8,
+        "do": "내 실제 업무(개인정보 없는 것) 할 일 3~5개로 같은 방식 요청 → 앱 카드 확인",
+        "prompt": "@Notion 에 '(내 업무 이름) 준비' 페이지를 만들고 아래 할 일을 체크리스트로 넣어 줘. 끝나면 페이지 링크도 알려 줘.\n\n- (할 일 1)\n- (할 일 2)\n- (할 일 3)",
+        "expect": "내 업무 체크리스트 페이지 + 앱 카드",
+        "note": "개인정보·내부 자료는 넣지 않음"
+      },
+      {
+        "title": "Bot 템플릿 추천받기",
+        "minutes": 6,
+        "do": "내가 반복하는 일을 설명 → Bot이 링크한 템플릿 이름·설명 확인 (추가는 선택)",
+        "prompt": "나는 평생교육 강사야. 매주 강좌 안내 자료를 만들고 수강생 문의 메일에 답하는 일이 많아. 이런 일에 맞는 Bot 템플릿이 있으면 찾아서 링크해 줘. 어떤 일을 해 주는지도 한 줄씩 알려 줘.",
+        "expect": "맞는 Bot 템플릿 링크 1개 이상 + 한 줄 설명",
+        "note": "공개 템플릿 목록은 x.ai/bot/marketplace에서도 확인 가능"
+      },
+      {
+        "title": "앱 연결 점검표 + 해제 연습",
+        "minutes": 10,
+        "do": "점검표 4칸 작성(연결 앱·쓰는 Bot·위험한 행동·해제 방법) → 실습용 연결 제거 → Notion(또는 Canva) 설정에서 연결 권한 회수",
+        "prompt": "지금 내 계정에 연결된 앱 목록을 알려 주고, 각 앱으로 네가 할 수 있는 일과 내 승인이 필요한 일을 표로 정리해 줘.",
+        "expect": "연결 앱 표 + 작성한 점검표 + 연결 해제 완료",
+        "note": "[확인 필요: Connect Apps의 제거 버튼 위치] 공식 문서 기준 해제 = 커넥터 제거 + 원래 서비스에서 권한 회수"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "Canva도 연결해 같은 체크리스트로 A4 안내 포스터 초안을 만들고 앱 카드로 확인하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Notion 페이지 링크를 주고 '이 페이지 할 일 중 안 끝난 것을 매주 월요일 아침 요약해 줘' 루틴 만들기(Test run으로 확인)"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Settings → General → Auto-review에 'Notion 페이지 삭제 전 Ask first' 규칙을 넣고 삭제 요청 시 승인 카드가 뜨는지 확인하기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 점검표를 바꿔 보며 '이 앱, 정말 연결이 필요한가?' 한 가지씩 질문해 주기 진행",
+    "quiz": [
+      {
+        "q": "Grok Bot 변경 기록(v0.67.0) 기준, Marketplace는 어떤 이름으로 바뀌었나요?",
+        "options": [
+          "App Store",
+          "Connect Apps",
+          "Plugin Hub",
+          "Skills"
+        ],
+        "answer": 1,
+        "explain": "v0.67.0: Marketplace가 Connect Apps로 바뀌고 카테고리 칩·Recommended for you 추가"
+      },
+      {
+        "q": "Figma·Notion·Canva처럼 앱이 딸린 커넥터의 결과는 대화에서 어떻게 보이나요?",
+        "options": [
+          "음성으로만 읽어 줌",
+          "대화 속 인터랙티브 카드",
+          "X 게시물",
+          "메일로만 전송"
+        ],
+        "answer": 1,
+        "explain": "v0.70.2: 앱이 딸린 커넥터는 대화 속 인터랙티브 카드로 표시 가능"
+      },
+      {
+        "q": "공식 문서 기준, 설치한 커넥터의 사용 범위는?",
+        "options": [
+          "설치한 Bot 하나만",
+          "계정 전체(내 모든 Bot)",
+          "오늘 하루만",
+          "팀 관리자만"
+        ],
+        "answer": 1,
+        "explain": "설치한 커넥터는 계정 전체 범위 — 꼭 필요한 앱만 연결해야 하는 이유"
+      }
+    ],
+    "next": [
+      "Grok Bot 루틴(Routines)으로 연결 앱 작업 예약하기",
+      "Grok Bot 슬라이드 덱·Bot 메일 주소 교안(AI-2026-10-CAT03-018)",
+      "Grok 자동화(Automations) 교안(AI-2026-10-CAT08-010)으로 grok.com 쪽 예약 작업 비교"
+    ],
+    "rubric": [
+      {
+        "criterion": "앱 연결",
+        "high": "Connect Apps에서 Add·로그인 + 연결 표시 확인",
+        "mid": "연결 완료, 확인 없음",
+        "low": "연결 실패"
+      },
+      {
+        "criterion": "@ 작업·앱 카드",
+        "high": "@로 결과물 생성 + 앱 카드와 실제 앱 대조",
+        "mid": "결과물 생성, 대조 없음",
+        "low": "결과물 없음"
+      },
+      {
+        "criterion": "보안 점검",
+        "high": "점검표 4칸 + 연결 해제·권한 회수까지",
+        "mid": "점검표만 작성",
+        "low": "점검 없음"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 할 일 메모 5줄이 Notion 체크리스트 + 대화 속 앱 카드로 바뀌는 시연 먼저 보여 주기",
+        "note": "비포/애프터"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 기능 정의, 타임라인, 커넥터 vs 브라우저 비교, 앱 카드·템플릿 추천, 계정 전체 공유 구조, 요금제, 안전",
+        "note": "10-16 보도 내용은 [확인 필요]로 안내"
+      },
+      {
+        "time": "35~61분",
+        "content": "2부 따라 하기: 버전 확인 → Add·로그인 → @ 작업 → 앱 카드 대조",
+        "note": "로그인 막히면 Plan B"
+      },
+      {
+        "time": "61~85분",
+        "content": "2부 내 것 만들기: 내 업무로 다시 → 템플릿 추천 → 점검표·해제",
+        "note": "해제까지 꼭 진행"
+      },
+      {
+        "time": "85~95분",
+        "content": "3부 정리: 점검표 상호 질문, 퀴즈 3문제, 다음 단계",
+        "note": "전체 95분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "Bot에게 일을 시킬 때 가장 답답한 게 '그 앱에 들어가서 해 줘'였죠. 오늘은 Bot에게 앱 출입증을 발급해 주고, 결과를 대화창 안에서 바로 보는 방법을 배웁니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "커넥터는 출입증입니다. 출입증이 있으면 Bot이 화면을 하나하나 누르지 않고 바로 들어가 일합니다. 그런데 이 출입증은 제 모든 Bot이 같이 씁니다. 그래서 꼭 필요한 곳만 발급합니다."
+      },
+      {
+        "label": "보안 안내",
+        "text": "비밀번호는 채팅창에 절대 쓰지 마세요. 보안 입력창이 따로 뜹니다. 그리고 오늘 실습이 끝나면 연결을 꼭 해제하고, Notion 설정에서도 권한을 회수해 보겠습니다."
+      },
+      {
+        "label": "마무리",
+        "text": "앱을 많이 연결할수록 Bot은 똑똑해지지만 위험도 커집니다. 오늘 만든 점검표로 한 달에 한 번 내 연결 앱을 정리해 보세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Connect Apps에 Notion·Canva가 안 보이거나 로그인 실패",
+        "response": "앱 버전 확인(0.70.2 이상) 후 재시작, 그래도 안 되면 다른 앱(Google Drive 등)으로 바꾸거나 강사 시연 관찰"
+      },
+      {
+        "situation": "앱 카드가 대화에 나오지 않음",
+        "response": "순차 제공일 수 있음 [미검증] — 결과 링크로 실제 앱에서 확인하는 방식으로 진행"
+      },
+      {
+        "situation": "수강생이 Grok Bot 포함 요금제가 없음",
+        "response": "짝 실습(요금제 있는 1명 화면 공유) 또는 강사 시연 관찰 + 점검표 작성 역할 맡기기"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Add를 눌렀는데 브라우저 로그인 창이 안 뜸",
+        "fix": "팝업 차단 해제 후 다시 Add, 재로그인 필요한 카드는 Authorize 버튼 선택(v0.67.0)"
+      },
+      {
+        "issue": "@를 입력해도 Notion이 목록에 없음",
+        "fix": "Connect Apps에서 연결 상태 다시 확인, 앱 재시작 후 재시도"
+      },
+      {
+        "issue": "Bot이 커넥터 대신 브라우저로 사이트를 열어 작업함",
+        "fix": "'@Notion 커넥터로 해 줘'처럼 커넥터를 명시해 재요청"
+      },
+      {
+        "issue": "Notion 페이지가 엉뚱한 위치(워크스페이스)에 생김",
+        "fix": "'(페이지 이름) 아래에 만들어 줘'처럼 위치 지정, 실습용 새 계정 사용 권장"
+      },
+      {
+        "issue": "연결 해제 후에도 Bot이 앱 이름을 기억함",
+        "fix": "정상 — 메모리·대화 기록은 남을 수 있음, 원래 서비스에서 권한 회수했는지 확인"
+      }
+    ],
+    "faq": [
+      {
+        "q": "어떤 앱을 연결할 수 있나요?",
+        "a": "공식 변경 기록에 Figma·Notion·Canva(앱 카드), QuickBooks Online, Google 계정, GitHub, 1Password, Slack, Outlook 등 언급. 전체 목록은 Connect Apps 화면에서 확인 [확인 필요]"
+      },
+      {
+        "q": "Bot마다 다른 앱을 연결할 수 있나요?",
+        "a": "공식 문서 기준 설치한 커넥터는 계정 전체 범위 — Bot별로 나누는 설정 설명 없음"
+      },
+      {
+        "q": "커넥터와 브라우저 작업은 뭐가 다른가요?",
+        "a": "커넥터는 서비스와 정해진 방식으로 바로 작업(공식 권장), 브라우저는 커넥터가 없거나 화면 작업이 필요할 때 사용"
+      },
+      {
+        "q": "연결하면 Bot이 제 허락 없이 글을 지우거나 보낼 수 있나요?",
+        "a": "보내기·게시·삭제·권한 변경 등은 승인 카드(Allow once·Always allow·Deny)로 확인, Auto-review에 'Ask first' 규칙 추가 가능"
+      },
+      {
+        "q": "연결을 끊으려면?",
+        "a": "Connect Apps에서 커넥터 제거 + 원래 서비스(Notion 등) 설정에서 권한 회수(공식 문서 기준)"
+      },
+      {
+        "q": "Robinhood·X Chat 연결도 되나요?",
+        "a": "2026-10-16 보도(iPhone in Canada) 기준 추가, 공식 변경 기록에는 아직 없음 [확인 필요]. 금융 앱은 실습에서 연결하지 않음"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "Notion 1개 연결 + @ 체크리스트 1개 + 해제까지, 템플릿 추천은 강사 시연 관찰"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "Notion·Canva 2개 연결 + 템플릿 추천 + 루틴 만들기(도전 ⭐⭐)"
+      },
+      {
+        "level": "시니어",
+        "guide": "강사가 미리 준비한 실습 계정으로 Add·로그인만 따라 하기, 앱 카드 확인 + 점검표 읽기 연습"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "'~에 연결해 주세요' '~(으)로 만들어 주세요' '~을/를 지워 주세요' 요청 표현 연습, 쉬운 한국어 체크리스트 만들기"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지는 '연결은 최소로, 끝나면 회수' — 해제 실습이 수업의 마무리",
+      "Claude 커넥터·ChatGPT 앱(Apps)·Genspark SecondBrain 교안과 묶어 'AI에 내 앱 연결하기 비교' 과정 설계 가능",
+      "커넥터 vs 브라우저 비교는 에이전트 작동 원리를 설명하는 좋은 소재",
+      "평생교육·소상공인 수강생은 Notion·Canva 사용 비율이 높아 체감 효과가 큼"
+    ],
+    "day_before": [
+      "시연 계정 Grok Bot 앱 0.70.2 이상 업데이트 확인",
+      "Connect Apps 화면(카테고리 칩·Recommended for you)·Add·로그인 화면 캡처 준비",
+      "Notion·Canva 앱 카드가 실제로 대화에 뜨는지 확인 후 캡처",
+      "커넥터 제거 버튼 위치·Notion 권한 회수 경로 실제 확인",
+      "실습용 Notion·Canva 새 계정 안내문 준비",
+      "수강생 요금제 보유 현황 파악 → 짝 실습 편성"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Connect Apps 지원 앱 전체 목록·커넥터 제거 버튼 위치",
+    "[확인 필요] 앱 카드 안에서 가능한 조작(보기만 / 편집) 범위",
+    "[확인 필요] 2026-10-16 보도된 새 커넥터(Robinhood·Coinbase·Trello 등)·팀 통합 등록·X Chat 연결 — 공식 변경 기록 미반영(2026-10-18 확인)",
+    "[미검증] 앱 카드·템플릿 추천은 v0.70.2 변경 기록 기준, 모든 사용자에게 바로 보이지 않을 수 있음",
+    "[실험 기능] Grok Bot은 베타 표기(Introducing Grok Bot 기준)",
+    "출시일 2026-10-02는 Connect Apps 개편(v0.67.0) 기준, 앱 카드·템플릿 추천·자동 설치는 v0.70.2(2026-10-11)",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — xAI 공식 변경 기록·문서 기준"
+  ],
+  "sources": [
+    {
+      "title": "xAI – Grok Bot Changelog (v0.67.0 2026-10-02 Connect Apps · v0.70.2 2026-10-11 앱 카드·템플릿 추천)",
+      "url": "https://x.ai/changelog/bot",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "xAI Docs – Grok Bot: Use the computer and apps",
+      "url": "https://docs.x.ai/grok-bot/computer-and-apps",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "xAI Docs – Grok Bot: Get started",
+      "url": "https://docs.x.ai/grok-bot/get-started",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "xAI Docs – Approvals, security, and privacy",
+      "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "xAI – Grok Bot Marketplace (Bot templates)",
+      "url": "https://x.ai/bot/marketplace",
+      "checked": "2026-10-18"
+    },
+    {
+      "title": "xAI Docs – The X Subscription Pricing",
+      "url": "https://docs.x.ai/x-subscription/pricing",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "(보조 근거) iPhone in Canada – Grok Bot Gets Major Update With New Features and X Chat Support (2026-10-17)",
+      "url": "https://www.iphoneincanada.ca/2026/10/17/grok-bot-major-update/",
+      "checked": "2026-10-18"
+    }
+  ]
+}
