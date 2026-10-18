@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 135,
+  "count": 136,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-019",
+      "version": "v1.0",
+      "created_at": "2026-10-19 06:40 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Notion 맞춤 에이전트(Custom Agents)로 매주 금요일 팀 업무 현황 보고서를 자동으로 써 주는 AI 팀원을 만들고, 회의가 끝나면 할 일을 표에 정리하게 할 수 있음",
+      "summary": "Notion Custom Agents — ① 사이드바 Agents > + 에서 말로 설명해 에이전트 만들기 + ② 예약(매일·매주)·Notion 이벤트(페이지 추가·속성 변경·댓글·AI 회의록 완료)·Slack 트리거 + ③ 지시문·접근 권한(Tools and access)·모델 지정 + ④ Run 테스트·Activity 실행 기록·버전 기록 복원 + ⑤ 2026-09-15 하위 에이전트(sub-agents)·회의 후 자동 실행·문서 안 삽입, Business·Enterprise + Notion 크레딧",
+      "tool": "Notion",
+      "feature": "맞춤 에이전트(Custom Agents) — 백그라운드에서 트리거·일정대로 일하는 공유 AI 에이전트: ① 사이드바 Agents > + (AI 채팅으로 만들기·템플릿·Create blank) ② 트리거: 예약(일·주·월·년, 시간대)·Notion 이벤트(댓글 추가·DB에 페이지 추가·속성 변경·페이지 제거·AI 회의록 완료)·Slack(채널 메시지·이모지·멘션) ③ Settings 지시문(Instructions)·도구와 접근(Tools and access)·웹 접근·모델(Auto 권장) ④ Chat 탭 테스트·Run·Activity 실행 기록·Insights CSV·버전 기록 복원 ⑤ Share 권한(Full Access·Can Edit·Can View and Interact) ⑥ 2026-09-15 Notion 3.7 하위 에이전트(sub-agents)·회의 후 자동 실행·문서 안 삽입(Embed), Business·Enterprise, 2026-05-04부터 Notion 크레딧($10/1,000 크레딧) 사용",
+      "company": "Notion Labs",
+      "type": "update",
+      "released": "2026-02-24",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-PUB",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 금요일 오후 5시 예약 '주간 보고 에이전트' 1개 + ② Run으로 만든 첫 주간 보고서 페이지 1개 + ③ 지시문 3칸(할 일·자료·금지 규칙) 정리본 + ④ 접근 권한 점검표(보기·편집 구분) + ⑤ (선택) 회의 끝나면 할 일을 '팀 작업' 표에 넣는 두 번째 에이전트",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🤖",
+      "one_liner": "정해진 때 알아서 일하는 Notion AI 팀원"
+    },
     {
       "id": "AI-2026-10-CAT03-026",
       "version": "v1.0",

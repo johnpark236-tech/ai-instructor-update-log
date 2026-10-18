@@ -1,7 +1,37 @@
 {
-  "updated_at": "2026-10-19 04:25 KST",
+  "updated_at": "2026-10-19 06:40 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "notion-2026-09-15-custom-agents-subagents",
+      "date": "2026-09-15",
+      "tool": "Notion",
+      "company": "Notion Labs",
+      "type": "update",
+      "title": "Notion 3.7 — 맞춤 에이전트 하위 에이전트·회의 후 자동 실행",
+      "summary": "맞춤 에이전트가 다른 에이전트를 하위 에이전트로 호출, 회의 요약이 끝나면 자동 실행, 문서 안 에이전트 삽입, 속도·지능·비용 표시 모델 선택 화면 (Business·Enterprise)",
+      "source": {
+        "title": "Notion Releases – Notion 3.7 (2026-09-15)",
+        "url": "https://www.notion.com/releases/2026-09-15"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT08-019"
+    },
+    {
+      "id": "notion-2026-02-24-custom-agents",
+      "date": "2026-02-24",
+      "tool": "Notion",
+      "company": "Notion Labs",
+      "type": "update",
+      "title": "맞춤 에이전트(Custom Agents) 공개 베타",
+      "summary": "트리거·일정에 따라 Notion·Slack·메일·캘린더 등에서 반복 업무를 스스로 처리하는 공유 AI 에이전트, Business·Enterprise 공개 베타(2026-05-03까지 무료, 2026-05-04부터 Notion 크레딧)",
+      "source": {
+        "title": "Notion Blog – Introducing Custom Agents",
+        "url": "https://www.notion.com/blog/introducing-custom-agents"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT08-019"
+    },
     {
       "id": "grok-2026-07-24-google-workspace-addon",
       "date": "2026-07-24",
