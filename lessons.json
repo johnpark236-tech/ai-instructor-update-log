@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 120,
+  "count": 121,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-019",
+      "version": "v1.0",
+      "created_at": "2026-10-18 15:03 KST",
+      "checked": "2026-10-18",
+      "review_by": "2027-01-18",
+      "title": "Runway DaVinci Resolve 플러그인으로 편집 타임라인을 떠나지 않고 B-roll 만들기·장면 스타일 바꾸기",
+      "summary": "Runway DaVinci Resolve 플러그인은 편집 프로그램 DaVinci Resolve Studio(19 이상) 안의 패널에서 Runway 이미지·영상 생성, Edit Studio(Aleph 2 장면 다시 그리기), 배경 제거, 업스케일을 바로 쓰는 공식 플러그인. 결과는 Import 한 번으로 미디어 풀(Media Pool)·타임라인 끝에 들어감. 2026-09-23 출시, 플러그인 무료 설치, 생성은 Standard 이상 유료 요금제 크레딧 차감. macOS·Windows 지원, 무료판 Resolve·Linux 미지원",
+      "tool": "Runway",
+      "feature": "DaVinci Resolve 플러그인(Runway Plugin for DaVinci Resolve) — Resolve Studio 19 이상 Workspace > Workflow Integrations > Runway 패널: ① 이미지·영상 생성 ② Edit Studio(Aleph 2, 재생 헤드·In/Out 구간 다시 그리기, 키프레임 최대 5개, 비포/애프터) ③ Video-to-video·배경 제거·업스케일 ④ Generations 피드·Import(미디어 풀·타임라인 끝), 유료 요금제 크레딧",
+      "company": "Runway",
+      "type": "update",
+      "released": "2026-09-23",
+      "categories": [
+        "CAT-05",
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-BIZ",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① Runway로 만든 B-roll 영상 1개 + 타이틀 카드 이미지 1장 + ② Edit Studio로 스타일을 바꾼 장면 1개(비포/애프터) + ③ 세 가지를 넣어 Resolve에서 완성한 30초 홍보 영상 1개",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎬",
+      "one_liner": "편집 화면 안에서 바로 AI 장면 생성"
+    },
     {
       "id": "AI-2026-10-CAT06-011",
       "version": "v1.0",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 14:10 KST",
+  "updated_at": "2026-10-18 15:03 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -1374,13 +1374,13 @@
       "company": "Runway",
       "type": "update",
       "title": "DaVinci Resolve 플러그인",
-      "summary": "편집 프로그램 DaVinci Resolve 안에서 Runway 생성 도구를 바로 쓰는 플러그인 (유료 요금제)",
+      "summary": "편집 프로그램 DaVinci Resolve Studio(19 이상) 안의 패널에서 Runway 이미지·영상 생성, Edit Studio(Aleph 2 장면 다시 그리기), 배경 제거, 업스케일을 쓰고 Import로 타임라인에 넣는 플러그인 (플러그인 무료, 생성은 유료 요금제 크레딧)",
       "source": {
-        "title": "Runway 체인지로그",
-        "url": "https://runway.com/ko/changelog"
+        "title": "Runway Help – Using the Runway Plugin in DaVinci Resolve",
+        "url": "https://help.runwayml.com/hc/en-us/articles/55546439725715-Using-the-Runway-Plugin-in-DaVinci-Resolve"
       },
-      "checked": "2026-10-10",
-      "lesson_id": null
+      "checked": "2026-10-18",
+      "lesson_id": "AI-2026-10-CAT05-019"
     },
     {
       "id": "midjourney-2026-09-23-korean-ui",
