@@ -3496,6 +3496,21 @@
       },
       "checked": "2026-10-20",
       "lesson_id": "AI-2026-10-CAT08-028"
+    },
+    {
+      "id": "grok-2026-09-21-grok-4-7",
+      "date": "2026-09-21",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok 4.7 — Grok 최신 주력 모델",
+      "summary": "코딩·지식 업무용 최신 주력 모델, 더 큰 기반 모델·긴 강화 학습, 스스로 점검·문서·발표 작성 향상, Cursor·Grok Build 즉시 제공, Grok API 입력 $2·출력 $6(100만 토큰, 4.6과 같은 가격), 대화 창 50만 토큰",
+      "source": {
+        "title": "xAI News – Introducing Grok 4.7",
+        "url": "https://x.ai/news/grok-4-7"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT01-013"
     }
   ]
 }

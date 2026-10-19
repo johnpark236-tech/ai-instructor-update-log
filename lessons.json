@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 157,
+  "count": 158,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT01-013",
+      "version": "v1.0",
+      "created_at": "2026-10-20 04:20 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "Grok 4.7로 자료 1개를 '한 장 브리핑 + 발표 개요'로 — 스스로 점검(Self-check) 요청과 노력 수준(Effort) 비교로 내 업무용 모델 고르기 카드 만들기",
+      "summary": "Grok 4.7은 xAI(SpaceXAI)가 2026-09-21 공개한 Grok 최신 주력 모델. 코딩·지식 업무용, 어려운 일을 더 오래 붙잡고 자기 작업을 더 꼼꼼히 점검, 문서·발표 자료 작성 향상(공식 발표). Grok Build(무료 체험)·Cursor·Grok API(대화 창 50만 토큰, 입력 100만 토큰당 $2·출력 $6)에서 사용. 공개 자료 1개를 한 장 브리핑 + 발표 개요로 만들고, 스스로 점검 요청·노력 수준 비교로 내 업무용 모델 선택 카드를 만듦",
+      "tool": "Grok",
+      "feature": "Grok 4.7 — Grok 최신 주력 모델(코딩·지식 업무, 스스로 점검·문서·발표 작성 향상), Grok Build·Cursor·Grok API(grok-4.7, 대화 창 50만 토큰, reasoning_effort), Grok 앱 적용 [확인 필요]",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-09-21",
+      "categories": [
+        "CAT-01",
+        "CAT-03",
+        "CAT-07"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-DEV",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 자료 1개를 정리한 한 장 브리핑(핵심 3줄 + 표 1개) + ② 5장짜리 발표 개요 + ③ Grok 4.7 스스로 점검표(근거 확인·빠진 점) + ④ 내 업무 3가지용 '모델·노력 수준 선택 카드' 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧠",
+      "one_liner": "더 오래 생각하고 스스로 점검하는 Grok"
+    },
     {
       "id": "AI-2026-10-CAT08-028",
       "version": "v1.0",
