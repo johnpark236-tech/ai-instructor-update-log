@@ -3,6 +3,21 @@
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
+      "id": "genspark-2025-08-12-ai-meeting-notes",
+      "date": "2025-08-12",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "AI Meeting Notes — 녹음 한 번으로 회의록·대본",
+      "summary": "Apple Watch·iOS·Android(현재 웹 포함) 녹음 → 회의록·전체 대본, Google·Outlook 캘린더 연결 후 Meeting Bot이 Zoom·Meet·Teams 등 자동 참석, 참석자 메일·Google Docs·PDF·Notion 공유",
+      "source": {
+        "title": "Genspark Blog – Introducing Genspark AI Meeting Notes",
+        "url": "https://www.genspark.ai/blog/genspark-ai-meeting-notes"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT03-030"
+    },
+    {
       "id": "genspark-2025-07-02-ai-docs",
       "date": "2025-07-02",
       "tool": "Genspark",

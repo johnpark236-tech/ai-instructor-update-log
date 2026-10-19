@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 150,
+  "count": 151,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-030",
+      "version": "v1.0",
+      "created_at": "2026-10-19 21:00 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Genspark AI Meeting Notes(AI 회의록)로 대면 회의 녹음 → 자동 회의록·전체 대본 + 회의 내용 질문(Chat) + 캘린더 연결 Meeting Bot 자동 참석 + Google Docs·PDF·Notion 내보내기로 '회의록 1개 + 할 일 목록 1개 + 공유 파일'을 완성할 수 있음",
+      "summary": "Genspark AI Meeting Notes — ① 웹(genspark.ai/meetingnotes/home)·iOS·Android·Apple Watch에서 + New로 녹음 → End로 회의록 생성 + ② 회의록·전체 대본(언어 자동 감지, 섞인 언어 포함) + ③ 녹음 중 직접 적은 메모를 요약 맥락으로 활용 + ④ Chat으로 회의 내용 질문 + ⑤ Google·Outlook 캘린더 연결 → Meeting Bot이 Zoom·Google Meet·Teams·Webex·GoToMeeting 자동 참석 + ⑥ 참석자 메일·링크·Google Docs·PDF·Notion으로 공유 + ⑦ 녹음 분 단위 크레딧 차감, Plus·Pro는 하루 24시간 포함",
+      "tool": "Genspark",
+      "feature": "AI Meeting Notes(AI 회의록, Meeting Bot 포함) — ① 웹 genspark.ai/meetingnotes/home·앱 AI Meeting Notes, 설정은 Settings → AI Meeting Notes ② 녹음 방법: + New → End(기기 마이크만, 시스템 소리 미지원)·Apple Watch(watchOS 10.0 이상, iPhone·웹 동기화)·오디오 가져오기(모바일·웹)·Meeting Bot(온라인 회의) ③ 결과: 회의록(클릭해 편집, 실행 취소·버전 기록 없음) + 전체 대본(편집 불가, 한 번에 복사·키워드 검색) ④ 녹음 중 적은 Live notes를 요약 맥락으로 사용 ⑤ Chat으로 회의 질문(회의록 덮어쓰지 않음) ⑥ 대본 언어 자동 감지(섞인 언어 포함), Notes Language로 회의록 언어 지정 ⑦ Connect Calendar(Google·Outlook) → Coming up(앞으로 3일, 비공개 일정 제외) → Auto-join 켜면 Meeting Bot이 Zoom·Google Meet·Microsoft Teams·Webex·GoToMeeting 참석, 봇 이름 변경(50자) ⑧ 공유: Share with X participants 메일·Auto-Share·링크(Anyone with the link·이메일 초대)·Google Docs·PDF·Notion·채팅으로 메일 발송 ⑨ 원본 음성 파일 제공 안 함 ⑩ 실제 녹음 분 단위 크레딧 차감, Plus·Pro는 하루(UTC) 24시간까지 포함",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2025-08-12",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 3~5분 역할극 회의 녹음으로 만든 회의록 1개 + ② 전체 대본 + ③ Chat으로 뽑은 '담당자·마감일 할 일 목록' 1개 + ④ Google Docs·PDF·공유 링크 중 1개로 내보낸 결과",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "녹음 한 번으로 회의록·대본 완성"
+    },
     {
       "id": "AI-2026-10-CAT03-029",
       "version": "v1.0",

@@ -1,0 +1,572 @@
+{
+  "id": "AI-2026-10-CAT03-030",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-19 21:00 KST",
+  "checked": "2026-10-19",
+  "review_by": "2027-01-19",
+  "title": "Genspark AI Meeting Notes(AI 회의록)로 대면 회의 녹음 → 자동 회의록·전체 대본 + 회의 내용 질문(Chat) + 캘린더 연결 Meeting Bot 자동 참석 + Google Docs·PDF·Notion 내보내기로 '회의록 1개 + 할 일 목록 1개 + 공유 파일'을 완성할 수 있음",
+  "summary": "Genspark AI Meeting Notes — ① 웹(genspark.ai/meetingnotes/home)·iOS·Android·Apple Watch에서 + New로 녹음 → End로 회의록 생성 + ② 회의록·전체 대본(언어 자동 감지, 섞인 언어 포함) + ③ 녹음 중 직접 적은 메모를 요약 맥락으로 활용 + ④ Chat으로 회의 내용 질문 + ⑤ Google·Outlook 캘린더 연결 → Meeting Bot이 Zoom·Google Meet·Teams·Webex·GoToMeeting 자동 참석 + ⑥ 참석자 메일·링크·Google Docs·PDF·Notion으로 공유 + ⑦ 녹음 분 단위 크레딧 차감, Plus·Pro는 하루 24시간 포함",
+  "glance": {
+    "emoji": "🎙️",
+    "one_liner": "녹음 한 번으로 회의록·대본 완성",
+    "cards": [
+      {
+        "icon": "⏺️",
+        "title": "버튼 하나 녹음",
+        "text": "웹·휴대폰·Apple Watch"
+      },
+      {
+        "icon": "📝",
+        "title": "회의록+대본",
+        "text": "요약 회의록과 전체 대본 생성"
+      },
+      {
+        "icon": "🤖",
+        "title": "Meeting Bot",
+        "text": "Zoom·Meet·Teams 자동 참석"
+      },
+      {
+        "icon": "📤",
+        "title": "바로 공유",
+        "text": "참석자 메일·Docs·PDF·Notion"
+      }
+    ],
+    "diagram": {
+      "title": "AI Meeting Notes 흐름",
+      "nodes": [
+        {
+          "icon": "⏺️",
+          "label": "+ New 녹음"
+        },
+        {
+          "icon": "🗣️",
+          "label": "대본 변환"
+        },
+        {
+          "icon": "📝",
+          "label": "회의록 생성"
+        },
+        {
+          "icon": "💬",
+          "label": "Chat 질문"
+        },
+        {
+          "icon": "📤",
+          "label": "공유·내보내기"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "쓰기 전",
+        "text": "회의 중 받아 적느라 대화 놓침, 끝나고 정리·메일 30분"
+      },
+      "after": {
+        "label": "쓴 뒤",
+        "text": "녹음만 켜고 대화 집중, 끝나면 회의록·할 일 받아 바로 공유"
+      }
+    },
+    "cautions": [
+      "녹음 전 참석자 모두 동의",
+      "원본 음성 저장 안 됨, 대본 확인",
+      "자동 공유 켜기 전 범위 확인"
+    ]
+  },
+  "tool": "Genspark",
+  "feature": "AI Meeting Notes(AI 회의록, Meeting Bot 포함) — ① 웹 genspark.ai/meetingnotes/home·앱 AI Meeting Notes, 설정은 Settings → AI Meeting Notes ② 녹음 방법: + New → End(기기 마이크만, 시스템 소리 미지원)·Apple Watch(watchOS 10.0 이상, iPhone·웹 동기화)·오디오 가져오기(모바일·웹)·Meeting Bot(온라인 회의) ③ 결과: 회의록(클릭해 편집, 실행 취소·버전 기록 없음) + 전체 대본(편집 불가, 한 번에 복사·키워드 검색) ④ 녹음 중 적은 Live notes를 요약 맥락으로 사용 ⑤ Chat으로 회의 질문(회의록 덮어쓰지 않음) ⑥ 대본 언어 자동 감지(섞인 언어 포함), Notes Language로 회의록 언어 지정 ⑦ Connect Calendar(Google·Outlook) → Coming up(앞으로 3일, 비공개 일정 제외) → Auto-join 켜면 Meeting Bot이 Zoom·Google Meet·Microsoft Teams·Webex·GoToMeeting 참석, 봇 이름 변경(50자) ⑧ 공유: Share with X participants 메일·Auto-Share·링크(Anyone with the link·이메일 초대)·Google Docs·PDF·Notion·채팅으로 메일 발송 ⑨ 원본 음성 파일 제공 안 함 ⑩ 실제 녹음 분 단위 크레딧 차감, Plus·Pro는 하루(UTC) 24시간까지 포함",
+  "company": "Genspark (MainFunc)",
+  "type": "update",
+  "released": "2025-08-12",
+  "categories": [
+    "CAT-03",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-BIZ",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Genspark 계정(무료 가능, 하루 100크레딧) — 녹음은 실제 녹음 분 단위 크레딧 차감, Plus·Pro는 하루 24시간까지 포함",
+    "PC 웹 브라우저(genspark.ai/meetingnotes/home) + 마이크 또는 휴대폰 Genspark 앱(iOS·Android)",
+    "실습용 짧은 회의 대본 1개(강사 제공, 3~5분 분량, 실제 이름·개인정보 없음) — 짝과 역할극으로 읽기",
+    "선택: Google 또는 Outlook 캘린더 계정(Meeting Bot 시연용), Notion 계정(내보내기용)"
+  ],
+  "outcome": "① 3~5분 역할극 회의 녹음으로 만든 회의록 1개 + ② 전체 대본 + ③ Chat으로 뽑은 '담당자·마감일 할 일 목록' 1개 + ④ Google Docs·PDF·공유 링크 중 1개로 내보낸 결과",
+  "objectives": [
+    "Genspark AI Meeting Notes의 녹음 방법 4가지(+ New·Apple Watch·오디오 가져오기·Meeting Bot)와 결과물(회의록·전체 대본)의 차이를 설명할 수 있음",
+    "대면 회의를 녹음해 회의록을 만들고 Live notes·Chat·회의록 직접 편집으로 원하는 할 일 목록까지 정리할 수 있음",
+    "참석자 동의·자동 공유 범위·원본 음성 미보관 원칙을 지키며 Google Docs·PDF·링크로 회의록을 공유할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "AI Meeting Notes 전용 요금 없음. 라이브 녹음·Meeting Bot·업로드 녹음 모두 실제 녹음 분 단위 크레딧 차감. Plus·Pro는 하루(UTC) 24시간까지 회의 받아쓰기·AI 요약 포함. 무료는 하루 100크레딧(평생 한도까지)에서 차감. Plus 월 $24.99·Pro 월 $249.99·Team 좌석당 월 $40",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "하루 100크레딧(평생 무료 한도까지) — 녹음 분 단위 크레딧 차감, 요금 페이지 무료 혜택에 회의록 포함 표기 없음"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $24.99 (연 결제 시 월 $19.99)",
+        "features": "월 10,000크레딧부터 + 회의 받아쓰기·AI 요약 하루 24시간까지 포함"
+      },
+      {
+        "name": "Pro",
+        "price": "월 $249.99 (연 결제 시 월 $199.99)",
+        "features": "월 125,000크레딧부터 + 회의 받아쓰기·AI 요약 하루 24시간까지 포함"
+      },
+      {
+        "name": "Team",
+        "price": "좌석당 월 $40 (연 결제 시 $35)",
+        "features": "좌석당 월 10,000크레딧 — 회의록 포함 범위 요금 페이지 표기 없음 [확인 필요]"
+      },
+      {
+        "name": "Enterprise",
+        "price": "",
+        "features": "맞춤 계약, 좌석당 20,000크레딧부터 (금액 비공개)"
+      }
+    ],
+    "note": "요금은 Genspark 도움말 'Membership Plans' 미국 달러 기준(2026-10-19 확인). AI Meeting Notes 도움말: 라이브·Meeting Bot·업로드 녹음 모두 실제 오디오 분 단위 과금, 유료 요금제는 하루(UTC) 24시간 무료, 캘린더·자동 참석·Meeting Bot은 크레딧이 충분해야 동작. 분당 크레딧 양·원화 가격 [확인 필요]",
+    "checked": "2026-10-19",
+    "sources": [
+      {
+        "title": "Genspark Help Center – AI Meeting Notes",
+        "url": "https://www.genspark.ai/helpcenter/ai-meeting-notes"
+      },
+      {
+        "title": "Genspark Help Center – Membership Plans",
+        "url": "https://www.genspark.ai/helpcenter/membership-plans"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-08-12",
+      "text": "Genspark AI Meeting Notes 공개 — Apple Watch 두 번 탭 녹음·iOS·Android 앱, Google·Outlook 캘린더 연결 후 회의 눌러 녹음, 참석자에게 몇 분 안에 공유(Genspark 블로그)"
+    },
+    {
+      "date": "2026-04-08",
+      "text": "AI Workspace 4.0 — 캘린더 연결 시 Meeting Bot이 예정된 회의에 자동 참석·메모·종료 후 참석자에게 요약 발송 소개(Genspark 블로그)"
+    },
+    {
+      "date": "2026-07-20",
+      "text": "AI Workspace 6.0 — SecondBrain에 AI Meeting Notes 자동 저장, Super Agent가 회의 맥락 활용(AI-2026-10-CAT08-015 참고)"
+    },
+    {
+      "date": "2026-10-19",
+      "text": "교안 기준 확인 — 도움말 기준 웹 버전·녹음 4가지·Meeting Bot 지원 회의 5종·Auto-join·Auto-Share·Google Docs·PDF·Notion 내보내기·원본 음성 미제공·분 단위 과금으로 작성"
+    }
+  ],
+  "theory": {
+    "definition": "회의를 녹음하면 대본으로 바꾸고 핵심을 뽑아 회의록을 만들어 주는 Genspark의 회의 기록 도구임. 대면 회의는 기기 마이크로, 온라인 회의는 Meeting Bot이 대신 참석해 기록함",
+    "analogy": "회의실 구석에 앉아 받아 적고, 끝나면 정리본을 참석자에게 돌리는 '전담 서기'를 두는 것과 같음. Meeting Bot은 그 서기가 온라인 회의에 대신 들어가는 것",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Genspark AI Meeting Notes",
+        "휴대폰 기본 녹음 앱",
+        "손으로 받아 적기"
+      ],
+      "rows": [
+        [
+          "결과",
+          "회의록 + 전체 대본",
+          "음성 파일(일부 기기 받아쓰기)",
+          "내 메모"
+        ],
+        [
+          "온라인 회의",
+          "Meeting Bot 자동 참석",
+          "스피커 소리 녹음",
+          "직접 참석·기록"
+        ],
+        [
+          "후속 질문",
+          "Chat으로 회의 내용 질문",
+          "다시 듣기",
+          "기억에 의존"
+        ],
+        [
+          "공유",
+          "참석자 메일·링크·Docs·PDF·Notion",
+          "파일 전송",
+          "다시 타이핑"
+        ],
+        [
+          "원본 음성",
+          "제공 안 함(대본·회의록만)",
+          "보관",
+          "없음"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "녹음 4가지 길",
+        "body": "① 기기 마이크: 웹·앱에서 + New → 녹음 → End로 회의록 생성(시스템 소리는 녹음 안 됨) ② Apple Watch: 시계에서 시작·종료, iPhone·웹과 동기화(watchOS 10.0 이상) ③ 오디오 가져오기: 모바일·웹에서 녹음 파일 업로드 ④ Meeting Bot: 온라인 회의에 AI가 참석해 녹음·회의록 생성. 업로드 50% 넘을 때까지 앱 닫지 않기"
+      },
+      {
+        "title": "회의록·대본·Chat",
+        "body": "① 회의록: 클릭해 직접 편집 가능, 실행 취소·버전 기록 없음 ② 전체 대본: 편집 불가, 한 번에 복사·키워드 검색 후 해당 위치로 이동 ③ Live notes: 녹음 중 적은 메모가 요약 맥락으로 쓰임 ④ Chat: 회의 내용 질문, 답이 회의록을 덮어쓰지 않음 ⑤ 언어: 대본은 자동 감지(섞인 언어 포함), 회의록 언어는 Notes Language에서 고정 가능(기본 Auto detect)"
+      },
+      {
+        "title": "캘린더·Meeting Bot·공유",
+        "body": "① 홈 Connect Calendar로 Google·Outlook 연결 → Coming up에 앞으로 3일 공개 일정 표시(비공개 일정 제외) ② Settings → AI Meeting Notes → Meeting Bot의 Auto-join 켜기 → 회의 링크 있는 초대만 참석(Zoom·Google Meet·Teams·Webex·GoToMeeting) ③ 봇 표시 이름 변경(최대 50자, 기본 Genspark Meeting Bot) ④ 공유: Participants → Share with X participants 메일, Auto-Share(끝나자마자 메일), 링크 권한, Google Docs·PDF·Notion 내보내기"
+      }
+    ],
+    "can": [
+      "대면 회의·강의·상담을 녹음해 회의록과 전체 대본 받기",
+      "한국어·영어가 섞인 회의도 대본 언어 자동 감지",
+      "회의 내용에 질문해 할 일·결정 사항·담당자 뽑기",
+      "캘린더 연결 후 Meeting Bot을 온라인 회의에 자동 참석시키기",
+      "참석자 메일·링크·Google Docs·PDF·Notion으로 회의록 공유",
+      "Apple Watch로 버튼 한 번 녹음 시작"
+    ],
+    "cannot": [
+      "원본 음성 파일 내려받기(대본·회의록만 제공)",
+      "전체 대본 직접 고치기(회의록만 편집 가능)",
+      "회의록 편집 실행 취소·버전 되돌리기",
+      "웹 녹음에서 PC 시스템 소리(스피커 소리) 녹음 → 온라인 회의는 Meeting Bot 사용",
+      "비공개 캘린더 일정·회의 링크 없는 초대에 Meeting Bot 참석",
+      "여러 회의를 하나로 묶은 통합 요약"
+    ],
+    "safety": [
+      "녹음 전 참석자 모두에게 녹음·AI 회의록 사용을 알리고 동의 받기 — Meeting Bot도 참가자 목록에 이름이 보이므로 회의 시작 때 안내",
+      "Auto-Share는 회의가 끝나자마자 참석자 전원에게 메일 발송 → 외부인이 포함된 회의는 끄고 내용 확인 후 수동 공유",
+      "원본 음성이 남지 않음 → 중요한 숫자·이름·결정은 회의 직후 대본과 대조해 회의록 수정",
+      "상담·인사·의료·학생 성적처럼 민감한 회의는 녹음하지 않거나 기관 규정 먼저 확인",
+      "공유 링크는 Anyone with the link 대신 필요한 사람만 이메일 초대 우선, 필요 없어진 회의는 ⋯ → Delete로 삭제"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① 3~5분 역할극 회의 녹음으로 만든 회의록 + ② 전체 대본 + ③ Chat으로 뽑은 담당자·마감일 할 일 목록 + ④ Google Docs·PDF·링크 중 1개 내보내기. 비포(받아 적고 정리 30분)가 애프터(녹음 + 바로 공유)로 바뀜",
+    "follow": [
+      {
+        "title": "AI Meeting Notes 열기",
+        "minutes": 3,
+        "do": "PC 브라우저에서 genspark.ai/meetingnotes/home 접속·로그인(또는 휴대폰 Genspark 앱 → AI Meeting Notes) → 브라우저 마이크 권한 허용",
+        "prompt": "",
+        "expect": "AI Meeting Notes 홈 화면(+ New 버튼, Connect Calendar)",
+        "note": "앱 메뉴 위치는 도움말 기준 [확인 필요]. 웹에서는 마이크 선택이 맞는지 먼저 확인"
+      },
+      {
+        "title": "역할극 회의 녹음",
+        "minutes": 8,
+        "do": "+ New → 녹음 시작 → 파형이 움직이는지 확인 → 짝과 강사 제공 회의 대본 읽기(3~5분) → 녹음 중 Live notes에 '결정: 행사 날짜' 같은 메모 1줄 입력 → End",
+        "prompt": "",
+        "expect": "업로드 진행 표시 → 몇 분 뒤 회의록 + 전체 대본",
+        "note": "파형이 평평하면 브라우저 설정에서 마이크 변경. 업로드 50% 넘기 전 창·앱 닫지 않기. 녹음 분 단위 크레딧 차감"
+      },
+      {
+        "title": "회의록·대본 확인",
+        "minutes": 6,
+        "do": "회의록 읽기 → 전체 대본에서 키워드(예: '마감') 검색 → 대본과 다른 숫자·이름 찾아 회의록 영역 클릭해 직접 수정",
+        "prompt": "",
+        "expect": "대본과 대조해 고친 회의록",
+        "note": "회의록 편집은 실행 취소·버전 기록 없음 → 크게 고치기 전 내용 복사해 두기"
+      },
+      {
+        "title": "Chat으로 할 일 뽑기",
+        "minutes": 6,
+        "do": "회의 화면 Chat 입력창에 아래 프롬프트 입력",
+        "prompt": "이 회의에서 정해진 할 일을 표로 정리해 줘. 열: 할 일, 담당자, 마감일, 대본 속 근거 문장. 대본에 없는 내용은 지어내지 말고 '정해지지 않음'으로 적어 줘. 한국어로 답해 줘.",
+        "expect": "할 일 · 담당자 · 마감일 · 근거 문장 표",
+        "note": "Chat 답은 회의록을 덮어쓰지 않음 → 필요하면 복사해 회의록에 붙여 넣기"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 회의 형식으로 다시 정리",
+        "minutes": 10,
+        "do": "내가 실제로 쓰는 회의록 양식을 Chat에 요청",
+        "prompt": "이 회의 내용을 아래 형식으로 다시 정리해 줘.\n[회의명] ○○\n[일시·참석자] 대본 기준\n[결정 사항] 번호 목록\n[할 일] 담당자·마감일 포함\n[다음 회의 안건] 3개 이내\n[하지 말 것] 대본에 없는 내용 추가 금지\n[언어] 한국어",
+        "expect": "우리 기관 양식에 맞춘 회의록",
+        "note": "참석자 실명은 역할극에서는 가명 사용"
+      },
+      {
+        "title": "외국어 섞인 회의 시험",
+        "minutes": 6,
+        "do": "짝과 한국어·영어(또는 모국어)를 섞어 1~2분 짧게 녹음 → 대본 언어 감지 확인 → Settings → AI Meeting Notes의 Notes Language를 한국어로 지정 후 결과 비교",
+        "prompt": "",
+        "expect": "섞인 언어 대본 + 한국어 회의록",
+        "note": "Auto detect는 대본의 주 언어로 회의록 작성 → 한국어 회의록이 필요하면 언어 고정. 한국어 지원 세부 [확인 필요]"
+      },
+      {
+        "title": "내보내기·공유",
+        "minutes": 4,
+        "do": "회의록 화면에서 Google Docs 또는 PDF로 내보내기 → 열어서 확인 → 필요하면 공유 설정에서 짝 이메일만 초대",
+        "prompt": "",
+        "expect": "Google Docs 문서 또는 PDF 파일 1개(또는 이메일 초대 공유)",
+        "note": "Google Docs 권한은 앱이 만든 파일에만 적용. Notion은 설치·연결된 경우 한 번에 저장"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "휴대폰 기본 녹음 앱 파일을 오디오 가져오기로 올려 회의록 만들고, 직접 녹음한 결과와 대본 정확도(틀린 단어 수) 비교하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Google Calendar 연결 → 회의 링크 있는 테스트 일정(Google Meet) 만들기 → Coming up에서 Meeting Bot 수동 시작 → 봇 표시 이름을 '○○ 기록 봇'으로 바꿔 참석 화면 확인하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Auto-join·Auto-Share 켠 상태와 끈 상태의 차이를 정리한 '우리 기관 AI 회의록 사용 규칙'(동의 안내 문구·공유 범위·삭제 주기) 1장 만들기 + 회의 1건당 크레딧 사용량 기록 [확인 필요]"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "짝과 회의록을 바꿔 보고 '대본과 다른 숫자·이름, 지어낸 할 일, 동의 안내 여부' 3가지 체크 진행",
+    "quiz": [
+      {
+        "q": "Zoom·Google Meet 같은 온라인 회의를 기록하려면 무엇을 쓰는 것이 맞나요?",
+        "options": [
+          "웹에서 + New로 PC 스피커 소리를 녹음한다",
+          "캘린더를 연결하고 Meeting Bot을 참석시킨다",
+          "Notion으로 내보낸다",
+          "Apple Watch를 두 번 탭한다"
+        ],
+        "answer": 1,
+        "explain": "기기 마이크 녹음은 시스템 소리를 녹음하지 않음 → 온라인 회의는 Meeting Bot(Zoom·Meet·Teams·Webex·GoToMeeting) 사용"
+      },
+      {
+        "q": "AI Meeting Notes에서 받을 수 없는 것은?",
+        "options": [
+          "회의록",
+          "전체 대본",
+          "원본 음성 파일",
+          "PDF로 내보낸 회의록"
+        ],
+        "answer": 2,
+        "explain": "Genspark는 원본 오디오를 저장·제공하지 않음. 대본과 회의록만 제공"
+      },
+      {
+        "q": "회의가 끝나자마자 참석자 전원에게 회의록이 메일로 가는 설정은?",
+        "options": [
+          "Auto-Share",
+          "Notes Language",
+          "Live notes",
+          "Coming up"
+        ],
+        "answer": 0,
+        "explain": "Settings → AI Meeting Notes의 Auto-Share를 켜면 회의 종료 즉시 참석자에게 메일 발송 → 외부인 회의는 주의"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "녹음 품질",
+        "high": "마이크 파형 확인 + Live notes 메모 + 업로드 완료까지 대기",
+        "mid": "녹음은 됐으나 메모 없음",
+        "low": "마이크 미확인으로 빈 녹음"
+      },
+      {
+        "criterion": "회의록 정리",
+        "high": "대본과 대조해 수정 + Chat으로 담당자·마감일 할 일 표 + 내 양식 재정리",
+        "mid": "자동 회의록 그대로 사용",
+        "low": "회의록 확인 없이 공유"
+      },
+      {
+        "criterion": "동의·공유 안전",
+        "high": "녹음 동의 안내 + 공유 범위 이메일 초대 + Auto-Share 판단",
+        "mid": "일부만 지킴",
+        "low": "동의 없이 녹음 또는 전체 공개 링크"
+      }
+    ],
+    "next": [
+      "Genspark SecondBrain — 회의·메일·파일 맥락 모으기 (AI-2026-10-CAT08-015)",
+      "Genspark Speakly 받아쓰기·실시간 번역 (AI-2026-10-CAT05-021)",
+      "Genspark AI Docs — 회의록을 디자인 문서로 (AI-2026-10-CAT03-028)",
+      "Genspark GenMail — 회의 후속 메일 정리 (AI-2026-10-CAT03-019)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 손으로 받아 적은 회의 메모와 AI Meeting Notes 회의록 나란히 보여 주기",
+        "note": "비포/애프터"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 정의, 녹음 4가지 길, 회의록·대본·Chat 차이, 캘린더·Meeting Bot·Auto-join, 공유·내보내기, 요금·크레딧, 녹음 동의·원본 음성 미보관",
+        "note": "동의 안내 문구 먼저 강조"
+      },
+      {
+        "time": "35~58분",
+        "content": "2부 따라 하기: 열기 → 역할극 회의 녹음 → 회의록·대본 확인 → Chat으로 할 일 뽑기",
+        "note": "대본 인쇄물 배포, 조별 녹음 공간 분리"
+      },
+      {
+        "time": "58~78분",
+        "content": "2부 내 것 만들기: 내 양식으로 재정리 → 섞인 언어 회의 시험 → 내보내기·공유",
+        "note": "Meeting Bot은 강사 시연"
+      },
+      {
+        "time": "78~88분",
+        "content": "3부 정리: 짝 상호 체크, 퀴즈 3문제, 다음 단계",
+        "note": "전체 88분 + 여유 2분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "왼쪽은 제가 회의 내내 받아 적은 메모고, 오른쪽은 녹음 버튼만 누르고 대화에만 집중한 뒤 받은 회의록입니다. 오늘은 회의록을 만들고, 틀린 곳을 대본으로 확인하고, 할 일까지 뽑아서 공유하는 방법을 배웁니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "결과는 두 가지입니다. 요약된 회의록은 고칠 수 있고, 전체 대본은 고칠 수 없는 원본 기록이에요. 그런데 녹음 파일 자체는 남지 않으니까, 중요한 숫자는 회의 직후에 대본이랑 꼭 맞춰 보세요."
+      },
+      {
+        "label": "보안 안내",
+        "text": "녹음 버튼을 누르기 전에 '오늘 회의는 AI 회의록으로 기록합니다'라고 먼저 말해 주세요. 외부 손님이 있는 회의에서는 자동 공유를 꺼 두고, 확인한 뒤에 필요한 분께만 보내세요."
+      },
+      {
+        "label": "마무리",
+        "text": "AI 서기는 받아 적는 일을 대신해 주지만, 무엇이 결정됐는지 책임지는 건 여전히 우리입니다. 회의록을 보내기 전에 담당자와 마감일이 맞는지 한 번만 더 확인하세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "무료 크레딧 부족으로 녹음·회의록 생성 실패",
+        "response": "녹음 길이를 1~2분으로 줄이거나 짝 계정으로 진행, 강사가 미리 만든 회의록 공유 링크로 Chat·내보내기 실습"
+      },
+      {
+        "situation": "교실이 시끄러워 대본 품질이 낮음",
+        "response": "조별로 복도·빈 교실로 이동하거나 휴대폰을 말하는 사람 가까이 두기, 미리 녹음한 오디오 파일을 가져오기로 업로드"
+      },
+      {
+        "situation": "회의록 생성이 오래 걸림",
+        "response": "앱을 다시 열어 재시도 또는 웹에서 Resume, 기다리는 동안 대본 키워드 검색·동의 안내 문구 작성 활동 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "웹에서 녹음했는데 소리가 없음",
+        "fix": "녹음 시작 후 파형 확인 → 평평하면 브라우저 설정에서 마이크 변경 후 다시 녹음"
+      },
+      {
+        "issue": "Meeting Bot이 회의에 들어오지 않음",
+        "fix": "캘린더 연결·Auto-join 켜짐·초대에 회의 링크 있음·크레딧 충분 여부 확인 → 캘린더 다시 연결"
+      },
+      {
+        "issue": "Coming up 목록이 사라지고 자동 참석이 멈춤",
+        "fix": "캘린더 인증 만료(특히 Outlook) → Disconnect 후 다시 Connect"
+      },
+      {
+        "issue": "회의록이 영어로 나옴",
+        "fix": "Settings → AI Meeting Notes → Notes Language를 한국어로 지정(Auto detect는 대본 주 언어 따라감)"
+      },
+      {
+        "issue": "업로드가 멈추거나 실패함",
+        "fix": "네트워크 확인, 업로드 50% 넘을 때까지 앱 열어 두기, 다시 열어 재시도 또는 웹 Resume"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 계정으로도 쓸 수 있나요?",
+        "a": "녹음은 실제 녹음 분 단위 크레딧 차감 방식 → 무료 하루 100크레딧 안에서 짧게 체험 가능. 분당 크레딧 양 [확인 필요]. Plus·Pro는 하루 24시간까지 포함"
+      },
+      {
+        "q": "녹음 파일을 다시 들을 수 있나요?",
+        "a": "불가. Genspark는 원본 음성을 저장·제공하지 않음, 대본과 회의록만 남음"
+      },
+      {
+        "q": "Zoom 회의를 PC로 녹음하면 되나요?",
+        "a": "기기 마이크만 녹음되고 시스템 소리는 미지원 → 캘린더 연결 후 Meeting Bot 사용"
+      },
+      {
+        "q": "Meeting Bot은 언제 나가나요?",
+        "a": "다른 사람이 모두 나간 뒤 60초, 15분 동안 아무도 안 들어오면, 대기실 18분 미입장, 봇만 남고 약 30분 뒤 자동 퇴장. 더 빨리 내보내려면 회의 앱에서 제거"
+      },
+      {
+        "q": "대본에 틀린 단어가 있으면 고칠 수 있나요?",
+        "a": "대본은 편집 불가, 회의록은 클릭해 편집 가능 → 틀린 부분은 회의록에서 바로잡기"
+      },
+      {
+        "q": "회의 여러 개를 한 번에 요약할 수 있나요?",
+        "a": "회의마다 별도 회의록만 제공, 통합 요약 없음. 여러 회의 맥락 활용은 SecondBrain·Super Agent 쪽 기능 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "강사 대본으로 2~3분 녹음 → 회의록 읽기 → PDF 내보내기까지만"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "역할극 녹음 + 대본 대조 수정 + Chat 할 일 표 + 내 기관 양식 재정리 + Google Docs 내보내기"
+      },
+      {
+        "level": "고급(자동화·개발)",
+        "guide": "캘린더 연결·Auto-join·봇 이름 설정, Auto-Share 정책 설계, Notion 저장 흐름, SecondBrain과 연결한 주간 회의 요약"
+      },
+      {
+        "level": "시니어",
+        "guide": "가족 모임·동아리 회의를 휴대폰 앱으로 녹음 → '정해진 일만 3줄로' Chat 요청, 글자 크게 보기"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "한국어 수업·상담 대화 역할극을 녹음해 대본을 받아쓰기 교재로 활용, Notes Language를 모국어로 바꿔 한국어 대본과 비교 [확인 필요]"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: '녹음 전 동의' + '대본으로 대조' + '자동 공유는 신중히'",
+      "원본 음성이 남지 않는다는 점을 먼저 알려 주면 '나중에 다시 들으면 된다'는 오해 예방",
+      "온라인 회의는 Meeting Bot, 대면 회의는 + New라는 구분을 표 한 장으로 정리하면 질문 감소",
+      "Speakly·SecondBrain·GenMail과 묶어 '회의 → 기록 → 후속 메일' 연속 수업으로 확장 가능"
+    ],
+    "day_before": [
+      "강사 계정으로 웹 genspark.ai/meetingnotes/home 진입·+ New 녹음·회의록·대본·Chat·내보내기 화면 캡처 준비",
+      "3~5분 역할극 회의 대본(가명·숫자·마감일 포함) 인쇄·배포 준비",
+      "무료 계정으로 3분 녹음 → 크레딧 사용량·회의록 생성 시간 측정 [확인 필요 항목]",
+      "Meeting Bot 시연용 테스트 Google Meet 일정(회의 링크 포함)·캘린더 연결 사전 점검",
+      "교실 소음 대비 녹음 공간·미리 녹음한 오디오 파일 준비, 녹음 동의 안내 문구 판서"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 분당 크레딧 사용량·무료 계정 사용 가능 범위 — 도움말은 '분 단위 과금'만 표기, 요금 페이지 무료 혜택에 회의록 표기 없음",
+    "[확인 필요] 앱 메뉴 위치와 Live notes·Chat·내보내기 버튼 이름 — 도움말 표기 기준, 실제 화면 재현 못 함",
+    "[확인 필요] 한국어 대본·회의록 품질 — 도움말은 '주요 언어 모두 지원'만 표기",
+    "[확인 필요] Team·Enterprise 요금제의 하루 24시간 포함 여부 — 요금 페이지는 Plus·Pro만 표기",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — Genspark 도움말(AI Meeting Notes·Membership Plans)·공식 블로그 기준"
+  ],
+  "sources": [
+    {
+      "title": "Genspark Help Center – AI Meeting Notes",
+      "url": "https://www.genspark.ai/helpcenter/ai-meeting-notes",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Genspark Blog – Introducing Genspark AI Meeting Notes",
+      "url": "https://www.genspark.ai/blog/genspark-ai-meeting-notes",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Genspark Blog – Introducing Genspark AI Workspace 4.0",
+      "url": "https://www.genspark.ai/blog/genspark-ai-workspace-4",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Genspark Help Center – Membership Plans",
+      "url": "https://www.genspark.ai/helpcenter/membership-plans",
+      "checked": "2026-10-19"
+    }
+  ]
+}
