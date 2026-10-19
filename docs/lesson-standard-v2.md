@@ -211,3 +211,14 @@
   - 그래서 결과물·요약·예시는 **항목마다 ①② 또는 ` + ` 로 구분**해 작성
 - 목록·표·카드·단계·주의·출처 등 모든 묶음에 항목 번호 + 제목 옆 개수 배지(예: `기능·혜택 4개`)
 - 따옴표·괄호 안(예시 문장, 문법 표현 `-아/어 주세요`, 대화 예문)은 문체 변환에서도 원문 유지
+
+## 11. 신규 AI / 기존 AI 구분 기준 (v2.3, 2026-10-19)
+
+| 구분 | 기준 | 예 |
+|---|---|---|
+| 🆕 신규 AI (`new`) | **새로 등장한 AI 브랜드·서비스** — 그 회사·브랜드의 첫 AI 제품, 처음 공개된 AI | 새 스타트업의 첫 AI 서비스 출시 |
+| 🔄 기존 AI (`update`) | **이미 있는 AI 회사가 자기 AI로 만든 새 기능·새 모델·새 도구** — 별도 사이트·앱·이름으로 나와도 기존 AI | Google Deep Review(Gemini 기반), SynthID Detector, Genspark GenMail·GenOffice, Meta Muse, Gemini agent |
+
+- 판단 질문: "이 회사·브랜드가 이미 AI 서비스를 하고 있나?" → 예 = 기존 AI
+- 새 모델(예: 새 버전 모델)도 기존 회사 것이면 기존 AI
+- 사이트 AI 필터는 회사 기준으로 묶음 (Google 도구 → Gemini, OpenAI → ChatGPT, Anthropic → Claude, Microsoft → Copilot, xAI → Grok)

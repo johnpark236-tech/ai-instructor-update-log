@@ -76,7 +76,7 @@
   "tool": "Genspark",
   "feature": "GenMail(젠메일) — AI 메일·캘린더 앱: Gmail·Outlook·IMAP(NAVER·Daum·Kakao 메일 등) 최대 20개 계정 연결, GenMail Agent 받은편지함 자동 분류·요약, AI Write 내 말투 답장 초안(Simplify·Professional·Friendly), 스킬(Morning Brief·Catch Me Up·Plan My Week 등), Email Brain 프로필 Fix, 예약 발송·발송 취소, 통합 캘린더",
   "company": "Genspark (MainFunc)",
-  "type": "new",
+  "type": "update",
   "released": "2026-07-20",
   "categories": [
     "CAT-03",

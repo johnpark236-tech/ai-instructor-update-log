@@ -66,7 +66,15 @@ window.LESSON_META = {
   },
   // 목록 필터용 AI 묶음 — 회사명 없이 AI 이름만. Gmail·Meet·Workspace 의 AI 기능은 Gemini 로 동작하므로 Gemini 에 포함
   brand(L) {
-    const t = String(L.tool || '');
+    const t = String(L.tool || ''), c = String(L.company || '');
+    // 회사 기준 우선: 기존 AI 회사가 만든 새 도구는 그 회사 AI 로 묶음 (예: Google Deep Review → Gemini)
+    if (/^Google/i.test(c)) return 'Gemini';
+    if (/^OpenAI/i.test(c)) return 'ChatGPT';
+    if (/^Anthropic/i.test(c)) return 'Claude';
+    if (/^Microsoft/i.test(c)) return 'Copilot';
+    if (/^xAI/i.test(c)) return 'Grok';
+    if (/^Genspark/i.test(c)) return 'Genspark';
+    if (/^Meta\b/i.test(c)) return 'Meta AI';
     if (/ChatGPT|Codex|Sora/i.test(t)) return 'ChatGPT';
     if (/Claude/i.test(t)) return 'Claude';
     if (/Gemini|NotebookLM|Gmail|Google (Meet|Workspace|Docs|Sheets|Slides|Drive)|Veo|Imagen/i.test(t)) return 'Gemini';

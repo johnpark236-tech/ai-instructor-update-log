@@ -76,7 +76,7 @@
   "tool": "Genspark",
   "feature": "GenOffice(젠오피스) — 무료 오픈소스 AI 오피스 데스크톱 앱(Docs·Sheets·Slides·PDF·HTML·Markdown), PDF→Word·Excel·PowerPoint 로컬 변환, 블록 단위 AI 수정·스냅샷·차이 보기, Genspark 크레딧 또는 BYOK",
   "company": "Genspark (MainFunc)",
-  "type": "new",
+  "type": "update",
   "released": "2026-08-03",
   "categories": [
     "CAT-03",
