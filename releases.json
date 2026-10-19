@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-19 22:10 KST",
+  "updated_at": "2026-10-20 00:15 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-05-06-connectors",
+      "date": "2026-05-06",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok 커넥터 — Gmail·Calendar·Drive·Outlook·Notion·GitHub 연결",
+      "summary": "웹·iOS·Android Grok에서 SharePoint·Outlook·OneDrive·Google Workspace·Notion·GitHub·Linear·Custom MCP 연결, 질문할 때 Grok이 메일·일정·파일을 실시간으로 읽고 권한 허용 시 초안·일정·문서 작성, 모든 Grok 사용자 대상(공식 문서)",
+      "source": {
+        "title": "xAI News – Connectors in web, iOS, and Android",
+        "url": "https://x.ai/news/grok-connectors"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT03-031"
+    },
     {
       "id": "grok-2026-10-11-bot-payments-approvals",
       "date": "2026-10-11",

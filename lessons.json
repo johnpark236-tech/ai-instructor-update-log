@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 153,
+  "count": 154,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-031",
+      "version": "v1.0",
+      "created_at": "2026-10-20 00:15 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "내 메일·일정·드라이브를 읽고 강의 준비 브리핑 문서 만들기 — Grok 커넥터(Connectors: Gmail·Google Calendar·Google Drive)",
+      "summary": "2026-05-06 xAI가 Grok 웹·iOS·Android에 커넥터(Connectors) 공개. Gmail·Google Calendar·Google Drive·Outlook·OneDrive·SharePoint·Notion·GitHub 등을 연결하면 복사·붙여 넣기 없이 Grok이 내 메일·일정·파일을 실시간으로 읽고 정리함. 공식 문서 기준 모든 Grok 사용자 이용 가능, 쓰기(초안·일정 만들기·Drive 문서 생성) 권한은 선택. 연결한 데이터는 모델 학습에 쓰지 않음(공식 문서)",
+      "tool": "Grok",
+      "feature": "커넥터(Connectors) — grok.com·iOS·Android에서 외부 앱 연결: ① 기본 커넥터(Gmail·Google Calendar·Google Drive·Outlook 메일·일정·OneDrive·SharePoint·Microsoft Teams·Salesforce) ② 카탈로그 커넥터(Box·Canva·Gamma·GitHub·Linear·Meltwater·Notion·S&P Global·Vercel) ③ Custom MCP(공개 인터넷 MCP 서버 주소) ④ grok.com/connectors → New Connector → 서비스 선택 → OAuth 로그인, 모바일은 Settings → Connectors ⑤ 질문이 서비스와 관련되면 Grok이 자동으로 커넥터 도구 사용 ⑥ Gmail 검색 연산자·메일 읽기·초안, 쓰기 권한 시 보내기·라벨 정리 ⑦ Calendar 일정 검색·빈 시간(free/busy)·RSVP, 쓰기 권한 시 일정 만들기·수정 ⑧ Drive 검색·읽기·폴더, 쓰기 권한 시 새 Google 문서·결과물 저장 ⑨ Disconnect 즉시 회수, 학습 미사용·저장 안 함(공식 문서) ⑩ Business·Enterprise는 관리자가 콘솔에서 먼저 허용",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-05-06",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 연결한 커넥터 3개(Gmail·Google Calendar·Google Drive) + ② 메일·일정·파일을 읽어 만든 '다음 주 강의 준비 브리핑' 1개 + ③ 브리핑을 저장한 새 Google 문서 1개(선택, 쓰기 권한) + ④ 내 커넥터 권한 점검표(연결 앱·허용 권한·해제 방법)",
+      "access": "freemium",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🔌",
+      "one_liner": "Grok이 내 메일·일정·파일을 읽고 정리"
+    },
     {
       "id": "AI-2026-10-CAT05-023",
       "version": "v1.0",

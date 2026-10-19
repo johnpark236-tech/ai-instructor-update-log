@@ -1,0 +1,576 @@
+{
+  "id": "AI-2026-10-CAT03-031",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-20 00:15 KST",
+  "checked": "2026-10-20",
+  "review_by": "2027-01-20",
+  "title": "내 메일·일정·드라이브를 읽고 강의 준비 브리핑 문서 만들기 — Grok 커넥터(Connectors: Gmail·Google Calendar·Google Drive)",
+  "summary": "2026-05-06 xAI가 Grok 웹·iOS·Android에 커넥터(Connectors) 공개. Gmail·Google Calendar·Google Drive·Outlook·OneDrive·SharePoint·Notion·GitHub 등을 연결하면 복사·붙여 넣기 없이 Grok이 내 메일·일정·파일을 실시간으로 읽고 정리함. 공식 문서 기준 모든 Grok 사용자 이용 가능, 쓰기(초안·일정 만들기·Drive 문서 생성) 권한은 선택. 연결한 데이터는 모델 학습에 쓰지 않음(공식 문서)",
+  "glance": {
+    "emoji": "🔌",
+    "one_liner": "Grok이 내 메일·일정·파일을 읽고 정리",
+    "cards": [
+      {
+        "icon": "📧",
+        "title": "Gmail 검색",
+        "text": "from:·subject: 연산자로 메일 찾기"
+      },
+      {
+        "icon": "📅",
+        "title": "일정 확인",
+        "text": "기간·키워드로 일정·빈 시간 조회"
+      },
+      {
+        "icon": "📁",
+        "title": "Drive 읽기·쓰기",
+        "text": "파일 요약 + 새 Google 문서 저장"
+      },
+      {
+        "icon": "🔓",
+        "title": "언제든 해제",
+        "text": "Disconnect 누르면 접근 즉시 회수"
+      }
+    ],
+    "diagram": {
+      "title": "커넥터 작동 흐름",
+      "nodes": [
+        {
+          "icon": "➕",
+          "label": "커넥터 추가"
+        },
+        {
+          "icon": "🔑",
+          "label": "Google 로그인"
+        },
+        {
+          "icon": "💬",
+          "label": "질문하기"
+        },
+        {
+          "icon": "🔎",
+          "label": "메일·일정 읽기"
+        },
+        {
+          "icon": "📝",
+          "label": "브리핑 정리"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "앱 오가며 복사",
+        "text": "메일·달력·드라이브를 하나씩 열어 필요한 내용을 복사해 Grok에 붙여 넣기"
+      },
+      "after": {
+        "label": "질문 한 번",
+        "text": "'다음 주 강의 준비 정리해 줘' 한 번에 메일·일정·파일을 읽어 브리핑 작성"
+      }
+    },
+    "cautions": [
+      "처음엔 읽기 권한만 허용",
+      "민감 메일은 질문 범위에서 제외",
+      "실습 후 필요 없으면 연결 해제"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "커넥터(Connectors) — grok.com·iOS·Android에서 외부 앱 연결: ① 기본 커넥터(Gmail·Google Calendar·Google Drive·Outlook 메일·일정·OneDrive·SharePoint·Microsoft Teams·Salesforce) ② 카탈로그 커넥터(Box·Canva·Gamma·GitHub·Linear·Meltwater·Notion·S&P Global·Vercel) ③ Custom MCP(공개 인터넷 MCP 서버 주소) ④ grok.com/connectors → New Connector → 서비스 선택 → OAuth 로그인, 모바일은 Settings → Connectors ⑤ 질문이 서비스와 관련되면 Grok이 자동으로 커넥터 도구 사용 ⑥ Gmail 검색 연산자·메일 읽기·초안, 쓰기 권한 시 보내기·라벨 정리 ⑦ Calendar 일정 검색·빈 시간(free/busy)·RSVP, 쓰기 권한 시 일정 만들기·수정 ⑧ Drive 검색·읽기·폴더, 쓰기 권한 시 새 Google 문서·결과물 저장 ⑨ Disconnect 즉시 회수, 학습 미사용·저장 안 함(공식 문서) ⑩ Business·Enterprise는 관리자가 콘솔에서 먼저 허용",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-05-06",
+  "categories": [
+    "CAT-03",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-BIZ",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 17,
+    "practice": 28,
+    "wrap": 5
+  },
+  "prerequisites": [
+    "Grok 계정(grok.com 로그인) — 무료 계정도 가능(공식 문서 '모든 Grok 사용자'), 사용량 제한 있음",
+    "PC 크롬 브라우저 또는 Grok iOS·Android 앱",
+    "Google 계정 1개 — 실습용 계정 권장(업무·개인 민감 메일이 적은 계정)",
+    "실습용 자료: 다음 주 일정 1~2개 + 관련 메일 1~2통 + Drive 문서 1개(강의 계획·안내문 등)",
+    "강사: 회사·기관 Google Workspace 계정은 관리자 정책으로 연결이 막힐 수 있음을 사전 확인"
+  ],
+  "outcome": "① 연결한 커넥터 3개(Gmail·Google Calendar·Google Drive) + ② 메일·일정·파일을 읽어 만든 '다음 주 강의 준비 브리핑' 1개 + ③ 브리핑을 저장한 새 Google 문서 1개(선택, 쓰기 권한) + ④ 내 커넥터 권한 점검표(연결 앱·허용 권한·해제 방법)",
+  "objectives": [
+    "Grok 커넥터가 무엇이고 파일 업로드·Grok Bot 커넥터와 무엇이 다른지 설명할 수 있음",
+    "grok.com에서 Gmail·Google Calendar·Google Drive를 연결하고 질문 한 번으로 메일·일정·파일을 묶은 브리핑을 만들 수 있음",
+    "읽기·쓰기 권한 차이를 구분하고 필요 없는 연결을 해제·회수하는 안전 수칙을 지킬 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "커넥터는 공식 문서 기준 '모든 Grok 사용자' 이용 가능 — 무료 계정도 연결 가능, 대화 횟수·사용량 제한은 요금제 따름. 2026-10-12부터 신규 가입은 The X Subscription: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200. Business·Enterprise는 관리자가 커넥터를 먼저 허용해야 사용 가능. 요금제별 커넥터 차이 [확인 필요]",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 채팅 + 커넥터 연결(공식 문서 '모든 사용자') — 하루 사용량 제한 있음"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok Chat·Voice·Imagine·Build + 주간 공유 사용량 + X 체크 표시"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "Plus 전체 + Grok Bot·최신 모델·자동화, Plus의 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "Premium 전체 + Plus의 15배 사용량, 혼잡 시 모델 우선 이용"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "Super 전체 + Plus의 50배 사용량"
+      }
+    ],
+    "note": "요금은 x.ai 공식 발표·요금 페이지 미국 달러 기준(2026-10-20 확인, 세금 별도·원화 미확인). Meltwater 커넥터는 Meltwater 유료 구독 필요(공식 문서). Teams·Enterprise는 관리자가 클라우드 콘솔에서 커넥터 제공 설정",
+    "checked": "2026-10-20",
+    "sources": [
+      {
+        "title": "xAI Docs – Grok Connectors",
+        "url": "https://docs.x.ai/grok/connectors"
+      },
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI – Pricing",
+        "url": "https://x.ai/pricing"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-06",
+      "text": "Grok 커넥터 공개(웹·iOS·Android) — SharePoint·Outlook·OneDrive·Google Workspace(Gmail·Drive·Docs·Sheets·Calendar)·Notion·GitHub·Linear·Custom MCP"
+    },
+    {
+      "date": "2026-05",
+      "text": "Microsoft Teams·Salesforce·Box 등 커넥터 추가(@grok 공식 X 게시물 보조 근거) [확인 필요]"
+    },
+    {
+      "date": "2026-07-24",
+      "text": "Grok in Google Workspace 부가기능 공개 — Docs·Sheets·Slides 옆 패널에서 커넥터로 메일·Drive 참고"
+    },
+    {
+      "date": "2026-10-10",
+      "text": "커넥터 문서 갱신 — 기본·카탈로그(Box·Canva·Gamma·Meltwater·S&P Global·Vercel 등)·Custom MCP 3종 정리"
+    }
+  ],
+  "theory": {
+    "definition": "Grok 커넥터(Connectors)는 Grok이 내가 쓰는 외부 앱·데이터에 대화 중 접근하게 하는 연결 기능임. 한 번 OAuth 로그인으로 연결하면 질문이 그 서비스와 관련될 때 Grok이 알아서 커넥터 도구를 써서 메일·일정·파일을 실시간으로 읽고, 허용하면 초안·일정·문서도 만듦",
+    "analogy": "비서에게 내 서류함·달력 열쇠를 맡기는 것과 같음 — 처음엔 '보기만' 열쇠(읽기)를 주고, 믿음이 쌓이면 '고치기' 열쇠(쓰기)를 추가, 필요 없으면 바로 열쇠 회수(Disconnect)",
+    "comparison": {
+      "headers": [
+        "구분",
+        "파일 직접 올리기",
+        "Grok 커넥터",
+        "Grok Bot 커넥터"
+      ],
+      "rows": [
+        [
+          "자료 가져오기",
+          "내가 매번 업로드",
+          "Grok이 필요할 때 검색·읽기",
+          "Bot이 자기 클라우드 컴퓨터에서 사용"
+        ],
+        [
+          "최신 상태",
+          "올린 시점 사본",
+          "실시간 읽기",
+          "실시간 읽기"
+        ],
+        [
+          "쓰기(초안·일정·문서)",
+          "불가",
+          "권한 허용 시 가능",
+          "권한·승인 카드 기반"
+        ],
+        [
+          "요금제",
+          "모든 요금제",
+          "모든 Grok 사용자(공식 문서)",
+          "Premium 월 $30부터"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "커넥터 3종",
+        "body": "① 기본(Built-in): xAI가 관리하는 Gmail·Google Calendar·Google Drive·Outlook·OneDrive·SharePoint·Teams·Salesforce ② 카탈로그(Catalog): Box·Canva·Gamma·GitHub·Linear·Notion 등 미리 설정된 외부 서비스 ③ Custom MCP: 공개 인터넷에서 접속되는 내 MCP 서버 주소 입력(내 컴퓨터 서버는 터널링 필요)"
+      },
+      {
+        "title": "읽기·쓰기 권한(scope)",
+        "body": "Gmail은 gmail.readonly(검색·읽기) 기본 + gmail.modify(초안·라벨·휴지통)·gmail.send(보내기)는 쓰기 도구 켤 때만 요청. Calendar는 calendar.readonly 기본 + calendar.events(일정 만들기·수정). Drive는 drive.readonly 기본 + drive(파일 만들기·수정, 선택)"
+      },
+      {
+        "title": "자동 사용·개인정보",
+        "body": "① 질문이 서비스와 관련되면 Grok이 커넥터를 자동 사용 ② 데이터는 질문할 때 실시간으로 읽고 보관하지 않음, 모델 학습에 쓰지 않음(공식 문서) ③ 내 Google 계정이 볼 수 있는 파일만 접근"
+      }
+    ],
+    "can": [
+      "Gmail 검색 연산자(from:·to:·subject:·newer_than:·has:attachment)로 메일 찾기·본문·첨부 읽기",
+      "메일 초안 작성(검토 후 발송), 쓰기 권한 시 보내기·답장·전달·라벨 정리",
+      "Google Calendar 기간·키워드 일정 검색, 참석자·장소 확인, 빈 시간(free/busy) 조회, RSVP",
+      "쓰기 권한 시 일정 만들기·수정·삭제",
+      "Google Drive 문서·시트·슬라이드 검색·읽기·요약, 별표·공유·수정일·폴더 필터",
+      "쓰기 권한 시 새 Google 문서 만들기·Grok 결과물을 Drive 폴더에 저장",
+      "Notion·GitHub·Linear·Canva 등 카탈로그 커넥터, 내 MCP 서버 연결"
+    ],
+    "cannot": [
+      "내 Google 계정이 볼 수 없는 파일·메일 접근",
+      "회사·기관 계정에서 관리자가 허용하지 않은 커넥터 사용(Business·Enterprise)",
+      "내 컴퓨터에서만 돌아가는 MCP 서버 바로 연결 — 터널링 서비스 필요",
+      "요금제별 커넥터 제한·사용량 공식 수치 확인 — 문서에 없음 [확인 필요]",
+      "AI가 읽은 내용이 항상 정확하다고 보장 — 날짜·이름은 원본 확인 필요"
+    ],
+    "safety": [
+      "처음에는 읽기 권한만 허용하고, 보내기·삭제 같은 쓰기 권한은 필요할 때만 켤 것",
+      "주민번호·건강·상담·인사 정보가 담긴 메일·파일은 질문 범위에서 빼고 실습용 계정 사용",
+      "Grok이 만든 메일 초안·일정은 받는 사람·날짜·시간을 직접 확인한 뒤 확정",
+      "공용 PC 실습 후 grok.com/connectors → Disconnect + myaccount.google.com/permissions 에서 접근 회수",
+      "회사·기관 계정 연결 전 소속 기관 보안 규정·관리자 허용 여부 확인"
+    ]
+  },
+  "practice": {
+    "preview": "grok.com/connectors 열기 → Google Calendar·Gmail·Google Drive 연결(읽기 권한) → 질문 1번으로 다음 주 강의 준비 브리핑 받기 → 원본과 대조 → (선택) 새 Google 문서로 저장 → 권한 점검표·연결 해제",
+    "follow": [
+      {
+        "title": "커넥터 화면 열기",
+        "minutes": 3,
+        "do": "grok.com 로그인 → 주소창에 grok.com/connectors 입력(또는 입력창 + 버튼 → Connectors) → 연결 목록 확인",
+        "prompt": "",
+        "expect": "New Connector(또는 + Add connector) 버튼과 연결 가능한 서비스 목록",
+        "note": "버튼 이름이 문서(New Connector)와 발표 글(+ Add connector)에서 다름 [확인 필요]. 모바일은 Settings → Connectors"
+      },
+      {
+        "title": "Google 3종 연결",
+        "minutes": 6,
+        "do": "New Connector → Google Calendar 선택 → Google 로그인 → 요청 권한 확인 → Allow. 같은 방법으로 Gmail·Google Drive 연결",
+        "prompt": "",
+        "expect": "연결 목록에 Google Calendar·Gmail·Google Drive 3개 표시",
+        "note": "Gmail·Calendar는 로그인·권한이 따로임(공식 문서). 권한 화면에서 '보내기·삭제' 항목이 보이면 무엇인지 메모"
+      },
+      {
+        "title": "일정·메일 읽기 시험",
+        "minutes": 5,
+        "do": "새 대화에서 아래 프롬프트 입력 → 일정·메일 목록을 원본 달력·메일함과 대조",
+        "prompt": "내 Google Calendar에서 다음 주 월요일부터 금요일까지 일정을 날짜순으로 보여 줘. 그리고 Gmail에서 최근 14일 안에 받은 메일 중 '강의' 또는 '수업'이 들어간 메일을 보낸 사람·제목·한 줄 요약으로 정리해 줘.",
+        "expect": "날짜순 일정 목록 + 메일 표(보낸 사람·제목·요약)",
+        "note": "Grok이 커넥터를 안 쓰면 '내 Gmail 커넥터로 찾아 줘'처럼 서비스 이름을 넣어 다시 요청"
+      },
+      {
+        "title": "강의 준비 브리핑",
+        "minutes": 6,
+        "do": "아래 프롬프트로 일정·메일·Drive 문서를 묶은 브리핑 요청 → 날짜·장소·이름을 원본과 대조해 틀린 곳 표시",
+        "prompt": "다음 주 내 강의 일정 1개를 골라 강의 준비 브리핑을 만들어 줘.\n1. 일정: 날짜·시간·장소(Google Calendar)\n2. 관련 메일: 담당자 요청 사항·회신이 필요한 것(Gmail)\n3. 관련 자료: Google Drive에서 강의 이름으로 찾은 문서와 핵심 내용 3줄\n4. 준비할 일 체크리스트 5개\n찾지 못한 정보는 지어내지 말고 [확인 필요]라고 표시해 줘. 각 항목 옆에 어느 메일·파일에서 가져왔는지 적어 줘.",
+        "expect": "일정 + 메일 요청 사항 + Drive 문서 요약 + 체크리스트 5개, 항목별 출처 표시",
+        "note": "브리핑은 초안 — 날짜·시간은 반드시 달력 원본으로 확인"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "Google 문서로 저장(선택)",
+        "minutes": 4,
+        "do": "Drive 쓰기 권한을 허용한 경우만 진행 → 아래 프롬프트로 브리핑을 새 Google 문서로 저장 → Drive에서 파일 열어 확인",
+        "prompt": "방금 만든 강의 준비 브리핑을 내 Google Drive에 새 Google 문서로 저장해 줘. 제목은 '강의 준비 브리핑_날짜'로 하고, 저장한 문서 링크를 알려 줘. 메일은 보내지 마.",
+        "expect": "Drive에 새 Google 문서 1개 + 링크",
+        "note": "쓰기 권한을 허용하지 않았다면 브리핑을 복사해 직접 문서에 붙여 넣기"
+      },
+      {
+        "title": "권한 점검표·연결 해제",
+        "minutes": 4,
+        "do": "grok.com/connectors 에서 연결 3개의 상태 확인 → 점검표(연결 앱·허용 권한·계속 쓸지) 작성 → 계속 안 쓸 연결은 Disconnect",
+        "prompt": "",
+        "expect": "점검표 1장 + 필요 없는 연결 해제 완료",
+        "note": "Google 쪽 회수: myaccount.google.com/permissions 에서 Grok 앱 접근 삭제"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "Gmail 검색 연산자(from:·has:attachment·newer_than:7d)를 넣은 질문 1개로 첨부 있는 메일만 찾기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Calendar 빈 시간 조회로 '다음 주 오후 중 1시간 빈 시간 3개'를 찾고 상담 안내 메일 초안 작성(보내지 않기)"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Notion 또는 GitHub 카탈로그 커넥터를 추가해 Google Drive 문서와 Notion 페이지를 비교하는 보고서 만들기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 브리핑을 바꿔 보고 ① AI가 틀린 정보 1개 + ② 출처 표시로 찾은 원본 1개 말하기",
+    "quiz": [
+      {
+        "q": "Grok에서 Gmail·Google Drive 같은 외부 앱을 연결하는 기본 주소는?",
+        "options": [
+          "grok.com/apps",
+          "grok.com/connectors",
+          "grok.com/settings/mail",
+          "x.ai/bot/marketplace"
+        ],
+        "answer": 1,
+        "explain": "grok.com/connectors → New Connector → 서비스 선택 → OAuth 로그인(공식 문서), 모바일은 Settings → Connectors"
+      },
+      {
+        "q": "Gmail 커넥터에서 항상 요청되는 기본 권한은?",
+        "options": [
+          "gmail.send(보내기)",
+          "gmail.labels(라벨 만들기)",
+          "gmail.readonly(검색·읽기)",
+          "gmail.delete(삭제)"
+        ],
+        "answer": 2,
+        "explain": "gmail.readonly 는 항상 요청, 초안·보내기·라벨 권한은 쓰기 도구를 켤 때만 요청"
+      },
+      {
+        "q": "Grok의 접근을 바로 끊는 방법으로 맞는 것은?",
+        "options": [
+          "대화 기록을 지운다",
+          "Grok 앱을 삭제한다",
+          "grok.com/connectors 에서 Disconnect를 누른다",
+          "Gmail 비밀번호만 바꾼다"
+        ],
+        "answer": 2,
+        "explain": "Disconnect 하면 접근이 즉시 회수됨, Google 계정 권한 페이지에서도 회수 가능"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "연결·권한",
+        "high": "3개 연결 + 권한 차이 설명 + 점검표 완성",
+        "mid": "연결만 완료",
+        "low": "연결 실패 또는 권한 확인 안 함"
+      },
+      {
+        "criterion": "브리핑 품질",
+        "high": "출처 표시 + 원본 대조로 오류 수정",
+        "mid": "브리핑 완성, 대조 일부",
+        "low": "결과 그대로 사용"
+      },
+      {
+        "criterion": "안전",
+        "high": "실습 계정 + 쓰기 권한 최소화 + 해제 완료",
+        "mid": "일부 준수",
+        "low": "민감 계정 연결·해제 안 함"
+      }
+    ],
+    "next": [
+      "Grok in Google Workspace로 Docs·Sheets·Slides 옆 패널 쓰기 (AI-2026-10-CAT03-025)",
+      "Grok for Outlook으로 메일함 정리·답장 초안 (AI-2026-10-CAT03-026)",
+      "Grok Bot 앱 연결(Connect Apps)·대화 속 앱 카드 (AI-2026-10-CAT08-016)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 강사 계정으로 '다음 주 강의 준비 브리핑' 결과 시연",
+        "note": "실습용 계정 화면만 공유"
+      },
+      {
+        "time": "5~17분",
+        "content": "1부 이론: 커넥터 3종, 파일 업로드·Grok Bot과 차이, 읽기·쓰기 권한, 개인정보·해제",
+        "note": "비교표·권한 표로 설명"
+      },
+      {
+        "time": "17~37분",
+        "content": "따라 하기 1~4: 커넥터 화면 → Google 3종 연결 → 일정·메일 읽기 → 브리핑",
+        "note": "로그인 막히는 수강생은 짝 화면 관찰"
+      },
+      {
+        "time": "37~45분",
+        "content": "내 것 만들기: Google 문서 저장(선택) → 권한 점검표·해제",
+        "note": "쓰기 권한은 원하는 사람만"
+      },
+      {
+        "time": "45~50분",
+        "content": "짝 공유·퀴즈·연결 해제 확인",
+        "note": "공용 PC는 해제 필수"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "이 브리핑은 제 메일, 달력, 드라이브를 Grok이 직접 읽고 만든 것입니다. 복사해서 붙여 넣은 건 하나도 없습니다. 오늘은 여러분 계정으로 이걸 만들어 보겠습니다."
+      },
+      {
+        "label": "개념",
+        "text": "커넥터는 Grok에게 내 앱의 열쇠를 맡기는 기능입니다. 처음에는 보기만 하는 열쇠, 즉 읽기 권한만 주는 것을 추천합니다."
+      },
+      {
+        "label": "권한",
+        "text": "로그인할 때 나오는 권한 화면을 꼭 읽어 보세요. 보내기나 삭제 권한은 꼭 필요할 때만 허용하면 됩니다."
+      },
+      {
+        "label": "검증",
+        "text": "AI가 정리한 날짜와 시간은 틀릴 수 있습니다. 브리핑 옆에 적힌 출처를 눌러 원본과 한 번 맞춰 보세요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 쓴 연결이 앞으로 필요 없다면 지금 Disconnect를 눌러 열쇠를 돌려받으세요. 필요할 때 다시 연결하면 됩니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "기관 Google Workspace 계정이 관리자 정책으로 연결 거부",
+        "response": "개인 Gmail 실습용 계정으로 전환, 없으면 강사 계정 화면 공유로 관찰"
+      },
+      {
+        "situation": "Grok이 커넥터를 쓰지 않고 일반 답변만 함",
+        "response": "'내 Google Calendar 커넥터로', '내 Gmail에서'처럼 서비스 이름을 프롬프트에 넣어 다시 요청"
+      },
+      {
+        "situation": "실습용 메일·일정이 없음",
+        "response": "5분 동안 직접 일정 1개·자기 자신에게 메일 1통·Drive 문서 1개 만들어 사용"
+      },
+      {
+        "situation": "grok.com 접속 장애",
+        "response": "모바일 앱 Settings → Connectors 로 진행, 그래도 안 되면 Gemini·ChatGPT 연결 앱 기능으로 같은 브리핑 실습"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "New Connector 버튼을 못 찾음",
+        "fix": "주소창에 grok.com/connectors 직접 입력, 또는 입력창 + 버튼 → Connectors → + Add connector [확인 필요]"
+      },
+      {
+        "issue": "Gmail은 됐는데 Calendar가 안 보임",
+        "fix": "Gmail·Calendar는 따로 연결·로그인 — Google Calendar 커넥터를 별도로 추가"
+      },
+      {
+        "issue": "Drive 파일을 못 찾음",
+        "fix": "파일 제목 일부·키워드를 정확히 넣고, 그 Google 계정에 파일 접근 권한이 있는지 확인"
+      },
+      {
+        "issue": "Google 문서 저장이 안 됨",
+        "fix": "Drive 쓰기(drive) 권한을 허용하지 않았을 수 있음 — 저장은 선택 단계, 복사해 직접 붙여 넣기"
+      },
+      {
+        "issue": "날짜·요일이 틀림",
+        "fix": "'한국 시간(KST) 기준'을 프롬프트에 넣고, 원본 달력과 대조해 수정"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 계정도 커넥터를 쓸 수 있나요?",
+        "a": "공식 문서에 '모든 Grok 사용자 이용 가능'으로 안내. 다만 무료는 사용량 제한이 있고 요금제별 차이는 문서에 없음 [확인 필요]"
+      },
+      {
+        "q": "Grok이 내 메일을 저장하거나 학습하나요?",
+        "a": "공식 문서 기준 Gmail·Calendar·Drive 데이터는 모델 학습에 쓰지 않고, 질문할 때 실시간으로 읽은 뒤 보관하지 않음"
+      },
+      {
+        "q": "Grok이 마음대로 메일을 보내나요?",
+        "a": "보내기는 gmail.send 권한을 허용했을 때만 가능. 실습에서는 읽기만 허용하거나 '메일은 보내지 마'를 프롬프트에 넣을 것"
+      },
+      {
+        "q": "Grok Bot 커넥터와 같은 건가요?",
+        "a": "아님. 이 교안은 grok.com 채팅의 커넥터. Grok Bot은 자기 클라우드 컴퓨터에서 Connect Apps로 따로 연결하고 Premium 월 $30부터 포함"
+      },
+      {
+        "q": "회사 계정은 왜 안 되나요?",
+        "a": "Business·Enterprise는 팀 관리자가 클라우드 콘솔에서 커넥터를 먼저 허용해야 함. 회사 Google Workspace 관리자가 외부 앱을 막았을 수도 있음"
+      },
+      {
+        "q": "네이버 메일도 연결되나요?",
+        "a": "공식 커넥터 목록에 없음. 기본·카탈로그 목록에 없는 서비스는 Custom MCP 서버가 있어야 연결 가능"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급·시니어반",
+        "guide": "Google Calendar 1개만 연결해 '이번 주 일정 정리'까지, 강사가 해제 과정 함께 진행"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 전체 + 브리핑 출처 대조 + 점검표, 도전과제 ⭐ 필수"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ — Notion·GitHub 카탈로그 커넥터 또는 Custom MCP 연결"
+      },
+      {
+        "level": "사무·공공 (JOB-OFF·JOB-PUB)",
+        "guide": "주간 회의 준비 브리핑으로 바꿔 실습, 기관 보안 규정·외부 앱 허용 여부 먼저 점검"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수강생 문의 메일 정리 + 강의 일정 + 강의 자료 요약으로 강의 전날 체크리스트 만들기, 학습자 개인정보 메일은 제외"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 커넥터 = 복사·붙여 넣기 없이 내 데이터로 일하는 통로",
+      "권한은 '읽기 먼저, 쓰기는 필요할 때' — 권한 화면 읽는 습관",
+      "브리핑에 출처(메일·파일 이름) 표시를 요청해 원본 대조",
+      "Gmail·Calendar는 따로 연결, 문서와 발표 글의 버튼 이름 차이 안내",
+      "실습 끝 Disconnect + Google 계정 권한 회수까지 마무리"
+    ],
+    "day_before": [
+      "강사 실습용 Google 계정 준비 — 다음 주 일정 2개·관련 메일 2통·Drive 문서 1개 미리 만들기",
+      "grok.com/connectors 화면·New Connector 버튼·권한 화면 캡처 준비 [확인 필요]",
+      "수강생 기관 계정이 외부 앱 연결을 막는지 담당자에게 확인",
+      "브리핑 프롬프트 리허설 — 커넥터를 자동으로 쓰는지, 출처 표시가 나오는지 확인",
+      "docs.x.ai/grok/connectors 에서 커넥터 목록·권한 재확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 웹 메뉴 경로 — 공식 문서 'grok.com/connectors → New Connector', 출시 글 '+ 버튼 → Connectors → + Add connector'로 다름",
+    "[확인 필요] 출시 글은 Google Workspace를 하나의 연결(Gmail·Drive·Docs·Sheets·Calendar)로 소개, 현재 문서는 Gmail·Google Calendar·Google Drive를 각각 연결로 안내",
+    "[확인 필요] 요금제별 커넥터 차이·사용량 — 문서에는 '모든 Grok 사용자'만 명시",
+    "[확인 필요] 2026-05 Teams·Salesforce·Box 추가 시점 — @grok 공식 X 게시물을 인용한 기사 기준",
+    "교안 작성 중 실제 계정으로 연결·브리핑을 재현하지 못함 — xAI 공식 발표·문서 기준"
+  ],
+  "sources": [
+    {
+      "title": "xAI News – Connectors in web, iOS, and Android (2026-05-06)",
+      "url": "https://x.ai/news/grok-connectors",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Connectors",
+      "url": "https://docs.x.ai/grok/connectors",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Gmail & Google Calendar Connector",
+      "url": "https://docs.x.ai/grok/connectors/gmail-google-calendar",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Google Drive Connector",
+      "url": "https://docs.x.ai/grok/connectors/google-drive",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-20"
+    }
+  ]
+}
