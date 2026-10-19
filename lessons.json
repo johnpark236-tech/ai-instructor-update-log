@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 140,
+  "count": 141,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-021",
+      "version": "v1.0",
+      "created_at": "2026-10-19 11:20 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "X(트위터)에서 긴 스레드에 '@bot 요약해 줘' 답글만 달아 내 Grok Bot에게 일을 넘기고, 결과는 Grok Bot 앱에서 받아 볼 수 있음",
+      "summary": "Grok Bot @bot 태그 — ① X 게시물·답글에 @bot 태그 → 내 Bot에게 작업 전달 + ② @bot은 X에 '접수 확인'만 답글 + ③ 작업·결과는 Grok Bot 앱 대화에 남음 + ④ 내 글·답한 글·인용 글(사진 포함)까지 Bot이 받음 + ⑤ EU·영국·호주 등 일부 지역 제외",
+      "tool": "Grok",
+      "feature": "Grok Bot X 태그(Tag @bot on X) — X 게시물·답글에 @bot 태그로 내 Grok Bot에게 작업 넘기기: ① X 계정 ↔ Grok 계정 연결(grok.com Settings → Account → 𝕏 Account Connect) ② 내가 만든 Bot 1개 이상 필요(공유받은 Bot 불가) ③ @bot은 X에 접수 확인 답글만, 작업·결과는 Grok Bot 앱 대화 ④ 내 글·답한 글·인용 글(사진 포함) 전달 ⑤ 동영상·GIF 포함 글·@grok 동시 태그는 무반응 ⑥ EU·영국·호주·아이슬란드·리히텐슈타인·노르웨이 미지원 ⑦ 태그 요청은 자동 시작·Bot 사용량 차감",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-10-09",
+      "categories": [
+        "CAT-08",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-MKT",
+        "JOB-CRE",
+        "JOB-OFF",
+        "JOB-DAT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① X ↔ Grok ↔ Grok Bot 연결 점검표 + ② @bot 태그 답글 1개와 X 접수 확인 답글 캡처 + ③ Grok Bot 앱에 남은 스레드 3줄 요약 결과 + ④ 사진이 든 인용 글 정리 결과 1개 + ⑤ '@bot이 조용할 때' 원인 점검표",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🏷",
+      "one_liner": "X에서 @bot 한 번에 일 맡기기"
+    },
     {
       "id": "AI-2026-10-CAT06-013",
       "version": "v1.0",
