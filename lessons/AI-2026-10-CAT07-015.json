@@ -1,0 +1,596 @@
+{
+  "id": "AI-2026-10-CAT07-015",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-20 05:05 KST",
+  "checked": "2026-10-20",
+  "review_by": "2027-01-20",
+  "title": "어제 하던 AI 작업, 이름으로 불러와 이어 하고 갈래 치고 되돌리기 — Grok Build(그록 빌드, 터미널) 세션(Sessions) /resume·/fork·/rewind·export 로 '작업 기록 관리' 해 보기",
+  "summary": "Grok Build(xAI 터미널 코딩 에이전트)는 모든 대화(프롬프트·응답·도구 실행·파일 스냅숏)를 ~/.grok/sessions/ 에 폴더별 자동 저장. ① /resume·grok --resume·grok -c 로 이어 하기 + ② /fork 로 같은 대화를 복사해 다른 방향 시도 + ③ /rewind(Esc 두 번)로 특정 프롬프트 시점까지 파일·대화 되돌리기 + ④ /rename·grok sessions list·search·delete·grok export 로 정리·Markdown 기록 내보내기. 2026-10-12~16 v1.0.54~v1.0.62에서 /resume <ID·제목> 바로 열기·제목 단어 순서 무관 검색·grok --resume <제목> 최신순 목록·비슷한 제목 제안 추가",
+  "glance": {
+    "emoji": "🗂️",
+    "one_liner": "AI 작업 기록을 이어 하고 되돌리기",
+    "cards": [
+      {
+        "icon": "▶️",
+        "title": "/resume",
+        "text": "제목으로 지난 작업 이어 하기"
+      },
+      {
+        "icon": "🌿",
+        "title": "/fork",
+        "text": "대화 복사해 다른 방향 시도"
+      },
+      {
+        "icon": "⏪",
+        "title": "/rewind",
+        "text": "프롬프트 시점으로 파일 복원"
+      },
+      {
+        "icon": "📤",
+        "title": "export",
+        "text": "대화 기록 Markdown 저장"
+      }
+    ],
+    "diagram": {
+      "title": "세션 관리 흐름",
+      "nodes": [
+        {
+          "icon": "💾",
+          "label": "자동 저장"
+        },
+        {
+          "icon": "🏷️",
+          "label": "/rename 이름"
+        },
+        {
+          "icon": "▶️",
+          "label": "/resume 재개"
+        },
+        {
+          "icon": "🌿",
+          "label": "갈래·되돌리기"
+        },
+        {
+          "icon": "📤",
+          "label": "export 기록"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "세션 관리 전",
+        "text": "터미널 닫으면 맥락 사라짐, 잘못 고친 파일은 손으로 복구"
+      },
+      "after": {
+        "label": "세션 관리 후",
+        "text": "제목으로 바로 이어 하기 + 시점 되돌리기 + 기록 파일 보관"
+      }
+    },
+    "cautions": [
+      "/rewind 는 파일을 실제로 되돌림",
+      "커밋 안 한 변경은 복구 불가",
+      "기록에 비밀번호·키 남기지 말 것"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Build(터미널 코딩 에이전트 CLI) 세션(Sessions) — 대화·도구 실행·파일 스냅숏을 ~/.grok/sessions/ 에 폴더별 자동 저장: ① 이어 하기 /resume·grok --resume [ID·제목]·grok -c ② /fork [지시] 대화 복사(--worktree·--no-worktree) ③ /rewind·Esc Esc 프롬프트 시점으로 파일·대화 되돌리기 ④ /compact·/context·/session-info 맥락 관리 ⑤ Ctrl+T 할 일 목록(세션과 함께 저장) ⑥ /sessions·/rename·grok sessions list·search·delete·grok export <ID> [파일] Markdown 내보내기 · 2026-10-12~16 v1.0.54~v1.0.62 /resume <ID·제목> 바로 열기·단어 순서 무관 제목 검색·grok --resume <제목> 최신순 목록·비슷한 제목 제안·구분자 무시(fix-login-bug = Fix login bug)",
+  "company": "xAI (SpaceXSI)",
+  "type": "update",
+  "released": "2026-10-12",
+  "categories": [
+    "CAT-07",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-DEV",
+    "JOB-EDU",
+    "JOB-DAT",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 25,
+    "practice": 40,
+    "wrap": 7
+  },
+  "prerequisites": [
+    "macOS 또는 Linux 컴퓨터 + 터미널 — 설치 명령: curl -fsSL https://x.ai/cli/install.sh | bash (Windows 지원 범위 [확인 필요])",
+    "xAI(Grok) 계정 — 설치 후 grok 실행 → 계정 로그인, 요금제별 사용량 [확인 필요]",
+    "Grok Build v1.0.62 이상 권장(제목으로 /resume 바로 열기 기능) — 버전 확인 방법 [확인 필요]",
+    "Git 설치(git --version) — /rewind 전 커밋 습관·/fork --worktree 실습용",
+    "실습용 빈 폴더 1개(예: session-practice) — 실제 업무 저장소 사용 금지"
+  ],
+  "outcome": "① 이름 붙인 세션 2개(원본 + 갈래) + ② /rewind 로 되돌린 전·후 파일 비교 메모 + ③ grok export 로 저장한 대화 기록 Markdown 파일 1개 + ④ 내 업무용 '세션 이름 짓기 규칙' 카드 1장",
+  "objectives": [
+    "Grok Build 세션이 무엇을 저장하는지(프롬프트·응답·도구 실행·파일 스냅숏) 설명할 수 있음",
+    "/rename·/resume·grok --resume <제목>·/fork 로 작업을 이름 붙여 이어 하고 갈래 칠 수 있음",
+    "/rewind 가 파일을 실제로 되돌린다는 점을 알고 git 커밋으로 안전하게 되돌리기·export 로 기록을 남길 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "세션 기능 전용 요금 없음 — Grok Build 기본 기능, 세션은 내 컴퓨터(~/.grok/sessions/)에 저장. AI 응답은 Grok Build 사용량(토큰) 차감. 2026-10-12부터 신규 가입은 The X Subscription: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200 — 요금제별 Grok Build 사용량 [확인 필요]",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 매일 사용 + Cursor 코딩 에이전트 시작 사용량 + 사용량 제한 — Grok Build 사용 범위 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok·Cursor 기본 사용량 증가 + X 체크 표시·크리에이터 도구·광고 감소"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "SuperGrok + Cursor Pro + X Premium+ 포함 + Plus 대비 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "위 기능 전부 + Plus 대비 15배 사용량"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "위 기능 전부 + Plus 대비 50배 사용량"
+      }
+    ],
+    "note": "요금은 xAI 공식 발표 'Introducing The X Subscription'(2026-10-12) 미국 달러 기준, 원화·부가세 미확인. 세션 저장·이어 하기·되돌리기는 별도 과금 안내 없음, /compact 요약·이어 한 대화의 응답은 사용량 차감",
+    "checked": "2026-10-20",
+    "sources": [
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI Docs – Grok Build Sessions",
+        "url": "https://docs.x.ai/build/features/sessions"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-25",
+      "text": "Grok Build 터미널 코딩 에이전트 공개(초기 베타) — 세션 자동 저장 도입 시점 [확인 필요]"
+    },
+    {
+      "date": "2026-10-02",
+      "text": "v1.0.48 — /rewind 목록에 내가 입력한 프롬프트만 표시(자동 실행 턴 제외)"
+    },
+    {
+      "date": "2026-10-06",
+      "text": "v1.0.51 — CLI 세션 공유 /share 제거 + grok sessions list·/resume 에 같은 하위 폴더 워크트리 세션 표시"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "v1.0.54 — /resume 에 세션 ID·제목 입력 시 일치 항목만 걸러 선택 창 열기 + 시작 중 재개 대기 프롬프트 줄 세우기 + /fork 워크트리 경로 표시"
+    },
+    {
+      "date": "2026-10-14",
+      "text": "v1.0.59 — grok --resume <제목> 이 구분자 무시(fix-login-bug = 'Fix login bug')"
+    },
+    {
+      "date": "2026-10-15",
+      "text": "v1.0.60 — grok --resume <제목> 일치 세션 최신순 목록·마지막 수정 시각 + 일치 없으면 비슷한 제목 제안"
+    },
+    {
+      "date": "2026-10-16",
+      "text": "v1.0.61 — 선택 창이 제목 단어를 순서 상관없이 검색 + /resume <ID·이름> 이 하나만 일치하면 바로 열기"
+    }
+  ],
+  "theory": {
+    "definition": "세션(Session)은 Grok Build가 대화 하나를 통째로 저장한 작업 기록임. 프롬프트·응답·도구 실행·파일 스냅숏이 ~/.grok/sessions/ 에 작업 폴더별로 자동 저장 → 나중에 이어 하기(/resume), 복사해서 다른 방향 시도(/fork), 프롬프트 시점으로 되돌리기(/rewind), Markdown 기록 내보내기(grok export) 가능. 대화형 화면(TUI)·헤드리스(grok -p)·ACP에서 동일하게 동작",
+    "analogy": "게임의 '저장 슬롯'. 이름 붙여 저장해 두고(/rename), 원하는 슬롯을 불러오고(/resume), 슬롯을 복사해 다른 선택을 해 보고(/fork), 마음에 안 들면 이전 저장 지점으로 돌아감(/rewind). 단, 되돌리면 그 뒤 진행은 사라짐",
+    "comparison": {
+      "headers": [
+        "명령",
+        "하는 일",
+        "파일 변화",
+        "알맞은 상황"
+      ],
+      "rows": [
+        [
+          "/resume·grok --resume·grok -c",
+          "지난 세션 이어 하기",
+          "없음(그대로 이어 감)",
+          "어제 하던 작업 계속"
+        ],
+        [
+          "/fork [지시]",
+          "현재 대화를 복사한 새 세션",
+          "--worktree 시 격리된 저장소 복사본에서 작업",
+          "A안·B안 동시에 시도"
+        ],
+        [
+          "/rewind·Esc Esc",
+          "프롬프트 시점으로 되돌리기",
+          "디스크 파일을 그 시점으로 복원, 대화도 잘림",
+          "잘못된 방향으로 고친 직후"
+        ],
+        [
+          "/compact [보존할 내용]",
+          "대화 기록 압축",
+          "없음",
+          "맥락 창이 꽉 찰 때"
+        ],
+        [
+          "grok export <ID> [파일]",
+          "대화 기록 Markdown 저장",
+          "기록 파일 1개 생성",
+          "수업 자료·작업 보고·인수인계"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "자동 저장 + 이름으로 찾기",
+        "body": "① 저장 위치 ~/.grok/sessions/(작업 폴더별) ② /rename <제목>(별칭 /title)으로 이름 붙이기 ③ /resume 선택 창은 제목 단어를 순서 상관없이 검색(v1.0.61) ④ /resume <ID·이름>이 하나만 일치하면 바로 열림(v1.0.61) ⑤ 터미널에서 grok --resume <제목> → 일치 세션 최신순 목록, 없으면 비슷한 제목 제안(v1.0.60) ⑥ grok -c 는 가장 최근 세션 계속"
+      },
+      {
+        "title": "갈래(/fork)와 되돌리기(/rewind)",
+        "body": "① /fork [지시]: 현재 대화 복사본으로 새 세션 시작, --worktree 면 격리된 저장소 복사본에서 작업해 원본 파일과 충돌 방지 ② 이어 하면서 갈래 치기: --resume 에 --fork-session 추가 ③ /rewind 또는 대기 중 Esc 두 번: 프롬프트마다 되돌림 지점 표시 → 선택하면 파일과 대화를 그 시점으로 복원 ④ 되돌린 변경은 git 커밋이 없으면 사라짐 → 되돌리기 전 커밋 습관"
+      },
+      {
+        "title": "정리·기록 명령",
+        "body": "① /sessions: 열린 세션 전환·이름 변경·닫기 ② grok sessions list: 이 폴더 최근 세션 ③ grok sessions search <검색어>: 제목·프롬프트 검색 ④ grok sessions delete <ID>: 영구 삭제 ⑤ grok export <ID> [파일]: Markdown 기록(--clipboard 복사) ⑥ /context·/session-info: 맥락 사용량 ⑦ Ctrl+T: 할 일 목록(대기·진행 중·완료·취소), 세션과 함께 저장돼 재개 시 복원"
+      }
+    ],
+    "can": [
+      "터미널을 닫았음 열어도 제목·ID로 지난 작업을 그대로 이어 하기",
+      "같은 대화를 복사해 다른 해결 방법을 따로 시도(/fork)",
+      "잘못된 수정 직후 프롬프트 시점으로 파일·대화 되돌리기(/rewind)",
+      "대화 기록을 Markdown 파일로 내보내 보고서·수업 자료로 활용",
+      "스크립트에서 grok -p ... --output-format json 의 sessionId 로 같은 세션 이어 실행(-r)",
+      "할 일 목록(Ctrl+T)이 세션과 함께 저장돼 재개 시 진행 상태 복원"
+    ],
+    "cannot": [
+      "CLI에서 세션 공유 링크 만들기 — v1.0.51에서 /share·세션 공유 제거",
+      "git 커밋 없이 /rewind 로 사라진 변경 되살리기 — 공식 문서: 커밋하지 않은 되돌린 변경은 잃음",
+      "다른 컴퓨터 세션을 자동으로 불러오기 — 세션은 내 컴퓨터 ~/.grok/sessions/ 에 저장 (원격 복원 범위 [확인 필요])",
+      "웹·모바일 grok.com 빌드 모드(Build Mode) 대화에 같은 명령 사용 — 이 교안은 터미널 CLI 기준, 별도 제품",
+      "삭제한 세션(grok sessions delete) 복구 — 영구 삭제"
+    ],
+    "safety": [
+      "/rewind 는 디스크 파일을 실제로 바꿈 → 되돌리기 전 git add·commit 으로 현재 상태 보관",
+      "세션에 프롬프트·도구 출력·파일 스냅숏이 남음 → API 키·비밀번호·고객 개인정보를 대화·실습 파일에 넣지 말 것",
+      "grok export 기록 파일을 공유하기 전 비밀값·내부 경로·고객 이름 지우기",
+      "공용 컴퓨터 실습 후 grok sessions delete 로 실습 세션 정리 + 로그아웃",
+      "회사 코드에 쓰기 전 회사 AI 도구 사용 정책·작업 기록 보관 규정 확인"
+    ]
+  },
+  "practice": {
+    "preview": "빈 폴더에서 작은 프로그램 만들기 → /rename 으로 이름 붙이기 → 종료 후 제목으로 다시 열기 → /fork 로 다른 방향 시도 → 일부러 망친 수정을 /rewind 로 되돌리기 → grok export 로 기록 저장. ① 이름 붙인 세션 2개 + ② 되돌리기 전·후 비교 + ③ Markdown 기록 + ④ 이름 규칙 카드 완성",
+    "follow": [
+      {
+        "title": "설치·로그인·실습 폴더 준비",
+        "minutes": 6,
+        "do": "설치 명령 실행 → mkdir session-practice && cd session-practice && git init → grok 실행 → 계정 로그인 → 승인 모드가 ask(묻기)인지 확인 [확인 필요: 로그인 화면 문구]",
+        "prompt": "curl -fsSL https://x.ai/cli/install.sh | bash",
+        "expect": "Git 저장소가 된 빈 폴더에서 Grok Build 입력창이 열림",
+        "note": "실제 업무 저장소 금지. 설치가 막히면 강사 화면 시연으로 진행"
+      },
+      {
+        "title": "작업하고 이름 붙이기",
+        "minutes": 7,
+        "do": "아래 요청 입력 → 파일 생성 승인 → 결과 확인 → /rename 한국어 단어장 입력 → Ctrl+T 로 할 일 목록 확인",
+        "prompt": "한국어 단어장 프로그램 vocab.py 를 만들어 줘. 단어 5개(한국어-영어)를 저장하고, 실행하면 목록을 보여 주고, 단어를 추가할 수 있게 해 줘. 외부 패키지는 쓰지 마.",
+        "expect": "① vocab.py 생성 + ② 세션 제목이 '한국어 단어장'으로 바뀜",
+        "note": "다음 단계 전 터미널에서 git add . && git commit -m \"v1\" 로 보관"
+      },
+      {
+        "title": "종료 후 제목으로 다시 열기",
+        "minutes": 6,
+        "do": "/exit 로 종료 → 아래 명령으로 다시 열기 → 이전 대화가 그대로 보이는지 확인 → 같은 화면에서 /resume 단어장 도 입력해 비교",
+        "prompt": "grok --resume 한국어 단어장",
+        "expect": "일치 세션 최신순 목록 또는 바로 열림 → 이전 대화·할 일 목록 복원",
+        "note": "제목 검색은 v1.0.60~61 이상. 안 되면 grok sessions list 로 ID 확인 후 grok --resume <ID>"
+      },
+      {
+        "title": "/fork 로 다른 방향 시도",
+        "minutes": 6,
+        "do": "아래 /fork 입력 → 새 세션에서 결과 확인 → /rename 단어장-퀴즈 → /sessions 로 원본 세션과 오가며 비교",
+        "prompt": "/fork vocab.py 에 퀴즈 모드를 추가해 줘. 단어 3개를 무작위로 내고 점수를 보여 줘.",
+        "expect": "원본 세션은 그대로, 갈래 세션에서만 퀴즈 기능 추가",
+        "note": "--worktree 사용 시 격리된 복사본에서 작업, 기본값·옵션 위치 [확인 필요]"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "일부러 망치고 /rewind 로 되돌리기",
+        "minutes": 7,
+        "do": "원본 세션에서 아래 요청 입력 → 결과 확인 → 대기 중 Esc 두 번(또는 /rewind) → 요청 직전 프롬프트 선택 → vocab.py 가 돌아왔는지 확인 → git diff 로 변화 확인",
+        "prompt": "vocab.py 의 모든 주석과 함수 이름을 영어 약어로 바꿔 줘.",
+        "expect": "되돌리기 후 파일·대화가 요청 전 상태로 복원, git diff 변경 없음",
+        "note": "되돌린 변경은 커밋이 없으면 복구 불가 — 그래서 2단계에서 커밋"
+      },
+      {
+        "title": "대화 기록 Markdown 내보내기",
+        "minutes": 4,
+        "do": "/exit → grok sessions list 로 세션 ID 확인 → 아래 명령 실행 → 파일 열어 비밀값·개인 정보 없는지 확인",
+        "prompt": "grok export <세션ID> session-log.md",
+        "expect": "session-log.md 파일에 프롬프트·응답 기록 저장",
+        "note": "<세션ID> 는 list 결과로 바꿔 넣기. --clipboard 로 복사도 가능"
+      },
+      {
+        "title": "내 세션 이름 규칙 카드",
+        "minutes": 4,
+        "do": "짝과 함께 내 업무용 세션 이름 규칙(날짜·과제·버전) 1줄 + '언제 fork, 언제 rewind' 기준 1줄씩 작성",
+        "prompt": "",
+        "expect": "이름 규칙 + fork·rewind 기준 카드 1장",
+        "note": "예: '10-20 수업자료-퀴즈-B안' — 단어 순서 상관없이 검색되니 핵심 단어 위주"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "grok sessions search 퀴즈 로 세션을 찾고, /compact 단어 목록과 파일 이름은 유지 후 /context 로 맥락 사용량 변화 확인"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "grok --resume 한국어 단어장 --fork-session 으로 이어 하면서 갈래를 쳐 C안을 만들고, 세 세션 결과를 표로 비교"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "grok -p \"...\" --output-format json 으로 실행 → .sessionId 를 꺼내 -r 로 같은 세션에 두 번째 요청 보내는 스크립트 작성 [확인 필요: 플래그 조합]"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 '되돌리기 전·후 diff + 갈래 세션 비교 + 내 이름 규칙' 발표",
+    "quiz": [
+      {
+        "q": "/rewind 로 프롬프트 시점을 고르면 일어나는 일은?",
+        "options": [
+          "대화만 잘리고 파일은 그대로임",
+          "파일과 대화가 모두 그 시점으로 되돌아감",
+          "새 세션이 하나 더 만들어짐",
+          "세션이 영구 삭제됨"
+        ],
+        "answer": 1,
+        "explain": "디스크 파일을 그 시점으로 복원하고 대화도 맞춰 잘림, 커밋 안 한 되돌린 변경은 사라짐"
+      },
+      {
+        "q": "현재 대화를 그대로 복사해 다른 방법을 따로 시도하는 명령은?",
+        "options": [
+          "/compact",
+          "/rename",
+          "/fork",
+          "/rewind"
+        ],
+        "answer": 2,
+        "explain": "/fork 는 현재 대화 복사본으로 새 세션 시작, 원본은 그대로 유지"
+      },
+      {
+        "q": "2026-10-15~16 업데이트 이후 'grok --resume 단어장 한국어' 를 입력하면?",
+        "options": [
+          "단어 순서가 달라 찾지 못함",
+          "제목에 두 단어가 모두 들어간 세션을 찾아 최신순으로 보여 주거나 하나면 바로 열림",
+          "새 세션을 만듦",
+          "가장 오래된 세션을 엶"
+        ],
+        "answer": 1,
+        "explain": "v1.0.60 최신순 목록·비슷한 제목 제안, v1.0.61 단어 순서 무관 검색·하나만 일치하면 바로 열기"
+      }
+    ],
+    "next": [
+      "Grok Build /goal 목표 모드로 완료 조건까지 맡기기 (AI-2026-10-CAT07-014)",
+      "Grok Build 메모리로 세션 간 프로젝트 규칙 기억시키기 (AI-2026-10-CAT07-011)",
+      "Grok Build 워크플로로 큰 작업 병렬 처리 (AI-2026-10-CAT08-020)"
+    ],
+    "rubric": [
+      {
+        "criterion": "이어 하기",
+        "high": "/rename + 제목으로 --resume·/resume 모두 성공",
+        "mid": "ID로만 이어 하기 성공",
+        "low": "이어 하기 실패"
+      },
+      {
+        "criterion": "갈래·되돌리기",
+        "high": "/fork 비교 + 커밋 후 /rewind + git diff 확인",
+        "mid": "/fork 또는 /rewind 중 하나만",
+        "low": "둘 다 시도 안 함"
+      },
+      {
+        "criterion": "기록·안전",
+        "high": "export 파일 비밀값 점검 + 실습 세션 정리",
+        "mid": "export 만 완료",
+        "low": "기록·정리 안 함"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: '어제 AI랑 하던 작업, 처음부터 다시 설명한 적 있나요?' 질문 + 게임 저장 슬롯 비유",
+        "note": "강사가 미리 만든 세션을 제목으로 여는 시연"
+      },
+      {
+        "time": "5~30분",
+        "content": "1부 이론: 세션이 저장하는 것·명령 비교표·10월 업데이트(제목 검색)·rewind 위험·요금·안전",
+        "note": "'rewind 는 파일을 진짜로 되돌림' 강조"
+      },
+      {
+        "time": "30~55분",
+        "content": "따라 하기 1~4: 설치·git init → 작업·/rename → 종료 후 --resume → /fork",
+        "note": "AI 응답 대기 시간에 이름 규칙 토론"
+      },
+      {
+        "time": "55~70분",
+        "content": "내 것 만들기: 망치고 /rewind → export → 이름 규칙 카드",
+        "note": "커밋 안 한 수강생 먼저 확인"
+      },
+      {
+        "time": "70~72분",
+        "content": "짝 공유·퀴즈·실습 세션 정리·로그아웃",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "어제 AI랑 하던 코딩 작업, 오늘 다시 열었더니 처음부터 설명해야 했던 적 있으시죠? Grok Build는 대화를 전부 저장해 둡니다. 오늘은 그 기록을 이름으로 불러오고, 갈래를 치고, 되돌리는 법을 배웁니다."
+      },
+      {
+        "label": "핵심 원리",
+        "text": "세션은 게임의 저장 슬롯입니다. 이름을 붙여 저장하고, 원하는 슬롯을 불러오고, 복사해서 다른 선택을 해 보고, 이전 지점으로 돌아갈 수 있습니다."
+      },
+      {
+        "label": "10월 업데이트",
+        "text": "이번 달 업데이트로 세션 ID를 외울 필요가 없어졌습니다. 제목에 들어간 단어 몇 개만 치면, 순서가 달라도 찾아 주고, 하나뿐이면 바로 열어 줍니다."
+      },
+      {
+        "label": "주의",
+        "text": "되돌리기는 진짜로 파일을 바꿉니다. 커밋하지 않은 변경은 되돌린 뒤 다시 찾을 수 없습니다. 그래서 되돌리기 전에는 꼭 커밋부터 하세요."
+      },
+      {
+        "label": "마무리",
+        "text": "내보낸 기록 파일은 공유하기 전에 비밀번호나 키가 없는지 꼭 보세요. 공용 컴퓨터라면 실습 세션을 지우고 로그아웃하고 나가세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "설치 스크립트가 실행되지 않음(Windows·회사 보안 정책)",
+        "response": "강사 macOS·Linux 화면 시연 + 수강생은 명령 비교표 빈칸 채우기·이름 규칙 카드에 집중"
+      },
+      {
+        "situation": "제목으로 --resume 이 안 됨(구버전)",
+        "response": "grok sessions list 로 ID 확인 후 grok --resume <ID> 로 진행 + 업데이트 안내"
+      },
+      {
+        "situation": "/fork --worktree 가 오류(Git 저장소 아님 등)",
+        "response": "git init·첫 커밋 확인 후 재시도, 안 되면 --no-worktree 로 진행 [확인 필요]"
+      },
+      {
+        "situation": "요금제·사용량 한도로 응답이 멈춤",
+        "response": "강사 구독 계정으로 시연, 수강생은 짝 화면 참여 — 수업 전 요금제별 사용 가능 여부 확인"
+      },
+      {
+        "situation": "인터넷·서버 장애",
+        "response": "미리 만든 세션·export 파일로 흐름 설명 후 이름 규칙·fork/rewind 기준 토론으로 대체"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "grok --resume 제목에 '일치 없음' 표시",
+        "fix": "같은 작업 폴더에서 실행했는지 확인(세션은 폴더별 저장) + 제안된 비슷한 제목 선택"
+      },
+      {
+        "issue": "/rewind 후 원하던 코드까지 사라짐",
+        "fix": "git log 로 마지막 커밋 확인 → git checkout -- vocab.py 등으로 커밋 시점 복원, 커밋 없으면 복구 불가 안내"
+      },
+      {
+        "issue": "Esc 두 번이 동작 안 함",
+        "fix": "AI가 작업 중이면 대기(idle) 상태가 아님 → 응답이 끝난 뒤 다시 누르거나 /rewind 입력"
+      },
+      {
+        "issue": "grok export 에서 ID를 모름",
+        "fix": "grok sessions list 또는 grok sessions search <단어> 로 ID 확인"
+      },
+      {
+        "issue": "맥락이 꽉 차 응답이 느려짐",
+        "fix": "/context 로 사용량 확인 → /compact 유지할 내용 지정해 압축"
+      }
+    ],
+    "faq": [
+      {
+        "q": "세션은 어디에 저장되나요?",
+        "a": "내 컴퓨터 ~/.grok/sessions/ 에 작업 폴더별 자동 저장(공식 문서)"
+      },
+      {
+        "q": "세션을 남에게 링크로 공유할 수 있나요?",
+        "a": "CLI의 /share·세션 공유는 v1.0.51(2026-10-06)에서 제거 — 대신 grok export 로 Markdown 파일 공유"
+      },
+      {
+        "q": "/fork 와 /rewind 는 언제 쓰나요?",
+        "a": "원본을 살려 두고 다른 방법을 시도하면 /fork, 방금 수정이 잘못돼 이전으로 돌아가려면 /rewind"
+      },
+      {
+        "q": "되돌린 변경을 다시 살릴 수 있나요?",
+        "a": "git 커밋해 둔 경우만 가능, 커밋하지 않은 되돌린 변경은 잃음(공식 문서)"
+      },
+      {
+        "q": "할 일 목록도 저장되나요?",
+        "a": "저장됨. 세션과 함께 남아 재개 시 마지막 상태(대기·진행 중·완료·취소)로 복원, Ctrl+T 로 보기"
+      },
+      {
+        "q": "-s(--session-id)로 지난 세션을 열 수 있나요?",
+        "a": "아님. -s 는 지정한 UUID로 새 세션을 만드는 옵션, 이어 하기는 --resume·-r·-c"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급반",
+        "guide": "강사 시연 중심 — 수강생은 명령 비교표 정리 + 세션 이름 규칙 카드, /resume 한 번만 직접 해 보기"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐⭐ --fork-session 비교까지"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ 헤드리스 sessionId 스크립트 + 워크트리 갈래 병렬 작업 설계"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수업 자료 만들기 세션을 export 해 '수업 준비 기록'으로 보관, 반별로 fork 해 난이도 다른 버전 만들기"
+      },
+      {
+        "level": "데이터·연구 (JOB-DAT)",
+        "guide": "분석 스크립트 A·B 방법을 fork 로 나눠 비교, export 기록을 연구 노트로 보관 — 실제 데이터 금지"
+      },
+      {
+        "level": "외국인·다문화 (JOB-GLB)",
+        "guide": "모국어-한국어 단어장으로 실습, 세션 제목을 한국어로 지어 검색되는지 확인"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 세션 = 이름 붙인 저장 슬롯",
+      "10월 업데이트: ID 대신 제목 단어로 찾기",
+      "되돌리기 전 커밋은 필수 습관",
+      "갈래(fork)는 원본 보존, 되돌리기(rewind)는 원본 변경",
+      "export 기록은 공유 전 비밀값 점검"
+    ],
+    "day_before": [
+      "강사 컴퓨터에서 설치·로그인·따라 하기 전 과정 리허설 + Grok Build 버전 v1.0.62 이상 확인",
+      "/resume 선택 창·grok --resume <제목> 목록·/rewind 목록 화면 캡처 준비(실제 화면 캡처 필요)",
+      "/fork --worktree 기본 동작·옵션 위치 실제 확인",
+      "현재 요금제(The X Subscription)별 Grok Build 사용 가능 여부 공식 페이지 재확인",
+      "시연용 '한국어 단어장' 세션·export 파일 미리 준비",
+      "수강생 컴퓨터 OS·Git 설치 여부 조사"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 세션 자동 저장 기능 최초 도입 시점 — changelog 앞부분(2026-05~09) 미확인, 교안 released 는 제목 검색 개선(v1.0.54, 2026-10-12) 기준",
+    "[확인 필요] /fork 의 --worktree·--no-worktree 기본값과 입력 위치",
+    "[확인 필요] 요금제별 Grok Build 사용 범위 — 공식 요금 페이지에 Grok Build 사용량 표기 미확인",
+    "[확인 필요] 헤드리스 sessionId + -r 조합 예시(공식 문서는 .sessionId 를 -r 로 전달한다고만 안내)",
+    "[확인 필요] 로그인 화면 문구·Windows 지원 여부·버전 확인 명령"
+  ],
+  "sources": [
+    {
+      "title": "xAI Docs – Grok Build Sessions",
+      "url": "https://docs.x.ai/build/features/sessions",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI – Grok Build Changelog (v1.0.48·v1.0.51·v1.0.54·v1.0.59~v1.0.62)",
+      "url": "https://x.ai/changelog/build",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription (2026-10-12)",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-20"
+    }
+  ]
+}

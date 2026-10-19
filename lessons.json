@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 158,
+  "count": 159,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-015",
+      "version": "v1.0",
+      "created_at": "2026-10-20 05:05 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "어제 하던 AI 작업, 이름으로 불러와 이어 하고 갈래 치고 되돌리기 — Grok Build(그록 빌드, 터미널) 세션(Sessions) /resume·/fork·/rewind·export 로 '작업 기록 관리' 해 보기",
+      "summary": "Grok Build(xAI 터미널 코딩 에이전트)는 모든 대화(프롬프트·응답·도구 실행·파일 스냅숏)를 ~/.grok/sessions/ 에 폴더별 자동 저장. ① /resume·grok --resume·grok -c 로 이어 하기 + ② /fork 로 같은 대화를 복사해 다른 방향 시도 + ③ /rewind(Esc 두 번)로 특정 프롬프트 시점까지 파일·대화 되돌리기 + ④ /rename·grok sessions list·search·delete·grok export 로 정리·Markdown 기록 내보내기. 2026-10-12~16 v1.0.54~v1.0.62에서 /resume <ID·제목> 바로 열기·제목 단어 순서 무관 검색·grok --resume <제목> 최신순 목록·비슷한 제목 제안 추가",
+      "tool": "Grok",
+      "feature": "Grok Build(터미널 코딩 에이전트 CLI) 세션(Sessions) — 대화·도구 실행·파일 스냅숏을 ~/.grok/sessions/ 에 폴더별 자동 저장: ① 이어 하기 /resume·grok --resume [ID·제목]·grok -c ② /fork [지시] 대화 복사(--worktree·--no-worktree) ③ /rewind·Esc Esc 프롬프트 시점으로 파일·대화 되돌리기 ④ /compact·/context·/session-info 맥락 관리 ⑤ Ctrl+T 할 일 목록(세션과 함께 저장) ⑥ /sessions·/rename·grok sessions list·search·delete·grok export <ID> [파일] Markdown 내보내기 · 2026-10-12~16 v1.0.54~v1.0.62 /resume <ID·제목> 바로 열기·단어 순서 무관 제목 검색·grok --resume <제목> 최신순 목록·비슷한 제목 제안·구분자 무시(fix-login-bug = Fix login bug)",
+      "company": "xAI (SpaceXSI)",
+      "type": "update",
+      "released": "2026-10-12",
+      "categories": [
+        "CAT-07",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-DAT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 이름 붙인 세션 2개(원본 + 갈래) + ② /rewind 로 되돌린 전·후 파일 비교 메모 + ③ grok export 로 저장한 대화 기록 Markdown 파일 1개 + ④ 내 업무용 '세션 이름 짓기 규칙' 카드 1장",
+      "access": "freemium",
+      "total_minutes": 72,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "AI 작업 기록을 이어 하고 되돌리기"
+    },
     {
       "id": "AI-2026-10-CAT01-013",
       "version": "v1.0",

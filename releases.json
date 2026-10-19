@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 03:10 KST",
+  "updated_at": "2026-10-20 05:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3511,6 +3511,21 @@
       },
       "checked": "2026-10-20",
       "lesson_id": "AI-2026-10-CAT01-013"
+    },
+    {
+      "id": "grok-build-2026-10-12-resume-by-title",
+      "date": "2026-10-12",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Build 세션 제목으로 바로 이어 하기(/resume·--resume)",
+      "summary": "v1.0.54~v1.0.62(2026-10-12~16): /resume <ID·제목> 일치 항목 걸러 열기·하나면 바로 열기, 제목 단어 순서 무관 검색, grok --resume <제목> 최신순 목록·비슷한 제목 제안·구분자 무시",
+      "source": {
+        "title": "xAI – Grok Build Changelog",
+        "url": "https://x.ai/changelog/build"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT07-015"
     }
   ]
 }
