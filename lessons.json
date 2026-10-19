@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 146,
+  "count": 147,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-025",
+      "version": "v1.0",
+      "created_at": "2026-10-19 17:00 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Genspark Custom Super Agent(맞춤 에이전트)에 한 문단으로 역할·기능·출력 기준을 적어 나만의 AI 에이전트를 만들고, Preview로 시험·수정한 뒤 링크로 공유해 '주간 보고서 에이전트 1개 + 재사용 지시문 템플릿'을 완성할 수 있음",
+      "summary": "Genspark Custom Super Agent — ① Custom Agent Store → Create New + ② [역할] + [핵심 기능] + [출력 기준] 한 문단 설명 + ③ Preview 창에서 시험 → 말로 고치기 → Update 저장 + ④ 카드 ⋯ → Configure → Share(Only me·링크·Store) + ⑤ Super Agent 입력창 @로 불러 쓰기·여러 에이전트 조합",
+      "tool": "Genspark",
+      "feature": "Custom Super Agent(맞춤 슈퍼 에이전트, 도움말 표기 Custom Agent)·Custom Agent Store — ① 홈 Custom Agent·사이드바 + New·Super Agent 입력창 @에서 진입 ② Custom Agent Store 오른쪽 위 Create New → [Role Definition] + [Core Functions] + [Output Standards] 구조로 설명 ③ Preview 창 시험 → 대화로 지침 수정(Instructions 자동 반영) → Update 저장 ④ 카드 ⋯ → Configure(수정)·Delete(복구 불가) ⑤ Configure → Share: Only me·Anyone with the link·Custom Agent Store, 팀·기업은 Organization·Group(Team·Enterprise) ⑥ Store: My Super Agents·Trending·By Genspark, 분류(Writing·Productivity·Research & Analysis·Education·Lifestyle·Others), 즐겨찾기 → @ 호출 ⑦ Conversation Starters 편집 ⑧ 한 대화에서 @로 여러 에이전트 조합 ⑨ 공유 에이전트는 이름·설명만 공개(지침·대화 비공개)",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2025-10-15",
+      "categories": [
+        "CAT-08",
+        "CAT-02"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 나만의 Custom Super Agent 1개(예: '주간 AI 동향 보고서' 에이전트) + ② 역할·기능·출력 기준 3단 지시문 템플릿 1장 + ③ Preview 시험 → 수정 전·후 결과 비교 기록 + ④ 공유 범위(Only me·링크) 설정 기록 + ⑤ @로 두 에이전트를 이어 쓴 조합 결과 1건",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "한 문단 설명으로 나만의 에이전트"
+    },
     {
       "id": "AI-2026-10-CAT03-027",
       "version": "v1.0",

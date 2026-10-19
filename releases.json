@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-19 15:30 KST",
+  "updated_at": "2026-10-19 17:00 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2025-10-15-custom-super-agent",
+      "date": "2025-10-15",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Custom Super Agent — 한 문단 설명으로 만드는 나만의 에이전트·Store",
+      "summary": "역할·기능·출력 기준을 적으면 에이전트 자동 구성, Preview 시험·Update 저장, @로 어디서나 호출·여러 에이전트 조합, Only me·링크·Custom Agent Store 공유(팀은 Organization·Group)",
+      "source": {
+        "title": "Genspark Blog – Genspark Custom Super Agent",
+        "url": "https://www.genspark.ai/blog/genspark-custom-agent"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT08-025"
+    },
     {
       "id": "genspark-2025-04-02-call-for-me",
       "date": "2025-04-02",
