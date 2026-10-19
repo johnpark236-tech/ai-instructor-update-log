@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 159,
+  "count": 160,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-032",
+      "version": "v1.0",
+      "created_at": "2026-10-20 06:10 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "Genspark GenClipboard(젠클립보드)로 복사 기록을 단축키 하나로 다시 불러 붙이고, 자주 쓰는 문구 고정·캡처 주석·화면 녹화·선택 문장 번역까지 해서 '수업·업무용 복붙 도구 세트 1개'를 완성할 수 있음",
+      "summary": "GenClipboard — Genspark의 무료 클립보드 관리 앱(Mac·Windows·Linux): ① 복사 기록(텍스트·서식 텍스트·이미지·파일·URL·JSON) 검색 + ② ⇧⌘V·Ctrl+Shift+V 패널 → 1~9 바로 붙이기 + ③ 고정(Pin) + ④ 캡처·주석(모자이크)·스크롤 캡처·MP4 화면 녹화 + ⑤ 선택 문장 번역·이미지 번역(OCR) + ⑥ 기록은 내 기기 저장, 동기화는 선택·종단 간 암호화",
+      "tool": "Genspark",
+      "feature": "GenClipboard(젠클립보드, 무료 클립보드 관리 앱) — ① genclipboard.ai에서 Mac·Windows·Linux 설치, Mac은 개인정보 보호 및 보안 → 손쉬운 사용(Accessibility) 허용·첫 캡처 때 화면 기록 허용 ② ⇧⌘V(Mac)·Ctrl+Shift+V(Windows·Linux)로 화면 아래 패널 → 검색·← →·1~9 또는 Enter 붙이기·Esc 닫기 ③ 텍스트·서식 텍스트·이미지·파일·URL·JSON 기록, 자동 중복 제거, 기본 최근 500개(Settings → Max Clipboard History) ④ ⌘P·Ctrl+P 고정(Pin, 자동 삭제 안 됨) ⑤ ⇧⌘A 캡처·주석(화살표·도형·글자·모자이크)·⇧⌘S 스크롤 캡처·⇧⌘R 영역 MP4 녹화(Windows·Linux는 Ctrl+Shift) ⑥ Settings → Translation: Genspark 계정 로그인 → Selection Translate(Replace·Copy 팝업)·Silent Translate(바로 바꾸기) 단축키 지정·First·Second Language, 이미지 번역(기기 내 OCR, Mac·Windows) ⑦ 선택형 동기화(종단 간 암호화, 텍스트·서식 텍스트만) ⑧ 비밀번호 관리자 복사 기본 미기록·클립보드 내용 원격 분석 제외 ⑨ 구독·크레딧 없이 무료 (도움말 2026-09-19 갱신)",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2026-05-12",
+      "categories": [
+        "CAT-03",
+        "CAT-09"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-WRI",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 자주 쓰는 수업·업무 문구 5개를 고정(Pin)한 복붙 세트 + ② 개인정보를 모자이크 처리한 설명용 캡처 1장 + ③ 선택 문장 번역 단축키 설정과 번역 결과 1개 + ④ 30초 이내 화면 녹화 MP4 1개",
+      "access": "free",
+      "total_minutes": 61,
+      "notice": "",
+      "emoji": "📋",
+      "one_liner": "복사한 것 전부 다시 꺼내 붙이기"
+    },
     {
       "id": "AI-2026-10-CAT07-015",
       "version": "v1.0",
