@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-19 09:10 KST",
+  "updated_at": "2026-10-19 10:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "deepreview-2026-10-14-launch",
+      "date": "2026-10-14",
+      "tool": "Deep Review",
+      "company": "Google",
+      "type": "new",
+      "title": "Deep Review — 에이전트형 문서 검토 전 세계 공개",
+      "summary": "PDF·텍스트 문서를 구간별로 나눠 여러 AI 에이전트가 병렬 검토하고 종합 보고서로 정리하는 Google Research 도구, 논문에서 법률·금융 문서로 확대, 사용자당 주 2회 무료·Gemini API 키 연결 시 추가 검토",
+      "source": {
+        "title": "Google Research Blog – Analyzing technical documents with Deep Review",
+        "url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT06-013"
+    },
     {
       "id": "notion-2026-09-15-custom-agents-subagents",
       "date": "2026-09-15",
