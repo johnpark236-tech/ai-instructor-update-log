@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 18:00 KST",
+  "updated_at": "2026-10-19 20:00 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3391,6 +3391,21 @@
       },
       "checked": "2026-10-19",
       "lesson_id": "AI-2026-10-CAT08-023"
+    },
+    {
+      "id": "genspark-2025-05-08-ai-sheets",
+      "date": "2025-05-08",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Genspark AI Sheets — 말로 자료 수집·분석·차트 만드는 스프레드시트 에이전트",
+      "summary": "요청 한 줄로 웹·재무·논문·상품 자료 수집 표, 파일 업로드 분석, 차트 11종, Send to Chat 부분 수정, Restore, Export as XLSX",
+      "source": {
+        "title": "Genspark Blog – Introducing Genspark AI Sheets",
+        "url": "https://www.genspark.ai/blog/genspark-ai-sheets"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT03-029"
     }
   ]
 }

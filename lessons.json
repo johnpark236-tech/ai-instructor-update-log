@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 149,
+  "count": 150,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-029",
+      "version": "v1.0",
+      "created_at": "2026-10-19 20:00 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Genspark AI Sheets(AI 시트)에 말로 요청해 웹 자료 수집 표 만들기 + 엑셀 파일 분석·차트 + Send to Chat 부분 수정 + Restore 되돌리기 + Export as XLSX로 '조사 표 1개 + 분석 차트 1개 + XLSX 파일'을 완성할 수 있음",
+      "summary": "Genspark AI Sheets — ① 홈 화면 아래 AI Sheets 또는 사이드바 + (New) + ② 말로 요청하면 웹·SEC·Yahoo Finance·Google Scholar·Amazon 자료 수집 → 표 자동 작성 + ③ Excel·PDF·Word·이미지 업로드 → 정리·분석(SQL·Python·Excel 수식) + ④ 차트 11종·셀 근거 표시 답변 + ⑤ 범위 선택 → Send to Chat으로 부분 수정 + ⑥ Restore로 단계 되돌리기 + ⑦ Export as XLSX(수식·서식 유지)·Share 링크",
+      "tool": "Genspark",
+      "feature": "AI Sheets(AI 시트, 스프레드시트 에이전트) — ① 홈 화면 아래 AI Sheets 또는 사이드바 + (New)에서 진입 ② 말로 요청 → 자료 수집·정리(중복 제거·출처)·SQL·Python·Excel 수식·차트를 에이전트가 단계별 실행 ③ 기본 자료원: SEC 공시·Yahoo Finance(재무)·Google Scholar(논문)·Amazon(상품)·일반 웹, 중요 값 교차 확인 ④ 대화창 파일 업로드(Excel·PDF·Word·이미지 등), Tools → MCP로 Google Drive·Supabase·Custom MCP 연결 ⑤ 직접 편집(복사·붙여 넣기·Excel 수식·서식·시트 추가·삭제·Fullscreen) ⑥ 차트 11종(영역·가로 막대·세로 막대·꺾은선·원형·도넛·분산형·깔때기·방사형·트리맵·폭포) ⑦ 범위 선택 → Send to Chat으로 그 영역만 수정·분석·차트 ⑧ 셀 참조 달린 분석 답변·HTML 대시보드 ⑨ 결과 카드 Restore(그 단계 전으로 되돌리기, 버전 목록 아님) ⑩ 왼쪽 위 Export → Export as XLSX(수식·서식·계산 유지), 오른쪽 위 Share 권한 설정 후 링크 ⑪ 한 번에 읽는 범위 3,000셀, 피벗 테이블·VBA 실행·Power Query·3D 차트 미지원, 모바일은 보기 전용",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2025-05-08",
+      "categories": [
+        "CAT-03",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-MKT",
+        "JOB-DAT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 말 한 줄로 만든 '웹 자료 조사 표' 1개(출처 칸 포함) + ② 업로드한 엑셀 파일 분석 답변·차트 1개 + ③ Send to Chat으로 고친 범위 1곳 + ④ Restore로 되돌려 본 기록 + ⑤ Export as XLSX 파일 1개(또는 Share 링크)",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "말로 요청하면 조사·분석 표 완성"
+    },
     {
       "id": "AI-2026-10-CAT03-028",
       "version": "v1.0",

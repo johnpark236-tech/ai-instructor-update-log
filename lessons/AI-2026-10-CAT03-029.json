@@ -1,0 +1,563 @@
+{
+  "id": "AI-2026-10-CAT03-029",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-19 20:00 KST",
+  "checked": "2026-10-19",
+  "review_by": "2027-01-19",
+  "title": "Genspark AI Sheets(AI 시트)에 말로 요청해 웹 자료 수집 표 만들기 + 엑셀 파일 분석·차트 + Send to Chat 부분 수정 + Restore 되돌리기 + Export as XLSX로 '조사 표 1개 + 분석 차트 1개 + XLSX 파일'을 완성할 수 있음",
+  "summary": "Genspark AI Sheets — ① 홈 화면 아래 AI Sheets 또는 사이드바 + (New) + ② 말로 요청하면 웹·SEC·Yahoo Finance·Google Scholar·Amazon 자료 수집 → 표 자동 작성 + ③ Excel·PDF·Word·이미지 업로드 → 정리·분석(SQL·Python·Excel 수식) + ④ 차트 11종·셀 근거 표시 답변 + ⑤ 범위 선택 → Send to Chat으로 부분 수정 + ⑥ Restore로 단계 되돌리기 + ⑦ Export as XLSX(수식·서식 유지)·Share 링크",
+  "glance": {
+    "emoji": "📊",
+    "one_liner": "말로 요청하면 조사·분석 표 완성",
+    "cards": [
+      {
+        "icon": "🔎",
+        "title": "자료 수집",
+        "text": "웹·재무·논문·상품 자료로 표"
+      },
+      {
+        "icon": "📂",
+        "title": "파일 분석",
+        "text": "Excel·PDF·Word·이미지"
+      },
+      {
+        "icon": "📈",
+        "title": "차트 11종",
+        "text": "막대·꺾은선·원형·폭포 등"
+      },
+      {
+        "icon": "💾",
+        "title": "XLSX 내보내기",
+        "text": "수식·서식 그대로 유지"
+      }
+    ],
+    "diagram": {
+      "title": "AI Sheets 흐름",
+      "nodes": [
+        {
+          "icon": "💬",
+          "label": "말로 요청"
+        },
+        {
+          "icon": "🔎",
+          "label": "수집·정리"
+        },
+        {
+          "icon": "🧮",
+          "label": "수식·분석"
+        },
+        {
+          "icon": "📈",
+          "label": "차트·답변"
+        },
+        {
+          "icon": "📤",
+          "label": "XLSX·공유"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "쓰기 전",
+        "text": "검색 창 여러 개 열고 복사·붙여 넣기, 수식·차트 직접 만들기 2시간"
+      },
+      "after": {
+        "label": "쓴 뒤",
+        "text": "요청 한 줄로 출처 달린 표 + 차트, 고칠 범위만 골라 다시 지시"
+      }
+    },
+    "cautions": [
+      "중요 숫자는 출처 셀과 대조",
+      "개인정보·내부 자료 올리지 않기",
+      "삭제 전 XLSX로 백업"
+    ]
+  },
+  "tool": "Genspark",
+  "feature": "AI Sheets(AI 시트, 스프레드시트 에이전트) — ① 홈 화면 아래 AI Sheets 또는 사이드바 + (New)에서 진입 ② 말로 요청 → 자료 수집·정리(중복 제거·출처)·SQL·Python·Excel 수식·차트를 에이전트가 단계별 실행 ③ 기본 자료원: SEC 공시·Yahoo Finance(재무)·Google Scholar(논문)·Amazon(상품)·일반 웹, 중요 값 교차 확인 ④ 대화창 파일 업로드(Excel·PDF·Word·이미지 등), Tools → MCP로 Google Drive·Supabase·Custom MCP 연결 ⑤ 직접 편집(복사·붙여 넣기·Excel 수식·서식·시트 추가·삭제·Fullscreen) ⑥ 차트 11종(영역·가로 막대·세로 막대·꺾은선·원형·도넛·분산형·깔때기·방사형·트리맵·폭포) ⑦ 범위 선택 → Send to Chat으로 그 영역만 수정·분석·차트 ⑧ 셀 참조 달린 분석 답변·HTML 대시보드 ⑨ 결과 카드 Restore(그 단계 전으로 되돌리기, 버전 목록 아님) ⑩ 왼쪽 위 Export → Export as XLSX(수식·서식·계산 유지), 오른쪽 위 Share 권한 설정 후 링크 ⑪ 한 번에 읽는 범위 3,000셀, 피벗 테이블·VBA 실행·Power Query·3D 차트 미지원, 모바일은 보기 전용",
+  "company": "Genspark (MainFunc)",
+  "type": "update",
+  "released": "2025-05-08",
+  "categories": [
+    "CAT-03",
+    "CAT-06"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-MKT",
+    "JOB-DAT",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Genspark 계정(무료 가능, 하루 100크레딧) — Plus·Pro는 Standard 모드 AI Sheets 작업이 Free Quota(주간 한도, 크레딧 미차감)로 처리, 무료는 하루 크레딧 차감",
+    "PC 웹 브라우저(genspark.ai) 필수 — 모바일은 결과 보기만 가능",
+    "실습용 엑셀 파일 1개: 개인정보 없는 월별 판매·수강 인원·행사 참가 수 등(강사 제공 예시 파일 권장)",
+    "조사해 볼 주제 1개 메모: 지역 축제 목록·노트북 가격 비교·공공 통계 등"
+  ],
+  "outcome": "① 말 한 줄로 만든 '웹 자료 조사 표' 1개(출처 칸 포함) + ② 업로드한 엑셀 파일 분석 답변·차트 1개 + ③ Send to Chat으로 고친 범위 1곳 + ④ Restore로 되돌려 본 기록 + ⑤ Export as XLSX 파일 1개(또는 Share 링크)",
+  "objectives": [
+    "Genspark AI Sheets가 자료 수집·정리·수식·차트를 말로 처리하는 방식과 기본 자료원(SEC·Yahoo Finance·Google Scholar·Amazon·웹)을 설명할 수 있음",
+    "웹 조사 표와 업로드 파일 분석을 요청하고 Send to Chat·직접 편집·Restore로 원하는 결과까지 고칠 수 있음",
+    "Export as XLSX·Share로 결과를 내보내고, 출처 셀 대조·개인정보 제외·삭제 전 백업 원칙을 지킬 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "AI Sheets 전용 요금 없음. 무료 하루 100크레딧(평생 한도까지)으로 체험, Plus·Pro는 Standard 모드 AI Sheets 작업이 Free Quota(주간 한도, 크레딧 미차감)로 처리. Plus 월 $24.99·Pro 월 $249.99·Team 좌석당 월 $40. 일부만 성공한 작업도 크레딧 차감",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "하루 100크레딧(평생 무료 한도까지) — AI Sheets 작업은 크레딧 차감, Free Quota 없음"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $24.99 (연 결제 시 월 $19.99)",
+        "features": "월 10,000크레딧부터 + Standard 모드 AI Sheets Free Quota(주간)"
+      },
+      {
+        "name": "Pro",
+        "price": "월 $249.99 (연 결제 시 월 $199.99)",
+        "features": "월 125,000크레딧부터 + Free Quota(Plus의 10배) — 대량 조사·분석"
+      },
+      {
+        "name": "Team",
+        "price": "좌석당 월 $40 (연 결제 시 $35)",
+        "features": "좌석당 월 10,000크레딧 — 팀 공동 작업, Free Quota 표기 없음"
+      },
+      {
+        "name": "Enterprise",
+        "price": "",
+        "features": "맞춤 계약, 좌석당 20,000크레딧부터 (금액 비공개)"
+      }
+    ],
+    "note": "요금은 Genspark 도움말 'Membership Plans' 미국 달러 기준(2026-10-19 확인). Free Quota 대상: Super Agent·AI Slides·AI Sheets·AI Docs·Deep Research·Fact Check·SecondBrain의 Standard 모드 텍스트·이미지 작업. AI Sheets 도움말: 에이전트 작업으로 크레딧 사용, 일부만 성공해도 차감. 작업 1건당 크레딧 양·원화 가격 [확인 필요]",
+    "checked": "2026-10-19",
+    "sources": [
+      {
+        "title": "Genspark Help Center – AI Sheets",
+        "url": "https://www.genspark.ai/helpcenter?doc=tutorials_AI_Sheets"
+      },
+      {
+        "title": "Genspark Help Center – Membership Plans",
+        "url": "https://www.genspark.ai/helpcenter/membership-plans"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-05-08",
+      "text": "Genspark AI Sheets 공개 — 요청 한 줄로 자료 수집·표 작성, AI를 수식처럼 셀마다 적용(메일·이미지·음성 일괄 생성), PDF·Word·이미지 표를 시트로 변환, 말로 분석·차트(Genspark 블로그)"
+    },
+    {
+      "date": "2025-05-15",
+      "text": "AI Drive·다운로드 에이전트 공개 — 만든 파일 저장 공간 연결"
+    },
+    {
+      "date": "2026-10-19",
+      "text": "교안 기준 확인 — 도움말 기준 기본 자료원(SEC·Yahoo Finance·Google Scholar·Amazon), MCP 연결, 차트 11종, Send to Chat, Restore, Export as XLSX, 미지원 기능으로 작성"
+    }
+  ],
+  "theory": {
+    "definition": "Genspark에서 말로 요청하면 자료 수집·정리·수식·분석·차트까지 단계별로 대신 실행하는 스프레드시트 에이전트임. 결과 표는 직접 고치거나 범위를 골라 다시 지시하고 XLSX로 내보냄",
+    "analogy": "엑셀 잘하는 조사 담당 직원에게 '이런 표 만들어 줘'라고 맡기면 자료를 찾아 표로 정리하고 차트까지 붙여 오는 것과 같음. Send to Chat은 고칠 칸에 형광펜 칠해 돌려주기, Restore는 '방금 한 단계 취소'",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Genspark AI Sheets",
+        "일반 대화형 AI 답변",
+        "Excel에서 직접 작업"
+      ],
+      "rows": [
+        [
+          "결과",
+          "실제 시트(수식·서식·차트)",
+          "대화창 표·글",
+          "내가 만든 시트"
+        ],
+        [
+          "자료 수집",
+          "웹·SEC·Yahoo Finance 등 자동 수집 + 출처",
+          "검색 결과 요약",
+          "직접 검색·복사"
+        ],
+        [
+          "고치기",
+          "범위 선택 → Send to Chat + 직접 편집",
+          "다시 요청",
+          "직접 수정"
+        ],
+        [
+          "되돌리기",
+          "결과 카드 Restore(단계 단위)",
+          "대화 기록",
+          "실행 취소·파일 사본"
+        ],
+        [
+          "내보내기",
+          "XLSX(수식·서식 유지)·Share 링크",
+          "복사·붙여 넣기",
+          "파일 그대로"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "요청 → 에이전트 실행",
+        "body": "① 홈 화면 아래 AI Sheets 또는 사이드바 + (New)로 시작 ② 필요한 표를 말로 요청(대상·항목·개수·기간) ③ 에이전트가 정리·SQL·Python·Excel 수식·차트를 단계별 실행 ④ 결과 확인 후 셀 직접 수정·후속 요청·내보내기. 출력 언어 설정은 없고 마지막 메시지 언어로 답함 → 한국어로 요청"
+      },
+      {
+        "title": "자료 넣는 3가지 길",
+        "body": "① 기본 자료원: SEC 공시·Yahoo Finance(재무), Google Scholar(논문), Amazon(상품), 일반 웹 + 중요 값 교차 확인 ② 파일 업로드: 대화창에 Excel·PDF·Word·이미지 등 첨부 ③ MCP 연결: 대화창 Tools → MCP에서 Google Drive·Supabase·Custom MCP(기업 DB). 한 번에 읽는 범위는 3,000셀 → 큰 표는 나눠 처리"
+      },
+      {
+        "title": "고치기·되돌리기·내보내기",
+        "body": "① 직접 편집: 복사·붙여 넣기·Excel 수식·서식·시트 추가·삭제, 오른쪽 위 Fullscreen ② 범위 선택 → Send to Chat → 그 영역만 수정·분석·차트 ③ 결과 카드 Restore: 그 단계 전 상태로 복원(탐색형 버전 기록 아님, AI 응답 중 비활성) ④ 왼쪽 위 Export → Export as XLSX(수식·서식·계산 유지) ⑤ 오른쪽 위 Share 권한 설정 후 링크(보기·공동 편집). 프로젝트 삭제는 복구 불가"
+      }
+    ],
+    "can": [
+      "요청 한 줄로 회사·상품·논문·통계 목록을 출처 달린 표로 만들기",
+      "업로드한 Excel·PDF·Word·이미지 속 표를 정리·분석",
+      "말로 수식·차트 만들기(차트 11종)",
+      "데이터에 질문하고 근거 셀이 표시된 답변 받기",
+      "범위를 골라 그 부분만 다시 고치기(Send to Chat)",
+      "수식·서식을 살린 XLSX로 내보내기·링크 공유"
+    ],
+    "cannot": [
+      "피벗 테이블(Power Pivot 포함) 만들기",
+      "VBA·매크로 실행(코드 작성만 가능 → 데스크톱 Excel에서 실행)",
+      "ODBC·OLEDB·외부 링크 같은 Excel 외부 데이터 연결, Power Query, 사용자 정의 함수",
+      "3D 차트 등 복잡한·옛 형식 차트",
+      "모바일에서 편집(보기만 가능)",
+      "버전 목록 탐색(Restore는 단계 단위 복원만)"
+    ],
+    "safety": [
+      "수집한 숫자는 틀릴 수 있음 → 중요한 값은 출처 셀·원문 링크와 직접 대조 후 사용(도움말 권고)",
+      "고객 명단·연락처·성적·급여 등 개인정보와 내부 기밀 파일은 업로드하지 않음 → 이름은 '수강생A'처럼 가명 처리",
+      "Share 링크 권한(보기·편집) 확인 후 공유, 지원팀에 보여 줄 때도 공개 링크 대신 이메일로 Viewer 공유(도움말 권고)",
+      "프로젝트 삭제는 되돌릴 수 없음 → 필요한 결과는 먼저 Export as XLSX로 백업",
+      "웹에서 모은 자료의 저작권·이용 약관 확인, 상업 보고서에 쓸 때는 원출처 표기"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① 말 한 줄로 만든 웹 자료 조사 표(출처 칸 포함) + ② 업로드한 엑셀 파일 분석 답변·차트 + ③ Send to Chat으로 고친 범위 + ④ Restore 되돌리기 기록 + ⑤ XLSX 파일 또는 Share 링크. 비포(검색·복사·수식 2시간)가 애프터(요청 + 부분 수정)로 바뀜",
+    "follow": [
+      {
+        "title": "AI Sheets 열기",
+        "minutes": 3,
+        "do": "PC 브라우저에서 genspark.ai 로그인 → 홈 화면 아래 AI Sheets 또는 왼쪽 사이드바 + (New) → AI Sheets",
+        "prompt": "",
+        "expect": "AI Sheets 대화 입력 화면",
+        "note": "메뉴 위치는 도움말 기준 [확인 필요]. 모바일은 보기 전용 → PC 사용"
+      },
+      {
+        "title": "웹 자료 조사 표 만들기",
+        "minutes": 10,
+        "do": "아래 프롬프트 붙여 넣고 실행 → 에이전트 단계(수집·정리) 진행 상황 지켜보기 → 표·출처 칸 확인",
+        "prompt": "국내에서 많이 쓰는 대화형 AI 서비스 6개를 표로 정리해 줘. 열: 서비스 이름, 만든 회사, 무료 사용 가능 여부, 대표 유료 요금제 이름, 월 요금(공식 사이트 표기 그대로, 통화 포함), 확인한 출처 링크. 모르는 값은 지어내지 말고 '확인 필요'로 적어 줘. 한국어로 답해 줘.",
+        "expect": "6행 × 6열 표 + 출처 링크 칸",
+        "note": "요금은 자주 바뀜 → 출처 링크 1~2개를 직접 열어 대조. 일부만 성공해도 크레딧 차감"
+      },
+      {
+        "title": "엑셀 파일 올려 분석·차트",
+        "minutes": 10,
+        "do": "새 프로젝트 → 대화창에 실습용 엑셀 파일(월별 수강 인원 등) 첨부 → 아래 프롬프트 실행",
+        "prompt": "첨부한 파일을 분석해 줘. ① 월별 합계와 전월 대비 증감률 열을 Excel 수식으로 추가 ② 가장 많이 늘어난 달과 줄어든 달을 근거 셀과 함께 알려 줘 ③ 월별 합계를 세로 막대 차트로 만들어 줘.",
+        "expect": "수식 열 추가된 시트 + 근거 셀 표시 답변 + 세로 막대 차트",
+        "note": "개인정보 없는 파일만 사용. 수식 입력줄에서 실제 수식인지 확인"
+      },
+      {
+        "title": "Send to Chat·Restore",
+        "minutes": 7,
+        "do": "증감률 열 범위 드래그 선택 → Send to Chat → 아래 지시 입력 → 결과 확인 → 결과 카드 Restore를 눌러 이 단계 전으로 되돌려 보기 → 다시 같은 지시로 복구",
+        "prompt": "선택한 범위를 소수점 첫째 자리 퍼센트 형식으로 바꾸고, 10% 이상 늘어난 칸은 초록색, 줄어든 칸은 빨간색으로 표시해 줘.",
+        "expect": "선택 범위만 서식이 바뀐 시트 + Restore 경험",
+        "note": "Restore는 AI 응답 중엔 비활성, 버전 목록이 아니라 단계 단위 복원"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 업무 조사 표",
+        "minutes": 10,
+        "do": "내가 자주 찾는 자료 1개를 아래 틀로 요청",
+        "prompt": "[조사 대상] ○○(예: 우리 지역 평생교육 강좌, 30만 원 이하 노트북)\n[개수] ○개\n[열] ① ○○ ② ○○ ③ ○○ ④ 출처 링크\n[조건] ○○(예: 2026년 기준, 공식 사이트 자료만)\n[하지 말 것] 모르는 값은 지어내지 말고 '확인 필요'로 적을 것\n[언어] 한국어",
+        "expect": "내 업무에 바로 쓸 출처 달린 조사 표",
+        "note": "중요 숫자 3개는 출처 링크로 직접 확인"
+      },
+      {
+        "title": "질문하고 차트 바꾸기",
+        "minutes": 6,
+        "do": "만든 표에 질문 1개 + 다른 차트 종류 요청",
+        "prompt": "이 표에서 가장 눈에 띄는 차이 3가지를 근거 셀과 함께 짧게 알려 줘. 그리고 핵심 숫자 열을 가로 막대 차트로 만들어 줘.",
+        "expect": "근거 셀 달린 요약 3줄 + 가로 막대 차트",
+        "note": "차트가 안 바뀌면 시트 이름·차트 이름을 지정해 다시 요청"
+      },
+      {
+        "title": "XLSX 내보내기·공유",
+        "minutes": 4,
+        "do": "왼쪽 위 Export → Export as XLSX → 내 컴퓨터 Excel에서 열어 수식 유지 확인 → 필요하면 오른쪽 위 Share → 권한 확인 → 링크 복사",
+        "prompt": "",
+        "expect": "수식·서식이 살아 있는 XLSX 파일 또는 공유 링크",
+        "note": "다운로드가 안 되면 다운로드 폴더·genspark.ai 다운로드 허용 확인"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "PDF 속 표(공공 통계 보도자료 등) 1개를 올려 시트로 바꾸고, 원본과 숫자 5개 대조해 틀린 칸 수 기록하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "같은 조사 표를 '출처 링크 열 없이' 한 번, '출처 링크 필수 + 모르면 확인 필요'로 한 번 요청해 지어낸 값 개수 비교하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Google Drive를 Tools → MCP로 연결해 내 드라이브 시트를 분석하고 HTML 대시보드로 만들게 한 뒤, 작업 1건당 크레딧 사용량 기록하기 [확인 필요]"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "짝과 조사 표를 바꿔 보고 '출처 링크 있음/없음, 지어낸 값 의심 칸, 개인정보 있음/없음' 3가지 체크 진행",
+    "quiz": [
+      {
+        "q": "AI Sheets에서 표 일부 범위만 AI에게 고치게 하려면?",
+        "options": [
+          "Export as XLSX를 누른다",
+          "범위를 선택하고 Send to Chat을 누른다",
+          "Fullscreen을 누른다",
+          "새 프로젝트를 만든다"
+        ],
+        "answer": 1,
+        "explain": "범위 선택 → Send to Chat으로 그 영역만 수정·분석·차트 요청 가능"
+      },
+      {
+        "q": "다음 중 AI Sheets 도움말에서 '지원하지 않는다'고 밝힌 기능은?",
+        "options": [
+          "Excel 수식 사용",
+          "세로 막대 차트",
+          "피벗 테이블",
+          "XLSX 내보내기"
+        ],
+        "answer": 2,
+        "explain": "피벗 테이블(Power Pivot 포함)·VBA 실행·Power Query·3D 차트 등은 미지원"
+      },
+      {
+        "q": "결과 카드의 Restore 버튼은 무엇을 하나요?",
+        "options": [
+          "모든 버전 목록을 보여 준다",
+          "그 단계 전 상태로 시트를 되돌린다",
+          "파일을 XLSX로 저장한다",
+          "삭제한 프로젝트를 복구한다"
+        ],
+        "answer": 1,
+        "explain": "Restore는 그 단계 전 상태로 복원(탐색형 버전 기록 아님). 삭제한 프로젝트는 복구 불가"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "요청 구성",
+        "high": "대상·개수·열·조건·하지 말 것·언어 6요소 명시 + 출처 열 포함",
+        "mid": "대상과 열만 명시",
+        "low": "'표 만들어 줘' 한 줄"
+      },
+      {
+        "criterion": "수정·분석",
+        "high": "Send to Chat·직접 편집·Restore를 상황에 맞게 사용 + 근거 셀 확인",
+        "mid": "후속 요청만 반복",
+        "low": "수정 없이 첫 결과 그대로"
+      },
+      {
+        "criterion": "확인·안전",
+        "high": "중요 숫자 출처 대조 + 개인정보 없음 + XLSX 백업·공유 권한 확인",
+        "mid": "일부만 확인",
+        "low": "확인 없이 사용 또는 개인정보 업로드"
+      }
+    ],
+    "next": [
+      "Genspark AI Docs — 프롬프트 한 번으로 디자인된 문서 (AI-2026-10-CAT03-028)",
+      "Genspark AI Slides Gen-1 Slides — 슬라이드 만들기 (AI-2026-10-CAT03-011)",
+      "Genspark for Word·Excel·PowerPoint 추가 기능 (AI-2026-10-CAT03-023)",
+      "Genspark AgentBase — 표·보기·대시보드 자동 생성 (AI-2026-10-CAT07-009)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 검색 창 10개 열고 복사해 만든 표와 AI Sheets 요청 한 줄로 만든 표 나란히 보여 주기",
+        "note": "비포/애프터"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 정의, 자료 넣는 3가지 길(기본 자료원·업로드·MCP), 차트·분석, Send to Chat·Restore·Export, 미지원 기능, 요금·크레딧, 사실 확인·개인정보",
+        "note": "지어낸 숫자 사례 강조"
+      },
+      {
+        "time": "35~65분",
+        "content": "2부 따라 하기: AI Sheets 열기 → 웹 조사 표 → 엑셀 파일 분석·차트 → Send to Chat·Restore",
+        "note": "강사 예시 파일 배포"
+      },
+      {
+        "time": "65~85분",
+        "content": "2부 내 것 만들기: 내 업무 조사 표 → 질문·차트 바꾸기 → XLSX 내보내기·공유",
+        "note": "출처 대조 3개 필수"
+      },
+      {
+        "time": "85~95분",
+        "content": "3부 정리: 짝 상호 체크, 퀴즈 3문제, 다음 단계",
+        "note": "전체 95분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "왼쪽 표는 제가 검색 창을 열 개 띄워 놓고 두 시간 동안 복사해서 만든 거고, 오른쪽 표는 AI Sheets에 한 줄 요청해서 만든 겁니다. 오늘은 이렇게 표를 받고, 숫자가 맞는지 확인하고, 필요한 곳만 고치는 방법을 배웁니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "AI Sheets는 대화창 답변이 아니라 진짜 시트를 만들어 줍니다. 수식도 진짜 수식이라 엑셀로 내려받아도 계산이 살아 있어요. 고칠 곳은 범위를 선택해서 Send to Chat을 누르면 그 부분만 다시 시킬 수 있습니다."
+      },
+      {
+        "label": "보안 안내",
+        "text": "수강생 명단이나 연락처가 있는 파일은 올리지 마세요. 이름은 수강생A, 수강생B처럼 바꾼 파일로 연습하고, 공유 링크는 권한을 꼭 확인하세요."
+      },
+      {
+        "label": "마무리",
+        "text": "AI가 모은 숫자는 그럴듯해도 틀릴 수 있습니다. 중요한 숫자는 출처 링크를 직접 열어 대조하고, 프로젝트를 지우기 전에는 꼭 XLSX로 내려받아 두세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "무료 크레딧 부족으로 작업 실패",
+        "response": "짝 계정으로 이어서 진행, 본인은 요청 6요소 틀 작성·출처 대조 담당, 셀 직접 편집 위주로 실습"
+      },
+      {
+        "situation": "웹 수집이 오래 걸리거나 일부만 채워짐",
+        "response": "개수를 6개 → 3개로 줄여 다시 요청, 빈 칸은 '확인 필요'로 두고 강사 사전 결과 화면으로 설명"
+      },
+      {
+        "situation": "수강생이 모바일만 가지고 옴",
+        "response": "모바일은 보기 전용 → 짝 PC로 함께 실습하거나 강사 Share 링크로 결과 보기"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "AI Sheets 메뉴를 못 찾음",
+        "fix": "홈 화면 아래 AI Sheets 또는 왼쪽 사이드바 + (New) → AI Sheets"
+      },
+      {
+        "issue": "지시했는데 시트가 안 바뀜",
+        "fix": "시트 탭 확인 → 정확한 셀 주소(예: C2:C13) 지정 → 한 번에 지시 1개씩"
+      },
+      {
+        "issue": "답이 영어로 나옴",
+        "fix": "출력 언어 설정 없음 → 마지막 메시지를 한국어로 쓰고 '한국어로 답해 줘' 추가"
+      },
+      {
+        "issue": "XLSX가 다운로드되지 않음",
+        "fix": "다운로드 폴더 확인 → 브라우저에서 genspark.ai 다운로드 허용 → PC 브라우저로 다시 시도"
+      },
+      {
+        "issue": "큰 파일에서 화면이 느려지거나 멈춤",
+        "fix": "브라우저에서 계산하므로 시트를 나누거나 새 프로젝트로 시작, 한 번에 읽는 범위 3,000셀 고려"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 계정으로도 쓸 수 있나요?",
+        "a": "가능함. 하루 100크레딧(평생 한도까지)에서 차감. Plus·Pro는 Standard 모드 작업이 Free Quota로 처리됨"
+      },
+      {
+        "q": "만든 표를 엑셀에서 계속 쓸 수 있나요?",
+        "a": "왼쪽 위 Export → Export as XLSX로 수식·서식·계산 유지한 채 저장 가능"
+      },
+      {
+        "q": "피벗 테이블도 만들어 주나요?",
+        "a": "미지원. 대신 말로 요약 표·차트 요청 가능, 피벗은 내려받은 뒤 Excel에서 작업"
+      },
+      {
+        "q": "AI가 모은 숫자를 그대로 믿어도 되나요?",
+        "a": "도움말도 중요 값은 출처 셀·인용과 대조하라고 권고함 → 보고서용 숫자는 반드시 원문 확인"
+      },
+      {
+        "q": "실수로 지운 단계를 되돌릴 수 있나요?",
+        "a": "결과 카드 Restore로 그 단계 전 상태 복원 가능. 프로젝트 삭제는 복구 불가"
+      },
+      {
+        "q": "회사 데이터베이스와 연결할 수 있나요?",
+        "a": "대화창 Tools → MCP에서 Google Drive·Supabase·Custom MCP 연결 가능, 기업 DB는 조건 충족 시 Custom MCP 사용"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "강사 프롬프트로 조사 표 1개 + 출처 링크 1개 열어 보기 + Export as XLSX까지만"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "6요소 요청으로 내 업무 조사 표 + 엑셀 파일 분석·차트 + Send to Chat 부분 수정 + 출처 대조 3개"
+      },
+      {
+        "level": "고급(자동화·개발)",
+        "guide": "MCP로 Google Drive·Supabase 연결, HTML 대시보드, 큰 표 3,000셀 단위 분할 처리, 작업당 크레딧 측정·Excel 데스크톱용 VBA 생성"
+      },
+      {
+        "level": "시니어",
+        "guide": "'우리 동네 복지관 강좌 목록'·'가계부 월별 합계 차트' 같은 생활 표 1개, 글자 크게 보기 위해 Fullscreen 사용"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "'한국 공휴일·기념일 표'를 한국어·모국어 두 열로 요청 + 표 읽기 어휘(합계·증감률·평균) 학습 자료로 활용"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: '요청은 6요소로' + '중요 숫자는 출처 대조' + '삭제 전 XLSX 백업'",
+      "'모르면 확인 필요로 적어 줘' 한 줄 유무로 지어낸 값이 달라지는 비교 활동이 사실 확인 교육에 효과적",
+      "AI Docs·AI Slides와 같은 화면 흐름 → 조사 표 → 문서 → 발표 자료 연속 수업으로 확장 가능",
+      "미지원 기능(피벗·VBA 실행·Power Query)을 먼저 알려 주면 Excel 숙련 수강생의 실망 예방"
+    ],
+    "day_before": [
+      "강사 계정으로 AI Sheets 진입·조사 표·Send to Chat·Restore·Export as XLSX·Share 화면 캡처 준비",
+      "무료 계정으로 조사 표 1개 생성 → 크레딧 사용량·소요 시간 측정 [확인 필요 항목]",
+      "개인정보 없는 실습용 엑셀 파일(월별 수강 인원 12행) 준비·배포",
+      "비포/애프터 시연용 '손으로 만든 표'와 AI Sheets 결과 미리 준비",
+      "수강생용 요청 6요소 틀 인쇄 또는 공유 문서 준비"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 작업 1건당 크레딧 사용량 — 도움말·요금 페이지에 단가 없음",
+    "[확인 필요] 메뉴 위치(홈 화면 아래 AI Sheets·사이드바 + New), Tools → MCP 화면 이름 — 도움말 표기 기준, 실제 화면 재현 못 함",
+    "[확인 필요] 업로드 가능 파일 형식 전체·파일 크기 제한 — 도움말은 'Excel·PDF·Word·이미지 등'만 표기",
+    "블로그(2025-05-08)의 'AI를 수식처럼 셀마다 적용(메일·이미지·음성 일괄 생성)'은 현재 도움말에 설명 없음 → 실습 단계에서 제외",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — Genspark 도움말(AI Sheets·Membership Plans)·공식 블로그 기준"
+  ],
+  "sources": [
+    {
+      "title": "Genspark Help Center – AI Sheets",
+      "url": "https://www.genspark.ai/helpcenter?doc=tutorials_AI_Sheets",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Genspark Blog – Introducing Genspark AI Sheets",
+      "url": "https://www.genspark.ai/blog/genspark-ai-sheets",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Genspark Help Center – Membership Plans",
+      "url": "https://www.genspark.ai/helpcenter/membership-plans",
+      "checked": "2026-10-19"
+    }
+  ]
+}
