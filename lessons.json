@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 155,
+  "count": 156,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-027",
+      "version": "v1.0",
+      "created_at": "2026-10-20 02:10 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "휴대폰 Grok Bot 앱으로 음성 채팅·사진 공유로 일을 맡기고, 알림으로 승인·메일 발송 확인, 클라우드 컴퓨터 화면 확인·루틴 점검까지 하는 '이동 중 업무 지시 루틴' 1개를 만들 수 있음",
+      "summary": "Grok Bot 모바일 앱(iPhone·iPad·Android) — ① 데스크톱과 같은 Bot·대화·루틴·커넥터·클라우드 컴퓨터 동기화 ② 글·받아쓰기(Start dictation)·실시간 음성 채팅(Start voice chat) ③ 사진·파일 첨부 + iPhone 공유 시트 Attach ④ 알림으로 결과·질문·승인 확인 + Send Email·Send Message·Discard ⑤ 컴퓨터 화면 보기·Take over·I'm done ⑥ 루틴 기록 보기·Active 켜고 끄기 ⑦ 통합 검색",
+      "tool": "Grok",
+      "feature": "Grok Bot 모바일 앱(Grok Bot for Mobile: iPhone·iPad·Android) — 데스크톱과 같은 Bot·대화·루틴·커넥터·클라우드 컴퓨터 동기화, Start dictation·Start voice chat(실시간 음성 채팅)·음성 메모 재생, 사진·파일 첨부·iPhone 공유 시트 Attach(Android는 텍스트만), Send Email·Send Message·Discard, 컴퓨터 화면 보기·Take over·I'm done, 루틴 Run history·Active, 통합 검색(Messages·Bots·Group Chats·Files·Routines), iOS 18·Android 9 이상",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-09-02",
+      "categories": [
+        "CAT-08",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-EDU",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 휴대폰 Grok Bot 앱 로그인·알림 켜기 완료 + ② 음성 채팅으로 맡긴 '주간 일정 정리' 결과 1개 + ③ 공유 시트로 첨부한 사진 요약 1개 + ④ 메일 초안 Send/Discard 판단 기록 + ⑤ 루틴 Run history 확인·Active 끄기/켜기 + ⑥ '이동 중 업무 지시 체크리스트' 1장",
+      "access": "paid",
+      "total_minutes": 72,
+      "notice": "",
+      "emoji": "📱",
+      "one_liner": "폰으로 Bot에게 일 맡기고 승인까지"
+    },
     {
       "id": "AI-2026-10-CAT08-026",
       "version": "v1.0",

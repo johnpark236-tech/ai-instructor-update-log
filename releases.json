@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 01:05 KST",
+  "updated_at": "2026-10-20 02:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3466,6 +3466,21 @@
       },
       "checked": "2026-10-19",
       "lesson_id": "AI-2026-10-CAT05-023"
+    },
+    {
+      "id": "grok-2026-09-02-bot-mobile",
+      "date": "2026-09-02",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Bot 모바일 앱 — iPhone·iPad·Android에서 음성으로 일 맡기고 승인",
+      "summary": "Android 앱 공개로 iPhone·iPad·Android 모두 지원, 데스크톱과 Bot·대화·루틴 동기화, 음성 채팅·공유 시트 첨부·알림 승인·컴퓨터 Take over·루틴 Active",
+      "source": {
+        "title": "Cursor Forum – Grok Bot is Now Live on Android",
+        "url": "https://forum.cursor.com/t/grok-bot-is-now-live-on-android/170384"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT08-027"
     }
   ]
 }

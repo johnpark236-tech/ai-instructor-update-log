@@ -1,0 +1,588 @@
+{
+  "id": "AI-2026-10-CAT08-027",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-20 02:10 KST",
+  "checked": "2026-10-20",
+  "review_by": "2027-01-20",
+  "title": "휴대폰 Grok Bot 앱으로 음성 채팅·사진 공유로 일을 맡기고, 알림으로 승인·메일 발송 확인, 클라우드 컴퓨터 화면 확인·루틴 점검까지 하는 '이동 중 업무 지시 루틴' 1개를 만들 수 있음",
+  "summary": "Grok Bot 모바일 앱(iPhone·iPad·Android) — ① 데스크톱과 같은 Bot·대화·루틴·커넥터·클라우드 컴퓨터 동기화 ② 글·받아쓰기(Start dictation)·실시간 음성 채팅(Start voice chat) ③ 사진·파일 첨부 + iPhone 공유 시트 Attach ④ 알림으로 결과·질문·승인 확인 + Send Email·Send Message·Discard ⑤ 컴퓨터 화면 보기·Take over·I'm done ⑥ 루틴 기록 보기·Active 켜고 끄기 ⑦ 통합 검색",
+  "glance": {
+    "emoji": "📱",
+    "one_liner": "폰으로 Bot에게 일 맡기고 승인까지",
+    "cards": [
+      {
+        "icon": "🎙️",
+        "title": "음성 채팅",
+        "text": "말로 지시, 받아쓰기도 가능"
+      },
+      {
+        "icon": "📎",
+        "title": "공유 시트",
+        "text": "사진·파일을 바로 첨부(iPhone)"
+      },
+      {
+        "icon": "🔔",
+        "title": "알림 승인",
+        "text": "메일 발송 전 Send·Discard"
+      },
+      {
+        "icon": "🖥️",
+        "title": "컴퓨터 보기",
+        "text": "Bot 화면 확인·Take over"
+      }
+    ],
+    "diagram": {
+      "title": "이동 중 업무 흐름",
+      "nodes": [
+        {
+          "icon": "🎙️",
+          "label": "음성으로 지시"
+        },
+        {
+          "icon": "☁️",
+          "label": "클라우드 실행"
+        },
+        {
+          "icon": "🔔",
+          "label": "알림 도착"
+        },
+        {
+          "icon": "✅",
+          "label": "승인·보내기"
+        },
+        {
+          "icon": "💻",
+          "label": "데스크톱 이어서"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "모바일 앱 전",
+        "text": "책상 앞 컴퓨터에서만 지시·승인 → 외출 중엔 Bot 작업이 멈춰 대기"
+      },
+      "after": {
+        "label": "모바일 앱 후",
+        "text": "폰으로 말로 지시·알림에서 승인 → 앱을 닫아도 클라우드에서 계속"
+      }
+    },
+    "cautions": [
+      "보내기 전 수신자·내용 확인",
+      "비밀번호는 Take over로 직접",
+      "공개 장소 음성 채팅 주의"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Bot 모바일 앱(Grok Bot for Mobile: iPhone·iPad·Android) — 데스크톱과 같은 Bot·대화·루틴·커넥터·클라우드 컴퓨터 동기화, Start dictation·Start voice chat(실시간 음성 채팅)·음성 메모 재생, 사진·파일 첨부·iPhone 공유 시트 Attach(Android는 텍스트만), Send Email·Send Message·Discard, 컴퓨터 화면 보기·Take over·I'm done, 루틴 Run history·Active, 통합 검색(Messages·Bots·Group Chats·Files·Routines), iOS 18·Android 9 이상",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-09-02",
+  "categories": [
+    "CAT-08",
+    "CAT-01"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-BIZ",
+    "JOB-EDU",
+    "JOB-SEN"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 25,
+    "practice": 40,
+    "wrap": 7
+  },
+  "prerequisites": [
+    "스마트폰 — iPhone iOS 18 이상(iPad는 iPadOS 18 이상) 또는 Android 9 이상",
+    "Grok Bot 포함 요금제 — The X Subscription Premium 이상 또는 문서 기준 Cursor 유료 개인·Teams·SuperGrok 계정 연결 [확인 필요]",
+    "App Store·Google Play에서 'Grok Bot' 앱 설치(Grok 앱과 별도)",
+    "(권장) 데스크톱 Grok Bot 앱에 이미 만든 Bot 1개 — 없으면 첫 실행 안내에서 첫 Bot 고르기",
+    "연습용 사진 1장(개인정보 없는 행사 포스터·메모 사진 등)"
+  ],
+  "outcome": "① 휴대폰 Grok Bot 앱 로그인·알림 켜기 완료 + ② 음성 채팅으로 맡긴 '주간 일정 정리' 결과 1개 + ③ 공유 시트로 첨부한 사진 요약 1개 + ④ 메일 초안 Send/Discard 판단 기록 + ⑤ 루틴 Run history 확인·Active 끄기/켜기 + ⑥ '이동 중 업무 지시 체크리스트' 1장",
+  "objectives": [
+    "모바일 앱과 데스크톱 앱이 같은 Bot·대화·클라우드 컴퓨터를 공유하고, 앱을 닫아도 작업이 이어지는 구조를 설명할 수 있음",
+    "받아쓰기·음성 채팅·공유 시트 첨부로 휴대폰에서 Bot에게 일을 맡기고 알림에서 승인·보내기·버리기를 판단할 수 있음",
+    "모바일에서 할 수 있는 일(화면 보기·Take over·루틴 켜고 끄기·검색)과 데스크톱이 필요한 일(루틴 수정·시연으로 가르치기)을 구분할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "모바일 앱 설치 무료, 별도 앱 요금 없음. 다만 Grok Bot 포함 요금제 필요 — The X Subscription Premium(월 $30) 이상. 모바일 사용도 같은 사용량에서 차감",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 제한 이용 — Grok Bot 미포함"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8 (연 $80)",
+        "features": "Grok·Cursor 기본 사용량 — Grok Bot 미포함"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30 (연 $300)",
+        "features": "Grok Bot 포함(모바일·데스크톱) + Plus의 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100 (연 $1,000)",
+        "features": "Premium 전체 + Plus의 15배 사용량"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200 (연 $2,000)",
+        "features": "Super 전체 + Plus의 50배 사용량"
+      },
+      {
+        "name": "Enterprise",
+        "price": "영업 문의",
+        "features": "관리자가 Grok Bot 켜기·그룹 제한, Auto-review 강제"
+      }
+    ],
+    "note": "요금은 xAI 공식 발표 'The X Subscription' 기준(미국 달러·세금 별도, 2026-10-20 확인). 모바일 문서(Grok Bot for Mobile)는 아직 'Cursor 유료 개인·Cursor Teams 또는 SuperGrok·SuperGrok Plus·SuperGrok Heavy 연결'로 안내 → 두 문서 기준이 다름 [확인 필요]. 앱 안 App Store·Google Play 구독 관리 메뉴 있음. 원화 가격 [확인 필요]",
+    "checked": "2026-10-20",
+    "sources": [
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI Docs – Grok Bot for Mobile",
+        "url": "https://docs.x.ai/grok-bot/mobile"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-08-11",
+      "text": "Grok Bot 베타 공개 — Mac·Windows·Linux + iPhone·iPad 앱, Android는 예고"
+    },
+    {
+      "date": "2026-09-02",
+      "text": "Android 앱 공개 — 폰에서 일 맡기기·데스크톱과 대화 동기화·잠금 후에도 클라우드 작업 계속(Cursor 포럼 공지)"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "The X Subscription 발표 — Grok·Grok Bot·Cursor·X Premium 통합 요금제"
+    },
+    {
+      "date": "2026-10-20",
+      "text": "xAI Docs 'Grok Bot for Mobile' 기준 확인 — 음성 채팅·공유 시트·Take over·루틴·검색"
+    }
+  ],
+  "theory": {
+    "definition": "Grok Bot 모바일 앱은 데스크톱 Grok Bot의 '리모컨'임. ① 같은 Bot·대화·루틴·커넥터·클라우드 컴퓨터를 그대로 동기화 ② 폰에서 글·음성으로 일 맡기기 ③ 알림으로 결과·질문·승인 받기 ④ 앱을 닫아도 작업은 클라우드에서 계속",
+    "analogy": "사무실에 있는 비서에게 외출 중 전화로 일을 시키고 '보내도 될까요?' 문자에 '네'로 답하는 것과 같음. 비서(Bot)와 책상(클라우드 컴퓨터)은 그대로, 내 위치만 바뀜",
+    "comparison": {
+      "headers": [
+        "구분",
+        "모바일 앱",
+        "데스크톱 앱"
+      ],
+      "rows": [
+        [
+          "일 맡기기",
+          "글·받아쓰기·실시간 음성 채팅",
+          "글·음성·화면 시연으로 가르치기"
+        ],
+        [
+          "첨부",
+          "사진 촬영·파일 + iPhone 공유 시트(Android는 텍스트만)",
+          "끌어 놓기 최대 6개, 문서 25MB·영상 200MB"
+        ],
+        [
+          "승인·보내기",
+          "알림 → Send Email·Send Message·Discard",
+          "승인 카드·Auto-review 규칙 상세 설정"
+        ],
+        [
+          "루틴",
+          "기록 보기·Active 켜고 끄기·삭제",
+          "일정·지시 수정·테스트"
+        ],
+        [
+          "Bot 관리",
+          "New Bot·New Group Chat·프로필 수정",
+          "전체 기능 + Team Bot 만들기·출판"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "동기화 + 클라우드 실행",
+        "body": "① 같은 계정이면 Bot 목록·대화·루틴·커넥터 그대로 ② 일은 폰이 아니라 Bot의 클라우드 컴퓨터에서 실행 → 폰을 잠그거나 앱을 닫아도 계속 ③ 결과·질문·승인 요청이 있을 때 알림 → 첫 실행 때 알림 허용 필수"
+      },
+      {
+        "title": "말로 맡기기 3가지",
+        "body": "① Start dictation: 말한 내용을 글로 받아 적어 보냄 ② Start voice chat: 입력창이 비었을 때 실시간 음성 대화, 통화 중 헤더 아래 Voice chat 표시 ③ Bot이 보낸 음성 메모 재생. 대화마다 입력 중 초안 자동 저장"
+      },
+      {
+        "title": "폰에서 확인·통제",
+        "body": "① 메일·Slack 초안은 Send Email·Send Message 또는 Discard ② 대화에서 Bot 컴퓨터 화면 보기 → 비밀번호·2단계 인증·CAPTCHA는 직접 조작 → I'm done으로 돌려주기 ③ Bot 프로필에서 루틴 일정·다음 실행·Run history 보기·Active로 일시 중지"
+      }
+    ],
+    "can": [
+      "출근길에 음성 채팅으로 '오늘 일정 정리·회의 자료 준비' 맡기기",
+      "iPhone 사진 앱에서 공유 → Grok Bot → Attach로 사진을 바로 대화에 첨부",
+      "알림으로 온 메일 초안을 읽고 Send Email 또는 Discard 결정",
+      "Bot이 로그인 막힘에 걸리면 화면을 직접 조작해 해결 후 I'm done",
+      "홈 화면 검색으로 Messages·Bots·Group Chats·Files·Routines 한꺼번에 찾기"
+    ],
+    "cannot": [
+      "루틴 일정·지시 수정, 루틴 테스트 — 데스크톱 앱 필요",
+      "화면 시연으로 Bot 가르치기(teach-by-demonstration) — 모바일 미지원",
+      "Android 공유 시트로 사진·파일 첨부 — 현재 텍스트만",
+      "Team Bot 만들기·설정·출판 — 데스크톱 앱 전용",
+      "데스크톱과 같은 전체 언어 목록 — 모바일은 언어 수 더 적음"
+    ],
+    "safety": [
+      "Send Email·Send Message 전 받는 사람·첨부·내용을 끝까지 확인 → 애매하면 Discard 후 데스크톱에서 검토",
+      "비밀번호·인증 코드는 Bot에게 말하지 말고 Take over로 직접 입력",
+      "지하철·카페 등 공개 장소 음성 채팅은 고객·학생 개인정보 언급 금지",
+      "실습 사진은 얼굴·주소·학생 이름이 없는 것만 사용",
+      "휴대폰 잠금 화면 알림 미리보기에 업무 내용이 보일 수 있음 → 기기 알림 미리보기 설정 점검"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① 앱 로그인·알림 켜기 + ② 음성 채팅으로 맡긴 주간 일정 정리 + ③ 공유 시트 사진 요약 + ④ 메일 초안 Send/Discard 판단 + ⑤ 루틴 확인·Active 전환 + ⑥ 이동 중 업무 지시 체크리스트. 비포(책상 앞에서만 지시·승인)가 애프터(폰으로 지시·알림 승인)로 바뀜",
+    "follow": [
+      {
+        "title": "설치·로그인·알림",
+        "minutes": 6,
+        "do": "App Store·Google Play에서 Grok Bot 설치 → Log In or Sign Up → 브라우저에서 Cursor 인증 → (SuperGrok 연결 계정) Link Grok Account → Finished Linking? Refresh My Status → 알림 허용",
+        "prompt": "",
+        "expect": "데스크톱과 같은 Bot 목록 표시 + 알림 허용",
+        "note": "새 사용자는 첫 실행 안내 → 첫 Bot 고르기 → 공유 컴퓨터 준비 대기"
+      },
+      {
+        "title": "음성 채팅으로 지시",
+        "minutes": 8,
+        "do": "Bot 대화 열기 → 입력창 비운 채 Start voice chat → 아래 내용을 말하기 → 끝나면 통화 종료",
+        "prompt": "이번 주 내 캘린더 일정을 요일별로 정리해 줘. 겹치는 일정이 있으면 표시하고, 준비물이 필요한 일정은 따로 알려 줘. 메일이나 메시지는 보내지 마.",
+        "expect": "요일별 일정 정리 답변(캘린더 커넥터 연결 시)",
+        "note": "커넥터가 없으면 '이번 주 할 일 5개를 우선순위로 정리해 줘'로 바꿔 진행"
+      },
+      {
+        "title": "공유 시트로 사진 첨부",
+        "minutes": 7,
+        "do": "iPhone 사진 앱 → 연습 사진 → 공유 → Grok Bot → 대화 선택 → Attach → 아래 지시 보내기 (Android는 카메라·이미지 버튼으로 첨부)",
+        "prompt": "이 사진 속 행사 정보(날짜, 장소, 준비물)를 3줄로 정리하고 내 일정에 넣을 수 있는 형태로 바꿔 줘. 일정에 직접 추가하지는 말고 초안만 보여 줘.",
+        "expect": "사진 내용 3줄 요약 + 일정 초안",
+        "note": "첨부물 설명·원본 수정 금지 여부를 함께 적으면 정확도 높아짐"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "메일 초안 승인 판단",
+        "minutes": 7,
+        "do": "Bot에게 메일 초안 요청 → 알림·대화의 초안 카드 확인 → 받는 사람·내용 점검 → 연습이므로 Discard",
+        "prompt": "방금 정리한 행사 정보를 우리 팀에 알리는 안내 메일 초안을 써 줘. 받는 사람은 나 자신으로 하고, 5줄 이내로 정중하게.",
+        "expect": "초안 카드 + Discard 기록(또는 나에게 Send Email)",
+        "note": "처음엔 받는 사람을 나 자신으로 두고 연습"
+      },
+      {
+        "title": "루틴 점검·일시 중지",
+        "minutes": 6,
+        "do": "Bot 프로필 → 루틴 선택 → 일정·다음 실행·Run history 확인 → Active 끄기 → 다시 켜기",
+        "prompt": "",
+        "expect": "루틴 기록 확인 + Active 전환 기록",
+        "note": "루틴이 없으면 데스크톱에서 만든 강사 루틴 화면으로 대체. 일정·지시 수정은 데스크톱 필요"
+      },
+      {
+        "title": "체크리스트 만들기",
+        "minutes": 6,
+        "do": "홈 화면 검색(All)으로 오늘 대화·파일 찾기 → Bot에게 체크리스트 작성 요청",
+        "prompt": "오늘 폰으로 너에게 일을 맡긴 과정을 바탕으로 '이동 중 업무 지시 체크리스트'를 7줄 이내로 만들어 줘. 보내기 전 확인할 것, 비밀번호 입력 방법, 데스크톱에서 해야 할 일을 꼭 넣어 줘.",
+        "expect": "7줄 체크리스트 1장",
+        "note": "결과를 캡처해 공유 활동에 사용"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "받아쓰기(Start dictation)와 음성 채팅(Start voice chat)으로 같은 지시를 각각 보내 보고 어느 쪽이 내 업무에 맞는지 한 줄로 정리하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "New Group Chat으로 Bot 2개를 한 방에 넣고 @everyone으로 '내일 회의 준비' 역할 나누기 요청하기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Bot이 로그인 화면에서 멈추는 상황을 만들어 화면 보기 → Take over → I'm done으로 넘겨주는 절차를 기관용 안내 1장으로 설계하기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "짝과 체크리스트를 바꿔 읽고 '보내기 전 확인할 것' 중 내가 빠뜨린 항목 1개씩 추가 진행",
+    "quiz": [
+      {
+        "q": "휴대폰에서 Grok Bot 앱을 닫으면 맡긴 작업은 어떻게 되나요?",
+        "options": [
+          "작업이 즉시 취소된다",
+          "폰이 켜져 있을 때만 이어진다",
+          "클라우드 컴퓨터에서 계속되고 필요할 때 알림이 온다",
+          "데스크톱 앱을 열어야 다시 시작된다"
+        ],
+        "answer": 2,
+        "explain": "작업은 Bot의 클라우드 컴퓨터에서 실행 → 앱을 닫아도 계속, 결과·질문·승인 때 알림"
+      },
+      {
+        "q": "모바일 앱에서 할 수 없는 것은?",
+        "options": [
+          "루틴 Active 켜고 끄기",
+          "루틴 일정·지시 수정",
+          "Run history 보기",
+          "루틴 삭제"
+        ],
+        "answer": 1,
+        "explain": "모바일은 루틴 보기·일시 중지·삭제까지, 일정·지시 수정과 테스트는 데스크톱 앱 필요"
+      },
+      {
+        "q": "Bot이 사이트 비밀번호 입력에서 멈췄을 때 가장 안전한 방법은?",
+        "options": [
+          "채팅으로 비밀번호를 알려 준다",
+          "음성 채팅으로 비밀번호를 말한다",
+          "화면을 열어 직접 입력(Take over)하고 I'm done으로 돌려준다",
+          "작업을 지우고 처음부터 다시 맡긴다"
+        ],
+        "answer": 2,
+        "explain": "비밀번호·2단계 인증·CAPTCHA는 컴퓨터 화면을 직접 조작해 입력 후 I'm done으로 제어권 반환"
+      }
+    ],
+    "next": [
+      "Grok Bot 기본기 — Bot 만들기·루틴 (AI-2026-10-CAT08-009)",
+      "Grok Bot 승인·Auto-review 규칙 (AI-2026-10-CAT09-006)",
+      "Grok Bot 그룹 대화·Bot 간 핸드오프 (AI-2026-10-CAT08-023)",
+      "Grok Bot Team Bots — 팀 공용 Bot (AI-2026-10-CAT08-026)"
+    ],
+    "rubric": [
+      {
+        "criterion": "모바일 지시",
+        "high": "음성 채팅·공유 시트 첨부 모두 성공",
+        "mid": "둘 중 하나만 성공",
+        "low": "글로만 지시"
+      },
+      {
+        "criterion": "승인 판단",
+        "high": "받는 사람·내용 점검 후 Send/Discard 근거 기록",
+        "mid": "판단만 하고 근거 없음",
+        "low": "확인 없이 보내기"
+      },
+      {
+        "criterion": "기기 구분",
+        "high": "모바일·데스크톱 역할 3가지 이상 구분",
+        "mid": "1~2가지 구분",
+        "low": "구분 못 함"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 외출 중 Bot 작업이 멈춘 상황 vs 폰 알림으로 바로 승인하는 시연",
+        "note": "비포/애프터"
+      },
+      {
+        "time": "5~30분",
+        "content": "1부 이론: 정의, 동기화·클라우드 실행, 말로 맡기기 3가지, 모바일·데스크톱 비교, 요금, 안전",
+        "note": "'폰은 리모컨' 강조"
+      },
+      {
+        "time": "30~51분",
+        "content": "2부 따라 하기: 설치·로그인·알림 → 음성 채팅 지시 → 공유 시트 사진 첨부",
+        "note": "앱 설치는 수업 전 안내"
+      },
+      {
+        "time": "51~70분",
+        "content": "2부 내 것 만들기: 메일 초안 Send/Discard → 루틴 점검 → 체크리스트",
+        "note": "실제 발송은 나 자신에게만"
+      },
+      {
+        "time": "70~77분",
+        "content": "3부 정리: 체크리스트 짝 교환, 퀴즈 3문제, 다음 단계",
+        "note": "전체 77분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI 비서에게 일을 맡겼는데 '보내도 될까요?' 질문에 답을 못 해서 하루 종일 멈춰 있던 적 있으시죠? 오늘은 휴대폰 하나로 말로 일을 맡기고, 알림으로 바로 승인하는 방법을 해 보겠습니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "휴대폰 앱은 리모컨입니다. 일은 Bot의 클라우드 컴퓨터가 하고, 우리는 폰으로 지시하고 확인만 합니다. 그래서 앱을 닫아도 일은 계속됩니다."
+      },
+      {
+        "label": "보안 안내",
+        "text": "보내기 버튼을 누르기 전에는 받는 사람과 내용을 끝까지 읽어 주세요. 그리고 비밀번호는 절대 말로 알려 주지 말고 화면을 직접 눌러 입력합니다."
+      },
+      {
+        "label": "마무리",
+        "text": "말로 맡기고, 알림으로 확인하고, 복잡한 수정은 컴퓨터에서. 이 세 가지만 기억하시면 이동 중에도 AI 비서와 함께 일할 수 있습니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Grok Bot 포함 요금제가 없는 수강생",
+        "response": "강사 폰 화면 미러링으로 시연 + 수강생은 음성 지시 문장·체크리스트 작성 담당"
+      },
+      {
+        "situation": "Android 수강생이 공유 시트로 사진 첨부 불가",
+        "response": "정상 동작(현재 텍스트만) → 대화창 카메라·이미지 버튼으로 첨부하도록 안내"
+      },
+      {
+        "situation": "강의실 소음으로 음성 채팅 인식 불량",
+        "response": "Start dictation으로 짧게 끊어 말하기 또는 이어폰 마이크 사용, 최후엔 글 입력"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "로그인 후 Bot 목록이 비어 있음",
+        "fix": "데스크톱과 같은 계정인지 확인, SuperGrok 연결 계정은 Link Grok Account → Refresh My Status"
+      },
+      {
+        "issue": "알림이 안 옴",
+        "fix": "휴대폰 설정 → 알림 → Grok Bot 허용 확인, 방해 금지 모드 해제"
+      },
+      {
+        "issue": "Start voice chat 버튼이 안 보임",
+        "fix": "입력창에 글이 있으면 숨겨짐 → 입력창 비우기"
+      },
+      {
+        "issue": "공유 시트에 Grok Bot이 없음",
+        "fix": "공유 시트 앱 목록 '더 보기'에서 추가, Android는 텍스트만 공유 가능"
+      },
+      {
+        "issue": "루틴 일정을 바꾸려는데 메뉴 없음",
+        "fix": "정상 동작 — 모바일은 보기·Active·삭제만, 수정은 데스크톱 앱에서"
+      }
+    ],
+    "faq": [
+      {
+        "q": "폰 배터리·데이터를 많이 쓰나요?",
+        "a": "실제 작업은 클라우드 컴퓨터에서 실행, 폰은 지시·확인만 함. 음성 채팅·화면 보기는 데이터 사용 [확인 필요]"
+      },
+      {
+        "q": "iPad에서도 되나요?",
+        "a": "iOS 앱이 iPadOS 18 이상 iPad에서도 동작"
+      },
+      {
+        "q": "Grok 앱과 Grok Bot 앱은 같은가요?",
+        "a": "다름. Grok Bot은 클라우드 컴퓨터로 일하는 에이전트용 별도 앱"
+      },
+      {
+        "q": "폰에서 새 Bot을 만들 수 있나요?",
+        "a": "가능. 홈 화면 + → New Bot 또는 New Group Chat. Team Bot 만들기는 데스크톱만"
+      },
+      {
+        "q": "Bot이 보낸 음성 메모를 들을 수 있나요?",
+        "a": "가능. 대화에서 바로 재생"
+      },
+      {
+        "q": "구독은 어디서 관리하나요?",
+        "a": "Settings에서 사용량 확인, App Store·Google Play로 결제한 경우 앱 안에서 구독 관리"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "설치·로그인·알림 → 받아쓰기로 지시 1번 → 결과 확인까지만, 메일 초안은 강사 시연"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "음성 채팅·공유 시트·Send/Discard·루틴 Active까지 + 출퇴근길 업무 지시 문장 3개 만들기"
+      },
+      {
+        "level": "고급(자동화·개발)",
+        "guide": "Take over 절차, 그룹 대화 @everyone 분담, Auto-review 규칙과 모바일 승인 조합 설계"
+      },
+      {
+        "level": "시니어",
+        "guide": "큰 글씨 설정 후 '오늘 일정 알려 줘' 음성 지시 1개와 알림 열기만 반복 연습"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "받아쓰기로 '~해 줘', '~하지 마' 지시 표현 연습, 결과를 모국어 한 줄과 함께 받도록 요청"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: '폰은 리모컨, 일은 클라우드'",
+      "출퇴근·현장 이동이 많은 영업·강사·소상공인 사례가 공감 큼",
+      "Send/Discard 판단 연습은 AI 에이전트 승인 습관 교육 소재로 활용",
+      "데스크톱 교안(CAT08-009)과 묶어 '책상에서 세팅 → 폰으로 운영' 2회차 구성 추천"
+    ],
+    "day_before": [
+      "강사 폰(iPhone·Android 각 1대 권장)에 Grok Bot 앱 최신 버전·로그인·알림 확인",
+      "시연용 Bot 1개·캘린더 커넥터·루틴 1개 미리 준비",
+      "로그인·Start voice chat·공유 시트 Attach·Send Email·Take over·루틴 화면 캡처 준비",
+      "폰 화면 미러링(케이블·무선) 장비 점검",
+      "수강생 사전 안내: 앱 설치, 요금제 보유 여부, 개인정보 없는 연습 사진 1장"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Log In or Sign Up·Start voice chat·Attach·Send Email·I'm done 등 화면 문구 — xAI 문서 기준, 실제 화면과 다를 수 있음",
+    "[확인 필요] 이용 가능 요금제 — 모바일 문서는 Cursor·SuperGrok 기준, The X Subscription(2026-10-12) 이후 기준과 다름",
+    "[확인 필요] iPhone 앱 첫 공개일 — 2026-08-11 베타 발표(보조 근거 Yahoo Tech), Android는 2026-09-02 Cursor 포럼 공지",
+    "[확인 필요] 음성 채팅 한국어 인식 품질·모바일 언어 목록에 한국어 포함 여부",
+    "[실험 기능] Grok Bot 전체가 베타 표기",
+    "교안 작성 중 실제 계정·기기로 재현하지 못함 — xAI 공식 문서(Grok Bot for Mobile·Files and results)·공식 공지 기준"
+  ],
+  "sources": [
+    {
+      "title": "xAI Docs – Grok Bot for Mobile",
+      "url": "https://docs.x.ai/grok-bot/mobile",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Bot: Files and results",
+      "url": "https://docs.x.ai/grok-bot/files-and-results",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Bot overview",
+      "url": "https://docs.x.ai/grok-bot/overview",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI – Grok Bot Changelog",
+      "url": "https://x.ai/changelog/bot",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "Cursor Forum (공식 Announcements) – Grok Bot is Now Live on Android (2026-09-02)",
+      "url": "https://forum.cursor.com/t/grok-bot-is-now-live-on-android/170384",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "App Store – Grok Bot",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "Google Play – Grok Bot",
+      "url": "https://play.google.com/store/apps/details?id=ai.x.grok.bot",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "(보조 근거) Yahoo Tech – Grok Bot for iPhone and Mac lets AI agents do the work for you (2026-08-12)",
+      "url": "https://tech.yahoo.com/ai/meta-ai/articles/grok-bot-iphone-mac-lets-183624071.html",
+      "checked": "2026-10-20"
+    }
+  ]
+}
