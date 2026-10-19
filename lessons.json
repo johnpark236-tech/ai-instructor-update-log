@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 152,
+  "count": 153,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-023",
+      "version": "v1.0",
+      "created_at": "2026-10-19 22:58 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "수업·회의 녹음을 화자별 대본으로 바꾸기 — Grok Voice Transcribe 2.0(xAI 콘솔 받아쓰기 플레이그라운드)",
+      "summary": "2026-09-18 xAI가 받아쓰기(Speech to Text) 모델 Grok Voice Transcribe 2.0 공개. 1.0 대비 정확도 약 2배(공식 발표), 같은 가격(일괄 시간당 $0.10·실시간 $0.20). 화자 구분·단어별 시간·핵심 용어 지정(최대 100개) 기본 포함, 한국어(ko) 지원. xAI 콘솔 받아쓰기 플레이그라운드에서 코드 없이 녹음 파일을 올려 화자별 대본을 만들고, 대본을 정리해 수업 기록·회의록으로 활용 가능",
+      "tool": "Grok",
+      "feature": "Grok Voice Transcribe 2.0(받아쓰기 모델, grok-voice-transcribe-2.0) — xAI 콘솔 받아쓰기(Speech to Text) 플레이그라운드, 일괄(파일·URL)·실시간(WebSocket) 받아쓰기, 화자 구분(diarize)·단어별 시간·핵심 용어(keyterm, 최대 100개)·여러 채널(multichannel)·숫자·날짜 서식(format)·군말 제거, 한국어(ko) 지원",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-09-18",
+      "categories": [
+        "CAT-05",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-CRE",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 화자 번호가 붙은 3~5분 녹음 대본 1개 + ② 핵심 용어 지정 전·후 비교 메모 1장 + ③ 대본을 정리한 수업 기록(또는 회의록) 1쪽",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📝",
+      "one_liner": "녹음 파일을 화자별 대본으로 변환"
+    },
     {
       "id": "AI-2026-10-CAT09-006",
       "version": "v1.0",

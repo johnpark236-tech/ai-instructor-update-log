@@ -3436,6 +3436,21 @@
       },
       "checked": "2026-10-19",
       "lesson_id": "AI-2026-10-CAT03-029"
+    },
+    {
+      "id": "grok-2026-09-18-voice-transcribe-2",
+      "date": "2026-09-18",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Voice Transcribe 2.0 — 받아쓰기 모델 정확도 약 2배",
+      "summary": "1.0 대비 정확도 약 2배·같은 가격(일괄 시간당 $0.10·실시간 $0.20), 화자 구분·단어별 시간·핵심 용어 최대 100개·최대 8채널, 한국어 지원, 콘솔 플레이그라운드",
+      "source": {
+        "title": "xAI News – Introducing Grok Voice Transcribe 2.0",
+        "url": "https://x.ai/news/grok-voice-transcribe-2"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT05-023"
     }
   ]
 }
