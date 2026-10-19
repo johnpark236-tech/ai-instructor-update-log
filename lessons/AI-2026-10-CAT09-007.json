@@ -1,0 +1,604 @@
+{
+  "id": "AI-2026-10-CAT09-007",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-20 07:10 KST",
+  "checked": "2026-10-20",
+  "review_by": "2027-01-20",
+  "title": "AI 코딩 에이전트에게 '여기까지만' 울타리 치기 — Grok Build(그록 빌드, 터미널) 권한 모드(Permissions)·샌드박스(Sandbox)로 .env 비밀 파일 막고 위험 명령 차단해 보기",
+  "summary": "Grok Build(xAI 터미널 코딩 에이전트)의 안전장치 2겹. ① 권한(Permissions): 도구 호출을 실행할지 결정 — Ask(기본, 매번 묻기)·Auto(분류기가 안전한 도구 자동 승인)·Always-approve(자동 승인) 모드 + [permission] allow·deny 규칙(deny 우선) ② 샌드박스(Sandbox): 승인된 명령이 할 수 있는 범위를 운영체제가 제한 — off(기본)·workspace·read-only·strict·devbox 프로필 + .grok/sandbox.toml 맞춤 프로필(deny 로 .env·*.pem 차단). Linux Landlock·macOS Seatbelt. 2026-09-28 v1.0.44 macOS 샌드박스 적용 강화·2026-10-02 v1.0.49 검색·웹 가져오기·이미지·셸 명령에 프롬프트 정책 적용 [확인 필요]",
+  "glance": {
+    "emoji": "🛡️",
+    "one_liner": "AI 에이전트에게 권한 울타리 치기",
+    "cards": [
+      {
+        "icon": "🙋",
+        "title": "Ask 모드",
+        "text": "허용 안 된 도구는 매번 확인"
+      },
+      {
+        "icon": "📜",
+        "title": "allow·deny",
+        "text": "명령별 허용·차단, deny 우선"
+      },
+      {
+        "icon": "📦",
+        "title": "샌드박스",
+        "text": "운영체제가 읽기·쓰기 범위 제한"
+      },
+      {
+        "icon": "🔒",
+        "title": "맞춤 프로필",
+        "text": ".env·*.pem 같은 비밀 파일 차단"
+      }
+    ],
+    "diagram": {
+      "title": "안전장치 2겹",
+      "nodes": [
+        {
+          "icon": "💬",
+          "label": "AI 도구 요청"
+        },
+        {
+          "icon": "📜",
+          "label": "권한 규칙 검사"
+        },
+        {
+          "icon": "🙋",
+          "label": "사람 승인"
+        },
+        {
+          "icon": "📦",
+          "label": "샌드박스 제한"
+        },
+        {
+          "icon": "📝",
+          "label": "위반 기록"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "안전장치 전",
+        "text": "AI가 어느 폴더든 쓰고 .env 비밀값까지 읽을 수 있음"
+      },
+      "after": {
+        "label": "안전장치 후",
+        "text": "작업 폴더만 쓰기 + .env 차단 + 위험 명령은 deny"
+      }
+    },
+    "cautions": [
+      "샌드박스는 기본 꺼짐(off)",
+      "macOS는 하위 네트워크 차단 안 됨",
+      "Always-approve 는 실습 폴더만"
+    ]
+  },
+  "tool": "Grok",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-09-28",
+  "feature": "Grok Build(터미널 코딩 에이전트 CLI) 권한 모드(Permissions)·샌드박스(Sandbox) — ① 권한 모드 Ask(기본)·Auto(분류기 자동 승인, 위험 도구는 다시 물음)·Always-approve, Shift+Tab 으로 Normal·Plan·Auto·Always-approve 순환·/auto·/always-approve·grok --always-approve·[ui] permission_mode ② [permission] rules = [{action, tool, pattern}] allow·deny 규칙(Bash·Edit·Read·Grep·MCPTool·WebFetch·WebSearch, deny 우선), --allow·--deny ③ 샌드박스 grok --sandbox <프로필>·GROK_SANDBOX·[sandbox] profile: off(기본)·workspace·devbox·read-only·strict ④ ~/.grok/sandbox.toml·.grok/sandbox.toml 맞춤 프로필(extends·restrict_network·read_only·read_write·deny) ⑤ 위반 기록 ~/.grok/sandbox-events.jsonl ⑥ 세션은 시작 프로필 유지(재개 시 변경 불가) · v1.0.44(2026-09-28) macOS 샌드박스 적용·v1.0.49(2026-10-02) 프롬프트 정책 강화 [확인 필요]",
+  "categories": [
+    "CAT-09",
+    "CAT-07"
+  ],
+  "jobs": [
+    "JOB-DEV",
+    "JOB-EDU",
+    "JOB-DAT",
+    "JOB-OFF"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 25,
+    "practice": 40,
+    "wrap": 7
+  },
+  "prerequisites": [
+    "macOS 또는 Linux 컴퓨터 + 터미널 — 설치 명령: curl -fsSL https://x.ai/cli/install.sh | bash (Windows 지원 범위 [확인 필요])",
+    "xAI(Grok) 계정 — 설치 후 grok 실행 → 계정 로그인, 요금제별 사용량 [확인 필요]",
+    "Grok Build 최신 버전 권장(v1.0.49 이상) — 버전 확인 방법 [확인 필요]",
+    "Linux에서 deny(읽기 차단) 실습 시 bubblewrap 설치 필요(없으면 Grok 시작 거부), Linux 커널 5.13 이상",
+    "실습용 빈 폴더 1개(예: guard-practice) + 가짜 .env 파일 — 실제 비밀값·업무 저장소 사용 금지"
+  ],
+  "outcome": "① 가짜 .env 를 읽지 못하게 막은 맞춤 샌드박스 프로필 파일(.grok/sandbox.toml) + ② git 명령은 허용·rm -rf 는 차단한 권한 규칙 파일(.grok/config.toml) + ③ read-only 로 막힌 쓰기 시도 기록(sandbox-events.jsonl 한 줄) + ④ 상황별 '모드·프로필 고르기' 안전 카드 1장",
+  "objectives": [
+    "권한(도구 호출을 할지 결정)과 샌드박스(승인된 명령이 할 수 있는 범위 제한)의 차이를 설명할 수 있음",
+    "Ask·Auto·Always-approve 모드를 바꾸고 [permission] allow·deny 규칙으로 명령별 허용·차단을 설정할 수 있음",
+    "grok --sandbox read-only·strict·맞춤 프로필(deny)로 비밀 파일과 작업 폴더 밖 쓰기를 막고 위반 기록을 확인할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "권한·샌드박스 전용 요금 없음 — Grok Build 기본 기능, 설정 파일은 내 컴퓨터(~/.grok/·.grok/)에 저장. AI 응답은 Grok Build 사용량(토큰) 차감. 2026-10-12부터 신규 가입은 The X Subscription: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200 — 요금제별 Grok Build 사용량 [확인 필요]. 관리형 고정(requirements.toml)은 Enterprise 기능",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 매일 사용 + Cursor 코딩 에이전트 시작 사용량 + 사용량 제한 — Grok Build 사용 범위 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok·Cursor 기본 사용량 증가 + X 체크 표시·크리에이터 도구·광고 감소"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "SuperGrok + Cursor Pro + X Premium+ 포함 + Plus 대비 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "위 기능 전부 + Plus 대비 15배 사용량"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "위 기능 전부 + Plus 대비 50배 사용량"
+      }
+    ],
+    "note": "요금은 xAI 공식 발표 'Introducing The X Subscription'(2026-10-12) 미국 달러 기준, 원화·부가세 미확인. 권한 모드·샌드박스는 별도 과금 안내 없음. 조직 단위 샌드박스·권한 모드 고정(requirements.toml·관리형 설정)은 Enterprise 기능(공식 문서)",
+    "checked": "2026-10-20",
+    "sources": [
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI Docs – Grok Build Sandbox",
+        "url": "https://docs.x.ai/build/features/sandbox"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-25",
+      "text": "Grok Build 터미널 코딩 에이전트 공개(초기 베타) — 권한 승인(Ask) 기본 동작 도입 시점 [확인 필요]"
+    },
+    {
+      "date": "2026-09-28",
+      "text": "v1.0.44 — macOS 샌드박스 적용 강화 + 맥락 창 명령·모델 선택에 맥락 창 선택 + 병렬 도구 호출 안전성 개선 (Releasebot 요약, 원문 changelog 재확인 [확인 필요])"
+    },
+    {
+      "date": "2026-10-02",
+      "text": "v1.0.48~49 — 권한 프롬프트 강화, 검색·웹 가져오기·이미지·셸 명령에 프롬프트 정책 적용 (Releasebot 요약 [확인 필요])"
+    },
+    {
+      "date": "2026-10-06",
+      "text": "v1.0.50 — 워크트리 안전 삭제·권한 강화 (Releasebot 요약 [확인 필요])"
+    },
+    {
+      "date": "2026-10-11",
+      "text": "v1.0.52 — 승인(approvals)·워크트리 안전성 개선 (Releasebot 요약 [확인 필요])"
+    }
+  ],
+  "theory": {
+    "definition": "권한(Permissions)은 AI가 도구(셸 명령·파일 수정·웹 검색 등)를 '실행해도 되는지' 정하는 규칙임. 샌드박스(Sandbox)는 승인된 명령이 '어디까지 읽고 쓰고 접속할 수 있는지'를 운영체제(Linux Landlock·macOS Seatbelt)가 강제로 막는 울타리임. 둘은 별개 기능 → 함께 쓰면 2겹 안전장치",
+    "analogy": "권한 = 건물 입구 경비원(들어올 사람마다 확인, 명단에 있으면 통과·블랙리스트는 거절). 샌드박스 = 출입증 구역 제한(일단 들어와도 허락된 층·방만 열림). 경비원이 실수로 통과시켜도 출입증 밖 방은 안 열림",
+    "comparison": {
+      "headers": [
+        "설정",
+        "하는 일",
+        "켜는 법",
+        "알맞은 상황"
+      ],
+      "rows": [
+        [
+          "Ask 모드(기본)",
+          "허용 안 된 도구 호출마다 확인",
+          "기본값, [ui] permission_mode = \"ask\"",
+          "처음 쓰는 저장소·수업"
+        ],
+        [
+          "Auto 모드",
+          "분류기가 안전한 도구 자동 승인, 위험 도구는 다시 물음",
+          "/auto·Shift+Tab",
+          "익숙한 작업 속도 올리기"
+        ],
+        [
+          "Always-approve",
+          "도구 호출 자동 승인(deny 규칙·PreToolUse 훅은 적용)",
+          "/always-approve·grok --always-approve",
+          "버려도 되는 실습 폴더"
+        ],
+        [
+          "[permission] 규칙",
+          "도구·패턴별 allow·deny, deny 우선",
+          ".grok/config.toml·--allow·--deny",
+          "git 은 허용, rm -rf 는 차단"
+        ],
+        [
+          "샌드박스 프로필",
+          "파일 읽기·쓰기·하위 네트워크 범위 제한",
+          "grok --sandbox <프로필>",
+          "남의 코드 검토·비밀 파일 보호"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "권한 모드 3가지와 바꾸는 법",
+        "body": "① Ask(기본): 이미 허용된 것 외에는 매번 확인 ② Auto: 분류기가 안전한 도구 자동 승인, 위험 도구는 다시 물을 수 있음(기능 활성 필요), deny 규칙·훅은 그대로 ③ Always-approve: 자동 승인, deny 규칙·PreToolUse 훅은 그대로 ④ 바꾸기: Shift+Tab 으로 Normal → Plan → Auto(가능 시) → Always-approve 순환, Ctrl+O, /auto·/always-approve, grok --always-approve ⑤ 기본값: ~/.grok/config.toml [ui] permission_mode = ask·auto·always-approve (프로젝트 .grok/config.toml 에서는 지정 불가) ⑥ Plan 모드는 별개 — 계획 중 수정 도구 제한, Auto·Always-approve 에서도 계획 검토 단계 유지"
+      },
+      {
+        "title": "allow·deny 규칙",
+        "body": "① [permission] rules = [{ action = \"allow\", tool = \"bash\", pattern = \"git *\" }, { action = \"deny\", tool = \"bash\", pattern = \"rm -rf *\" }] 형식 ② 도구 필터: Bash·Edit·Read·Grep·MCPTool·WebFetch·WebSearch ③ allow·deny 가 둘 다 맞으면 deny 우선 ④ 대화 중 '항상 허용'으로 기억한 승인도 rm·git push 같은 위험 패턴은 다시 물음, 설정 파일·CLI의 명시적 allow 는 묻지 않음 ⑤ 프로젝트 .grok/config.toml 은 [mcp_servers]·[plugins]·[permission] 만 반영 ⑥ 실행 1회용: --allow·--deny 플래그"
+      },
+      {
+        "title": "샌드박스 프로필",
+        "body": "① off(기본): 제한 없음 ② workspace: 읽기 전체·쓰기는 현재 폴더·~/.grok/·임시 폴더 ③ read-only: 쓰기는 ~/.grok/·임시 폴더만, 하위 네트워크 차단(Linux만) ④ strict: 읽기도 현재 폴더·시스템 경로만, 하위 네트워크 차단(Linux만) ⑤ devbox: 버리는 클라우드 개발 VM용 ⑥ 맞춤 프로필: ~/.grok/sandbox.toml·.grok/sandbox.toml 에 [profiles.이름] extends·restrict_network·read_only·read_write·deny ⑦ 켜는 순서: --sandbox·GROK_SANDBOX → [sandbox] profile → off ⑧ 시작할 때 프로세스 전체에 적용, 실행 중 AI가 풀 수 없음 ⑨ 세션은 시작한 프로필 유지 — 재개 시 다른 --sandbox 지정하면 오류 ⑩ 위반 기록: ~/.grok/sandbox-events.jsonl"
+      }
+    ],
+    "can": [
+      "AI가 실행하려는 셸 명령·파일 수정을 하나씩 확인하고 승인(Ask)",
+      "git status 같은 안전한 명령은 묻지 않게, rm -rf 같은 위험 명령은 아예 막게 규칙 지정",
+      "남의 저장소를 read-only·strict 로 열어 AI가 파일을 바꾸지 못하게 검토",
+      "맞춤 프로필 deny 로 .env·*.pem·비밀 폴더를 운영체제 수준에서 읽기·쓰기 차단(bash·grep·하위 에이전트까지 적용)",
+      "~/.grok/sandbox-events.jsonl 에서 막힌 접근 시도 확인",
+      "[shell_environment_policy] 로 하위 프로세스에 넘길 환경 변수 제한(KEY·SECRET·TOKEN 이름은 기본 제외)"
+    ],
+    "cannot": [
+      "macOS에서 read-only·strict 의 하위 네트워크 차단 — 공식 문서: Linux만 적용",
+      "샌드박스로 AI 모델 API·web_search·web_fetch 막기 — 프로세스 안 도구라 네트워크 제한 대상 아님",
+      "기본 프로필만으로 ~/.ssh 같은 경로 영구 보호 — 맞춤 프로필 deny 필요",
+      "진행 중 세션의 샌드박스 프로필 바꾸기 — 새 세션으로 시작해야 함",
+      "프로젝트 .grok/config.toml 로 권한 모드 기본값 지정 — 사용자 설정·관리형 설정만 가능",
+      "Linux에서 시작 후 새로 만든 파일에 deny glob 적용 — Linux는 시작 시 glob 확장(macOS는 실행 중 적용)"
+    ],
+    "safety": [
+      "샌드박스는 기본 꺼짐 → 남의 코드·처음 받은 저장소는 --sandbox strict 또는 read-only 로 열 것",
+      "Always-approve 는 버려도 되는 실습 폴더에서만 — 회사·개인 중요 저장소 금지",
+      "실습 .env 에는 가짜 값만(예: DEMO_KEY=not-a-real-key), 진짜 API 키·비밀번호 금지",
+      "deny 규칙·샌드박스도 완벽하지 않음 → git 커밋·백업 습관 유지 + 결과물 사람이 검토",
+      "회사 코드에 쓰기 전 회사 AI 도구 사용 정책·보안팀 기준 확인(Enterprise는 관리자가 프로필 고정 가능)"
+    ]
+  },
+  "practice": {
+    "preview": "빈 폴더에 가짜 .env 와 메모 파일 준비 → Ask 모드에서 승인 카드 체험 → read-only 샌드박스로 쓰기 막힘 확인 → 맞춤 프로필로 .env 읽기 차단 → 권한 규칙으로 git 허용·rm -rf 차단 → 상황별 안전 카드 작성. ① 맞춤 샌드박스 프로필 + ② 권한 규칙 파일 + ③ 위반 기록 + ④ 안전 카드 완성",
+    "follow": [
+      {
+        "title": "설치·실습 폴더·가짜 비밀 파일 준비",
+        "minutes": 6,
+        "do": "설치 명령 실행 → 아래 명령으로 폴더·Git·가짜 .env·메모 파일 만들기 → grok 실행 → 계정 로그인 [확인 필요: 로그인 화면 문구]",
+        "prompt": "mkdir guard-practice && cd guard-practice && git init && echo \"DEMO_KEY=not-a-real-key\" > .env && echo \"# 수업 메모\" > notes.md && git add notes.md && git commit -m \"start\"",
+        "expect": "guard-practice 폴더에 .env·notes.md 생성 + 첫 커밋 완료",
+        "note": ".env 는 커밋하지 않음(비밀 파일은 저장소에 올리지 않는 습관). 진짜 키 절대 금지"
+      },
+      {
+        "title": "Ask 모드 승인 체험",
+        "minutes": 7,
+        "do": "grok 실행(기본 Ask) → 아래 요청 입력 → 파일 생성·명령 실행 승인 카드가 뜨면 내용 읽고 승인 → Shift+Tab 을 눌러 모드 표시가 Normal → Plan → Auto(가능 시) → Always-approve 로 바뀌는지 확인 후 Normal 로 되돌리기",
+        "prompt": "이 폴더에 hello.py 를 만들어 줘. 실행하면 '안녕하세요, 안전한 AI 코딩!' 을 출력하게 하고, 만든 다음 python3 hello.py 로 실행해서 결과를 보여 줘.",
+        "expect": "① 파일 생성 승인 요청 + ② python3 실행 승인 요청 → 승인 후 출력 확인",
+        "note": "승인 카드의 정확한 버튼 문구는 버전마다 다를 수 있음 [확인 필요]"
+      },
+      {
+        "title": "read-only 샌드박스로 쓰기 막기",
+        "minutes": 7,
+        "do": "/exit → 아래 명령으로 다시 시작 → 'notes.md 에 오늘 날짜 한 줄 추가해 줘' 입력 → 승인해도 쓰기가 실패하는지 확인 → /exit → tail -n 3 ~/.grok/sandbox-events.jsonl 로 기록 확인",
+        "prompt": "grok --sandbox read-only",
+        "expect": "notes.md 수정 실패(권한 거부) + sandbox-events.jsonl 에 적용 프로필·위반 기록",
+        "note": "승인(권한)과 실제 실행 범위(샌드박스)가 다르다는 점을 여기서 체감. 오류 문구 형태 [확인 필요]"
+      },
+      {
+        "title": "맞춤 프로필로 .env 읽기 차단",
+        "minutes": 8,
+        "do": "mkdir -p .grok → 아래 내용으로 .grok/sandbox.toml 저장(편집기 또는 cat 사용) → grok --sandbox guard 실행 → '.env 파일 내용을 보여 줘' 와 'cat .env 를 실행해 줘' 입력 → 둘 다 막히는지 확인",
+        "prompt": "[profiles.guard]\nextends = \"workspace\"\ndeny = [\"**/.env\", \"**/*.pem\"]",
+        "expect": ".env 읽기 거부 + notes.md 수정은 가능(workspace 기반)",
+        "note": "Linux는 bubblewrap 필요(없으면 시작 거부). 맞춤 이름에 off·workspace 등 기본 이름 사용 불가"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "권한 규칙 — git 허용·rm -rf 차단",
+        "minutes": 6,
+        "do": "/exit → 아래 내용으로 .grok/config.toml 저장 → grok 다시 실행 → 'git status 를 보여 줘'(묻지 않고 실행되는지) + 'rm -rf 로 hello.py 를 지워 줘'(차단되는지) 입력",
+        "prompt": "[permission]\nrules = [\n  { action = \"allow\", tool = \"bash\", pattern = \"git *\" },\n  { action = \"allow\", tool = \"read\" },\n  { action = \"deny\",  tool = \"bash\", pattern = \"rm -rf *\" },\n]",
+        "expect": "① git status 바로 실행 + ② rm -rf 요청 차단(hello.py 그대로)",
+        "note": "allow·deny 둘 다 맞으면 deny 우선. AI가 다른 삭제 방법을 제안하면 승인하지 말고 거절해 볼 것"
+      },
+      {
+        "title": "재개 시 프로필 유지 확인",
+        "minutes": 3,
+        "do": "grok --sandbox guard 로 시작한 세션 종료 → grok -c 로 이어 하기 → .env 가 여전히 막히는지 확인 → grok -c --sandbox off 를 시도해 오류가 나는지 확인",
+        "prompt": "grok -c",
+        "expect": "이어 한 세션도 guard 유지 + 다른 프로필 지정은 거부",
+        "note": "프로필을 바꾸려면 새 세션 시작"
+      },
+      {
+        "title": "상황별 안전 카드 만들기",
+        "minutes": 3,
+        "do": "짝과 함께 '내 저장소 일상 작업 / 남의 코드 검토 / 처음 받은 수상한 코드 / 버리는 실습 폴더' 4가지 상황에 맞는 권한 모드·샌드박스 프로필을 한 줄씩 작성",
+        "prompt": "",
+        "expect": "상황 4개 × (모드 + 프로필) 안전 카드 1장",
+        "note": "예: 남의 코드 검토 = Ask + read-only, 수상한 코드 = Ask + strict + deny"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "~/.grok/config.toml 에 [sandbox] profile = \"workspace\" 를 넣어 기본 프로필을 바꾸고, --sandbox 없이 실행해도 적용되는지 sandbox-events.jsonl 로 확인"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "[shell_environment_policy] inherit = \"core\"·exclude 를 설정해 하위 셸에 넘어가는 환경 변수를 줄이고, env 명령 결과를 설정 전·후로 비교"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "(Linux) strict + restrict_network 프로필에서 curl·npm install 이 막히고 web_search 는 되는지 비교 — macOS와 차이를 표로 정리"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "2인 1조로 '.env 차단 화면 + rm -rf 차단 화면 + 상황별 안전 카드' 발표",
+    "quiz": [
+      {
+        "q": "권한(Permissions)과 샌드박스(Sandbox)의 차이로 맞는 것은?",
+        "options": [
+          "둘은 같은 기능의 다른 이름이다",
+          "권한은 도구 호출을 실행할지 정하고, 샌드박스는 승인된 호출이 할 수 있는 범위를 제한한다",
+          "샌드박스는 AI 모델 API 접속을 막는 기능이다",
+          "권한 규칙은 macOS에서만 동작한다"
+        ],
+        "answer": 1,
+        "explain": "공식 문서: 권한은 실행 여부 결정, 샌드박스는 승인된 호출의 파일·네트워크 범위 제한"
+      },
+      {
+        "q": "같은 명령에 allow 규칙과 deny 규칙이 둘 다 맞으면?",
+        "options": [
+          "allow 가 이긴다",
+          "먼저 적힌 규칙이 이긴다",
+          "deny 가 이긴다",
+          "매번 사용자에게 묻는다"
+        ],
+        "answer": 2,
+        "explain": "공식 문서: deny always wins over allow"
+      },
+      {
+        "q": "Grok Build 샌드박스의 기본값은?",
+        "options": [
+          "strict",
+          "workspace",
+          "read-only",
+          "off(꺼짐)"
+        ],
+        "answer": 3,
+        "explain": "기본 프로필은 off — 남의 코드는 직접 --sandbox read-only·strict 로 켜야 함"
+      }
+    ],
+    "next": [
+      "Grok Build 세션으로 작업 이어 하기·되돌리기 (AI-2026-10-CAT07-015)",
+      "Grok Build /goal 목표 모드로 완료 조건까지 맡기기 (AI-2026-10-CAT07-014)",
+      "Grok Bot 승인(Approvals)·Auto-review 규칙 (AI-2026-10-CAT09-006)"
+    ],
+    "rubric": [
+      {
+        "criterion": "권한 규칙",
+        "high": "git 허용·rm -rf 차단 모두 동작 확인 + deny 우선 설명",
+        "mid": "규칙 파일만 작성",
+        "low": "규칙 작성 못 함"
+      },
+      {
+        "criterion": "샌드박스",
+        "high": "read-only 쓰기 차단 + 맞춤 프로필 .env 차단 + 위반 기록 확인",
+        "mid": "기본 프로필 하나만 확인",
+        "low": "샌드박스 실행 못 함"
+      },
+      {
+        "criterion": "안전 판단",
+        "high": "상황 4개 모드·프로필 근거와 함께 작성",
+        "mid": "2~3개 작성",
+        "low": "작성 안 함"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 'AI에게 컴퓨터 열쇠를 통째로 줘도 될까요?' 질문 + 경비원·출입증 비유",
+        "note": "강사가 .env 차단 화면 먼저 시연"
+      },
+      {
+        "time": "5~30분",
+        "content": "1부 이론: 권한 모드 3가지·allow·deny 규칙·샌드박스 프로필 비교표·한계(macOS 네트워크·API 제외)·요금·안전",
+        "note": "'샌드박스는 기본 꺼짐' 강조"
+      },
+      {
+        "time": "30~58분",
+        "content": "따라 하기 1~4: 준비 → Ask 승인 → read-only → 맞춤 프로필 .env 차단",
+        "note": "Linux 수강생 bubblewrap 설치 여부 먼저 확인"
+      },
+      {
+        "time": "58~70분",
+        "content": "내 것 만들기: 권한 규칙 → 재개 시 프로필 유지 → 안전 카드",
+        "note": "AI가 우회 방법을 제안하면 함께 거절 연습"
+      },
+      {
+        "time": "70~72분",
+        "content": "짝 공유·퀴즈·실습 폴더·.env 삭제",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI 코딩 에이전트는 우리 컴퓨터에서 명령을 직접 실행합니다. 편리하지만, 비밀번호 파일을 읽거나 엉뚱한 폴더를 지울 수도 있겠죠. 오늘은 AI에게 '여기까지만' 울타리를 치는 법을 배웁니다."
+      },
+      {
+        "label": "핵심 원리",
+        "text": "권한은 입구의 경비원, 샌드박스는 출입증 구역 제한입니다. 경비원이 실수로 들여보내도, 출입증에 없는 방은 운영체제가 안 열어 줍니다. 그래서 두 겹으로 씁니다."
+      },
+      {
+        "label": "기본값 주의",
+        "text": "샌드박스는 기본으로 꺼져 있습니다. 남이 준 코드나 처음 받은 저장소는 꼭 read-only나 strict로 여세요."
+      },
+      {
+        "label": "한계",
+        "text": "맥에서는 하위 프로그램의 인터넷 차단이 적용되지 않고, AI 모델 접속이나 웹 검색은 샌드박스로 막히지 않습니다. 완벽한 벽이 아니라 사고를 줄이는 울타리라고 생각하세요."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 만든 .env는 가짜였죠. 실제 업무에서는 비밀 파일 차단 프로필부터 만들어 두고 시작하세요. 실습 폴더는 지우고 나가겠습니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "설치 스크립트가 실행되지 않음(Windows·회사 보안 정책)",
+        "response": "강사 macOS·Linux 화면 시연 + 수강생은 비교표 빈칸 채우기·안전 카드 작성에 집중"
+      },
+      {
+        "situation": "Linux에서 bubblewrap 이 없어 맞춤 프로필로 시작 거부",
+        "response": "sudo apt install bubblewrap 등으로 설치(권한 있을 때), 불가하면 deny 없이 read-only·strict 로만 진행"
+      },
+      {
+        "situation": "샌드박스가 적용되지 않았다는 경고만 뜨고 계속 실행됨",
+        "response": "공식 문서: 적용 실패 시 경고 후 제한 없이 진행 → 커널 버전(5.13 이상)·OS 확인, 강사 화면으로 대체"
+      },
+      {
+        "situation": "요금제·사용량 한도로 응답이 멈춤",
+        "response": "강사 구독 계정으로 시연, 수강생은 짝 화면 참여 — 수업 전 요금제별 사용 가능 여부 확인"
+      },
+      {
+        "situation": "인터넷·서버 장애",
+        "response": "미리 캡처한 승인 카드·차단 화면·sandbox-events.jsonl 예시로 흐름 설명 후 안전 카드 토론"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "--sandbox guard 실행 시 '프로필 없음' 오류",
+        "fix": ".grok/sandbox.toml 위치(실습 폴더 안 .grok/)와 [profiles.guard] 철자 확인, 사용자 파일과 이름 충돌 시 /doctor 실행"
+      },
+      {
+        "issue": ".env 가 그대로 읽힘",
+        "fix": "--sandbox guard 로 새 세션 시작했는지 확인(재개 세션은 이전 프로필 유지) + deny glob 철자 확인"
+      },
+      {
+        "issue": "git status 도 매번 승인 요청",
+        "fix": ".grok/config.toml 이 실습 폴더 안 .grok/ 에 있는지·[permission] 표 이름·tool = \"bash\" 확인"
+      },
+      {
+        "issue": "glob 오류로 Grok 이 시작 안 함",
+        "fix": "지원 문법은 *·?·**·[...] 만 — {a,b} 중괄호·이스케이프 제거"
+      },
+      {
+        "issue": "Shift+Tab 순환에 Auto 가 안 보임",
+        "fix": "Auto 는 기능 활성 시에만 표시(공식 문서) → Ask·Always-approve 로 실습 진행"
+      }
+    ],
+    "faq": [
+      {
+        "q": "샌드박스를 켜면 AI가 웹 검색을 못 하나요?",
+        "a": "아님. web_search·web_fetch·AI 모델 API는 프로세스 안 도구라 네트워크 제한 대상 아님(공식 문서)"
+      },
+      {
+        "q": "macOS에서 strict 면 npm install 이 막히나요?",
+        "a": "하위 네트워크 차단은 Linux만 적용, macOS에서는 동작 안 함(공식 문서)"
+      },
+      {
+        "q": "Always-approve 면 deny 규칙도 무시되나요?",
+        "a": "아님. Always-approve·Auto 에서도 deny 규칙과 PreToolUse 훅은 적용"
+      },
+      {
+        "q": "대화 중 '항상 허용'을 눌렀는데 git push 는 왜 또 묻나요?",
+        "a": "기억된 항상 허용 승인도 rm·git push 같은 위험 패턴은 다시 물음, 설정 파일·CLI의 명시적 allow 만 묻지 않음"
+      },
+      {
+        "q": "진행 중 세션의 프로필을 바꿀 수 있나요?",
+        "a": "불가. 세션은 시작 프로필 유지, 재개 시 다른 --sandbox 지정은 거부 → 새 세션으로 시작"
+      },
+      {
+        "q": "회사 전체에 강제할 수 있나요?",
+        "a": "Enterprise 관리형 설정(requirements.toml)으로 프로필 고정·CLI 덮어쓰기 가능(공식 문서), 세부 절차 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "🟢 초급반",
+        "guide": "강사 시연 중심 — 수강생은 경비원·출입증 비유로 비교표 정리 + 안전 카드, Ask 승인 한 번만 직접 해 보기"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "따라 하기 + 내 것 만들기 전부, 도전과제 ⭐ 기본 프로필 설정까지"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐·⭐⭐⭐ 환경 변수 정책·Linux 네트워크 차단 비교 + 팀용 기본 프로필 설계"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수강생 실습 PC용 '수업 표준 프로필'(workspace + .env 차단) 만들어 배포하는 절차 정리"
+      },
+      {
+        "level": "데이터·연구 (JOB-DAT)",
+        "guide": "원본 데이터 폴더를 read_only 로 두고 결과 폴더만 read_write 로 여는 프로필 설계 — 실제 개인정보 데이터 금지"
+      },
+      {
+        "level": "사무 (JOB-OFF)",
+        "guide": "코드 대신 문서 정리 스크립트 실습, '남이 준 파일은 read-only 로 먼저 열기' 습관 중심"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: 권한 = 경비원, 샌드박스 = 출입증 구역",
+      "샌드박스 기본값은 off — 직접 켜야 함",
+      "deny 는 allow 보다 우선",
+      "macOS 하위 네트워크 차단·API·웹 검색은 샌드박스 대상 아님",
+      "세션은 시작 프로필 유지 — 바꾸려면 새 세션"
+    ],
+    "day_before": [
+      "강사 컴퓨터(macOS·Linux 각 1대 권장)에서 설치·로그인·따라 하기 전 과정 리허설 + 최신 버전 확인",
+      "승인 카드·read-only 쓰기 거부·.env 차단·rm -rf 차단 화면 캡처 준비(실제 화면 캡처 필요)",
+      "Linux 실습 PC bubblewrap 설치·커널 5.13 이상 확인",
+      "x.ai/changelog/build 원문에서 v1.0.44·v1.0.49 샌드박스·권한 변경 내용 재확인",
+      "현재 요금제(The X Subscription)별 Grok Build 사용 가능 여부 공식 페이지 재확인",
+      "실습용 가짜 .env·config.toml·sandbox.toml 예시 파일 배포 자료 준비"
+    ]
+  },
+  "verification": [
+    "[확인 필요] released 2026-09-28 은 Releasebot 요약(v1.0.44 macOS sandbox enforcement) 기준 — x.ai/changelog/build 원문 직접 확인 못 함, 샌드박스 최초 도입일 미확인",
+    "[확인 필요] 승인 카드 버튼 문구·차단 시 오류 메시지 형태 — 공식 문서에 화면 문구 없음",
+    "[확인 필요] Auto 모드 활성 조건('auto permission-mode feature') 세부",
+    "[확인 필요] 요금제별 Grok Build 사용 범위 — 공식 요금 페이지에 Grok Build 사용량 표기 미확인",
+    "[확인 필요] Windows 지원 여부·버전 확인 명령"
+  ],
+  "sources": [
+    {
+      "title": "xAI Docs – Grok Build Permissions",
+      "url": "https://docs.x.ai/build/features/permissions",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Build Sandbox",
+      "url": "https://docs.x.ai/build/features/sandbox",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xai-org/grok-build GitHub – User Guide 18 Sandbox",
+      "url": "https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/18-sandbox.md",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Build Settings Reference",
+      "url": "https://docs.x.ai/build/settings/reference",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription (2026-10-12)",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "Releasebot – xAI Release Notes (보조 근거: Grok Build v1.0.44~v1.0.52 요약)",
+      "url": "https://releasebot.io/updates/xai",
+      "checked": "2026-10-20"
+    }
+  ]
+}
