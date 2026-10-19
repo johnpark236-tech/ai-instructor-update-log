@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 142,
+  "count": 143,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-022",
+      "version": "v1.0",
+      "created_at": "2026-10-19 13:20 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "내 컴퓨터에 Genspark Claw 데스크톱 앱을 깔고 연습 폴더 파일 이름 정리·표 데이터 요약을 맡긴 뒤, 반복 작업을 스킬·예약 작업으로 저장해 볼 수 있음",
+      "summary": "Genspark Claw 데스크톱 앱(로컬 모드) — ① macOS(Apple Silicon)·Windows 앱 설치 → Local Computer 선택 + ② 작업 폴더 지정 후 파일 정리·표 데이터 추출 + ③ 'remember this' 장기 기억 + ④ 반복 작업 스킬 저장·Schedules 예약 작업 + ⑤ 로컬 모드는 추가 구독 없음·작업별 크레딧 차감",
+      "tool": "Genspark",
+      "feature": "Genspark Claw 데스크톱 앱(Genspark Claw for Desktop, 로컬 모드 Local Computer) — ① genspark.ai/download에서 macOS(Apple Silicon)·Windows 앱 설치 ② 로그인 → 왼쪽 패널 Local Computer 선택 → 입력창 폴더 아이콘으로 작업 폴더(workspace folder) 지정 ③ 컴퓨터 사용(Computer Use: 파일 이름 일괄 변경·스프레드시트 데이터 추출·폴더 간 이동)·브라우저 사용(Browser Use: 조사·양식 채우기·페이지 모니터링) ④ 30개 이상 기본 스킬·맞춤 스킬 저장 ⑤ 'remember this' 장기 기억(채널 공유) ⑥ Schedules 예약 작업·Heartbeat 주기 점검 ⑦ 로컬 모드는 추가 구독 없음·작업별 Genspark 크레딧 차감, 클라우드 컴퓨터(Lite·Standard·Powerful)는 월정액 별도 (Claw 2026-03-12 · 데스크톱 AI Workspace 4.0 2026-04-08)",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2026-04-08",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-BIZ",
+        "JOB-EDU",
+        "JOB-DAT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 연습 폴더 파일 10개 '날짜_내용' 형식 이름 정리 + 하위 폴더 분류 + ② 표 파일 요약표(합계·평균·눈에 띄는 점 3개) + ③ 내 작업 규칙 장기 기억 1개 + ④ '폴더 정리' 맞춤 스킬 1개 + ⑤ 매주 1회 폴더 점검 예약 작업 1개",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🦀",
+      "one_liner": "내 PC 파일·앱을 대신 다루는 AI 직원"
+    },
     {
       "id": "AI-2026-10-CAT06-014",
       "version": "v1.0",
