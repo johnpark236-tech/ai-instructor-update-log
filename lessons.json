@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 143,
+  "count": 144,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-023",
+      "version": "v1.0",
+      "created_at": "2026-10-19 13:58 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Grok Bot 여러 개를 한 그룹 대화방에 모아 '조사 담당 → 정리 담당 → 검토 담당' 작은 AI 팀을 꾸리고, @멘션·답장으로 일을 나눠 맡겨 행사 안내문 1장을 완성할 수 있음",
+      "summary": "Grok Bot 그룹 대화(Group chats) — ① 사이드바 New → Bot 2~6개 선택으로 그룹 생성 + ② 그냥 쓰면 Bot들이 담당자를 스스로 정함 + ③ @Bot 멘션·Reply로 한 Bot에게 지정 + ④ Bot끼리 비동기 핸드오프(Bot-to-Bot handoffs) + ⑤ 그룹에는 승인·로그인 요청·메일/Slack 초안이 뜨지 않음",
+      "tool": "Grok",
+      "feature": "Grok Bot 그룹 대화(Group chats)·Bot 간 핸드오프(Bot-to-Bot handoffs) — ① 사이드바 New → New chat에서 Bot 2~6개 선택 → 그룹 이름 수정 → 공동 목표·다음 담당 적기(모바일 + → New Group Chat), 멤버 나중에 수정 ② 그냥 쓰면 참여 Bot들이 응답할 Bot 결정, @ 로 한 Bot 지정, Reply로 그 Bot에게 답장, @everyone 은 전체 공지용 ③ 내 메시지에 첨부 가능·Bot 답에 파일·질문·폼 가능 ④ 승인 요청·비밀값·로그인 요청·메일/Slack 초안은 그룹에 표시 안 됨, Bot→그룹 핸드오프 메시지는 텍스트만 ⑤ Bot이 다른 Bot에게 비동기 메시지로 일 전달, 팀 관리자는 대시보드 Grok Bot 페이지에서 'Messaging Between Bots' 끄기 가능(기본 켜짐)",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-08-11",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-MKT",
+        "JOB-EDU",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① Bot 3개 역할표(이름·설명 규칙) + ② 목표·담당이 적힌 그룹 대화방 1개 + ③ @멘션·Reply로 분담한 대화 기록 캡처 + ④ Bot 간 핸드오프로 완성한 행사 안내문 1장 + ⑤ '그룹에서 안 되는 것' 점검표",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "👥",
+      "one_liner": "Bot 여러 개를 한 방에서 팀으로"
+    },
     {
       "id": "AI-2026-10-CAT08-022",
       "version": "v1.0",

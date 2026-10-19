@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 13:20 KST",
+  "updated_at": "2026-10-19 13:58 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3301,6 +3301,21 @@
       },
       "checked": "2026-10-19",
       "lesson_id": "AI-2026-10-CAT06-014"
+    },
+    {
+      "id": "grokbot-2026-08-11-group-chats",
+      "date": "2026-08-11",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Bot 그룹 대화·Bot 간 핸드오프 — Bot 2~6개를 한 방에서 팀으로",
+      "summary": "Bot 2~6개로 그룹 생성, @멘션·Reply로 담당 지정, Bot끼리 비동기 핸드오프, 승인·메일 초안은 1:1 대화에서 처리",
+      "source": {
+        "title": "xAI Docs – Work with Grok Bot",
+        "url": "https://docs.x.ai/grok-bot/chat-and-collaboration"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT08-023"
     }
   ]
 }
