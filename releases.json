@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-19 20:00 KST",
+  "updated_at": "2026-10-19 22:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-2026-10-11-bot-payments-approvals",
+      "date": "2026-10-11",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Bot 결제(X Money·Stripe Link)·승인 확인 강화",
+      "summary": "v0.70.2: Bot이 X Money·Stripe Link로 결제, 발송·게시·구매·삭제 전 내 메시지로 승인 확인, 쉬운 말 승인 카드, 저장한 Allow 규칙 전 도구 적용 + Settings → General → Auto-review(Ask first 우선)",
+      "source": {
+        "title": "xAI – Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT09-006"
+    },
     {
       "id": "genspark-2025-08-12-ai-meeting-notes",
       "date": "2025-08-12",

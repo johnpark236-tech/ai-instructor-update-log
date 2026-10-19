@@ -1,0 +1,311 @@
+{
+  "id": "AI-2026-10-CAT09-006",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-19 22:10 KST",
+  "checked": "2026-10-19",
+  "review_by": "2027-01-19",
+  "title": "Grok Bot이 결제·발송·삭제처럼 되돌릴 수 없는 일을 하기 전에 반드시 멈추고 묻도록 승인 카드·Auto-review 규칙을 설정하고, 결제(X Money·Stripe Link) 연습을 안전하게 해 볼 수 있음",
+  "summary": "Grok Bot 승인·결제 안전 설정 — ① 승인 카드 3버튼(Allow once·Always allow·Deny) + ② Settings → General → Auto-review의 'Ask first'·'Allow automatically' 규칙(충돌 시 Ask first 우선) + ③ v0.70.2(2026-10-11) 결제(X Money·Stripe Link)·되돌릴 수 없는 행동 전 승인 확인 + ④ 카드·비밀번호는 채팅에 쓰지 않고 Take over·보안 입력창으로",
+  "glance": {
+    "emoji": "🛑",
+    "one_liner": "결제·발송 전엔 Bot이 꼭 묻게 설정",
+    "cards": [
+      {"icon": "🃏", "title": "승인 카드", "text": "한 번 허용·항상 허용·거절"},
+      {"icon": "📏", "title": "Auto-review", "text": "Ask first 규칙이 항상 우선"},
+      {"icon": "💳", "title": "Bot 결제", "text": "X Money·Stripe Link 지원"},
+      {"icon": "🔐", "title": "비밀은 직접", "text": "카드·암호는 Take over로"}
+    ],
+    "diagram": {
+      "title": "되돌릴 수 없는 행동 처리 흐름",
+      "nodes": [
+        {"icon": "🤖", "label": "Bot 작업 제안"},
+        {"icon": "🔍", "label": "규칙·검토"},
+        {"icon": "🃏", "label": "승인 카드"},
+        {"icon": "🙋", "label": "내가 결정"},
+        {"icon": "▶️", "label": "실행 또는 중단"}
+      ]
+    },
+    "before_after": {
+      "before": {"label": "설정 전", "text": "Always allow를 습관처럼 누름 + 결제·발송 범위를 모른 채 맡김"},
+      "after": {"label": "설정 후", "text": "구매·발송·삭제는 Ask first로 멈춤 → 대상·범위·금액 확인 후 한 번만 허용"}
+    },
+    "cautions": [
+      "카드 사진·번호는 채팅에 안 올림",
+      "모르는 승인 카드는 Deny 먼저",
+      "Always allow는 좁은 범위만"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Bot 승인(Approvals)·Auto-review 규칙·결제(X Money·Stripe Link) — 승인 카드 Allow once·Always allow·Deny, Settings → General → Auto-review(Ask first·Allow automatically, 충돌 시 Ask first 우선, 팀 관리자 잠금 규칙), 지켜보지 않는 작업 승인 약 10분 뒤 만료(Expired), v0.70.2(2026-10-11) X Money·Stripe Link 결제·되돌릴 수 없는 행동(발송·게시·구매·삭제) 전 내 메시지로 승인 확인·쉬운 말 승인 카드·저장한 Allow 규칙 전 도구 적용, Take over·보안 입력으로 비밀번호·결제 확인",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-10-11",
+  "categories": ["CAT-09", "CAT-08"],
+  "jobs": ["JOB-OFF", "JOB-BIZ", "JOB-EDU", "JOB-SEN"],
+  "learner_levels": ["초급", "중급"],
+  "instructor_levels": ["초보강사", "중급강사"],
+  "minutes": {"theory": 30, "practice": 55, "wrap": 10},
+  "prerequisites": [
+    "Grok Bot 포함 요금제 — The X Subscription Premium(월 $30) 이상 또는 기존 SuperGrok·Cursor 유료 요금제 연결",
+    "Grok Bot 데스크톱 앱 최신 버전(결제·승인 확인 개선은 v0.70.2 이상, 변경 기록 기준)",
+    "Bot 1개 이상 만들어 둔 상태(없으면 기본 Bot 사용)",
+    "실제 카드·계좌는 쓰지 않음 — 결제 실습은 '결제 직전 멈춤' 연습만 진행",
+    "본인 메일 주소 1개(보내기 승인 카드 연습용, 받는 사람은 본인만)"
+  ],
+  "outcome": "① 내 Auto-review 규칙표(Ask first 3개 이상 + 좁은 Allow 1개) + ② 승인 카드 3버튼 연습 기록(Deny·Allow once 각 1회) + ③ '결제 직전 멈춤' 대리 구매 요청문 1개 + ④ 승인 전 3초 점검 카드(대상·범위·값) + ⑤ 권한 정리 점검표",
+  "objectives": [
+    "Grok Bot이 되돌릴 수 없는 행동(발송·게시·구매·삭제) 전에 '규칙·검토 → 승인 카드 → 사람 결정' 순서로 멈추는 구조를 설명할 수 있음",
+    "Auto-review에 Ask first·Allow automatically 규칙을 나눠 넣고, 승인 카드에서 Allow once·Always allow·Deny를 상황에 맞게 고를 수 있음",
+    "Bot 결제(X Money·Stripe Link)를 쓸 때 카드 정보·비밀번호를 채팅에 넣지 않고 Take over·보안 입력으로 처리하는 원칙을 지킬 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "Free·Plus 요금제에는 Grok Bot 미포함. The X Subscription Premium 월 $30부터 포함, Super·Ultra는 사용량 확대. 승인·Auto-review 설정 자체는 추가 요금 없음 [확인 필요], 결제한 상품 금액은 별도",
+    "plans": [
+      {"name": "Free", "price": "$0", "features": "매일 제한된 Grok 이용 + Cursor 맛보기 — Grok Bot 미포함"},
+      {"name": "Plus", "price": "월 $8 (연 $80)", "features": "Grok·Cursor 기본 사용량 + X 체크 표시 — Grok Bot 미포함"},
+      {"name": "Premium", "price": "월 $30 (연 $300)", "features": "Grok Bot 포함 — 승인 카드·Auto-review·결제 연결, Plus의 4배 사용량"},
+      {"name": "Super", "price": "월 $100 (연 $1,000)", "features": "Premium 전체 + Plus의 15배 사용량"},
+      {"name": "Ultra", "price": "월 $200 (연 $2,000)", "features": "Super 전체 + Plus의 50배 사용량"}
+    ],
+    "note": "요금은 xAI 공식 발표·문서 기준(미국 달러·세금 별도). Grok Bot FAQ 기준 Cursor 유료 개인 요금제·Cursor Teams 좌석에도 포함, SuperGrok 연결 가능. 팀 단위 Auto-review 규칙(Configure Rules·Enforce Auto-review)은 Enterprise 전용. X Money·Stripe Link 결제의 국가 제공 범위(미국 우선 보도)·수수료·원화 가격 [확인 필요]",
+    "checked": "2026-10-19",
+    "sources": [
+      {"title": "xAI News – Introducing The X Subscription", "url": "https://x.ai/news/x-subscription"},
+      {"title": "xAI Docs – The X Subscription Pricing", "url": "https://docs.x.ai/x-subscription/pricing"},
+      {"title": "xAI Docs – Grok Bot FAQ", "url": "https://docs.x.ai/grok-bot/faq"}
+    ]
+  },
+  "timeline": [
+    {"date": "2026-08-11", "text": "Grok Bot 베타 공개 — Bot마다 클라우드 컴퓨터, 민감한 작업은 승인 요청"},
+    {"date": "2026-08-28", "text": "Stripe Link로 온라인 구매(미국 우선) — 구매마다 사용자 승인 후 1회용 카드 발급 (RuntimeWire 보도, 보조 근거)"},
+    {"date": "2026-10-02", "text": "v0.67.0 — 규칙 때문에 멈춘 승인 카드에 표시 + Edit rule 버튼"},
+    {"date": "2026-10-05", "text": "v0.68.0 — 승인 카드에 Bot 이름·지시 문장 인용"},
+    {"date": "2026-10-11", "text": "v0.70.2 — X Money·Stripe Link 결제, 발송·게시·구매·삭제 전 내 메시지로 승인 확인, 쉬운 말 승인 카드, 저장한 Allow 규칙 전 도구 적용"},
+    {"date": "2026-10-18", "text": "머스크 X 게시물 — 카드 사진으로 구매 시작 가능 언급, 구매 오류·유출 보상 약속 (공식 문서 미반영, 보조 근거) [미검증]"}
+  ],
+  "theory": {
+    "definition": "Grok Bot(자기 클라우드 컴퓨터를 가진 xAI의 상시 AI 팀원)이 위험하거나 되돌릴 수 없는 행동 전에 멈추고 사람 결정을 받는 장치임. ① 승인 카드(Allow once·Always allow·Deny) ② Auto-review 규칙(Ask first·Allow automatically) ③ 독립 검토 모델(Auto Review)의 위험 점검 ④ 사람만 할 수 있는 단계(비밀번호·결제 확인·CAPTCHA)는 Take over로 직접 처리",
+    "analogy": "회사 법인카드를 비서에게 맡기면서 '커피값은 알아서, 10만 원 넘는 결제·외부 메일·문서 삭제는 무조건 결재 올려'라는 결재 규정을 정해 두는 것과 같음",
+    "comparison": {
+      "headers": ["버튼·규칙", "하는 일", "언제 씀", "주의"],
+      "rows": [
+        ["Allow once", "이번 행동 1번만 실행", "내용을 확인했고 이번만 허용", "다음 같은 행동은 다시 물음"],
+        ["Always allow", "비슷한 행동 자동 진행 규칙 저장", "반복되는 안전한 작업", "넓게 저장하면 위험 → 범위 좁게"],
+        ["Deny", "이번 행동 막음", "무엇을 하는지 모를 때", "이미 끝난 작업은 되돌리지 않음"],
+        ["Ask first 규칙", "맞는 행동은 항상 멈추고 물음", "구매·송금·발송·삭제", "Allow와 겹치면 Ask first 우선"],
+        ["Allow automatically 규칙", "검토에서 문제 없으면 진행", "좁고 잘 아는 작업", "최소 권한 원칙 대체 아님"]
+      ]
+    },
+    "concepts": [
+      {"title": "승인 카드 읽는 법", "body": "① 대상(누구·어느 사이트) ② 범위(몇 개·어디까지) ③ 값(금액·받는 사람·삭제 파일) 3가지 확인 ④ 효과를 모르면 승인하지 말고 Bot에게 설명·초안 요청 ⑤ 지켜보지 않는 작업(루틴·트리거·다른 Bot 메시지)의 승인 요청은 약 10분 뒤 Expired, 실행 안 됨 ⑥ 승인은 제안된 행동만 통제, 끝난 작업은 되돌리지 않음"},
+      {"title": "Auto-review 규칙", "body": "① 위치: Settings → General → Auto-review ② Ask first = 맞는 행동은 항상 멈춤 ③ Allow automatically = 검토에서 다른 이유가 없을 때만 진행 ④ 둘이 겹치면 Ask first 우선 ⑤ 팀 관리자 잠금 규칙은 수정·삭제 불가, 내 규칙은 더 엄격하게만 추가 ⑥ 개인 규칙은 데스크톱마다 저장 → 다른 PC에서 다시 설정 ⑦ 규칙 작성 형식은 공식 문서 미기재 [확인 필요]"},
+      {"title": "결제와 비밀 정보", "body": "① v0.70.2부터 X Money·Stripe Link로 결제 가능(변경 기록) ② 구매·송금은 Ask first 규칙 권장(FAQ·보안 문서) ③ 비밀번호·인증 코드·결제 확인·CAPTCHA는 사용자가 직접 → Take over → 그 단계만 처리 → I'm done ④ 지원 연결의 보안 입력창(secure secret request)은 값을 가리고 대화 기록·모델에서 숨김 ⑤ Stripe Link는 승인한 구매마다 1회용 카드 사용(보도 기준) [확인 필요]"}
+    ],
+    "can": [
+      "승인 카드에서 Allow once·Always allow·Deny 선택",
+      "Settings → General → Auto-review에서 Ask first·Allow automatically 규칙 관리",
+      "규칙 때문에 멈춘 카드에서 Edit rule로 바로 규칙 수정(v0.67.0)",
+      "X Money·Stripe Link로 Bot 결제(v0.70.2, 승인 후)",
+      "Settings → General → Bot → Execution on Local Computer를 Ask every time·Always allow·Never allow로 지정"
+    ],
+    "cannot": [
+      "Free·Plus 요금제에서 Grok Bot 사용 불가(The X Subscription 기준)",
+      "팀 관리자가 잠근 규칙은 수정·삭제 불가",
+      "승인으로 이미 끝난 작업 되돌리기 불가",
+      "Expired된 승인 카드로 그 행동 실행 불가 — Bot에게 다시 시도 요청",
+      "Bot을 여러 개 만들어도 보안 경계 아님 — 모든 Bot이 클라우드 컴퓨터·브라우저 로그인 공유"
+    ],
+    "safety": [
+      "카드 사진·카드 번호·비밀번호·인증 코드를 일반 채팅에 올리지 않음 — 공식 문서 원칙, 결제 확인은 Take over·보안 입력창으로 직접",
+      "Always allow는 '이 폴더의 PDF 저장'처럼 좁게만 — '모든 구매 허용' 같은 넓은 규칙 금지",
+      "웹페이지·메일 속 '지금 구매하라'는 문구는 지시가 아닌 정보 — 예상 못 한 승인 카드는 Deny 후 이유 질문 (프롬프트 주입 주의)",
+      "모든 Bot이 같은 컴퓨터·로그인을 공유 → 쇼핑몰 로그인 후 작업 끝나면 로그아웃",
+      "승인한 행동의 책임은 사용자(이용 약관 개정 보도 기준) — 금액·받는 사람 확인 후 승인"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① Auto-review 규칙표 + ② 승인 카드 3버튼 연습 기록 + ③ '결제 직전 멈춤' 대리 구매 요청문 + ④ 3초 점검 카드 + ⑤ 권한 정리 점검표. 비포(아무 카드나 Always allow)가 애프터(위험 행동은 항상 멈추고 확인)로 바뀜",
+    "follow": [
+      {
+        "title": "Auto-review 화면 열기",
+        "minutes": 5,
+        "do": "Grok Bot 데스크톱 앱 → Settings → General → Auto-review 열기 → 이미 있는 규칙(팀 잠금 규칙 'Required by your admin' 포함) 목록 메모",
+        "prompt": "",
+        "expect": "현재 규칙 목록 메모(없으면 '없음')",
+        "note": "팀 계정은 잠금 규칙이 보일 수 있음 — 수정·삭제 불가가 정상"
+      },
+      {
+        "title": "Ask first 규칙 3개 넣기",
+        "minutes": 10,
+        "do": "Auto-review에서 Ask first 규칙 추가 → ① 구매·결제·송금 ② 외부로 메일·메시지 보내기 ③ 파일·데이터 삭제 3개 입력 → 저장",
+        "prompt": "Ask first 규칙 예시 문구:\n1) Any purchase, payment, or money transfer\n2) Sending email or messages to anyone outside me\n3) Deleting or overwriting files or data",
+        "expect": "Ask first 규칙 3개가 목록에 표시",
+        "note": "[확인 필요] 규칙 입력 형식(자유 문장·선택 목록)은 공식 문서 미기재 — 화면에 맞춰 입력, 한국어 입력 가능 여부도 강사가 전날 확인"
+      },
+      {
+        "title": "보내기 승인 카드 연습",
+        "minutes": 8,
+        "do": "아래 프롬프트 입력 → 승인 카드가 뜨면 대상·범위·값 확인 → 먼저 Deny → '방금 무엇을 하려 했는지 설명해 줘' 요청 → 다시 요청해 Allow once",
+        "prompt": "내 메일 주소(본인 주소)로 제목 '승인 연습', 본문 '승인 카드 연습 메일입니다' 한 줄짜리 메일을 보내 줘. 보내기 전에 반드시 승인을 받아 줘.",
+        "expect": "승인 카드 → Deny 1회 + Allow once 1회 → 내 메일함에 1통",
+        "note": "받는 사람은 반드시 본인. Bot 메일 주소·Gmail 연결 중 하나가 필요하며, 메일 발송은 초안 카드로 뜰 수 있음"
+      },
+      {
+        "title": "결제 직전 멈춤 연습",
+        "minutes": 8,
+        "do": "아래 프롬프트로 가격 비교만 시키기 → Bot이 장바구니·결제 단계에서 멈추고 묻는지 확인 → 결제 승인 카드가 뜨면 Deny",
+        "prompt": "온라인 서점에서 'AI 활용 교육' 관련 책 3권의 가격·배송비를 표로 비교해 줘. 장바구니 담기나 결제는 하지 말고, 결제가 필요한 단계에 오면 멈추고 나에게 물어봐.",
+        "expect": "가격 비교표 + 결제 시도 없음 또는 승인 카드 → Deny",
+        "note": "실제 결제 수단 연결 없이 진행. 쇼핑몰 로그인 요구 시 진행하지 말 것. 일부 쇼핑몰은 자동 접근을 막을 수 있음(보도 기준)"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "좁은 Allow 규칙 1개",
+        "minutes": 6,
+        "do": "자주 하는 안전한 작업 1개를 골라 Allow automatically 규칙으로 좁게 추가 → 예) 웹페이지를 PDF로 내 작업 폴더에 저장",
+        "prompt": "Allow automatically 규칙 예시 문구:\nSaving a web page as a PDF into my workspace folder",
+        "expect": "Allow 규칙 1개 + Ask first 3개 유지",
+        "note": "Ask first와 겹치면 Ask first가 이김 — 구매·발송·삭제는 Allow에 넣지 말 것"
+      },
+      {
+        "title": "3초 점검 카드 만들기",
+        "minutes": 5,
+        "do": "Bot에게 아래 프롬프트로 나만의 승인 전 점검 카드 작성 요청 → 메모장·휴대폰 배경에 저장",
+        "prompt": "Grok Bot 승인 카드를 누르기 전에 3초 안에 확인할 점검 카드를 만들어 줘. '대상·범위·값' 3줄 + '모르면 Deny' 1줄, 쉬운 한국어로.",
+        "expect": "4줄 점검 카드",
+        "note": "시니어·초급 수강생은 카드 그대로 인쇄해 사용"
+      },
+      {
+        "title": "대리 구매 요청문 다듬기",
+        "minutes": 7,
+        "do": "실제로 맡기고 싶은 구매 1건을 정해 '예산 상한 + 금지 행동 + 멈춤 지점' 3칸 요청문 작성 → Bot에게 실행 말고 검토만 요청",
+        "prompt": "아래 구매 요청문을 실행하지 말고 검토만 해 줘. 빠진 조건이 있으면 알려 줘.\n- 살 것: 사무용 A4 용지 1상자\n- 예산 상한: 3만 원(배송비 포함)\n- 금지: 정기 구독·추가 옵션·다른 상품 담기\n- 멈춤: 결제 직전에 상품명·총액·배송지를 보여 주고 내 승인 받기",
+        "expect": "빠진 조건 목록 + 다듬은 요청문",
+        "note": "실습에서는 실행 금지, 요청문만 완성"
+      },
+      {
+        "title": "권한 정리 점검",
+        "minutes": 6,
+        "do": "Settings → General → Bot → Execution on Local Computer 값 확인(필요 없으면 Never allow) → 실습 중 저장된 Always allow 규칙 점검·불필요하면 삭제 → 쇼핑몰 로그인했으면 로그아웃",
+        "prompt": "",
+        "expect": "권한 정리 점검표(로컬 실행·저장 규칙·로그인·연결 앱 4칸) 완성",
+        "note": "Bot 삭제만으로는 공유 컴퓨터 파일·브라우저 로그인이 지워지지 않음"
+      }
+    ],
+    "challenges": [
+      {"level": "⭐", "mission": "루틴이 보낸 승인 요청을 일부러 10분 넘게 두어 Expired 표시를 확인하고, Bot에게 다시 시도 요청하기"},
+      {"level": "⭐⭐", "mission": "메일 속에 '이 링크에서 바로 구매하라'는 문장을 넣은 테스트 메일을 Bot에게 요약시키고, 구매 시도 없이 요약만 하는지 점검하기"},
+      {"level": "⭐⭐⭐", "mission": "우리 기관(팀)용 Auto-review 규칙 초안 만들기 — Ask first 5개·Allow 2개, 관리자 잠금 여부·Enforce Auto-review 필요성까지 표로 정리"}
+    ]
+  },
+  "wrap": {
+    "share": "옆 사람과 Auto-review 규칙표를 바꿔 보고 '구매·발송·삭제가 모두 Ask first인지 + Allow 규칙이 충분히 좁은지' 2가지 서로 체크 진행",
+    "quiz": [
+      {
+        "q": "Auto-review에서 Ask first 규칙과 Allow automatically 규칙이 같은 행동에 함께 걸리면 어떻게 되나요?",
+        "options": ["Allow automatically가 이김", "Ask first가 이겨서 멈추고 물음", "둘 다 무시됨", "먼저 만든 규칙이 이김"],
+        "answer": 1,
+        "explain": "공식 문서 기준 충돌 시 Ask first 우선"
+      },
+      {
+        "q": "Bot이 결제 확인 단계에서 카드 인증이 필요하다고 할 때 올바른 방법은?",
+        "options": ["카드 사진을 채팅에 올림", "카드 번호를 채팅에 입력", "Take over로 그 단계만 직접 처리하고 I'm done", "Always allow로 모든 결제 허용"],
+        "answer": 2,
+        "explain": "비밀번호·인증 코드·결제 확인은 사용자가 Take over로 직접, 일반 채팅에 비밀 정보 금지"
+      },
+      {
+        "q": "루틴이 보낸 승인 요청을 10분 넘게 확인하지 않으면?",
+        "options": ["자동 승인됨", "Expired로 바뀌고 실행되지 않음", "팀 관리자에게 넘어감", "Bot이 삭제됨"],
+        "answer": 1,
+        "explain": "지켜보지 않는 작업의 승인은 약 10분 뒤 만료, 실행 안 됨 → Bot에게 다시 시도 요청"
+      }
+    ],
+    "rubric": [
+      {"criterion": "규칙 설계", "high": "Ask first 3개(구매·발송·삭제) + 좁은 Allow 1개", "mid": "Ask first 1~2개", "low": "규칙 없음"},
+      {"criterion": "승인 연습", "high": "Deny·Allow once 모두 + 결제 직전 멈춤 확인", "mid": "카드 1종만 연습", "low": "연습 안 함"},
+      {"criterion": "비밀 정보 보호", "high": "점검 카드 + 권한 정리 4칸 완료", "mid": "점검 카드만", "low": "채팅에 개인 정보 입력"}
+    ],
+    "next": [
+      "Grok Bot 기본기 — Bot 만들기·루틴·Team Bots (AI-2026-10-CAT08-009)",
+      "Grok Bot 앱 연결·앱 카드 (AI-2026-10-CAT08-016)",
+      "Grok Bot 메일 루틴·별칭 (AI-2026-10-CAT08-018)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {"time": "0~5분", "content": "오프닝, 'Bot에게 법인카드를 맡긴다면?' 질문 + 승인 카드 Deny 시연", "note": "비포/애프터"},
+      {"time": "5~35분", "content": "1부 이론: 승인 카드 3버튼, Auto-review 규칙, 결제(X Money·Stripe Link), Take over·보안 입력, 공유 컴퓨터 주의", "note": "규칙 입력 형식은 [확인 필요]로 안내"},
+      {"time": "35~66분", "content": "2부 따라 하기: Auto-review 열기 → Ask first 3개 → 보내기 승인 카드 → 결제 직전 멈춤", "note": "받는 사람은 본인만"},
+      {"time": "66~90분", "content": "2부 내 것 만들기: 좁은 Allow 규칙 → 3초 점검 카드 → 대리 구매 요청문 → 권한 정리", "note": "실제 결제 금지"},
+      {"time": "90~100분", "content": "3부 정리: 규칙표 상호 체크, 퀴즈 3문제, 다음 단계", "note": "전체 100분"}
+    ],
+    "script": [
+      {"label": "오프닝", "text": "여러분 비서에게 법인카드를 맡긴다면 어떤 규칙을 정하시겠어요? 오늘은 AI 비서인 Grok Bot에게 그 결재 규정을 정해 주는 시간입니다."},
+      {"label": "개념 설명", "text": "승인 카드에는 버튼이 세 개 있습니다. 이번 한 번만, 앞으로 항상, 그리고 거절. 모르면 거절부터 누르고 Bot에게 무엇을 하려 했는지 물어보세요."},
+      {"label": "보안 안내", "text": "카드 사진이나 비밀번호는 절대 채팅에 올리지 마세요. 결제 확인이 필요하면 Take over로 그 단계만 직접 하시면 됩니다."},
+      {"label": "마무리", "text": "일은 Bot이 하고, 돈과 발송과 삭제는 사람이 결정합니다. 오늘 만든 점검 카드를 승인 버튼 누르기 전에 꼭 떠올려 주세요."}
+    ],
+    "plan_b": [
+      {"situation": "Auto-review 화면에 규칙 추가 버튼이 없거나 입력 형식이 다름", "response": "화면 캡처로 강사가 시연, 수강생은 규칙표를 종이에 작성 후 다음 업데이트 때 입력"},
+      {"situation": "보내기 승인 카드가 뜨지 않음(메일 연결 없음)", "response": "'내 작업 폴더의 테스트 파일 삭제' 요청으로 삭제 승인 카드 연습으로 대체"},
+      {"situation": "Grok Bot 포함 요금제가 없는 수강생", "response": "짝 실습 또는 규칙표·대리 구매 요청문 작성 역할 맡기기"}
+    ],
+    "stuck": [
+      {"issue": "승인 카드가 안 뜨고 바로 실행됨", "fix": "이전에 Always allow로 저장된 규칙 확인 → Auto-review 목록에서 삭제·수정 후 다시 시도"},
+      {"issue": "승인 카드가 Expired로 바뀜", "fix": "정상 — 지켜보지 않는 작업 승인은 약 10분 뒤 만료. Bot에게 다시 시도 요청"},
+      {"issue": "팀 규칙을 지울 수 없음", "fix": "정상 — 'Required by your admin' 규칙은 관리자만 수정, 내 규칙은 더 엄격하게만 추가"},
+      {"issue": "다른 PC에서 내 규칙이 안 보임", "fix": "개인 규칙은 데스크톱마다 저장 → 그 PC에서 다시 추가"},
+      {"issue": "쇼핑몰이 Bot 접속을 막거나 로그인 요구", "fix": "실습은 가격 비교까지만, 로그인·결제 진행하지 않음 — 다른 공개 쇼핑몰로 바꿔 비교"}
+    ],
+    "faq": [
+      {"q": "Bot이 내 허락 없이 결제할 수 있나요?", "a": "v0.70.2부터 결제 전 사용자 승인 확인, Auto-review에 구매 Ask first 규칙을 두면 항상 멈춤. 다만 Always allow로 넓게 허용하면 위험"},
+      {"q": "X Money와 Stripe Link는 한국에서 쓸 수 있나요?", "a": "[확인 필요] 변경 기록에는 지원만 표기, Stripe Link 구매는 미국 우선 보도. 강의 전 계정 화면에서 확인"},
+      {"q": "카드 사진으로 결제가 된다던데요?", "a": "머스크 X 게시물(2026-10-18) 언급일 뿐 공식 문서 미반영 [미검증]. 공식 문서는 비밀 정보를 채팅에 넣지 말고 보안 입력·Take over 사용 안내"},
+      {"q": "Deny를 누르면 이미 한 일도 취소되나요?", "a": "아님. 승인은 제안된 행동만 통제, 끝난 작업은 되돌리지 않음"},
+      {"q": "Bot을 여러 개 만들면 서로 안전하게 분리되나요?", "a": "아님. 모든 Bot이 한 클라우드 컴퓨터·파일·브라우저 로그인 공유 — 보안 경계 아님"},
+      {"q": "팀 전체 규칙은 어떻게 정하나요?", "a": "Enterprise 전용 — Cursor 대시보드 Grok Bot 페이지 Configure Rules + Enforce Auto-review 켜기(기본 꺼짐)"}
+    ],
+    "level_guide": [
+      {"level": "초급(처음 사용)", "guide": "Ask first 3개 입력 + Deny 연습 + 3초 점검 카드까지"},
+      {"level": "중급(업무 활용 중)", "guide": "좁은 Allow 규칙 설계 + 대리 구매 요청문 + 권한 정리 점검표"},
+      {"level": "시니어", "guide": "'모르면 거절' 원칙과 카드·비밀번호 채팅 금지만 집중, 점검 카드 인쇄 배포"},
+      {"level": "한국어 학습자·다문화", "guide": "승인 카드 영어 버튼(Allow once·Always allow·Deny) 뜻을 한국어·모국어로 짝지어 외우기, '~하기 전에 물어봐 줘' 표현 연습"}
+    ],
+    "pro_points": [
+      "핵심 메시지: '일은 Bot, 돈·발송·삭제 결정은 사람' + '모르면 Deny'",
+      "에이전트 결제 시대의 소비자 보안 교육 소재로 활용도 높음 — Meta Muse·ChatGPT 에이전트 결제와 묶어 비교 가능",
+      "기관 도입 시 Enterprise 팀 규칙(Enforce Auto-review)을 먼저 켜야 한다는 점을 관리자 교육에 포함",
+      "개인 규칙이 PC마다 따로 저장된다는 점이 현장에서 자주 놓치는 지점"
+    ],
+    "day_before": [
+      "시연 계정 Grok Bot 앱 최신 버전(v0.70.2 이상) 업데이트",
+      "Settings → General → Auto-review 화면에서 규칙 입력 형식·한국어 입력 가능 여부 확인",
+      "승인 카드(Deny·Allow once·Always allow)·Expired 카드·Take over 화면 캡처 준비",
+      "X Money·Stripe Link 결제 연결 메뉴가 한국 계정에 보이는지 확인",
+      "수강생 요금제 파악 → 짝 실습 편성, 실습용 공개 쇼핑몰 1곳 정해 두기"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Auto-review 규칙 입력 형식(자유 문장·선택 목록)과 한국어 입력 가능 여부 — 공식 문서 미기재",
+    "[확인 필요] X Money·Stripe Link 결제 연결 메뉴 위치·국가 제공 범위·수수료 — 변경 기록(v0.70.2)에 지원 한 줄만 있음",
+    "[미검증] 카드 사진으로 구매 시작(머스크 X 게시물 2026-10-18), 1회용 카드·약관 개정(보도) — 공식 도움말 미반영",
+    "[실험 기능] Grok Bot은 베타 표기",
+    "승인 카드·Auto-review·Take over·만료(약 10분)·공유 컴퓨터 내용은 docs.x.ai Grok Bot 문서 기준",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — 공식 문서·변경 기록 기준"
+  ],
+  "sources": [
+    {"title": "xAI Docs – Grok Bot: Approvals, security, and privacy", "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy", "checked": "2026-10-19"},
+    {"title": "xAI Docs – Grok Bot: Settings and notifications", "url": "https://docs.x.ai/grok-bot/settings-and-notifications", "checked": "2026-10-19"},
+    {"title": "xAI Docs – Grok Bot: Teams and enterprises (Auto-review rules)", "url": "https://docs.x.ai/grok-bot/teams-and-enterprises", "checked": "2026-10-19"},
+    {"title": "xAI Docs – Grok Bot: Use the computer and apps (Take over)", "url": "https://docs.x.ai/grok-bot/computer-and-apps", "checked": "2026-10-19"},
+    {"title": "xAI Docs – Grok Bot FAQ", "url": "https://docs.x.ai/grok-bot/faq", "checked": "2026-10-19"},
+    {"title": "xAI – Grok Bot Changelog (v0.67.0·v0.68.0·v0.70.2)", "url": "https://x.ai/changelog/bot", "checked": "2026-10-19"},
+    {"title": "xAI News – Introducing The X Subscription", "url": "https://x.ai/news/x-subscription", "checked": "2026-10-19"},
+    {"title": "xAI Docs – The X Subscription Pricing", "url": "https://docs.x.ai/x-subscription/pricing", "checked": "2026-10-19"},
+    {"title": "(보조 근거) RuntimeWire – Grok Bot can shop online, one human-approved charge at a time (2026-08-28)", "url": "https://runtimewire.com/article/grok-bot-online-shopping-stripe-link", "checked": "2026-10-19"},
+    {"title": "(보조 근거) BASENOR – Grok Bot Can Now Shop With a Credit Card Screenshot (2026-10-18)", "url": "https://www.basenor.com/blogs/news/grok-bot-can-now-shop-with-a-credit-card-screenshot", "checked": "2026-10-19"}
+  ]
+}
