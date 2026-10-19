@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 156,
+  "count": 157,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-028",
+      "version": "v1.0",
+      "created_at": "2026-10-20 03:10 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "Genspark 워크플로(Workflows)에 할 일을 말로 설명해 예약·메일 트리거 자동화를 만들고, Test Run으로 시험한 뒤 Turn On으로 켜서 '매일 아침 안 읽은 메일 요약 자동화 1개'를 완성할 수 있음",
+      "summary": "Genspark Workflows — ① 메인 메뉴 Workflow → New Custom Workflow(또는 템플릿) + ② 왼쪽 채팅창에 자동화 설명 → AI가 트리거·실행 단계 구성 + ③ Test Run(가짜 데이터, 실제 발송 없음) + ④ Turn On으로 실제 실행 + ⑤ View All에서 켜기·끄기·Configure·Delete·실행 기록·Pending Confirmation 확인",
+      "tool": "Genspark",
+      "feature": "워크플로(Workflows, 노코드 AI 자동화) — ① 메인 메뉴 Workflow → New Custom Workflow 또는 템플릿 라이브러리 ② 왼쪽 채팅창에 자동화를 말로 설명 → AI가 트리거·실행 단계 구성, 대화로 계속 수정 ③ 트리거 1개: 예약(Schedule: 매일·매주·매월·30분마다 등 맞춤 간격, 종료일·시간대) 또는 메일(Email: Gmail·Outlook 새 메일, 계정 승인 필요) ④ 연결: Genspark AI 도구(웹·이미지·YouTube 검색)·Gmail/Outlook(검색·읽기·답장·전달)·Google Sheets/Drive/Docs·Slack/Microsoft Teams/LINE·Outlook Calendar·Salesforce·Stripe·GitHub·X 등 + 내가 만든 Custom Agent ⑤ Test Run(가짜 데이터, 실제 발송·변경 없음) → Turn On ⑥ View All: 켜기·끄기(Active·Stopped)·⋯ Configure·Test Run·Delete(복구 불가)·Share, My Workflows 실행 기록(상태·시각·소요 시간)·Pending Confirmation 검토 (AI Workspace 3.0 2026-03-12 · Advanced Workflows 2026-04-08)",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2026-03-12",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-MKT",
+        "JOB-BIZ",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 매일 아침 안 읽은 메일을 요약해 주는 예약 워크플로 1개 + ② Test Run 결과 확인 기록 + ③ 메일 트리거로 영수증 금액·업체를 Google Sheets에 적는 워크플로 1개(Test Run까지) + ④ 내 반복 업무 자동화 설계표 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "⚙️",
+      "one_liner": "말로 설명하면 반복 업무 자동화"
+    },
     {
       "id": "AI-2026-10-CAT08-027",
       "version": "v1.0",

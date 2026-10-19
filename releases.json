@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 02:10 KST",
+  "updated_at": "2026-10-20 03:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3481,6 +3481,21 @@
       },
       "checked": "2026-10-20",
       "lesson_id": "AI-2026-10-CAT08-027"
+    },
+    {
+      "id": "genspark-2026-03-12-workflows",
+      "date": "2026-03-12",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Genspark Workflows — 말로 만드는 노코드 AI 자동화(AI Workspace 3.0)",
+      "summary": "채팅으로 설명하면 예약·메일(Gmail·Outlook) 트리거와 실행 단계 자동 구성, 약 20개 앱 연결·템플릿, Test Run 후 Turn On, 2026-04-08 Advanced Workflows(OpenCode 엔진)",
+      "source": {
+        "title": "Genspark Blog – Genspark AI Workspace 3.0",
+        "url": "https://www.genspark.ai/blog/genspark-ai-workspace-3"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT08-028"
     }
   ]
 }

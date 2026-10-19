@@ -1,0 +1,579 @@
+{
+  "id": "AI-2026-10-CAT08-028",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-20 03:10 KST",
+  "checked": "2026-10-20",
+  "review_by": "2027-01-20",
+  "title": "Genspark 워크플로(Workflows)에 할 일을 말로 설명해 예약·메일 트리거 자동화를 만들고, Test Run으로 시험한 뒤 Turn On으로 켜서 '매일 아침 안 읽은 메일 요약 자동화 1개'를 완성할 수 있음",
+  "summary": "Genspark Workflows — ① 메인 메뉴 Workflow → New Custom Workflow(또는 템플릿) + ② 왼쪽 채팅창에 자동화 설명 → AI가 트리거·실행 단계 구성 + ③ Test Run(가짜 데이터, 실제 발송 없음) + ④ Turn On으로 실제 실행 + ⑤ View All에서 켜기·끄기·Configure·Delete·실행 기록·Pending Confirmation 확인",
+  "glance": {
+    "emoji": "⚙️",
+    "one_liner": "말로 설명하면 반복 업무 자동화",
+    "cards": [
+      {
+        "icon": "💬",
+        "title": "말로 만들기",
+        "text": "채팅으로 트리거·단계 구성"
+      },
+      {
+        "icon": "⏰",
+        "title": "트리거 2종",
+        "text": "예약(Schedule)·새 메일(Email)"
+      },
+      {
+        "icon": "🧪",
+        "title": "Test Run",
+        "text": "가짜 데이터로 안전하게 시험"
+      },
+      {
+        "icon": "🔌",
+        "title": "앱 연결",
+        "text": "Gmail·Sheets·Slack 등 연결"
+      }
+    ],
+    "diagram": {
+      "title": "Workflows 흐름",
+      "nodes": [
+        {
+          "icon": "✍️",
+          "label": "할 일 설명"
+        },
+        {
+          "icon": "🧩",
+          "label": "AI가 단계 구성"
+        },
+        {
+          "icon": "🧪",
+          "label": "Test Run"
+        },
+        {
+          "icon": "▶️",
+          "label": "Turn On"
+        },
+        {
+          "icon": "📋",
+          "label": "실행 기록 확인"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "쓰기 전",
+        "text": "매일 아침 메일함을 열어 하나씩 읽고 직접 정리"
+      },
+      "after": {
+        "label": "쓴 뒤",
+        "text": "정한 시각에 안 읽은 메일 요약이 자동으로 도착"
+      }
+    },
+    "cautions": [
+      "처음엔 Test Run으로만 시험",
+      "발송·삭제 단계는 확인 후 켜기",
+      "개인정보 메일 자동 전달 금지"
+    ]
+  },
+  "tool": "Genspark",
+  "feature": "워크플로(Workflows, 노코드 AI 자동화) — ① 메인 메뉴 Workflow → New Custom Workflow 또는 템플릿 라이브러리 ② 왼쪽 채팅창에 자동화를 말로 설명 → AI가 트리거·실행 단계 구성, 대화로 계속 수정 ③ 트리거 1개: 예약(Schedule: 매일·매주·매월·30분마다 등 맞춤 간격, 종료일·시간대) 또는 메일(Email: Gmail·Outlook 새 메일, 계정 승인 필요) ④ 연결: Genspark AI 도구(웹·이미지·YouTube 검색)·Gmail/Outlook(검색·읽기·답장·전달)·Google Sheets/Drive/Docs·Slack/Microsoft Teams/LINE·Outlook Calendar·Salesforce·Stripe·GitHub·X 등 + 내가 만든 Custom Agent ⑤ Test Run(가짜 데이터, 실제 발송·변경 없음) → Turn On ⑥ View All: 켜기·끄기(Active·Stopped)·⋯ Configure·Test Run·Delete(복구 불가)·Share, My Workflows 실행 기록(상태·시각·소요 시간)·Pending Confirmation 검토 (AI Workspace 3.0 2026-03-12 · Advanced Workflows 2026-04-08)",
+  "company": "Genspark (MainFunc)",
+  "type": "update",
+  "released": "2026-03-12",
+  "categories": [
+    "CAT-08",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-MKT",
+    "JOB-BIZ",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
+  "prerequisites": [
+    "Genspark 계정(무료 가능, 하루 100크레딧) — 워크플로 이용 가능 요금제·실행당 크레딧 [확인 필요]",
+    "PC 웹 브라우저(genspark.ai) 권장",
+    "실습용 Gmail 또는 Outlook 계정(업무·개인 중요 메일 없는 실습용 권장) + Google Sheets 1개",
+    "자동화하고 싶은 반복 업무 1개 메모(예: 아침 메일 정리·영수증 기록·주간 보고)"
+  ],
+  "outcome": "① 매일 아침 안 읽은 메일을 요약해 주는 예약 워크플로 1개 + ② Test Run 결과 확인 기록 + ③ 메일 트리거로 영수증 금액·업체를 Google Sheets에 적는 워크플로 1개(Test Run까지) + ④ 내 반복 업무 자동화 설계표 1장",
+  "objectives": [
+    "Workflows가 '설명 → AI 단계 구성 → Test Run → Turn On → 실행 기록'으로 움직이는 구조를 설명할 수 있음",
+    "예약(Schedule)·메일(Email) 트리거를 골라 말로 자동화를 만들고 대화로 고칠 수 있음",
+    "Test Run과 실제 실행의 차이, Pending Confirmation 검토, 끄기·삭제 방법을 이해하고 안전하게 운영할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "Workflows 전용 요금 없음 — 도움말에 요금제별 이용 범위·실행당 크레딧 표기 없음 [확인 필요]. 무료 하루 100크레딧 → Plus 월 $24.99·Pro 월 $249.99·Team 좌석당 월 $40",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "하루 100크레딧(평생 무료 한도까지) + AI Drive 1GB + AI 모델·에이전트 제한적 이용 — 워크플로 체험 가능 여부 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $24.99 (연 결제 시 월 $19.99)",
+        "features": "월 10,000크레딧부터 + AI Drive 50GB + Free Quota(Standard 모드 주간 한도) + 생성물 상업적 이용"
+      },
+      {
+        "name": "Pro",
+        "price": "월 $249.99 (연 결제 시 월 $199.99)",
+        "features": "월 125,000크레딧부터 + AI Drive 1TB + Free Quota 10배 — 여러 자동화 상시 운영"
+      },
+      {
+        "name": "Team",
+        "price": "좌석당 월 $40 (연 결제 시 $35)",
+        "features": "좌석당 월 10,000크레딧 + 관리자 결제·사용량 분석 — 팀 공용 자동화"
+      },
+      {
+        "name": "Enterprise",
+        "price": "",
+        "features": "맞춤 계약 (금액 비공개)"
+      }
+    ],
+    "note": "요금은 Genspark 도움말 'Membership Plans' 미국 달러 기준(2026-10-20 확인). Workflows 도움말·Credits Guide에 워크플로 실행 크레딧 단가 없음. 원화 가격·요금제별 워크플로 개수 제한 [확인 필요]",
+    "checked": "2026-10-20",
+    "sources": [
+      {
+        "title": "Genspark Help Center – Workflows",
+        "url": "https://www.genspark.ai/helpcenter/workflows"
+      },
+      {
+        "title": "Genspark Help Center – Membership Plans",
+        "url": "https://www.genspark.ai/helpcenter/membership-plans"
+      },
+      {
+        "title": "Genspark Help Center – Credits Guide",
+        "url": "https://www.genspark.ai/helpcenter/credits-guide"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-03-12",
+      "text": "Genspark AI Workspace 3.0에서 Genspark Workflows 공개 — 약 20개 앱에서 템플릿·맞춤 워크플로로 반복 업무 자동화(Google Workspace·Outlook·Slack·Teams·Notion·Salesforce·X 등)"
+    },
+    {
+      "date": "2026-04-08",
+      "text": "AI Workspace 4.0에서 Advanced Workflows 공개 — OpenCode 기반 더 빠른 실행 엔진, 복잡한 다단계·분기 자동화"
+    },
+    {
+      "date": "2026-09-19",
+      "text": "Workflows 도움말 갱신 — New Custom Workflow·Test Run·Turn On, 예약·메일 트리거, 워크플로당 트리거 1개"
+    },
+    {
+      "date": "2026-10-20",
+      "text": "교안 기준 확인 — 도움말 기준 메뉴·트리거·연결 앱·관리 기능으로 작성"
+    }
+  ],
+  "theory": {
+    "definition": "Genspark에서 코딩 없이 '언제 + 무엇을'을 말로 설명하면 AI가 트리거와 실행 단계를 만들어 반복 업무를 자동으로 처리하는 기능임. 메일·캘린더·문서·메신저 등 연결 앱과 내가 만든 Custom Agent를 단계로 씀",
+    "analogy": "'매일 아침 8시에 우편함 확인해서 중요한 것만 메모해 줘'라고 비서에게 한 번 일러두면 매일 알아서 하는 것과 같음. 처음 하루는 연습(Test Run)으로 시켜 보고 괜찮으면 정식 업무(Turn On)로 맡김",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Genspark Workflows",
+        "Genspark Super Agent(채팅)",
+        "Custom Agent"
+      ],
+      "rows": [
+        [
+          "실행 시점",
+          "트리거(예약·새 메일) 때 자동",
+          "내가 요청할 때마다",
+          "내가 @로 부를 때"
+        ],
+        [
+          "만드는 법",
+          "채팅으로 설명 → 단계 자동 구성",
+          "매번 프롬프트 입력",
+          "역할·기능·출력 기준 설명"
+        ],
+        [
+          "시험",
+          "Test Run(가짜 데이터)",
+          "없음",
+          "Preview 창"
+        ],
+        [
+          "관계",
+          "Custom Agent를 단계로 사용 가능",
+          "—",
+          "워크플로 안에서 호출 가능"
+        ],
+        [
+          "어울리는 일",
+          "매일·매주 반복 업무",
+          "한 번 하는 일",
+          "자주 쓰는 역할"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "트리거 2종",
+        "body": "① 예약(Schedule): 시각 + 반복(매일·매주·매월·30분마다 같은 맞춤 간격) + 종료일·시간대 ② 메일(Email): Gmail·Outlook에 새 메일이 오면 실행, 계정 먼저 승인. 워크플로 1개 = 트리거 1개 → 트리거가 여러 개면 워크플로를 따로 만듦"
+      },
+      {
+        "title": "Test Run과 Turn On",
+        "body": "Test Run은 가짜(시뮬레이션) 데이터로 돌려 실제 메일 발송·데이터 변경 없음. Turn On을 누르면 트리거마다 실제 실행되고 모든 동작이 실제로 반영됨 → 반드시 Test Run 결과 확인 후 켜기"
+      },
+      {
+        "title": "관리와 실행 기록",
+        "body": "Workflow → View All: ① 토글로 Active·Stopped ② ⋯ → Configure(수정)·Test Run·Delete(복구 불가) ③ 오른쪽 위 Share ④ My Workflows 가운데 패널 실행 기록(상태·시각·소요 시간) → 누르면 오른쪽에 전체 결과 ⑤ Pending Confirmation 단계는 기록에서 검토 후 처리"
+      }
+    ],
+    "can": [
+      "매일 아침 안 읽은 메일 요약 같은 예약 자동화 만들기",
+      "메일로 온 영수증의 금액·업체를 Google Sheets에 자동 기록",
+      "주간 경쟁사 보고서처럼 웹 검색 + 문서 작성 자동화",
+      "Slack·Microsoft Teams·LINE으로 결과 보내기",
+      "내가 만든 Custom Agent를 자동화 단계로 넣기",
+      "템플릿 라이브러리에서 골라 시작하기"
+    ],
+    "cannot": [
+      "워크플로 1개에 트리거 여러 개 — 트리거마다 따로 만들어야 함",
+      "Gmail·Outlook 외 메일 서비스로 메일 트리거 — 도움말 지원 목록에 없음",
+      "Test Run으로 실제 결과 만들기 — 가짜 데이터라 실제 발송·변경 없음",
+      "삭제한 워크플로 복구 — Delete는 영구 삭제",
+      "실행당 크레딧 미리 알기 — 공식 단가 비공개 [확인 필요]"
+    ],
+    "safety": [
+      "메일 자동 답장·전달·발송 단계는 Test Run으로 확인하고, 처음엔 '초안만 만들기'로 시작",
+      "고객·수강생 개인정보가 담긴 메일을 외부 채널(Slack·LINE 등)로 자동 전달하지 않음",
+      "계정 연결 권한은 필요한 앱만 승인, 안 쓰는 워크플로는 Stopped로 끄기",
+      "AI 요약·추출 값(금액·날짜)은 틀릴 수 있음 → 시트 기록을 주기적으로 원본과 대조",
+      "공유(Share) 전 워크플로 안에 비밀번호·개인 메일 주소가 들어 있지 않은지 확인"
+    ]
+  },
+  "practice": {
+    "preview": "오늘 만들 작품: ① 매일 아침 안 읽은 메일 요약 예약 워크플로 + ② Test Run 결과 확인 + ③ 영수증 메일 → Google Sheets 기록 워크플로(Test Run까지) + ④ 내 반복 업무 자동화 설계표. 비포(매일 메일함 직접 정리)가 애프터(정한 시각에 요약 도착)로 바뀜",
+    "follow": [
+      {
+        "title": "Workflow 열기",
+        "minutes": 4,
+        "do": "genspark.ai 로그인 → 메인 메뉴 Workflow → New Custom Workflow 클릭 → 템플릿 라이브러리도 함께 훑어보기",
+        "prompt": "",
+        "expect": "왼쪽 채팅창 + 워크플로 편집 화면",
+        "note": "메뉴 이름·위치는 도움말 기준 [확인 필요]"
+      },
+      {
+        "title": "아침 메일 요약 만들기",
+        "minutes": 10,
+        "do": "왼쪽 채팅창에 아래 프롬프트 입력 → Gmail(또는 Outlook) 계정 승인 요청이 나오면 실습용 계정으로 승인 → AI가 만든 트리거·단계 확인",
+        "prompt": "매일 아침 8시(한국 시간)에 내 Gmail에서 지난 24시간 동안 온 안 읽은 메일을 찾아서, 보낸 사람·제목·한 줄 요약·답장 필요 여부를 표로 정리해 줘. 결과는 나에게 메일로 보내 줘. 메일에 답장하거나 삭제하지는 말 것.",
+        "expect": "예약 트리거(매일 08:00, 시간대 Asia/Seoul) + 메일 검색·요약·결과 보내기 단계",
+        "note": "시간대 설정을 꼭 확인"
+      },
+      {
+        "title": "대화로 고치기",
+        "minutes": 6,
+        "do": "채팅으로 조건을 바꿔 단계가 바뀌는지 확인",
+        "prompt": "주말에는 실행하지 말고 평일에만 실행해 줘. 그리고 광고·뉴스레터 메일은 요약에서 빼 줘.",
+        "expect": "반복 규칙·필터가 바뀐 워크플로",
+        "note": "원하는 대로 안 바뀌면 더 구체적으로 다시 요청"
+      },
+      {
+        "title": "Test Run → Turn On",
+        "minutes": 8,
+        "do": "Test Run 클릭 → 가짜 데이터 결과 확인 → 문제없으면 Turn On → View All에서 Active 상태 확인",
+        "prompt": "",
+        "expect": "Test Run 결과 + Active 워크플로 1개",
+        "note": "Test Run은 실제 메일 발송 없음, Turn On부터 실제 실행"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "영수증 → 시트 기록",
+        "minutes": 10,
+        "do": "New Custom Workflow → 아래 프롬프트 → Google Sheets 승인 → Test Run까지만 진행",
+        "prompt": "Gmail에 제목에 '영수증' 또는 'receipt'가 들어간 새 메일이 오면, 메일에서 날짜·업체 이름·금액·통화를 찾아 Google Sheets '경비 기록' 시트에 한 줄씩 추가해 줘. 금액을 못 찾으면 '확인 필요'라고 적어 줘.",
+        "expect": "메일 트리거 + 정보 추출 + 시트 추가 단계, Test Run 결과",
+        "note": "실습 후 Turn On 여부는 각자 판단, 켜지 않으면 Stopped 유지"
+      },
+      {
+        "title": "실행 기록 읽기",
+        "minutes": 5,
+        "do": "View All → My Workflows → 가운데 실행 기록에서 상태·시각·소요 시간 확인 → 기록 클릭해 오른쪽 결과 보기 → Pending Confirmation 있으면 검토",
+        "prompt": "",
+        "expect": "실행 기록 확인 메모",
+        "note": "Turn On 직후엔 기록이 없을 수 있음 → 강사 예시 화면으로 확인"
+      },
+      {
+        "title": "내 업무 자동화 설계표",
+        "minutes": 7,
+        "do": "내 반복 업무 1개를 5칸으로 정리 → 그대로 채팅창에 붙여 새 워크플로 만들기",
+        "prompt": "[언제] 매주 월요일 9시 / 새 메일이 올 때\n[어디서 가져오기] Gmail·Google Drive·웹 검색\n[무엇을 하기] 요약·추출·보고서 작성\n[어디로 보내기] 내 메일·Slack·Google Sheets\n[하지 말 것] 답장·삭제·외부 발송 금지",
+        "expect": "재사용 가능한 자동화 설계표 1장 + 새 워크플로 초안",
+        "note": "[하지 말 것] 칸이 안전장치 역할"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "템플릿 라이브러리에서 템플릿 1개를 골라 내 상황에 맞게 채팅으로 고치고 Test Run 하기"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "'매주 금요일 17시 경쟁사·관심 분야 뉴스 웹 검색 → 요약 보고서를 Google Docs로 만들어 Drive에 저장' 워크플로 만들기"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "내가 만든 Custom Agent를 단계로 넣은 워크플로를 만들고, 1주일 실행 기록·크레딧 사용량을 측정해 한 달 비용 계산하기"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "짝과 워크플로 화면을 보여 주며 '트리거·단계·하지 말 것·Test Run 결과' 4가지를 서로 체크 진행",
+    "quiz": [
+      {
+        "q": "Test Run에 대한 설명으로 맞는 것은?",
+        "options": [
+          "실제 메일을 한 번 보내 본다",
+          "가짜 데이터로 돌려 실제 발송·변경이 없다",
+          "워크플로를 영구 저장한다",
+          "트리거를 2개로 늘린다"
+        ],
+        "answer": 1,
+        "explain": "Test Run은 시뮬레이션 데이터로 실행해 실제 메일 발송·데이터 변경 없음. 실제 실행은 Turn On부터"
+      },
+      {
+        "q": "새 메일이 올 때와 매일 아침 8시, 두 조건으로 자동화하고 싶다면?",
+        "options": [
+          "한 워크플로에 트리거 2개를 넣는다",
+          "워크플로를 2개 만든다",
+          "Super Agent에 매번 요청한다",
+          "불가능하다"
+        ],
+        "answer": 1,
+        "explain": "워크플로 1개는 트리거 1개만 지원 → 트리거마다 워크플로를 따로 만듦"
+      },
+      {
+        "q": "Workflows의 메일(Email) 트리거가 지원하는 메일 서비스는?",
+        "options": [
+          "Gmail·Outlook",
+          "NAVER 메일만",
+          "모든 IMAP 메일",
+          "메일 트리거는 없다"
+        ],
+        "answer": 0,
+        "explain": "도움말 기준 메일 트리거는 Gmail·Outlook 지원, 계정 승인 필요"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "자동화 설계",
+        "high": "언제·어디서·무엇을·어디로·하지 말 것 5요소 명시",
+        "mid": "언제·무엇을만 명시",
+        "low": "막연한 한 줄 요청"
+      },
+      {
+        "criterion": "안전한 시험",
+        "high": "Test Run 결과 확인 + 수정 후 Turn On + 발송·삭제 단계 제한",
+        "mid": "Test Run만 실행",
+        "low": "시험 없이 바로 Turn On"
+      },
+      {
+        "criterion": "운영 관리",
+        "high": "실행 기록·Pending Confirmation 확인 + 안 쓰는 워크플로 Stopped",
+        "mid": "실행 기록만 확인",
+        "low": "켜 두고 확인 안 함"
+      }
+    ],
+    "next": [
+      "Genspark Custom Super Agent — 나만의 에이전트 (AI-2026-10-CAT08-025)",
+      "Genspark Hub — 프로젝트별 전용 공간·기억 (AI-2026-10-CAT03-027)",
+      "Grok 자동화(Automations) 비교 (AI-2026-10-CAT08-010)",
+      "Manus 자동화(Automations) 비교 (AI-2026-10-CAT08-013)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝, 강사 메일함에 아침 8시에 도착한 '자동 메일 요약' 결과 보여 주기",
+        "note": "비포/애프터"
+      },
+      {
+        "time": "5~35분",
+        "content": "1부 이론: 정의, 트리거 2종, 연결 앱, Test Run vs Turn On, 관리·실행 기록, Super Agent·Custom Agent와 비교, 요금, 안전 수칙",
+        "note": "계정 승인 화면 캡처 미리 보여 주기"
+      },
+      {
+        "time": "35~63분",
+        "content": "2부 따라 하기: Workflow 열기 → 아침 메일 요약 → 대화로 고치기 → Test Run → Turn On",
+        "note": "실습용 메일 계정 사용"
+      },
+      {
+        "time": "63~85분",
+        "content": "2부 내 것 만들기: 영수증 → 시트 기록(Test Run까지) → 실행 기록 읽기 → 내 업무 설계표",
+        "note": "Turn On은 각자 판단"
+      },
+      {
+        "time": "85~95분",
+        "content": "3부 정리: 짝 상호 체크, 퀴즈 3문제, 수업 뒤 끄기(Stopped) 안내",
+        "note": "전체 95분"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "오늘 아침 8시에 제 메일함에 이 요약이 와 있었습니다. 제가 한 건 어제 딱 한 번, 채팅창에 '매일 아침 안 읽은 메일 정리해 줘'라고 쓴 것뿐입니다. 오늘은 여러분도 이런 자동화를 하나 만들어 가시겠습니다."
+      },
+      {
+        "label": "개념 설명",
+        "text": "워크플로는 '언제'와 '무엇을' 두 가지만 정하면 됩니다. 언제는 정한 시각이거나 새 메일이 왔을 때, 무엇을은 말로 설명하면 AI가 단계로 바꿔 줍니다."
+      },
+      {
+        "label": "보안 안내",
+        "text": "Turn On을 누르는 순간부터는 진짜로 실행됩니다. 그래서 꼭 Test Run으로 먼저 확인하고, 처음에는 답장이나 삭제 같은 되돌릴 수 없는 일은 시키지 마세요."
+      },
+      {
+        "label": "마무리",
+        "text": "자동화는 켜 두고 잊어버리기 쉽습니다. 일주일에 한 번은 실행 기록을 보시고, 안 쓰는 워크플로는 꼭 꺼 두세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Workflow 메뉴가 안 보이거나 요금제 제한 안내가 뜸",
+        "response": "강사 화면 시연으로 진행, 수강생은 설계표 작성과 프롬프트 작성 담당, 이용 가능 요금제는 수업 뒤 확인 [확인 필요]"
+      },
+      {
+        "situation": "Gmail·Outlook 계정 승인 실패(회사 계정 보안 정책 등)",
+        "response": "개인 실습용 Gmail로 바꾸거나, 메일 없이 '매일 웹 검색 → 요약' 예약 워크플로로 대체"
+      },
+      {
+        "situation": "크레딧 부족",
+        "response": "짝 계정으로 이어서 진행, 본인은 Test Run 결과 체크리스트 작성"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "시간이 한국 시간과 다르게 설정됨",
+        "fix": "예약 트리거의 시간대를 Asia/Seoul로 바꾸거나 프롬프트에 '한국 시간' 명시"
+      },
+      {
+        "issue": "트리거를 2개 넣고 싶음",
+        "fix": "워크플로당 트리거 1개 → 같은 단계로 워크플로를 하나 더 만들기"
+      },
+      {
+        "issue": "Test Run 결과에 내 실제 메일이 안 보임",
+        "fix": "정상 — Test Run은 가짜 데이터 사용, 실제 결과는 Turn On 뒤 실행 기록에서 확인"
+      },
+      {
+        "issue": "워크플로를 수정하고 싶음",
+        "fix": "View All → ⋯ → Configure → 채팅으로 수정"
+      },
+      {
+        "issue": "Pending Confirmation 표시가 뜸",
+        "fix": "My Workflows 실행 기록에서 해당 단계 내용을 확인 후 처리"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 계정으로도 만들 수 있나요?",
+        "a": "도움말에 요금제별 이용 범위가 없음 [확인 필요]. 강의 전 무료 계정으로 New Custom Workflow·Test Run 가능 여부 시험 필요"
+      },
+      {
+        "q": "실행할 때마다 크레딧이 드나요?",
+        "a": "Workflows 도움말·Credits Guide에 실행 단가 표기 없음 [확인 필요]. 1주일 실행 후 크레딧 잔액 변화로 측정 권장"
+      },
+      {
+        "q": "NAVER 메일도 트리거로 쓸 수 있나요?",
+        "a": "도움말 기준 메일 트리거는 Gmail·Outlook만 지원. NAVER 메일은 지원 목록에 없음"
+      },
+      {
+        "q": "자동으로 답장까지 보내게 해도 되나요?",
+        "a": "Gmail/Outlook 답장·전달 기능은 있으나 Turn On 뒤엔 실제로 발송됨 → 처음엔 요약·초안만, 충분히 시험한 뒤 판단"
+      },
+      {
+        "q": "다른 사람에게 워크플로를 나눌 수 있나요?",
+        "a": "워크플로 채팅 오른쪽 위 Share 버튼으로 공유 가능. 받는 쪽 권한·동작 범위 [확인 필요]"
+      },
+      {
+        "q": "Grok·Manus 자동화와 무엇이 다른가요?",
+        "a": "Genspark는 채팅으로 단계를 만들고 Test Run(가짜 데이터)으로 시험하는 방식, 내가 만든 Custom Agent를 단계로 넣을 수 있음. 세부 비교는 각 공식 문서 기준 확인"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급(처음 사용)",
+        "guide": "강사가 프롬프트를 나눠 주고 아침 메일 요약 1개 + Test Run까지만"
+      },
+      {
+        "level": "중급(업무 활용 중)",
+        "guide": "영수증 → 시트 기록 + 설계표로 내 업무 자동화 1개 + 실행 기록 관리"
+      },
+      {
+        "level": "고급(자동화·개발)",
+        "guide": "Custom Agent·Advanced Workflows로 다단계·분기 자동화, Salesforce·GitHub·Stripe 연결, 크레딧 측정 후 비용 설계"
+      },
+      {
+        "level": "시니어",
+        "guide": "'매일 아침 날씨·동네 소식 웹 검색 요약을 내 메일로' 같은 생활 자동화 1개, 발송 단계 없이"
+      },
+      {
+        "level": "한국어 학습자·다문화",
+        "guide": "'매일 아침 오늘의 한국어 표현 3개와 쉬운 예문을 내 메일로' 예약 워크플로 만들기, 모국어 뜻 함께 받기"
+      }
+    ],
+    "pro_points": [
+      "핵심 메시지: '언제 + 무엇을 + 하지 말 것' 3가지로 설명 → Test Run → Turn On → 실행 기록 확인",
+      "되돌릴 수 없는 동작(발송·삭제·결제)은 마지막에 추가하는 습관이 핵심 안전장치",
+      "Grok·Manus·Notion 맞춤 에이전트 자동화와 비교하면 '에이전트 자동화' 일반 원리로 확장 가능",
+      "강사 본인 업무(수강 문의 메일 정리·출결 시트 기록)에 바로 적용해 시연하면 설득력 큼"
+    ],
+    "day_before": [
+      "강사 계정으로 Workflow 메뉴·New Custom Workflow·템플릿 라이브러리·Test Run·Turn On·View All·실행 기록 화면 캡처 준비",
+      "아침 메일 요약 워크플로를 전날 켜 두고 당일 아침 결과 메일 확보(오프닝 시연용)",
+      "무료 계정으로 워크플로 만들기·Test Run 가능 여부와 크레딧 사용량 확인 [확인 필요 항목]",
+      "수강생용 실습 Gmail 계정 준비 안내(회사 계정은 승인 막힐 수 있음)",
+      "영수증 예시 메일 1~2통을 실습 계정에 미리 보내 두기"
+    ]
+  },
+  "verification": [
+    "[확인 필요] 요금제별 Workflows 이용 범위·워크플로 개수 제한·실행당 크레딧 — 도움말·Credits Guide에 표기 없음",
+    "[확인 필요] 메뉴 이름·위치(메인 메뉴 Workflow → New Custom Workflow)와 모바일 앱 지원 — 도움말 표기 기준, 실제 화면 재현 못 함",
+    "[확인 필요] Share로 받은 사람의 권한·실행 범위, Advanced Workflows와 일반 Workflows 화면 구분",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — Genspark 도움말(Workflows·Membership Plans·Credits Guide)·공식 블로그(AI Workspace 3.0·4.0) 기준"
+  ],
+  "sources": [
+    {
+      "title": "Genspark Help Center – Workflows",
+      "url": "https://www.genspark.ai/helpcenter/workflows",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "Genspark Blog – Genspark AI Workspace 3.0: Introducing Your First AI Employee",
+      "url": "https://www.genspark.ai/blog/genspark-ai-workspace-3",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "Genspark Blog – Introducing Genspark AI Workspace 4.0: Your AI Employee, Now Everywhere",
+      "url": "https://www.genspark.ai/blog/genspark-ai-workspace-4",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "Genspark Help Center – Membership Plans",
+      "url": "https://www.genspark.ai/helpcenter/membership-plans",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "Genspark Help Center – Credits Guide",
+      "url": "https://www.genspark.ai/helpcenter/credits-guide",
+      "checked": "2026-10-20"
+    }
+  ]
+}
