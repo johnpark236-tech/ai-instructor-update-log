@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 144,
+  "count": 145,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-027",
+      "version": "v1.0",
+      "created_at": "2026-10-19 15:08 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Genspark Hub(허브)에 수업 자료·지침을 한 번 넣어 두고, 같은 Hub 안 여러 프로젝트(요약·슬라이드·안내문)가 같은 맥락을 이어 쓰게 만들 수 있음",
+      "summary": "Genspark Hub — ① 왼쪽 사이드바 Hub 또는 genspark.ai/hub → + New로 프로젝트 공간 만들기 + ② Files에 자료 업로드(Hub당 100개·파일당 10MB) + ③ 맞춤 지침(Custom Instructions) Hub 전체 적용 + ④ 같은 Hub 프로젝트끼리 대화 기록 공유(교차 프로젝트 기억) + ⑤ @로 AI Slides·AI Docs 등 에이전트 선택 + ⑥ Members > Invite로 팀원 초대",
+      "tool": "Genspark",
+      "feature": "Genspark Hub(젠스파크 허브, 프로젝트별 전용 공간·기억) — ① 왼쪽 사이드바 Hub 또는 genspark.ai/hub → + New → 이름·테마 색·설명 → Create Hub ② Files: 내 컴퓨터·AI Drive에서 문서(doc·docx·pdf·md)·코드(html·py·json)·발표(ppt·pptx)·표(xlsx·csv)·이미지(png·jpg·jpeg·webp) 추가, Hub당 100개·파일당 10MB, 오디오·영상·압축 파일 불가 ③ 맞춤 지침(Custom Instructions) Hub 안 모든 프로젝트에 적용 ④ 교차 프로젝트 기억: 같은 Hub 프로젝트끼리 대화 기록 공유 ⑤ 입력창 @로 AI Slides·AI Sheets·AI Docs·Genspark Code·AI Designer·Clip Genius·AI Pods·맞춤 Super Agent 선택(기본 Super Agent) ⑥ 프로젝트 ⋯ > Add to Hub·Change Hub·Remove from Hub(프로젝트는 Hub 1곳에만) ⑦ Members > Invite 이메일 초대(만든 사람만), 팀원은 파일·기록 열람·이어 작업 ⑧ Hub 삭제 시 파일·프로젝트 모두 삭제·복구 불가",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2025-10-29",
+      "categories": [
+        "CAT-03",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① '스마트폰 AI 활용 4주 과정' Hub 1개(파일 3개 + 맞춤 지침) + ② 프로젝트 1: 설문 요약표·개선점 3개 + ③ 프로젝트 2: 앞 요약을 이어 받은 1회차 수업 슬라이드 + ④ 프로젝트 3: 같은 지침으로 쓴 수강생 안내 문자 3종",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "프로젝트별 자료·지침·기억을 한 공간에"
+    },
     {
       "id": "AI-2026-10-CAT08-023",
       "version": "v1.0",

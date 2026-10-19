@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-19 13:58 KST",
+  "updated_at": "2026-10-19 15:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2025-10-29-hub",
+      "date": "2025-10-29",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Genspark Hub — 프로젝트별 전용 공간·기억",
+      "summary": "Hub마다 파일(100개·10MB)·맞춤 지침 저장, 같은 Hub 프로젝트끼리 대화 기록 공유, @로 AI Slides·AI Docs 등 에이전트 선택, Members 초대",
+      "source": {
+        "title": "Genspark Help Center – Hub",
+        "url": "https://www.genspark.ai/helpcenter/hub"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT03-027"
+    },
     {
       "id": "genspark-2026-04-08-claw-desktop",
       "date": "2026-04-08",
