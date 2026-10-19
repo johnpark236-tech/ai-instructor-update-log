@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-19 17:00 KST",
+  "updated_at": "2026-10-19 18:00 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2025-07-09-ai-pods",
+      "date": "2025-07-09",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "AI Pods — 프롬프트 한 번으로 만드는 2인 대화 팟캐스트",
+      "summary": "주제·글·문서·URL을 2인 대화 팟캐스트로 변환, 진행자 수·24개 언어·길이·말투·영상 여부를 프롬프트로 지정, Share·Export Audio·Publish",
+      "source": {
+        "title": "Genspark Blog – Introducing Genspark AI Pods",
+        "url": "https://www.genspark.ai/blog/genspark-ai-pods"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT05-022"
+    },
     {
       "id": "genspark-2025-10-15-custom-super-agent",
       "date": "2025-10-15",

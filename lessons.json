@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 147,
+  "count": 148,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-022",
+      "version": "v1.0",
+      "created_at": "2026-10-19 18:00 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Genspark AI Pods(AI 팟캐스트)에 프롬프트 한 번으로 주제·문서·웹페이지를 2인 대화형 팟캐스트로 바꾸고, 진행자 수·언어·길이·말투를 지정해 '수업 복습용 한국어 팟캐스트 1편 + 오디오 파일'을 완성할 수 있음",
+      "summary": "Genspark AI Pods — ① 사이드바 New → AI Pods(또는 홈 All Agents) + ② 주제·붙여 넣은 글·문서(PDF·DOCX·TXT)·URL 중 하나로 프롬프트 1개 + ③ 진행자 수(기본 2명)·언어(24개)·길이·말투·영상 여부를 프롬프트에 적기 + ④ 5~15분 생성 → 대본·커버 이미지·오디오 + ⑤ Share 링크·Export Audio(AI Drive 저장)·Publish(커뮤니티 공개)",
+      "tool": "Genspark",
+      "feature": "AI Pods(AI 팟캐스트) — ① 사이드바 New → AI Pods 또는 홈 All Agents에서 진입 ② 프롬프트 1개로 주제·붙여 넣은 글·문서 업로드(PDF·DOCX·TXT 등)·URL을 팟캐스트로 변환 ③ 별도 설정 창 없이 프롬프트로 진행자 수(기본 2명·1명 가능, 3명 이상은 대본만)·언어(24개, 한국어 포함)·길이(목표값)·말투·영상 팟캐스트 지정 ④ 5~15분 생성 → 대본·자동 커버 이미지·2인 대화 오디오(영상은 슬라이드·참고 이미지 포함) ⑤ 커버 이미지만 다시 생성 가능, 나머지 수정은 새 프롬프트로 다시 만들기 ⑥ Share 링크 공유·Export Audio/Export Video(AI Drive 저장 후 다운로드)·Publish(로그인·오디오 필요, 검토 없이 즉시 커뮤니티 공개, Published 버튼으로 해제) ⑦ 오디오 생성은 항상 크레딧 차감(대본 길이 비례), 실패 시 차감 없음",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2025-07-09",
+      "categories": [
+        "CAT-05",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 주제 한 줄로 만든 한국어 2인 대화 팟캐스트 1편 + ② 내 수업 자료로 만든 10분 내외 복습 팟캐스트 1편 + ③ 진행자 수·언어·길이·말투가 들어간 프롬프트 템플릿 1장 + ④ Export Audio로 저장한 오디오 파일 + ⑤ Share 링크 공유 기록",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "프롬프트 한 번으로 2인 대화 팟캐스트"
+    },
     {
       "id": "AI-2026-10-CAT08-025",
       "version": "v1.0",
