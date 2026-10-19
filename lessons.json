@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 141,
+  "count": 142,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-014",
+      "version": "v1.0",
+      "created_at": "2026-10-19 12:20 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "Chrome 옆 Genspark 사이드바로 지금 보는 기사·상품 페이지를 복사 없이 요약·비교표로 정리하고, 연습용 검색창 입력까지 맡겨 볼 수 있음",
+      "summary": "Genspark Chrome 확장 프로그램 — ① 툴바 아이콘 클릭 → 오른쪽 사이드바 + ② 복사·붙여넣기 없이 현재 페이지 읽기·요약·관점별 정리 + ③ 가격·평점·사양 추출 → 표 + ④ 버튼 클릭·입력칸 채우기·화면 캡처 자동화 + ⑤ 설치 무료·사용 시 Genspark 크레딧 차감",
+      "tool": "Genspark",
+      "feature": "Genspark Chrome 확장 프로그램(Genspark Chrome Extension) — Chrome 오른쪽 사이드바 AI 비서: ① Chrome 웹 스토어 'Genspark' → Add to Chrome → 툴바 아이콘 클릭으로 사이드바 열기 ② 사이드바 대화(페이지 이동해도 세션 맥락 유지·한국어 지원) ③ 웹페이지 심층 분석(복사 없이 현재 페이지 읽기·핵심·데이터 포인트·투자자·소비자·연구자 관점 요약·여러 기사 비교) ④ 가격·평점·사양 구조화 추출 → 목록·표 ⑤ 브라우저 자동화(버튼·링크 클릭·입력칸·양식 채우기·전체·영역 화면 캡처·DOM 요소 지정) ⑥ 설치 무료·사용 시 Genspark 크레딧 차감 ⑦ 사용할 때만 현재 페이지 읽음·대화 기록은 현재 세션 유지 (AI Workspace 3.0, 2026-03-12)",
+      "company": "Genspark",
+      "type": "update",
+      "released": "2026-03-12",
+      "categories": [
+        "CAT-06",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-MKT",
+        "JOB-DAT",
+        "JOB-STU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 기사 1개 핵심 3줄 + 데이터 포인트 요약 + ② 같은 기사 '소비자 관점'·'연구자 관점' 비교 요약 + ③ 기사 2개 비교표 + ④ 상품 페이지 가격·평점·사양 추출표 + ⑤ 연습용 검색창 자동 입력·결과 화면 캡처 1장",
+      "access": "freemium",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "Chrome 옆 AI로 페이지 바로 정리"
+    },
     {
       "id": "AI-2026-10-CAT08-021",
       "version": "v1.0",

@@ -3271,6 +3271,21 @@
       },
       "checked": "2026-10-19",
       "lesson_id": "AI-2026-10-CAT08-021"
+    },
+    {
+      "id": "genspark-2026-03-12-chrome-extension",
+      "date": "2026-03-12",
+      "tool": "Genspark",
+      "company": "Genspark",
+      "type": "update",
+      "title": "Genspark Chrome 확장 프로그램 — Chrome 사이드바 AI 비서(AI Workspace 3.0)",
+      "summary": "Chrome 오른쪽 사이드바에서 현재 페이지를 읽어 요약·관점별 분석·가격 추출, 클릭·입력·화면 캡처 브라우저 자동화, 설치 무료·사용 시 크레딧 차감",
+      "source": {
+        "title": "Genspark Blog – Genspark AI Workspace 3.0",
+        "url": "https://www.genspark.ai/blog/genspark-ai-workspace-3"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT06-014"
     }
   ]
 }
