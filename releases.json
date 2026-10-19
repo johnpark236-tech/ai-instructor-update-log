@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-19 15:10 KST",
+  "updated_at": "2026-10-19 15:30 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "genspark-2025-04-02-call-for-me",
+      "date": "2025-04-02",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "Call for Me — AI가 대신 전화 거는 에이전트",
+      "summary": "통화 목적을 적으면 AI가 실제 전화로 예약·문의 진행, ARS 메뉴 처리·실시간 번역, 대본·요약 보고, 통화당 500크레딧(연결 시)·전화번호 등록은 Plus 이상",
+      "source": {
+        "title": "Genspark Help Center – Call For Me",
+        "url": "https://www.genspark.ai/helpcenter/call-for-me"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT08-024"
+    },
     {
       "id": "genspark-2025-10-29-hub",
       "date": "2025-10-29",
