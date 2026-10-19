@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 154,
+  "count": 155,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-026",
+      "version": "v1.0",
+      "created_at": "2026-10-20 01:05 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "내 Grok Bot을 팀 공용 'Team Bot'으로 출판해 팀 자료·스킬·플러그인을 한 번에 세팅하고, 팀원은 각자 비공개 대화·Slack으로 같은 Bot을 쓰는 '우리 기관 안내 도우미' 1개를 만들 수 있음",
+      "summary": "Grok Bot Team Bots(팀 공용 Bot, 공개 베타) — ① New chat → Create new Team Bot 또는 Share → Publish to Team ② Setup 4카드(Plugins·Secrets·Skills·Files) ③ 팀 기억 + 사람별 비공개 메모 ④ New chat → Team Bots에서 팀원 Add ⑤ 전용 Slack 앱(@멘션 응답) ⑥ Managers·Unpublish·관리자 배포",
+      "tool": "Grok",
+      "feature": "Grok Bot Team Bots(팀 공용 Bot, 공개 베타) — ① New chat → Create new Team Bot(Bot이 질문하며 설정 안내) 또는 개인 Bot Share → Publish to Team(Copy·Start fresh, 넘길 플러그인·기억·스킬·파일·루틴 선택) ② Bot 정보 창 Setup: Plugins(OAuth는 사람별 로그인, 키·토큰은 공유)·Secrets(이름·설명만 보임, 값 [REDACTED], 최대 25개·8~4,096바이트)·Skills(소유자·매니저만 팀 스킬 저장)·Files(.txt·.md·.csv·.json·.yaml, 파일당 256,000자) ③ 기억: 팀 기억(전원 공유, 저장 시 알림) + 사람별 비공개 메모 ④ Publish to team → 팀원은 New chat → Team Bots → Add → Start a chat·Copy link, 소유자도 팀원 대화 못 봄 ⑤ Unpublish(재출판 시 복구)·설명 140자·Managers(설정 변경 가능, 출판·삭제는 소유자만) ⑥ Bring to your team's Slack → 전용 Slack 앱, DM은 모두 응답·채널은 @멘션 스레드, Settings → General → Team Bots에서 Slack 계정 연결 ⑦ 사용량은 쓰는 팀원 몫 차감 ⑧ 관리자: 대시보드 Grok Bot → Team Bots → Manage Team Bots(All team·None·그룹 배포), 삭제는 복구 불가",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-09-28",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 팀 공용 '기관 안내 도우미' Team Bot 1개(이름·140자 설명) + ② Setup 점검표(Plugins·Secrets·Skills·Files) + ③ 팀 FAQ 파일 업로드 + 팀 스킬 1개 + ④ 팀원 Add·비공개 대화 확인 기록 + ⑤ 매니저 지정·Unpublish 운영 메모 + ⑥ (선택) Slack 채널 @멘션 답변 캡처",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "🤝",
+      "one_liner": "내 Bot을 팀 전체 공용 Bot으로"
+    },
     {
       "id": "AI-2026-10-CAT03-031",
       "version": "v1.0",

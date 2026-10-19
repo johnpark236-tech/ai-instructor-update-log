@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 00:15 KST",
+  "updated_at": "2026-10-20 01:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -744,13 +744,13 @@
       "company": "xAI",
       "type": "update",
       "title": "Team Bots — 팀이 함께 쓰는 Grok Bot(공개 베타)",
-      "summary": "팀 공용 Bot에 자료·지침·스킬·플러그인·자격 증명·기억 부여, 대화·기억은 사람별 분리, Slack 채널 초대, Teams·Enterprise 요금제 공개 베타",
+      "summary": "팀 공용 Bot에 자료·지침·스킬·플러그인·자격 증명·기억 부여, 대화·기억은 사람별 분리, Slack 채널 초대, Teams·Enterprise 요금제 공개 베타 · 팀원 대화 비공개, Setup 4카드(Plugins·Secrets·Skills·Files), 매니저·Unpublish, 전용 Slack 앱",
       "source": {
         "title": "xAI News – Team Bots",
         "url": "https://x.ai/news/team-bots"
       },
-      "checked": "2026-10-17",
-      "lesson_id": "AI-2026-10-CAT08-009"
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT08-026"
     },
     {
       "id": "grok-2026-08-11-grok-bot",
