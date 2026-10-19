@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 07:10 KST",
+  "updated_at": "2026-10-20 08:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3556,6 +3556,21 @@
       },
       "checked": "2026-10-20",
       "lesson_id": "AI-2026-10-CAT03-032"
+    },
+    {
+      "id": "genspark-2026-09-23-gencode",
+      "date": "2026-09-23",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "GenCode — Super App 코딩 에이전트·CLI",
+      "summary": "Genspark 계정 하나로 Claude·GPT·Gemini·DeepSeek·GLM 등 9개 모델 계열을 API 키 없이 골라 쓰는 코딩 에이전트, Super App GenCode 탭(macOS Apple Silicon·Windows·Linux)·CLI(@genspark/gencode), 크레딧 차감",
+      "source": {
+        "title": "Genspark Help Center – GenCode",
+        "url": "https://www.genspark.ai/helpcenter/gencode"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT07-016"
     }
   ]
 }

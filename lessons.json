@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 161,
+  "count": 162,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-016",
+      "version": "v1.0",
+      "created_at": "2026-10-20 08:10 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "API 키 없이 모델 골라 쓰는 코딩 에이전트 — Genspark GenCode(젠코드)로 내 폴더에 '한국어 퀴즈 웹페이지' 만들고 모델별 비용 비교해 보기",
+      "summary": "GenCode는 Genspark 계정 하나로 Claude·GPT·Gemini·DeepSeek·GLM 등 9개 모델 계열을 골라 쓰는 코딩 에이전트임(2026-09-23 공개). ① Genspark Super App(macOS Apple Silicon·Windows·Linux) GenCode 탭 또는 CLI(npm i -g @genspark/gencode) + ② 내가 고른 폴더에서 파일 읽기·만들기·명령 실행 + ③ 모델 선택기에 비용 배수(예: GLM-5.3 Flash 0.015×, Claude Fable 5.1 1.0×) 표시 + ④ Genspark 스킬·커넥터 사용, Claude Code·Cursor 설정 가져오기. 별도 구독 없이 Genspark 크레딧 차감",
+      "tool": "Genspark",
+      "feature": "GenCode(젠코드, Genspark 코딩 에이전트) — ① Genspark Super App(superapp.genspark.ai, macOS Apple Silicon·Windows .exe·Linux AppImage) GenCode 탭(없으면 탭 줄 + 로 추가) 또는 CLI(npm i -g @genspark/gencode → gencode login → gencode) ② 채팅 화면(Chat UI)·터미널 화면(Terminal UI) 기능 동일, 터미널 화면은 맥락 사용량·MCP 상태 표시 ③ 사이드바 Projects + 로 작업 폴더 추가(기본 위치 GensparkCode 폴더), Project actions → Reveal in file manager·Copy path·Remove from list(파일은 유지) ④ 모델 선택기(Search models…, MODEL·COST 배수): Claude·GPT·Gemini·DeepSeek·GLM·MiniMax·Kimi·Grok·Nemotron 9개 계열 ⑤ 개인·팀 Genspark 스킬·연결한 커넥터 사용, Import setup으로 Claude Code·Cursor 설정 가져오기 ⑥ 읽기·분석용·수정용 하위 에이전트 ⑦ CLI gencode run --format json·gencode models·--dir·--session·--model ⑧ Genspark 크레딧 차감(Free Quota 미적용, 크레딧 기록에 'GenCode' 표시), 별도 구독 없음 (2026-09-23 공개)",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "released": "2026-09-23",
+      "categories": [
+        "CAT-07",
+        "CAT-12"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-BIZ",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 내 폴더에 저장된 '한국어 단어 퀴즈' 웹페이지(index.html) 1개 + ② 싼 모델·비싼 모델로 같은 수정을 시킨 결과 비교표 + ③ 크레딧 기록 'GenCode' 사용량 메모 + ④ 내 업무용 '모델 고르기 기준' 카드 1장",
+      "access": "freemium",
+      "total_minutes": 72,
+      "notice": "",
+      "emoji": "🧑‍💻",
+      "one_liner": "모델 골라 쓰는 코딩 에이전트"
+    },
     {
       "id": "AI-2026-10-CAT09-007",
       "version": "v1.0",
