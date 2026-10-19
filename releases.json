@@ -3,6 +3,21 @@
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
+      "id": "genspark-2025-07-02-ai-docs",
+      "date": "2025-07-02",
+      "tool": "Genspark",
+      "company": "Genspark (MainFunc)",
+      "type": "update",
+      "title": "AI Docs — 프롬프트 한 번으로 만드는 디자인 문서",
+      "summary": "설문지·메뉴·이력서·일정표 등 디자인된 문서 자동 생성, 사진 업로드로 분위기 맞추기, 수백 개 템플릿, Rich Text·Markdown(현재 Web Doc·Word 포함 4형식), AI Edit·Save Point·Word·PDF 내보내기",
+      "source": {
+        "title": "Genspark Blog – Genspark Introduces AI Docs",
+        "url": "https://www.genspark.ai/blog/genspark-ai-docs"
+      },
+      "checked": "2026-10-19",
+      "lesson_id": "AI-2026-10-CAT03-028"
+    },
+    {
       "id": "genspark-2025-07-09-ai-pods",
       "date": "2025-07-09",
       "tool": "Genspark",
