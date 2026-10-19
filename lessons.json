@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 138,
+  "count": 139,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT02-006",
+      "version": "v1.0",
+      "created_at": "2026-10-19 09:10 KST",
+      "checked": "2026-10-19",
+      "review_by": "2027-01-19",
+      "title": "한 번 말해 두면 Gmail·Docs·Slides가 기억 — Gemini in Workspace 맞춤 지침(Your instructions)으로 내 업무 말투 고정하기",
+      "summary": "Gemini in Workspace 맞춤 지침 = 말투·형식·역할을 한 번 저장하면 Gmail·Docs·Slides·Drive·Chat의 Gemini가 매번 반영하는 개인화 설정. 2026-05-04 Docs 먼저 → 2026-09-02 Drive·Chat·Gmail·Slides·Sheets로 확대. ① 대화로 저장(\"From now on…\") ② 측면 패널 메뉴 > Settings > Personalization > Add ③ 최대 1,000개 ④ 켜기·끄기·삭제. 개인은 Google AI Plus 월 $4.99부터, 회사는 Workspace Business·Enterprise",
+      "tool": "Gemini",
+      "feature": "Gemini in Workspace 맞춤 지침(Custom instructions, Your instructions for Gemini in Workspace) — ① 대화로 저장(\"From now on, …\") ② Docs·Drive·Gmail·Slides 측면 패널 Menu > Settings > Personalization > Add·Save ③ Ask Gemini in Chat은 대화로만 추가·/settings로 켜기·끄기·삭제 ④ 앱 간 공유(Gmail에서 저장 → Docs·Slides 적용) ⑤ 답 아래 Sources > Personalization settings로 반영 확인 ⑥ 최대 1,000개·Delete all(10개 이상) ⑦ Gemini 앱 지침과 별도(동기화 안 됨)",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-09-02",
+      "categories": [
+        "CAT-02",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 업무용 맞춤 지침 5개 목록(역할·말투·형식·분량·금지) + ② 같은 요청을 지침 끄기/켜기로 비교한 결과 2개 + ③ Gmail에서 저장한 지침이 Docs·Slides에도 반영된 결과 1개",
+      "access": "paid",
+      "total_minutes": 54,
+      "notice": "",
+      "emoji": "📌",
+      "one_liner": "내 말투 규칙을 Gemini가 앱마다 기억"
+    },
     {
       "id": "AI-2026-10-CAT05-021",
       "version": "v1.0",

@@ -1,0 +1,574 @@
+{
+  "id": "AI-2026-10-CAT02-006",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-19 09:10 KST",
+  "checked": "2026-10-19",
+  "review_by": "2027-01-19",
+  "title": "한 번 말해 두면 Gmail·Docs·Slides가 기억 — Gemini in Workspace 맞춤 지침(Your instructions)으로 내 업무 말투 고정하기",
+  "summary": "Gemini in Workspace 맞춤 지침 = 말투·형식·역할을 한 번 저장하면 Gmail·Docs·Slides·Drive·Chat의 Gemini가 매번 반영하는 개인화 설정. 2026-05-04 Docs 먼저 → 2026-09-02 Drive·Chat·Gmail·Slides·Sheets로 확대. ① 대화로 저장(\"From now on…\") ② 측면 패널 메뉴 > Settings > Personalization > Add ③ 최대 1,000개 ④ 켜기·끄기·삭제. 개인은 Google AI Plus 월 $4.99부터, 회사는 Workspace Business·Enterprise",
+  "glance": {
+    "emoji": "📌",
+    "one_liner": "내 말투 규칙을 Gemini가 앱마다 기억",
+    "cards": [
+      {
+        "icon": "💬",
+        "title": "말로 저장",
+        "text": "\"앞으로 ~해 줘\"라고 하면 저장"
+      },
+      {
+        "icon": "⚙️",
+        "title": "직접 추가",
+        "text": "설정 > Personalization"
+      },
+      {
+        "icon": "🔗",
+        "title": "앱 간 공유",
+        "text": "Gmail에서 저장 → Docs에도 적용"
+      },
+      {
+        "icon": "🔍",
+        "title": "반영 확인",
+        "text": "답 아래 Sources에서 확인"
+      }
+    ],
+    "diagram": {
+      "title": "맞춤 지침 작동 흐름",
+      "nodes": [
+        {
+          "icon": "✍️",
+          "label": "지침 저장"
+        },
+        {
+          "icon": "🗂️",
+          "label": "내 지침 목록"
+        },
+        {
+          "icon": "📨",
+          "label": "앱에서 요청"
+        },
+        {
+          "icon": "🤖",
+          "label": "지침 반영 답"
+        },
+        {
+          "icon": "🔍",
+          "label": "Sources 확인"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "매번 같은 요청",
+        "text": "요청마다 '존댓말로, 3줄 요약 먼저, 표로' 다시 입력"
+      },
+      "after": {
+        "label": "한 번 저장",
+        "text": "규칙 저장 후 '요약해 줘'만 입력 → Gmail·Docs·Slides 모두 같은 형식"
+      }
+    },
+    "cautions": [
+      "지침에 개인정보·비밀번호 넣지 않기",
+      "삭제는 되돌릴 수 없음",
+      "결과는 사람이 최종 확인"
+    ]
+  },
+  "tool": "Gemini",
+  "feature": "Gemini in Workspace 맞춤 지침(Custom instructions, Your instructions for Gemini in Workspace) — ① 대화로 저장(\"From now on, …\") ② Docs·Drive·Gmail·Slides 측면 패널 Menu > Settings > Personalization > Add·Save ③ Ask Gemini in Chat은 대화로만 추가·/settings로 켜기·끄기·삭제 ④ 앱 간 공유(Gmail에서 저장 → Docs·Slides 적용) ⑤ 답 아래 Sources > Personalization settings로 반영 확인 ⑥ 최대 1,000개·Delete all(10개 이상) ⑦ Gemini 앱 지침과 별도(동기화 안 됨)",
+  "company": "Google",
+  "type": "update",
+  "released": "2026-09-02",
+  "categories": [
+    "CAT-02",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-OFF",
+    "JOB-EDU",
+    "JOB-PUB",
+    "JOB-BIZ"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 30,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Google AI Plus·Pro·Ultra 개인 계정 또는 Gemini가 켜진 Workspace 회사·학교 계정 (무료 개인 계정은 Workspace Labs 등록 시만 [확인 필요])",
+    "Gmail·Google Docs·Google Slides 접속 가능한 PC 브라우저(Chrome 권장)",
+    "연습용 메일 1통(개인정보 없는 공지·안내 메일)과 짧은 문서 1개(회의록·수업 계획 등)",
+    "내 업무 말투 규칙 메모 3~5개 (예: 존댓말, 3줄 요약 먼저, 표 사용)"
+  ],
+  "outcome": "① 내 업무용 맞춤 지침 5개 목록(역할·말투·형식·분량·금지) + ② 같은 요청을 지침 끄기/켜기로 비교한 결과 2개 + ③ Gmail에서 저장한 지침이 Docs·Slides에도 반영된 결과 1개",
+  "objectives": [
+    "Gemini in Workspace 맞춤 지침과 매번 쓰는 프롬프트·Gemini 앱 지침의 차이를 설명할 수 있음",
+    "대화와 Settings > Personalization 두 방법으로 지침을 추가·끄기·삭제할 수 있음",
+    "Sources로 지침 반영 여부를 확인하고 개인정보 없는 지침만 저장할 수 있음"
+  ],
+  "pricing": {
+    "access": "paid",
+    "summary": "기능 자체 추가 요금 없음. 개인 계정은 Google AI Plus·Pro·Ultra 구독(또는 Workspace Labs 등록) 필요, 회사·학교는 Gemini가 포함된 Workspace 요금제(Business Starter~Plus·Enterprise Starter~Plus·Education Plus·Frontline Plus 등). 관리자 설정 없음",
+    "plans": [
+      {
+        "name": "무료 개인 계정",
+        "price": "$0",
+        "features": "대상 아님 — Workspace Labs 등록 계정만 예외"
+      },
+      {
+        "name": "Google AI Plus",
+        "price": "$4.99/월",
+        "features": "맞춤 지침 사용 가능 + Gmail·Docs 측면 패널"
+      },
+      {
+        "name": "Google AI Pro",
+        "price": "$19.99/월",
+        "features": "맞춤 지침 + 더 높은 Gemini 사용 한도"
+      },
+      {
+        "name": "Google AI Ultra",
+        "price": "$99.99/월부터",
+        "features": "맞춤 지침 + 가장 높은 한도"
+      },
+      {
+        "name": "Workspace Business Standard",
+        "price": "$14/사용자/월 (연간 약정)",
+        "features": "맞춤 지침 사용 가능 (Business Starter·Plus도 대상)"
+      },
+      {
+        "name": "Workspace Business Plus",
+        "price": "$22/사용자/월 (연간 약정)",
+        "features": "맞춤 지침 사용 가능"
+      },
+      {
+        "name": "Enterprise·Education Plus·Frontline Plus",
+        "price": "",
+        "features": "맞춤 지침 사용 가능 — 가격은 영업팀 문의"
+      }
+    ],
+    "note": "대상 요금제는 Workspace Updates(2026-05-04 Docs 공지) 기준 + 도움말(개인은 Google AI Plus·Pro·Ultra 또는 Workspace Labs). 교육용 Google AI Pro for Education·Teaching and Learning·AI Expanded Access·AI Ultra Access 부가기능도 대상. Google AI·Workspace 가격은 교안 AI-2026-10-CAT03-014(2026-10-17 확인) 값 재사용, 미국 달러·연간 약정 기준. 원화 가격 [확인 필요]",
+    "checked": "2026-10-19",
+    "sources": [
+      {
+        "title": "Google Workspace Updates – Set custom instructions for Gemini in Google Docs",
+        "url": "https://workspaceupdates.googleblog.com/2026/05/set-custom-instructions-for-gemini-in-Google-Docs.html"
+      },
+      {
+        "title": "Gemini 구독 요금제 페이지",
+        "url": "https://gemini.google/subscriptions/"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-04",
+      "text": "Google Docs Gemini 측면 패널에서 맞춤 지침 저장 시작(최대 1,000개, 15일에 걸쳐 순차 적용)"
+    },
+    {
+      "date": "2026-09-02",
+      "text": "Ask Gemini in Drive·Ask Gemini in Chat·Gmail·Sheets·Slides 측면 패널로 확대, 앱 간 같은 지침 적용"
+    },
+    {
+      "date": "2026-10-19",
+      "text": "도움말 기준 현황 — 지원 앱 Chat·Docs·Drive·Gmail·Slides 표기, Settings > Personalization 관리, Sources로 반영 확인"
+    }
+  ],
+  "theory": {
+    "definition": "Gemini in Workspace 맞춤 지침(Your instructions for Gemini in Workspace)은 내 역할·말투·형식·분량 규칙을 한 번 저장해 두면 Gmail·Docs·Slides·Drive·Chat 속 Gemini가 매 요청에 자동 반영하는 개인화 설정임. 한 앱에서 저장한 지침이 다른 Workspace 앱에도 공유됨. 기본으로 켜져 있고 언제든 끌 수 있음",
+    "analogy": "'새 비서에게 건네는 업무 메모 한 장' — 한 번 써서 책상에 붙여 두면 메일·문서·발표 자료 어느 일을 맡겨도 그 규칙대로 처리하는 비서",
+    "comparison": {
+      "headers": [
+        "구분",
+        "매번 쓰는 프롬프트",
+        "Workspace 맞춤 지침",
+        "Gemini 앱 지침·Gem"
+      ],
+      "rows": [
+        [
+          "적용 범위",
+          "그 요청 1번",
+          "Gmail·Docs·Slides·Drive·Chat 전체",
+          "gemini.google.com 대화"
+        ],
+        [
+          "저장 방법",
+          "저장 안 됨",
+          "대화로 저장 또는 Settings > Personalization",
+          "Gemini 앱 설정·Gem 만들기"
+        ],
+        [
+          "서로 연결",
+          "—",
+          "Gemini 앱과 동기화 안 됨",
+          "Workspace와 동기화 안 됨"
+        ],
+        [
+          "어울리는 일",
+          "그때그때 다른 요청",
+          "늘 같은 말투·형식",
+          "Gemini 앱 대화·전문 도우미"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "두 가지 저장 방법",
+        "body": "① 측면 패널에 \"From now on, …\"처럼 지시하면 Gemini가 저장 ② Docs·Drive·Gmail·Slides에서 Ask Gemini > 왼쪽 위 Menu > Settings > Personalization > Add → 입력 → Save. Ask Gemini in Chat은 대화로만 추가"
+      },
+      {
+        "title": "켜기·끄기·삭제",
+        "body": "Personalization 맨 위 'Your instructions for Gemini in Workspace' 토글로 끄면 목록은 남고 적용만 멈춤. 지침 옆 Delete로 삭제(되돌릴 수 없음), 10개 이상이면 Delete all. Chat에서는 /settings 입력"
+      },
+      {
+        "title": "반영 확인 = Sources",
+        "body": "답 아래 Sources를 열어 'Personalization settings'에 지침이 보이면 그 답에 적용된 것. 지침이 너무 많거나 서로 부딪치면 결과가 흔들릴 수 있어 5~10개로 시작 권장"
+      }
+    ],
+    "can": [
+      "말투(존댓말·간결체)·형식(표·글머리표)·분량 규칙 고정",
+      "역할 알려 두기 (예: '나는 평생교육 강사임')",
+      "한 번 저장 → Gmail·Docs·Slides 공통 적용",
+      "토글로 잠시 끄고 기본 답과 비교"
+    ],
+    "cannot": [
+      "Gemini 앱(gemini.google.com) 지침과 동기화 안 됨",
+      "저장한 지침 바로 고치기 기능 안내 없음 — 삭제 후 새로 추가 [확인 필요]",
+      "삭제한 지침 복구 불가",
+      "Sheets 측면 패널 지원은 공지와 도움말 표기가 다름 [확인 필요]"
+    ],
+    "safety": [
+      "지침에 주민번호·계좌·비밀번호 등 개인정보·비밀 넣지 않기",
+      "회사 계정 지침은 회사 정책 따름 — 고객 이름·내부 정보 넣지 않기",
+      "AI 답은 지침을 따라도 사실이 틀릴 수 있어 발송 전 사람이 확인",
+      "공용 PC에서는 사용 후 로그아웃 — 지침이 다른 사람 요청에 반영되지 않게"
+    ]
+  },
+  "practice": {
+    "preview": "Gmail 측면 패널에서 지침 없이 메일 요약 → 대화로 지침 1개 저장 → Settings > Personalization에서 4개 직접 추가 → 같은 요청 다시 → Sources로 반영 확인 → Docs·Slides에서도 같은 규칙 적용 확인",
+    "follow": [
+      {
+        "title": "지침 없이 기준 답 받기",
+        "minutes": 5,
+        "do": "Gmail에서 연습용 메일 열기 → 오른쪽 위 Ask Gemini → 아래 요청 입력 → 결과 복사해 메모장에 보관",
+        "prompt": "이 메일을 요약해 줘",
+        "expect": "기본 형식 요약 1개 (비교용 '비포')",
+        "note": "Ask Gemini 버튼 위치·이름은 계정 언어에 따라 다를 수 있음 [확인 필요]"
+      },
+      {
+        "title": "대화로 지침 저장",
+        "minutes": 5,
+        "do": "같은 측면 패널에 아래 지시 입력 → 저장되었다는 답 확인",
+        "prompt": "From now on, always start summaries with 3 bullet points and answer in polite Korean (존댓말).",
+        "expect": "지침을 기억했다는 확인 답",
+        "note": "한국어 지시(\"앞으로 요약은 항상 3줄 글머리표로 시작해 줘\")도 저장되는지 비교해 볼 것 [확인 필요]"
+      },
+      {
+        "title": "Personalization에서 직접 추가",
+        "minutes": 8,
+        "do": "측면 패널 왼쪽 위 Menu → Settings → Personalization → Add → 아래 4개를 하나씩 입력 → Save",
+        "prompt": "① 나는 평생교육기관 AI 강사임. 수강생은 50~60대 초보자임 ② 어려운 용어는 괄호로 쉬운 말 풀이를 붙여 줘 ③ 비교가 필요하면 표로 정리해 줘 ④ 답은 300자 이내로 써 줘",
+        "expect": "목록에 지침 5개(대화 저장 1개 + 직접 4개) 표시",
+        "note": "지침은 1개 = 규칙 1개로 짧게. 맨 위 토글이 켜져 있는지 확인"
+      },
+      {
+        "title": "같은 요청 다시 + Sources 확인",
+        "minutes": 6,
+        "do": "새 대화에서 1단계와 같은 요청 입력 → 비포와 비교 → 답 아래 Sources 열기 → 'Personalization settings' 확인",
+        "prompt": "이 메일을 요약해 줘",
+        "expect": "3줄 글머리표·존댓말·300자 이내 요약 + Sources에 적용 지침 표시",
+        "note": "반영 안 되면 순차 적용 중일 수 있음(최대 15일) — 강사 화면 시연으로 대체"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "Docs·Slides에서 이어서 확인",
+        "minutes": 4,
+        "do": "Google Docs 연습 문서 열기 → Ask Gemini → 요약 요청 → Slides에서도 발표 자료 요청 1개",
+        "prompt": "이 문서를 수강생 안내용으로 요약해 줘",
+        "expect": "Gmail에서 저장한 지침(3줄 글머리표·쉬운 말 풀이)이 Docs·Slides 답에도 적용됨",
+        "note": "지침은 앱 간 공유 — 다시 저장할 필요 없음"
+      },
+      {
+        "title": "끄기/켜기 비교",
+        "minutes": 2,
+        "do": "Settings > Personalization 토글 끄기 → 같은 요청 → 다시 켜기 → 두 결과 나란히 비교",
+        "prompt": "",
+        "expect": "지침 끔 = 기본 답, 켬 = 내 규칙 답 (애프터 비교표 완성)",
+        "note": "끄면 지침은 지워지지 않고 적용만 멈춤"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "⭐",
+        "mission": "'금지 규칙' 지침 1개 추가 (예: 이모지 쓰지 말 것) → 3개 앱에서 지켜지는지 확인"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "Google Chat에서 Ask Gemini 열고 /settings 입력 → 지침 켜기·끄기 위치 확인 + 필요 없는 지침 1개 Delete selected instructions로 정리"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "팀용 '지침 표준안' 작성 — 직무별(행정·강사·홍보) 권장 지침 5개씩 표 + 넣으면 안 되는 정보 목록 + 반영 확인 절차(Sources)"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "모둠별 '가장 효과 큰 지침 1개'와 비포/애프터 요약을 화면에 띄워 공유",
+    "quiz": [
+      {
+        "q": "Gmail 측면 패널에서 저장한 맞춤 지침은 어디에 적용될까?",
+        "options": [
+          "Gmail에서만",
+          "Gmail·Docs·Slides 등 Workspace 앱 전체",
+          "gemini.google.com 대화에만",
+          "Google 검색 결과에"
+        ],
+        "answer": 1,
+        "explain": "Workspace 지침은 앱 간 공유, Gemini 앱 지침과는 동기화 안 됨"
+      },
+      {
+        "q": "답에 내 지침이 반영됐는지 확인하는 방법은?",
+        "options": [
+          "답을 다시 생성한다",
+          "답 아래 Sources에서 Personalization settings를 본다",
+          "Gmail 설정에서 서명을 연다",
+          "관리자에게 문의한다"
+        ],
+        "answer": 1,
+        "explain": "Sources > 'Personalization settings'에 적용 지침 표시"
+      },
+      {
+        "q": "Personalization 맨 위 토글을 끄면 어떻게 될까?",
+        "options": [
+          "모든 지침이 영구 삭제된다",
+          "지침은 목록에 남고 적용만 멈춘다",
+          "Gemini 측면 패널이 사라진다",
+          "Gemini 앱 지침도 함께 꺼진다"
+        ],
+        "answer": 1,
+        "explain": "끄기 = 적용 중지, 삭제 = 영구 제거(복구 불가)"
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "지침 설계",
+        "high": "역할·말투·형식·분량·금지 5종 지침, 1개 = 규칙 1개",
+        "mid": "지침 2~4개",
+        "low": "지침 1개 이하"
+      },
+      {
+        "criterion": "반영 확인",
+        "high": "비포/애프터 + Sources 확인 + 다른 앱 적용 확인",
+        "mid": "비포/애프터만",
+        "low": "비교 없음"
+      },
+      {
+        "criterion": "책임 있는 사용",
+        "high": "개인정보 없는 지침 + 발송 전 검토 원칙 명시",
+        "mid": "일부만 점검",
+        "low": "점검 없음"
+      }
+    ],
+    "next": [
+      "Gemini 스킬(Skills)로 재사용 작업 지침 만들기 (AI-2026-10-CAT02-004)",
+      "Gemini in Workspace 앱 어디서나 문서·메일·일정 처리 (AI-2026-10-CAT03-014)",
+      "ChatGPT 맞춤 지침과 비교해 보기 (AI-2026-10-CAT02-002)"
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 매번 '존댓말로, 3줄로' 다시 치는 장면 vs 저장된 지침으로 한 줄 요청 시연",
+        "note": "강사 계정에 지침 미리 저장 + 끈 상태 준비"
+      },
+      {
+        "time": "5~18분",
+        "content": "1부 이론: 지침·프롬프트·Gemini 앱 지침 비교, 저장 2가지 방법, 끄기·삭제, Sources",
+        "note": "'Gemini 앱과 따로 관리' 먼저 강조"
+      },
+      {
+        "time": "18~36분",
+        "content": "2부 따라 하기 4단계: 기준 답 → 대화 저장 → 직접 추가 → Sources 확인",
+        "note": "순차 적용 미반영 수강생은 짝 활동"
+      },
+      {
+        "time": "36~48분",
+        "content": "내 것 만들기: Docs·Slides 적용 확인 + 끄기/켜기 비교, 도전과제 선택",
+        "note": "지침 표준안은 상급자용"
+      },
+      {
+        "time": "48~54분",
+        "content": "3부 정리: 모둠 공유 + 퀴즈 3문제 + 다음 교안 안내",
+        "note": "삭제 복구 불가 다시 강조"
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "메일 요약을 부탁할 때마다 '존댓말로, 세 줄로, 표로' 하고 매번 쓰고 계시죠? 오늘은 그걸 딱 한 번만 말해 두면 Gmail, 문서, 슬라이드가 전부 기억하게 만들어 보겠습니다."
+      },
+      {
+        "label": "이론 전환",
+        "text": "지금부터 보실 맞춤 지침은 새 비서에게 건네는 업무 메모 한 장이라고 생각하시면 됩니다. 한 번 붙여 두면 어떤 일을 맡겨도 그 규칙대로 해요."
+      },
+      {
+        "label": "주의 강조",
+        "text": "지침에는 이름, 연락처, 비밀번호 같은 정보는 절대 넣지 마세요. 그리고 삭제하면 되돌릴 수 없으니, 잠깐 쉬게 하고 싶을 땐 삭제 말고 토글을 끄세요."
+      },
+      {
+        "label": "실습 마무리",
+        "text": "Sources를 눌러서 내 지침이 보이면 성공입니다. 비포와 애프터를 나란히 놓고 무엇이 달라졌는지 한 가지씩 말해 볼까요?"
+      },
+      {
+        "label": "클로징",
+        "text": "오늘 만든 지침 다섯 개가 앞으로 매일 쓰는 메일과 문서에 자동으로 붙습니다. 한 주 써 보시고, 안 맞는 지침은 지우고 새로 추가해 보세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "수강생 계정에 Personalization 메뉴가 없음",
+        "response": "순차 적용(최대 15일) 또는 대상 요금제 아님 — 강사 화면 시연 + 짝 활동, 지침 목록은 문서로 먼저 작성"
+      },
+      {
+        "situation": "무료 개인 계정만 있음",
+        "response": "지침 5개 설계·비포/애프터 예측 활동으로 대체, Gemini 앱 개인 지침 설정과 비교 설명"
+      },
+      {
+        "situation": "회사 계정에서 Gemini가 꺼져 있음",
+        "response": "관리자 정책 — 개인 Google AI 계정으로 시연, 회사 도입 시 확인할 점 정리"
+      },
+      {
+        "situation": "지침이 답에 반영 안 됨",
+        "response": "토글 켜짐 확인 → 새 대화에서 다시 요청 → Sources 확인 → 지침을 더 짧고 구체적으로 수정"
+      },
+      {
+        "situation": "측면 패널 메뉴 이름이 다름(한국어 화면)",
+        "response": "설정(톱니)·개인 맞춤설정 등 한국어 표기 가능성 안내, 강사 사전 캡처로 위치 확인 [확인 필요]"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "Ask Gemini 버튼을 못 찾음",
+        "fix": "Gmail·Docs 오른쪽 위 반짝이(별) 아이콘 확인, 화면이 좁으면 창 넓히기"
+      },
+      {
+        "issue": "대화로 저장했는데 목록에 안 보임",
+        "fix": "'From now on' 같은 명확한 지시로 다시 입력, Personalization 화면 새로고침"
+      },
+      {
+        "issue": "지침끼리 충돌(300자 이내 vs 자세히)",
+        "fix": "충돌 지침 하나 삭제, 1개 = 규칙 1개 원칙으로 다시 작성"
+      },
+      {
+        "issue": "Gemini 앱에서는 지침이 안 먹힘",
+        "fix": "Workspace 지침과 Gemini 앱 지침은 별도 — 앱 쪽은 따로 설정"
+      },
+      {
+        "issue": "지침을 고치고 싶음",
+        "fix": "편집 기능 안내 없음 — 삭제 후 새로 추가 [확인 필요]"
+      }
+    ],
+    "faq": [
+      {
+        "q": "지침은 몇 개까지 저장할 수 있나요?",
+        "a": "최대 1,000개. 10개 이상이면 Delete all 표시. 실무는 5~10개 권장"
+      },
+      {
+        "q": "Gmail에서 저장한 지침이 Docs에도 적용되나요?",
+        "a": "적용됨. Workspace 지원 앱 간 같은 지침 공유"
+      },
+      {
+        "q": "Gemini 앱(gemini.google.com)과 같이 쓰이나요?",
+        "a": "아님. 서로 별도이며 동기화 안 됨"
+      },
+      {
+        "q": "관리자가 막을 수 있나요?",
+        "a": "공지 기준 이 기능 전용 관리자 설정 없음. 다만 Gemini 자체가 꺼진 조직은 사용 불가"
+      },
+      {
+        "q": "지침을 잠시 안 쓰고 싶으면?",
+        "a": "Personalization 맨 위 토글 끄기 — 목록은 남고 적용만 멈춤"
+      },
+      {
+        "q": "Sheets에서도 되나요?",
+        "a": "2026-09-02 공지는 Sheets 측면 패널 포함, 도움말 지원 앱 목록엔 Sheets 없음 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급",
+        "guide": "지침 3개(말투·형식·분량)만 직접 추가, Gmail 한 곳에서 비포/애프터 확인"
+      },
+      {
+        "level": "중급",
+        "guide": "역할·금지 지침 추가 + Docs·Slides 공유 확인 + 끄기/켜기 비교표"
+      },
+      {
+        "level": "고급",
+        "guide": "팀 지침 표준안·충돌 테스트·Gemini 앱 지침·스킬과 역할 분담 설계"
+      },
+      {
+        "level": "시니어",
+        "guide": "영어 지시 대신 직접 추가(Add) 방법 중심, 큰 글씨 화면·한 단계씩 확인"
+      },
+      {
+        "level": "다문화(한국어 학습자)",
+        "guide": "'쉬운 한국어로, 어려운 단어는 모국어 뜻 붙이기' 지침으로 Gmail 공지 요약 연습"
+      }
+    ],
+    "pro_points": [
+      "지침 = 매번 반복하는 말 → 반복 입력 시간 절약이 핵심 메시지",
+      "1개 = 규칙 1개, 짧고 구체적으로 써야 반영이 안정적",
+      "Sources 확인 습관 → AI가 무엇을 근거로 답했는지 보는 리터러시로 연결",
+      "삭제(복구 불가)와 끄기(보류) 구분을 반드시 체험시킬 것",
+      "Gemini 앱 지침·스킬·Workspace 지침 3종 역할 구분표로 마무리"
+    ],
+    "day_before": [
+      "강사 계정에서 Settings > Personalization 메뉴 위치·한국어 표기 확인 + 캡처 준비",
+      "강사 계정 지침 5개 저장 후 Gmail·Docs·Slides 반영 여부 시연 리허설",
+      "개인정보 없는 연습용 메일·문서 배포본 준비",
+      "수강생 계정 요금제(Google AI Plus 이상·Workspace) 사전 확인 안내",
+      "Sheets 측면 패널 적용 여부 직접 확인 [확인 필요]",
+      "한국어 지시로 대화 저장되는지 테스트"
+    ]
+  },
+  "verification": [
+    "[확인 필요] Sheets 지원 — 2026-09-02 Workspace Updates는 Sheets 측면 패널 포함, 도움말 지원 앱 목록은 Chat·Docs·Drive·Gmail·Slides만 표기",
+    "[확인 필요] 한국어 화면 메뉴 이름(Settings·Personalization·Add 등) — 도움말 영문 기준으로 작성",
+    "[확인 필요] 저장 지침 편집 기능 — 도움말에 편집 안내 없음, 삭제 후 재추가로 안내",
+    "[확인 필요] 무료 개인 계정은 Workspace Labs 등록 시 사용 가능하다는 도움말 표기 — 현재 Labs 등록 가능 여부 미확인",
+    "[확인 필요] Google AI·Workspace 가격은 교안 AI-2026-10-CAT03-014(2026-10-17 확인) 값 재사용, 원화 미확인",
+    "출시일 2026-09-02는 여러 앱 확대 공지 기준, Docs 최초 공개는 2026-05-04",
+    "교안 작성 중 실제 계정으로 재현하지 못함 — Google 공식 공지·도움말 기준"
+  ],
+  "sources": [
+    {
+      "title": "Google Workspace Updates – Custom instructions for Gemini in Workspace now available in more apps",
+      "url": "https://workspaceupdates.googleblog.com/2026/09/custom-instructions-for-gemini-in-Workspace-now-available-in-more-apps.html",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Google Workspace Updates – Set custom instructions for Gemini in Google Docs",
+      "url": "https://workspaceupdates.googleblog.com/2026/05/set-custom-instructions-for-gemini-in-Google-Docs.html",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Google Workspace 도움말 – Customize Gemini in Workspace's responses with your instructions",
+      "url": "https://support.google.com/a/users/answer/16943683",
+      "checked": "2026-10-19"
+    },
+    {
+      "title": "Gemini 구독 요금제 페이지",
+      "url": "https://gemini.google/subscriptions/",
+      "checked": "2026-10-17"
+    }
+  ]
+}
