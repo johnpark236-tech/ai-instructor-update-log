@@ -3616,6 +3616,21 @@
       },
       "checked": "2026-10-20",
       "lesson_id": "AI-2026-10-CAT07-017"
+    },
+    {
+      "id": "grok-2026-10-16-build-headless",
+      "date": "2026-10-16",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Build 헤드리스 모드(grok -p) — 백그라운드 작업 대기·시간 초과 오류 종료",
+      "summary": "대화 화면 없이 grok -p 로 프롬프트 1개 실행, plain·json·streaming-json 출력, v1.0.62에서 백그라운드 후속 차례까지 대기·--background-wait-timeout 초과 시 오류 종료",
+      "source": {
+        "title": "xAI – Grok Build Changelog",
+        "url": "https://x.ai/changelog/build"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT07-020"
     }
   ]
 }
