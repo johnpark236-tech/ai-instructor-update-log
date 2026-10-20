@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-20 10:10 KST",
+  "updated_at": "2026-10-20 11:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-build-2026-07-02-mcp-servers",
+      "date": "2026-07-02",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Build MCP 서버 — 터미널 코딩 에이전트에 외부 도구 연결",
+      "summary": "grok mcp add(로컬 명령형·--transport http 원격, OAuth 자동)·list·remove·doctor, /mcps 창 관리, ~/.grok/config.toml 사용자 범위 + --scope project 팀 공유, ${VAR} 비밀값 분리, Claude Code·Cursor MCP 설정 호환. v1.0.45(2026-09-29) 토큰 파일 재로드·v1.0.46(2026-09-30) MCP 점검 개선 [확인 필요]",
+      "source": {
+        "title": "xAI Docs – Grok Build MCP Servers",
+        "url": "https://docs.x.ai/build/features/mcp-servers"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT07-019"
+    },
     {
       "id": "grok-build-2026-06-15-agent-dashboard",
       "date": "2026-06-15",

@@ -1,0 +1,586 @@
+{
+  "id": "AI-2026-10-CAT07-019",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-20 11:10 KST",
+  "checked": "2026-10-20",
+  "review_by": "2027-01-20",
+  "title": "AI 코딩 에이전트에 '바깥 도구' 꽂기 — Grok Build(그록 빌드, 터미널) MCP 서버(MCP Servers) 연결로 수업 자료 폴더 정리 도우미 만들어 보기",
+  "summary": "Grok Build(xAI 터미널 코딩 에이전트)에 MCP(Model Context Protocol, 모델 컨텍스트 프로토콜) 서버를 붙여 외부 도구 사용. ① grok mcp add <이름> -- <명령>(내 컴퓨터 실행형) + grok mcp add --transport http <이름> <URL>(원격형, OAuth 자동) ② 연결된 도구는 <서버>__<도구> 이름으로 기본 도구 옆에 표시 ③ grok mcp list·remove·doctor(--json) 관리 + /mcps 창(Space 켜기·끄기, r 새로고침, i 로그인, a 추가, x 삭제) ④ 설정 ~/.grok/config.toml(사용자) + --scope project → .grok/config.toml(저장소 공유, 같은 이름이면 프로젝트 우선) ⑤ ${VAR} 환경 변수로 비밀값 분리 ⑥ ~/.claude.json·.cursor/mcp.json·.mcp.json 설정도 읽음. 2026-09-29 v1.0.45 MCP 토큰 파일 요청마다 다시 읽기 + 2026-09-30 v1.0.46 MCP 점검·출처 표시 개선 [확인 필요]",
+  "glance": {
+    "emoji": "🔌",
+    "one_liner": "MCP 서버로 AI에 외부 도구 연결",
+    "cards": [
+      {
+        "icon": "➕",
+        "title": "grok mcp add",
+        "text": "명령 한 줄로 서버 등록"
+      },
+      {
+        "icon": "🧰",
+        "title": "서버__도구",
+        "text": "기본 도구 옆에 새 도구 표시"
+      },
+      {
+        "icon": "🩺",
+        "title": "mcp doctor",
+        "text": "연결 문제 자동 진단"
+      },
+      {
+        "icon": "👥",
+        "title": "프로젝트 범위",
+        "text": ".grok/config.toml 팀 공유"
+      }
+    ],
+    "diagram": {
+      "title": "MCP 도구가 쓰이는 흐름",
+      "nodes": [
+        {
+          "icon": "➕",
+          "label": "서버 등록"
+        },
+        {
+          "icon": "🔌",
+          "label": "Grok 시작·연결"
+        },
+        {
+          "icon": "🧰",
+          "label": "도구 목록 추가"
+        },
+        {
+          "icon": "💬",
+          "label": "말로 작업 요청"
+        },
+        {
+          "icon": "✅",
+          "label": "승인 후 실행"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "MCP 연결 전",
+        "text": "외부 서비스 자료는 직접 복사해 붙여 넣기"
+      },
+      "after": {
+        "label": "MCP 연결 후",
+        "text": "AI가 연결된 도구로 직접 읽고 정리, 나는 승인만"
+      }
+    },
+    "cautions": [
+      "모르는 MCP 서버는 설치 전 출처 확인",
+      "API 키는 ${VAR} 환경 변수로 분리",
+      "폴더 서버는 실습 폴더만 열어 줄 것"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Build(터미널 코딩 에이전트 CLI) MCP 서버(MCP Servers) — ① grok mcp add <이름> -- <명령>(로컬 명령형)·--transport http <이름> <URL>(원격, OAuth 자동)·--header \"Authorization: Bearer ${API_TOKEN}\"(반복 가능) ② 도구 이름 <서버>__<도구> ③ grok mcp list·remove <이름>·doctor [이름](--json) ④ ~/.grok/config.toml [mcp_servers.<이름>] command·args·env·url·headers·startup_timeout_sec(기본 30)·tool_timeout_sec(기본 6000), ${VAR}·${VAR:-기본값} 확장 ⑤ OAuth 첫 사용 시 브라우저 로그인, 토큰 ~/.grok/mcp_credentials.json ⑥ --scope project → .grok/config.toml, 현재 폴더 → git 루트까지 탐색, 같은 이름은 프로젝트 우선 ⑦ /mcps 창 Space·r·i·a·x ⑧ ~/.claude.json·.cursor/mcp.json·.mcp.json 호환([compat.claude] mcps = false 로 끄기), grok inspect 출처 확인 ⑨ 오류 기록 ~/.grok/logs/mcp/<서버>.stderr.log · v1.0.45(2026-09-29) 토큰 파일 요청마다 재로드·v1.0.46(2026-09-30) MCP 점검·출처 표시 개선 [확인 필요]",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-07-02",
+  "categories": [
+    "CAT-07",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-DEV",
+    "JOB-EDU",
+    "JOB-OFF",
+    "JOB-DAT"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 25,
+    "practice": 40,
+    "wrap": 7
+  },
+  "prerequisites": [
+    "macOS·Linux 터미널 — 설치: curl -fsSL https://x.ai/cli/install.sh | bash / Windows PowerShell: irm https://x.ai/cli/install.ps1 | iex",
+    "xAI(Grok) 계정 — 첫 실행 때 브라우저 로그인, 브라우저 없는 환경은 XAI_API_KEY 환경 변수",
+    "Node.js(npx 명령) — 실습용 파일 시스템 MCP 서버(@modelcontextprotocol/server-filesystem) 실행에 필요, node -v 로 설치 확인",
+    "Grok Build 최신 버전 권장(v1.0.46 이상) [확인 필요]",
+    "실습용 빈 폴더 1개(예: mcp-practice) + 연습용 수업 메모 파일 3개 — 업무 저장소·실제 개인정보 사용 금지"
+  ],
+  "outcome": "① 실습 폴더만 열어 준 파일 시스템 MCP 서버 등록 1개(grok mcp list 에 표시) + ② MCP 도구로 만든 '수업 자료 목록표'(파일 이름·주제·분량) 1개 + ③ 팀 공유용 프로젝트 범위 설정 파일(.grok/config.toml) 1개 + ④ MCP 서버 설치 전 확인 메모 1장",
+  "objectives": [
+    "MCP 서버가 AI 코딩 에이전트에 무엇을 더해 주는지 한 문장으로 설명할 수 있음",
+    "grok mcp add·list·doctor·remove 와 /mcps 창으로 MCP 서버를 등록·점검·삭제할 수 있음",
+    "사용자 범위와 프로젝트 범위, 환경 변수로 비밀값을 분리하는 설정을 구분해 쓸 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "MCP 서버 연결 전용 요금 없음 — Grok Build 기본 기능, 설정은 내 컴퓨터(~/.grok/·.grok/)에 저장. AI 응답은 Grok Build 사용량 차감. 2026-10-12부터 신규 가입은 The X Subscription: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200 — 요금제별 Grok Build 사용량 [확인 필요]. 원격 MCP 서버가 연결하는 외부 서비스(예: Linear)는 그 서비스 요금 따로",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 매일 사용 + Cursor 코딩 에이전트 시작 사용량 + 사용량 제한 — Grok Build 사용 범위 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok·Cursor 기본 사용량 증가 + X 체크 표시·크리에이터 도구·광고 감소"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "SuperGrok + Cursor Pro + X Premium+ 포함 + Plus 대비 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "위 기능 전부 + Plus 대비 15배 사용량"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "위 기능 전부 + Plus 대비 50배 사용량"
+      }
+    ],
+    "note": "요금은 xAI 공식 발표 'Introducing The X Subscription'(2026-10-12) 미국 달러 기준, 원화·부가세 미확인. MCP 기능 자체 별도 과금 안내 없음. 실습용 파일 시스템 MCP 서버는 오픈소스(npm) 무료 패키지",
+    "checked": "2026-10-20",
+    "sources": [
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI Docs – Grok Build MCP Servers",
+        "url": "https://docs.x.ai/build/features/mcp-servers"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-25",
+      "text": "Grok Build 터미널 코딩 에이전트 공개(초기 베타) [확인 필요]"
+    },
+    {
+      "date": "2026-07-02",
+      "text": "공식 문서 'MCP Servers' 페이지 최종 갱신일 — MCP 기능 최초 도입일 미확인 [확인 필요]"
+    },
+    {
+      "date": "2026-09-29",
+      "text": "v1.0.45 — MCP 토큰 파일 요청마다 다시 읽기 + 맞춤 하위 에이전트 spawn_subagent 선택 (Releasebot 요약 [확인 필요])"
+    },
+    {
+      "date": "2026-09-30",
+      "text": "v1.0.46 — MCP 점검(inspection)·출처 표시 개선 + 시작 속도 개선 (Releasebot 요약 [확인 필요])"
+    },
+    {
+      "date": "2026-10-12",
+      "text": "The X Subscription 출시 — Grok·Grok Bot·Cursor·X Premium 하나의 구독으로 묶음"
+    }
+  ],
+  "theory": {
+    "definition": "MCP(Model Context Protocol) 서버 = AI에게 외부 도구를 꽂아 주는 표준 연결 방식. Grok Build에 서버를 등록하면 그 서버의 도구가 <서버>__<도구> 이름으로 기본 도구(파일 읽기·셸 등) 옆에 추가되고, AI가 대화 중 필요할 때 호출",
+    "analogy": "MCP = 노트북의 USB 포트 + MCP 서버 = 꽂는 USB 기기(외장하드·프린터) + grok mcp add = 기기 연결 + /mcps 창 = 장치 관리자 + mcp doctor = '연결 문제 해결' 마법사",
+    "comparison": {
+      "headers": [
+        "구분",
+        "등록 방법",
+        "알맞은 상황",
+        "주의"
+      ],
+      "rows": [
+        [
+          "로컬 명령형 서버",
+          "grok mcp add <이름> -- <명령>",
+          "내 컴퓨터 폴더·프로그램 연결(예: 파일 시스템)",
+          "명령이 내 컴퓨터에서 실행됨 → 출처 확인"
+        ],
+        [
+          "원격 HTTP 서버",
+          "grok mcp add --transport http <이름> <URL>",
+          "온라인 서비스 연결(예: Linear)",
+          "첫 사용 시 OAuth 로그인, 토큰 ~/.grok/mcp_credentials.json"
+        ],
+        [
+          "고정 헤더 인증",
+          "--header \"Authorization: Bearer ${API_TOKEN}\"",
+          "API 키로 여는 서버",
+          "키는 환경 변수로, 설정 파일에 직접 쓰지 말 것"
+        ],
+        [
+          "사용자 범위",
+          "~/.grok/config.toml (기본)",
+          "나만 모든 프로젝트에서 사용",
+          "다른 사람에게 공유 안 됨"
+        ],
+        [
+          "프로젝트 범위",
+          "--scope project → .grok/config.toml",
+          "저장소와 함께 팀 공유",
+          "같은 이름이면 사용자 설정을 통째로 대체"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "config.toml 서버 설정",
+        "body": "[mcp_servers.<이름>] 아래 command·args·env(로컬) 또는 url·headers(원격). startup_timeout_sec 기본 30초 + tool_timeout_sec 기본 6000. ${VAR}·${VAR:-기본값} 은 불러올 때 환경 변수로 바뀜 → 비밀값은 파일 밖 환경 변수에 두기"
+      },
+      {
+        "title": "범위와 우선순위",
+        "body": "현재 폴더 → git 루트까지 올라가며 .grok/config.toml 을 모두 읽음. 프로젝트 서버가 사용자 서버와 이름이 같으면 프로젝트 쪽이 통째로 대체. ~/.claude.json·.cursor/mcp.json·.mcp.json 도 읽지만 config.toml 보다 낮은 순위 → grok inspect 로 어떤 서버가 어디서 왔는지 확인"
+      },
+      {
+        "title": "점검·문제 해결",
+        "body": "grok mcp doctor [이름] 로 설정·연결 진단(--json 가능). 로컬 서버가 시작은 되는데 연결 실패 → ~/.grok/logs/mcp/<서버>.stderr.log 확인. 처음 실행 때 npx 가 패키지를 내려받느라 느리면 startup_timeout_sec 늘리기"
+      }
+    ],
+    "can": [
+      "명령 한 줄로 내 컴퓨터용·원격 MCP 서버 등록",
+      "원격 서버 OAuth 로그인 자동 처리(/mcps 창 i 키)",
+      "/mcps 창에서 서버 켜기·끄기·새로고침·추가·삭제",
+      "grok mcp doctor 로 연결 문제 진단",
+      "프로젝트 범위 설정으로 팀원과 같은 서버 구성 공유",
+      "Claude Code(~/.claude.json)·Cursor(.cursor/mcp.json)용 MCP 설정 그대로 재사용"
+    ],
+    "cannot": [
+      "MCP 서버 안전성을 xAI가 보증한다는 공식 안내 없음 [확인 필요]",
+      "공식 문서 MCP 페이지에 서버별 신뢰(trust) 설정 설명 없음 — 권한 모드·[permission] 규칙으로 통제 [확인 필요]",
+      "프로젝트·사용자 설정에서 같은 이름 서버를 합쳐 쓰기 불가 — 프로젝트가 통째로 대체",
+      "Node.js 없는 컴퓨터에서는 npx 로 시작하는 서버 실행 불가"
+    ],
+    "safety": [
+      "MCP 서버는 내 컴퓨터에서 프로그램을 실행하거나 내 계정에 접근함 → 만든 곳·하는 일 확인 후 등록",
+      "파일 시스템 서버에는 실습 폴더 경로만 넘길 것 — 홈 폴더 전체·문서 폴더 열어 주기 금지",
+      "API 키·토큰은 ${VAR} 환경 변수로 — 프로젝트 .grok/config.toml 은 Git으로 공유됨",
+      "남의 저장소를 받으면 .grok/config.toml·.mcp.json 안 서버 목록부터 읽어 볼 것",
+      "권한 모드 Ask(기본) 유지 → MCP 도구 실행도 승인 화면에서 확인 후 허용",
+      "학생 이름·성적 등 실제 개인정보 파일은 실습에 쓰지 말 것"
+    ]
+  },
+  "practice": {
+    "preview": "완성 예시: '실습 폴더의 수업 메모를 목록표로 정리해 줘' 입력 → filesystem__list_directory·filesystem__read_file 도구 승인 → '① lesson1.md 물의 순환 2활동 ② lesson2.md 식물의 한살이 3활동 ③ lesson3.md 날씨와 생활 1활동' 형태 표 출력 [미검증: 실제 도구 이름·출력 모양은 서버 버전·모델 응답에 따라 다름]",
+    "follow": [
+      {
+        "title": "설치 확인·실습 폴더 준비",
+        "minutes": 6,
+        "do": "Grok Build 설치 → node -v 로 Node.js 확인 → 아래 명령으로 실습 폴더·메모 3개 만들기",
+        "prompt": "mkdir mcp-practice && cd mcp-practice && git init && printf \"# 물의 순환\\n- 활동1 영상 20분\\n- 활동2 토의 25분\\n\" > lesson1.md && printf \"# 식물의 한살이\\n- 활동1 관찰 15분\\n- 활동2 그리기 15분\\n- 활동3 발표 10분\\n\" > lesson2.md && printf \"# 날씨와 생활\\n- 활동1 날씨 일기 30분\\n\" > lesson3.md",
+        "expect": "mcp-practice 폴더에 lesson1~3.md 생성",
+        "note": "Windows는 PowerShell 설치 명령 사용, printf 대신 메모장으로 파일 3개 작성"
+      },
+      {
+        "title": "파일 시스템 MCP 서버 등록",
+        "minutes": 8,
+        "do": "mcp-practice 폴더에서 아래 명령 실행 — 맨 끝 경로는 실습 폴더만(현재 폴더 절대 경로)",
+        "prompt": "grok mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem \"$(pwd)\"",
+        "expect": "filesystem 서버가 ~/.grok/config.toml 에 등록됨 [확인 필요: 완료 메시지 문구]",
+        "note": "-- 뒤가 서버 실행 명령. Windows PowerShell은 \"$(pwd)\" 대신 실제 경로(예: C:\\Users\\me\\mcp-practice) 입력"
+      },
+      {
+        "title": "목록·진단으로 연결 확인",
+        "minutes": 6,
+        "do": "아래 두 명령 실행 → filesystem 이 목록에 있고 진단에서 연결 성공인지 확인",
+        "prompt": "grok mcp list && grok mcp doctor filesystem",
+        "expect": "filesystem 서버 표시 + 연결 상태·도구 목록 진단 결과 [확인 필요: 출력 형식]",
+        "note": "처음 실행은 npx 가 패키지를 내려받아 느릴 수 있음 → 시간 초과면 startup_timeout_sec 늘리기"
+      },
+      {
+        "title": "MCP 도구로 수업 자료 목록표 만들기",
+        "minutes": 8,
+        "do": "grok 실행 → /mcps 로 filesystem 켜짐 확인 → 아래 요청 입력 → 승인 화면에서 filesystem__ 도구 이름 확인 후 허용",
+        "prompt": "filesystem MCP 도구만 사용해서 이 폴더의 .md 파일을 모두 읽고, 표(파일 이름 | 주제 | 활동 수 | 활동 시간 합계)로 정리해 줘. 파일은 수정하지 마.",
+        "expect": "3개 파일 목록표 + 활동 시간 합계(45분·40분·30분)",
+        "note": "합계는 사람이 다시 계산해 확인. 승인 화면 도구 이름이 <서버>__<도구> 형식인지 관찰"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "프로젝트 범위로 팀 공유 설정",
+        "minutes": 5,
+        "do": "같은 서버를 프로젝트 범위로 다시 등록 → .grok/config.toml 생성 확인 → 파일 내용 열어 보기",
+        "prompt": "grok mcp add --scope project filesystem -- npx -y @modelcontextprotocol/server-filesystem \"$(pwd)\" && cat .grok/config.toml",
+        "expect": "[mcp_servers.filesystem] command·args 가 적힌 프로젝트 설정 파일",
+        "note": "같은 이름이면 프로젝트 설정이 사용자 설정을 통째로 대체. 절대 경로가 들어가므로 팀 공유 시 경로 확인 필요"
+      },
+      {
+        "title": "환경 변수로 비밀값 분리 연습",
+        "minutes": 4,
+        "do": "편집기로 .grok/config.toml 에 연습용 env 줄 추가 → 실제 키 대신 ${VAR:-기본값} 형식 써 보기",
+        "prompt": "[mcp_servers.filesystem]\ncommand = \"npx\"\nargs = [\"-y\", \"@modelcontextprotocol/server-filesystem\", \"${PRACTICE_DIR:-.}\"]\nenv = { API_KEY = \"${MY_API_KEY}\" }\nstartup_timeout_sec = 60",
+        "expect": "경로·키가 파일에 직접 안 적히고 환경 변수에서 채워지는 설정 [미검증: '.' 상대 경로 동작]",
+        "note": "실제 API 키는 이 실습에 넣지 말 것. 저장 후 /mcps 창에서 r 로 새로고침"
+      },
+      {
+        "title": "MCP 서버 설치 전 확인 메모",
+        "minutes": 3,
+        "do": "내 업무에 쓰고 싶은 MCP 서버 1개(예: 일정·메모 서비스)를 골라 확인 메모 작성 → 실습 서버는 grok mcp remove filesystem 으로 정리",
+        "prompt": "서버 이름: ____ / 만든 곳(공식·개인): ____ / 종류(로컬 명령·원격 HTTP): ____ / 접근하는 것(폴더·계정): ____ / 인증 방식(OAuth·API 키): ____ / 등록 범위(사용자·프로젝트): ____ / 등록 결정: 예·아니오 + 이유",
+        "expect": "MCP 서버 1개 설치 전 점검 메모 + 실습 서버 삭제 완료",
+        "note": "계정 접근형은 꼭 공식 제공 서버인지 확인"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "/mcps 창에서 Space 로 filesystem 을 끄고 같은 요청을 다시 해 보며 AI가 어떤 도구를 대신 쓰는지 관찰하기"
+      },
+      {
+        "level": "중급",
+        "mission": "grok inspect 로 불러온 서버와 출처를 확인하고, Claude Code·Cursor MCP 설정이 함께 읽히는지 점검한 뒤 [compat.claude] mcps = false 의 효과 정리하기"
+      },
+      {
+        "level": "고급",
+        "mission": "공식 문서 예시대로 원격 HTTP 서버(--transport http)를 등록해 OAuth 로그인(/mcps 창 i)까지 진행하고, [permission] deny 규칙으로 특정 MCP 도구를 막는 설계안 써 보기 [확인 필요: MCPTool 규칙 패턴 형식]"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "짝과 '내가 연결하고 싶은 MCP 서버 + 확인 메모'를 1분씩 소개 + 사용자 범위·프로젝트 범위 중 무엇을 고를지 이유 비교",
+    "quiz": [
+      {
+        "q": "Grok Build에 내 컴퓨터에서 실행되는 MCP 서버를 등록하는 명령 형식으로 맞는 것은?",
+        "options": [
+          "grok mcp add <이름> -- <서버 실행 명령>",
+          "grok install mcp <URL>",
+          "grok.com 설정 화면에서만 등록한다",
+          "npm mcp grok <이름>"
+        ],
+        "answer": 0,
+        "explain": "공식 문서: grok mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /path — -- 뒤가 서버 실행 명령"
+      },
+      {
+        "q": "MCP 서버에 API 키가 필요할 때 가장 안전한 설정 방법은?",
+        "options": [
+          "프로젝트 .grok/config.toml 에 키를 그대로 적고 Git에 올린다",
+          "${MY_API_KEY} 처럼 환경 변수로 적고 실제 값은 파일 밖에 둔다",
+          "키를 프롬프트에 붙여 넣는다",
+          "키 없이 아무 서버나 쓴다"
+        ],
+        "answer": 1,
+        "explain": "공식 문서: ${VAR}·${VAR:-default} 는 불러올 때 확장 → 비밀값은 환경 변수에 두기"
+      },
+      {
+        "q": "MCP 서버 연결이 안 될 때 먼저 해 볼 명령은?",
+        "options": [
+          "grok mcp doctor",
+          "컴퓨터 초기화",
+          "grok logout",
+          "rm -rf ~/.grok"
+        ],
+        "answer": 0,
+        "explain": "공식 문서 문제 해결: grok mcp doctor 로 시작, 로컬 서버는 ~/.grok/logs/mcp/<서버>.stderr.log 확인"
+      }
+    ],
+    "next": [
+      "Grok Build 스킬·플러그인·마켓플레이스 교안(AI-2026-10-CAT07-017) — MCP 서버를 플러그인으로 묶어 배포",
+      "Grok Build 권한 모드·샌드박스 교안(AI-2026-10-CAT09-007)으로 MCP 도구 실행 범위 제한",
+      "Grok 커넥터(Connectors) 교안(AI-2026-10-CAT03-031) — 웹·앱의 커넥터 vs 터미널의 MCP 비교"
+    ],
+    "rubric": [
+      {
+        "criterion": "서버 등록·점검",
+        "high": "add → list → doctor 순서로 등록·진단하고 /mcps 창에서 상태 확인",
+        "mid": "등록은 했으나 진단 생략",
+        "low": "등록 실패"
+      },
+      {
+        "criterion": "결과 검증",
+        "high": "목록표 활동 시간 합계를 사람이 다시 계산해 확인 + 사용 도구 이름 기록",
+        "mid": "목록표만 받음",
+        "low": "결과 없음"
+      },
+      {
+        "criterion": "안전 설정",
+        "high": "실습 폴더만 열기 + 비밀값 환경 변수 분리 + 확인 메모 모든 항목 기록 + 실습 후 삭제",
+        "mid": "일부만 지킴",
+        "low": "홈 폴더 전체 공개 또는 키를 파일에 직접 기록"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: 'AI에게 자료를 매번 복사해 붙여 넣고 계신가요?' 질문 + USB 포트 비유",
+        "note": "강사가 MCP 도구로 목록표 만드는 시연 먼저"
+      },
+      {
+        "time": "5~30분",
+        "content": "1부 이론: MCP 정의, 로컬 명령형 vs 원격 HTTP, config.toml 구조, 사용자·프로젝트 범위, 호환 설정, 안전·요금",
+        "note": "'서버 = 내 컴퓨터에서 실행되는 프로그램' 강조"
+      },
+      {
+        "time": "30~58분",
+        "content": "따라 하기 1~4: 준비 → mcp add → list·doctor → 목록표 만들기",
+        "note": "npx 첫 실행 지연·경로 오류가 가장 흔함"
+      },
+      {
+        "time": "58~70분",
+        "content": "내 것 만들기: 프로젝트 범위 → 환경 변수 설정 → 확인 메모·서버 삭제",
+        "note": "업무에 쓸 만한 MCP 서버 예시 3개 미리 준비"
+      },
+      {
+        "time": "70~72분",
+        "content": "짝 공유·퀴즈·정리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI에게 일을 시키려고 파일 내용을 복사해서 붙여 넣고, 결과를 다시 복사해서 옮기고… 이 과정이 번거로우셨죠? 오늘은 AI에게 USB 기기를 꽂듯이 외부 도구를 연결해서, AI가 직접 읽고 정리하게 만드는 방법을 배웁니다."
+      },
+      {
+        "label": "이론 전환",
+        "text": "MCP는 USB 포트 같은 표준 규격입니다. 규격이 같으니 Claude Code나 Cursor용으로 만든 MCP 설정도 Grok Build가 그대로 읽어요."
+      },
+      {
+        "label": "안전 강조",
+        "text": "MCP 서버는 여러분 컴퓨터에서 실행되는 프로그램이거나 여러분 계정에 접근하는 통로예요. 그래서 오늘은 실습 폴더 하나만 열어 주고, 끝나면 꼭 지웁니다."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 배운 add, list, doctor, remove 네 단어만 기억하시면 어떤 MCP 서버든 연결하고 점검하고 정리할 수 있습니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Grok Build 설치·로그인이 안 됨",
+        "response": "강사 화면 시연으로 진행 + 수강생은 config.toml 설정 작성·확인 메모까지 진행"
+      },
+      {
+        "situation": "Node.js 가 없어 npx 실행 실패",
+        "response": "nodejs.org LTS 설치 안내(설치 권한 없으면 짝 실습) 또는 강사 시연으로 대체"
+      },
+      {
+        "situation": "doctor 에서 시간 초과",
+        "response": "npx 패키지 내려받기 대기 → config.toml 의 startup_timeout_sec 를 60~120 으로 늘리고 /mcps 창 r 새로고침"
+      },
+      {
+        "situation": "사용량 한도 도달",
+        "response": "짝 실습으로 전환, 한 사람이 실행하고 다른 사람이 합계 검증"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "-- 를 빼먹어 서버 명령이 grok 옵션으로 해석됨",
+        "fix": "grok mcp add <이름> -- <명령> 형식, -- 앞뒤 공백 확인"
+      },
+      {
+        "issue": "경로에 공백이 있어 서버가 다른 폴더를 엶",
+        "fix": "경로를 큰따옴표로 감싸기 \"$(pwd)\""
+      },
+      {
+        "issue": "AI가 filesystem 도구 대신 기본 파일 도구를 씀",
+        "fix": "프롬프트에 'filesystem MCP 도구만 사용' 명시 + /mcps 창에서 켜짐 확인"
+      },
+      {
+        "issue": "프로젝트 설정을 만들었더니 사용자 설정 서버가 사라짐",
+        "fix": "같은 이름이면 프로젝트가 통째로 대체 — 이름을 다르게(예: filesystem-team) 하거나 의도된 동작임을 설명"
+      },
+      {
+        "issue": "설정 파일 수정이 반영 안 됨",
+        "fix": "/mcps 창에서 r 새로고침 또는 grok 다시 시작"
+      }
+    ],
+    "faq": [
+      {
+        "q": "MCP 서버와 Grok 웹·앱의 커넥터는 무엇이 다른가요?",
+        "a": "커넥터는 grok.com·모바일 앱에서 쓰는 외부 앱 연결, MCP 서버는 터미널 Grok Build 에 등록하는 도구 연결. 둘 다 외부 도구를 AI에 붙인다는 목적은 같음"
+      },
+      {
+        "q": "Claude Code에서 쓰던 MCP 설정을 그대로 쓸 수 있나요?",
+        "a": "공식 문서상 ~/.claude.json·.cursor/mcp.json·프로젝트 .mcp.json 을 읽음(config.toml 보다 낮은 순위). 끄려면 [compat.claude] mcps = false"
+      },
+      {
+        "q": "OAuth 로그인 정보는 어디에 저장되나요?",
+        "a": "~/.grok/mcp_credentials.json. 첫 사용 때 브라우저 로그인 진행, /mcps 창 i 키로 다시 인증"
+      },
+      {
+        "q": "등록한 서버를 지우려면?",
+        "a": "grok mcp remove <이름> 또는 /mcps 창에서 x"
+      },
+      {
+        "q": "도구 실행이 오래 걸려 끊기면?",
+        "a": "tool_timeout_sec(기본 6000) 조정. 시작이 느리면 startup_timeout_sec(기본 30초)"
+      },
+      {
+        "q": "MCP 사용에 추가 요금이 있나요?",
+        "a": "MCP 기능 자체 별도 요금 안내 없음. AI 응답은 Grok Build 사용량 차감, 연결한 외부 서비스 요금은 따로"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급",
+        "guide": "강사가 준비한 등록 명령 복사 실행 + /mcps 창 켜기·끄기와 목록표 결과 읽기에 집중"
+      },
+      {
+        "level": "중급",
+        "guide": "프로젝트 범위·환경 변수 설정까지, 업무용 MCP 서버 후보 조사·확인 메모 작성"
+      },
+      {
+        "level": "고급",
+        "guide": "원격 HTTP 서버 OAuth 연결, grok inspect 출처 분석, [permission] 규칙·샌드박스와 조합한 안전 설계"
+      },
+      {
+        "level": "시니어",
+        "guide": "터미널 대신 강사 시연 위주, 'USB 기기 꽂기' 비유로 개념 이해 + 확인 메모 작성 실습"
+      },
+      {
+        "level": "다문화(한국어 학습자)",
+        "guide": "add(더하기)·list(목록)·remove(지우기)·doctor(진단) 영어 낱말을 한국어 뜻과 짝지어 익히고, 확인 메모를 짧은 한국어 문장으로 작성"
+      }
+    ],
+    "pro_points": [
+      "MCP 관리 4단어 = add · list · doctor · remove",
+      "서버에 넘기는 권한(폴더 경로·계정)은 최소한으로 — 실습 폴더만",
+      "팀 공유는 프로젝트 범위, 개인 비밀값은 환경 변수 + 사용자 범위로 분리",
+      "같은 MCP 설정이 Claude Code·Cursor 와 호환 — 도구를 바꿔도 연결 자산 유지"
+    ],
+    "day_before": [
+      "Grok Build 최신 버전 설치·로그인 확인(v1.0.46 이상)",
+      "수업 컴퓨터 Node.js(npx) 설치 여부 확인, npx -y @modelcontextprotocol/server-filesystem 한 번 미리 내려받기",
+      "캡처 준비: grok mcp list·doctor 출력, /mcps 창, 승인 화면의 filesystem__ 도구 이름, 목록표 결과",
+      "공식 문서 MCP Servers 페이지 재확인(명령·키 변경 여부)",
+      "업무용 MCP 서버 예시 3개(공식 제공 여부 포함) 조사"
+    ]
+  },
+  "verification": [
+    "[확인 필요] released 2026-07-02 는 공식 문서 MCP Servers 페이지 최종 갱신일 기준 — MCP 기능 최초 도입일 공식 확인 못 함",
+    "[확인 필요] v1.0.45·v1.0.46 변경 내용은 Releasebot 요약 기준 — x.ai/build/changelog 원문 직접 확인 못 함",
+    "[확인 필요] grok mcp add 완료 메시지·list·doctor 출력 형식 — 공식 문서에 화면 문구 없음",
+    "[미검증] 파일 시스템 서버의 실제 도구 이름(filesystem__list_directory 등)·목록표 출력 모양",
+    "[미검증] args 안 '${PRACTICE_DIR:-.}' 상대 경로가 실행 위치 기준으로 동작하는지",
+    "[확인 필요] MCP 도구에 대한 [permission] 규칙 패턴 형식, 요금제별 Grok Build 사용량"
+  ],
+  "notice": null,
+  "sources": [
+    {
+      "title": "xAI Docs – Grok Build MCP Servers",
+      "url": "https://docs.x.ai/build/features/mcp-servers",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Build Settings Reference",
+      "url": "https://docs.x.ai/build/settings/reference",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Build Subagents (사이드바 기능 목록 확인)",
+      "url": "https://docs.x.ai/build/features/subagents",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription (2026-10-12)",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "Releasebot – xAI Release Notes (보조 근거: Grok Build v1.0.45·v1.0.46 요약)",
+      "url": "https://releasebot.io/updates/xai",
+      "checked": "2026-10-20"
+    }
+  ]
+}
