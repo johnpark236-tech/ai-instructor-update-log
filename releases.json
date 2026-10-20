@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-20 09:16 KST",
+  "updated_at": "2026-10-20 10:10 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "grok-build-2026-06-15-agent-dashboard",
+      "date": "2026-06-15",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Build 에이전트 대시보드·워크트리 — 여러 코딩 세션 한 화면 관리",
+      "summary": "grok dashboard·/dashboard 로 모든 Grok Build 세션을 상태순으로 보고 미리보기·답장·승인·새 세션 보내기, grok -w 워크트리로 병렬 세션 격리. 2026-10-06 v1.0.50 대시보드 세션별 워크트리 표시·rm 안전장치",
+      "source": {
+        "title": "xAI News – Agent Dashboard in Grok Build",
+        "url": "https://x.ai/news/agent-dashboard"
+      },
+      "checked": "2026-10-20",
+      "lesson_id": "AI-2026-10-CAT07-018"
+    },
     {
       "id": "grok-build-2026-09-28-sandbox-permissions",
       "date": "2026-09-28",

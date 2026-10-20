@@ -1,0 +1,607 @@
+{
+  "id": "AI-2026-10-CAT07-018",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-20 10:10 KST",
+  "checked": "2026-10-20",
+  "review_by": "2027-01-20",
+  "title": "AI 코딩 에이전트 여러 개를 한 화면에서 동시에 — Grok Build(그록 빌드, 터미널) 에이전트 대시보드(Agent Dashboard)·워크트리(Worktrees)로 수업 자료 3종 병렬 제작해 보기",
+  "summary": "Grok Build(xAI 터미널 코딩 에이전트) 병렬 작업 기능 2가지. ① 에이전트 대시보드(Agent Dashboard): grok dashboard·/dashboard·Ctrl+\\ 로 열어 모든 세션을 한 화면에서 확인 — 입력 기다리는 세션 맨 위, 미리보기(Peek)·답장, 승인·질문 바로 응답, 아래 입력창에서 새 세션 보내기(Dispatch: 모델·계획 모드·자동 승인 선택), 대시보드 닫아도 세션 계속 실행 ② 워크트리(Worktrees): grok -w·--worktree=<이름>·--ref <브랜치> 로 저장소의 격리된 복사본(~/.grok/worktrees/<저장소>/<이름>)에서 세션 실행 → 병렬 에이전트끼리 파일 덮어쓰기 방지, 정리는 grok worktree list·show·rm(--dry-run)·gc(--max-age 7d). 2026-10-06 v1.0.50 대시보드에 세션별 워크트리 표시·사용 중·저장 안 한 변경 있는 워크트리 rm 거부 [확인 필요]",
+  "glance": {
+    "emoji": "🎛️",
+    "one_liner": "AI 코딩 세션 여러 개를 한 화면에서",
+    "cards": [
+      {
+        "icon": "📋",
+        "title": "한눈에 현황",
+        "text": "입력 기다리는 세션이 맨 위"
+      },
+      {
+        "icon": "👀",
+        "title": "미리보기·답장",
+        "text": "대시보드에서 바로 답장·승인"
+      },
+      {
+        "icon": "🚀",
+        "title": "새 세션 보내기",
+        "text": "모델·계획 모드 골라 Dispatch"
+      },
+      {
+        "icon": "🌳",
+        "title": "워크트리",
+        "text": "격리 복사본이라 서로 안 덮어씀"
+      }
+    ],
+    "diagram": {
+      "title": "병렬 작업 흐름",
+      "nodes": [
+        {
+          "icon": "🌳",
+          "label": "grok -w 격리"
+        },
+        {
+          "icon": "🚀",
+          "label": "세션 여러 개"
+        },
+        {
+          "icon": "🎛️",
+          "label": "대시보드 확인"
+        },
+        {
+          "icon": "✅",
+          "label": "승인·답장"
+        },
+        {
+          "icon": "🔀",
+          "label": "git으로 합치기"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "대시보드 전",
+        "text": "터미널 창 여러 개를 오가며 어느 세션이 멈췄는지 찾음"
+      },
+      "after": {
+        "label": "대시보드 후",
+        "text": "한 화면에서 멈춘 세션부터 답하고 나머지는 계속 실행"
+      }
+    },
+    "cautions": [
+      "자동 승인은 연습 폴더에서만",
+      "워크트리는 직접 지워야 정리됨",
+      "합치기 전 변경 내용 직접 확인"
+    ]
+  },
+  "tool": "Grok",
+  "feature": "Grok Build(터미널 코딩 에이전트 CLI) 에이전트 대시보드(Agent Dashboard)·워크트리(Worktrees) — ① grok dashboard·/dashboard·Ctrl+\\ 로 열기 ② 상태순 정렬(입력 대기 맨 위)·현재 활동·경과 시간, Ctrl+S 작업 폴더별 묶기, 하위 에이전트는 부모 세션 아래 ③ 미리보기(Peek)·답장(쉬는 세션 즉시, 실행 중 세션은 차례 끝난 뒤), 승인·질문 화살표·숫자 키 응답 ④ 아래 입력창 새 세션 보내기(Dispatch) — Enter 대시보드 유지·Shift+Enter 바로 열기, 모델·계획 모드·자체 승인 선택 ⑤ 세션 열어 전체 대화·이전/다음 이동(Take over), 대시보드 닫아도 세션 유지, Ctrl+. 단축키 목록 ⑥ 워크트리 grok -w·--worktree=<이름>·--ref <ref>·-w -r <세션 ID>, /fork --worktree, 시작 화면·대시보드 Ctrl+W, ~/.grok/worktrees/<저장소>/<이름>(현재 HEAD + 커밋 안 한 변경 포함, 기준 커밋에 분리된 실제 git 체크아웃) ⑦ grok worktree list·show·rm(--dry-run)·gc(--max-age 7d)·create · v1.0.50(2026-10-06) 대시보드 세션별 워크트리 표시·rm 안전장치 [확인 필요]",
+  "company": "xAI",
+  "type": "update",
+  "released": "2026-06-15",
+  "categories": [
+    "CAT-07",
+    "CAT-08"
+  ],
+  "jobs": [
+    "JOB-DEV",
+    "JOB-EDU",
+    "JOB-OFF",
+    "JOB-DAT"
+  ],
+  "learner_levels": [
+    "중급",
+    "고급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 25,
+    "practice": 40,
+    "wrap": 7
+  },
+  "prerequisites": [
+    "macOS·Linux 터미널 — 설치: curl -fsSL https://x.ai/cli/install.sh | bash / Windows PowerShell: irm https://x.ai/cli/install.ps1 | iex",
+    "xAI(Grok) 계정 — 첫 실행 때 브라우저 로그인",
+    "Grok Build 최신 버전 권장(v1.0.50 이상) [확인 필요]",
+    "Git 설치 — 워크트리는 git 저장소에서만 동작",
+    "실습용 빈 폴더 1개(예: dash-practice) — 업무 저장소·실제 개인정보 사용 금지"
+  ],
+  "outcome": "① 워크트리 3개에서 동시에 만든 수업 자료 3종(퀴즈.md·학습지.md·안내문.md) + ② 에이전트 대시보드 화면에서 답장·승인한 기록 메모 + ③ grok worktree list → rm --dry-run → rm 으로 정리한 워크트리 정리 점검표 1장",
+  "objectives": [
+    "에이전트 대시보드로 여러 Grok Build 세션의 상태를 확인하고 답장·승인할 수 있음",
+    "grok -w 로 워크트리 세션을 만들어 병렬 작업끼리 파일 충돌을 막는 이유를 설명할 수 있음",
+    "grok worktree list·rm --dry-run·gc 로 다 쓴 워크트리를 안전하게 정리할 수 있음"
+  ],
+  "pricing": {
+    "access": "freemium",
+    "summary": "에이전트 대시보드·워크트리 전용 요금 없음 — Grok Build 기본 기능, 워크트리는 내 컴퓨터(~/.grok/worktrees/)에 저장. 여러 세션을 동시에 돌리면 그만큼 Grok Build 사용량 빨리 차감. 2026-10-12부터 신규 가입은 The X Subscription: Free $0 · Plus 월 $8 · Premium 월 $30 · Super 월 $100 · Ultra 월 $200 — 요금제별 Grok Build 사용량 [확인 필요]",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": "Grok 매일 사용 + Cursor 코딩 에이전트 시작 사용량 + 사용량 제한 — Grok Build 사용 범위 [확인 필요]"
+      },
+      {
+        "name": "Plus",
+        "price": "월 $8",
+        "features": "Grok·Cursor 기본 사용량 증가 + X 체크 표시·크리에이터 도구·광고 감소"
+      },
+      {
+        "name": "Premium",
+        "price": "월 $30",
+        "features": "SuperGrok + Cursor Pro + X Premium+ 포함 + Plus 대비 4배 사용량"
+      },
+      {
+        "name": "Super",
+        "price": "월 $100",
+        "features": "위 기능 전부 + Plus 대비 15배 사용량"
+      },
+      {
+        "name": "Ultra",
+        "price": "월 $200",
+        "features": "위 기능 전부 + Plus 대비 50배 사용량"
+      }
+    ],
+    "note": "요금은 xAI 공식 발표 'Introducing The X Subscription'(2026-10-12) 미국 달러 기준, 원화·부가세 미확인. 대시보드·워크트리 기능 자체 별도 과금 안내 없음. 병렬 세션 수 상한 안내 없음 [확인 필요]",
+    "checked": "2026-10-20",
+    "sources": [
+      {
+        "title": "xAI News – Introducing The X Subscription",
+        "url": "https://x.ai/news/x-subscription"
+      },
+      {
+        "title": "xAI News – Agent Dashboard in Grok Build",
+        "url": "https://x.ai/news/agent-dashboard"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-05-25",
+      "text": "Grok Build 터미널 코딩 에이전트 공개(초기 베타) [확인 필요]"
+    },
+    {
+      "date": "2026-06-15",
+      "text": "xAI 공식 뉴스 'Agent Dashboard in Grok Build' — grok dashboard·/dashboard, 상태순 목록·미리보기·인라인 승인·Dispatch·Take over (공식 뉴스 페이지 표기일)"
+    },
+    {
+      "date": "2026-06-27",
+      "text": "v0.2.70 — 워크트리 복제마다 폴더 신뢰 창 반복 표시 수정(워크트리 기능 존재 확인) (Grok Build Changelog)"
+    },
+    {
+      "date": "2026-09-02",
+      "text": "v1.0.19 — 헤드리스(grok -p)에서도 --worktree 지원 (Grok Build Changelog)"
+    },
+    {
+      "date": "2026-09-26",
+      "text": "v1.0.42 — grok worktree create: 대화 없이 관리형 워크트리만 만들기 (Grok Build Changelog)"
+    },
+    {
+      "date": "2026-10-01",
+      "text": "Grok 공식 X 게시물로 Agent Dashboard 소개(TeslaNorth 보도) [확인 필요]"
+    },
+    {
+      "date": "2026-10-06",
+      "text": "v1.0.50 — 대시보드에 세션별 워크트리·-m 모델 표시 + 사용 중·저장 안 한 변경 있는 워크트리는 -f 없이 rm 거부 + -w 워크트리에 커밋 안 한 변경 유지 (Grok Build Changelog, 날짜 [확인 필요])"
+    },
+    {
+      "date": "2026-10-11",
+      "text": "v1.0.52 — 열린 세션이 쓰는 워크트리는 rm·gc 로 안 지움 + Grok이 만들지 않은 폴더·.git 삭제 거부 (Grok Build Changelog)"
+    },
+    {
+      "date": "2026-10-14",
+      "text": "v1.0.59 — grok worktree rm 이 -f 로도 못 지우는 경우엔 -f 제안 안 함 (Grok Build Changelog)"
+    }
+  ],
+  "theory": {
+    "definition": "에이전트 대시보드 = Grok Build 세션 전부를 한 화면에 모아 상태 확인·답장·승인·새 세션 보내기를 하는 관제 화면. 워크트리 = 저장소의 격리된 실제 git 복사본에서 세션을 돌려 병렬 에이전트끼리 같은 파일을 덮어쓰지 않게 하는 장치. 둘을 함께 쓰면 '여러 AI에게 동시에 일 맡기기'가 안전해짐",
+    "analogy": "에이전트 대시보드 = 주방 주문 현황판(어느 요리사가 질문 중인지 맨 위에 표시) + 워크트리 = 요리사마다 따로 준 조리대(같은 도마를 두고 다투지 않음) + git 합치기 = 완성 요리를 한 접시에 담기",
+    "comparison": {
+      "headers": [
+        "구분",
+        "하는 일",
+        "여는 법·명령",
+        "알맞은 상황"
+      ],
+      "rows": [
+        [
+          "에이전트 대시보드",
+          "모든 세션 상태·미리보기·답장·승인",
+          "grok dashboard · /dashboard · Ctrl+\\",
+          "세션 여러 개를 동시에 돌릴 때"
+        ],
+        [
+          "워크트리(Worktrees)",
+          "저장소 격리 복사본에서 세션 실행",
+          "grok -w · --worktree=<이름> · --ref <ref> · Ctrl+W",
+          "같은 저장소에서 병렬 작업"
+        ],
+        [
+          "/fork --worktree",
+          "현재 대화를 복사해 워크트리로 갈라짐",
+          "세션 안 /fork --worktree",
+          "같은 맥락으로 다른 방안 시험"
+        ],
+        [
+          "워크플로(Workflows)",
+          "큰 작업을 하위 에이전트로 자동 분담",
+          "/workflow <이름>",
+          "정해진 단계를 자동 병렬 실행"
+        ],
+        [
+          "일반 세션",
+          "현재 폴더에서 바로 작업",
+          "grok",
+          "작업 1개를 차례로 할 때"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "대시보드 화면 읽기",
+        "body": "세션을 상태순 정렬 — 입력 기다리는 세션이 맨 위. 행마다 현재 활동 + 경과 시간. Ctrl+S 로 작업 폴더별 묶기, 하위 에이전트는 실행한 세션 아래 표시. 쉬는 세션엔 답장 즉시 전달, 실행 중 세션엔 현재 차례 끝난 뒤 전달(대기열)"
+      },
+      {
+        "title": "새 세션 보내기(Dispatch)",
+        "body": "아래 입력창에 지시 입력 → Enter 는 대시보드에 머묾, Shift+Enter 는 새 세션 바로 열기. 보내기 전에 모델·계획 모드 시작·자체 편집 승인 선택 가능. 대시보드에서 Ctrl+W 는 새 에이전트를 워크트리로 보냄. 대시보드를 닫아도 세션은 계속 실행"
+      },
+      {
+        "title": "워크트리 규칙",
+        "body": "git 저장소 필수. 위치 ~/.grok/worktrees/<저장소>/<이름>. 현재 HEAD + 커밋 안 한 변경까지 포함해 시작, --ref 는 지정 ref 의 깨끗한 체크아웃. 기준 커밋에 분리(detached)된 실제 git 체크아웃 → 결과는 일반 git 명령으로 합침. 세션을 끝내거나 지워도 워크트리는 남음 → grok worktree rm·gc 로 직접 정리"
+      }
+    ],
+    "can": [
+      "여러 세션을 한 화면에서 보고 입력 기다리는 세션부터 처리",
+      "대시보드를 떠나지 않고 미리보기·답장·승인·질문 응답",
+      "모델·계획 모드를 골라 새 세션을 바로 보내기",
+      "grok -w 로 세션마다 격리 복사본을 줘 파일 충돌 방지",
+      "grok -w --ref main 으로 깨끗한 기준에서 작업 시작",
+      "grok worktree rm --dry-run 으로 지울 대상 미리 확인"
+    ],
+    "cannot": [
+      "워크트리 결과 자동 합치기 안 됨 — git 명령으로 직접 합침",
+      "세션 종료·삭제로 워크트리 자동 정리 안 됨, gc 도 직접 실행해야 함",
+      "git 저장소가 아닌 폴더에서는 워크트리 사용 불가",
+      "열린 세션이 쓰는 워크트리·저장 안 한 변경 있는 워크트리는 -f 없이 rm 거부(v1.0.50·v1.0.52)",
+      "동시에 돌릴 수 있는 세션 수·요금제별 한도 공식 안내 없음 [확인 필요]"
+    ],
+    "safety": [
+      "자체 편집 승인(자동 승인)으로 보낸 세션은 묻지 않고 파일을 바꿈 → 연습 폴더에서만 사용",
+      "세션을 여러 개 돌리면 사용량이 빨리 줄어듦 → 처음엔 2~3개로 시작",
+      "워크트리에도 원본의 커밋 안 한 변경이 복사됨 → 비밀번호·API 키 파일이 있으면 먼저 정리",
+      "합치기 전 git diff 로 변경 내용 사람이 확인 — AI 결과물은 검토 후 반영",
+      "grok worktree rm -f 는 저장 안 한 작업까지 지울 수 있음 → 먼저 --dry-run"
+    ]
+  },
+  "practice": {
+    "preview": "완성 예시: 대시보드에 'quiz·worksheet·notice' 세션 3줄 — 1줄은 '승인 대기' 맨 위, 2줄은 실행 중 + 경과 시간 표시 → 승인 후 3개 모두 완료 → grok worktree list 에 워크트리 3개 표시 → 결과 합친 뒤 rm 으로 정리 [미검증: 실제 화면 문구는 버전에 따라 다름]",
+    "follow": [
+      {
+        "title": "연습 저장소 만들기",
+        "minutes": 6,
+        "do": "설치 명령 실행 → 아래 명령으로 연습 저장소·수업 메모 만들기 → 첫 커밋",
+        "prompt": "mkdir dash-practice && cd dash-practice && git init && printf \"# 3학년 과학 — 물의 순환\\n- 증발·응결·강수\\n\" > topic.md && git add . && git commit -m \"start\"",
+        "expect": "dash-practice 폴더 + topic.md + 첫 커밋 1개",
+        "note": "Windows는 printf 대신 메모장으로 topic.md 작성 후 git add·commit"
+      },
+      {
+        "title": "워크트리 세션 3개 띄우기",
+        "minutes": 10,
+        "do": "터미널 창(또는 탭) 3개에서 dash-practice 로 이동 → 각각 아래 명령 1줄씩 실행",
+        "prompt": "grok --worktree=quiz \"topic.md 를 읽고 초등 3학년용 5문항 퀴즈를 quiz.md 로 만들어 줘\"\ngrok --worktree=worksheet \"topic.md 를 읽고 빈칸 채우기 학습지를 worksheet.md 로 만들어 줘\"\ngrok --worktree=notice \"topic.md 를 읽고 학부모 안내문 300자를 notice.md 로 만들어 줘\"",
+        "expect": "세션 3개가 각각 ~/.grok/worktrees/dash-practice/<이름> 에서 실행 + 파일 쓰기 승인 요청",
+        "note": "창 1개만 쓰려면 다음 단계 대시보드 입력창에서 Ctrl+W 로 워크트리 새 에이전트 보내기 [확인 필요]"
+      },
+      {
+        "title": "에이전트 대시보드로 한 번에 관리",
+        "minutes": 10,
+        "do": "새 터미널에서 grok dashboard 실행(세션 안에서는 /dashboard 또는 Ctrl+\\) → 맨 위 승인 대기 세션 선택 → 화살표·숫자 키로 승인 → 다른 세션 미리보기 후 답장",
+        "prompt": "grok dashboard",
+        "expect": "세션 3개 목록(입력 대기 맨 위·현재 활동·경과 시간) + 승인 후 상태 변경",
+        "note": "Ctrl+S 작업 폴더별 묶기, Ctrl+. 전체 단축키, Esc 뒤로. 답장 예: '문항을 4지선다로 바꿔 줘'"
+      },
+      {
+        "title": "워크트리 확인·결과 모으기",
+        "minutes": 6,
+        "do": "grok worktree list 로 목록 확인 → 각 워크트리 폴더의 결과 파일을 git diff·cat 으로 확인 → 원본 폴더로 가져오기",
+        "prompt": "grok worktree list\ncp ~/.grok/worktrees/dash-practice/quiz/quiz.md ~/.grok/worktrees/dash-practice/worksheet/worksheet.md ~/.grok/worktrees/dash-practice/notice/notice.md . && git add . && git commit -m \"수업 자료 3종\"",
+        "expect": "워크트리 3개 목록 + 원본 dash-practice 에 파일 3개 커밋",
+        "note": "실제 경로는 list·show 결과로 확인 [확인 필요]. 업무에서는 cp 대신 워크트리에서 커밋 → git 브랜치·병합으로 합침"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 업무로 Dispatch 해 보기",
+        "minutes": 4,
+        "do": "대시보드 아래 입력창에 내 업무 지시 입력 → 보내기 전 계획 모드로 시작 선택 → Shift+Enter 로 바로 열어 계획 확인",
+        "prompt": "topic.md 를 바탕으로 40분 수업 지도안을 lesson-plan.md 로 만들어 줘. 먼저 계획만 보여 줘",
+        "expect": "계획 모드로 시작한 새 세션 + 파일 수정 전 계획안",
+        "note": "계획 모드 = 실행 전에 계획부터 확인하는 안전한 시작"
+      },
+      {
+        "title": "깨끗한 기준에서 시작하기",
+        "minutes": 2,
+        "do": "원본에 일부러 커밋 안 한 변경을 만든 뒤 --ref 로 워크트리 시작 → 변경이 안 들어온 것 확인",
+        "prompt": "echo \"임시 메모\" >> topic.md\ngrok -w --ref HEAD \"topic.md 내용을 그대로 보여 줘\"",
+        "expect": "--ref 워크트리에는 '임시 메모' 없음, -w 만 쓰면 포함 [미검증]",
+        "note": "끝나면 git checkout -- topic.md 로 원본 되돌리기. ref 이름은 브랜치(main 등)도 가능"
+      },
+      {
+        "title": "워크트리 정리 점검표",
+        "minutes": 4,
+        "do": "아래 순서로 정리하며 점검표 채우기",
+        "prompt": "grok worktree list\ngrok worktree rm --dry-run quiz worksheet notice\ngrok worktree rm quiz worksheet notice\ngrok worktree gc",
+        "expect": "--dry-run 으로 지울 대상 미리 확인 → rm 으로 삭제 → gc 로 빈 항목 정리",
+        "note": "rm 인수는 list 의 ID 또는 이름 [확인 필요]. 사용 중·저장 안 한 변경이면 거부됨 → 이유 메모"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "대시보드에서 Ctrl+S 로 묶기를 켜고 끄며 화면이 어떻게 바뀌는지 2줄로 적기"
+      },
+      {
+        "level": "중급",
+        "mission": "세션 안에서 /fork --worktree 로 대화를 갈라 퀴즈 난이도 '쉬움·어려움' 두 버전을 동시에 만든 뒤 비교하기"
+      },
+      {
+        "level": "고급",
+        "mission": "워크트리에서 브랜치를 만들어 커밋하고 원본 저장소에서 git merge 로 합치는 흐름을 정리, grok worktree gc --max-age 7d 를 언제 쓸지 팀 규칙 3줄 작성"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "짝과 대시보드에서 처리한 승인·답장 1건씩 소개 + 워크트리 정리 점검표 비교(무엇이 거부됐고 왜)",
+    "quiz": [
+      {
+        "q": "Grok Build 세션 안에서 에이전트 대시보드를 여는 방법으로 맞는 것은?",
+        "options": [
+          "/dashboard 입력 또는 Ctrl+\\",
+          "grok.com 설정 메뉴에서만 열 수 있다",
+          "Ctrl+Z",
+          "대시보드는 Windows 전용이다"
+        ],
+        "answer": 0,
+        "explain": "공식 뉴스: 셸에서 grok dashboard, 세션 안에서 /dashboard, 단축키 Ctrl+\\"
+      },
+      {
+        "q": "여러 에이전트를 같은 저장소에서 동시에 돌릴 때 grok -w(워크트리)를 쓰는 가장 큰 이유는?",
+        "options": [
+          "답변 속도를 두 배로 높이려고",
+          "세션마다 격리된 복사본을 줘 서로 파일을 덮어쓰지 않게 하려고",
+          "요금을 줄이려고",
+          "인터넷 없이 쓰려고"
+        ],
+        "answer": 1,
+        "explain": "공식 문서: 워크트리 세션은 격리된 저장소 복사본에서 실행돼 병렬 에이전트끼리 파일을 덮어쓰지 않음"
+      },
+      {
+        "q": "세션을 끝낸 뒤 워크트리에 대한 설명으로 맞는 것은?",
+        "options": [
+          "세션이 끝나면 자동으로 지워진다",
+          "직접 지울 때까지 남아 있으므로 grok worktree rm·gc 로 정리한다",
+          "원본 폴더에 자동으로 합쳐진다",
+          "24시간 뒤 자동 삭제된다"
+        ],
+        "answer": 1,
+        "explain": "공식 문서: 워크트리는 제거할 때까지 유지, 세션 종료·삭제로 안 지워지고 gc 도 직접 실행할 때만 동작"
+      }
+    ],
+    "next": [
+      "Grok Build 세션(Sessions) 교안(AI-2026-10-CAT07-015) — /fork·/resume 와 워크트리 함께 쓰기",
+      "Grok Build 워크플로(Workflows) 교안(AI-2026-10-CAT08-020) — 자동 병렬 분담과 대시보드 수동 관리 비교",
+      "Grok Build 권한 모드·샌드박스 교안(AI-2026-10-CAT09-007) — 병렬 세션 실행 범위 제한"
+    ],
+    "rubric": [
+      {
+        "criterion": "병렬 실행",
+        "high": "워크트리 세션 3개 동시 실행 + 결과 파일 3종 확보",
+        "mid": "세션 2개 이하 또는 결과 일부",
+        "low": "워크트리 없이 한 폴더에서 실행"
+      },
+      {
+        "criterion": "대시보드 활용",
+        "high": "입력 대기 세션 승인·다른 세션 답장·Dispatch 모두 수행",
+        "mid": "목록 확인·승인만 수행",
+        "low": "대시보드 열지 못함"
+      },
+      {
+        "criterion": "정리·검토",
+        "high": "diff 확인 후 합치기 + --dry-run → rm → gc 순서 정리·거부 이유 기록",
+        "mid": "rm 만 실행",
+        "low": "워크트리 방치"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~5분",
+        "content": "오프닝: '터미널 창 여러 개 오가다 어느 AI가 멈췄는지 놓친 적 있나요?' + 주문 현황판 비유",
+        "note": "강사가 세션 3개 띄운 대시보드 먼저 시연"
+      },
+      {
+        "time": "5~30분",
+        "content": "1부 이론: 대시보드 화면 구성·Dispatch·Take over, 워크트리 원리(격리 복사본·HEAD 포함·직접 정리), 워크플로·/fork 비교, 요금·안전",
+        "note": "'워크트리는 자동으로 안 지워짐' 강조"
+      },
+      {
+        "time": "30~62분",
+        "content": "따라 하기 1~4: 저장소 → 워크트리 세션 3개 → 대시보드 승인·답장 → 결과 모으기",
+        "note": "창 3개 띄우기 어려운 수강생은 대시보드 입력창 Dispatch 로 대체"
+      },
+      {
+        "time": "62~70분",
+        "content": "내 것 만들기: 계획 모드 Dispatch → --ref 실험 → 정리 점검표",
+        "note": "rm 거부 메시지가 나오면 좋은 학습 기회로 활용"
+      },
+      {
+        "time": "70~72분",
+        "content": "짝 공유·퀴즈·정리",
+        "note": ""
+      }
+    ],
+    "script": [
+      {
+        "label": "오프닝",
+        "text": "AI 코딩 도우미 하나도 편한데, 세 개를 동시에 일 시키면 어떨까요? 대신 문제가 두 가지 생깁니다. 누가 지금 나를 기다리는지 모르겠고, 서로 같은 파일을 고쳐 버리죠. 오늘은 그 두 문제를 대시보드와 워크트리로 풉니다."
+      },
+      {
+        "label": "이론 전환",
+        "text": "대시보드는 식당 주방의 주문 현황판, 워크트리는 요리사마다 따로 준 조리대라고 생각하세요. 현황판은 질문 있는 요리사를 맨 위에 올려 주고, 조리대가 따로라서 서로 재료를 섞지 않습니다."
+      },
+      {
+        "label": "안전 강조",
+        "text": "워크트리는 세션을 끝내도 컴퓨터에 남아 있어요. 그리고 자동 승인으로 보낸 세션은 묻지 않고 파일을 바꿉니다. 오늘은 꼭 연습 폴더에서만, 지우기 전에는 --dry-run부터 하겠습니다."
+      },
+      {
+        "label": "마무리",
+        "text": "오늘 세 가지 자료를 동시에 만들었죠. 중요한 건 마지막에 사람이 결과를 보고 합치는 단계입니다. AI는 여러 명이 될 수 있어도, 검토하는 사람은 여러분입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "Grok Build 설치·로그인이 안 됨",
+        "response": "강사 화면 시연으로 대시보드 진행 + 수강생은 git worktree 개념 그림·점검표 작성"
+      },
+      {
+        "situation": "git 미설치·저장소 오류",
+        "response": "git --version 확인 → 설치 안내, 시간 부족하면 짝과 한 컴퓨터로 진행"
+      },
+      {
+        "situation": "대시보드에 세션이 안 보임",
+        "response": "세션이 실제 실행 중인지 확인 → 같은 계정·버전인지 확인 → grok dashboard 다시 실행 [확인 필요]"
+      },
+      {
+        "situation": "사용량 한도 도달",
+        "response": "세션을 1~2개로 줄이고 짝 실습으로 전환"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "'git 저장소 아님' 오류로 -w 실패",
+        "fix": "dash-practice 에서 git init + 첫 커밋 먼저"
+      },
+      {
+        "issue": "워크트리 폴더 위치를 못 찾음",
+        "fix": "grok worktree list·show <ID> 로 경로 확인, ~/.grok 은 숨김 폴더"
+      },
+      {
+        "issue": "승인 대기 세션을 놓침",
+        "fix": "대시보드는 입력 대기 세션을 맨 위로 정렬 — 맨 위부터 처리"
+      },
+      {
+        "issue": "grok worktree rm 이 거부됨",
+        "fix": "열린 세션 종료 또는 저장 안 한 변경 확인 후 다시 실행, -f 는 내용 확인 뒤에만"
+      },
+      {
+        "issue": "Ctrl+\\ 가 안 먹힘",
+        "fix": "터미널·키보드 배열에 따라 다를 수 있음 → /dashboard 입력으로 대체"
+      }
+    ],
+    "faq": [
+      {
+        "q": "대시보드를 닫으면 세션도 멈추나요?",
+        "a": "아님. 공식 뉴스: 대시보드를 닫아도 모든 세션 계속 실행"
+      },
+      {
+        "q": "실행 중인 세션에 답장하면 바로 끼어드나요?",
+        "a": "아님. 쉬는 세션은 즉시 받고, 실행 중 세션은 현재 차례가 끝난 뒤 대기열로 받음"
+      },
+      {
+        "q": "워크트리 결과는 어떻게 원본에 합치나요?",
+        "a": "워크트리는 실제 git 체크아웃이라 일반 git 명령(커밋·브랜치·병합 등)으로 합침, 자동 합치기 없음"
+      },
+      {
+        "q": "-w 와 --ref 차이는?",
+        "a": "-w 는 현재 HEAD + 커밋 안 한 변경까지 포함, --ref <ref> 는 지정한 ref 의 깨끗한 체크아웃"
+      },
+      {
+        "q": "워크트리는 디스크를 얼마나 차지하나요?",
+        "a": "저장소 복사본만큼 차지할 수 있음 — 다 쓰면 rm·gc 로 정리, gc --max-age 7d 로 7일 이상 안 쓴 것 만료"
+      },
+      {
+        "q": "대시보드 사용에 추가 요금이 있나요?",
+        "a": "별도 요금 안내 없음. 세션마다 Grok Build 사용량 차감, 요금제별 사용량 [확인 필요]"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급",
+        "guide": "세션 2개 + 대시보드 확인·승인만, 워크트리는 강사 시연으로 개념 이해"
+      },
+      {
+        "level": "중급",
+        "guide": "워크트리 3개 병렬 + Dispatch·계획 모드 + 정리 점검표까지"
+      },
+      {
+        "level": "고급",
+        "guide": "/fork --worktree·--ref·브랜치 병합·gc 정책까지 팀 규칙으로 설계"
+      },
+      {
+        "level": "시니어",
+        "guide": "터미널 대신 강사 화면 위주, '주문 현황판·조리대' 비유로 개념 이해 + 점검표 작성"
+      },
+      {
+        "level": "다문화(한국어 학습자)",
+        "guide": "지시문을 짧은 한국어 문장으로 쓰는 연습 — '퀴즈 5문항을 만들어 줘' 형태, 결과물은 쉬운 낱말 학습지로"
+      }
+    ],
+    "pro_points": [
+      "병렬 작업 = 서로 다른 파일을 맡길수록 효과 큼, 같은 파일을 여러 세션에 맡기지 않기",
+      "대시보드 맨 위(입력 대기)부터 처리하는 습관이 전체 속도를 결정",
+      "Dispatch 할 때 계획 모드로 시작하면 실수 줄어듦",
+      "워크트리는 만들기보다 정리가 중요 — 수업 끝에 list → --dry-run → rm 루틴"
+    ],
+    "day_before": [
+      "Grok Build 최신 버전 설치·로그인 확인(v1.0.50 이상), git 설치 확인",
+      "캡처 준비: 대시보드 목록(입력 대기 맨 위), 미리보기·답장, Dispatch 입력창, grok worktree list 결과",
+      "Ctrl+\\·Ctrl+W·Ctrl+S 단축키가 강의장 터미널에서 동작하는지 확인",
+      "rm 거부 메시지가 어떻게 나오는지 강사 컴퓨터에서 미리 재현",
+      "공식 문서 Worktrees 페이지·Grok Build Changelog 재확인"
+    ]
+  },
+  "verification": [
+    "[확인 필요] released 2026-06-15 는 xAI 뉴스 페이지 표기일 기준 — 보도(TeslaNorth)는 2026-10-01 Grok X 게시물로 소개",
+    "[확인 필요] v1.0.50·v1.0.51 날짜가 Changelog 조회 때마다 2026-10-06·10-09 로 다르게 읽힘",
+    "[확인 필요] 대시보드 입력창에서 Ctrl+W 로 워크트리 에이전트 보내기 화면 흐름 — 공식 문서 문구만 확인",
+    "[확인 필요] grok worktree rm 인수가 ID·이름 중 무엇인지, 워크트리 실제 폴더 이름 형식",
+    "[미검증] --ref HEAD 워크트리에 커밋 안 한 변경이 빠지는지 실제 동작",
+    "[확인 필요] 요금제별 Grok Build 사용량·동시 세션 한도"
+  ],
+  "notice": null,
+  "sources": [
+    {
+      "title": "xAI News – Agent Dashboard in Grok Build",
+      "url": "https://x.ai/news/agent-dashboard",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Build Worktrees",
+      "url": "https://docs.x.ai/build/features/worktrees",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI Docs – Grok Build Subagents",
+      "url": "https://docs.x.ai/build/features/subagents",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI – Grok Build Changelog",
+      "url": "https://x.ai/changelog/build",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "xAI News – Introducing The X Subscription (2026-10-12)",
+      "url": "https://x.ai/news/x-subscription",
+      "checked": "2026-10-20"
+    },
+    {
+      "title": "TeslaNorth – Grok Unveils Agent Dashboard (보조 근거: 2026-10-01 X 게시물 보도)",
+      "url": "https://teslanorth.com/2026/10/01/grok-agent-dashboard/",
+      "checked": "2026-10-20"
+    }
+  ]
+}
