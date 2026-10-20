@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 162,
+  "count": 163,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT07-017",
+      "version": "v1.0",
+      "created_at": "2026-10-20 09:16 KST",
+      "checked": "2026-10-20",
+      "review_by": "2027-01-20",
+      "title": "자주 시키는 일을 '/명령어' 하나로 — Grok Build(그록 빌드, 터미널) 스킬(Skills)·플러그인(Plugins)·마켓플레이스(Marketplace)로 나만의 수업 자료 점검 스킬 만들어 보기",
+      "summary": "Grok Build(xAI 터미널 코딩 에이전트) 확장 기능 4가지. ① 스킬(Skills): SKILL.md(머리말 YAML + 지침) 폴더 → .grok/skills/ 에 두면 /<스킬 이름> 슬래시 명령으로 호출, AI도 상황에 맞으면 스스로 사용 ② 플러그인(Plugins): 스킬·에이전트·훅·MCP 서버·LSP 서버 묶음 ③ 마켓플레이스(Marketplace): /marketplace 창에서 플러그인 찾아 Install ④ 훅(Hooks): 도구 실행 전후·세션 이벤트에 스크립트 실행, 프로젝트 훅은 /hooks-trust 필요. Claude Code 플러그인·스킬·CLAUDE.md 와 AGENTS.md 도 설정 없이 읽음. 2026-10-09 v1.0.51 스킬 변경 시 자동완성 즉시 반영·메시지 맨 앞 슬래시 명령만 스킬 실행 [확인 필요]",
+      "tool": "Grok",
+      "feature": "Grok Build(터미널 코딩 에이전트 CLI) 스킬(Skills)·플러그인(Plugins)·마켓플레이스(Marketplace)·훅(Hooks) — ① 스킬 위치 ./.grok/skills/(저장소 루트까지 탐색)·~/.grok/skills/·플러그인 skills/·[skills] paths ② SKILL.md 머리말 name·description·when-to-use·paths·argument-hint·user-invocable·disable-model-invocation·metadata, /<스킬 이름> 호출 ③ 플러그인 = 스킬·에이전트·훅·MCP·LSP 묶음, ./.grok/plugins/·~/.grok/plugins/·--plugin-dir ④ /plugins·/hooks·/skills·/mcps 확장 창, /marketplace 탭에서 Install, [[marketplace.sources]] ⑤ 훅 ~/.grok/hooks/·프로젝트 .grok/hooks/(/hooks-trust) ⑥ Claude Code 마켓플레이스·플러그인·스킬·CLAUDE.md·.claude/rules/ + AGENTS.md·~/.agents/skills/ 호환 · v1.0.51(2026-10-09) 스킬 자동완성 즉시 반영·맨 앞 슬래시만 스킬 실행 [확인 필요]",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-06-27",
+      "categories": [
+        "CAT-07",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-DEV",
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-DAT"
+      ],
+      "learner_levels": [
+        "중급",
+        "고급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 수업 자료를 정해진 기준으로 점검하는 나만의 스킬 파일(.grok/skills/lesson-check/SKILL.md) + ② /lesson-check 로 받은 점검 결과표 1개 + ③ 슬래시 전용(disable-model-invocation)·파일 조건(paths) 스킬 1개 + ④ /marketplace 에서 살펴본 플러그인 설치 전 확인 메모 1장",
+      "access": "freemium",
+      "total_minutes": 72,
+      "notice": "",
+      "emoji": "🧩",
+      "one_liner": "반복 지시를 /명령어 스킬로 저장"
+    },
     {
       "id": "AI-2026-10-CAT07-016",
       "version": "v1.0",
