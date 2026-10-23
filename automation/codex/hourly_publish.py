@@ -173,7 +173,7 @@ def validate_lesson(repo, files):
 
 def codex(cli, repo, prompt, output_file, *, review=False, timeout=2200):
     argv = [
-        cli, "exec", "--ephemeral", "--search",
+        cli, "--search", "exec", "--ephemeral",
         "--sandbox", "read-only" if review else "workspace-write",
         "--output-last-message", str(output_file),
     ]
