@@ -8,6 +8,7 @@ on:
     paths:
       - "automation/codex/**"
       - ".github/workflows/codex-hourly-smoke.yml"
+      - ".github/workflows/codex-cloud-hourly-lesson.yml"
   pull_request:
     paths:
       - "automation/codex/**"
@@ -40,3 +41,35 @@ jobs:
               throw "$file parse errors: $($parseErrors | Out-String)"
             }
           }
+
+  linux-cloud-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify cloud workflow YAML shape without secrets
+        run: |
+          python -m pip install pyyaml
+          python - <<'PY'
+          import pathlib, yaml
+          path=pathlib.Path(".github/workflows/codex-cloud-hourly-lesson.yml")
+          data=yaml.safe_load(path.read_text(encoding="utf-8"))
+          trigger=data.get("on") or data.get(True)
+          assert trigger["schedule"][0]["cron"]=="35 * * * *"
+          assert trigger["workflow_dispatch"] is None
+          assert data["permissions"]["contents"]=="write"
+          assert data["permissions"]["actions"]=="write"
+          assert "CODEX_AUTH_JSON" in path.read_text()
+          assert "actions/cache" not in path.read_text()
+          print("Cloud lesson schedule/secret isolation verified")
+          PY
+      - name: Check the actual Codex CLI invocation flags
+        run: |
+          npm install --global @openai/codex
+          codex --version
+          codex exec --ephemeral --search --sandbox read-only --output-last-message /tmp/last.txt --output-schema automation/codex/review-schema.json --help >/dev/null
