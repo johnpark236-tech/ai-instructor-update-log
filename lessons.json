@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 167,
+  "count": 168,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT09-008",
+      "version": "v1.0",
+      "created_at": "2026-10-24 01:24 KST",
+      "checked": "2026-10-24",
+      "review_by": "2027-01-24",
+      "title": "ChatGPT 대화 잠금(Locked chats) — 다른 사람에게 보이지 않게 대화 정리하고 개인정보 보호 규칙 만들기",
+      "summary": "2026년 10월 20일 발표된 ChatGPT 대화 잠금 기능으로 채팅 목록·검색 노출을 줄이고 4자리 PIN으로 접근 관리. 가상 대화 실습과 보안 체크리스트 제작",
+      "tool": "ChatGPT",
+      "feature": "Locked chats(대화 잠금) — 선택한 채팅을 일반 기록·고정·검색에서 숨기고 계정 PIN 또는 지원 기기 인증으로 접근",
+      "company": "OpenAI",
+      "type": "update",
+      "released": "2026-10-20",
+      "categories": [
+        "CAT-09",
+        "CAT-01",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "채팅 잠금 실습 기록 1장 + 대화 공유·PIN·정보 보존 관련 개인정보 보호 체크리스트 1장",
+      "access": "free",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🔐",
+      "one_liner": "중요 대화 PIN으로 잠그기"
+    },
     {
       "id": "AI-2026-10-CAT11-002",
       "version": "v1.0",
