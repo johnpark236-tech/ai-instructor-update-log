@@ -1,0 +1,48 @@
+name: Codex AWF (pilot, no merge)
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'Small scoped content change request'
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: codex-awf-json-index
+  cancel-in-progress: false
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Test orchestrator without Codex
+        run: python -m unittest discover -s orchestrator/tests -v
+      - name: Check CLI and authentication
+        run: |
+          if ! command -v codex >/dev/null 2>&1; then
+            echo 'Codex CLI is not installed; safe pilot stops before changing content.'
+            exit 1
+          fi
+          codex --version
+      - name: Run isolated Codex developer and reviewer
+        env:
+          AWF_TASK: ${{ inputs.task }}
+        run: python -m orchestrator.master --task "$AWF_TASK"
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: codex-awf-pilot-logs
+          path: awf-results/
+          if-no-files-found: warn
