@@ -1,0 +1,1 @@
+window.MANNAL_GOATCOUNTER_CODE = '';
