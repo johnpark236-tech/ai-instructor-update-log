@@ -90,5 +90,71 @@ class HourlyPublisherRegressionTests(unittest.TestCase):
 
 
 
+    def test_quota_detection_specific_not_generic_limit(self):
+        for message in [
+            "You've hit your ChatGPT usage limit. Try again later.",
+            "usage_limit_reached: resets at 07:00",
+            "Rate limit exceeded for Codex",
+            "ChatGPT 사용량 한도 초과",
+            "quota exceeded",
+        ]:
+            self.assertTrue(engine.is_codex_quota_error(message), message)
+        for message in [
+            "Limit 3 questions per lesson",
+            "A news rate limit policy has changed",
+            "Missing pricing.sources schema",
+            "You've hit a user interface bug",
+        ]:
+            self.assertFalse(engine.is_codex_quota_error(message), message)
+
+    def test_codex_return_code_quota_raises_distinct_exception(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            result = subprocess.CompletedProcess(
+                ["codex"], 1, stdout="", stderr="You've hit your ChatGPT usage limit.")
+            with patch.object(engine.subprocess, "run", return_value=result):
+                with self.assertRaises(engine.CodexQuotaExceeded):
+                    engine.codex("codex", root, "prompt", root / "out.txt")
+
+    def test_codex_zero_exit_quota_notice_raises(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            output = root / "out.txt"
+            output.write_text("usage_limit_reached", encoding="utf-8")
+            with patch.object(engine.subprocess, "run", return_value=subprocess.CompletedProcess(["codex"], 0, stdout="", stderr="")):
+                with self.assertRaises(engine.CodexQuotaExceeded):
+                    engine.codex("codex", root, "prompt", output)
+
+    def test_quota_ends_execution_without_commit_or_three_attempts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            with (patch.object(engine, "HOME", root),
+                  patch.object(engine.shutil, "which", return_value="codex"),
+                  patch.object(engine, "preflight"),
+                  patch.object(engine, "codex", side_effect=engine.CodexQuotaExceeded("quota")),
+                  patch.object(engine, "git") as git_mock,
+                  patch.object(engine, "changed_files") as changed_mock):
+                result = engine.execute("news", root, no_push=True)
+                self.assertEqual(result["status"], "RATE_LIMITED")
+                self.assertTrue(result["draft_discarded"])
+                git_mock.assert_not_called()
+                changed_mock.assert_not_called()
+
+    def test_quota_during_review_never_publishes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            with (patch.object(engine, "HOME", root),
+                  patch.object(engine.shutil, "which", return_value="codex"),
+                  patch.object(engine, "preflight"),
+                  patch.object(engine, "codex", side_effect=[None, engine.CodexQuotaExceeded("quota")]),
+                  patch.object(engine, "changed_files", return_value=["public/data/ai-news.json"]),
+                  patch.object(engine, "permitted"),
+                  patch.object(engine, "validate_news", return_value="ai-auto-test"),
+                  patch.object(engine, "git") as git_mock):
+                result = engine.execute("news", root, no_push=True)
+                self.assertEqual(result["status"], "RATE_LIMITED")
+                git_mock.assert_not_called()
+
+
 if __name__ == "__main__":
     unittest.main()
