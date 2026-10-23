@@ -47,6 +47,39 @@ def progress(kind, phase, **info):
     print(json.dumps({"kind": kind, "phase": phase, **clean}, ensure_ascii=False), flush=True)
 
 
+class CodexQuotaExceeded(RuntimeError):
+    """The ChatGPT Codex quota is exhausted; defer this run until the next schedule."""
+
+
+# Check only recognizable Codex service quota messages, not arbitrary 'limit' words
+# in article research, validation feedback or Git errors.
+_QUOTA_SIGNATURES = (
+    r"(?i)(?:you(?:'ve| have)? (?:hit|reached|exceeded)|your) (?:the )?(?:codex |chatgpt )?(?:usage |rate |weekly |daily )?limit",
+    r"(?i)(?:rate[_ -]?limit[_ -]?exceeded|usage[_ -]?limit[_ -]?reached|insufficient[_ -]?quota|quota[_ -]?exceeded)",
+    r"(?i)(?:out of|exhausted|no remaining) (?:codex |chatgpt )?(?:credits|usage|quota)",
+    r"(?i)(?:codex|chatgpt).{0,45}(?:quota|usage limit).{0,35}(?:reached|exceeded|exhausted)",
+    r"(?:Codex|ChatGPT).{0,35}(?:한도|사용량).{0,15}(?:초과|도달|소진)",
+    r"(?:사용량|사용|요청)\s*한도(?:에\s*도달|\s*초과|\s*소진)",
+    r"(?i)(?:rate limit|usage limit|quota).{0,70}(?:try again|resets?|reset at|upgrade your plan)",
+)
+
+
+def is_codex_quota_error(message):
+    value = str(message)
+    return any(re.search(pattern, value) for pattern in _QUOTA_SIGNATURES)
+
+
+def codex_quota_wait(kind, phase, detail):
+    """Do not publish drafts made before the quota ran out."""
+    progress(kind, "quota_paused", stage=phase, reason="Codex subscription usage limit", next="next hourly scheduled run")
+    return {
+        "status": "RATE_LIMITED",
+        "reason": "ChatGPT Codex subscription quota exhausted",
+        "next_action": "Automatically retry at next hourly GitHub Actions schedule",
+        "draft_discarded": True,
+    }
+
+
 def git(repo, *args, timeout=90):
     return run(["git", *args], repo, timeout=timeout)
 
@@ -226,7 +259,19 @@ def codex(cli, repo, prompt, output_file, *, review=False, timeout=2200):
     if review:
         argv += ["--output-schema", str(SCHEMA)]
     argv += ["-"]
-    output = run(argv, repo, input_text=prompt, timeout=timeout)
+    try:
+        output = run(argv, repo, input_text=prompt, timeout=timeout)
+    except RuntimeError as exc:
+        if is_codex_quota_error(str(exc)):
+            raise CodexQuotaExceeded("Codex subscription usage limit reached") from None
+        raise
+    # Some CLI versions return code 0 with a human-readable quota notice.
+    if output_file.is_file():
+        final_message = output_file.read_text(encoding="utf-8", errors="replace")
+        if is_codex_quota_error(final_message):
+            raise CodexQuotaExceeded("Codex subscription usage limit reached")
+    elif is_codex_quota_error(output):
+        raise CodexQuotaExceeded("Codex subscription usage limit reached")
     return output
 
 
@@ -279,7 +324,10 @@ def execute(kind, repo, *, no_push=False):
             "반려되었다는 이유로 검증 가능한 기존 초안까지 삭제하지 말라. "
             "수정 후 git status --short로 변동 확인. 직접 파일을 작성하고 실행을 종료하라.\n"
             if feedback else "")
-        codex(cli, repo, dev_prompt, session_dir / f"draft-{attempt}.txt")
+        try:
+            codex(cli, repo, dev_prompt, session_dir / f"draft-{attempt}.txt")
+        except CodexQuotaExceeded as exc:
+            return codex_quota_wait(kind, "draft", str(exc))
         files = changed_files(repo)
         progress(kind, "draft_result", attempt=attempt, changed=",".join(files) or "(none)")
         if not files:
@@ -316,8 +364,11 @@ def execute(kind, repo, *, no_push=False):
             "\n모든 변경을 HEAD와 비교하고 공식 출처를 재확인해 엄격하게 승인/반려하라. "
             "git diff는 새(untracked) 파일 내용을 표시하지 않을 수 있으므로 "
             "git status --short의 새 파일도 직접 열어 검토하라.")
-        codex(cli, repo, review_prompt, session_dir / f"review-{attempt}.json",
-              review=True, timeout=1500)
+        try:
+            codex(cli, repo, review_prompt, session_dir / f"review-{attempt}.json",
+                  review=True, timeout=1500)
+        except CodexQuotaExceeded as exc:
+            return codex_quota_wait(kind, "review", str(exc))
         try:
             result = json.loads((session_dir / f"review-{attempt}.json").read_text(encoding="utf-8"))
         except (ValueError, FileNotFoundError) as exc:
