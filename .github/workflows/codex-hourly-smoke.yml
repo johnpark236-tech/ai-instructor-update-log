@@ -72,4 +72,4 @@ jobs:
         run: |
           npm install --global @openai/codex
           codex --version
-          codex exec --ephemeral --search --sandbox read-only --output-last-message /tmp/last.txt --output-schema automation/codex/review-schema.json --help >/dev/null
+          codex --search exec --ephemeral --sandbox read-only --output-last-message /tmp/last.txt --output-schema automation/codex/review-schema.json --help >/dev/null
