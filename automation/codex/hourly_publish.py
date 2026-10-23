@@ -159,6 +159,18 @@ def validate_lesson(repo, files):
         raise RuntimeError("Lesson id or exact three questions invalid")
     if not isinstance(lesson.get("verification"), list):
         raise RuntimeError("verification must be an array to avoid loading freeze")
+    # Keep new lesson hyperlinks compatible with lessons.html, which reads
+    # pricing.sources[].url/title. Never change legacy lesson data here.
+    sources = lesson.get("pricing", {}).get("sources", [])
+    if not isinstance(sources, list) or any(
+        not isinstance(x, dict)
+        or not isinstance(x.get("title"), str) or not x["title"].strip()
+        or not isinstance(x.get("url"), str)
+        or urlparse(x["url"]).scheme not in ("https", "http")
+        for x in sources
+    ):
+        raise RuntimeError("pricing.sources must be [{title, url}] objects, not URL strings")
+
     releases = current_json(repo, "releases.json")["items"]
     if not any(r.get("lesson_id") == lesson_id for r in releases):
         raise RuntimeError("New lesson not linked to release notes")
@@ -183,6 +195,26 @@ def validate_lesson(repo, files):
     if shutil.which("node"):
         run(["node", "tests/quiz_ui.test.cjs"], repo, timeout=120)
     return lesson_id
+
+
+def discard_unverifiable_lesson(repo, files, content_id):
+    """Reset ONLY the uncommitted lesson candidate; preserve all existing main data."""
+    expected = sorted(["lessons.json", "releases.json", f"lessons/{content_id}.json"])
+    if sorted(files) != expected:
+        raise RuntimeError("Cannot safely discard candidate with unexpected changed paths")
+    candidate = repo / f"lessons/{content_id}.json"
+    try:
+        git(repo, "cat-file", "-e", f"HEAD:lessons/{content_id}.json")
+    except RuntimeError:
+        pass
+    else:
+        raise RuntimeError("Refuse to delete an existing published lesson")
+    if not candidate.is_file():
+        raise RuntimeError("New lesson file is not present")
+    candidate.unlink()
+    git(repo, "restore", "--source=HEAD", "--worktree", "--", "lessons.json", "releases.json")
+    if changed_files(repo):
+        raise RuntimeError("Candidate reset incomplete; stop to avoid modifying unrelated work")
 
 
 def codex(cli, repo, prompt, output_file, *, review=False, timeout=2200):
@@ -251,7 +283,8 @@ def execute(kind, repo, *, no_push=False):
         files = changed_files(repo)
         progress(kind, "draft_result", attempt=attempt, changed=",".join(files) or "(none)")
         if not files:
-            if attempt == 1:
+            if attempt == 1 or (
+                kind == "lesson" and feedback.startswith("이전 주제 국내 제공/라이선스 근거 미확인:")):
                 progress(kind, "no_content", reason="No new verifiable official source")
                 return {"status": "SKIPPED", "reason": "no new verified source"}
             progress(kind, "repair_no_changes", attempt=attempt, reason=feedback or "No file changes")
@@ -294,6 +327,21 @@ def execute(kind, repo, *, no_push=False):
         if result.get("verdict") != "APPROVE":
             feedback = "\n".join(str(x) for x in result.get("reasons", [])) or "Reviewer rejected without reasons"
             progress(kind, "review_rejected", attempt=attempt, reason=feedback)
+            # A fundamental lack of Korean rollout/license evidence cannot be
+            # fixed by prose. Try a DIFFERENT verified official topic instead.
+            region_blocked = any(term in feedback for term in (
+                "한국 사용", "국내", "한국 제공", "지역·라이선스", "지역별",
+                "country availability", "Korean availability"))
+            if kind == "lesson" and region_blocked and attempt < 3:
+                rejected = current_json(repo, f"lessons/{content_id}.json")
+                rejected_title = rejected.get("title", content_id)
+                discard_unverifiable_lesson(repo, files, content_id)
+                feedback = (
+                    "이전 주제 국내 제공/라이선스 근거 미확인: " + rejected_title +
+                    "\n해당 기능으로 다시 작성하지 말고, 공식 문서에서 한국 이용 조건이 "
+                    "확인되는 전혀 다른 신규 AI 기능을 찾아라. 적합한 주제 없으면 "
+                    "파일 무변경 종료하라. 거부 사유: " + feedback)
+                progress(kind, "candidate_replaced", attempt=attempt, old=content_id)
             continue
         progress(kind, "review_approved", attempt=attempt, content_id=content_id)
         # Revalidate after read-only review in case of unexpected modifications.
