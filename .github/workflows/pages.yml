@@ -41,6 +41,20 @@ jobs:
           npm install --no-save --no-package-lock pptxgenjs@3.12.0
           node scripts/build_downloads.js
           rm -rf node_modules
+      - name: Configure optional cookie-less analytics
+        env:
+          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+        run: |
+          python - <<'PY'
+          import os, re, json, pathlib
+          code = os.environ.get("GOATCOUNTER_CODE","").strip()
+          if code and not re.fullmatch(r"[a-z0-9][a-z0-9-]{1,62}", code):
+              raise SystemExit("Invalid GOATCOUNTER_CODE repository variable")
+          pathlib.Path("analytics-config.js").write_text(
+              "window.MANNAL_GOATCOUNTER_CODE = " + json.dumps(code) + ";\\n",
+              encoding="utf-8")
+          print("Analytics collection configured" if code else "Analytics disabled until setup")
+          PY
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload site
