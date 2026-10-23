@@ -3,6 +3,7 @@ name: Codex hourly runner configuration tests
 on:
   push:
     branches:
+      - main
       - automation/codex-cli-hourly-news-and-lessons
     paths:
       - "automation/codex/**"
