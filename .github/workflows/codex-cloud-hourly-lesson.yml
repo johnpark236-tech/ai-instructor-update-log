@@ -1,0 +1,90 @@
+name: Cloud Codex CLI - hourly AI lesson
+
+on:
+  schedule:
+    - cron: "35 * * * *" # UTC; minutes remain 35 in KST. GitHub can delay scheduled jobs.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: codex-cloud-hourly-lesson
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    # Never run subscription credentials for forked pull requests.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Checkout trusted main, without GitHub write token
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Codex CLI
+        run: |
+          npm install --global @openai/codex
+          codex --version
+
+      - name: Prepare Linux workspace-write sandbox
+        run: |
+          if [ -e /proc/sys/kernel/apparmor_restrict_unprivileged_userns ]; then
+            sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+          fi
+
+      - name: Restore subscription sign-in from GitHub Secret only (no caching)
+        shell: bash
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+        run: |
+          set -eu
+          if [ -z "$CODEX_AUTH_JSON" ]; then
+            echo "::error::Missing CODEX_AUTH_JSON Actions secret. See automation/codex/README.md"
+            exit 1
+          fi
+          mkdir -p "$HOME/.codex"
+          chmod 700 "$HOME/.codex"
+          printf '%s' "$CODEX_AUTH_JSON" > "$HOME/.codex/auth.json"
+          chmod 600 "$HOME/.codex/auth.json"
+          codex login status
+
+      - name: Codex creates, checks, and independently self-reviews one lesson
+        run: |
+          python -X utf8 automation/codex/hourly_publish.py \
+            --kind lesson --news-repo . --lesson-repo . --no-push
+
+      - name: Privileged Git push and explicit Pages deployment trigger
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if [ "$(git rev-list --count origin/main..HEAD)" -eq 0 ]; then
+            echo "No verified new lesson. No commit to push."
+            exit 0
+          fi
+          # GITHUB_TOKEN-made pushes do NOT fire further push-triggered workflows.
+          # Explicitly dispatch Pages after publishing.
+          basic="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $basic" push origin HEAD:main
+          gh workflow run pages.yml --ref main
+          echo "Published new lesson commit and requested GitHub Pages deployment."
+
+      - name: Always remove ephemeral CLI login
+        if: always()
+        shell: bash
+        run: rm -f "$HOME/.codex/auth.json"
