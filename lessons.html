@@ -92,6 +92,8 @@ footer{padding:44px 0;color:#6f87a6;font-size:12px}
 <header><div class="w nav"><div class="brand">AI 실습 교안</div><div class="fz" role="group" aria-label="글씨 크기"><span style="min-width:0;color:#bed0e8">글씨</span><button type="button" id="fzm" aria-label="글씨 작게">가−</button><span id="fzv" aria-live="polite">1/5</span><button type="button" id="fzp" aria-label="글씨 크게">가+</button></div><div class="links"><a class="on" href="./lessons.html">교안</a><a href="./releases.html">릴리즈 노트</a><a href="./index.html">TOP10</a></div></div></header>
 <main class="w" id="app"></main><div id="tip" role="tooltip"></div>
 <footer class="w">교안 작성 기준 v2.3 — 사실 정보는 공식 출처·확인일 표기. [확인 필요]·[미검증] 표시는 강의 전 실제 화면으로 확인.</footer>
+<script src="./analytics-config.js"></script>
+<script src="./analytics.js"></script>
 <script src="./lesson-meta.js"></script>
 <script src="./lesson-pptx.js"></script>
 <script>
@@ -291,7 +293,7 @@ async function lessonView(id){
 
 // 카카오톡 등은 링크의 #뒷부분을 빼먹음 → ?id=교안ID 로도 바로 열리게 함 (주소는 #ID 로 정리)
 (function(){const q=new URLSearchParams(location.search),id=q.get('id')||q.get('lesson');if(id&&!location.hash){history.replaceState(null,'',location.pathname+'#'+encodeURIComponent(id))}})();
-function route(){const h=location.hash.slice(1);if(h.startsWith('import='))return importSync(h.slice(7));let id=decodeURIComponent(h);if(M.LEGACY[id]){history.replaceState(null,'','#'+M.LEGACY[id]);id=M.LEGACY[id]}id?lessonView(id):listView()}
+function route(){const h=location.hash.slice(1);if(h.startsWith('import='))return importSync(h.slice(7));let id=decodeURIComponent(h);if(M.LEGACY[id]){history.replaceState(null,'','#'+M.LEGACY[id]);id=M.LEGACY[id]}id?(window.MannalAnalytics?.viewLesson(id),lessonView(id)):listView()}
 document.addEventListener('click',e=>{if(e.target&&e.target.id==='goExt')openExternal(location.href)});
 // 그래프 막대 툴팁 (마우스 올림·탭)
 const tip=document.getElementById('tip');
