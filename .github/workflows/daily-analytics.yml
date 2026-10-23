@@ -28,6 +28,8 @@ jobs:
           python-version: "3.12"
       - name: Validate report script syntax
         run: python -m py_compile scripts/analytics_daily.py
+      - name: Verify daily stats aggregation without user data
+        run: python -m unittest discover -s tests -p 'test_analytics_daily.py' -v
       - name: Daily 교안 readership and download counts
         env:
           GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
