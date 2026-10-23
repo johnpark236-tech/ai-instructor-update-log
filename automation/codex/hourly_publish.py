@@ -262,6 +262,10 @@ def execute(kind, repo, *, no_push=False):
         staged = git(repo, "diff", "--cached", "--name-only").splitlines()
         if sorted(staged) != files:
             raise RuntimeError("Unexpected staged files")
+        # CI runners do not have a configured Git author by default.
+        # Use an explicit automation identity only for validated content commits.
+        git(repo, "config", "user.name", "mannal-codex-bot")
+        git(repo, "config", "user.email", "actions@users.noreply.github.com")
         commit_message = f"content: hourly Codex {kind} {content_id}"
         git(repo, "commit", "-m", commit_message)
         if no_push:
