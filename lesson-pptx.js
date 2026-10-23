@@ -212,7 +212,7 @@
 
     // 3부 정리
     const wr = L.wrap;
-    s = slide('3부 정리 · 작품 공유 & 확인 퀴즈');
+    s = slide('3부 정리 · 핵심 문제 3개 풀어보기');
     box(s, '🗣 ' + NT(wr.share), 0.6, 1.2, 12.1, 1.3, C.card, C.text, 14);
     s.addText(wr.quiz.flatMap((q, i) => [
       { text: `Q${i + 1}. ${q.q}`, options: { fontFace: FONT, fontSize: 15, bold: true, color: C.text, breakLine: true } },
