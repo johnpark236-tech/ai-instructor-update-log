@@ -38,7 +38,7 @@ def safe_detail(detail):
     """Keep diagnostic useful without logging credential-looking strings."""
     s = str(detail)
     s = re.sub(r"(?i)(?:sk-|gho_|ghp_|ghu_|ghs_|ghr_)[A-Za-z0-9_-]{12,}", "[REDACTED]", s)
-    s = re.sub(r"(?i)bearer\\s+[A-Za-z0-9._~+/-]{12,}", "Bearer [REDACTED]", s)
+    s = re.sub(r"(?i)bearer\s+[A-Za-z0-9._~+/-]{12,}", "Bearer [REDACTED]", s)
     return s[:900]
 
 
@@ -242,10 +242,10 @@ def execute(kind, repo, *, no_push=False):
     for attempt in range(1, 4):
         progress(kind, "draft_start", attempt=attempt)
         dev_prompt = prompt_base + (
-            f"\\n\\n## {attempt}차 검수 반려사항 — 반드시 수정\\n{feedback}\\n"
+            f"\n\n## {attempt}차 검수 반려사항 — 반드시 수정\n{feedback}\n"
             "기존 작업 폴더에 이전 차수에 작성한 파일이 남아 있으면 그 파일을 직접 수정하라. "
             "반려되었다는 이유로 검증 가능한 기존 초안까지 삭제하지 말라. "
-            "수정 후 git status --short로 변동 확인. 직접 파일을 작성하고 실행을 종료하라.\\n"
+            "수정 후 git status --short로 변동 확인. 직접 파일을 작성하고 실행을 종료하라.\n"
             if feedback else "")
         codex(cli, repo, dev_prompt, session_dir / f"draft-{attempt}.txt")
         files = changed_files(repo)
@@ -278,9 +278,9 @@ def execute(kind, repo, *, no_push=False):
             progress(kind, "schema_rejected", attempt=attempt, reason=feedback)
             continue
         review_prompt = (
-            reviewer_base + f"\\n\\n검수 작업 유형: {kind}\\n새 콘텐츠: {content_id}\\n"
-            "다음 변경 경로만 검토:\\n" + "\\n".join(files) +
-            "\\n모든 변경을 HEAD와 비교하고 공식 출처를 재확인해 엄격하게 승인/반려하라. "
+            reviewer_base + f"\n\n검수 작업 유형: {kind}\n새 콘텐츠: {content_id}\n"
+            "다음 변경 경로만 검토:\n" + "\n".join(files) +
+            "\n모든 변경을 HEAD와 비교하고 공식 출처를 재확인해 엄격하게 승인/반려하라. "
             "git diff는 새(untracked) 파일 내용을 표시하지 않을 수 있으므로 "
             "git status --short의 새 파일도 직접 열어 검토하라.")
         codex(cli, repo, review_prompt, session_dir / f"review-{attempt}.json",
@@ -292,7 +292,7 @@ def execute(kind, repo, *, no_push=False):
             progress(kind, "review_invalid_output", attempt=attempt, reason=feedback)
             continue
         if result.get("verdict") != "APPROVE":
-            feedback = "\\n".join(str(x) for x in result.get("reasons", [])) or "Reviewer rejected without reasons"
+            feedback = "\n".join(str(x) for x in result.get("reasons", [])) or "Reviewer rejected without reasons"
             progress(kind, "review_rejected", attempt=attempt, reason=feedback)
             continue
         progress(kind, "review_approved", attempt=attempt, content_id=content_id)
