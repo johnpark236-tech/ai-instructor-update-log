@@ -29,8 +29,22 @@ def run(argv, cwd, *, timeout=90, check=True, input_text=None):
         [str(x) for x in argv], cwd=str(cwd), input=input_text, text=True,
         encoding="utf-8", errors="replace", capture_output=True, timeout=timeout)
     if check and p.returncode:
-        raise RuntimeError(f"{argv[0]} failed ({p.returncode}): {p.stderr[-2200:]}")
+        detail = (p.stderr.strip() or p.stdout.strip() or "No process diagnostics")
+        raise RuntimeError(f"{argv[0]} failed ({p.returncode}): {detail[-3500:]}")
     return p.stdout.strip()
+
+
+def safe_detail(detail):
+    """Keep diagnostic useful without logging credential-looking strings."""
+    s = str(detail)
+    s = re.sub(r"(?i)(?:sk-|gho_|ghp_|ghu_|ghs_|ghr_)[A-Za-z0-9_-]{12,}", "[REDACTED]", s)
+    s = re.sub(r"(?i)bearer\\s+[A-Za-z0-9._~+/-]{12,}", "Bearer [REDACTED]", s)
+    return s[:900]
+
+
+def progress(kind, phase, **info):
+    clean = {k: safe_detail(v) for k, v in info.items()}
+    print(json.dumps({"kind": kind, "phase": phase, **clean}, ensure_ascii=False), flush=True)
 
 
 def git(repo, *args, timeout=90):
@@ -224,34 +238,64 @@ def execute(kind, repo, *, no_push=False):
     prompt_base = (AUTOMATION / "prompts" / f"{kind}.md").read_text(encoding="utf-8")
     reviewer_base = (AUTOMATION / "prompts" / "review.md").read_text(encoding="utf-8")
     feedback = ""
+    progress(kind, "start", repo=repo.name)
     for attempt in range(1, 4):
+        progress(kind, "draft_start", attempt=attempt)
         dev_prompt = prompt_base + (
-            f"\n\n## {attempt}차 검수 반려사항 — 반드시 수정\n{feedback}\n" if feedback else "")
+            f"\\n\\n## {attempt}차 검수 반려사항 — 반드시 수정\\n{feedback}\\n"
+            "기존 작업 폴더에 이전 차수에 작성한 파일이 남아 있으면 그 파일을 직접 수정하라. "
+            "반려되었다는 이유로 검증 가능한 기존 초안까지 삭제하지 말라. "
+            "수정 후 git status --short로 변동 확인. 직접 파일을 작성하고 실행을 종료하라.\\n"
+            if feedback else "")
         codex(cli, repo, dev_prompt, session_dir / f"draft-{attempt}.txt")
         files = changed_files(repo)
+        progress(kind, "draft_result", attempt=attempt, changed=",".join(files) or "(none)")
         if not files:
             if attempt == 1:
+                progress(kind, "no_content", reason="No new verifiable official source")
                 return {"status": "SKIPPED", "reason": "no new verified source"}
-            raise RuntimeError("Rejected draft was not repaired")
+            progress(kind, "repair_no_changes", attempt=attempt, reason=feedback or "No file changes")
+            feedback = feedback or "수정된 파일이 없음. 기존 반려사항을 실제 파일에 반영하거나 검증할 자료가 없다면 무변경으로 명시"
+            continue
         permitted(kind, files, repo)
+        if kind == "lesson":
+            # Derive lesson index deterministically from validated lesson sources.
+            # Codex must write only the new lesson and releases; index is built here.
+            try:
+                build_output = run([sys.executable, "scripts/build_lessons_index.py"], repo, timeout=150)
+                progress(kind, "index_built", attempt=attempt, summary=build_output[-180:])
+                files = changed_files(repo)
+                permitted(kind, files, repo)
+            except Exception as exc:
+                feedback = str(exc)
+                progress(kind, "index_rejected", attempt=attempt, reason=feedback)
+                continue
         try:
             content_id = validate_news(repo, files) if kind == "news" else validate_lesson(repo, files)
+            progress(kind, "schema_pass", attempt=attempt, content_id=content_id)
         except Exception as exc:
             feedback = str(exc)
+            progress(kind, "schema_rejected", attempt=attempt, reason=feedback)
             continue
         review_prompt = (
-            reviewer_base + f"\n\n검수 작업 유형: {kind}\n새 콘텐츠: {content_id}\n"
-            "다음 변경 경로만 검토:\n" + "\n".join(files) +
-            "\n모든 변경을 HEAD와 비교하고 공식 출처를 재확인해 엄격하게 승인/반려하라.")
+            reviewer_base + f"\\n\\n검수 작업 유형: {kind}\\n새 콘텐츠: {content_id}\\n"
+            "다음 변경 경로만 검토:\\n" + "\\n".join(files) +
+            "\\n모든 변경을 HEAD와 비교하고 공식 출처를 재확인해 엄격하게 승인/반려하라. "
+            "git diff는 새(untracked) 파일 내용을 표시하지 않을 수 있으므로 "
+            "git status --short의 새 파일도 직접 열어 검토하라.")
         codex(cli, repo, review_prompt, session_dir / f"review-{attempt}.json",
               review=True, timeout=1500)
         try:
             result = json.loads((session_dir / f"review-{attempt}.json").read_text(encoding="utf-8"))
         except (ValueError, FileNotFoundError) as exc:
-            raise RuntimeError("Reviewer did not produce valid JSON") from exc
-        if result.get("verdict") != "APPROVE":
-            feedback = "\n".join(result.get("reasons", [])) or "Reviewer rejected without reasons"
+            feedback = "검수자가 올바른 JSON 형식으로 승인 또는 반려 사유를 출력하지 못함"
+            progress(kind, "review_invalid_output", attempt=attempt, reason=feedback)
             continue
+        if result.get("verdict") != "APPROVE":
+            feedback = "\\n".join(str(x) for x in result.get("reasons", [])) or "Reviewer rejected without reasons"
+            progress(kind, "review_rejected", attempt=attempt, reason=feedback)
+            continue
+        progress(kind, "review_approved", attempt=attempt, content_id=content_id)
         # Revalidate after read-only review in case of unexpected modifications.
         if files != changed_files(repo):
             raise RuntimeError("Files changed during review")
@@ -268,15 +312,17 @@ def execute(kind, repo, *, no_push=False):
         git(repo, "config", "user.email", "actions@users.noreply.github.com")
         commit_message = f"content: hourly Codex {kind} {content_id}"
         git(repo, "commit", "-m", commit_message)
+        progress(kind, "commit_created", content_id=content_id)
         if no_push:
             # GitHub Actions: the token is made available only in a separate
             # trusted push/dispatch step AFTER all Codex invocations finish.
             return {"status": "COMMITTED", "id": content_id, "files": files,
                     "note": "Local commit validated; cloud workflow handles push/deploy"}
         git(repo, "push", "origin", "HEAD:main", timeout=180)
+        progress(kind, "git_push_completed", content_id=content_id)
         return {"status": "PUSHED", "id": content_id, "files": files,
                 "note": "GitHub push confirmed; GitHub Pages deployment is asynchronous"}
-    raise RuntimeError("Codex self-review rejected the content after three attempts")
+    raise RuntimeError("Codex self-review / schema checks did not pass after three attempts: " + safe_detail(feedback))
 
 
 def main():
