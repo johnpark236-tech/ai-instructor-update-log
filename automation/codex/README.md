@@ -1,4 +1,67 @@
-# 시간당 뉴스 1건 + AI 교안 1건: Codex CLI 로컬 자동 발행
+# 클라우드 Codex CLI 자동발행 — PC 전원 OFF 가능
+
+**운영 실행 환경:** GitHub Actions `ubuntu-latest` (Windows PC와 무관)
+
+| 채널 | 저장소 | 예약(매시) | 결과 |
+| --- | --- | --- | --- |
+| AI 뉴스 | `johnpark236-tech/mannal_news` | 매시 **05분** | 공식 발표 확인 → 1건 기사 JSON·SVG → Codex 자체 검수 → main → deploy.yml |
+| AI 교안 | `johnpark236-tech/ai-instructor-update-log` | 매시 **35분** | 공식 발표 확인 → CAT/JOB 교안 JSON → Codex 자체 검수 → main → pages.yml |
+
+- 두 작업 모두 **매시간 최대 1건**. 공식 신규 발표가 없으면 발행하지 않고 `SKIPPED` 기록
+- **개발 Codex CLI + 독립된 Codex CLI 읽기 전용 자체 검수 + Python 구조 검증**. Claude 불필요
+- 새 AI와 기존 AI 신기능을 구분. 출처·요금·한국 접근 제한 근거 필수, `[확인 필요]` 표시. 신규 교안 문제는 정확히 3개
+- 로그인: ChatGPT 계정 Codex CLI 세션의 `auth.json`을 **GitHub Actions Secrets**에 안전하게 1회 등록. API 키 추가하지 않음. 구독 한도·재인증 제한에 영향받음
+- Codex 생성·검수 단계에는 GitHub 쓰기 토큰을 노출하지 않음. 승인 뒤 별도 단계에서만 `GITHUB_TOKEN`으로 푸시
+- GitHub에서 `GITHUB_TOKEN` 푸시한 변경은 push 이벤트를 자동 발생시키지 않으므로 **Pages 워크플로를 별도 `workflow_dispatch`** 호출
+- **주의:** 이는 OpenAI 서비스인 *Codex Cloud*의 내장 예약 기능이 아니라, **GitHub Actions가 클라우드에서 Codex CLI를 실행**하는 구조
+- **보안:** 인증 파일을 저장소에 커밋하지 않고, GitHub Actions Cache/Artifact에 백업하지 않음. `auth.json` 내용은 계정 비밀번호 수준의 민감 정보. 채팅이나 PR 댓글로 전달하지 않음
+- 무인 실행에 ChatGPT 로그인 세션을 쓰는 방식은 인증 토큰 만료·회전으로 재로그인 필요 가능. OpenAI가 공식 권장하는 CI 방식은 API 키 인증이지만, 이 구성은 사용자 요청대로 추가 API 키를 쓰지 않는 실험적 대안이므로 장기 연속 성공을 보장하지 않음
+
+## 최초 1회 — PC에서 클라우드 비밀값 등록 (이후 PC 꺼도 됨)
+
+PC의 **Codex CLI에 ChatGPT 계정으로 로그인**했다고 하셨으므로 다음은 GitHub 쪽 인증만 설정합니다.
+이미 설치된 GitHub CLI(`gh`)가 없다면 https://cli.github.com/ 에서 설치하세요.
+
+```powershell
+gh auth login
+Test-Path "$env:USERPROFILE\.codex\auth.json"
+```
+
+`True`일 때 아래 명령을 실행합니다. **비밀값을 화면에 출력하지 않고** 암호화된 GitHub Secrets로 전달합니다.
+
+```powershell
+Get-Content "$env:USERPROFILE\.codex\auth.json" -Raw | gh secret set CODEX_AUTH_JSON -R johnpark236-tech/ai-instructor-update-log
+Get-Content "$env:USERPROFILE\.codex\auth.json" -Raw | gh secret set CODEX_AUTH_JSON -R johnpark236-tech/mannal_news
+```
+
+GitHub CLI 설치가 어렵다면 두 저장소의 **Settings → Secrets and variables → Actions → New repository secret**에서 이름을 `CODEX_AUTH_JSON`으로 등록하세요. 원본 `auth.json`의 전체 JSON을 복사해 등록하며, **이 채팅에는 절대 붙여넣지 않습니다.**
+
+`Test-Path`가 `False`이면 토큰 파일이 OS 키 저장소에 있을 수 있으므로 내보내기 대신 파일 저장 방식으로 Codex CLI 재로그인을 검토하세요. 무리해서 인증 토큰을 추출하거나 공개하지 마세요.
+
+## 설치 후 수동 시험 — GitHub에서 한 번씩
+
+```powershell
+gh workflow run codex-cloud-hourly-news.yml -R johnpark236-tech/mannal_news --ref main
+gh workflow run codex-cloud-hourly-lesson.yml -R johnpark236-tech/ai-instructor-update-log --ref main
+```
+
+- Actions에서 두 작업이 `completed/success`인지 확인. **SKIPPED는 새 공식 발표가 없을 때 정상**
+- GitHub Pages 실제 게시 확인. 뉴스 `deploy.yml`, 교안 `pages.yml`
+- 최초 성공 뒤 기존 ChatGPT의 **만날신문 AI 기자 자동 발행** 작업을 일시정지해 **중복 발행 방지**
+- 롤디펜스 `WORK_GAME_AUTO`처럼 **GitHub 서버 러너가 동작**하므로 PC를 끄더라도 예약 실행은 계속됨. 단, GitHub 스케줄 지연·비활성화, 구독 한도 및 인증 갱신 문제는 있을 수 있음
+
+## 클라우드 작업 코드
+
+- 교안: `.github/workflows/codex-cloud-hourly-lesson.yml`
+- 뉴스: `mannal_news/.github/workflows/codex-cloud-hourly-news.yml`
+- 공통: `automation/codex/hourly_publish.py`, `prompts/news.md`, `prompts/lesson.md`, `prompts/review.md`, `review-schema.json`
+
+---
+
+<details>
+<summary>이전 로컬 Windows 작업 스케줄러 방식 (선택 사항 · 클라우드 운영에서는 불필요)</summary>
+
+## 이전 로컬 자동화 설명
 
 ## 운영 범위와 안전성
 
@@ -67,3 +130,6 @@ Get-Content "$HOME\.mannal-codex-hourly\runs.jsonl" -Tail 20
 - 자체 검수 3회 반려: **자동 게시 금지**, 사용자가 로컬 변경 파일을 검토·복구 후 재실행.
 - 첫 시간에 기사·교안이 반드시 1개씩 만들어지는 것은 아님. **공식 신기능이 없으면 생성하지 않는 규칙** 우선.
 - 모든 명령은 로그인된 사용자의 PC에서 동작하며, 이 문서와 도구 생성만으로 PC의 작업 스케줄러가 자동 설치되는 것은 아님.
+
+
+</details>
