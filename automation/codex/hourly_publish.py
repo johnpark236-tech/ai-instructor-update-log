@@ -213,7 +213,7 @@ def lock():
                 fcntl.flock(f, fcntl.LOCK_UN)
 
 
-def execute(kind, repo):
+def execute(kind, repo, *, no_push=False):
     cli = shutil.which("codex")
     if not cli:
         raise RuntimeError("Codex CLI not installed or not in PATH. Run codex login first.")
@@ -264,6 +264,11 @@ def execute(kind, repo):
             raise RuntimeError("Unexpected staged files")
         commit_message = f"content: hourly Codex {kind} {content_id}"
         git(repo, "commit", "-m", commit_message)
+        if no_push:
+            # GitHub Actions: the token is made available only in a separate
+            # trusted push/dispatch step AFTER all Codex invocations finish.
+            return {"status": "COMMITTED", "id": content_id, "files": files,
+                    "note": "Local commit validated; cloud workflow handles push/deploy"}
         git(repo, "push", "origin", "HEAD:main", timeout=180)
         return {"status": "PUSHED", "id": content_id, "files": files,
                 "note": "GitHub push confirmed; GitHub Pages deployment is asynchronous"}
@@ -276,6 +281,7 @@ def main():
     p.add_argument("--news-repo", type=pathlib.Path)
     p.add_argument("--lesson-repo", type=pathlib.Path)
     p.add_argument("--self-test", action="store_true")
+    p.add_argument("--no-push", action="store_true", help="GitHub runner: validate and commit; a separate privileged step pushes")
     args = p.parse_args()
     if args.self_test:
         assert SCHEMA.is_file()
@@ -289,7 +295,7 @@ def main():
     started = dt.datetime.now().astimezone().isoformat()
     try:
         with lock():
-            result = execute(args.kind, repo)
+            result = execute(args.kind, repo, no_push=args.no_push)
         result.update({"kind": args.kind, "time": started})
         HOME.mkdir(exist_ok=True, parents=True)
         with (HOME / "runs.jsonl").open("a", encoding="utf-8") as f:
