@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-23 11:12 KST",
+  "updated_at": "2026-10-24 01:24 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "chatgpt-2026-10-20-locked-chats",
+      "date": "2026-10-20",
+      "tool": "ChatGPT",
+      "company": "OpenAI",
+      "type": "update",
+      "title": "ChatGPT Locked chats — 계정 PIN으로 대화 목록·검색 노출 숨김",
+      "summary": "OpenAI는 2026-10-20 대화 잠금 기능을 공개. Free·Go·Plus·Pro 등 계정에 순차 배포 중. 잠금은 종단간 암호화나 보존 정책 변경이 아니며 PIN 재설정 시 잠긴 자료 삭제 주의.",
+      "source": {
+        "title": "OpenAI Help Center — ChatGPT release notes",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      "checked": "2026-10-24",
+      "lesson_id": "AI-2026-10-CAT09-008"
+    },
     {
       "id": "gemini-2026-10-20-small-business-tools",
       "date": "2026-10-20",
