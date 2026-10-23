@@ -31,7 +31,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Configuration test failed.' }
 
 $runner = Join-Path $project 'automation\codex\run-task.ps1'
 $userId = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
-$principal = New-ScheduledTaskPrincipal -UserId $userId -LogonType Interactive -RunLevel LeastPrivilege
+$principal = New-ScheduledTaskPrincipal -UserId $userId -LogonType Interactive -RunLevel Limited
 $settings = New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Minutes 55) -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 $now = Get-Date
 foreach ($item in @(
