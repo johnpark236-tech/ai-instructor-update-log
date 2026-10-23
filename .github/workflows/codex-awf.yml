@@ -11,6 +11,9 @@ on:
       - 'awf/codex-self-review-*'
     paths:
       - 'orchestrator/**'
+      - 'lessons/**'
+      - 'lessons.json'
+      - 'releases.json'
       - '.github/workflows/codex-awf.yml'
 permissions:
   contents: read
