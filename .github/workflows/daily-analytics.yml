@@ -1,0 +1,48 @@
+name: Daily lesson audience and download dashboard
+
+on:
+  schedule:
+    - cron: "20 15 * * *" # 00:20 Asia/Seoul, previous KST day
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Optional KST report date (YYYY-MM-DD); empty means yesterday"
+        required: false
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - "scripts/analytics_daily.py"
+      - ".github/workflows/daily-analytics.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate report script syntax
+        run: python -m py_compile scripts/analytics_daily.py
+      - name: Daily 교안 readership and download counts
+        env:
+          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+          GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
+          REPORT_DATE: ${{ inputs.report_date }}
+        run: |
+          if [ -n "$REPORT_DATE" ]; then
+            python scripts/analytics_daily.py --kind lesson --date "$REPORT_DATE"
+          else
+            python scripts/analytics_daily.py --kind lesson
+          fi
+      - name: Save daily content breakdown CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: lesson-analytics-${{ github.run_id }}
+          path: analytics-report/*.csv
+          if-no-files-found: ignore
+          retention-days: 30
