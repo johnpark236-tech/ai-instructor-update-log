@@ -1,0 +1,18 @@
+{
+  "max_reworks": 3,
+  "base_branch": "main",
+  "auto_merge": false,
+  "enable_schedule": false,
+  "protected_paths": [
+    ".github/workflows/pages.yml",
+    ".github/workflows/daily-ai-top10.yml",
+    ".github/workflows/telegram-notify.yml",
+    "orchestrator/",
+    "AGENTS.md"
+  ],
+  "test_commands": [
+    "python scripts/build_lessons_index.py",
+    "node --check scripts/build_downloads.js"
+  ],
+  "pages_url": "https://johnpark236-tech.github.io/ai-instructor-update-log/"
+}

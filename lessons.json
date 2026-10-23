@@ -1,7 +1,47 @@
 {
   "standard": "v2.3",
-  "count": 166,
+  "count": 167,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT11-002",
+      "version": "v1.0",
+      "created_at": "2026-10-23 11:12 KST",
+      "checked": "2026-10-23",
+      "review_by": "2027-01-23",
+      "title": "Gemini 소상공인 새 기능 — 우리 가게 브랜드 홍보물 기획하기",
+      "summary": "2026년 10월 20일 발표된 Gemini 비즈니스 허브·브랜드 스타일·앱 연결을 이해하고 가상 가게 홍보물 기획서 제작",
+      "tool": "Gemini",
+      "feature": "소상공인 비즈니스 허브·브랜드 스타일 유지·연결 앱·재무 시각화",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-20",
+      "categories": [
+        "CAT-11",
+        "CAT-04",
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-BIZ",
+        "JOB-MKT",
+        "JOB-OFF",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "가상 가게의 브랜드 원칙·고객별 홍보 문안·검수 체크리스트를 담은 한 장짜리 홍보 기획안",
+      "access": "freemium",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🏪",
+      "one_liner": "Gemini로 가게 홍보 기획"
+    },
     {
       "id": "AI-2026-10-CAT07-020",
       "version": "v1.0",

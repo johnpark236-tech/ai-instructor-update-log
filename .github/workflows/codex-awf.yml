@@ -1,0 +1,78 @@
+name: Codex AWF (pilot, no merge)
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'Small scoped content change request'
+        required: true
+        type: string
+  push:
+    branches:
+      - 'awf/codex-self-review-*'
+    paths:
+      - 'orchestrator/**'
+      - 'lessons/**'
+      - 'lessons.json'
+      - 'releases.json'
+      - '.github/workflows/codex-awf.yml'
+permissions:
+  contents: read
+concurrency:
+  group: codex-awf-json-index
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Unit tests
+        run: python -m unittest discover -s orchestrator/tests -v
+      - name: Validate lesson index
+        run: |
+          python scripts/build_lessons_index.py
+          git diff --exit-code -- lessons.json
+      - name: Check download builder syntax
+        run: node --check scripts/build_downloads.js
+  pilot:
+    if: github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Codex CLI
+        run: npm install --global @openai/codex
+      - name: Verify CLI
+        run: codex --version
+      - name: Require approved authentication method
+        run: |
+          echo 'Pilot deliberately blocks unattended Codex login until secure subscription credential handling is approved.'
+          exit 1
+      - name: Run developer and independent reviewer
+        if: success()
+        env:
+          AWF_TASK: ${{ inputs.task }}
+        run: python -m orchestrator.master --task "$AWF_TASK"
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: codex-awf-pilot-logs
+          path: awf-results/
+          if-no-files-found: warn
