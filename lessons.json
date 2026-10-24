@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 168,
+  "count": 169,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-015",
+      "version": "v1.0",
+      "created_at": "2026-10-24 15:19 KST",
+      "checked": "2026-10-24",
+      "review_by": "2027-01-24",
+      "title": "Gemini Nano Banana 2.1로 큰 글씨 가을 모임 초대장 만들고 말로 수정하기",
+      "summary": "2026-10-06 출시된 이미지 모델 업데이트 활용. 한국 개인 유료 계정에서 초대장 생성 → 배경만 수정 → 글자·날짜 검수 → 이미지 저장 실습",
+      "tool": "Gemini",
+      "feature": "Nano Banana 2.1 — 이미지 생성·대화형 편집 모델 업데이트, 시각 디자인·텍스트 렌더링·여러 차례 수정 시 대상 일관성 개선",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-06",
+      "categories": [
+        "CAT-04",
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-EDU",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "30분 내 가상 가을 모임 초대장 이미지 1장 + 수정 전후 비교 메모 3줄",
+      "access": "paid",
+      "total_minutes": 60,
+      "notice": "",
+      "emoji": "🍌",
+      "one_liner": "큰 글씨 초대장 만들고 말로 고치기"
+    },
     {
       "id": "AI-2026-10-CAT09-008",
       "version": "v1.0",

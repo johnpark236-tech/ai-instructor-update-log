@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-24 01:24 KST",
+  "updated_at": "2026-10-24 15:19 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "gemini-2026-10-06-nano-banana-2-1",
+      "date": "2026-10-06",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Nano Banana 2.1 — 이미지 생성·대화형 편집 모델 정식 출시",
+      "summary": "시각 품질·지시 준수·텍스트 표현·다회 수정 시 대상 일관성 개선. 2026-10-24 한국 공식 기능 페이지에서 Google AI Plus·Pro·Ultra 대상 확인. 모델 출시일과 한국 앱 적용일은 구분",
+      "source": {
+        "title": "Google AI for Developers — Gemini API 출시 노트, 2026-10-06",
+        "url": "https://ai.google.dev/gemini-api/docs/changelog?hl=ko"
+      },
+      "checked": "2026-10-24",
+      "lesson_id": "AI-2026-10-CAT04-015"
+    },
     {
       "id": "chatgpt-2026-10-20-locked-chats",
       "date": "2026-10-20",
