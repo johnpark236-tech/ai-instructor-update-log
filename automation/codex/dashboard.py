@@ -22,7 +22,10 @@ def build(repo, kind, recover=False):
     runs=api(f'repos/{repo}/actions/workflows/{workflow}/runs?per_page=100')['workflow_runs']
     recent=[r for r in runs if dt.datetime.fromisoformat(r['created_at'].replace('Z','+00:00')) >= now-dt.timedelta(hours=24)]
     artifacts=api(f'repos/{repo}/actions/artifacts?per_page=100')['artifacts']
-    by_run={a['workflow_run']['id']:a for a in artifacts if a['name'].startswith(kind+'-publishing-result-') and not a['expired']}
+    by_run={}
+    for a in sorted(artifacts, key=lambda x:x['created_at'], reverse=True):
+        if a['name'].startswith(kind+'-publishing-result-') and not a['expired'] and a.get('workflow_run'):
+            by_run.setdefault(a['workflow_run']['id'], a)
     rows=[]
     for r in recent:
         status='UNRECORDED'
