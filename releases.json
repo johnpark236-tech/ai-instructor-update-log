@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24 15:19 KST",
+  "updated_at": "2026-10-25 03:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3676,6 +3676,21 @@
       },
       "checked": "2026-10-20",
       "lesson_id": "AI-2026-10-CAT07-020"
+    },
+    {
+      "id": "grok-2026-10-22-bot-pages",
+      "date": "2026-10-22",
+      "tool": "Grok",
+      "company": "xAI",
+      "type": "update",
+      "title": "Grok Bot 페이지(Pages) — 보고서·메모·대시보드 만들기·Library 고정",
+      "summary": "대화로 표·차트·필터가 든 페이지 제작, 함께 수정 또는 Bot이 최신 유지, Library 고정(기기 간 동기화), 초대·팀·링크 공개 공유, Enterprise 미제공(v0.75.2)",
+      "source": {
+        "title": "xAI – Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      },
+      "checked": "2026-10-25",
+      "lesson_id": "AI-2026-10-CAT03-033"
     }
   ]
 }

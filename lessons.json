@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 169,
+  "count": 170,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-033",
+      "version": "v1.0",
+      "created_at": "2026-10-25 03:05 KST",
+      "checked": "2026-10-25",
+      "review_by": "2027-01-25",
+      "title": "Grok Bot에 말로 요청해 표·차트·필터가 들어간 강좌 신청 현황 페이지(Page)를 만들고, 대화로 고친 뒤 Library에 고정하고 안전하게 공유할 수 있음",
+      "summary": "Grok Bot 2026년 10월 업데이트(v0.75.2) — ① 대화로 보고서·메모·대시보드 페이지(Pages) 제작 + ② 함께 고치거나 Bot이 계속 최신으로 유지 + ③ Library 고정(Pinned, 기기 간 동기화) + ④ 공유 범위 선택(초대한 사람·팀·링크 있는 누구나)",
+      "tool": "Grok",
+      "feature": "Grok Bot 페이지(Pages) — 대화로 보고서·메모·대시보드·트래커 만들기(표·차트·필터·스위치), 데스크톱은 페이지 전체 화면 + 옆 채팅 패널로 함께 수정, Bot이 계속 최신 유지, 제목 클릭 이름 바꾸기, Library 고정(Pinned, 기기 간 동기화), 공유 범위(초대한 사람·팀·링크 있는 누구나, pages.grok.bot 주소), 공유 페이지 PDF 내려받기(v0.75.2, 순차 제공·Enterprise 미제공)",
+      "company": "xAI",
+      "type": "update",
+      "released": "2026-10-22",
+      "categories": [
+        "CAT-03",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-BIZ"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 강좌 신청 현황 대시보드 페이지 1개(표 + 막대 차트 + 강좌 필터) + ② 대화로 고친 수정본(제목·차트·요약 문구) + ③ Library 고정 + ④ 공유 범위 점검표(누가 볼 수 있나·개인정보 있나·링크 공개 여부)",
+      "access": "paid",
+      "total_minutes": 90,
+      "notice": "",
+      "emoji": "📊",
+      "one_liner": "말 한마디로 대시보드 페이지 완성"
+    },
     {
       "id": "AI-2026-10-CAT04-015",
       "version": "v1.0",
