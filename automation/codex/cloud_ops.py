@@ -77,9 +77,27 @@ def deploy(kind, repo):
         # Token is present only in this trusted step, after Codex has exited.
         import base64
         auth = base64.b64encode(('x-access-token:'+os.environ['GH_TOKEN']).encode()).decode()
-        subprocess.run(['git', '-c', 'http.https://github.com/.extraheader=AUTHORIZATION: basic '+auth,
-                        'push', 'origin', 'HEAD:main'], cwd=repo, check=True,
-                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        def push():
+            return subprocess.run(['git', '-c', 'http.https://github.com/.extraheader=AUTHORIZATION: basic '+auth,
+                                   'push', 'origin', 'HEAD:main'], cwd=repo,
+                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        pushed = push()
+        if pushed.returncode:
+            # Concurrent documentation/workflow updates may move main during Codex research.
+            # Rebase once, preserve every reviewed content byte, never force-push.
+            snapshots = {p: (repo/p).read_bytes() for p in result.get('files', [])}
+            if not snapshots:
+                raise RuntimeError('No validated content paths for safe retry')
+            subprocess.run(['git','fetch','origin','main'],cwd=repo,check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+            rebased = subprocess.run(['git','rebase','origin/main'],cwd=repo,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+            if rebased.returncode:
+                subprocess.run(['git','rebase','--abort'],cwd=repo,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                raise RuntimeError('Concurrent content conflict; retry next scheduled run')
+            if any((repo/p).read_bytes() != data for p,data in snapshots.items()):
+                raise RuntimeError('Reviewed content bytes changed during rebase')
+            result['commit'] = subprocess.check_output(['git','rev-parse','HEAD'],cwd=repo,text=True).strip()
+            if push().returncode:
+                raise RuntimeError('Push retry failed')
         result['status'] = 'PUSHED'
         save_result(result)
         requested = dt.datetime.now(dt.timezone.utc)
@@ -119,7 +137,7 @@ def deploy(kind, repo):
 def report(kind, output):
     result = read_result()
     # Explicit allowlist: never include raw CLI output or files from CODEX_HOME.
-    keys = ['status','reason','error','kind','time','ended_at','attempts','id','commit','url','run_url','deployment_run_url','verified_at','next_action']
+    keys = ['status','reason','error','kind','time','ended_at','attempts','id','commit','url','run_url','deployment_run_url','verified_at','next_action','sources']
     result = {k: result[k] for k in keys if k in result}
     result['kind'] = kind
     output.mkdir(parents=True, exist_ok=True)
