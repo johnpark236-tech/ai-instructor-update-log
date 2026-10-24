@@ -60,3 +60,21 @@
 로컬 회귀 테스트·교안 index 검증·공통 퀴즈 검사·뉴스 TypeScript 검사·Vite build를 실시한다. 현재 수정으로 실서비스의 신규 콘텐츠가 생성·배포되었다는 뜻은 아니다. 신규 코드의 클라우드 실행 결과를 확인한 뒤 완료 판정한다.
 
 남은 과제: 구독 한도 소진→회복 실증, 신규 스키마로 Codex 생성·독립 검수·배포 통합 실증, 실제 휴대폰 UI 확인, 통계 계정 연결, 기존 ChatGPT 뉴스 예약 통합 승인, 외부 스케줄러 필요성 판단, 장기 이력 보관.
+
+
+## 2026-10-25 02:06 KST 통합 확인 결과
+
+- 뉴스 신규 기사 `ai-auto-20261025-google-tb-screening` 생성 → 스키마 검사 → 독립 Codex 검수 APPROVE → 커밋 → 안전한 rebase 후 main 업로드 확인. 원격 콘텐츠 커밋 ac37a768e06f9ff98ba325bd25466082d1b0db89. 기존 7건 보존, 총 8건.
+- 실행 40113352808의 첫 시도는 동시 main 변경으로 업로드 실패, 두 번째는 공식 원문 접근 장애로 FAILED_SEARCH, 세 번째는 기사·SVG 작성 및 업로드 성공 후 Pages 2차 배포 지연으로 FAILED_DEPLOY를 기록했다. 각 시도는 별개이며 실패를 숨기지 않는다.
+- 이후 실제 사이트에서 새 기사 객체 전체와 SVG 원문 바이트의 일치를 확인했다. 운영 대시보드 실행 40114468843의 dashboard.json은 해당 기록을 실제 URL 확인 후 PUBLISHED로 재판정했다. 당시 최근 24시간 워크플로 기록 7회, PUBLISHED 1회, 과거 결과 파일 미기록 6회다. 과거 6회는 로그를 별도 조사한 결과이며 자동 집계에서는 추측하지 않는다.
+- 원래 Actions 실행은 failure로 남아 있다. 실제 게시 PUBLISHED와 Actions 결과를 별도로 표시하는 의도된 동작이다. 일반적인 Pages 대기 시간을 5분으로 늘리고, 이후 대시보드에서 지연 반영을 다시 확인한다.
+- 교안 실행 40113352163은 기존 후보 중복과 신기능 국내 제공 근거 부족을 구체적으로 기록해 REJECTED_AVAILABILITY로 종료했다. 허위 교안을 생성하지 않았으며 169개 보존. 마지막 교안 발행은 10-24 15:20경의 AI-2026-10-CAT04-015다.
+- 로컬 테스트 19개 통과. Windows/Linux 클라우드 검사 및 뉴스 설정 검사가 통과했고 제목 줄바꿈 수정의 배포 JS 반영을 확인했다. 현재 기사 JSON·SVG와 기존 교안 PPTX/TXT 검증은 했으나 휴대폰 육안·클릭 검증은 하지 않았다.
+- 통계 미설정 및 기존 ChatGPT 뉴스 예약 중복 경로는 여전히 남아 있다. 외부 통계 계정 생성·중요 예약 중단은 인수인계 문서상 사전 승인 대상이다.
+
+실행 증거:
+- 뉴스 발행: https://github.com/johnpark236-tech/mannal_news/actions/runs/40113352808
+- 뉴스 운영 대시보드: https://github.com/johnpark236-tech/mannal_news/actions/runs/40114468843
+- 새 기사: https://mannalkorean.com/#/article/ai-auto-20261025-google-tb-screening
+- 교안 미발행 사유: https://github.com/johnpark236-tech/ai-instructor-update-log/actions/runs/40113352163
+- 변경 PR: https://github.com/johnpark236-tech/ai-instructor-update-log/pull/7 및 https://github.com/johnpark236-tech/mannal_news/pull/1 (모두 main 병합)
