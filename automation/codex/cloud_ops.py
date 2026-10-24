@@ -115,7 +115,7 @@ def deploy(kind, repo):
                         raise RuntimeError('Pages workflow failed: '+str(run['conclusion']))
                     # A successful workflow alone is insufficient. Check live bytes and downloads.
                     last = None
-                    for _ in range(6):
+                    for _ in range(30):
                         try:
                             result['url'] = verify_live(kind, repo, result['id'])
                             result.update(status='PUBLISHED', verified_at=dt.datetime.now(dt.timezone.utc).isoformat())
