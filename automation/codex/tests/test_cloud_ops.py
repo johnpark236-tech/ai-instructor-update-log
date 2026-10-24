@@ -21,6 +21,19 @@ class CloudOpsTests(unittest.TestCase):
             with patch.object(ops,'fetch',side_effect=[json.dumps([a]).encode(),b'wrong']):
                 with self.assertRaisesRegex(ValueError,'SVG'):ops.verify_live('news',root,a['id'])
 
+    def test_lesson_publication_requires_all_downloads(self):
+        import io, zipfile
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);(root/'lessons').mkdir()
+            lesson={'id':'AI-test'};(root/'lessons/AI-test.json').write_text(json.dumps(lesson))
+            buf=io.BytesIO()
+            with zipfile.ZipFile(buf,'w') as z:z.writestr('ppt/presentation.xml','<presentation/>')
+            good=[json.dumps(lesson).encode(),b'{"lessons":[{"id":"AI-test"}]}',buf.getvalue(),buf.getvalue(),b'prompt text',b'<html/>']
+            with patch.object(ops,'fetch',side_effect=good):
+                self.assertTrue(ops.verify_live('lesson',root,'AI-test').endswith('lessons.html?id=AI-test'))
+            with patch.object(ops,'fetch',side_effect=good[:2]+[b'not a pptx']):
+                with self.assertRaises(zipfile.BadZipFile):ops.verify_live('lesson',root,'AI-test')
+
     def test_nonapproved_results_never_push(self):
         for status in ['FAILED_SEARCH','RATE_LIMITED','SKIPPED_NO_NEWS','REJECTED_FACT_CHECK']:
             with patch.object(ops,'read_result',return_value={'status':status}),patch.object(ops.subprocess,'run') as run:
@@ -31,6 +44,20 @@ class CloudOpsTests(unittest.TestCase):
             with self.assertRaises(SystemExit):ops.deploy('news',Path('.'))
             result=save.call_args.args[0]
             self.assertEqual(result['status'],'FAILED_DEPLOY');self.assertNotIn('secret-test-token',json.dumps(result))
+
+    def test_concurrent_noncontent_main_update_rebases_once_and_verifies_new_sha(self):
+        import datetime as dt
+        import subprocess
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);(root/'article.json').write_bytes(b'reviewed content')
+            result={'status':'COMMITTED','id':'x','commit':'old','files':['article.json']}
+            run={'id':1,'head_sha':'rebased','created_at':dt.datetime.now(dt.timezone.utc).isoformat(),'status':'completed','conclusion':'success','html_url':'https://github.com/example/run'}
+            responses=[subprocess.CompletedProcess([],code,b'',b'') for code in [1,0,0,0]]
+            with patch.object(ops,'read_result',return_value=result),patch.dict(ops.os.environ,{'GITHUB_REPOSITORY':'owner/repo','GH_TOKEN':'test-token'}),patch.object(ops.subprocess,'run',side_effect=responses) as commands,patch.object(ops.subprocess,'check_output',return_value='rebased'),patch.object(ops,'gh',side_effect=['',json.dumps({'workflow_runs':[run]})]),patch.object(ops,'verify_live',return_value='https://example/article'),patch.object(ops,'save_result') as save:
+                ops.deploy('news',root)
+                self.assertEqual(save.call_args.args[0]['status'],'PUBLISHED')
+                self.assertEqual(save.call_args.args[0]['commit'],'rebased')
+                self.assertFalse(any('--force' in call.args[0] for call in commands.call_args_list))
 
     def test_report_does_not_upload_unapproved_fields(self):
         with tempfile.TemporaryDirectory() as d,patch.object(ops,'read_result',return_value={'status':'RATE_LIMITED','token':'secret','raw_cli':'secret'}):
