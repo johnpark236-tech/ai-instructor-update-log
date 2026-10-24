@@ -1,0 +1,28 @@
+name: Publishing operations dashboard
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Cloud Codex CLI - hourly AI lesson"]
+    types: [completed]
+permissions:
+  contents: read
+  actions: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Summarize runs, publication outcomes and observed schedule gaps
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python automation/codex/dashboard.py --kind lesson --repo ${{ github.repository }} --recover
+      - uses: actions/upload-artifact@v4
+        with:
+          name: publishing-dashboard-${{ github.run_id }}
+          path: ops-dashboard/
+          retention-days: 30

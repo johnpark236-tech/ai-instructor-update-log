@@ -1,5 +1,6 @@
 """Fast regression tests for fail-closed hourly publishing without credentials or network."""
 import importlib.util
+import json
 import pathlib
 import subprocess
 import tempfile
@@ -33,14 +34,16 @@ class HourlyPublisherRegressionTests(unittest.TestCase):
                   patch.object(engine.shutil, "which", return_value="codex"),
                   patch.object(engine, "preflight"),
                   patch.object(engine, "codex"),
+                  patch.object(engine, "generation_result", side_effect=[{"status":"GENERATED","reason":"ok"},{"status":"SKIPPED_NO_NEWS","reason":"none"}]),
                   patch.object(engine, "permitted"),
                   patch.object(engine, "changed_files", side_effect=[
                       ["public/data/ai-news.json"], [], ["public/data/ai-news.json"]]),
                   patch.object(engine, "validate_news", side_effect=RuntimeError("Schema field invalid"))):
-                with self.assertRaisesRegex(RuntimeError, "Schema field invalid"):
-                    engine.execute("news", p, no_push=True)
+                result = engine.execute("news", p, no_push=True)
+                self.assertEqual(result["status"], "REJECTED_SCHEMA")
+                self.assertIn("Schema field invalid", result["reason"])
 
-    def test_first_attempt_no_new_information_is_normal_skip(self):
+    def test_no_file_changes_without_report_is_generation_failure(self):
         with tempfile.TemporaryDirectory() as temp:
             p = pathlib.Path(temp)
             with (patch.object(engine, "HOME", p),
@@ -49,14 +52,14 @@ class HourlyPublisherRegressionTests(unittest.TestCase):
                   patch.object(engine, "codex"),
                   patch.object(engine, "changed_files", return_value=[])):
                 result = engine.execute("news", p, no_push=True)
-                self.assertEqual(result["status"], "SKIPPED")
+                self.assertEqual(result["status"], "FAILED_GENERATION")
 
 
     def test_reject_new_lesson_pricing_links_as_strings(self):
         lesson_id = "AI-2026-10-CAT09-009"
         old = {"lessons": [], "count": 0}
         new = {"lessons": [{"id": lesson_id}], "count": 1}
-        data = {"id": lesson_id, "wrap": {"quiz": [{}, {}, {}]},
+        data = {"id": lesson_id, "wrap": {"quiz": [{"options":["a","b","c","d"],"answer":0,"explain":"why"}]*3},
                 "verification": [], "pricing": {"sources": ["https://example.com"]}}
         def original(_repo, p):
             return old if p == "lessons.json" else {"items": []}
@@ -150,10 +153,30 @@ class HourlyPublisherRegressionTests(unittest.TestCase):
                   patch.object(engine, "changed_files", return_value=["public/data/ai-news.json"]),
                   patch.object(engine, "permitted"),
                   patch.object(engine, "validate_news", return_value="ai-auto-test"),
+                  patch.object(engine, "generation_result", return_value={"status":"GENERATED","reason":"ok"}),
+                  patch.object(engine.hashlib, "sha256"),
+                  patch.object(pathlib.Path, "read_bytes", return_value=b"test"),
                   patch.object(engine, "git") as git_mock):
                 result = engine.execute("news", root, no_push=True)
                 self.assertEqual(result["status"], "RATE_LIMITED")
                 git_mock.assert_not_called()
+
+
+
+    def test_generation_reports_distinguish_no_news_search_and_duplicates(self):
+        with tempfile.TemporaryDirectory() as directory:
+            p = pathlib.Path(directory)/"report.json"
+            for status in ["SKIPPED_NO_NEWS", "SKIPPED_DUPLICATE", "FAILED_SEARCH", "REJECTED_AVAILABILITY"]:
+                p.write_text(json.dumps({"status":status,"reason":"checked official source","sources":["https://openai.com/news/"]}))
+                self.assertEqual(engine.generation_result(p, [])["status"],status)
+            p.write_text(json.dumps({"status":"SKIPPED_NO_NEWS","reason":"none","sources":[]}))
+            self.assertEqual(engine.generation_result(p, [])["status"], "FAILED_SEARCH")
+            p.write_text(json.dumps({"status":"GENERATED","reason":"done","sources":[]}))
+            self.assertEqual(engine.generation_result(p, [])["status"], "FAILED_GENERATION")
+
+    def test_authentication_distinct_from_quota(self):
+        self.assertEqual(engine.failure_status(RuntimeError("401 unauthorized")), "AUTH_FAILED")
+        self.assertEqual(engine.failure_status(engine.CodexQuotaExceeded()), "RATE_LIMITED")
 
 
 if __name__ == "__main__":

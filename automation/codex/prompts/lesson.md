@@ -43,3 +43,6 @@
 6. 교안의 무료/유료 및 단계별 실제 UI 제공 범위를 명확히 표시합니다. 완성 후 **커밋하지 않고 종료**합니다.
 
 새로 만들 수 있는 검증된 주제가 없다면 무리해서 채우지 말고 **무변경 SKIP**합니다.
+
+## 필수 최종 응답
+마지막 응답은 지정된 JSON 스키마만 사용한다. 파일 작성 완료는 GENERATED, 공식 원문 검색·열람 성공 후 적격 신규 후보 없음은 SKIPPED_NO_NEWS, 후보가 모두 기존 자료와 중복이면 SKIPPED_DUPLICATE, 검색/원문 접근 장애는 FAILED_SEARCH, 실습 이용 조건 근거 부족은 REJECTED_AVAILABILITY, 파일 작성 실패는 FAILED_GENERATION이다. reason에는 구체적인 이유를 쓰고 sources에는 실제 열람한 공식 HTTPS URL만 기록한다. 검색 실패를 신규 소식 없음으로 보고하지 않는다. 무변경 종료도 이 JSON을 반드시 출력한다.

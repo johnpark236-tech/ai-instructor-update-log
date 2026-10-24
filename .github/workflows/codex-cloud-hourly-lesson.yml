@@ -18,7 +18,7 @@ jobs:
     # Never run subscription credentials for forked pull requests.
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 75
     steps:
       - name: Checkout trusted main, without GitHub write token
         uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
 
       - name: Install Codex CLI
         run: |
-          npm install --global @openai/codex
+          npm install --global @openai/codex@0.164.0
           codex --version
 
       - name: Prepare Linux workspace-write sandbox
@@ -67,42 +67,22 @@ jobs:
           python -X utf8 automation/codex/hourly_publish.py \
             --kind lesson --news-repo . --lesson-repo . --no-push
 
-      - name: Show Codex hourly status including quota pause
-        if: success()
-        shell: bash
-        run: |
-          python - <<'PY'
-          import json, pathlib, os
-          log = pathlib.Path.home()/'.mannal-codex-hourly'/'runs.jsonl'
-          result = json.loads(log.read_text(encoding='utf-8').splitlines()[-1])
-          status = result['status']
-          message = {
-            'RATE_LIMITED': '⏸ Codex 구독 한도 소진 — 이번 회차 게시 중단, 다음 매시간 예약에 자동 재시도',
-            'SKIPPED': 'ℹ 검증된 신규 주제 없음 — 게시 생략, 다음 예약 정상 유지',
-            'COMMITTED': '✅ 자체 검수 승인 및 커밋 — 게시 단계로 진행',
-            'PUSHED': '✅ GitHub 업로드',
-          }.get(status, status)
-          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
-              f.write('## AI 교안 발행 실행 결과\\n\\n' + message + '\\n\\n')
-          print('::notice::' + message)
-          PY
-
-      - name: Privileged Git push and explicit Pages deployment trigger
-        shell: bash
+      - name: Push approved commit and verify matching Pages deployment
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          if [ "$(git rev-list --count origin/main..HEAD)" -eq 0 ]; then
-            echo "No verified new lesson. No commit to push."
-            exit 0
-          fi
-          # GITHUB_TOKEN-made pushes do NOT fire further push-triggered workflows.
-          # Explicitly dispatch Pages after publishing.
-          basic="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
-          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $basic" push origin HEAD:main
-          gh workflow run pages.yml --ref main
-          echo "Published new lesson commit and requested GitHub Pages deployment."
+        run: python automation/codex/cloud_ops.py deploy --kind lesson --repo .
+
+      - name: Always report actual publishing outcome
+        if: always()
+        run: python automation/codex/cloud_ops.py report --kind lesson --output ops-report
+
+      - name: Retain sanitized operation result only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lesson-publishing-result-${{ github.run_id }}
+          path: ops-report/
+          retention-days: 30
 
       - name: Always remove ephemeral CLI login
         if: always()
