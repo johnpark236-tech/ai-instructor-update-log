@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 170,
+  "count": 171,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-029",
+      "version": "v1.1",
+      "created_at": "2026-10-25 06:08 KST",
+      "checked": "2026-10-25",
+      "review_by": "2027-01-25",
+      "title": "Gemini 대화에서 노트북을 만들고 자료를 고쳐 동아리 준비표 완성하기",
+      "summary": "2026-10-23 Gemini Notebook 연결 기능 발표 — 일반 대화에서 @호출로 노트북 생성·자료 추가·수정·질문 수행, 준비표의 날짜·수량은 원문과 대조",
+      "tool": "Gemini",
+      "feature": "Gemini Notebook Connected App — 일반 대화에서 @Gemini Notebook 호출로 노트북·소스 생성 및 수정·목록 조회·질문",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-23",
+      "categories": [
+        "CAT-08",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-EDU",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 대화로 만든 동아리 실습 노트북 1개 + ② 준비 메모 소스 1개 + ③ 원문과 대조한 준비표 4행·수정 확인 메모 1줄(28분)",
+      "access": "free",
+      "total_minutes": 52,
+      "notice": "⚠️ PC 웹 연결 앱 실습의 Keep Activity 켜짐 조건 보완 — 설정 변경 미동의 시 수동 대체 실습",
+      "emoji": "📒",
+      "one_liner": "대화로 자료함 관리하고 준비표 완성"
+    },
     {
       "id": "AI-2026-10-CAT03-033",
       "version": "v1.0",
