@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Read GitHub runs and sanitized artifacts; never infer publication from Success."""
 import argparse
+import base64
+import tempfile
+from cloud_ops import verify_live
 import collections
 import datetime as dt
 import io
@@ -14,6 +17,30 @@ import zipfile
 def api(path, binary=False):
     data=subprocess.check_output(['gh','api',path], stderr=subprocess.PIPE)
     return data if binary else json.loads(data)
+
+
+
+def reconcile_deployment(repo, kind, data):
+    """Recheck a committed candidate after asynchronous Pages propagation."""
+    if data.get('status') != 'FAILED_DEPLOY' or not data.get('commit') or not data.get('id'):
+        return False
+    with tempfile.TemporaryDirectory() as directory:
+        root=Path(directory)
+        def copy(path):
+            blob=api(f"repos/{repo}/contents/{path}?ref={data['commit']}")
+            local=root/path
+            local.parent.mkdir(parents=True,exist_ok=True)
+            local.write_bytes(base64.b64decode(blob['content']))
+        if kind=='news':
+            copy('public/data/ai-news.json')
+            article=next(x for x in json.loads((root/'public/data/ai-news.json').read_text()) if x['id']==data['id'])
+            copy('public'+article['image'])
+        else:
+            copy('lessons/'+data['id']+'.json')
+        data['url']=verify_live(kind,root,data['id'])
+        data['status']='PUBLISHED'
+        data['reconciled_after_deployment_delay']=True
+        return True
 
 
 def build(repo, kind, recover=False):
@@ -35,7 +62,11 @@ def build(repo, kind, recover=False):
                 blob=api(f"repos/{repo}/actions/artifacts/{by_run[r['id']]['id']}/zip",True)
                 with zipfile.ZipFile(io.BytesIO(blob)) as z:
                     data=json.loads(z.read('result.json'))
-                status=data['status'];detail=data.get('reason',data.get('url',''))
+                try:
+                    reconcile_deployment(repo, kind, data)
+                except Exception:
+                    pass  # Keep original failure until live bytes are verifiable.
+                status=data['status'];detail=data.get('url',data.get('reason',''))
             except Exception:
                 detail='Result artifact could not be read; inspect run'
         rows.append({'time':r['created_at'],'actions':r['conclusion'] or r['status'],'status':status,'detail':detail,'url':r['html_url']})
