@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import contextlib
+import hashlib
 import datetime as dt
 import json
 import os
@@ -78,6 +79,39 @@ def codex_quota_wait(kind, phase, detail):
         "next_action": "Automatically retry at next hourly GitHub Actions schedule",
         "draft_discarded": True,
     }
+
+
+def generation_result(path, files):
+    """A no-op is not evidence that research succeeded."""
+    try:
+        result = json.loads(path.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return {"status": "FAILED_GENERATION", "reason": "Missing or invalid structured generation report"}
+    statuses = {"GENERATED", "SKIPPED_NO_NEWS", "SKIPPED_DUPLICATE", "FAILED_SEARCH",
+                "REJECTED_AVAILABILITY", "FAILED_GENERATION"}
+    status = result.get("status")
+    reason = result.get("reason")
+    sources = result.get("sources")
+    if status not in statuses or not isinstance(reason, str) or not reason.strip() or not isinstance(sources, list):
+        return {"status": "FAILED_GENERATION", "reason": "Invalid generation report fields"}
+    if (status == "GENERATED") != bool(files):
+        return {"status": "FAILED_GENERATION", "reason": "Generation report disagrees with file changes"}
+    if status in {"SKIPPED_NO_NEWS", "SKIPPED_DUPLICATE"} and not sources:
+        return {"status": "FAILED_SEARCH", "reason": "No successfully checked official sources recorded"}
+    if any(not isinstance(url, str) or urlparse(url).scheme != "https" for url in sources):
+        return {"status": "FAILED_GENERATION", "reason": "Invalid research source URLs"}
+    return {"status": status, "reason": safe_detail(reason), "sources": sources}
+
+
+def failure_status(exc):
+    text = str(exc).lower()
+    if isinstance(exc, CodexQuotaExceeded):
+        return "RATE_LIMITED"
+    if any(x in text for x in ("unauthorized", "refresh_token", "401", "not logged in", "authentication")):
+        return "AUTH_FAILED"
+    if isinstance(exc, subprocess.TimeoutExpired):
+        return "FAILED_GENERATION"
+    return "UNKNOWN_ERROR"
 
 
 def git(repo, *args, timeout=90):
@@ -190,6 +224,11 @@ def validate_lesson(repo, files):
     lesson = current_json(repo, f)
     if lesson.get("id") != lesson_id or len(lesson.get("wrap", {}).get("quiz", [])) != 3:
         raise RuntimeError("Lesson id or exact three questions invalid")
+    for question in lesson["wrap"]["quiz"]:
+        if (not isinstance(question, dict) or len(question.get("options", [])) != 4
+                or type(question.get("answer")) is not int or question["answer"] not in range(4)
+                or not question.get("explain")):
+            raise RuntimeError("Quiz requires four options, answer 0..3 and explanation")
     if not isinstance(lesson.get("verification"), list):
         raise RuntimeError("verification must be an array to avoid loading freeze")
     # Keep new lesson hyperlinks compatible with lessons.html, which reads
@@ -250,14 +289,13 @@ def discard_unverifiable_lesson(repo, files, content_id):
         raise RuntimeError("Candidate reset incomplete; stop to avoid modifying unrelated work")
 
 
-def codex(cli, repo, prompt, output_file, *, review=False, timeout=2200):
+def codex(cli, repo, prompt, output_file, *, review=False, timeout=600):
     argv = [
         cli, "--search", "exec", "--ephemeral",
         "--sandbox", "read-only" if review else "workspace-write",
         "--output-last-message", str(output_file),
     ]
-    if review:
-        argv += ["--output-schema", str(SCHEMA)]
+    argv += ["--output-schema", str(SCHEMA if review else AUTOMATION / "generation-schema.json")]
     argv += ["-"]
     try:
         output = run(argv, repo, input_text=prompt, timeout=timeout)
@@ -309,13 +347,14 @@ def execute(kind, repo, *, no_push=False):
     if not cli:
         raise RuntimeError("Codex CLI not installed or not in PATH. Run codex login first.")
     preflight(repo, kind, cli)
-    timestamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
+    timestamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
     session_dir = HOME / f"{kind}-{timestamp}"
     session_dir.mkdir(parents=True, exist_ok=True)
     prompt_base = (AUTOMATION / "prompts" / f"{kind}.md").read_text(encoding="utf-8")
     reviewer_base = (AUTOMATION / "prompts" / "review.md").read_text(encoding="utf-8")
     feedback = ""
     progress(kind, "start", repo=repo.name)
+    last_rejection = "FAILED_GENERATION"
     for attempt in range(1, 4):
         progress(kind, "draft_start", attempt=attempt)
         dev_prompt = prompt_base + (
@@ -330,14 +369,13 @@ def execute(kind, repo, *, no_push=False):
             return codex_quota_wait(kind, "draft", str(exc))
         files = changed_files(repo)
         progress(kind, "draft_result", attempt=attempt, changed=",".join(files) or "(none)")
-        if not files:
-            if attempt == 1 or (
-                kind == "lesson" and feedback.startswith("이전 주제 국내 제공/라이선스 근거 미확인:")):
-                progress(kind, "no_content", reason="No new verifiable official source")
-                return {"status": "SKIPPED", "reason": "no new verified source"}
-            progress(kind, "repair_no_changes", attempt=attempt, reason=feedback or "No file changes")
-            feedback = feedback or "수정된 파일이 없음. 기존 반려사항을 실제 파일에 반영하거나 검증할 자료가 없다면 무변경으로 명시"
-            continue
+        report = generation_result(session_dir / f"draft-{attempt}.txt", files)
+        progress(kind, "generation_report", attempt=attempt, status=report["status"], reason=report["reason"])
+        if report["status"] != "GENERATED":
+            # A repair cannot erase a previous rejection by claiming no news.
+            if feedback and report["status"].startswith("SKIPPED"):
+                return {"status": last_rejection, "reason": safe_detail(feedback), "attempts": attempt}
+            return {**report, "attempts": attempt}
         permitted(kind, files, repo)
         if kind == "lesson":
             # Derive lesson index deterministically from validated lesson sources.
@@ -349,6 +387,7 @@ def execute(kind, repo, *, no_push=False):
                 permitted(kind, files, repo)
             except Exception as exc:
                 feedback = str(exc)
+                last_rejection = "REJECTED_SCHEMA"
                 progress(kind, "index_rejected", attempt=attempt, reason=feedback)
                 continue
         try:
@@ -356,8 +395,10 @@ def execute(kind, repo, *, no_push=False):
             progress(kind, "schema_pass", attempt=attempt, content_id=content_id)
         except Exception as exc:
             feedback = str(exc)
+            last_rejection = "REJECTED_SCHEMA"
             progress(kind, "schema_rejected", attempt=attempt, reason=feedback)
             continue
+        reviewed_bytes = {p: hashlib.sha256((repo / p).read_bytes()).hexdigest() for p in files}
         review_prompt = (
             reviewer_base + f"\n\n검수 작업 유형: {kind}\n새 콘텐츠: {content_id}\n"
             "다음 변경 경로만 검토:\n" + "\n".join(files) +
@@ -366,16 +407,18 @@ def execute(kind, repo, *, no_push=False):
             "git status --short의 새 파일도 직접 열어 검토하라.")
         try:
             codex(cli, repo, review_prompt, session_dir / f"review-{attempt}.json",
-                  review=True, timeout=1500)
+                  review=True, timeout=400)
         except CodexQuotaExceeded as exc:
             return codex_quota_wait(kind, "review", str(exc))
         try:
             result = json.loads((session_dir / f"review-{attempt}.json").read_text(encoding="utf-8"))
         except (ValueError, FileNotFoundError) as exc:
+            last_rejection = "FAILED_GENERATION"
             feedback = "검수자가 올바른 JSON 형식으로 승인 또는 반려 사유를 출력하지 못함"
             progress(kind, "review_invalid_output", attempt=attempt, reason=feedback)
             continue
         if result.get("verdict") != "APPROVE":
+            last_rejection = "REJECTED_FACT_CHECK"
             feedback = "\n".join(str(x) for x in result.get("reasons", [])) or "Reviewer rejected without reasons"
             progress(kind, "review_rejected", attempt=attempt, reason=feedback)
             # A fundamental lack of Korean rollout/license evidence cannot be
@@ -396,7 +439,7 @@ def execute(kind, repo, *, no_push=False):
             continue
         progress(kind, "review_approved", attempt=attempt, content_id=content_id)
         # Revalidate after read-only review in case of unexpected modifications.
-        if files != changed_files(repo):
+        if files != changed_files(repo) or reviewed_bytes != {p: hashlib.sha256((repo / p).read_bytes()).hexdigest() for p in files}:
             raise RuntimeError("Files changed during review")
         permitted(kind, files, repo)
         validate_news(repo, files) if kind == "news" else validate_lesson(repo, files)
@@ -416,12 +459,13 @@ def execute(kind, repo, *, no_push=False):
             # GitHub Actions: the token is made available only in a separate
             # trusted push/dispatch step AFTER all Codex invocations finish.
             return {"status": "COMMITTED", "id": content_id, "files": files,
+                    "commit": git(repo, "rev-parse", "HEAD"), "attempts": attempt,
                     "note": "Local commit validated; cloud workflow handles push/deploy"}
         git(repo, "push", "origin", "HEAD:main", timeout=180)
         progress(kind, "git_push_completed", content_id=content_id)
         return {"status": "PUSHED", "id": content_id, "files": files,
                 "note": "GitHub push confirmed; GitHub Pages deployment is asynchronous"}
-    raise RuntimeError("Codex self-review / schema checks did not pass after three attempts: " + safe_detail(feedback))
+    return {"status": last_rejection, "reason": safe_detail(feedback), "attempts": 3}
 
 
 def main():
@@ -445,18 +489,21 @@ def main():
     try:
         with lock():
             result = execute(args.kind, repo, no_push=args.no_push)
-        result.update({"kind": args.kind, "time": started})
+        result.update({"kind": args.kind, "time": started, "ended_at": dt.datetime.now().astimezone().isoformat(),
+                       "run_url": os.environ.get("GITHUB_SERVER_URL", "https://github.com") + "/" + os.environ.get("GITHUB_REPOSITORY", "") + "/actions/runs/" + os.environ.get("GITHUB_RUN_ID", "")})
         HOME.mkdir(exist_ok=True, parents=True)
         with (HOME / "runs.jsonl").open("a", encoding="utf-8") as f:
             f.write(json.dumps(result, ensure_ascii=False) + "\n")
         print(json.dumps(result, ensure_ascii=False))
+        if result["status"].startswith(("FAILED", "REJECTED", "AUTH_", "UNKNOWN")):
+            sys.exit(1)
     except Exception as exc:
-        result = {"status": "FAILED", "kind": args.kind, "time": started, "error": str(exc)}
+        result = {"status": failure_status(exc), "kind": args.kind, "time": started, "error": safe_detail(exc)}
         HOME.mkdir(exist_ok=True, parents=True)
         with (HOME / "runs.jsonl").open("a", encoding="utf-8") as f:
             f.write(json.dumps(result, ensure_ascii=False) + "\n")
         print(json.dumps(result, ensure_ascii=False), file=sys.stderr)
-        traceback.print_exc()
+        # Do not emit unsanitized subprocess output or authentication diagnostics.
         sys.exit(1)
 
 

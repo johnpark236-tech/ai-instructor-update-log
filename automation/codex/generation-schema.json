@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "GENERATED",
+        "SKIPPED_NO_NEWS",
+        "SKIPPED_DUPLICATE",
+        "FAILED_SEARCH",
+        "REJECTED_AVAILABILITY",
+        "FAILED_GENERATION"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "status",
+    "reason",
+    "sources"
+  ]
+}
