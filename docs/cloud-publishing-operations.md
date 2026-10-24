@@ -25,7 +25,7 @@
 
 교안 사이트 `analytics-config.js`는 빈 사이트 코드다. 통계 수집은 미설정이며 과거 수치를 소급 생성하지 않는다. 뉴스 통계 설정은 빌드 환경과 daily-analytics 실행을 별도 확인해야 한다.
 
-기존 ChatGPT 예약 ‘만날신문 AI 기자 자동 발행’이 활성 상태다. 중복 경로임을 확인했으나 이 문서의 중요한 자동화 중단 사전 승인 조건 때문에 이번 변경에서는 중지하지 않았다.
+초기 점검에서는 기존 ChatGPT 예약 ‘만날신문 AI 기자 자동 발행’이 활성 상태였다. 이후 2026-10-25 02:41 KST 사용자 명시적 승인에 따라 중지했고, 홈페이지 발행 경로를 GitHub Actions의 Codex CLI로 통합했다.
 
 ## 상태와 결과
 
@@ -78,3 +78,12 @@
 - 새 기사: https://mannalkorean.com/#/article/ai-auto-20261025-google-tb-screening
 - 교안 미발행 사유: https://github.com/johnpark236-tech/ai-instructor-update-log/actions/runs/40113352163
 - 변경 PR: https://github.com/johnpark236-tech/ai-instructor-update-log/pull/7 및 https://github.com/johnpark236-tech/mannal_news/pull/1 (모두 main 병합)
+
+
+## 2026-10-25 02:41 KST 발행 예약 통합 완료
+
+- 사용자 승인: ‘이 예약을 중지하고 Codex CLI 중심으로 통합해줘’.
+- ChatGPT ‘만날신문 AI 기자 자동 발행’ 예약을 is_enabled=false로 변경하고 중지 응답을 확인했다. 삭제하지 않아 필요 시 복구 가능하다.
+- 홈페이지의 정기 발행 주체는 GitHub Actions Codex CLI다. 뉴스 매시 05분, 교안 매시 35분. PC 전원과 무관하게 클라우드에서 실행한다.
+- 기존 한도 소진 시 다음 예약 재시도·독립 검수·중복 검사·실제 URL 확인·운영 대시보드를 유지한다. GitHub 예약 지연과 구독 한도 때문에 매시간 발행을 보장하지 않는다.
+- AI 업데이트 브리핑 등 다른 ChatGPT 예약은 변경하지 않았다. 통계 서비스 연결은 이번 승인 범위에 포함되지 않으며 여전히 별도 설정이 필요하다.
