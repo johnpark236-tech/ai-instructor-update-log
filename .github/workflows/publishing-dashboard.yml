@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: "17 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/publishing-dashboard.yml"
+      - "automation/codex/dashboard.py"
   workflow_run:
     workflows: ["Cloud Codex CLI - hourly AI lesson"]
     types: [completed]
