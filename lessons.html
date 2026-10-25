@@ -110,7 +110,7 @@ function openExternal(url){
 }
 function inAppBanner(){return IN_APP?`<div class="call warn inapp">📥 지금은 <b>${IS_KAKAO?'카카오톡':'앱'} 안의 브라우저</b> — 파일 다운로드 안 될 수 있음 <button class="btn" type="button" id="goExt">크롬으로 열기</button></div>`:''}
 let INDEX={lessons:[]},tab='todo',f={kind:'all',cat:'',lvl:'',job:'',q:'',acc:'',ai:''},view='learner';
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esc=s=>String(s??'').replace(/비포/g,'Before').replace(/애프터/g,'After').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 view=store.get('view')||'learner';
 // 글씨 크기 5단계 (눈이 불편한 분용) — 교안·목록 내용 전체를 확대, 이 기기에 기억
@@ -286,7 +286,7 @@ async function lessonView(id){
     <div class="card full"><div class="ct">🎯 기능 · 혜택 ${CN(G.cards.length)}</div><table class="fb"><thead><tr><th>기능</th><th>혜택</th></tr></thead><tbody>${G.cards.map((c,i)=>`<tr><td><b class="rn">${i+1})</b> ${esc(c.icon)} ${esc(c.title)}</td><td>${esc(c.text)}</td></tr>`).join('')}</tbody></table></div>
     ${priceChart(P)}${timeChart(mn,tot)}
     <div class="card full diag"><div class="dt">⚙️ ${esc(G.diagram.title)} ${CN(G.diagram.nodes.length)}</div><div class="flow">${G.diagram.nodes.map((nd,i)=>`${i?'<div class="arr" aria-hidden="true"></div>':''}<div class="node"><div class="ni">${esc(nd.icon)}</div><div class="nl">${i+1}) ${esc(nd.label)}</div></div>`).join('')}</div></div>
-    <div class="card full"><div class="ct">🔄 비포 → 애프터</div><table class="ba2"><thead><tr><th class="b0">😐 ${esc(G.before_after.before.label)}</th><th class="b1">😀 ${esc(G.before_after.after.label)}</th></tr></thead><tbody><tr><td>${esc(G.before_after.before.text)}</td><td>${esc(G.before_after.after.text)}</td></tr></tbody></table></div>
+    <div class="card full"><div class="ct">🔄 Before → After</div><table class="ba2"><thead><tr><th class="b0">😐 ${esc(G.before_after.before.label)}</th><th class="b1">😀 ${esc(G.before_after.after.label)}</th></tr></thead><tbody><tr><td>${esc(G.before_after.before.text)}</td><td>${esc(G.before_after.after.text)}</td></tr></tbody></table></div>
     <div class="card full"><div class="ct">⚠️ 주의 ${CN(G.cautions.length)}</div><div class="caut">${G.cautions.map((c,i)=>`<span>⚠️ ${i+1}) ${esc(c)}</span>`).join('')}</div>
     ${(L.verification||[]).length?`<a class="vlink" href="#" data-open="verify">🔎 강의 전 확인 ${L.verification.length}개 → 자세한 설명</a>`:''}</div>
   </div>`:`<p class="lead">${esc(L.summary)}</p>`;
