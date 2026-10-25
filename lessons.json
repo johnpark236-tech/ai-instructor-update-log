@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 177,
+  "count": 178,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-027",
+      "version": "v1.0",
+      "created_at": "2026-10-26T06:13:51+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Firefly 사운드 효과 생성으로 모임 시작용 자연 효과음 만들기",
+      "summary": "① 한 가지 소리를 짧게 묘사 ② 후보를 듣고 클립 다듬기 ③ 모임 시작용 WAV와 선택 이유 보관",
+      "tool": "Adobe Firefly",
+      "feature": "사운드 효과 생성(Generate Sound Effects) — 텍스트로 개별 효과음 생성·후보 청취·타임라인 트리밍·볼륨 조절·WAV 다운로드",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2025-07-17",
+      "categories": [
+        "CAT-05"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "모임 시작에 쓸 자연 효과음 WAV 1개 + Before / After 청취 기록",
+      "access": "freemium",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "🍃",
+      "one_liner": "글로 묘사하고 귀로 고르는 모임 효과음"
+    },
     {
       "id": "AI-2026-10-CAT05-026",
       "version": "v1.0",

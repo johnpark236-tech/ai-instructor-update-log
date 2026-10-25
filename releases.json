@@ -3796,6 +3796,21 @@
       },
       "checked": "2026-10-26",
       "lesson_id": "AI-2026-10-CAT05-026"
+    },
+    {
+      "id": "adobe-firefly-2025-07-17-generate-sound-effects",
+      "date": "2025-07-17",
+      "tool": "Adobe Firefly",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Generate Sound Effects 베타 — 텍스트·목소리로 맞춤 효과음 생성",
+      "summary": "① 글로 개별 효과음 생성 ② 목소리로 타이밍·강도 안내, 2026-08-20 폭넓은 제공 발표로 현재 재검증",
+      "source": {
+        "title": "Adobe 공식 발표 — Generate Sound Effects 베타 공개",
+        "url": "https://blog.adobe.com/en/publish/2025/07/17/firefly-adds-new-video-capabilities-industry-leading-ai-models-generate-sound-effects-feature"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT05-027"
     }
   ]
 }
