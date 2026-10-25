@@ -63,9 +63,12 @@ def latest_content(repo, kind):
 def render(snapshots, now):
     text='# 📰 AI 뉴스 · 📘 AI 교안 자동 작성 현황\n\n'
     text+='갱신: **'+now.astimezone(KST).strftime('%Y-%m-%d %H:%M KST')+'** · 20분 간격 갱신 · Run workflow로 수동 갱신\n\n'
+    text+='**현재 운영: AI 교안 자동 작성만 진행 · 뉴스 자동 작성/예약 중지.**\n\n'
     text+='**실제 발행과 Actions 결과를 따로 표시합니다.** 녹색 Success도 신규 발행 0건일 수 있습니다.\n\n'
     text+='| 항목 | AI 뉴스 | AI 신기능 교안 |\n|---|---|---|\n'
     def metric(s, key):
+        if s['kind']=='news' and key in ('schedule','next','state'):
+            return '⏹ 사용자 요청으로 중지'
         if s.get('unavailable'):
             return '조회 실패·아래 사유 확인'
         rows=s.get('runs',[]);counts=s.get('statuses',{})
