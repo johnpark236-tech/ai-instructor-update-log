@@ -11,6 +11,9 @@ on:
   workflow_run:
     workflows: ["Cloud Codex CLI - hourly AI lesson"]
     types: [completed]
+concurrency:
+  group: publishing-dashboard-recovery
+  cancel-in-progress: false
 permissions:
   contents: read
   actions: write
