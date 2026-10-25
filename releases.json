@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-26T04:55:59+09:00",
+  "updated_at": "2026-10-26T07:48:42+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "acrobat-2026-05-06-pdf-spaces-experiences",
+      "date": "2026-05-06",
+      "tool": "Adobe Acrobat",
+      "company": "Adobe",
+      "type": "update",
+      "title": "PDF 스페이스 새 공유 경험 — AI 개요 편집·안내 항목 재배열",
+      "summary": "① 생산성 에이전트 기반 개요 생성 ② 텍스트 요약 직접 편집·항목 순서 변경 ③ 국내 Studio 유료 권한과 영어 지원 경로 확인",
+      "source": {
+        "title": "Adobe 공식 발표 — 생산성 에이전트와 PDF 스페이스의 새 공유·게시 기능(2026-05-06)",
+        "url": "https://news.adobe.com/news/2026/05/adobes-new-productivity-agent"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT03-035"
+    },
     {
       "id": "google-forms-2025-11-12-korean-help-me-create",
       "date": "2025-11-12",

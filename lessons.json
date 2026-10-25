@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 178,
+  "count": 179,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-035",
+      "version": "v1.0",
+      "created_at": "2026-10-26T07:48:42+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Acrobat PDF 스페이스의 AI 요약을 고쳐 독서 모임 안내 화면 만들기",
+      "summary": "① AI 생성 요약의 사실 대조 ② 개요 화면의 문구·읽는 순서 편집 ③ 영어 연습 안내 화면과 한국어 확인 기록 완성",
+      "tool": "Adobe Acrobat",
+      "feature": "PDF Spaces 공유 경험 맞춤 설정 — 생산성 에이전트가 만든 개요의 AI 텍스트 요약 편집·항목 재배열·안내 텍스트 추가",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-05-06",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "공유 전 상태의 독서 모임 안내 개요 화면 1개 + Before / After 한국어 확인 기록",
+      "access": "paid",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "📋",
+      "one_liner": "AI 요약을 고쳐 읽기 쉬운 모임 안내로"
+    },
     {
       "id": "AI-2026-10-CAT05-027",
       "version": "v1.0",
