@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 176,
+  "count": 177,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-026",
+      "version": "v1.0",
+      "created_at": "2026-10-26T04:55:59+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Firefly 음악 생성의 분위기 태그와 템포로 독서 모임 시작 음악 만들기",
+      "summary": "① 영어 태그로 연주곡 설계 ② 에너지·템포 조절 ③ 듣고 고른 WAV 한 파일 보관",
+      "tool": "Adobe Firefly",
+      "feature": "음악 생성(Generate Music, 구 Generate Soundtrack) — 분위기·스타일·목적 태그와 에너지·템포·재생 시간 설정으로 연주곡 생성·WAV 다운로드",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2025-10-28",
+      "categories": [
+        "CAT-05"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "독서 모임 시작용 연주곡 WAV 1개 + Before / After 설정·청취 기록",
+      "access": "freemium",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "🎼",
+      "one_liner": "태그와 속도로 고르는 우리 모임 시작 음악"
+    },
     {
       "id": "AI-2026-10-CAT05-025",
       "version": "v1.0",
