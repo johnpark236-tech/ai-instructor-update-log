@@ -72,6 +72,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: python automation/codex/cloud_ops.py deploy --kind lesson --repo .
 
+      - name: Notify John's own Kakao chat after verified publication
+        env:
+          KAKAO_ACCESS_TOKEN: ${{ secrets.KAKAO_ACCESS_TOKEN }}
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          KAKAO_CLIENT_SECRET: ${{ secrets.KAKAO_CLIENT_SECRET }}
+        run: python scripts/notify_kakao.py --repo . --log "$HOME/.mannal-codex-hourly/runs.jsonl"
+
       - name: Always report actual publishing outcome
         if: always()
         run: python automation/codex/cloud_ops.py report --kind lesson --output ops-report
