@@ -43,6 +43,14 @@ def reconcile_deployment(repo, kind, data):
         return True
 
 
+def recovery_due(runs, now):
+    """Request a backup only after an hour without a run and with no active job."""
+    if not runs or any(r['status'] != 'completed' for r in runs):
+        return False
+    last=max(dt.datetime.fromisoformat(r['created_at'].replace('Z','+00:00')) for r in runs)
+    return now-last >= dt.timedelta(hours=1)
+
+
 def build(repo, kind, recover=False):
     now=dt.datetime.now(dt.timezone.utc)
     workflow=f'codex-cloud-hourly-{kind}.yml'
@@ -78,12 +86,10 @@ def build(repo, kind, recover=False):
         if b-a > dt.timedelta(minutes=90):
             gaps.append({'from':a.isoformat(),'to':b.isoformat(),'minutes':round((b-a).total_seconds()/60)})
     recovery='not requested'
-    if recover and runs:
-        last=dt.datetime.fromisoformat(runs[0]['created_at'].replace('Z','+00:00'))
-        active=any(r['status'] != 'completed' for r in runs)
-        if not active and now-last > dt.timedelta(minutes=90):
+    if recover:
+        if recovery_due(runs, now):
             subprocess.run(['gh','workflow','run',workflow,'--repo',repo,'--ref','main'],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-            recovery='workflow_dispatch requested after >90 minute gap; completion not yet confirmed'
+            recovery='workflow_dispatch requested after an hour without a run; completion not yet confirmed'
         else:
             recovery='no recovery needed or another run is active'
     result={'recovery':recovery,'checked_at' :now.isoformat(),'repo':repo,'runs_24h':len(rows),'statuses':dict(counts),'observed_schedule_gaps_over_90_minutes':gaps,'runs':rows}
