@@ -1,0 +1,49 @@
+name: AI 뉴스·교안 통합 대시보드
+
+on:
+  schedule:
+    - cron: "19,39,59 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ai-publishing-dashboard.yml"
+      - "automation/codex/unified_dashboard.py"
+      - "automation/codex/tests/test_unified_dashboard.py"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: combined-publishing-dashboard
+  cancel-in-progress: false
+
+jobs:
+  dashboard:
+    name: 뉴스·교안 현황 보기
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 대시보드 표시·시간·오류 처리 검사
+        run: python -m unittest discover -s automation/codex/tests -p test_unified_dashboard.py -v
+      - name: 뉴스·교안 통합 현황 작성
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python automation/codex/unified_dashboard.py
+      - name: 상세 현황 파일 보관
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-publishing-dashboard-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ops-dashboard/unified.md
+            ops-dashboard/unified.json
+          if-no-files-found: warn
+          retention-days: 30
