@@ -1,0 +1,543 @@
+{
+  "id": "AI-2026-10-CAT04-017",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-26T00:05:52+09:00",
+  "checked": "2026-10-25",
+  "review_by": "2027-01-25",
+  "title": "컵 사진을 대화로 다듬어 Before / After 비교 카드 만들기 — Adobe Express AI Assistant 이미지 편집",
+  "summary": "① 내 컵 사진의 조명·배경을 영어 예문으로 수정 ② 형태·색 유지 여부 대조 ③ 비교 카드 1장 완성",
+  "tool": "Adobe Express",
+  "feature": "AI Assistant imaging update — 기존 사진을 프롬프트로 재구성하고 수동 편집과 이어 쓰기(베타)",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-06-18",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-MKT",
+    "JOB-EDU",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 28,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "데스크톱 PC·인터넷·개인 Adobe Free 계정, 로그인 수업 전 완료",
+    "AI Assistant 접근이 열린 계정과 영어 화면 사전 확인, Teams·Enterprise·Education 제외",
+    "본인이 촬영한 무지 컵 JPG 1장, 인물·상표·주소 없는 사진",
+    "인쇄 비교 카드와 필기구, 영어 프롬프트 뜻을 적은 큰 글씨 안내지"
+  ],
+  "outcome": "컵 사진 Before / After 비교 카드 1장: ① 원본·수정본 대조 ② 형태·색 검수 ③ AI 편집 표시",
+  "objectives": [
+    "영어 예문을 붙여 넣어 컵 사진의 조명 수정을 요청할 수 있음",
+    "원본과 수정본에서 컵 형태·색의 변화를 확인할 수 있음",
+    "사용 조건과 오류를 적은 비교 카드 1장을 완성할 수 있음"
+  ],
+  "glance": {
+    "emoji": "☕",
+    "one_liner": "내 컵 사진을 고치고 원본과 대조",
+    "cards": [
+      {
+        "icon": "📷",
+        "title": "내 사진",
+        "text": "상표 없는 컵 사진 한 장"
+      },
+      {
+        "icon": "💬",
+        "title": "대화로 수정",
+        "text": "영어 예문 복사 후 조명 조정"
+      },
+      {
+        "icon": "🔎",
+        "title": "직접 검수",
+        "text": "형태·색을 원본과 대조"
+      }
+    ],
+    "diagram": {
+      "title": "사진 → 수정 요청 → 검수 카드",
+      "nodes": [
+        {
+          "icon": "📷",
+          "label": "사진 준비"
+        },
+        {
+          "icon": "💬",
+          "label": "영어 요청"
+        },
+        {
+          "icon": "🔎",
+          "label": "원본 대조"
+        },
+        {
+          "icon": "📝",
+          "label": "카드 완성"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "어둡게 찍힌 무지 컵 사진"
+      },
+      "after": {
+        "label": "After",
+        "text": "밝게 수정한 컵 사진 + 형태·색 검수 메모"
+      }
+    },
+    "cautions": [
+      "한국어 지원 보장 없음",
+      "개인 계정·베타 접근 사전 점검",
+      "실물 형태·색 변형 확인"
+    ]
+  },
+  "pricing": {
+    "access": "freemium",
+    "summary": "개인 Free 접근 대상, 베타 순차 제공·계정별 제한 적용. 핵심 실습에 Premium 결제 불필요(2026-10-25 확인)",
+    "plans": [
+      {
+        "name": "Adobe Express 무료(개인 Free)",
+        "price": "₩0/월(부가세 포함)",
+        "features": [
+          "AI Assistant 베타 접근 대상, 계정별 순차 제공",
+          "이번 수업은 기존 사진 수정 중심, 무료 한도 도달 시 중단"
+        ]
+      },
+      {
+        "name": "Adobe Express Premium(개인)",
+        "price": "₩13,200/월",
+        "features": [
+          "개인 AI Assistant 베타 접근 대상",
+          "국내 가격 페이지의 월별 청구 플랜, 수업 필수 아님"
+        ]
+      }
+    ],
+    "note": "① Teams·Enterprise·Education은 해당 Express 베타 미지원 ② 정확한 현재 요청별 차감량·무료 횟수는 화면 확인, 무제한 안내 금지 ③ 6월 공지의 기존 사진 수정 무료 생성 횟수 미차감 안내는 당시 조건이며 현재 고정 보장으로 사용 금지",
+    "checked": "2026-10-25",
+    "sources": [
+      {
+        "title": "Adobe Community 공식 운영자 — The Express AI Assistant beta just got better (June 18, 2026)",
+        "url": "https://community.adobe.com/announcements-327/the-express-ai-assistant-beta-just-got-better-1626041"
+      },
+      {
+        "title": "Adobe Express Help — AI Assistant overview (October 22, 2026)",
+        "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html"
+      },
+      {
+        "title": "Adobe 대한민국 — Adobe Express 무료 및 Premium 플랜 비교",
+        "url": "https://www.adobe.com/kr/express/pricing"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-06-18",
+      "text": "공식 운영자 공지에서 AI Assistant 이미지 편집 업데이트 공개, 기존 사진 수정과 수동 편집 연계 안내"
+    },
+    {
+      "date": "2026-10-25",
+      "text": "현재 개별 기능 도움말에서 지역·언어·개인 요금제·베타 제한 재검증, 원래 출시일 유지"
+    }
+  ],
+  "theory": {
+    "definition": "AI 어시스턴트(AI Assistant) 이미지 편집 = 사진을 올리고 원하는 변화를 대화로 요청하는 Adobe Express 베타 기능",
+    "analogy": "사진관에 컵은 그대로 두고 조명만 밝게 해 달라고 주문한 뒤 실물과 대조하는 과정과 유사",
+    "comparison": {
+      "headers": [
+        "항목",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "사진",
+          "어두운 원본",
+          "밝게 수정 요청한 결과"
+        ],
+        [
+          "확인",
+          "컵 형태·색 기준 확보",
+          "손잡이·테두리·색 원본 대조"
+        ],
+        [
+          "기록",
+          "촬영 원본 표시",
+          "AI 편집·남은 오류 표시"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "국내 기능 제공 근거",
+        "body": "개별 기능 도움말의 전 세계 제공과 제외 지역 목록 확인. 대한민국은 제외 대상 아님. 한국어 기능 지원과 별개로 영어 경로 사용(2026-10-25)"
+      },
+      {
+        "title": "영어 복붙 경로",
+        "body": "영어 지원을 기준으로 준비한 문장 사용. 한국어 지시 이해·한국어 화면의 동일 버튼 제공 보장 없음"
+      },
+      {
+        "title": "편집과 검수",
+        "body": "사진 수정 후에도 컵 모양·색 변경 가능. 밝기 개선과 실물 일치 여부를 별도 판단"
+      },
+      {
+        "title": "베타 접근 제한",
+        "body": "개인 Free·Premium 대상이라도 계정별 순차 제공. 수업 전 접근 점검 필수, 미노출은 직접 실습 완료로 기록 금지"
+      }
+    ],
+    "can": [
+      "기존 사진의 조명·배경 수정을 대화로 요청",
+      "추가 요청으로 결과 다듬기",
+      "수동 편집으로 전환해 마무리"
+    ],
+    "cannot": [
+      "실물 형태·색의 완전 보존 보장",
+      "한국어 AI Assistant 공식 지원 보장",
+      "모든 계정의 즉시 베타 접근 보장",
+      "제품 광고의 정확성·권리 자동 보증"
+    ],
+    "safety": [
+      "본인 촬영 무지 컵만 사용, 얼굴·상표·주소 포함 사진 제외",
+      "원본 별도 보관, 수정본에 AI 편집 표시",
+      "실제 판매용 사진은 재질·색·크기 왜곡 검수 전 게시 금지",
+      "계정·비밀번호 공유 금지, 한도 소진 시 결제 대신 대체 활동",
+      "공개 공유·SNS 발행 없이 수업 안에서 화면과 종이 카드로 비교"
+    ]
+  },
+  "practice": {
+    "preview": "가상 카드 예시(실제 실행 결과 아님): ① Before 어두운 흰 컵 ② After 밝은 배경의 컵 ③ 검수 손잡이 유지·색 확인 필요 ④ AI 편집 연습용 표시",
+    "follow": [
+      {
+        "title": "개인 무료 계정과 사진 준비",
+        "minutes": 4,
+        "do": "공식 실행 사이트 새 탭 열기 → 개인 프로필 로그인 → 영어 AI Assistant 화면과 베타 접근 확인 → 본인 컵 사진 준비",
+        "prompt": "",
+        "expect": "베타 접근 가능 여부와 원본 사진 확인",
+        "note": "① coming soon이면 대기 대상, 강사 관찰로 전환 ② 영어 화면 전환 세부 메뉴 [확인 필요] ③ 무료 체험 결제 불필요",
+        "links": [
+          {
+            "label": "Adobe Express AI Assistant 열기",
+            "url": "https://express.adobe.com/assistant"
+          }
+        ]
+      },
+      {
+        "title": "사진을 올리고 조명 수정 요청",
+        "minutes": 8,
+        "do": "AI Assistant 입력창의 +로 컵 사진 첨부 → 아래 영어 요청 붙여 넣기 → 결과 대기 → 원본과 나란히 확인",
+        "prompt": "Edit this photo to make the lighting brighter and more even. Keep the cup shape, handle, color, and material unchanged. Do not add text, logos, people, or extra objects.",
+        "expect": "조명 수정을 요청한 컵 사진 후보 1개",
+        "note": "① 뜻: 조명을 밝게, 컵 형태·손잡이·색·재질 유지 ② 유지 지시는 보장 아님 ③ 6월 공지의 Edit image 경로가 표시되면 해당 경로 사용, 현재 배치 [확인 필요]",
+        "links": [
+          {
+            "label": "Adobe Express AI Assistant 열기",
+            "url": "https://express.adobe.com/assistant"
+          }
+        ]
+      },
+      {
+        "title": "Before / After 검수",
+        "minutes": 4,
+        "do": "원본을 Before, 결과를 After로 구분 → 컵 손잡이·테두리·색을 확대 비교 → 종이 카드에 같음·다름·판단 어려움 표시",
+        "prompt": "",
+        "expect": "세 항목 검수 기록",
+        "note": "생성 결과가 예뻐도 형태 변형이면 수정 필요 표시",
+        "links": [
+          {
+            "label": "Adobe Express AI Assistant 열기",
+            "url": "https://express.adobe.com/assistant"
+          }
+        ]
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 배경 취향으로 한 번 더 수정",
+        "minutes": 8,
+        "do": "현재 컵 사진에서 배경 취향 선택 → 아래 문장의 light gray를 warm cream으로 바꾸거나 그대로 입력 → 화면 한도 안내 확인 후 실행",
+        "prompt": "Change only the background to light gray. Keep the cup shape, handle, color, and material unchanged. Do not add text or objects.",
+        "expect": "내 취향 배경의 컵 사진 1개",
+        "note": "① light gray=밝은 회색, warm cream=따뜻한 크림색 ② 추가 소품 생성 없이 기존 사진 수정 ③ 유료 안내·한도 도달 시 첫 결과로 카드 완성",
+        "links": [
+          {
+            "label": "Adobe Express AI Assistant 열기",
+            "url": "https://express.adobe.com/assistant"
+          }
+        ]
+      },
+      {
+        "title": "비교 카드 한 장 완성",
+        "minutes": 4,
+        "do": "홈 Chats에서 대화와 최종 결과 확인 → 카드에 Before·After 특징과 검수 결과 작성 → AI 편집 연습용 표시 → 짝에게 화면과 카드 설명",
+        "prompt": "",
+        "expect": "Before / After 비교 카드 1장",
+        "note": "① 파일 다운로드는 선택, 핵심 작품은 종이 카드 ② 다운로드 선택 시 공식 도움말의 Download 사용, 형식·위치 [확인 필요]",
+        "links": [
+          {
+            "label": "Adobe Express AI Assistant 열기",
+            "url": "https://express.adobe.com/assistant"
+          }
+        ]
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "조명 수정 한 번과 손잡이 일치 여부만 표시"
+      },
+      {
+        "level": "중급",
+        "mission": "배경을 선택하고 형태·색·재질을 검수한 카드 완성"
+      },
+      {
+        "level": "고급",
+        "mission": "추가 생성 없이 원본과 두 결과의 차이를 세 항목 표로 비교"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "① 바꾸고 싶었던 점 ② 실제 달라진 점 ③ 판매·공개 전 검수할 점을 짝에게 설명",
+    "quiz": [
+      {
+        "q": "오늘 실습에 맞는 이용 환경은 무엇인가요?",
+        "options": [
+          "개인 Free 계정의 접근 가능한 데스크톱 웹 베타",
+          "모든 교육기관 계정의 모바일 앱",
+          "API 키가 필요한 서버",
+          "한국어만 지원하는 전화 서비스"
+        ],
+        "answer": 0,
+        "explain": "개인 Free·Premium 대상의 데스크톱 웹 베타임. 계정별 접근 여부를 먼저 확인하고 영어 예문 사용"
+      },
+      {
+        "q": "조명을 밝게 한 뒤 컵 손잡이가 달라졌다면 어떻게 할까요?",
+        "options": [
+          "무조건 원본과 같다고 판단",
+          "변형을 기록하고 실제 판매용 사용 보류",
+          "바로 판매 광고에 게시",
+          "원본 사진 삭제"
+        ],
+        "answer": 1,
+        "explain": "유지해 달라는 요청도 실물 보존 보장 아님. 원본과 비교해 변형을 찾아내는 것이 핵심"
+      },
+      {
+        "q": "무료 계정에 coming soon이 표시되면 어떻게 할까요?",
+        "options": [
+          "친구 비밀번호로 로그인",
+          "국가를 바꿔 우회",
+          "순차 제공 상태를 기록하고 강사 시연 관찰",
+          "결제하면 반드시 열린다고 안내"
+        ],
+        "answer": 2,
+        "explain": "베타는 계정별 순차 제공임. 관찰·종이 활동으로 전환하고 직접 실행과 구분 기록"
+      }
+    ],
+    "next": [
+      "검수한 사진에 직접 글자를 붙이는 일반 편집 연습",
+      "제품 사진의 AI 편집 표시와 소비자 오인 사례 토의"
+    ],
+    "rubric": [
+      {
+        "criterion": "사진 편집 요청",
+        "high": "사진 첨부 후 보존 조건 포함 요청",
+        "mid": "도움받아 예문 실행",
+        "low": "사전 결과만 관찰"
+      },
+      {
+        "criterion": "검수와 표시",
+        "high": "세 항목 대조와 AI 편집 표시",
+        "mid": "일부 항목 대조",
+        "low": "검수 없이 결과 확정"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~6분",
+        "content": "비교 카드 예시·목표",
+        "note": "컵 한 개로 범위 제한"
+      },
+      {
+        "time": "6~18분",
+        "content": "국내 제공·영어·개인 무료·보안",
+        "note": "베타 접근과 한국어 지원 구분"
+      },
+      {
+        "time": "18~34분",
+        "content": "사진 준비·조명 수정·검수",
+        "note": "따라 하기 16분"
+      },
+      {
+        "time": "34~46분",
+        "content": "내 배경 선택·카드 완성",
+        "note": "내 것 만들기 12분, 실습 합계 28분"
+      },
+      {
+        "time": "46~52분",
+        "content": "짝 설명·핵심 문제 3개·로그아웃",
+        "note": "직접 실행과 관찰 구분"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "오늘은 내가 찍은 컵 사진을 밝게 고치고 Before / After 비교 카드 한 장을 만듭니다. 예쁜 사진보다 실제 컵이 그대로인지 확인하는 연습이 중요합니다."
+      },
+      {
+        "label": "영어 안내",
+        "text": "이 기능은 영어로 사용하겠습니다. 영어를 외울 필요는 없어요. 준비한 문장을 복사하고, 조명을 밝게 하라는 뜻을 함께 확인해 볼게요."
+      },
+      {
+        "label": "요금·접근",
+        "text": "개인 무료 계정도 대상이지만 베타가 아직 안 열린 계정이 있을 수 있습니다. 결제하지 말고 손을 들어 주세요. 관찰한 경우에는 직접 실행과 구분해 적겠습니다."
+      },
+      {
+        "label": "검수",
+        "text": "컵 손잡이와 색을 원본과 비교해 보세요. 달라진 곳을 찾았다면 그 내용을 카드에 적어 주세요. 실제 판매 사진으로 쓰기 전에는 더 꼼꼼히 확인해야 합니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "베타 대기·조직 계정",
+        "response": "개인 프로필·데스크톱 웹 확인 후에도 미노출이면 강사 시연 관찰과 종이 카드 작성. 직접 실행 완료 처리 제외"
+      },
+      {
+        "situation": "한도·유료 안내",
+        "response": "추가 요청 중단, 첫 결과와 원본으로 카드 완성. 결과가 없으면 사전 예시 사용 사실 표시"
+      },
+      {
+        "situation": "인터넷 장애",
+        "response": "사전 출력 원본·수정본으로 검수 활동 진행, 온라인 실습은 보충"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "AI Assistant 메뉴 없음",
+        "fix": "데스크톱·개인 프로필·영어 화면 확인, coming soon이면 Plan B"
+      },
+      {
+        "issue": "사진 첨부 위치 못 찾음",
+        "fix": "입력창 + 확인, 미노출이면 강사 사전 캡처와 대조"
+      },
+      {
+        "issue": "영어 문장 입력 부담",
+        "fix": "큰 글씨 한글 뜻과 영어 예문을 나란히 제공, 예문 전체 복사 지원"
+      },
+      {
+        "issue": "컵 색·손잡이 변형",
+        "fix": "원본 대조 후 오류 표시, 잔여량이 없으면 재생성 없이 검수 완료"
+      },
+      {
+        "issue": "추가 요청 한도 도달",
+        "fix": "반복 클릭 중단, 기존 결과로 카드 완성·관찰 여부 기록"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국에서 개별 기능 제공 근거는?",
+        "a": "현재 AI Assistant 기능 도움말의 전 세계 제공·제외 지역 목록 확인. 대한민국 제외 없음, 영어 경로 기준(2026-10-25)"
+      },
+      {
+        "q": "한국어로 꼭 요청해야 하나?",
+        "a": "한국어 지원 보장 없음. 수업은 뜻풀이가 있는 영어 예문 복붙으로 구성"
+      },
+      {
+        "q": "유료 구독이 필수인가?",
+        "a": "개인 Free도 베타 대상. 계정 접근·한도 조건 적용, 유료 구독 필수 아님"
+      },
+      {
+        "q": "교육기관 계정도 가능한가?",
+        "a": "이번 Express AI Assistant 베타는 Teams·Enterprise·Education 미지원. 개인 계정 사용 조건을 기관과 사전 확인"
+      },
+      {
+        "q": "무료로 무제한 수정 가능한가?",
+        "a": "무제한 보장 불가. 요청별 현재 한도·차감 안내를 확인하고 제한 시 중단"
+      },
+      {
+        "q": "컵 사진을 바로 판매에 써도 되나?",
+        "a": "형태·색·재질 왜곡 검수와 권리 확인 필요. 이번 결과는 AI 편집 연습용으로 표시"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "화면 확대·한 단계씩 시연, 영어 예문 그대로 복사, 손잡이 한 항목부터 대조"
+      },
+      {
+        "level": "중급",
+        "guide": "배경 색을 선택해 변경하고 세 항목 검수"
+      },
+      {
+        "level": "고급",
+        "guide": "출력별 오류 유형을 표로 정리, 추가 생성 없이 평가"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "밝게·손잡이·유지 뜻과 영어 대응어 먼저 확인, 문장 입력은 복붙 유지"
+      }
+    ],
+    "pro_points": [
+      "미감보다 실물 보존 검수와 편집 표시 평가",
+      "Adobe Firefly AI Assistant·Acrobat의 문서 디자인과 다른 Express 자체 사진 편집 경로",
+      "영어 지원은 국내 제공와 별개, 한국어 지원으로 과장 금지"
+    ],
+    "day_before": [
+      "한국 개인 Free 계정에서 영어 AI Assistant 접근·컵 사진 편집 시험과 화면 캡처 준비",
+      "AI Assistant·+ 첨부·Edit image·Chats 실제 위치와 한국어 화면 전환 경로 확인",
+      "현재 한도·유료 안내 확인, 무료 편집 무제한 안내 금지",
+      "본인 촬영 컵 사진·종이 카드·영어 뜻풀이·오류 예시 준비",
+      "미노출 계정 수 확인과 시연 관찰 좌석 준비, 공용 PC 로그아웃 안내"
+    ]
+  },
+  "verification": [
+    "2026-10-25 주제 선정 후 개별 기능의 지역·언어·개인 Free 조건을 공식 문서로 확인한 뒤 본문 작성",
+    "중복 조사: lessons.json 173건 전체 제목·도구·기능과 releases.json 전체 비교. Adobe Express 자체 이미지 편집 업데이트 없음. CAT03-017은 Acrobat 문서→디자인, CAT04-014는 Firefly 에이전트로 이번 사진 편집과 구분",
+    "최근 14일 탐색: Canva 뉴스룸의 Craft와 Gemini 10월 릴리스의 Argon·Customize·Antigravity는 기존 교안 중복. Adobe 10월 14일 Acrobat 디자인도 CAT03-017 중복. Cursor Origin 마켓플레이스는 개발자 API·토큰 기반 공개 등록으로 이번 초급 실습 범위 제외",
+    "미연결 지난 출시 검토: Muse Wonder는 현재 API·Muse Code 중심이며 소비자 앱 확대 예정, Playground는 미국 18세 이상 출시로 제외. 조직형 agent·개발자 배포·건강·금융·종료 공지·이름 변경은 개인 초급 실습 또는 사용자 금지 조건과 부합하지 않아 제외. Claude 관련 후보는 사용자 금지로 제외. 받아쓰기 전환은 기존 받아쓰기 교안과 중복 영역",
+    "이후 최근 6~12개월 범위 Adobe 공식 기록에서 2026-06-18 이미지 편집 업데이트 발굴. 출시일을 작성일로 바꾸지 않아 지난 기능 표시 대상",
+    "한국 제공 근거는 기능별 공식 전 세계 제공 및 제외 지역 목록. 한국에서 Adobe 제품 판매 또는 한국어 지원을 대신 근거로 쓰지 않음",
+    "[미검증] 작성자의 로그인·사진 편집 직접 재현 없음. 베타는 계정별 순차 제공, 강의 전 개인 Free 접근 확인 필수",
+    "[확인 필요] 영어 화면 전환·Edit image 위치·다운로드 형식과 요청별 현재 차감량. 지역·요금제 대상은 공식 근거로 확인, 이 표시는 세부 UI·계정 상태에 한정",
+    "6월 공지와 10월 도움말의 지원 언어 목록 차이로 공통 지원인 영어만 사용. 한국어 지원·모든 계정 즉시 접근 보장 없음",
+    "Adobe는 기존 AI 제공 회사이므로 교안·출시 목록 모두 update. Excel Copilot Show Changes 후보 재선정 없음"
+  ],
+  "sources": [
+    {
+      "title": "Adobe Community 공식 운영자 — The Express AI Assistant beta just got better (June 18, 2026)",
+      "url": "https://community.adobe.com/announcements-327/the-express-ai-assistant-beta-just-got-better-1626041",
+      "checked": "2026-10-25"
+    },
+    {
+      "title": "Adobe Express Help — AI Assistant overview (October 22, 2026)",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html",
+      "checked": "2026-10-25"
+    },
+    {
+      "title": "Adobe Express Help — Generate designs with AI Assistant",
+      "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+      "checked": "2026-10-25"
+    },
+    {
+      "title": "Adobe 대한민국 — Adobe Express 무료 및 Premium 플랜 비교",
+      "url": "https://www.adobe.com/kr/express/pricing",
+      "checked": "2026-10-25"
+    },
+    {
+      "title": "Adobe Express — AI Assistant 실행 화면",
+      "url": "https://express.adobe.com/assistant",
+      "checked": "2026-10-25"
+    }
+  ]
+}

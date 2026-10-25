@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-25 21:47 KST",
+  "updated_at": "2026-10-26 00:05 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "adobe-express-2026-06-18-ai-assistant-imaging",
+      "date": "2026-06-18",
+      "tool": "Adobe Express",
+      "company": "Adobe",
+      "type": "update",
+      "title": "AI Assistant 이미지 편집 업데이트(베타)",
+      "summary": "① 기존 사진을 대화로 수정 ② 수동 편집과 연계 ③ 개인 Free·Premium 대상, 순차 제공",
+      "source": {
+        "title": "Adobe Community 공식 운영자 — The Express AI Assistant beta just got better (June 18, 2026)",
+        "url": "https://community.adobe.com/announcements-327/the-express-ai-assistant-beta-just-got-better-1626041"
+      },
+      "checked": "2026-10-25",
+      "lesson_id": "AI-2026-10-CAT04-017"
+    },
     {
       "id": "canva-2026-10-22-craft",
       "date": "2026-10-22",

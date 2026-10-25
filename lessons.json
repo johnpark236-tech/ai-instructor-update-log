@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 173,
+  "count": 174,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-017",
+      "version": "v1.0",
+      "created_at": "2026-10-26T00:05:52+09:00",
+      "checked": "2026-10-25",
+      "review_by": "2027-01-25",
+      "title": "컵 사진을 대화로 다듬어 Before / After 비교 카드 만들기 — Adobe Express AI Assistant 이미지 편집",
+      "summary": "① 내 컵 사진의 조명·배경을 영어 예문으로 수정 ② 형태·색 유지 여부 대조 ③ 비교 카드 1장 완성",
+      "tool": "Adobe Express",
+      "feature": "AI Assistant imaging update — 기존 사진을 프롬프트로 재구성하고 수동 편집과 이어 쓰기(베타)",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-06-18",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-MKT",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "컵 사진 Before / After 비교 카드 1장: ① 원본·수정본 대조 ② 형태·색 검수 ③ AI 편집 표시",
+      "access": "freemium",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "☕",
+      "one_liner": "내 컵 사진을 고치고 원본과 대조"
+    },
     {
       "id": "AI-2026-10-CAT05-024",
       "version": "v1.0",
