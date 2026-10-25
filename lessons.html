@@ -236,7 +236,7 @@ function practiceSites(L,s){
 function practiceAnchor(label,url){return '<a class="practice-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(label)+' 열기 (새 탭)">'+esc(label)+'</a>'}
 function practiceText(text,sites){
  const aliases=sites.flatMap(x=>x[2].map(a=>[a,x[1]])).sort((a,b)=>b[0].length-a[0].length);
- const raw=String(text??'');let out='',pos=0;
+ const raw=String(text??'').replace(/비포/g,'Before').replace(/애프터/g,'After');let out='',pos=0;
  while(pos<raw.length){
    const hit=aliases.find(([a])=>raw.startsWith(a,pos)&&(!/[A-Za-z0-9]/.test(a[0])||pos===0||!/[A-Za-z0-9]/.test(raw[pos-1]))&&(!/[A-Za-z0-9]/.test(a.at(-1))||!/[A-Za-z0-9]/.test(raw[pos+a.length]||'')));
    if(hit){out+=practiceAnchor(hit[0],hit[1]);pos+=hit[0].length}else{out+=esc(raw[pos]);pos++}
