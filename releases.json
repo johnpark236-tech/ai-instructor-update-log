@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-25 06:08 KST",
+  "updated_at": "2026-10-25 20:34 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "canva-2026-10-22-craft",
+      "date": "2026-10-22",
+      "tool": "Canva",
+      "company": "Canva",
+      "type": "update",
+      "title": "Canva Craft — Dream Lab 새 이미지 생성 모델",
+      "summary": "① 구성 계획 후 이미지 생성 ② 전 세계 모든 Canva 사용자 제공 ③ AI 사용량·조직 접근 제한 적용",
+      "source": {
+        "title": "Canva Newsroom — Introducing Canva Craft",
+        "url": "https://www.canva.com/newsroom/news/canva-craft/"
+      },
+      "checked": "2026-10-25",
+      "lesson_id": "AI-2026-10-CAT04-016"
+    },
     {
       "id": "gemini-2026-10-23-notebook-connected-app",
       "date": "2026-10-23",

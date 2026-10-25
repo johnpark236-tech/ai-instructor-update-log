@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 171,
+  "count": 172,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-016",
+      "version": "v1.0",
+      "created_at": "2026-10-25T20:34:54+09:00",
+      "checked": "2026-10-25",
+      "review_by": "2027-01-25",
+      "title": "Canva Craft로 글자와 그림이 함께 있는 동아리 안내판 만들기",
+      "summary": "① Craft로 배치 조건을 담은 그림 생성 ② 한글과 물체 위치 대조 ③ 내 취미 안내판 1개 완성",
+      "tool": "Canva",
+      "feature": "Canva Craft — Dream Lab의 새 이미지 생성 모델, 구성 계획 후 이미지 렌더링",
+      "company": "Canva",
+      "type": "update",
+      "released": "2026-10-22",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 취미 그림 안내판 1개(Dream Lab 기록) ② 글자·위치 검수 메모 3줄",
+      "access": "freemium",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "🪧",
+      "one_liner": "글자·그림 배치를 정해 안내판 만들기"
+    },
     {
       "id": "AI-2026-10-CAT08-029",
       "version": "v1.1",
