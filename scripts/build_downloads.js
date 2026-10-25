@@ -20,7 +20,7 @@ for (const f of ['lesson-meta.js', 'lesson-pptx.js']) {
   const files = fs.readdirSync(path.join(ROOT, 'lessons')).filter(f => f.endsWith('.json')).sort();
   let n = 0;
   for (const f of files) {
-    const L = JSON.parse(fs.readFileSync(path.join(ROOT, 'lessons', f), 'utf8'));
+    const L = JSON.parse(fs.readFileSync(path.join(ROOT, 'lessons', f), 'utf8'), (key, value) => typeof value === 'string' ? value.replace(/비포/g, 'Before').replace(/애프터/g, 'After') : value);
     for (const mode of ['learner', 'instructor']) {
       const buf = await window.buildLessonPptx(L, mode).write({ outputType: 'nodebuffer' });
       fs.writeFileSync(path.join(OUT, `${L.id}-${mode}.pptx`), buf);
