@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-26 00:05 KST",
+  "updated_at": "2026-10-26T02:16:56+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "google-forms-2025-11-12-korean-help-me-create",
+      "date": "2025-11-12",
+      "tool": "Google Forms",
+      "company": "Google",
+      "type": "update",
+      "title": "양식 작성 도우미(Help me create) 한국어 등 7개 언어 확대",
+      "summary": "① 한국어 프롬프트로 새 양식 초안 생성 ② 최초 배포 2025-11-12, 공식 발표 11-13 ③ 현재 개인 Experiments 경로의 대한민국 지원 재확인",
+      "source": {
+        "title": "Google Workspace Updates — Help me create in Google Forms now available in seven additional languages",
+        "url": "https://workspaceupdates.googleblog.com/2025/11/help-me-create-google-forms-seven-languages.html"
+      },
+      "checked": "2026-10-25",
+      "lesson_id": "AI-2026-10-CAT03-034"
+    },
     {
       "id": "adobe-express-2026-06-18-ai-assistant-imaging",
       "date": "2026-06-18",

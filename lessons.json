@@ -1,7 +1,43 @@
 {
   "standard": "v2.3",
-  "count": 174,
+  "count": 175,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-034",
+      "version": "v1.0",
+      "created_at": "2026-10-26T02:16:56+09:00",
+      "checked": "2026-10-25",
+      "review_by": "2027-01-25",
+      "title": "Google Forms 양식 작성 도우미로 한국어 동아리 설문 초안 만들기",
+      "summary": "① 한국어 요청으로 질문 4개 생성 ② 불필요한 개인정보 항목 제거 ③ 게시 전 설문 초안 1개 완성",
+      "tool": "Google Forms",
+      "feature": "Help me create a form(양식 작성 도우미) 한국어 지원 — 프롬프트로 새 양식 생성",
+      "company": "Google",
+      "type": "update",
+      "released": "2025-11-12",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "게시하지 않은 동아리 의견 설문 초안 1개: ① 한국어 질문 4개 ② 답변 선택지 검수 ③ 개인정보 수집 설정 점검",
+      "access": "freemium",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "📋",
+      "one_liner": "한국어 한 문단으로 동아리 설문 초안"
+    },
     {
       "id": "AI-2026-10-CAT04-017",
       "version": "v1.0",
