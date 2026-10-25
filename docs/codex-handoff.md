@@ -115,20 +115,75 @@ git push origin HEAD:main
 
 ---
 
-## 5. 알림 (카카오톡) — 인수인계 주의
+## 5. 발행 후 카카오톡 "나에게 보내기" — 인수인계
 
-- Claude는 **카카오톡 "나에게 보내기"(PlayMCP 커넥터)** 로 새 교안마다 알림을 보냈음. 이 커넥터는 **Claude 계정 전용** → Codex에서는 사용 불가
-- 알림 형식(유지 권장, 200자 이내):
-  ```
-  📘[기존 AI·무료] <이모지> <한 줄 요약>
-  🎁 <오늘 만들 작품>
-  💳 <요금 요약>
-  👉 https://johnpark236-tech.github.io/ai-instructor-update-log/lessons.html?id=<ID>
-  ```
-  - 링크는 **반드시 `?id=` 형식 + `https://`** — 카카오톡은 `#` 뒷부분을 빼먹어 목록으로 열림 (2026-10-15 확인)
-- Codex 쪽 대안: ① 텔레그램 워크플로(Secrets 등록 시 자동) ② 카카오 공식 API(카카오 개발자 앱 + 토큰 필요) ③ 알림 없이 사이트·Actions 대시보드로 확인 — **John에게 선택 확인 필요**
+### 5-1. 지금까지 Claude가 하던 방식
+- 도구: 카카오 공식 **PlayMCP** 커넥터의 `KakaotalkChat-MemoChat`(카카오톡 나에게 보내기). **John 본인 카카오톡 "나와의 채팅"으로만** 감
+- 글자 수: **200자 이내** (도구 제한)
+- 보내는 때:
+  1. **새 교안 발행 직후 1통** — push 후 GitHub Pages 배포 성공, 교안 주소가 실제로 열리는 것 확인 뒤
+  2. **매일 오후 5시 하루 요약 1통** (예약 16:58 KST) — 새 교안이 없는 날도 발송
+- 두 예약 모두 **2026-10-24~25 John 요청으로 중지**. Codex에서 재개할지는 John 확인 필요
 
----
+### 5-2. 새 교안 알림 형식 (그대로 유지)
+```
+📘[<구분>·<요금>] <glance.emoji> <glance.one_liner 또는 짧은 제목>
+🎁 <오늘 만들 작품 요약>
+💳 <요금 요약>
+👉 https://johnpark236-tech.github.io/ai-instructor-update-log/lessons.html?id=<교안 ID>
+```
+| 자리 | 값 |
+|---|---|
+| `<구분>` | `신규 AI` (type=new) / `기존 AI` (type=update) / 출시 후 14일 넘은 기능이면 `📚 지난 기능` |
+| `<요금>` | pricing.access → `무료`(free) / `무료+유료`(freemium) / `유료`(paid) |
+| 🎁 줄 | `outcome`을 짧게. 항목 여러 개면 `+` 로 연결 |
+| 💳 줄 | `pricing.summary` 핵심만 (무료 한도·필요한 요금제) |
+| 👉 줄 | **반드시 마지막 줄 단독, `https://` 포함, `?id=` 형식, 줄이지 않음** |
+
+실제 발송 예시 (2026-10-19):
+```
+📘[신규 AI·무료] 🔎 Google Deep Review — PDF 올리면 AI 검토단이 오류·모순 찾아줌
+🎁 검토 보고서 + 맞음·틀림 확인표 + 수정본
+💳 주 2회 무료, 초과는 Gemini API 키(사용량 과금)
+👉 https://johnpark236-tech.github.io/ai-instructor-update-log/lessons.html?id=AI-2026-10-CAT06-013
+```
+(이 교안은 이후 11장 기준으로 `기존 AI`로 정정됨 → 지금 보낸다면 `📘[기존 AI·무료]`)
+
+### 5-3. 하루 요약 형식 (오후 5시)
+집계: 어제 17시 ~ 지금(최근 24시간, KST). `lessons.json`의 `created_at`("YYYY-MM-DD HH:MM KST") 기준.
+- 새 교안 있을 때:
+```
+📊 AI 교안 하루 요약 (MM/DD 17시)
+새 교안 N개: <one_liner 1>, <one_liner 2> 외 N개
+릴리즈 노트 확인 N건 · 교안 대기 N건
+👉 https://johnpark236-tech.github.io/ai-instructor-update-log/lessons.html?id=<가장 최근 교안 ID>
+```
+- 새 교안 없을 때:
+```
+📊 AI 교안 하루 요약 (MM/DD 17시)
+지난 24시간 새 교안 없음
+릴리즈 노트 확인 N건 · 전체 교안 N개
+👉 https://johnpark236-tech.github.io/ai-instructor-update-log/lessons.html
+```
+- 릴리즈 노트 확인 = `releases.json` items 중 `checked`가 오늘·어제인 수 / 교안 대기 = `lesson_id` null 수 / 전체 = `lessons.json` count
+- 200자 넘으면 교안 이름 부분부터 줄임
+
+### 5-4. 공통 규칙
+- 문체 개조식(~함·~임·~없음), 짧게. 링크 줄은 절대 자르지 않음
+- **링크 형식 이유**: 카카오톡은 `https://` 없는 주소나 `#` 뒷부분을 링크로 인식하지 못해 목록 화면으로 열림(2026-10-15 확인) → `?id=` 사용, 사이트가 `?id=`를 교안 화면으로 연결
+- 발송 실패 시 **1번만 재시도**, 그래도 실패면 발행은 그대로 두고 실행 기록에 "카톡 실패"만 남김 (발행을 되돌리지 않음)
+- 교안을 만들지 않은 회차(SKIP·반려·실패)에는 새 교안 알림 보내지 않음
+- 개인 정보·토큰·내부 오류 문구를 메시지에 넣지 않음
+
+### 5-5. Codex에서 보내는 방법 (택1, John 결정 필요)
+| 방법 | 내용 | 주의 |
+|---|---|---|
+| ① PlayMCP를 Codex에 연결 | Codex CLI의 MCP 서버 설정에 카카오 PlayMCP를 추가하고 같은 `KakaotalkChat-MemoChat` 도구 사용 | Codex에서 PlayMCP 로그인·연결 가능 여부 **[확인 필요]**. GitHub Actions(무인 실행)에서는 로그인 유지가 어려울 수 있음 |
+| ② 카카오 REST API "나에게 보내기" | 카카오 개발자 앱 생성 → 카카오 로그인(동의항목 `talk_message`) → 토큰 발급 → `POST https://kapi.kakao.com/v2/api/talk/memo/default/send` (`template_object` 텍스트 템플릿, 링크 `web_url`·`mobile_web_url` = 교안 주소) | 액세스 토큰 만료가 짧아 **리프레시 토큰으로 갱신** 필요, 리프레시 토큰도 만료됨(주기적 재로그인) — 세부 만료 기간은 카카오 공식 문서로 **[확인 필요]**. 토큰은 GitHub Secrets에만 저장, 저장소·채팅에 노출 금지. 사이트 도메인을 앱 플랫폼(Web)에 등록해야 링크가 열림 |
+| ③ 텔레그램 | 이미 있는 `.github/workflows/telegram-notify.yml` + Secrets `TELEGRAM_BOT_TOKEN`·`TELEGRAM_CHAT_ID` | 카카오톡이 아님. 형식은 5-2와 같게 맞추면 됨 |
+| ④ 알림 없음 | Actions 실행 결과·사이트에서 확인 | — |
+
+- ②를 쓰면 발송 스크립트(예: `scripts/notify_kakao.py`)를 만들고, 배포 확인 단계 뒤에 실행. 메시지 생성 규칙은 5-2·5-3을 그대로 코드로 옮김 (200자 검사 포함)
 
 ## 6. 사이트 기능 (건드릴 때 깨지지 않게)
 
@@ -148,7 +203,7 @@ git push origin HEAD:main
 | 신규/기존 구분 | 11장 기준(회사 기준) | "신규 AI 또는 기존 AI 신기능" 일반 설명 | 11장 기준 문장 추가 |
 | 번호 표기 | 10-3 (①② / +) | 없음 | 추가 |
 | Grok·Genspark 우선 | John 요청 | 없음 | 추가 |
-| 카톡 알림 | 매 교안 | 없음 | 5장 대안 결정 |
+| 카톡 알림 | 매 교안 + 오후 5시 요약 | 없음 | 5장 형식 유지, 5-5 방법 결정 |
 | `?id=` 링크 | 필수 | 해당 없음 | 알림 도입 시 적용 |
 
 ---
@@ -178,10 +233,12 @@ git push origin HEAD:main
    고칠 수 있으면 고친 뒤 workflow_dispatch로 1회 시험 실행할 것.
 3. automation/codex/prompts/lesson.md 를 인수인계 7장 표와 비교해 빠진 규칙
    (신규/기존 구분 11장, 번호 표기 10-3, Grok·Genspark 우선)을 추가하는 변경안을 만들 것.
-   "새 소식 없을 때 SKIP vs 지난 기능으로 작성"과 "알림 방식(텔레그램/카카오 API/없음)"은
+   "새 소식 없을 때 SKIP vs 지난 기능으로 작성"과 "카카오톡 알림 방식(인수인계 5-5: PlayMCP/카카오 REST API/텔레그램/없음)"은
    내가 정할 테니 선택지만 정리해서 물어볼 것.
 4. 교안을 직접 1개 작성할 때는 인수인계 4장 절차와 8장 체크리스트를 지키고,
    커밋 이메일은 244302970+johnpark236-tech@users.noreply.github.com 만 사용할 것.
 5. 사실은 공식 1차 출처로만, 모르면 [확인 필요]. 지어내지 말 것.
-6. 결과는 한국어로, 바뀐 파일·배포 결과·실제 교안 주소(?id= 형식)를 짧게 보고할 것.
+6. 카카오톡 알림을 도입하게 되면 메시지 형식·링크 규칙은 인수인계 5-2~5-4를 글자 그대로 따를 것
+   (마지막 줄 https://…/lessons.html?id=<ID>, 200자 이내, 실패 시 1회 재시도).
+7. 결과는 한국어로, 바뀐 파일·배포 결과·실제 교안 주소(?id= 형식)를 짧게 보고할 것.
 ```
