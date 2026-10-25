@@ -65,7 +65,10 @@ def build(repo, kind, recover=False):
     for r in recent:
         status='UNRECORDED'
         detail='Legacy run or no sanitized result; publication unknown'
-        if r['id'] in by_run:
+        if r['status'] != 'completed':
+            status='RUNNING'
+            detail='작성·검수·배포 실행 중 또는 대기 중'
+        elif r['id'] in by_run:
             try:
                 blob=api(f"repos/{repo}/actions/artifacts/{by_run[r['id']]['id']}/zip",True)
                 with zipfile.ZipFile(io.BytesIO(blob)) as z:
@@ -105,6 +108,7 @@ def build(repo, kind, recover=False):
     Path('ops-dashboard/dashboard.md').write_text(text,encoding='utf-8')
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:f.write(text)
+    return result
 
 
 if __name__=='__main__':
