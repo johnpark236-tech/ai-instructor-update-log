@@ -450,8 +450,8 @@ def execute(kind, repo, *, no_push=False):
             raise RuntimeError("Unexpected staged files")
         # CI runners do not have a configured Git author by default.
         # Use an explicit automation identity only for validated content commits.
-        git(repo, "config", "user.name", "mannal-codex-bot")
-        git(repo, "config", "user.email", "actions@users.noreply.github.com")
+        git(repo, "config", "user.name", "John Park")
+        git(repo, "config", "user.email", "244302970+johnpark236-tech@users.noreply.github.com")
         commit_message = f"content: hourly Codex {kind} {content_id}"
         git(repo, "commit", "-m", commit_message)
         progress(kind, "commit_created", content_id=content_id)
