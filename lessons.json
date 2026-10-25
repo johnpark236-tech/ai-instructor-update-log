@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 175,
+  "count": 176,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT05-025",
+      "version": "v1.0",
+      "created_at": "2026-10-26T03:28:32+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "짧은 영어 환영 음성 만들기 — Firefly 음성 생성으로 속도와 쉼 다듬기",
+      "summary": "영어 환영문을 음성으로 변환 + 속도·쉼 조절 + 검수한 오디오 파일 보관",
+      "tool": "Adobe Firefly",
+      "feature": "음성 생성(Generate Speech) — Firefly Speech 모델의 텍스트 음성 변환·속도 조절·일시 정지 추가·오디오 다운로드",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2025-10-28",
+      "categories": [
+        "CAT-05"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "영어 환영 음성 파일 1개 + Before / After 검수 기록",
+      "access": "freemium",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "🔊",
+      "one_liner": "글 세 문장을 듣기 편한 환영 음성으로"
+    },
     {
       "id": "AI-2026-10-CAT03-034",
       "version": "v1.0",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T02:16:56+09:00",
+  "updated_at": "2026-10-26T03:28:32+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3766,6 +3766,21 @@
       },
       "checked": "2026-10-25",
       "lesson_id": "AI-2026-10-CAT03-033"
+    },
+    {
+      "id": "adobe-firefly-2025-10-28-generate-speech",
+      "date": "2025-10-28",
+      "tool": "Adobe Firefly",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Firefly 음성 생성(Generate Speech) 공개 베타",
+      "summary": "대본을 AI 음성으로 변환 + 목소리·속도 조절 + 오디오 다운로드. 현재 한국 개인 계정 무료 일일 체험과 유료 크레딧 경로 확인",
+      "source": {
+        "title": "Adobe 공식 출시 — 11 new ways to accelerate your creative process with Creative Cloud",
+        "url": "https://blog.adobe.com/en/publish/2025/10/28/11-new-ways-accelerate-your-creative-process-creative-cloud"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT05-025"
     }
   ]
 }
