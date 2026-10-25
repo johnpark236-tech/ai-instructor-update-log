@@ -137,7 +137,7 @@ def deploy(kind, repo):
 def report(kind, output):
     result = read_result()
     # Explicit allowlist: never include raw CLI output or files from CODEX_HOME.
-    keys = ['status','reason','error','kind','time','ended_at','attempts','id','commit','url','run_url','deployment_run_url','verified_at','next_action','sources']
+    keys = ['status','reason','error','kind','time','ended_at','attempts','id','commit','url','run_url','deployment_run_url','verified_at','next_action','sources','notification']
     result = {k: result[k] for k in keys if k in result}
     result['kind'] = kind
     output.mkdir(parents=True, exist_ok=True)
