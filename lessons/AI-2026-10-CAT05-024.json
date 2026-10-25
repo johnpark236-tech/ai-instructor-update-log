@@ -1,0 +1,511 @@
+{
+  "id": "AI-2026-10-CAT05-024",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-25T21:47:20+09:00",
+  "checked": "2026-10-25",
+  "review_by": "2027-01-25",
+  "title": "Google 번역 듣기 모드로 귀에 대고 안내를 들으며 여행 확인 카드 만들기",
+  "summary": "① Android 수화부로 실시간 번역 듣기 ② 안내의 장소·시간 대조 ③ 여행 안내 확인 카드 1장 완성",
+  "glance": {
+    "emoji": "👂",
+    "one_liner": "이어폰 없이 귀에 대고 번역 듣기",
+    "cards": [
+      {
+        "icon": "📱",
+        "title": "Android 실습",
+        "text": "휴대전화 수화부로 번역 듣기"
+      },
+      {
+        "icon": "💳",
+        "title": "무료 앱",
+        "text": "유료 AI 구독·API 키 불필요"
+      },
+      {
+        "icon": "📝",
+        "title": "확인 카드",
+        "text": "들은 뜻과 원문 조건을 대조"
+      }
+    ],
+    "diagram": {
+      "title": "듣고 확인해 작은 카드로 정리",
+      "nodes": [
+        {
+          "icon": "🗣️",
+          "label": "영어 안내"
+        },
+        {
+          "icon": "🌐",
+          "label": "실시간 번역"
+        },
+        {
+          "icon": "👂",
+          "label": "한국어 듣기"
+        },
+        {
+          "icon": "📝",
+          "label": "조건 대조"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "못 알아들은 안내",
+        "text": "외국어 안내에서 장소와 시간을 놓침"
+      },
+      "after": {
+        "label": "내 확인 카드",
+        "text": "① 들은 뜻 ② 원문 조건 ③ 다시 물을 말 기록"
+      }
+    },
+    "cautions": [
+      "주변 사람 동의 후 마이크 사용",
+      "장소·시간은 원문과 재확인",
+      "이동 중 귀에 대고 조작 금지"
+    ]
+  },
+  "tool": "Google Translate",
+  "feature": "Live translate 듣기(Listening) 모드 — Android 휴대전화 수화부(earpiece)로 번역 음성 듣기, Gemini 3.5 Live Translate 적용",
+  "company": "Google",
+  "type": "update",
+  "released": "2026-06-09",
+  "categories": [
+    "CAT-05",
+    "CAT-10"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-GLB",
+    "JOB-EDU",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 28,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "최신 Google 번역 앱 설치가 가능한 Android 휴대전화, 설치·업데이트 수업 전 완료",
+    "Wi-Fi 연결과 마이크 권한 허용",
+    "본인 기기 수화부·미디어 음량 사전 점검, 블루투스 오디오 연결 해제",
+    "영어 예문을 읽어 줄 강사 또는 짝 + 종이 확인 카드"
+  ],
+  "outcome": "여행 안내 확인 카드 1장: ① 들은 한국어 뜻 ② 장소·시간 대조 결과 ③ 다시 물을 말",
+  "objectives": [
+    "실시간 번역의 듣기 모드와 텍스트만 모드 구분 가능",
+    "휴대전화를 귀에 대고 영어 안내의 한국어 번역 청취 가능",
+    "장소·시간을 원문과 대조한 여행 확인 카드 작성 가능"
+  ],
+  "pricing": {
+    "access": "free",
+    "summary": "Google 번역 개인용 무료 앱 경로, Google AI Pro·Ultra 구독이나 조직 계약 불필요(2026-10-25 확인)",
+    "plans": [
+      {
+        "name": "Google 번역(Android 개인용 앱)",
+        "price": "무료 설치·별도 구독 요금제 없음",
+        "features": [
+          "공식 Google LLC 배포 앱의 설치 경로 이용",
+          "실시간 번역 듣기 모드의 휴대전화 수화부 사용",
+          "이번 실습의 모든 단계는 같은 무료 앱에서 진행"
+        ]
+      }
+    ],
+    "note": "① 무료 설치 경로는 Google Play 공식 배포 페이지 확인 ② 개인용 Google 번역과 유료 Google Meet 음성 번역·개발자 API는 별도 제품 ③ Wi-Fi 권장, 이동통신 데이터 요금은 통신사 계약에 따름 ④ 무제한 이용량·오프라인 한국어 실시간 통역 보장 없음",
+    "checked": "2026-10-25",
+    "sources": [
+      {
+        "title": "Google — Fluid, natural voice translation with Gemini 3.5 Live Translate",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/"
+      },
+      {
+        "title": "Google 번역 고객센터 — 실시간 번역 기능으로 실시간 음성 통역하기(Android)",
+        "url": "https://support.google.com/translate/answer/6142474?co=GENIE.Platform%3DAndroid&hl=ko"
+      },
+      {
+        "title": "Google LLC — Google 번역, Google Play 공식 배포 페이지",
+        "url": "https://play.google.com/store/apps/details?hl=ko&id=com.google.android.apps.translate"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-06-09",
+      "text": "Gemini 3.5 Live Translate의 Google 번역 글로벌 제공 및 Android 수화부 듣기 모드 순차 출시 발표"
+    },
+    {
+      "date": "2026-09-04",
+      "text": "iOS 수화부 듣기 글로벌 확대 발표에서 Android의 기존 제공 재확인"
+    },
+    {
+      "date": "2026-10-25",
+      "text": "현재 Android 공식 도움말의 듣기 경로·한국어 지원·무료 앱 배포 상태 재확인"
+    }
+  ],
+  "theory": {
+    "definition": "실시간 번역(Live translate) = 들어오는 말을 다른 언어의 음성으로 바꾸는 AI 기능. 이번 핵심은 Android 듣기(Listening) 모드에서 이어폰 대신 전화 수화부로 한국어 듣기",
+    "analogy": "옆에서 안내를 듣고 작은 목소리로 뜻을 전해 주는 통역 도우미와 유사",
+    "comparison": {
+      "headers": [
+        "구분",
+        "텍스트만",
+        "이번 듣기 모드"
+      ],
+      "rows": [
+        [
+          "확인 방법",
+          "번역 글 읽기",
+          "수화부 번역 음성 듣기"
+        ],
+        [
+          "쓰임",
+          "화면을 볼 수 있는 상황",
+          "귀로 안내 뜻 확인"
+        ],
+        [
+          "검수",
+          "원문 조건 대조",
+          "들은 뒤 원문 조건 대조"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "새 모델과 새 듣기 경로",
+        "body": "기존 Google AI의 업데이트로 분류. 2026-06-09 발표의 Android 수화부 듣기 경로가 이번 주제, 앱 전체의 최초 출시일 아님"
+      },
+      {
+        "title": "한국 제공 판정",
+        "body": "① 6월 기능 발표의 Google 번역 글로벌 제공 ② 9월 Android 기존 제공 재확인 ③ 현재 국내 공식 Android 기능 안내의 수화부 듣기·한국어 항목을 교차 확인(2026-10-25)"
+      },
+      {
+        "title": "작품은 검수 기록",
+        "body": "① 들은 뜻 ② 장소·시간 일치 여부 ③ 재질문 한 줄을 종이 한 장에 기록. 번역 표현이 예시와 달라도 핵심 조건 일치 여부로 판단"
+      },
+      {
+        "title": "통역과 사실 확인",
+        "body": "실시간 음성 번역도 오류 가능. 가격·약속·탑승 정보는 글이나 담당자에게 재확인, 진단·계약 판단의 단독 근거로 사용 금지"
+      }
+    ],
+    "can": [
+      "이어폰 없이 수화부로 실시간 번역 청취",
+      "영어 예문을 한국어로 듣고 핵심 조건 메모",
+      "번역을 잠시 멈추고 원문 조건 대조"
+    ],
+    "cannot": [
+      "항상 정확한 통역·즉시 재생 보장",
+      "일반 전화 통화나 다른 앱의 내부 오디오 자동 통역 보장",
+      "한국어 실시간 번역의 오프라인 작동 보장",
+      "이번 Android 경로를 모든 iPhone에 동일 적용"
+    ],
+    "safety": [
+      "짝의 동의를 받은 가상 안내문만 입력, 실제 승객·주변 대화 수집 금지",
+      "개인 이름·전화번호·여권·예약번호 입력 금지",
+      "수화부 음량을 낮게 시작, 큰 소리 반복 재생 금지",
+      "앉거나 멈춘 상태에서 조작, 길을 걷거나 운전하며 실습 금지",
+      "번역 오류 가능성을 카드에 기록, 실제 여행 정보로 오인 금지"
+    ]
+  },
+  "practice": {
+    "preview": "가상 예시 카드(실제 앱 결과 아님): ① 들은 뜻 「안내소는 2층, 문 닫는 시간은 오후 5시」 ② 원문 second floor + five p.m. 대조 ③ 다시 물을 말 「2층이 맞나요?」",
+    "follow": [
+      {
+        "title": "무료 앱과 마이크 준비",
+        "minutes": 4,
+        "do": "Google LLC의 Google 번역 앱 열기 → Wi-Fi 연결 → 마이크 권한 허용 → 블루투스 오디오 해제 → 낮은 음량으로 준비",
+        "prompt": "",
+        "expect": "Android 무료 앱 실습 준비 완료",
+        "note": "① 유료 결제 화면이면 앱 개발자 확인 후 중단 ② 앱 설치 시간은 수업 전 준비에 포함"
+      },
+      {
+        "title": "수화부로 첫 안내 듣기",
+        "minutes": 8,
+        "do": "하단 실시간 번역 → 듣기 선택 → 입력 영어·듣는 언어 한국어 설정 → 강사가 아래 문장을 천천히 낭독 → 휴대전화를 귀에 대고 청취 → 화면으로 돌아와 말하기 버튼으로 일시중지",
+        "prompt": "The information desk is on the second floor. It closes at five p.m.",
+        "expect": "영어 안내를 한국어 음성으로 들은 뒤 뜻 한 줄 메모",
+        "note": "① 프롬프트는 AI 지시문이 아닌 강사 낭독용 원문 ② 번역 음성이 들리는지 직접 확인, 글만 표시되면 청취 완료와 구분 ③ 세부 언어 선택 화면 명칭 [확인 필요]"
+      },
+      {
+        "title": "장소와 시간을 원문과 대조",
+        "minutes": 4,
+        "do": "종이에 들은 뜻 작성 → 강사 원문의 second floor·five p.m.와 대조 → 각각 일치·다름·못 들음 중 표시",
+        "prompt": "",
+        "expect": "첫 안내의 장소·시간 대조 2칸",
+        "note": "정답 뜻: 안내소 2층 + 오후 5시 마감. 실제 시설 안내 아님"
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 여행 안내 한 문장 선택",
+        "minutes": 7,
+        "do": "식물원·박물관 중 가상 장소 선택 → 짝이 아래 원문 또는 museum을 garden으로 바꾼 문장을 낭독 → 같은 듣기 경로로 청취 → 일시중지",
+        "prompt": "The museum opens at ten a.m. Please use the main entrance.",
+        "expect": "내가 고른 장소의 한국어 뜻 메모",
+        "note": "① museum=박물관, garden=정원 ② opens=개장, main entrance=정문 ③ 자연스러운 한국어 표현은 결과마다 차이 가능"
+      },
+      {
+        "title": "확인 카드 완성 후 종료",
+        "minutes": 5,
+        "do": "들은 뜻을 첫 칸에 정리 → 선택한 장소·오전 10시·정문을 원문과 대조해 둘째 칸에 표시 → 재질문 한 줄 작성 → 상단 뒤로 버튼으로 세션 종료",
+        "prompt": "",
+        "expect": "여행 안내 확인 카드 1장",
+        "note": "① 카드 제목은 가상 여행 안내 연습 ② 결과물 저장은 종이 기록, 앱 내 내보내기 기능 불필요 ③ 수화부로 실제 청취 여부도 카드 아래 표시"
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "첫 원문을 그대로 듣고 2층·오후 5시 두 조건만 표시"
+      },
+      {
+        "level": "중급",
+        "mission": "박물관·정원 중 하나를 선택해 세 조건을 담은 개인 카드 완성"
+      },
+      {
+        "level": "고급",
+        "mission": "같은 원문을 두 번 듣고 달라진 표현과 유지된 조건 비교, 추가 앱 없이 카드 뒷면 기록"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "짝에게 ① 선택한 안내 ② 원문과 맞은 조건 ③ 다시 물을 말을 카드로 설명",
+    "quiz": [
+      {
+        "q": "오늘 Android 실습에서 이어폰 없이 번역 음성을 듣는 방법은 무엇인가요?",
+        "options": [
+          "휴대전화를 귀에 대고 듣기 모드 사용",
+          "비행기 모드만 켜기",
+          "유료 API 키 입력",
+          "카메라로 바닥 촬영"
+        ],
+        "answer": 0,
+        "explain": "듣기 모드에서 휴대전화 수화부로 번역 청취 가능. 인터넷·마이크·음량 점검도 필요"
+      },
+      {
+        "q": "오늘 핵심 실습에 필요한 요금 조건은 무엇인가요?",
+        "options": [
+          "Google AI Ultra 필수",
+          "무료 Google 번역 앱, 데이터 요금은 별도",
+          "기관 조직 계약 필수",
+          "번역 한 문장마다 유료 API 결제"
+        ],
+        "answer": 1,
+        "explain": "개인용 무료 Google 번역 앱 실습임. 유료 Meet 기능이나 개발자 API와 별도이며 이동통신 요금은 별개"
+      },
+      {
+        "q": "번역에서 오후 5시인지 오전 5시인지 헷갈리면 어떻게 할까요?",
+        "options": [
+          "들리는 대로 단정",
+          "친구 개인정보로 다시 시도",
+          "원문이나 담당자에게 시간 재확인",
+          "마이크를 계속 켜 놓기"
+        ],
+        "answer": 2,
+        "explain": "시간은 실수하면 약속에 영향 가능. 원문 five p.m.와 대조하고 불명확하면 다시 질문"
+      }
+    ],
+    "next": [
+      "실제 여행 전 자주 쓰는 짧은 안내문으로 추가 연습",
+      "민감한 대화의 동의·입력 범위를 정하는 AI 보안 수업으로 연결"
+    ],
+    "rubric": [
+      {
+        "criterion": "실제 청취",
+        "high": "수화부 청취 후 뜻 기록",
+        "mid": "짝의 도움으로 청취",
+        "low": "글이나 사전 예시만 관찰"
+      },
+      {
+        "criterion": "조건 검수",
+        "high": "장소·시간 대조와 재질문 기록",
+        "mid": "조건 일부만 대조",
+        "low": "번역을 검수 없이 확정"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~6분",
+        "content": "작품 카드 미리보기·학습 목표",
+        "note": "여행 경험 한 가지 떠올리기"
+      },
+      {
+        "time": "6~18분",
+        "content": "새 기능·국내 제공·무료 조건·안전",
+        "note": "Google 번역과 유료 Meet 구분"
+      },
+      {
+        "time": "18~34분",
+        "content": "앱 준비·첫 안내 청취·원문 대조",
+        "note": "따라 하기 16분, 한 조씩 낭독"
+      },
+      {
+        "time": "34~46분",
+        "content": "내 안내 선택·청취·확인 카드 완성",
+        "note": "내 것 만들기 12분, 실습 합계 28분"
+      },
+      {
+        "time": "46~52분",
+        "content": "짝 설명·핵심 문제 3개·세션 종료",
+        "note": "청취 여부와 검수 과정을 함께 평가"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "오늘은 여행 안내를 귀로 듣고 확인 카드 한 장을 만듭니다. 번역이 들렸다는 것과 내용이 맞다는 것은 따로 확인해 볼게요."
+      },
+      {
+        "label": "낭독 전",
+        "text": "지금 읽는 문장은 가상 안내입니다. 듣기 모드를 켠 분만 한 조씩 시작해 주세요. 다른 조의 목소리가 섞이지 않게 잠깐 기다리겠습니다."
+      },
+      {
+        "label": "검수",
+        "text": "몇 층인지, 오전인지 오후인지 카드에 적어 보세요. 못 들었다고 표시해도 괜찮아요. 다시 물을 말을 준비하는 것도 오늘의 성과입니다."
+      },
+      {
+        "label": "마무리",
+        "text": "앱 사용은 무료지만 이동통신 요금은 따로 생길 수 있습니다. 실제 여행에서는 시간과 장소를 안내판이나 직원에게 한 번 더 확인해 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "듣기 메뉴·수화부 경로 미노출",
+        "response": "앱 업데이트·오디오 연결 점검 후에도 미노출이면 강사 Android 시연 관찰과 종이 카드 작성, 직접 청취 완료와 구분"
+      },
+      {
+        "situation": "인터넷·서비스 장애",
+        "response": "사전 번역 예시 인쇄물과 영어 원문으로 조건 대조, 온라인 청취는 추후 보충"
+      },
+      {
+        "situation": "iPhone만 보유·청각상 어려움",
+        "response": "본인 동의하에 강사 준비 Android로 개별 체험, 어려우면 텍스트 카드 활동. iOS 무이어폰 듣기는 문서 간 안내 차이가 있어 동일 경로 보장 금지"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "마이크 입력 없음",
+        "fix": "Android 설정의 앱 권한에서 Google 번역 마이크 허용 확인, 다른 조 음성 입력 중단"
+      },
+      {
+        "issue": "귀에 대도 음성 없음",
+        "fix": "미디어 음량·출력 장치·블루투스 연결 확인, 텍스트만 대신 듣기 선택 여부 점검"
+      },
+      {
+        "issue": "주변 말이 함께 번역됨",
+        "fix": "나머지 조 일시중지, 한 조씩 짧게 낭독"
+      },
+      {
+        "issue": "시간·장소가 잘못 들림",
+        "fix": "일시중지 후 원문과 대조, 짧은 문장으로 다시 낭독"
+      },
+      {
+        "issue": "앱에 메뉴가 다르게 표시됨",
+        "fix": "최신 버전·실시간 번역 화면 확인, 해결 안 되면 강사 개별 지원과 Plan B"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국에서 이 기능을 사용할 근거는?",
+        "a": "Google 번역 글로벌 제공 발표와 현재 한국어 Android 기능 도움말의 수화부 듣기 안내 교차 확인(2026-10-25)"
+      },
+      {
+        "q": "유료 AI 요금제가 필요한가?",
+        "a": "개인용 무료 Google 번역 앱 경로, Google AI 구독·조직 계약·API 키 불필요. 데이터 요금 별도"
+      },
+      {
+        "q": "이어폰을 꼭 사야 하나?",
+        "a": "이번 Android 핵심은 전화 수화부로 듣기, 이어폰 구매 불필요"
+      },
+      {
+        "q": "오프라인에서도 한국어 통역 가능한가?",
+        "a": "이번 수업은 온라인만 적용. 일반 오프라인 텍스트 번역과 실시간 통역은 별도, 한국어 오프라인 통역 보장 금지"
+      },
+      {
+        "q": "아이폰도 똑같이 따라 하면 되나?",
+        "a": "이번 교안은 Android 한정. iOS는 수화부 지원 발표와 도움말의 무헤드폰 듣기 비활성 안내가 함께 있어 별도 기기 점검 전 동일 경로 안내 보류"
+      },
+      {
+        "q": "이것으로 전화 통화도 번역 가능한가?",
+        "a": "이번 실습은 마이크로 들리는 대면 음성, 일반 전화 통화 내부 오디오 통역 수업 아님"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "큰 글씨 카드와 원문 제공, 두 조건만 먼저 표시. 조작과 귀로 듣기를 번갈아 진행"
+      },
+      {
+        "level": "중급",
+        "guide": "선택 원문을 개인화하고 세 조건 대조 후 재질문 작성"
+      },
+      {
+        "level": "고급",
+        "guide": "같은 조건의 표현 변동을 비교하고 오류·청취 실패 원인 분류"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "지원 언어에서 익숙한 언어를 선택하는 선택 활동, 핵심 영어→한국어 실습과 별도로 기록"
+      }
+    ],
+    "pro_points": [
+      "영어 발음 평가 대신 청취 조작과 조건 검수 평가",
+      "사전 예시를 앱 실측 결과로 표시 금지",
+      "유료 기능·API 안내 없이 개인용 앱에서 완결"
+    ],
+    "day_before": [
+      "한국 Android 최신 앱에서 영어→한국어 수화부 실제 청취 확인과 화면 캡처 준비",
+      "실시간 번역·듣기·일시중지·뒤로 버튼 실제 위치 확인",
+      "마이크 권한·Wi-Fi·음량·블루투스 출력 장치 사전 점검",
+      "큰 글씨 원문·확인 카드·사전 예시 인쇄, 가상 안내 표시",
+      "한 조씩 낭독할 좌석 배치·동의 안내 준비, iPhone 보유자 대체 기기 확인"
+    ]
+  },
+  "verification": [
+    "2026-10-25 주제 선정 후 공식 글로벌 제공·한국 Android 기능 안내·무료 앱 배포 조건 확인을 마친 뒤 본문 작성",
+    "국내 제공 근거: 2026-06-09 Google 번역 글로벌 제공과 Android 수화부 신규 듣기 발표 + 2026-09-04 Android 기존 제공 재확인 + 현재 한국어 Android 개별 기능 문서의 휴대전화를 귀에 대기 안내. 한국어 지원만으로 국내 제공 추정 아님",
+    "중복 조사: lessons.json의 기존 172건 전체 제목·도구·기능과 releases.json 비교. Google Translate 수화부 듣기 교안·출시 항목 없음. Genspark Speakly 번역과는 별도 서비스·입력 경로",
+    "최근 14일 탐색: Canva 공식 뉴스룸의 Craft는 CAT04-016 중복, Gemini Customize는 CAT01-010 중복, Gemini Notebook 슬라이드·영상 제어는 기존 해당 기능 교안과 겹침. Docs Live는 현재 영어 전용으로 초급 핵심 실습에서 제외, Meet 63개 언어 음성 번역은 지역 제한 명시와 국내 대상 근거 미확보로 제외. Adobe 공식 최신 기능 안내의 영상 배경 제거는 CAT05-017 중복",
+    "대기 항목 검토: Muse Wonder는 API·Muse Code 우선과 앱 확대 예정으로 국내 초급 앱 실습 근거 부족, Gemini agent는 기업 업무 시스템 중심으로 개인 초급 수업 준비 부담. Finances 미국·청소년 도구·종료 예고·이름 변경·개발자 마켓플레이스는 대상 또는 실습 목적 부적합. 받아쓰기 전환·재시도는 기존 받아쓰기 교안 CAT10-006과 중복 영역. 이후 최근 6~12개월 범위 공식 기록에서 미작성 Google 번역 Android 수화부 기능 선정",
+    "출시일 2026-06-09 유지, 작성일로 대체하지 않아 기존 화면의 지난 기능 표시 적용 대상",
+    "[미검증] 작성자의 실제 기기 로그인·청취 재현 없음. 공식 문서 기반으로 작성, 강의 전 한국 Android 직접 점검 필수",
+    "[확인 필요] 제조사·앱 버전별 한국어 메뉴 위치·수화부 전환 감도·실제 음량. 핵심 제공 지역·무료 경로와 별개인 기기별 세부 사항",
+    "iOS는 수화부 지원 발표와 도움말의 듣기 비활성 조건이 혼재해 핵심 경로에서 제외. Android 현재 도움말에는 귀에 대기 경로 명시",
+    "기존 AI 제공 회사 Google의 기능·모델 업데이트이므로 교안과 releases.json 모두 update 적용. 기존 Excel Copilot Show Changes 후보 재선정 없음"
+  ],
+  "sources": [
+    {
+      "title": "Google — Fluid, natural voice translation with Gemini 3.5 Live Translate",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
+      "checked": "2026-10-25"
+    },
+    {
+      "title": "Google 번역 고객센터 — 실시간 번역 기능으로 실시간 음성 통역하기(Android)",
+      "url": "https://support.google.com/translate/answer/6142474?co=GENIE.Platform%3DAndroid&hl=ko",
+      "checked": "2026-10-25"
+    },
+    {
+      "title": "Google — Google Translate rolls out new upgrades for iOS and Android.",
+      "url": "https://blog.google/products-and-platforms/products/translate/google-translate-ios-android-upgrades/",
+      "checked": "2026-10-25"
+    },
+    {
+      "title": "Google LLC — Google 번역, Google Play 공식 배포 페이지",
+      "url": "https://play.google.com/store/apps/details?hl=ko&id=com.google.android.apps.translate",
+      "checked": "2026-10-25"
+    },
+    {
+      "title": "Google 번역 고객센터 — Google 번역 다운로드 및 사용하기",
+      "url": "https://support.google.com/translate/answer/6350850?co=GENIE.Platform%3DAndroid&hl=ko",
+      "checked": "2026-10-25"
+    }
+  ]
+}

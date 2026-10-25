@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 20:34 KST",
+  "updated_at": "2026-10-25 21:47 KST",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -121,6 +121,21 @@
       },
       "checked": "2026-10-20",
       "lesson_id": "AI-2026-10-CAT09-007"
+    },
+    {
+      "id": "google-translate-2026-06-09-android-earpiece",
+      "date": "2026-06-09",
+      "tool": "Google Translate",
+      "company": "Google",
+      "type": "update",
+      "title": "Google 번역 Android 수화부 듣기 모드·Gemini 3.5 Live Translate",
+      "summary": "글로벌 Google 번역 모델 업데이트와 Android 휴대전화 수화부로 듣기 순차 출시, 개인용 무료 앱의 온라인 실습",
+      "source": {
+        "title": "Google — Fluid, natural voice translation with Gemini 3.5 Live Translate",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/"
+      },
+      "checked": "2026-10-25",
+      "lesson_id": "AI-2026-10-CAT05-024"
     },
     {
       "id": "grok-2026-05-06-connectors",
