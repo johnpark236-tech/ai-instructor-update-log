@@ -101,9 +101,10 @@ window.LESSON_META = {
   totalMinutes(L) { const m = L.minutes || {}; return (m.theory || 0) + (m.practice || 0) + (m.wrap || 0); },
   promptText(L) {
     const out = [`# ${L.title}`, `교안 ID: ${L.id} (${L.version}) · 기준일 ${L.checked}`, ''];
-    const add = (head, steps) => (steps || []).forEach((s, i) => { if (s.prompt) out.push(`## ${head} ${i + 1}. ${s.title}`, s.prompt, ''); });
+    const add = (head, steps) => (steps || []).forEach((s, i) => { if (s.prompt) out.push(`## ${head} ${i + 1}. ${s.title}`, globalThis.LESSON_INPUTS?.text(globalThis.LESSON_INPUTS.get(L,s,head==='따라하기'?i:L.practice.follow.length+i)) || '[확인 필요] 입력 위치 미등록', '', s.prompt, ''); });
     add('따라하기', L.practice.follow); add('내 것으로', L.practice.make_mine);
     out.push('## 도전 과제'); L.practice.challenges.forEach(c => out.push(`${c.level} ${c.mission}`));
     return out.join('\n');
   }
 };
+

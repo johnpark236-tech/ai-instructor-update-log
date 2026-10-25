@@ -87,6 +87,7 @@ label.ck{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:point
 footer{padding:44px 0;color:#6f87a6;font-size:12px}
 @media print{details{display:block}details>*{display:block}body{background:#fff;color:#000}header,.tools,.tabs,.sync,.mk,.bar,footer,.cp{display:none}.card,.ins{background:#fff;border-color:#ccc}.ex,.qe{color:#060}.q .qe{display:block}}
 .practice-link{color:var(--a);text-decoration:underline;text-underline-offset:3px}.practice-link:focus-visible{outline:2px solid var(--a);outline-offset:4px}.practice-launch{display:flex;flex-wrap:wrap;gap:8px 14px;margin:10px 0;font-size:14px}.practice-launch a{padding:5px 0}
+.prompt-input{background:#10283a;border:1px solid #316070;border-radius:12px;padding:12px 14px;margin:12px 0}.input-label{font-size:13px;color:var(--m);margin-bottom:6px}.input-site{font-weight:800;font-size:17px;display:inline-block;padding:4px 0}.input-location{margin:7px 0;line-height:1.65}.input-note{color:var(--w);font-size:13px}.prompt-input small{color:var(--m)}
 </style>
 </head>
 <body>
@@ -96,6 +97,7 @@ footer{padding:44px 0;color:#6f87a6;font-size:12px}
 <script src="./analytics-config.js"></script>
 <script src="./analytics.js"></script>
 <script src="./lesson-meta.js"></script>
+<script src="./lesson-inputs.js?v=20261026-input-targets"></script>
 <script src="./lesson-pptx.js"></script>
 <script>
 const M=window.LESSON_META,app=document.getElementById('app');
@@ -196,58 +198,14 @@ const CN=n=>`<span class="cnt">${n}개</span>`;
 const T=(h,rows)=>`<div class="tw"><table class="${h.length>=3?'wide':''} ${rows.every(r=>String(r[0]).length<=12)?'nw1':''}"><thead><tr>${h.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map((r,ri)=>`<tr>${r.map((c,ci)=>`<td>${ci===0&&rows.length>1?`<b class="rn">${ri+1})</b> `:''}${NX(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 const UL=(a,c='')=>`<ol class="n ${c}">${a.map(x=>`<li>${NX(x)}</li>`).join('')}</ol>`;
 
-// 실습 사이트: 본문·제목만 링크화하고 복사할 프롬프트 원문은 유지
-const PRACTICE_SITES=[
- ['Workspace Studio','https://studio.workspace.google.com/',['Google Workspace Studio','Workspace Studio','Studio']],
- ['Google AI Studio','https://aistudio.google.com/',['Google AI Studio','AI Studio']],
- ['Gemini','https://gemini.google.com/',['Gemini','제미나이']],
- ['Google Drive','https://drive.google.com/',['Google Drive','Drive','구글 드라이브']],
- ['Google Docs','https://docs.google.com/document/',['Google Docs','Google 문서','구글 문서']],
- ['Gmail','https://mail.google.com/',['Gmail','지메일']],
- ['Google Chat','https://chat.google.com/',['Google Chat']],
- ['NotebookLM','https://notebooklm.google.com/',['NotebookLM']],
- ['ChatGPT','https://chatgpt.com/',['ChatGPT','챗GPT']],
- ['Claude','https://claude.ai/',['Claude']],
- ['Grok','https://grok.com/',['Grok']],
- ['Genspark','https://www.genspark.ai/',['Genspark','젠스파크']],
- ['Perplexity','https://www.perplexity.ai/',['Perplexity']],
- ['Microsoft Copilot','https://copilot.microsoft.com/',['Microsoft Copilot']],
- ['Canva','https://www.canva.com/',['Canva']],
- ['Adobe Firefly','https://firefly.adobe.com/',['Adobe Firefly','Firefly']],
- ['ElevenLabs','https://elevenlabs.io/',['ElevenLabs']],
- ['Suno','https://suno.com/',['Suno']],
- ['Runway','https://app.runwayml.com/',['Runway']],
- ['Midjourney','https://www.midjourney.com/',['Midjourney']],
- ['Notion','https://www.notion.so/',['Notion']]
-];
-function practiceSites(L,s){
- const safe=u=>{try{return new URL(u).protocol==='https:'}catch{return false}};
- const explicit=(s.links||[]).filter(x=>x&&x.label&&safe(x.url)).map(x=>[x.label,x.url,[x.label]]);
- const context=String(L.tool||'')+' '+String(L.feature||'');
- const text=[s.title,s.do].join(' ');
- const matches=t=>PRACTICE_SITES.filter(x=>x[2].some(a=>t.includes(a)));
- // Studio 단독 표기는 Workspace 문맥에서만 연결하고 AI Studio와 구분
- const valid=xs=>xs.filter(x=>x[0]!=='Workspace Studio'||(/Workspace Studio/.test(context+' '+text)&&(!/AI Studio/.test(text)||/Workspace Studio/.test(text))));
- const direct=valid(matches(text));
- const primary=matches(context).filter(x=>x[0]!=='Workspace Studio'||!/AI Studio/.test(context));
- const sites=[...explicit,...direct,...primary];
- return sites.filter((x,i)=>sites.findIndex(y=>y[1]===x[1])===i);
+// 각 프롬프트의 실제 입력 목적지만 표시 (이름 기반 자동 링크 금지)
+function promptInput(L,s,i){
+ if(!s.prompt)return '';
+ const t=window.LESSON_INPUTS?.get(L,s,i);
+ if(!t)return '<div class="prompt-input"><b>[확인 필요] 실제 입력 사이트·위치 미등록</b><p>방법 자세히에서 입력 환경을 먼저 확인할 것</p></div>';
+ const web=t.url?`<a class="practice-link input-site" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">${esc(t.label)} 열기 ↗</a>`:`<b>${esc(t.label)} — 웹 입력 사이트 없음</b>`;
+ return `<div class="prompt-input" aria-label="프롬프트 입력할 곳"><div class="input-label">${t.kind==='speech'?'🎤 예문을 말할 곳':'📍 붙여넣을 곳'}</div>${web}<p class="input-location">${esc(t.location)}</p>${t.note?`<p class="input-note">⚠️ ${esc(t.note)}</p>`:''}${t.url?'<small>로그인 후 위 입력 위치로 이동 · 프롬프트 자동 입력·전송 없음</small>':''}</div>`;
 }
-function practiceAnchor(label,url){return '<a class="practice-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(label)+' 열기 (새 탭)">'+esc(label)+'</a>'}
-function practiceText(text,sites){
- const aliases=sites.flatMap(x=>x[2].map(a=>[a,x[1]])).sort((a,b)=>b[0].length-a[0].length);
- const raw=String(text??'').replace(/비포/g,'Before').replace(/애프터/g,'After');let out='',pos=0;
- while(pos<raw.length){
-   const hit=aliases.find(([a])=>raw.startsWith(a,pos)&&(!/[A-Za-z0-9]/.test(a[0])||pos===0||!/[A-Za-z0-9]/.test(raw[pos-1]))&&(!/[A-Za-z0-9]/.test(a.at(-1))||!/[A-Za-z0-9]/.test(raw[pos+a.length]||'')));
-   if(hit){out+=practiceAnchor(hit[0],hit[1]);pos+=hit[0].length}else{out+=esc(raw[pos]);pos++}
- }return out;
-}
-function practiceDirections(text,sites){
- const r=M.splitItems(text);
- if(r.items.length<2)return practiceText(text,sites);
- return (r.lead?'<div class="nlead">'+practiceText(r.lead,sites)+'</div>':'')+'<ol class="n">'+r.items.map(x=>'<li>'+practiceText(x,sites)+'</li>').join('')+'</ol>';
-}
-
 const steps=(arr,start)=>arr.map((s,i)=>`<div class="card step"><div class="sh">STEP ${start+i}. ${esc(s.title)}${s.minutes?`<span>${s.minutes}분</span>`:''}</div><p style="margin:6px 0">${esc(s.do)}</p>${s.prompt?`<div class="prompt"><button class="cp" type="button">복사</button><span class="pv">${esc(s.prompt)}</span></div>`:''}<div class="ex">${esc(s.expect)}</div>${s.note?`<div class="sn">⚠️ ${esc(s.note)}</div>`:''}</div>`).join('');
 
 const fmtP=(v,cur)=>cur==='KRW'?'₩'+v.toLocaleString('ko-KR'):'$'+v;
@@ -290,11 +248,11 @@ async function lessonView(id){
     <div class="card full"><div class="ct">⚠️ 주의 ${CN(G.cautions.length)}</div><div class="caut">${G.cautions.map((c,i)=>`<span>⚠️ ${i+1}) ${esc(c)}</span>`).join('')}</div>
     ${(L.verification||[]).length?`<a class="vlink" href="#" data-open="verify">🔎 강의 전 확인 ${L.verification.length}개 → 자세한 설명</a>`:''}</div>
   </div>`:`<p class="lead">${esc(L.summary)}</p>`;
-  const stepCard=(s,i)=>{const sites=practiceSites(L,s);return `<div class="card step" id="st${i+1}"><div class="sh"><span class="sn1">${i+1}</span><b>${practiceText(s.title,sites)}</b>${s.minutes?`<em>${s.minutes}분</em>`:''}</div>
-    ${sites.length?`<div class="practice-launch" aria-label="실습 사이트 열기">${sites.map(x=>practiceAnchor(x[0]+' 열기 ↗',x[1])).join('')}</div>`:''}
+  const stepCard=(s,i)=>`<div class="card step" id="st${i+1}"><div class="sh"><span class="sn1">${i+1}</span><b>${esc(s.title)}</b>${s.minutes?`<em>${s.minutes}분</em>`:''}</div>
+    ${promptInput(L,s,i)}
     ${s.prompt?`<div class="prompt"><button class="cp" type="button">복사</button><span class="pv">${esc(s.prompt)}</span></div>`:''}
     <div class="ex">${NX(s.expect)}</div>
-    <details class="how"><summary>방법 자세히</summary><div class="mb0">${practiceDirections(s.do,sites)}</div>${s.note?`<div class="sn">⚠️ ${NX(s.note)}</div>`:''}</details></div>`};
+    <details class="how"><summary>방법 자세히</summary><div class="mb0">${NX(s.do)}</div>${s.note?`<div class="sn">⚠️ ${NX(s.note)}</div>`:''}</details></div>`;
   const insBody=`<div class="ins"><h2>👨‍🏫 강사용 지도 노트</h2>
     ${D(`⏰ 차시별 시간표 (${tot}분) ${CN(I.timetable.length)}`,T(['시간','내용','비고'],I.timetable.map(t=>[t.time,t.content,t.note||''])),1)}
     ${D(`🎤 그대로 읽어도 되는 멘트 ${CN(I.script.length)}`,I.script.map((s,i)=>`<p><b>${i+1}) ${esc(s.label)}</b><br>“${esc(s.text)}”</p>`).join(''),1)}
@@ -359,3 +317,4 @@ fetch('./lessons.json?'+Date.now()).then(r=>r.json()).then(x=>{INDEX=x;route()})
 </script>
 </body>
 </html>
+

@@ -11,7 +11,7 @@ const OUT = path.join(ROOT, 'downloads');
 global.window = global;
 global.PptxGenJS = require('pptxgenjs');
 global.document = undefined;
-for (const f of ['lesson-meta.js', 'lesson-pptx.js']) {
+for (const f of ['lesson-meta.js', 'lesson-inputs.js', 'lesson-pptx.js']) {
   vm.runInThisContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), { filename: f });
 }
 
@@ -30,3 +30,4 @@ for (const f of ['lesson-meta.js', 'lesson-pptx.js']) {
   }
   console.log(`downloads/: 교안 ${files.length}개, PPT ${n}개 생성`);
 })().catch(e => { console.error(e); process.exit(1); });
+

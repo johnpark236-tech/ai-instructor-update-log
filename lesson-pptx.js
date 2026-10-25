@@ -195,7 +195,13 @@
     const bf = takeScript(/Before|After|비교|전환/i); note(s, bf && bf.text);
     const stepSlide = (st, no, part) => {
       const sl = slide(`2부 ${part} · STEP ${no}. ${st.title}`);
-      sl.addText(`${st.minutes ? st.minutes + '분 · ' : ''}${NT(st.do)}`, { x: 0.6, y: 1.2, w: 12.1, h: st.prompt ? 1.6 : 3.2, fontFace: FONT, fontSize: 17, color: C.text, valign: 'top', margin: 0 });
+      sl.addText(`${st.minutes ? st.minutes + '분 · ' : ''}${NT(st.do)}`, { x: 0.6, y: 1.2, w: 12.1, h: st.prompt ? 1.0 : 3.2, fontFace: FONT, fontSize: 17, color: C.text, valign: 'top', margin: 0 });
+      if(st.prompt){
+        const dest=window.LESSON_INPUTS?.get(L,st,no-1);
+        const input=dest?('입력: '+dest.label+' → '+dest.location):'[확인 필요] 입력 위치 미등록';
+        sl.addText(input, {x:0.6,y:2.28,w:12.1,h:0.55,fontFace:FONT,fontSize:11,color:C.cyan,margin:0,fit:'shrink',...(dest?.url?{hyperlink:{url:dest.url}}:{})});
+        if(dest)note(sl,window.LESSON_INPUTS.text(dest));
+      }
       let y = st.prompt ? 2.95 : 4.6;
       if (st.prompt) {
         const lines = st.prompt.split('\n').length, h = Math.min(2.6, 0.5 + lines * 0.32);
@@ -267,3 +273,4 @@
     }
   };
 })();
+
