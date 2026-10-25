@@ -15,6 +15,7 @@
   }
 
   function build(L, mode) {
+    L = JSON.parse(JSON.stringify(L), (key, value) => typeof value === 'string' ? value.replace(/비포/g, 'Before').replace(/애프터/g, 'After') : value);
     const MT = window.LESSON_META, ins = mode === 'instructor';
     const pptx = new window.PptxGenJS();
     pptx.layout = 'LAYOUT_WIDE'; pptx.title = L.title; pptx.author = 'AI 실습 교안';
@@ -191,7 +192,7 @@
     s = slide('2부 실습 · 완성 작품 미리보기');
     box(s, NT(pc.preview), 0.7, 1.35, 11.9, 3.9, C.card, C.text, 16);
     box(s, '🎁 최종 결과물\n' + NT(L.outcome), 0.7, 5.5, 11.9, 1.2, C.greenBg, C.green, 15, true);
-    const bf = takeScript(/비포|애프터|비교|전환/); note(s, bf && bf.text);
+    const bf = takeScript(/Before|After|비교|전환/i); note(s, bf && bf.text);
     const stepSlide = (st, no, part) => {
       const sl = slide(`2부 ${part} · STEP ${no}. ${st.title}`);
       sl.addText(`${st.minutes ? st.minutes + '분 · ' : ''}${NT(st.do)}`, { x: 0.6, y: 1.2, w: 12.1, h: st.prompt ? 1.6 : 3.2, fontFace: FONT, fontSize: 17, color: C.text, valign: 'top', margin: 0 });
