@@ -1,0 +1,44 @@
+name: Kakao lesson notification readiness
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/kakao-notification-check.yml"
+      - "scripts/notify_kakao.py"
+      - "tests/test_notify_kakao.py"
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check message formatting, verified publication guard and retry safety
+        run: python -m unittest discover -s tests -p test_notify_kakao.py -v
+      - name: Report configuration presence without exposing tokens
+        env:
+          KAKAO_ACCESS_TOKEN: ${{ secrets.KAKAO_ACCESS_TOKEN }}
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          KAKAO_CLIENT_SECRET: ${{ secrets.KAKAO_CLIENT_SECRET }}
+        run: |
+          python - <<'PY'
+          import os
+          names=['KAKAO_ACCESS_TOKEN','KAKAO_REST_API_KEY','KAKAO_REFRESH_TOKEN','KAKAO_CLIENT_SECRET']
+          present={key:bool(os.environ.get(key)) for key in names}
+          refresh=present['KAKAO_REST_API_KEY'] and present['KAKAO_REFRESH_TOKEN']
+          state='REFRESH_CONFIGURED' if refresh else ('ACCESS_TOKEN_ONLY' if present['KAKAO_ACCESS_TOKEN'] else 'NOT_CONFIGURED')
+          text='# 카카오톡 자동 알림 설정 확인\n\n상태: **'+state+'**\n\n'
+          text+='| GitHub Secret | 등록 여부 |\n|---|---|\n'
+          text+='\n'.join('| '+key+' | '+('등록됨' if value else '미등록')+' |' for key,value in present.items())
+          text+='\n\n등록 여부만 확인했으며 토큰 유효성·실제 발송 성공을 뜻하지 않습니다. 이 점검은 메시지를 보내지 않습니다.\n'
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:f.write(text)
+          print('KAKAO_CONFIGURATION='+state)
+          print('Present secret names only: '+','.join(key for key,value in present.items() if value))
+          PY
