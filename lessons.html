@@ -270,6 +270,9 @@ async function lessonView(id){
 
   <div class="part"><b>PART 2</b><h2>🛠 바로 실습 <small>${mn.practice}분 · ${allSteps.length}단계 · 프롬프트 복사 → 결과 확인</small></h2></div>
   <div class="rail">${allSteps.map((s,i)=>`<a href="#" data-st="${i+1}"><span>${i+1}</span>${esc(s.title)}</a>`).join('')}</div>
+  ${L.id==='AI-2026-10-CAT11-002'?`<section class="card" style="margin:16px 0"><h2>🖼️ 그림으로 이해하는 Gemini 홍보 실습</h2><p>아래 세 가지 예시를 보고 실습을 진행해 보세요. (그림은 가상 사례이며 실제 Gemini 화면이 아닙니다.)</p>
+  ${[['01','우리 가게 브랜드 규칙 정하기','브랜드 색상·고객·말투를 정리'],['02','홍보 문안과 시안 만들기','브랜드 규칙에 맞춘 홍보물 초안 작성'],['03','앱 연결과 가게 정보 점검','연결된 정보 및 개인정보 보호 확인']].map(([n,t,d])=>`<figure style="margin:18px 0"><img src="./images/gemini-smallbiz-${n}.png" alt="${esc(t)}: ${esc(d)}" loading="lazy" style="width:100%;height:auto;border-radius:12px" onerror="this.closest('figure').hidden=true"><figcaption style="margin:8px 0;color:#9ac1e3">${esc(t)} — ${esc(d)}</figcaption></figure>`).join('')}
+  </section>`:''}
   <div class="phase">따라하기 ${CN(pc.follow.length)}</div>${pc.follow.map((s,i)=>stepCard(s,i)).join('')}
   <div class="phase">내 것으로 만들기 ${CN(pc.make_mine.length)}</div>${pc.make_mine.map((s,i)=>stepCard(s,pc.follow.length+i)).join('')}
   <div class="phase">도전 과제 (빨리 끝낸 분) ${CN(pc.challenges.length)}</div><div class="chal">${pc.challenges.map((c,i)=>`<div class="card"><b class="rn">${i+1})</b> <b>${esc(c.level)}</b> ${NX(c.mission)}</div>`).join('')}</div>
