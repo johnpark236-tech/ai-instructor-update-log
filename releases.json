@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T07:48:42+09:00",
+  "updated_at": "2026-10-26",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3826,6 +3826,21 @@
       },
       "checked": "2026-10-26",
       "lesson_id": "AI-2026-10-CAT05-027"
+    },
+    {
+      "id": "notion-2026-10-19-auto-router",
+      "date": "2026-10-19",
+      "tool": "Notion",
+      "company": "Notion",
+      "type": "update",
+      "title": "Auto 모델 라우터 개편",
+      "summary": "① 작업별 모델 자동 선택 개선 ② 허용 제공업체 범위 준수 ③ 새 Standard·Select 크레딧 제도 순차 적용",
+      "source": {
+        "title": "Notion — Agents, rebuilt to do more for less",
+        "url": "https://www.notion.com/blog/notion-ai-more-for-less"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT12-002"
     }
   ]
 }

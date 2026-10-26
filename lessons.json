@@ -1,7 +1,42 @@
 {
   "standard": "v2.3",
-  "count": 179,
+  "count": 180,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT12-002",
+      "version": "v1.0",
+      "created_at": "2026-10-26T10:21:34+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Notion Auto 개편으로 모델 고민을 줄이고 동아리 안내문 만들기",
+      "summary": "① Auto의 작업별 모델 자동 선택 ② 한국어 안내문 작성·수정 ③ 이용량과 사실 확인 기록",
+      "tool": "Notion",
+      "feature": "Auto 모델 라우터 개편 — 작업별·작업 중 모델 자동 선택, 워크스페이스 제공업체 제한 준수, Standard·Select 크레딧 구분",
+      "company": "Notion",
+      "type": "update",
+      "released": "2026-10-19",
+      "categories": [
+        "CAT-12",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "중급강사"
+      ],
+      "outcome": "① 한국어 동아리 안내문 1장 ② Before / After 수정 이유와 계정 이용 조건 기록",
+      "access": "paid",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "🔀",
+      "one_liner": "모델 선택은 Auto, 안내문 확인은 내가"
+    },
     {
       "id": "AI-2026-10-CAT03-035",
       "version": "v1.0",
