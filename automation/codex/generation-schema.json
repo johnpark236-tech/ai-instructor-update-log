@@ -79,7 +79,8 @@
         "what",
         "benefits",
         "for_whom"
-      ]
+      ],
+      "additionalProperties": false
     }
   }
 }
