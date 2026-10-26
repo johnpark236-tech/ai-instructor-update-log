@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 185,
+  "count": 186,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-023",
+      "version": "v1.0",
+      "created_at": "2026-10-27T05:07:44+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Firefly의 FLUX.2 참조 사진 두 장으로 독서 모임 그림 만들기",
+      "summary": "① 컵·책 사진을 참조로 업로드 ② FLUX.2 [pro]로 모임 그림 생성 ③ 원본과 비교하며 AI 표시 기록",
+      "tool": "Adobe Firefly",
+      "feature": "FLUX.2 [pro] — 여러 참조 이미지를 함께 활용하는 이미지 생성 모델, Firefly 웹의 참조 이미지 업로드 실습",
+      "company": "Black Forest Labs · Adobe",
+      "type": "update",
+      "released": "2025-11-25",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "참조 사진 두 장으로 생성한 독서 모임 그림 1개 + AI 생성 표시와 Before / After 비교 기록 1장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📚",
+      "one_liner": "컵·책 사진으로 나만의 모임 그림 생성"
+    },
     {
       "id": "AI-2026-10-CAT04-022",
       "version": "v1.0",

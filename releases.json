@@ -3916,6 +3916,21 @@
       },
       "checked": "2026-10-26",
       "lesson_id": "AI-2026-10-CAT04-022"
+    },
+    {
+      "id": "bfl-2025-11-25-flux-2-pro",
+      "date": "2025-11-25",
+      "tool": "Adobe Firefly",
+      "company": "Black Forest Labs · Adobe",
+      "type": "update",
+      "title": "FLUX.2 [pro] 모델 공개 — 여러 참조 이미지 활용",
+      "summary": "BFL의 후속 이미지 모델 공개. 현재 Firefly 웹에서 FLUX.2 [pro]와 참조 이미지 입력 제공. Firefly 편입일과 모델 공개일 구분",
+      "source": {
+        "title": "Black Forest Labs — FLUX.2: Frontier Visual Intelligence",
+        "url": "https://bfl.ai/blog/flux-2"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT04-023"
     }
   ]
 }
