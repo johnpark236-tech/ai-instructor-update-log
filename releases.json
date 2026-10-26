@@ -3871,6 +3871,21 @@
       },
       "checked": "2026-10-26",
       "lesson_id": "AI-2026-10-CAT12-002"
+    },
+    {
+      "id": "2025-10-28-lightroom-dust-removal",
+      "date": "2025-10-28",
+      "tool": "Adobe Lightroom",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Lightroom 9.0 AI 먼지 제거(Dust Removal)",
+      "summary": "센서·렌즈 먼지 얼룩 자동 감지·제거 + 지점별 보정 검토",
+      "source": {
+        "title": "Adobe — Lightroom 9.0 MAX 출시 안내",
+        "url": "https://community.adobe.com/announcements-678/what-s-new-in-lightroom-for-max-2025-908850"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT04-020"
     }
   ]
 }
