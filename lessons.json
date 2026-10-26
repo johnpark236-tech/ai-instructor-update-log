@@ -1,7 +1,43 @@
 {
   "standard": "v2.3",
-  "count": 184,
+  "count": 185,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-022",
+      "version": "v1.0",
+      "created_at": "2026-10-27T04:40:56+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Photoshop Topaz 업스케일로 작은 풍경 사진을 키우고 비교 기록 만들기",
+      "summary": "① Topaz Gigapixel로 작은 사진 확대 ② 원본과 디테일 비교 ③ AI 보정 표시를 붙인 작업본 보관",
+      "tool": "Adobe Photoshop",
+      "feature": "Generative Upscale with Topaz Gigapixel — MAX 2025 파트너 모델 정식 제공, 저해상도 사진 확대와 디테일 보존",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2025-10-28",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "중급강사"
+      ],
+      "outcome": "AI로 확대하여 저장한 풍경 사진 작업본 1개 + Before / After 비교 기록 1장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🔎",
+      "one_liner": "작은 풍경 사진 확대 후 디테일 검토"
+    },
     {
       "id": "AI-2026-10-CAT04-021",
       "version": "v1.0",

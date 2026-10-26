@@ -1,0 +1,567 @@
+{
+  "id": "AI-2026-10-CAT04-022",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-27T04:40:56+09:00",
+  "checked": "2026-10-26",
+  "review_by": "2027-01-26",
+  "title": "Photoshop Topaz 업스케일로 작은 풍경 사진을 키우고 비교 기록 만들기",
+  "summary": "① Topaz Gigapixel로 작은 사진 확대 ② 원본과 디테일 비교 ③ AI 보정 표시를 붙인 작업본 보관",
+  "tool": "Adobe Photoshop",
+  "feature": "Generative Upscale with Topaz Gigapixel — MAX 2025 파트너 모델 정식 제공, 저해상도 사진 확대와 디테일 보존",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2025-10-28",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-EDU",
+    "JOB-MKT",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 17,
+    "practice": 27,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "지원 컴퓨터의 최신 데스크톱 Photoshop + 인터넷 연결",
+    "본인 Adobe ID의 데스크톱 이용 권한 + 프리미엄 기능 권한. 수업 경로는 Photoshop 구독과 Firefly Pro를 함께 보유한 계정",
+    "최소 10 생성 크레딧 잔액 + 파트너 모델 이용 안내 확인",
+    "본인 촬영 풍경 JPEG 1장. 강사가 긴 변 1,000픽셀 이하 연습 복사본 준비. 얼굴·차량 번호·간판 글자 제외",
+    "파일 열기·저장 기초 경험. 설치와 로그인은 강의 전 완료"
+  ],
+  "outcome": "AI로 확대하여 저장한 풍경 사진 작업본 1개 + Before / After 비교 기록 1장",
+  "objectives": [
+    "생성형 업스케일에서 Topaz Gigapixel 선택 가능",
+    "확대 결과와 원본의 차이를 찾아 설명 가능",
+    "원본을 보존하고 AI 보정 사실 기록 가능"
+  ],
+  "glance": {
+    "emoji": "🔎",
+    "one_liner": "작은 풍경 사진 확대 후 디테일 검토",
+    "cards": [
+      {
+        "icon": "🖼️",
+        "title": "작은 사진",
+        "text": "본인 촬영 풍경으로 연습"
+      },
+      {
+        "icon": "🔎",
+        "title": "AI 확대",
+        "text": "Topaz Gigapixel 선택"
+      },
+      {
+        "icon": "👀",
+        "title": "사람의 검토",
+        "text": "원본과 질감·형태 비교"
+      }
+    ],
+    "diagram": {
+      "title": "작은 사진에서 비교 기록까지",
+      "nodes": [
+        {
+          "icon": "🖼️",
+          "label": "사진 열기"
+        },
+        {
+          "icon": "⚙️",
+          "label": "모델·배율 선택"
+        },
+        {
+          "icon": "🔎",
+          "label": "업스케일"
+        },
+        {
+          "icon": "💾",
+          "label": "검토·저장"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "확대하면 가장자리가 뭉개지는 작은 풍경 사진"
+      },
+      "after": {
+        "label": "After",
+        "text": "확대 작업본 + 질감 변화와 한계 기록"
+      }
+    },
+    "cautions": [
+      "원본 별도 보관",
+      "사실 복원으로 오인 금지",
+      "생성 전 크레딧 확인"
+    ]
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "무료 계정만으로 본 데스크톱·Topaz 실습 불가. 아래 두 구독을 함께 보유한 개인 계정 경로",
+    "plans": [
+      {
+        "name": "Photoshop 단일 플랜 — 데스크톱 권한",
+        "price": "₩30,800/월(부가세 포함), 연간 약정·매월 청구",
+        "features": [
+          "데스크톱 Photoshop 포함",
+          "본 교안에서는 아래 Firefly Pro와 함께 이용"
+        ]
+      },
+      {
+        "name": "Firefly Pro — 위 Photoshop 구독에 추가",
+        "price": "₩26,400/월(부가세 포함), 매월 청구",
+        "features": [
+          "프리미엄 파트너 모델 접근 경로",
+          "이 플랜 단독으로 데스크톱 Photoshop 권한 제공 안 됨"
+        ]
+      }
+    ],
+    "note": "2026-10-26 국내 요금 페이지와 파트너 모델 FAQ 확인. 두 플랜은 대안 목록이 아닌 본 실습의 조합 예시. 기존 Creative Cloud Pro 등 적격 계정은 추가 결제 전 보유 권한 확인. Topaz 별도 계정·별도 구독 불필요. 25MP 미만 출력의 Gigapixel 1회는 공식 문서상 10크레딧. 본 실습은 1회 생성 후 비교, 수업 중 구매 유도 없음",
+    "checked": "2026-10-26",
+    "sources": [
+      {
+        "title": "Adobe 대한민국 — Photoshop 가격 및 멤버십 플랜",
+        "url": "https://www.adobe.com/kr/products/photoshop/plans.html"
+      },
+      {
+        "title": "Adobe 대한민국 — Adobe 제품의 파트너 모델",
+        "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html"
+      },
+      {
+        "title": "Adobe 대한민국 — 생성형 업스케일로 이미지 품질 향상",
+        "url": "https://helpx.adobe.com/kr/photoshop/desktop/repair-retouch/clean-restore-images/enhance-image-quality-with-generative-upscale.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-10-28",
+      "text": "MAX 2025에서 Photoshop 생성형 업스케일의 Topaz 파트너 모델 정식 제공 발표"
+    },
+    {
+      "date": "2026-10-26",
+      "text": "국내 개별 기능 튜토리얼 + 현재 도움말 + 요금·파트너 권한 재검증"
+    }
+  ],
+  "theory": {
+    "definition": "생성형 업스케일(Generative Upscale)은 AI로 이미지의 픽셀 수를 늘리고 세부 표현을 보완하는 기능. 이번 대상은 Photoshop 안의 Topaz Gigapixel",
+    "analogy": "작은 그림을 큰 종이에 옮기며 빈 부분을 추정해서 그리는 확대 도우미",
+    "comparison": {
+      "headers": [
+        "항목",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "작업",
+          "작은 사진을 그대로 확대",
+          "AI로 확대 작업본 생성"
+        ],
+        [
+          "판단",
+          "원본에 담긴 내용 확인",
+          "새로 생긴 질감까지 원본과 비교"
+        ],
+        [
+          "표시",
+          "촬영 원본 보관",
+          "AI 보정 사실과 한계 기록"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "배율과 면적",
+        "body": "2배는 가로와 세로 길이 각각의 배율. 픽셀 총수는 4배. 예: 800×500 → 1,600×1,000픽셀"
+      },
+      {
+        "title": "모델 선택",
+        "body": "Gigapixel은 기존 디테일 보존 지향. Bloom의 창작 디테일 추가와 목적 구분. 국내 개별 기능 도움말 기준"
+      },
+      {
+        "title": "추정과 사실",
+        "body": "선명한 결과도 실제 풍경의 증거 아님. 사라진 정보를 정확히 되찾는다는 보장 없음"
+      }
+    ],
+    "can": [
+      "작은 사진의 확대 작업본 제작",
+      "가장자리·질감의 변화 비교",
+      "원본과 별도 결과 파일 보관"
+    ],
+    "cannot": [
+      "실제 없던 세부 정보의 진위 증명",
+      "모든 흐림·손상 완전 복구 보장",
+      "문서의 작은 글씨나 차량 번호의 증거 복원"
+    ],
+    "safety": [
+      "본인 촬영물 또는 이용 허락 확보 자료만 사용",
+      "얼굴·연락처·민감 문서가 있는 사진 제외",
+      "AI 보정 사실 표시 + 원본 별도 보관",
+      "증명·신원 확인·사고 판단용 사진 보정에 사용 금지",
+      "파트너 모델 최초 이용 안내와 조건 검토 후 본인이 동의 여부 결정"
+    ]
+  },
+  "practice": {
+    "preview": "설명용 예상 작품: “Before: 나뭇잎 경계가 뭉개짐” + “After: 경계가 또렷해짐” + “한계: 잎맥은 실제와 같은지 확인 불가”. 실제 생성 결과 아님",
+    "follow": [
+      {
+        "title": "연습 사진과 원본 구분",
+        "minutes": 4,
+        "do": "파일 → 열기로 작은 풍경 연습 복사본 열기 → 원본 파일은 별도 폴더에 보존",
+        "prompt": "",
+        "expect": "작업할 풍경 사진 1장",
+        "note": "강사가 사진 파일 위치를 큰 글씨로 안내",
+        "input": {
+          "label": "Adobe Photoshop 데스크톱",
+          "url": null,
+          "location": "파일 → 열기",
+          "kind": "app",
+          "note": "본인 Adobe ID + 데스크톱 Photoshop 권한 + 프리미엄 파트너 모델 권한 + 크레딧 잔액 필요. 첫 파트너 모델 이용 약관 확인"
+        }
+      },
+      {
+        "title": "Topaz 모델과 배율 선택",
+        "minutes": 5,
+        "do": "이미지 → 생성형 업스케일 → 모델 목록에서 Topaz Gigapixel 선택 → 2배 선택 → 출력 크기와 표시 크레딧 확인",
+        "prompt": "",
+        "expect": "Gigapixel + 2배 설정",
+        "note": "긴 변 1,000픽셀 이하 입력 사용. 파트너 이용 안내는 본인이 검토. 권한 없으면 생성 중단",
+        "input": {
+          "label": "Adobe Photoshop 데스크톱",
+          "url": null,
+          "location": "이미지 → 생성형 업스케일 대화 상자",
+          "kind": "app",
+          "note": "본인 Adobe ID + 데스크톱 Photoshop 권한 + 프리미엄 파트너 모델 권한 + 크레딧 잔액 필요. 첫 파트너 모델 이용 약관 확인"
+        }
+      },
+      {
+        "title": "한 번 생성하고 결과 대기",
+        "minutes": 5,
+        "do": "업스케일 선택 → 완료까지 대기 → 생성된 새 문서 확인",
+        "prompt": "",
+        "expect": "원본과 구분되는 확대 문서",
+        "note": "연속 클릭 금지. 25MP 미만 출력 기준 10크레딧 안내와 현재 화면 표시 대조",
+        "input": {
+          "label": "Adobe Photoshop 데스크톱",
+          "url": null,
+          "location": "생성형 업스케일 → 업스케일",
+          "kind": "app",
+          "note": "본인 Adobe ID + 데스크톱 Photoshop 권한 + 프리미엄 파트너 모델 권한 + 크레딧 잔액 필요. 첫 파트너 모델 이용 약관 확인"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내가 정한 부분 비교",
+        "minutes": 5,
+        "do": "돋보기 툴의 100% 보기 선택 → AI 레이어 눈 아이콘을 켜고 끄며 나뭇잎·지붕 등 한 부분 비교",
+        "prompt": "",
+        "expect": "선택한 한 부분의 변화 확인",
+        "note": "국내 공식 튜토리얼의 레이어 비교 방식. 100%는 표시 배율이며 생성 배율과 구분",
+        "input": {
+          "label": "Adobe Photoshop 데스크톱",
+          "url": null,
+          "location": "새 문서 → 레이어 패널 / 돋보기 툴",
+          "kind": "app",
+          "note": "본인 Adobe ID + 데스크톱 Photoshop 권한 + 프리미엄 파트너 모델 권한 + 크레딧 잔액 필요. 첫 파트너 모델 이용 약관 확인"
+        }
+      },
+      {
+        "title": "AI 보정 작업본 저장",
+        "minutes": 4,
+        "do": "새 문서에서 Ctrl+S 또는 Mac Cmd+S → 연습 폴더에 풍경_AI보정_연습.psd 이름으로 저장",
+        "prompt": "",
+        "expect": "원본과 별도 PSD 작업본",
+        "note": "[확인 필요] 운영체제별 로컬 저장 선택 문구. 저장 위치를 강사가 사전 확인",
+        "input": {
+          "label": "Adobe Photoshop 데스크톱",
+          "url": null,
+          "location": "새 문서 → 저장 대화 상자",
+          "kind": "app",
+          "note": "본인 Adobe ID + 데스크톱 Photoshop 권한 + 프리미엄 파트너 모델 권한 + 크레딧 잔액 필요. 첫 파트너 모델 이용 약관 확인"
+        }
+      },
+      {
+        "title": "Before / After 비교 기록",
+        "minutes": 4,
+        "do": "기록지의 Before 변화 전 + After 변화 후 + 사실 확인 불가 부분을 각 한 줄 작성 → 짝에게 설명",
+        "prompt": "",
+        "expect": "작업본 1개 + 비교 기록 1장",
+        "note": "실습 합계 27분. 추가 생성 없이 내 비교 대상 선택으로 개인화",
+        "input": {
+          "label": "종이 비교 기록지",
+          "url": null,
+          "location": "종이 기록지 → Before / After / 한계 칸",
+          "kind": "manual",
+          "note": "로그인·요금 없음. AI 입력 아님"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "준비된 풍경 복사본으로 2배 생성 후 한 부분 비교"
+      },
+      {
+        "level": "중급",
+        "mission": "본인 풍경 사진에서 비교 지점 두 곳 선정 후 사용 여부 판단"
+      },
+      {
+        "level": "고급",
+        "mission": "추가 생성 없이 픽셀 치수와 화면 표시 배율의 차이를 설명하고 면적 증가 계산"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "저장한 작품 + 선택한 비교 지점 + AI 추정의 한계를 짝에게 설명",
+    "quiz": [
+      {
+        "q": "Topaz Gigapixel로 사진이 선명해지면 무엇을 알 수 있나요?",
+        "options": [
+          "실제 없던 정보까지 모두 증명됨",
+          "모든 흐림이 완벽하게 복구됨",
+          "원본과 비교해 변화와 한계를 확인해야 함",
+          "촬영 날짜가 자동 증명됨"
+        ],
+        "answer": 2,
+        "explain": "AI가 세부 표현을 추정할 수 있음. 선명함과 사실의 정확성은 서로 다른 기준"
+      },
+      {
+        "q": "사진을 가로·세로 각각 2배로 키우면 픽셀 총수는 어떻게 되나요?",
+        "options": [
+          "그대로",
+          "2배",
+          "3배",
+          "4배"
+        ],
+        "answer": 3,
+        "explain": "가로 2배 × 세로 2배이므로 총 픽셀 수는 4배. 화면 100% 보기와도 다른 개념"
+      },
+      {
+        "q": "본 수업에서 무료 계정만 준비하면 Topaz 버튼 실습이 가능한가요?",
+        "options": [
+          "항상 가능",
+          "데스크톱 이용 권한과 프리미엄 모델 권한을 먼저 확인해야 함",
+          "인터넷만 있으면 가능",
+          "Topaz 사이트에 별도로 결제해야만 가능"
+        ],
+        "answer": 1,
+        "explain": "이번 경로는 Photoshop 데스크톱과 프리미엄 파트너 모델 권한 필요. Adobe 안에서 사용하므로 Topaz 별도 구독은 불필요"
+      }
+    ],
+    "next": [
+      "보정 사실을 알리는 작품 설명 연습",
+      "원본 사진의 해상도와 촬영 품질 비교"
+    ],
+    "rubric": [
+      {
+        "criterion": "안전한 확대·검토",
+        "high": "별도 저장 + 변화와 한계 설명 + 권한 확인",
+        "mid": "도움을 받아 생성·저장·비교",
+        "low": "강사 화면 관찰만 완료"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~7분",
+        "content": "작은 사진 작품 예시 + Before / After",
+        "note": "지난 기능의 원래 출시일 안내"
+      },
+      {
+        "time": "7~17분",
+        "content": "배율·픽셀·요금·사실성",
+        "note": "2배와 100% 구분"
+      },
+      {
+        "time": "17~31분",
+        "content": "파일 열기·모델 설정·생성",
+        "note": "4분 + 5분 + 5분"
+      },
+      {
+        "time": "31~44분",
+        "content": "부분 비교·저장·기록",
+        "note": "5분 + 4분 + 4분"
+      },
+      {
+        "time": "44~50분",
+        "content": "작품 설명 + 핵심 문제 3개",
+        "note": "성공과 실패 모두 한계 기록"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "작은 풍경 사진을 크게 만들면 어떤 부분이 달라질까요? 오늘은 키우는 것과 사실을 확인하는 것을 함께 연습하겠습니다."
+      },
+      {
+        "label": "생성 전",
+        "text": "모델 이름과 크레딧을 함께 확인하세요. 한 번만 실행하고 기다리겠습니다. 권한 안내가 다르면 손을 들어 주세요."
+      },
+      {
+        "label": "검토",
+        "text": "Before와 After에서 같은 나뭇잎을 찾아보세요. 더 또렷해졌어도 실제 잎맥과 같다고 말할 수는 없습니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "유료 이용 권한 없음",
+        "response": "본인별 계정 공유 금지. 강사 사전 캡처로 결과 평가 진행 후 버튼 실습 미완료로 기록. 적격 기기 확보 후 보충"
+      },
+      {
+        "situation": "인터넷 장애·생성 지연·크레딧 부족",
+        "response": "반복 실행 중단 + 사전 준비 PSD의 레이어 비교와 기록 진행. 생성 완료와 구분"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "생성형 업스케일 메뉴 없음",
+        "fix": "데스크톱 최신 앱과 이미지 메뉴 확인. 강사 기기와 버전 대조"
+      },
+      {
+        "issue": "Topaz 선택 불가",
+        "fix": "프리미엄 권한 + 파트너 동의 안내 + 조직 제한 확인. 우회 결제 없이 중단"
+      },
+      {
+        "issue": "배율 제한 경고",
+        "fix": "출력 크기 확인 후 작은 연습 복사본으로 전환. 원본 축소 저장 금지"
+      },
+      {
+        "issue": "결과가 부자연스러움",
+        "fix": "원본과 비교하고 미사용 판단도 정답으로 인정. 계속 생성하지 않을 것"
+      },
+      {
+        "issue": "저장 파일을 찾지 못함",
+        "fix": "지정한 연습 폴더와 PSD 이름 확인. 새 문서가 저장됐는지 확인"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국에서 해당 기능 이용 가능한가?",
+        "a": "국내 공식 Topaz 업스케일 튜토리얼 + 국내 기능별 도움말에서 대상과 조작 확인. 프리미엄 구독 조건 적용"
+      },
+      {
+        "q": "무료 실습 경로인가?",
+        "a": "이번 버튼 실습은 유료. 무료 계정은 자료 관찰만 가능하며 직접 생성과 구분"
+      },
+      {
+        "q": "Topaz 앱을 따로 설치해야 하는가?",
+        "a": "Photoshop 안에서 모델 선택. 공식 파트너 FAQ상 별도 Topaz 계정·구독 불필요"
+      },
+      {
+        "q": "정확한 옛 모습 복원인가?",
+        "a": "AI 픽셀 추정 결과이므로 역사·신원·증거 복원으로 단정 불가"
+      },
+      {
+        "q": "여러 번 생성해도 되는가?",
+        "a": "크레딧 소모 발생. 기본 수업은 한 번 생성 후 비교. 추가 생성은 권한과 잔액 확인 후 개인 선택"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "준비된 한 장 + 큰 글씨 경로 카드 + 2배 설정만 사용. 마우스 위치를 단계마다 함께 확인"
+      },
+      {
+        "level": "중급",
+        "guide": "본인 사진에서 비교 지점 선정 + 보정 사용 여부 근거 작성"
+      },
+      {
+        "level": "고급",
+        "guide": "출력 픽셀 총수와 크레딧 조건 검산"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "작다·크다·또렷하다 그림 카드 + Before / After 문장 틀 제공"
+      }
+    ],
+    "pro_points": [
+      "최초 베타와 MAX 파트너 모델 정식 출시 구분",
+      "프리미엄 권한과 데스크톱 설치 권한 각각 점검",
+      "선명도 개선을 사실성 보장으로 설명하지 않을 것"
+    ],
+    "day_before": [
+      "국내 본인 계정에서 Photoshop 데스크톱 + 프리미엄 모델 권한 + 10크레딧 이상 확인",
+      "Topaz Gigapixel 2배 → 레이어 비교 → PSD 저장 전 과정 재현 후 캡처 준비",
+      "권리 확보한 풍경 사진의 작은 연습 복사본과 장애 대비 결과 PSD 준비",
+      "큰 글씨 메뉴 카드 + 종이 비교 기록지 + 지정 저장 폴더 준비",
+      "27분 예행연습 + 파트너 최초 이용 안내 + 저장 대화상자 확인"
+    ]
+  },
+  "verification": [
+    "2026-10-26 lessons.json 전체 184건의 제목·도구·기능과 releases.json 전체 260건 비교. Topaz·Gigapixel·생성형 업스케일 직접 일치 없음. Runway 영상 업스케일과 대상·제품·결과가 다른 사진 기능",
+    "최근 14일 우선 탐색: Canva Craft는 기존 CAT04-016과 중복. Notion Auto 개편은 CAT12-002와 중복. Runway App Studio는 앱 생성 주제로 이번 작업의 코드·HTML 생성 제한 및 대상 적합성을 고려하여 미선정. 최근 MCP 모델은 국내 초급 입력처·권한 근거를 이번 검증에서 확정하지 못해 미선정",
+    "미연결 지난 출시 44건 목록 검토. Claude 관련은 사용 금지. 미국 Finances·종료 예고·기기 구매형·개발자 알파는 실습 대상으로 부적합. Sites 개수·주소 변경은 기존 Sites 교안과 활용 중첩. 나머지는 기능별 국내 제공·현재 실습 경로를 이번 검증에서 확정하지 못해 미선정",
+    "최근 12개월 추가 발굴: 2025-10-28 MAX 정식 파트너 모델 출시. 작성일로 출시일 변경하지 않음. 기존 AI 회사 기능이므로 update 적용",
+    "회사 분포 Google 31·OpenAI 28·xAI 27·Adobe 12건 등과 무료 접근성 비교. 유료 제약을 명시하되 국내 개별 기능 튜토리얼·이용 조건의 검증 가능성으로 선택",
+    "작성 전 국내 Topaz 기능별 튜토리얼 + 데스크톱 도움말 + 파트너 FAQ + 국내 요금 확인 완료. 일반 한국어 지원 사실만으로 개별 기능 제공을 추론하지 않음",
+    "요금제는 데스크톱 Photoshop과 Firefly Pro의 조합 예시. Firefly Pro 단독 데스크톱 권한으로 오인하지 않도록 구분",
+    "[미검증] 로그인·실제 생성 없음. 국내 본인 계정의 결과 품질·대기 시간은 강사 사전 재현 필요",
+    "[확인 필요] 운영체제별 저장 위치 선택 문구. 핵심 모델·입력 메뉴는 공식 문서로 확인",
+    "제공된 main 복사본 e6f1580 기준. git ls-remote에서 github.com DNS 오류로 원격 최신 상태 재확인 불가",
+    "모든 실습은 앱 버튼 또는 수기 기록. 텍스트 프롬프트 없음. 단계별 input 명시. API 키·유료 API·Claude·전송·커밋·푸시 없음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe — MAX 2025 Creative Cloud 정식 출시 발표",
+      "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-creative-cloud",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — 생성형 업스케일로 이미지 품질 향상",
+      "url": "https://helpx.adobe.com/kr/photoshop/desktop/repair-retouch/clean-restore-images/enhance-image-quality-with-generative-upscale.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Photoshop에서 Topaz 모델을 사용해 이미지 업스케일링 및 디테일 복원",
+      "url": "https://www.adobe.com/kr/learn/photoshop/web/upscale-images-generative-ai",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Photoshop 가격 및 멤버십 플랜",
+      "url": "https://www.adobe.com/kr/products/photoshop/plans.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Adobe 제품의 파트너 모델",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Creative Cloud 생성형 AI 기능",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/creative-cloud-generative-ai-features.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — 생성 크레딧 FAQ",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Canva — 공식 뉴스",
+      "url": "https://www.canva.com/newsroom/news/",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Notion — 공식 업데이트",
+      "url": "https://www.notion.com/releases",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Runway — 공식 변경 기록",
+      "url": "https://runway.com/changelog",
+      "checked": "2026-10-26"
+    }
+  ]
+}

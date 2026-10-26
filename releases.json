@@ -3901,6 +3901,21 @@
       },
       "checked": "2026-10-26",
       "lesson_id": "AI-2026-10-CAT04-021"
+    },
+    {
+      "id": "photoshop-2025-10-28-topaz-generative-upscale",
+      "date": "2025-10-28",
+      "tool": "Adobe Photoshop",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Photoshop 생성형 업스케일의 Topaz 파트너 모델 정식 제공",
+      "summary": "① Topaz Gigapixel로 디테일 보존형 확대 ② Topaz Bloom으로 창작 디테일 추가. 본 교안은 Gigapixel 실습",
+      "source": {
+        "title": "Adobe — MAX 2025 Creative Cloud 정식 출시 발표",
+        "url": "https://news.adobe.com/news/2025/10/adobe-max-2025-creative-cloud"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT04-022"
     }
   ]
 }
