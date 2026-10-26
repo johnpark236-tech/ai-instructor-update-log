@@ -71,7 +71,26 @@
       "남의 얼굴 사진은 동의 받고 쓰기",
       "유명 캐릭터·브랜드 로고 흉내 금지",
       "학생 사진·이름은 넣지 않기"
-    ]
+    ],
+    "what": "ChatGPT 나만의 스티커 묶음을 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "스티커를 낱장마다 만들 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "수업 분위기에 맞춘 그림을 나눠 씀"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "문구와 그림을 보고 고를 수 있음"
+      }
+    ],
+    "for_whom": "수업·모임의 사진과 그림을 다루는 분"
   },
   "tool": "ChatGPT",
   "feature": "스티커 팩 만들기(Create and share personalized sticker packs)",

@@ -71,7 +71,26 @@
       "개인정보·내부 자료 지시문에 넣지 않기",
       "Store 공개 전 범위 다시 확인",
       "결과의 숫자·출처는 직접 확인"
-    ]
+    ],
+    "what": "Genspark 설명만으로 맞춤 AI 에이전트를 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "긴 반복 지시를 다시 쓸 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "내 업무에 맞는 전용 도우미를 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "시험한 뒤 지침을 고칠 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Genspark",
   "feature": "Custom Super Agent(맞춤 슈퍼 에이전트, 도움말 표기 Custom Agent)·Custom Agent Store — ① 홈 Custom Agent·사이드바 + New·Super Agent 입력창 @에서 진입 ② Custom Agent Store 오른쪽 위 Create New → [Role Definition] + [Core Functions] + [Output Standards] 구조로 설명 ③ Preview 창 시험 → 대화로 지침 수정(Instructions 자동 반영) → Update 저장 ④ 카드 ⋯ → Configure(수정)·Delete(복구 불가) ⑤ Configure → Share: Only me·Anyone with the link·Custom Agent Store, 팀·기업은 Organization·Group(Team·Enterprise) ⑥ Store: My Super Agents·Trending·By Genspark, 분류(Writing·Productivity·Research & Analysis·Education·Lifestyle·Others), 즐겨찾기 → @ 호출 ⑦ Conversation Starters 편집 ⑧ 한 대화에서 @로 여러 에이전트 조합 ⑨ 공유 에이전트는 이름·설명만 공개(지침·대화 비공개)",

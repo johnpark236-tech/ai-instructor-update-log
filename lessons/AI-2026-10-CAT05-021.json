@@ -71,7 +71,26 @@
       "녹음 전 참여자 동의 받기",
       "개인정보는 말로 넣지 않기",
       "번역 결과는 사람이 확인"
-    ]
+    ],
+    "what": "Genspark 말을 글로 쓰고 실시간 번역함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "문장을 키보드로 치는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "외국어 내용을 자막으로 이해하는 데 도움"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "인식한 문장을 보고 고칠 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "Genspark",
   "feature": "Speakly(스피클리) 받아쓰기·실시간 번역(Live Translation) — AI 음성 입력 앱(Mac·Windows·iPhone·Android): ① 받아쓰기(누르고 말하기·Hands-free Mode) ② 선택 문장 음성 명령(번역·다듬기·요약)·맞춤 지시(Translate to English 등) ③ Agent Mode(단축키 두 번) ④ 실시간 번역 떠 있는 자막 창(15개+ 대상 언어, 마이크·시스템 소리) ⑤ 회의 노트(New Note·Import File 전사·요약·화자 구분) ⑥ 개인 사전(Personal Dictionary 8,000개)",

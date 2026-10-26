@@ -71,7 +71,26 @@
       "실존 브랜드 로고·상표 흉내 금지",
       "남의 사진·인물 사진은 동의 후 사용",
       "크레딧 차감 확인하며 생성할 것"
-    ]
+    ],
+    "what": "Adobe Firefly 말로 여러 디자인 단계를 처리함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "보정·크기 변경의 반복 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "같은 자료를 홍보 디자인으로 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "결과를 보며 수정할 수 있음"
+      }
+    ],
+    "for_whom": "수업·모임의 사진과 그림을 다루는 분"
   },
   "tool": "Adobe Firefly",
   "feature": "Firefly AI Assistant(베타) — Firefly 웹(firefly.adobe.com/ai-assistant)의 대화형 창작 에이전트: ① 목표를 말하면 단계 계획 후 Photoshop·Lightroom·Illustrator·Premiere·Firefly 도구 실행 ② 크리에이티브 스킬(Portrait Retouch·Social Media Assets·Mockup Studio 등, /명령 호출) ③ 브랜드 키트(로고·색·글꼴·가이드) Creative Cloud 브랜드에 자동 저장 ④ 개인 선호(Preferences) 기억 ⑤ 결과 Creative Cloud 저장·내려받기, 2026-10-01부터 모든 Creative Cloud 요금제 포함·AI 크레딧 차감",

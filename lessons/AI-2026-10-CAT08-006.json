@@ -71,7 +71,26 @@
       "회의록 켜기 전 참석자에게 알림",
       "메일 초안은 읽고 고친 뒤 발송",
       "민감 회의는 회의록·루틴 끄기"
-    ]
+    ],
+    "what": "Google Meet 회의 뒤 정리·후속 업무를 도움",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "회의 내용을 다시 정리할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "담당자·기한을 할 일로 확인함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "후속 메일을 확인하고 고칠 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Google Meet",
   "feature": "회의 후 다음 단계(Post-meeting next steps) — 회의 후 화면의 루틴(Routines for this meeting): Gmail 후속 메일 초안·Google Tasks 할 일 추가",

@@ -71,7 +71,26 @@
       "개인정보 든 파일 올리지 말 것",
       "팀원은 Hub 모든 파일 열람 가능",
       "Hub 삭제 시 파일·프로젝트 복구 불가"
-    ]
+    ],
+    "what": "Genspark 프로젝트 자료·지침을 한곳에 모음",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "같은 배경을 반복 설명할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "여러 결과물의 맥락을 유지하기 쉬워짐"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "프로젝트별 자료를 나눠 관리할 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Genspark",
   "feature": "Genspark Hub(젠스파크 허브, 프로젝트별 전용 공간·기억) — ① 왼쪽 사이드바 Hub 또는 genspark.ai/hub → + New → 이름·테마 색·설명 → Create Hub ② Files: 내 컴퓨터·AI Drive에서 문서(doc·docx·pdf·md)·코드(html·py·json)·발표(ppt·pptx)·표(xlsx·csv)·이미지(png·jpg·jpeg·webp) 추가, Hub당 100개·파일당 10MB, 오디오·영상·압축 파일 불가 ③ 맞춤 지침(Custom Instructions) Hub 안 모든 프로젝트에 적용 ④ 교차 프로젝트 기억: 같은 Hub 프로젝트끼리 대화 기록 공유 ⑤ 입력창 @로 AI Slides·AI Sheets·AI Docs·Genspark Code·AI Designer·Clip Genius·AI Pods·맞춤 Super Agent 선택(기본 Super Agent) ⑥ 프로젝트 ⋯ > Add to Hub·Change Hub·Remove from Hub(프로젝트는 Hub 1곳에만) ⑦ Members > Invite 이메일 초대(만든 사람만), 팀원은 파일·기록 열람·이어 작업 ⑧ Hub 삭제 시 파일·프로젝트 모두 삭제·복구 불가",

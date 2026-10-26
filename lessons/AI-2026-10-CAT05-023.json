@@ -71,7 +71,26 @@
       "녹음 전 참여자 동의 받기",
       "API 키 외부 공유 금지",
       "대본은 사람이 꼭 검토"
-    ]
+    ],
+    "what": "Grok 녹음을 화자·시간별 글로 바꿈",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "녹음을 다시 받아 적는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "발언자와 시점을 함께 확인할 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "원음을 들으며 오류를 고칠 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "Grok",
   "feature": "Grok Voice Transcribe 2.0(받아쓰기 모델, grok-voice-transcribe-2.0) — xAI 콘솔 받아쓰기(Speech to Text) 플레이그라운드, 일괄(파일·URL)·실시간(WebSocket) 받아쓰기, 화자 구분(diarize)·단어별 시간·핵심 용어(keyterm, 최대 100개)·여러 채널(multichannel)·숫자·날짜 서식(format)·군말 제거, 한국어(ko) 지원",

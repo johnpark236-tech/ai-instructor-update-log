@@ -71,7 +71,26 @@
       "처음엔 읽기 권한만 허용",
       "민감 메일은 질문 범위에서 제외",
       "실습 후 필요 없으면 연결 해제"
-    ]
+    ],
+    "what": "Grok 연결한 메일·일정·파일을 읽고 도움",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "앱마다 정보를 찾는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "여러 자료를 모아 준비 내용을 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "앱별 읽기·쓰기 권한을 고를 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Grok",
   "feature": "커넥터(Connectors) — grok.com·iOS·Android에서 외부 앱 연결: ① 기본 커넥터(Gmail·Google Calendar·Google Drive·Outlook 메일·일정·OneDrive·SharePoint·Microsoft Teams·Salesforce) ② 카탈로그 커넥터(Box·Canva·Gamma·GitHub·Linear·Meltwater·Notion·S&P Global·Vercel) ③ Custom MCP(공개 인터넷 MCP 서버 주소) ④ grok.com/connectors → New Connector → 서비스 선택 → OAuth 로그인, 모바일은 Settings → Connectors ⑤ 질문이 서비스와 관련되면 Grok이 자동으로 커넥터 도구 사용 ⑥ Gmail 검색 연산자·메일 읽기·초안, 쓰기 권한 시 보내기·라벨 정리 ⑦ Calendar 일정 검색·빈 시간(free/busy)·RSVP, 쓰기 권한 시 일정 만들기·수정 ⑧ Drive 검색·읽기·폴더, 쓰기 권한 시 새 Google 문서·결과물 저장 ⑨ Disconnect 즉시 회수, 학습 미사용·저장 안 함(공식 문서) ⑩ Business·Enterprise는 관리자가 콘솔에서 먼저 허용",

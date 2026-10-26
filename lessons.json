@@ -1,5 +1,5 @@
 {
-  "standard": "v2.3",
+  "standard": "v2.4",
   "count": 182,
   "lessons": [
     {
@@ -37,7 +37,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "📷",
-      "one_liner": "AI 추천을 살펴 모임 사진 3장 고르기"
+      "one_liner": "AI 추천을 살펴 모임 사진 3장 고르기",
+      "what": "Lightroom이 눈 감은·흐린 사진의 선별을 도움"
     },
     {
       "id": "AI-2026-10-CAT04-018",
@@ -71,7 +72,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "🪟",
-      "one_liner": "창문 반사를 줄여 풍경 사진 한 장 완성"
+      "one_liner": "창문 반사를 줄여 풍경 사진 한 장 완성",
+      "what": "Lightroom 유리창 반사를 줄이는 보정을 도움"
     },
     {
       "id": "AI-2026-10-CAT12-002",
@@ -106,7 +108,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "🔀",
-      "one_liner": "모델 선택은 Auto, 안내문 확인은 내가"
+      "one_liner": "모델 선택은 Auto, 안내문 확인은 내가",
+      "what": "Notion 요청에 맞는 AI 모델을 자동 선택함"
     },
     {
       "id": "AI-2026-10-CAT03-035",
@@ -144,7 +147,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "📋",
-      "one_liner": "AI 요약을 고쳐 읽기 쉬운 모임 안내로"
+      "one_liner": "AI 요약을 고쳐 읽기 쉬운 모임 안내로",
+      "what": "Adobe Acrobat 공유 PDF 공간의 AI 요약을 고침"
     },
     {
       "id": "AI-2026-10-CAT05-027",
@@ -182,7 +186,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "🍃",
-      "one_liner": "글로 묘사하고 귀로 고르는 모임 효과음"
+      "one_liner": "글로 묘사하고 귀로 고르는 모임 효과음",
+      "what": "Adobe Firefly 글로 묘사한 효과음을 만듦"
     },
     {
       "id": "AI-2026-10-CAT05-026",
@@ -220,7 +225,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "🎼",
-      "one_liner": "태그와 속도로 고르는 우리 모임 시작 음악"
+      "one_liner": "태그와 속도로 고르는 우리 모임 시작 음악",
+      "what": "Adobe Firefly 분위기·템포에 맞는 음악을 만듦"
     },
     {
       "id": "AI-2026-10-CAT05-025",
@@ -258,7 +264,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "🔊",
-      "one_liner": "글 세 문장을 듣기 편한 환영 음성으로"
+      "one_liner": "글 세 문장을 듣기 편한 환영 음성으로",
+      "what": "Adobe Firefly 글을 속도·쉼이 있는 음성으로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT03-034",
@@ -294,7 +301,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "📋",
-      "one_liner": "한국어 한 문단으로 동아리 설문 초안"
+      "one_liner": "한국어 한 문단으로 동아리 설문 초안",
+      "what": "Google Forms 설명을 받아 설문 초안을 만듦"
     },
     {
       "id": "AI-2026-10-CAT04-017",
@@ -331,7 +339,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "☕",
-      "one_liner": "내 컵 사진을 고치고 원본과 대조"
+      "one_liner": "내 컵 사진을 고치고 원본과 대조",
+      "what": "Adobe Express 사진의 조명·배경을 말로 고침"
     },
     {
       "id": "AI-2026-10-CAT05-024",
@@ -369,7 +378,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "👂",
-      "one_liner": "이어폰 없이 귀에 대고 번역 듣기"
+      "one_liner": "이어폰 없이 귀에 대고 번역 듣기",
+      "what": "Google 번역 휴대전화를 귀에 대고 번역을 들려줌"
     },
     {
       "id": "AI-2026-10-CAT04-016",
@@ -406,7 +416,8 @@
       "total_minutes": 52,
       "notice": "",
       "emoji": "🪧",
-      "one_liner": "글자·그림 배치를 정해 안내판 만들기"
+      "one_liner": "글자·그림 배치를 정해 안내판 만들기",
+      "what": "Canva 글자·그림 배치를 정해 그림을 만듦"
     },
     {
       "id": "AI-2026-10-CAT08-029",
@@ -444,7 +455,8 @@
       "total_minutes": 52,
       "notice": "⚠️ PC 웹 연결 앱 실습의 Keep Activity 켜짐 조건 보완 — 설정 변경 미동의 시 수동 대체 실습",
       "emoji": "📒",
-      "one_liner": "대화로 자료함 관리하고 준비표 완성"
+      "one_liner": "대화로 자료함 관리하고 준비표 완성",
+      "what": "Gemini 대화로 자료함을 만들고 자료를 고침"
     },
     {
       "id": "AI-2026-10-CAT03-033",
@@ -482,7 +494,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "말 한마디로 대시보드 페이지 완성"
+      "one_liner": "말 한마디로 대시보드 페이지 완성",
+      "what": "Grok 자료를 표·차트가 있는 페이지로 만듦"
     },
     {
       "id": "AI-2026-10-CAT04-015",
@@ -520,7 +533,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🍌",
-      "one_liner": "큰 글씨 초대장 만들고 말로 고치기"
+      "one_liner": "큰 글씨 초대장 만들고 말로 고치기",
+      "what": "Gemini 초대장 그림을 만들고 대화로 고침"
     },
     {
       "id": "AI-2026-10-CAT09-008",
@@ -559,7 +573,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🔐",
-      "one_liner": "중요 대화 PIN으로 잠그기"
+      "one_liner": "중요 대화 PIN으로 잠그기",
+      "what": "ChatGPT 중요 대화를 숨기고 인증 뒤 열게 함"
     },
     {
       "id": "AI-2026-10-CAT11-002",
@@ -599,7 +614,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🏪",
-      "one_liner": "Gemini로 가게 홍보 기획"
+      "one_liner": "Gemini로 가게 홍보 기획",
+      "what": "Gemini 가게의 브랜드·홍보 기획을 도움"
     },
     {
       "id": "AI-2026-10-CAT07-020",
@@ -637,7 +653,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "🤖",
-      "one_liner": "화면 없이 명령 한 줄로 AI 실행"
+      "one_liner": "화면 없이 명령 한 줄로 AI 실행",
+      "what": "Grok 명령 한 줄로 화면 없이 AI를 실행함"
     },
     {
       "id": "AI-2026-10-CAT07-019",
@@ -675,7 +692,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "🔌",
-      "one_liner": "MCP 서버로 AI에 외부 도구 연결"
+      "one_liner": "MCP 서버로 AI에 외부 도구 연결",
+      "what": "Grok AI에 외부 읽기·작업 도구를 연결함"
     },
     {
       "id": "AI-2026-10-CAT07-018",
@@ -713,7 +731,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "🎛️",
-      "one_liner": "AI 코딩 세션 여러 개를 한 화면에서"
+      "one_liner": "AI 코딩 세션 여러 개를 한 화면에서",
+      "what": "Grok 여러 코딩 작업을 한 화면에 모음"
     },
     {
       "id": "AI-2026-10-CAT07-017",
@@ -751,7 +770,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "반복 지시를 /명령어 스킬로 저장"
+      "one_liner": "반복 지시를 /명령어 스킬로 저장",
+      "what": "Grok 반복 점검을 스킬 명령으로 저장함"
     },
     {
       "id": "AI-2026-10-CAT07-016",
@@ -789,7 +809,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "🧑‍💻",
-      "one_liner": "모델 골라 쓰는 코딩 에이전트"
+      "one_liner": "모델 골라 쓰는 코딩 에이전트",
+      "what": "Genspark 모델을 골라 쓰는 코딩 작업을 도움"
     },
     {
       "id": "AI-2026-10-CAT09-007",
@@ -827,7 +848,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "🛡️",
-      "one_liner": "AI 에이전트에게 권한 울타리 치기"
+      "one_liner": "AI 에이전트에게 권한 울타리 치기",
+      "what": "Grok AI 도구의 권한·접근 범위를 제한함"
     },
     {
       "id": "AI-2026-10-CAT03-032",
@@ -865,7 +887,8 @@
       "total_minutes": 61,
       "notice": "",
       "emoji": "📋",
-      "one_liner": "복사한 것 전부 다시 꺼내 붙이기"
+      "one_liner": "복사한 것 전부 다시 꺼내 붙이기",
+      "what": "Genspark 복사한 기록을 모아 다시 붙여 줌"
     },
     {
       "id": "AI-2026-10-CAT07-015",
@@ -903,7 +926,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "AI 작업 기록을 이어 하고 되돌리기"
+      "one_liner": "AI 작업 기록을 이어 하고 되돌리기",
+      "what": "Grok AI 작업 기록을 이어 하고 되돌림"
     },
     {
       "id": "AI-2026-10-CAT01-013",
@@ -942,7 +966,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧠",
-      "one_liner": "더 오래 생각하고 스스로 점검하는 Grok"
+      "one_liner": "더 오래 생각하고 스스로 점검하는 Grok",
+      "what": "Grok 코딩·문서 업무의 답을 스스로 점검함"
     },
     {
       "id": "AI-2026-10-CAT08-028",
@@ -980,7 +1005,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "⚙️",
-      "one_liner": "말로 설명하면 반복 업무 자동화"
+      "one_liner": "말로 설명하면 반복 업무 자동화",
+      "what": "Genspark 조건을 설명해 반복 업무를 자동화함"
     },
     {
       "id": "AI-2026-10-CAT08-027",
@@ -1018,7 +1044,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "📱",
-      "one_liner": "폰으로 Bot에게 일 맡기고 승인까지"
+      "one_liner": "폰으로 Bot에게 일 맡기고 승인까지",
+      "what": "Grok 휴대폰에서 Bot 작업을 이어 함"
     },
     {
       "id": "AI-2026-10-CAT08-026",
@@ -1056,7 +1083,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🤝",
-      "one_liner": "내 Bot을 팀 전체 공용 Bot으로"
+      "one_liner": "내 Bot을 팀 전체 공용 Bot으로",
+      "what": "Grok 팀이 함께 쓰는 Bot을 출판함"
     },
     {
       "id": "AI-2026-10-CAT03-031",
@@ -1094,7 +1122,8 @@
       "total_minutes": 50,
       "notice": "",
       "emoji": "🔌",
-      "one_liner": "Grok이 내 메일·일정·파일을 읽고 정리"
+      "one_liner": "Grok이 내 메일·일정·파일을 읽고 정리",
+      "what": "Grok 연결한 메일·일정·파일을 읽고 도움"
     },
     {
       "id": "AI-2026-10-CAT05-023",
@@ -1132,7 +1161,8 @@
       "total_minutes": 50,
       "notice": "",
       "emoji": "📝",
-      "one_liner": "녹음 파일을 화자별 대본으로 변환"
+      "one_liner": "녹음 파일을 화자별 대본으로 변환",
+      "what": "Grok 녹음을 화자·시간별 글로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT09-006",
@@ -1170,7 +1200,8 @@
       "total_minutes": 95,
       "notice": "",
       "emoji": "🛑",
-      "one_liner": "결제·발송 전엔 Bot이 꼭 묻게 설정"
+      "one_liner": "결제·발송 전엔 Bot이 꼭 묻게 설정",
+      "what": "Grok 결제·발송 전에 Bot의 승인을 설정함"
     },
     {
       "id": "AI-2026-10-CAT03-030",
@@ -1208,7 +1239,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "녹음 한 번으로 회의록·대본 완성"
+      "one_liner": "녹음 한 번으로 회의록·대본 완성",
+      "what": "Genspark 녹음을 회의록·할 일로 정리함"
     },
     {
       "id": "AI-2026-10-CAT03-029",
@@ -1246,7 +1278,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "말로 요청하면 조사·분석 표 완성"
+      "one_liner": "말로 요청하면 조사·분석 표 완성",
+      "what": "Genspark 조사·분석 내용을 표와 차트로 만듦"
     },
     {
       "id": "AI-2026-10-CAT03-028",
@@ -1284,7 +1317,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📄",
-      "one_liner": "프롬프트 한 번으로 디자인된 문서"
+      "one_liner": "프롬프트 한 번으로 디자인된 문서",
+      "what": "Genspark 요청에 맞는 디자인 문서를 만듦"
     },
     {
       "id": "AI-2026-10-CAT05-022",
@@ -1322,7 +1356,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "프롬프트 한 번으로 2인 대화 팟캐스트"
+      "one_liner": "프롬프트 한 번으로 2인 대화 팟캐스트",
+      "what": "Genspark 자료를 두 진행자의 대화로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT08-025",
@@ -1360,7 +1395,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "한 문단 설명으로 나만의 에이전트"
+      "one_liner": "한 문단 설명으로 나만의 에이전트",
+      "what": "Genspark 설명만으로 맞춤 AI 에이전트를 만듦"
     },
     {
       "id": "AI-2026-10-CAT03-027",
@@ -1398,7 +1434,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "프로젝트별 자료·지침·기억을 한 공간에"
+      "one_liner": "프로젝트별 자료·지침·기억을 한 공간에",
+      "what": "Genspark 프로젝트 자료·지침을 한곳에 모음"
     },
     {
       "id": "AI-2026-10-CAT08-024",
@@ -1436,7 +1473,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📞",
-      "one_liner": "한 줄 지시로 AI가 대신 전화"
+      "one_liner": "한 줄 지시로 AI가 대신 전화",
+      "what": "Genspark 설명한 목적대로 AI가 전화함"
     },
     {
       "id": "AI-2026-10-CAT08-023",
@@ -1474,7 +1512,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "👥",
-      "one_liner": "Bot 여러 개를 한 방에서 팀으로"
+      "one_liner": "Bot 여러 개를 한 방에서 팀으로",
+      "what": "Grok 여러 Bot을 모아 역할을 나눔"
     },
     {
       "id": "AI-2026-10-CAT08-022",
@@ -1512,7 +1551,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🦀",
-      "one_liner": "내 PC 파일·앱을 대신 다루는 AI 직원"
+      "one_liner": "내 PC 파일·앱을 대신 다루는 AI 직원",
+      "what": "Genspark 내 PC 파일·앱 업무를 대신 처리함"
     },
     {
       "id": "AI-2026-10-CAT06-014",
@@ -1550,7 +1590,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "Chrome 옆 AI로 페이지 바로 정리"
+      "one_liner": "Chrome 옆 AI로 페이지 바로 정리",
+      "what": "Genspark Chrome 옆에서 웹페이지를 정리함"
     },
     {
       "id": "AI-2026-10-CAT08-021",
@@ -1588,7 +1629,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🏷",
-      "one_liner": "X에서 @bot 한 번에 일 맡기기"
+      "one_liner": "X에서 @bot 한 번에 일 맡기기",
+      "what": "Grok X의 태그 요청을 Bot 작업으로 넘김"
     },
     {
       "id": "AI-2026-10-CAT06-013",
@@ -1626,7 +1668,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🔎",
-      "one_liner": "문서 속 오류·모순을 AI 검토단이 찾음"
+      "one_liner": "문서 속 오류·모순을 AI 검토단이 찾음",
+      "what": "Deep Review 문서의 오류·모순 후보를 찾아 줌"
     },
     {
       "id": "AI-2026-10-CAT02-006",
@@ -1664,7 +1707,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "📌",
-      "one_liner": "내 말투 규칙을 Gemini가 앱마다 기억"
+      "one_liner": "내 말투 규칙을 Gemini가 앱마다 기억",
+      "what": "Gemini 업무 앱에서 내 응답 규칙을 기억함"
     },
     {
       "id": "AI-2026-10-CAT05-021",
@@ -1702,7 +1746,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "말로 쓰고 외국어는 자막으로 바로 이해"
+      "one_liner": "말로 쓰고 외국어는 자막으로 바로 이해",
+      "what": "Genspark 말을 글로 쓰고 실시간 번역함"
     },
     {
       "id": "AI-2026-10-CAT08-020",
@@ -1741,7 +1786,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🕸️",
-      "one_liner": "큰 일을 AI 팀에 나눠 맡기기"
+      "one_liner": "큰 일을 AI 팀에 나눠 맡기기",
+      "what": "Grok 큰 업무를 여러 AI에 나눠 처리함"
     },
     {
       "id": "AI-2026-10-CAT08-019",
@@ -1778,7 +1824,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🤖",
-      "one_liner": "정해진 때 알아서 일하는 Notion AI 팀원"
+      "one_liner": "정해진 때 알아서 일하는 Notion AI 팀원",
+      "what": "Notion 공유 AI가 일정·사건에 맞춰 일함"
     },
     {
       "id": "AI-2026-10-CAT03-026",
@@ -1816,7 +1863,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📬",
-      "one_liner": "Outlook 메일함 옆에 Grok 비서"
+      "one_liner": "Outlook 메일함 옆에 Grok 비서",
+      "what": "Grok Outlook에서 메일 요약·답장을 도움"
     },
     {
       "id": "AI-2026-10-CAT03-025",
@@ -1854,7 +1902,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "문서·시트·슬라이드 옆에 Grok"
+      "one_liner": "문서·시트·슬라이드 옆에 Grok",
+      "what": "Grok 문서·시트·슬라이드 안에서 일함"
     },
     {
       "id": "AI-2026-10-CAT08-018",
@@ -1891,7 +1940,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📨",
-      "one_liner": "메일 오면 Bot이 알아서 요약"
+      "one_liner": "메일 오면 Bot이 알아서 요약",
+      "what": "Grok 메일 수신을 계기로 Bot이 일함"
     },
     {
       "id": "AI-2026-10-CAT03-024",
@@ -1929,7 +1979,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "라이브러리 폴더 공유·클라우드 파일 연결"
+      "one_liner": "라이브러리 폴더 공유·클라우드 파일 연결",
+      "what": "ChatGPT 공유 폴더·연결 파일을 대화에 활용함"
     },
     {
       "id": "AI-2026-10-CAT05-020",
@@ -1967,7 +2018,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🎛️",
-      "one_liner": "모둠 노래를 공유 작업실 하나에 모으기"
+      "one_liner": "모둠 노래를 공유 작업실 하나에 모으기",
+      "what": "Suno 모둠의 음악 작업실을 공유함"
     },
     {
       "id": "AI-2026-10-CAT08-017",
@@ -2006,7 +2058,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🤝",
-      "one_liner": "사람과 AI 팀원이 한 채널에서 협업"
+      "one_liner": "사람과 AI 팀원이 한 채널에서 협업",
+      "what": "Genspark 사람과 AI 팀원이 채널에서 협업함"
     },
     {
       "id": "AI-2026-10-CAT03-023",
@@ -2044,7 +2097,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "Word·Excel·PPT 옆 젠스파크에게 말로 요청"
+      "one_liner": "Word·Excel·PPT 옆 젠스파크에게 말로 요청",
+      "what": "Genspark Office 옆에서 AI로 문서를 고침"
     },
     {
       "id": "AI-2026-10-CAT03-022",
@@ -2082,7 +2136,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "📝",
-      "one_liner": "AI 답변 .md 파일을 Docs에서 바로 편집"
+      "one_liner": "AI 답변 .md 파일을 Docs에서 바로 편집",
+      "what": "Google 문서 마크다운 문서를 서식대로 열어 줌"
     },
     {
       "id": "AI-2026-10-CAT06-012",
@@ -2120,7 +2175,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🔎",
-      "one_liner": "X 반응을 모아 브리핑 표로"
+      "one_liner": "X 반응을 모아 브리핑 표로",
+      "what": "Grok X 게시물을 찾아 반응을 정리함"
     },
     {
       "id": "AI-2026-10-CAT07-014",
@@ -2159,7 +2215,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎯",
-      "one_liner": "완료 조건까지 알아서 일하는 AI"
+      "one_liner": "완료 조건까지 알아서 일하는 AI",
+      "what": "Grok 완료 조건까지 코딩 작업을 반복함"
     },
     {
       "id": "AI-2026-10-CAT07-013",
@@ -2197,7 +2254,8 @@
       "total_minutes": 73,
       "notice": "",
       "emoji": "🎨",
-      "one_liner": "한 줄 요청 → 화면 시안 → 코드 완성"
+      "one_liner": "한 줄 요청 → 화면 시안 → 코드 완성",
+      "what": "Claude Code 화면 시안을 만든 뒤 코드로 구현함"
     },
     {
       "id": "AI-2026-10-CAT03-021",
@@ -2235,7 +2293,8 @@
       "total_minutes": 73,
       "notice": "",
       "emoji": "💬",
-      "one_liner": "Chat 입력창 하나로 찾고 만들고 예약"
+      "one_liner": "Chat 입력창 하나로 찾고 만들고 예약",
+      "what": "Google Chat Chat에서 검색·문서·일정을 도움"
     },
     {
       "id": "AI-2026-10-CAT09-005",
@@ -2272,7 +2331,8 @@
       "total_minutes": 73,
       "notice": "",
       "emoji": "🔒",
-      "one_liner": "한 표에서 민감한 열만 골라 잠그기"
+      "one_liner": "한 표에서 민감한 열만 골라 잠그기",
+      "what": "Notion 한 표의 민감한 열에 권한을 정함"
     },
     {
       "id": "AI-2026-10-CAT08-016",
@@ -2310,7 +2370,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🔌",
-      "one_liner": "Bot에 내 앱을 꽂아 일 시키기"
+      "one_liner": "Bot에 내 앱을 꽂아 일 시키기",
+      "what": "Grok Bot에 앱을 연결하고 결과를 보여 줌"
     },
     {
       "id": "AI-2026-10-CAT05-019",
@@ -2348,7 +2409,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎬",
-      "one_liner": "편집 화면 안에서 바로 AI 장면 생성"
+      "one_liner": "편집 화면 안에서 바로 AI 장면 생성",
+      "what": "Runway 영상 편집 화면에서 AI 장면을 만듦"
     },
     {
       "id": "AI-2026-10-CAT06-011",
@@ -2386,7 +2448,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🔎",
-      "one_liner": "회사 자료 검색 후 그 자리에서 바로 질문"
+      "one_liner": "회사 자료 검색 후 그 자리에서 바로 질문",
+      "what": "Copilot 회사 자료 검색 뒤 바로 질문을 받음"
     },
     {
       "id": "AI-2026-10-CAT07-012",
@@ -2423,7 +2486,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "클라우드 에이전트 결과를 현황판으로 공유"
+      "one_liner": "클라우드 에이전트 결과를 현황판으로 공유",
+      "what": "Cursor 클라우드 작업 결과를 현황판으로 공유함"
     },
     {
       "id": "AI-2026-10-CAT12-001",
@@ -2461,7 +2525,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🔁",
-      "one_liner": "다시 묻지 않고 다른 답·다른 모델 비교"
+      "one_liner": "다시 묻지 않고 다른 답·다른 모델 비교",
+      "what": "Copilot 같은 질문의 다른 답을 만들어 줌"
     },
     {
       "id": "AI-2026-10-CAT06-010",
@@ -2499,7 +2564,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "📈",
-      "one_liner": "말 한 줄로 대화창에 움직이는 차트"
+      "one_liner": "말 한 줄로 대화창에 움직이는 차트",
+      "what": "Perplexity 대화 안에 눌러 보는 차트를 만듦"
     },
     {
       "id": "AI-2026-10-CAT04-014",
@@ -2538,7 +2604,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎨",
-      "one_liner": "말 한마디로 보정·로고·목업·SNS까지"
+      "one_liner": "말 한마디로 보정·로고·목업·SNS까지",
+      "what": "Adobe Firefly 말로 여러 디자인 단계를 처리함"
     },
     {
       "id": "AI-2026-10-CAT03-020",
@@ -2576,7 +2643,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "Excel 옆 Grok에게 말로 분석·수식 요청"
+      "one_liner": "Excel 옆 Grok에게 말로 분석·수식 요청",
+      "what": "Grok Excel 안에서 말로 분석·수식을 도움"
     },
     {
       "id": "AI-2026-10-CAT04-013",
@@ -2614,7 +2682,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧅",
-      "one_liner": "통짜 그림을 레이어로 나눠 다시 편집"
+      "one_liner": "통짜 그림을 레이어로 나눠 다시 편집",
+      "what": "Canva 통짜 그림을 편집 가능한 층으로 나눔"
     },
     {
       "id": "AI-2026-10-CAT07-011",
@@ -2653,7 +2722,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧠",
-      "one_liner": "말한 규칙을 다음에도 기억하는 코딩 AI"
+      "one_liner": "말한 규칙을 다음에도 기억하는 코딩 AI",
+      "what": "Grok 코딩 규칙을 다음 대화에도 기억함"
     },
     {
       "id": "AI-2026-10-CAT08-015",
@@ -2692,7 +2762,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧠",
-      "one_liner": "내 업무 맥락을 기억하는 AI 비서"
+      "one_liner": "내 업무 맥락을 기억하는 AI 비서",
+      "what": "Genspark 여러 앱의 업무 맥락을 기억함"
     },
     {
       "id": "AI-2026-10-CAT05-018",
@@ -2730,7 +2801,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎞️",
-      "one_liner": "영상 사이 장면을 AI가 채워 부드럽게"
+      "one_liner": "영상 사이 장면을 AI가 채워 부드럽게",
+      "what": "Runway 영상 사이의 장면을 채워 넣음"
     },
     {
       "id": "AI-2026-10-CAT08-014",
@@ -2769,7 +2841,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🔗",
-      "one_liner": "개인·업무 계정을 한 대화에서 같이 씀"
+      "one_liner": "개인·업무 계정을 한 대화에서 같이 씀",
+      "what": "ChatGPT 여러 계정의 자료를 한 대화에 연결함"
     },
     {
       "id": "AI-2026-10-CAT06-009",
@@ -2807,7 +2880,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "⏳",
-      "one_liner": "한도 걸려도 예약해 두면 알아서 만들어 줌"
+      "one_liner": "한도 걸려도 예약해 두면 알아서 만들어 줌",
+      "what": "Gemini Notebook 생성 한도를 보여 주고 작업을 예약함"
     },
     {
       "id": "AI-2026-10-CAT01-012",
@@ -2845,7 +2919,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🔎",
-      "one_liner": "지난 대화를 찾아 읽고 이어서 답함"
+      "one_liner": "지난 대화를 찾아 읽고 이어서 답함",
+      "what": "Claude 예전 대화를 검색해 이어서 답함"
     },
     {
       "id": "AI-2026-10-CAT04-012",
@@ -2883,7 +2958,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎨",
-      "one_liner": "좋아하는 그림을 골라 내 그림체로 생성"
+      "one_liner": "좋아하는 그림을 골라 내 그림체로 생성",
+      "what": "Midjourney 고른 그림 취향을 새 그림에 반영함"
     },
     {
       "id": "AI-2026-10-CAT04-011",
@@ -2922,7 +2998,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎨",
-      "one_liner": "글로 설명하면 포스터·시안 완성"
+      "one_liner": "글로 설명하면 포스터·시안 완성",
+      "what": "Genspark 말로 디자인하고 화면에서 다듬음"
     },
     {
       "id": "AI-2026-10-CAT03-019",
@@ -2960,7 +3037,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📬",
-      "one_liner": "메일 분류·요약·내 말투 답장까지"
+      "one_liner": "메일 분류·요약·내 말투 답장까지",
+      "what": "Genspark 메일 분류·요약·답장 초안을 도움"
     },
     {
       "id": "AI-2026-10-CAT07-010",
@@ -2997,7 +3075,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "순서 정한 AI 팀을 저장해 재사용"
+      "one_liner": "순서 정한 AI 팀을 저장해 재사용",
+      "what": "GitHub Copilot 순서가 있는 AI 작업을 저장해 실행함"
     },
     {
       "id": "AI-2026-10-CAT05-017",
@@ -3035,7 +3114,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎬",
-      "one_liner": "그린 스크린 없이 영상 배경 지우기"
+      "one_liner": "그린 스크린 없이 영상 배경 지우기",
+      "what": "Adobe Firefly 영상의 배경을 AI로 지움"
     },
     {
       "id": "AI-2026-10-CAT06-008",
@@ -3073,7 +3153,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "👥",
-      "one_liner": "큰 조사를 여러 에이전트가 동시에"
+      "one_liner": "큰 조사를 여러 에이전트가 동시에",
+      "what": "ChatGPT 큰 조사를 여러 AI가 나눠 처리함"
     },
     {
       "id": "AI-2026-10-CAT03-018",
@@ -3111,7 +3192,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📮",
-      "one_liner": "Bot이 발표 자료 만들고 메일까지 대신"
+      "one_liner": "Bot이 발표 자료 만들고 메일까지 대신",
+      "what": "Grok Bot이 발표 파일과 메일 초안을 만듦"
     },
     {
       "id": "AI-2026-10-CAT03-017",
@@ -3149,7 +3231,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🪄",
-      "one_liner": "PDF 내용이 바로 전단·SNS 이미지로"
+      "one_liner": "PDF 내용이 바로 전단·SNS 이미지로",
+      "what": "Adobe Acrobat PDF 내용을 전단·SNS 그림으로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT08-013",
@@ -3187,7 +3270,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "⏰",
-      "one_liner": "정해진 시간·앱 이벤트에 Manus가 알아서 일함"
+      "one_liner": "정해진 시간·앱 이벤트에 Manus가 알아서 일함",
+      "what": "Manus 일정·메일 조건으로 업무를 자동 실행함"
     },
     {
       "id": "AI-2026-10-CAT02-005",
@@ -3225,7 +3309,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "한 번 가르치면 매번 기억하는 Grok"
+      "one_liner": "한 번 가르치면 매번 기억하는 Grok",
+      "what": "Grok 서식·말투를 스킬로 기억함"
     },
     {
       "id": "AI-2026-10-CAT07-009",
@@ -3263,7 +3348,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "한 문장으로 나만의 관리 시스템 완성"
+      "one_liner": "한 문장으로 나만의 관리 시스템 완성",
+      "what": "Genspark 설명으로 표·현황판·업무 흐름을 만듦"
     },
     {
       "id": "AI-2026-10-CAT08-012",
@@ -3301,7 +3387,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🔌",
-      "one_liner": "다른 AI가 내 Notion을 읽고 고치게 연결"
+      "one_liner": "다른 AI가 내 Notion을 읽고 고치게 연결",
+      "what": "Notion AI 대화에서 Notion 자료를 다룸"
     },
     {
       "id": "AI-2026-10-CAT05-016",
@@ -3339,7 +3426,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🎬",
-      "one_liner": "같은 캐릭터로 여러 장면 영상 만들기"
+      "one_liner": "같은 캐릭터로 여러 장면 영상 만들기",
+      "what": "Grok 참조 사진으로 같은 인물 영상을 만듦"
     },
     {
       "id": "AI-2026-10-CAT08-011",
@@ -3377,7 +3465,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "할 일 목록을 말로 묻고 만들고 고치기"
+      "one_liner": "할 일 목록을 말로 묻고 만들고 고치기",
+      "what": "Copilot 계획 안에서 AI가 할 일을 정리함"
     },
     {
       "id": "AI-2026-10-CAT03-016",
@@ -3416,7 +3505,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📋",
-      "one_liner": "설문 만들기부터 응답 분석까지 대화로"
+      "one_liner": "설문 만들기부터 응답 분석까지 대화로",
+      "what": "Copilot 설문 작성·개선·분석을 대화로 도움"
     },
     {
       "id": "AI-2026-10-CAT08-010",
@@ -3454,7 +3544,8 @@
       "total_minutes": 50,
       "notice": "",
       "emoji": "⏰",
-      "one_liner": "한 번 적어 두면 Grok이 정해진 때 일함"
+      "one_liner": "한 번 적어 두면 Grok이 정해진 때 일함",
+      "what": "Grok 시간·사건에 맞춰 작업을 실행함"
     },
     {
       "id": "AI-2026-10-CAT03-015",
@@ -3492,7 +3583,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "대화로 발표 자료 만들고 함께 고치기"
+      "one_liner": "대화로 발표 자료 만들고 함께 고치기",
+      "what": "ChatGPT 대화로 발표 자료를 만들고 고침"
     },
     {
       "id": "AI-2026-10-CAT03-014",
@@ -3530,7 +3622,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🧭",
-      "one_liner": "앱 안 바꾸고 문서·메일·일정 처리"
+      "one_liner": "앱 안 바꾸고 문서·메일·일정 처리",
+      "what": "Gemini 업무 앱 안에서 문서·메일을 처리함"
     },
     {
       "id": "AI-2026-10-CAT06-007",
@@ -3568,7 +3661,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "📚",
-      "one_liner": "산 전자책을 AI 공부 자료로"
+      "one_liner": "산 전자책을 AI 공부 자료로",
+      "what": "Gemini Notebook 구매한 전자책을 AI 학습 자료로 씀"
     },
     {
       "id": "AI-2026-10-CAT03-013",
@@ -3606,7 +3700,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "📄",
-      "one_liner": "대화를 함께 고치는 문서로 바꾸기"
+      "one_liner": "대화를 함께 고치는 문서로 바꾸기",
+      "what": "ChatGPT 대화를 함께 편집하는 문서로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT07-008",
@@ -3644,7 +3739,8 @@
       "total_minutes": 50,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "말로 설명하면 작동하는 웹앱이 생김"
+      "one_liner": "말로 설명하면 작동하는 웹앱이 생김",
+      "what": "Grok 설명을 받아 작동하는 웹앱을 만듦"
     },
     {
       "id": "AI-2026-10-CAT07-007",
@@ -3682,7 +3778,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🔍",
-      "one_liner": "PR 열면 AI가 버그 찾아 댓글"
+      "one_liner": "PR 열면 AI가 버그 찾아 댓글",
+      "what": "Claude Code 코드 변경의 버그 후보를 검토함"
     },
     {
       "id": "AI-2026-10-CAT03-012",
@@ -3720,7 +3817,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "무료 오픈소스 AI 오피스로 문서 작업"
+      "one_liner": "무료 오픈소스 AI 오피스로 문서 작업",
+      "what": "Genspark 문서 변환·편집에 AI를 함께 씀"
     },
     {
       "id": "AI-2026-10-CAT05-015",
@@ -3758,7 +3856,8 @@
       "total_minutes": 47,
       "notice": "",
       "emoji": "🎧",
-      "one_liner": "AI 목소리에 전화·카페 소리 입히기"
+      "one_liner": "AI 목소리에 전화·카페 소리 입히기",
+      "what": "ElevenLabs AI 목소리에 환경 소리·효과를 더함"
     },
     {
       "id": "AI-2026-10-CAT08-009",
@@ -3796,7 +3895,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🤖",
-      "one_liner": "역할을 준 AI 팀원이 컴퓨터로 일을 끝냄"
+      "one_liner": "역할을 준 AI 팀원이 컴퓨터로 일을 끝냄",
+      "what": "Grok 상시 Bot이 내 업무를 이어 처리함"
     },
     {
       "id": "AI-2026-10-CAT05-014",
@@ -3834,7 +3934,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "말로 대화하는 AI 상대를 코드 없이 시험"
+      "one_liner": "말로 대화하는 AI 상대를 코드 없이 시험",
+      "what": "Grok 음성 역할극 상대를 시험하게 함"
     },
     {
       "id": "AI-2026-10-CAT04-010",
@@ -3872,7 +3973,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🖼️",
-      "one_liner": "글자 또렷한 포스터를 만들고 크기별로 변환"
+      "one_liner": "글자 또렷한 포스터를 만들고 크기별로 변환",
+      "what": "Grok 포스터 그림을 만들고 크기를 바꿈"
     },
     {
       "id": "AI-2026-10-CAT03-011",
@@ -3910,7 +4012,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "한 줄 요청으로 발표 자료 초안 완성"
+      "one_liner": "한 줄 요청으로 발표 자료 초안 완성",
+      "what": "Genspark 한 줄 요청으로 슬라이드 초안을 만듦"
     },
     {
       "id": "AI-2026-10-CAT05-013",
@@ -3948,7 +4051,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "🎶",
-      "one_liner": "기분 한 줄로 노래, 한 줄만 고치기"
+      "one_liner": "기분 한 줄로 노래, 한 줄만 고치기",
+      "what": "Suno 노래를 만들고 일부만 고침"
     },
     {
       "id": "AI-2026-10-CAT06-006",
@@ -3986,7 +4090,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "흩어진 메모 파일을 한 노트북에 모아 요약"
+      "one_liner": "흩어진 메모 파일을 한 노트북에 모아 요약",
+      "what": "Copilot 흩어진 파일을 노트북에 모아 답함"
     },
     {
       "id": "AI-2026-10-CAT08-008",
@@ -4024,7 +4129,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎚️",
-      "one_liner": "일의 난이도에 맞춰 AI 힘 조절하기"
+      "one_liner": "일의 난이도에 맞춰 AI 힘 조절하기",
+      "what": "Perplexity 작업의 노력 수준·옆 대화를 조절함"
     },
     {
       "id": "AI-2026-10-CAT06-005",
@@ -4062,7 +4168,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧠",
-      "one_liner": "복잡한 비교·판단을 결론 먼저 보고서로"
+      "one_liner": "복잡한 비교·판단을 결론 먼저 보고서로",
+      "what": "Claude 비교·판단을 결론과 근거로 정리함"
     },
     {
       "id": "AI-2026-10-CAT03-010",
@@ -4100,7 +4207,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "📥",
-      "one_liner": "메일 속 할 일·주제를 먼저 정리"
+      "one_liner": "메일 속 할 일·주제를 먼저 정리",
+      "what": "Gmail 메일의 할 일·주제를 먼저 모아 줌"
     },
     {
       "id": "AI-2026-10-CAT05-012",
@@ -4138,7 +4246,8 @@
       "total_minutes": 54,
       "notice": "",
       "emoji": "💿",
-      "one_liner": "내 AI 노래를 앨범으로 묶어 공개"
+      "one_liner": "내 AI 노래를 앨범으로 묶어 공개",
+      "what": "Suno 내 곡을 앨범으로 묶어 공개함"
     },
     {
       "id": "AI-2026-10-CAT03-009",
@@ -4176,7 +4285,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "📬",
-      "one_liner": "메일함에 말로 묻고 소리로 답 듣기"
+      "one_liner": "메일함에 말로 묻고 소리로 답 듣기",
+      "what": "Gmail 메일 내용을 음성으로 묻고 답함"
     },
     {
       "id": "AI-2026-10-CAT05-011",
@@ -4214,7 +4324,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "글을 음악 깔린 낭독 오디오로 변환"
+      "one_liner": "글을 음악 깔린 낭독 오디오로 변환",
+      "what": "Suno 낭독과 배경음악을 함께 만듦"
     },
     {
       "id": "AI-2026-10-CAT05-010",
@@ -4252,7 +4363,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "🗣️",
-      "one_liner": "한국어 원어민 억양 AI 목소리로 듣기 연습"
+      "one_liner": "한국어 원어민 억양 AI 목소리로 듣기 연습",
+      "what": "ChatGPT 한국어 음성으로 듣기 연습을 도움"
     },
     {
       "id": "AI-2026-10-CAT02-004",
@@ -4290,7 +4402,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "내 지침을 스킬로 저장해 어디서나 호출"
+      "one_liner": "내 지침을 스킬로 저장해 어디서나 호출",
+      "what": "Gemini 반복 업무 지침을 스킬로 저장함"
     },
     {
       "id": "AI-2026-10-CAT01-011",
@@ -4328,7 +4441,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📝",
-      "one_liner": "빨라진 Sonnet으로 업무 문서 한 번에"
+      "one_liner": "빨라진 Sonnet으로 업무 문서 한 번에",
+      "what": "Claude 문서·분석 요청을 빠르게 처리함"
     },
     {
       "id": "AI-2026-10-CAT03-008",
@@ -4367,7 +4481,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "반복 지시를 스킬로 저장해 /로 바로 실행"
+      "one_liner": "반복 지시를 스킬로 저장해 /로 바로 실행",
+      "what": "Notion 반복 문서 지시를 스킬로 불러 씀"
     },
     {
       "id": "AI-2026-10-CAT05-009",
@@ -4405,7 +4520,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "🎞️",
-      "one_liner": "내 글·숫자로 만드는 설명 애니메이션"
+      "one_liner": "내 글·숫자로 만드는 설명 애니메이션",
+      "what": "Claude 내 글·숫자로 설명 영상을 만듦"
     },
     {
       "id": "AI-2026-10-CAT06-004",
@@ -4443,7 +4559,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "말로 묻고 계속 갱신되는 대시보드"
+      "one_liner": "말로 묻고 계속 갱신되는 대시보드",
+      "what": "Claude 자료를 계속 갱신하는 현황판을 만듦"
     },
     {
       "id": "AI-2026-10-CAT08-007",
@@ -4480,7 +4597,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🟣",
-      "one_liner": "쉬지 않고 일하는 내 AI 동료"
+      "one_liner": "쉬지 않고 일하는 내 AI 동료",
+      "what": "ChatGPT 상시 AI 비서가 예약 업무를 처리함"
     },
     {
       "id": "AI-2026-10-CAT04-009",
@@ -4518,7 +4636,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "폴더마다 그림체를 정해 두고 바로 생성"
+      "one_liner": "폴더마다 그림체를 정해 두고 바로 생성",
+      "what": "Midjourney 폴더마다 그림체 설정을 기억함"
     },
     {
       "id": "AI-2026-10-CAT04-008",
@@ -4556,7 +4675,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🎬",
-      "one_liner": "AI 대화창에서 Runway로 바로 생성"
+      "one_liner": "AI 대화창에서 Runway로 바로 생성",
+      "what": "Runway 대화에서 Runway 그림·영상을 만듦"
     },
     {
       "id": "AI-2026-10-CAT01-010",
@@ -4595,7 +4715,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🎛️",
-      "one_liner": "지침·스킬·앱 연결을 한 화면에서"
+      "one_liner": "지침·스킬·앱 연결을 한 화면에서",
+      "what": "Gemini 지침·스킬·앱 연결을 모아 관리함"
     },
     {
       "id": "AI-2026-10-CAT07-006",
@@ -4633,7 +4754,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🛸",
-      "one_liner": "Gemini 대화에서 바로 코딩 에이전트"
+      "one_liner": "Gemini 대화에서 바로 코딩 에이전트",
+      "what": "Gemini 대화에서 코딩 에이전트를 시작함"
     },
     {
       "id": "AI-2026-10-CAT03-007",
@@ -4671,7 +4793,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📂",
-      "one_liner": "파일 이름만 말하면 그 자료로 슬라이드"
+      "one_liner": "파일 이름만 말하면 그 자료로 슬라이드",
+      "what": "Copilot 파일 이름을 받아 발표 자료를 만듦"
     },
     {
       "id": "AI-2026-10-CAT08-006",
@@ -4709,7 +4832,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🗓️",
-      "one_liner": "회의 끝나면 메일 초안·할 일이 자동"
+      "one_liner": "회의 끝나면 메일 초안·할 일이 자동",
+      "what": "Google Meet 회의 뒤 정리·후속 업무를 도움"
     },
     {
       "id": "AI-2026-10-CAT07-005",
@@ -4747,7 +4871,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "⌨️",
-      "one_liner": "Codex가 다음 지시를 미리 써 줌"
+      "one_liner": "Codex가 다음 지시를 미리 써 줌",
+      "what": "Codex 다음 작업 지시문을 미리 추천함"
     },
     {
       "id": "AI-2026-10-CAT07-004",
@@ -4786,7 +4911,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎟️",
-      "one_liner": "구독 크레딧으로 내 AI 앱 직접 만들기"
+      "one_liner": "구독 크레딧으로 내 AI 앱 직접 만들기",
+      "what": "Claude 구독 크레딧을 AI 앱 실험에 씀"
     },
     {
       "id": "AI-2026-10-CAT01-009",
@@ -4825,7 +4951,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧠",
-      "one_liner": "어려운 다단계 분석은 Argon에게"
+      "one_liner": "어려운 다단계 분석은 Argon에게",
+      "what": "Gemini 복잡한 자료의 다단계 분석을 도움"
     },
     {
       "id": "AI-2026-10-CAT01-008",
@@ -4864,7 +4991,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "⚡",
-      "one_liner": "가볍고 빠른 Haiku로 반복 정리 끝내기"
+      "one_liner": "가볍고 빠른 Haiku로 반복 정리 끝내기",
+      "what": "Claude 짧은 분류·요약을 빠르게 처리함"
     },
     {
       "id": "AI-2026-10-CAT04-007",
@@ -4902,7 +5030,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧠",
-      "one_liner": "빗나간 그림을 '생각'해서 다시 그리기"
+      "one_liner": "빗나간 그림을 '생각'해서 다시 그리기",
+      "what": "Midjourney 요청과 다른 그림을 다시 다듬음"
     },
     {
       "id": "AI-2026-10-CAT07-003",
@@ -4939,7 +5068,8 @@
       "total_minutes": 72,
       "notice": "",
       "emoji": "📱",
-      "one_liner": "폰에서 내 PC 코딩 에이전트에 지시"
+      "one_liner": "폰에서 내 PC 코딩 에이전트에 지시",
+      "what": "Cursor 휴대폰에서 PC 코딩 작업을 이음"
     },
     {
       "id": "AI-2026-10-CAT08-005",
@@ -4976,7 +5106,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🔀",
-      "one_liner": "메일 종류 따라 갈라 처리하는 AI 흐름"
+      "one_liner": "메일 종류 따라 갈라 처리하는 AI 흐름",
+      "what": "Workspace Studio 메일 종류에 따라 규정을 찾아 답함"
     },
     {
       "id": "AI-2026-10-CAT08-004",
@@ -5012,7 +5143,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🛰️",
-      "one_liner": "지난주와 바뀐 것만 짚는 AI 자동화"
+      "one_liner": "지난주와 바뀐 것만 짚는 AI 자동화",
+      "what": "Perplexity 일정·앱 사건에 맞춰 일을 실행함"
     },
     {
       "id": "AI-2026-10-CAT05-008",
@@ -5050,7 +5182,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎬",
-      "one_liner": "수업 글 한 편이 해설 영상으로 변신"
+      "one_liner": "수업 글 한 편이 해설 영상으로 변신",
+      "what": "Gemini Notebook 내 글을 해설 영상으로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT04-006",
@@ -5088,7 +5221,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "👗",
-      "one_liner": "옷을 사기 전에 내 사진에 먼저 입혀 보기"
+      "one_liner": "옷을 사기 전에 내 사진에 먼저 입혀 보기",
+      "what": "ChatGPT 내 사진에 옷을 가상으로 입혀 줌"
     },
     {
       "id": "AI-2026-10-CAT08-003",
@@ -5124,7 +5258,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🤝",
-      "one_liner": "자리를 비워도 일을 끝내 주는 Gemini 작업"
+      "one_liner": "자리를 비워도 일을 끝내 주는 Gemini 작업",
+      "what": "Gemini 대화를 문서·예약 작업으로 처리함"
     },
     {
       "id": "AI-2026-10-CAT10-007",
@@ -5162,7 +5297,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧑‍🏫",
-      "one_liner": "정답 대신 힌트로 이끄는 AI 과외 선생님"
+      "one_liner": "정답 대신 힌트로 이끄는 AI 과외 선생님",
+      "what": "ChatGPT 질문·힌트로 단계별 학습을 도움"
     },
     {
       "id": "AI-2026-10-CAT05-007",
@@ -5200,7 +5336,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎬",
-      "one_liner": "싸게 초안 보고, 좋으면 고화질로"
+      "one_liner": "싸게 초안 보고, 좋으면 고화질로",
+      "what": "Runway 낮은 비용의 영상 초안부터 만듦"
     },
     {
       "id": "AI-2026-10-CAT03-006",
@@ -5239,7 +5376,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "반복하는 슬라이드 정리를 @이름 한 번에"
+      "one_liner": "반복하는 슬라이드 정리를 @이름 한 번에",
+      "what": "Copilot 반복 슬라이드 작업을 스킬로 실행함"
     },
     {
       "id": "AI-2026-10-CAT07-002",
@@ -5276,7 +5414,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "말로 부탁하면 AI 작업 화면이 바뀜"
+      "one_liner": "말로 부탁하면 AI 작업 화면이 바뀜",
+      "what": "Claude Code 코딩 작업 화면·명령을 맞춤 변경함"
     },
     {
       "id": "AI-2026-10-CAT09-004",
@@ -5314,7 +5453,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🔒",
-      "one_liner": "숨은 악성 지시로부터 내 정보 지키기"
+      "one_liner": "숨은 악성 지시로부터 내 정보 지키기",
+      "what": "ChatGPT 외부 연결을 줄여 정보 노출을 낮춤"
     },
     {
       "id": "AI-2026-10-CAT10-006",
@@ -5351,7 +5491,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "말로 남기면 수업 일지가 완성됨"
+      "one_liner": "말로 남기면 수업 일지가 완성됨",
+      "what": "ChatGPT 말한 내용을 입력창의 글로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT01-007",
@@ -5389,7 +5530,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "👀",
-      "one_liner": "화면·종이를 보여 주면 말로 설명해 줌"
+      "one_liner": "화면·종이를 보여 주면 말로 설명해 줌",
+      "what": "Copilot 화면·종이를 보며 음성으로 설명함"
     },
     {
       "id": "AI-2026-10-CAT05-006",
@@ -5427,7 +5569,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎬",
-      "one_liner": "AI가 초안, 마무리는 내 타임라인"
+      "one_liner": "AI가 초안, 마무리는 내 타임라인",
+      "what": "Manus AI 영상 초안을 타임라인에서 고침"
     },
     {
       "id": "AI-2026-10-CAT04-005",
@@ -5465,7 +5608,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🖌️",
-      "one_liner": "그림 일부만 골라 고치고 넓히기"
+      "one_liner": "그림 일부만 골라 고치고 넓히기",
+      "what": "Midjourney 그림의 일부를 고치거나 넓힘"
     },
     {
       "id": "AI-2026-10-CAT03-005",
@@ -5503,7 +5647,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "내 수업 글이 발표 슬라이드로 바로 변신"
+      "one_liner": "내 수업 글이 발표 슬라이드로 바로 변신",
+      "what": "Gemini Notebook 내 자료를 발표 슬라이드로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT02-003",
@@ -5541,7 +5686,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎯",
-      "one_liner": "말 한마디로 대화창 속 퀴즈 완성"
+      "one_liner": "말 한마디로 대화창 속 퀴즈 완성",
+      "what": "ChatGPT 대화에서 바로 푸는 퀴즈를 만듦"
     },
     {
       "id": "AI-2026-10-CAT05-005",
@@ -5579,7 +5725,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎵",
-      "one_liner": "말로 주문하는 우리 교실 배경음악"
+      "one_liner": "말로 주문하는 우리 교실 배경음악",
+      "what": "ElevenLabs 설명에 맞는 음악을 만듦"
     },
     {
       "id": "AI-2026-10-CAT08-002",
@@ -5617,7 +5764,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "⏰",
-      "one_liner": "말 한마디로 매일 아침 수업 자료 받기"
+      "one_liner": "말 한마디로 매일 아침 수업 자료 받기",
+      "what": "ChatGPT 정해진 때 반복 작업을 실행함"
     },
     {
       "id": "AI-2026-10-CAT10-005",
@@ -5655,7 +5803,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "PowerPoint 안에서 메모가 수업 슬라이드로"
+      "one_liner": "PowerPoint 안에서 메모가 수업 슬라이드로",
+      "what": "ChatGPT PowerPoint 안에서 발표 자료를 만듦"
     },
     {
       "id": "AI-2026-10-CAT09-003",
@@ -5693,7 +5842,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "🖍️",
-      "one_liner": "말 한 줄로 PDF 합치고 개인정보 가리기"
+      "one_liner": "말 한 줄로 PDF 합치고 개인정보 가리기",
+      "what": "Claude 대화에서 PDF를 합치고 정보를 가림"
     },
     {
       "id": "AI-2026-10-CAT03-004",
@@ -5732,7 +5882,8 @@
       "total_minutes": 58,
       "notice": "",
       "emoji": "🎨",
-      "one_liner": "말로 주문하고 캔버스에서 다듬는 한 장 디자인"
+      "one_liner": "말로 주문하고 캔버스에서 다듬는 한 장 디자인",
+      "what": "Claude 말로 디자인하고 화면에서 다듬음"
     },
     {
       "id": "AI-2026-10-CAT04-004",
@@ -5770,7 +5921,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎨",
-      "one_liner": "채팅 한 줄로 만드는 행사 전단·SNS 홍보물"
+      "one_liner": "채팅 한 줄로 만드는 행사 전단·SNS 홍보물",
+      "what": "Gemini 대화에서 Adobe 디자인을 불러 씀"
     },
     {
       "id": "AI-2026-10-CAT06-003",
@@ -5808,7 +5960,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🗂️",
-      "one_liner": "자료·채팅·지침을 한 상자에 담는 Gemini"
+      "one_liner": "자료·채팅·지침을 한 상자에 담는 Gemini",
+      "what": "Gemini 자료·대화·지침을 노트북에 모음"
     },
     {
       "id": "AI-2026-10-CAT01-006",
@@ -5846,7 +5999,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📦",
-      "one_liner": "다른 AI 속 '나'를 Gemini로 이사"
+      "one_liner": "다른 AI 속 '나'를 Gemini로 이사",
+      "what": "Gemini 다른 AI의 기억·대화를 가져옴"
     },
     {
       "id": "AI-2026-10-CAT10-004",
@@ -5884,7 +6038,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🗣️",
-      "one_liner": "물어보면 소리와 발음 풀이가 함께 나옴"
+      "one_liner": "물어보면 소리와 발음 풀이가 함께 나옴",
+      "what": "ChatGPT 단어의 소리·발음 풀이를 들려줌"
     },
     {
       "id": "AI-2026-10-CAT05-004",
@@ -5922,7 +6077,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "녹음 파일을 올리면 대본·자막이 뚝딱"
+      "one_liner": "녹음 파일을 올리면 대본·자막이 뚝딱",
+      "what": "ElevenLabs 녹음을 화자별 대본·자막으로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT02-002",
@@ -5960,7 +6116,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📝",
-      "one_liner": "한 번 써 두면 늘 내 방식대로 답함"
+      "one_liner": "한 번 써 두면 늘 내 방식대로 답함",
+      "what": "ChatGPT 내 응답 지침을 계속 반영함"
     },
     {
       "id": "AI-2026-10-CAT11-001",
@@ -5998,7 +6155,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🌐",
-      "one_liner": "말로 설명하면 홈페이지가 뚝딱"
+      "one_liner": "말로 설명하면 홈페이지가 뚝딱",
+      "what": "ChatGPT 설명을 받아 공유할 웹사이트를 만듦"
     },
     {
       "id": "AI-2026-10-CAT01-005",
@@ -6035,7 +6193,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🦯",
-      "one_liner": "카메라를 비추면 말로 읽어 주고 안내함"
+      "one_liner": "카메라를 비추면 말로 읽어 주고 안내함",
+      "what": "Gemini 카메라에 보이는 물건을 말로 안내함"
     },
     {
       "id": "AI-2026-10-CAT08-001",
@@ -6073,7 +6232,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧑‍💼",
-      "one_liner": "말로 맡기면 파일로 돌려주는 AI 동료"
+      "one_liner": "말로 맡기면 파일로 돌려주는 AI 동료",
+      "what": "Claude 할 일을 계획하고 나눠 처리함"
     },
     {
       "id": "AI-2026-10-CAT07-001",
@@ -6111,7 +6271,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "말로 주문하면 눌러서 푸는 단어 게임 완성"
+      "one_liner": "말로 주문하면 눌러서 푸는 단어 게임 완성",
+      "what": "Gemini 말로 설명한 웹앱을 화면에 만듦"
     },
     {
       "id": "AI-2026-10-CAT05-003",
@@ -6149,7 +6310,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "말로 연습하는 AI 회화 짝꿍"
+      "one_liner": "말로 연습하는 AI 회화 짝꿍",
+      "what": "ChatGPT 음성으로 대화하며 회화를 도움"
     },
     {
       "id": "AI-2026-10-CAT04-003",
@@ -6187,7 +6349,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎨",
-      "one_liner": "한국어 화면에서 같은 그림체 카드 만들기"
+      "one_liner": "한국어 화면에서 같은 그림체 카드 만들기",
+      "what": "Midjourney 한국어 화면에서 같은 그림체를 씀"
     },
     {
       "id": "AI-2026-10-CAT03-003",
@@ -6225,7 +6388,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📄",
-      "one_liner": "종이 여러 장을 찍으면 PDF 하나로 묶어 줌"
+      "one_liner": "종이 여러 장을 찍으면 PDF 하나로 묶어 줌",
+      "what": "ChatGPT 종이 여러 장을 찍어 PDF로 묶음"
     },
     {
       "id": "AI-2026-10-CAT06-002",
@@ -6263,7 +6427,8 @@
       "total_minutes": 86,
       "notice": "",
       "emoji": "📚",
-      "one_liner": "학술지·전공서 근거가 붙은 답 받기"
+      "one_liner": "학술지·전공서 근거가 붙은 답 받기",
+      "what": "Perplexity 학술 자료를 인용해 답을 줌"
     },
     {
       "id": "AI-2026-10-CAT10-003",
@@ -6301,7 +6466,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🪞",
-      "one_liner": "내 AI 사용 습관을 한 장으로 돌아보기"
+      "one_liner": "내 AI 사용 습관을 한 장으로 돌아보기",
+      "what": "Claude 한 달 AI 사용 습관을 요약함"
     },
     {
       "id": "AI-2026-10-CAT01-004",
@@ -6338,7 +6504,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🃏",
-      "one_liner": "말 한마디로 뒤집는 암기 카드 완성"
+      "one_liner": "말 한마디로 뒤집는 암기 카드 완성",
+      "what": "ChatGPT 메모를 뒤집어 보는 암기 카드로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT06-001",
@@ -6376,7 +6543,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📊",
-      "one_liner": "시트 옆에서 말로 시키는 데이터 비서"
+      "one_liner": "시트 옆에서 말로 시키는 데이터 비서",
+      "what": "Claude 표 옆에서 말로 수식·차트를 도움"
     },
     {
       "id": "AI-2026-10-CAT05-002",
@@ -6414,7 +6582,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "녹음 파일을 올리면 글과 요약이 됨"
+      "one_liner": "녹음 파일을 올리면 글과 요약이 됨",
+      "what": "ChatGPT 녹음 파일을 글·요약으로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT09-002",
@@ -6452,7 +6621,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🛡️",
-      "one_liner": "내 ChatGPT 계정, 10분 안전 점검"
+      "one_liner": "내 ChatGPT 계정, 10분 안전 점검",
+      "what": "ChatGPT 개인정보 설정·로그인 기록을 모아 줌"
     },
     {
       "id": "AI-2026-10-CAT03-002",
@@ -6490,7 +6660,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📝",
-      "one_liner": "Word 안에서 메모가 안내문으로"
+      "one_liner": "Word 안에서 메모가 안내문으로",
+      "what": "ChatGPT Word 안에서 문서 초안을 쓰고 고침"
     },
     {
       "id": "AI-2026-10-CAT10-002",
@@ -6528,7 +6699,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🃏",
-      "one_liner": "수업 자료 한 장이 뒤집는 카드·퀴즈로"
+      "one_liner": "수업 자료 한 장이 뒤집는 카드·퀴즈로",
+      "what": "Gemini 수업 자료를 카드·퀴즈로 바꿈"
     },
     {
       "id": "AI-2026-10-CAT01-003",
@@ -6566,7 +6738,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "💻",
-      "one_liner": "Alt+Space 한 번에 부르는 PC 속 AI 비서"
+      "one_liner": "Alt+Space 한 번에 부르는 PC 속 AI 비서",
+      "what": "Gemini 단축키로 PC 어디서나 AI를 부름"
     },
     {
       "id": "AI-2026-10-CAT09-001",
@@ -6603,7 +6776,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🔍",
-      "one_liner": "파일을 올리면 AI 표시가 있는지 알려 줌"
+      "one_liner": "파일을 올리면 AI 표시가 있는지 알려 줌",
+      "what": "SynthID Detector 파일에 AI 표시가 있는지 확인함"
     },
     {
       "id": "AI-2026-10-CAT04-002",
@@ -6640,7 +6814,8 @@
       "total_minutes": 60,
       "notice": "",
       "emoji": "🏷️",
-      "one_liner": "말 한 줄로 나만의 스티커 9장 완성"
+      "one_liner": "말 한 줄로 나만의 스티커 9장 완성",
+      "what": "ChatGPT 나만의 스티커 묶음을 만듦"
     },
     {
       "id": "AI-2026-10-CAT03-001",
@@ -6678,7 +6853,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "📑",
-      "one_liner": "메모 → 안내문 → 슬라이드, 대화 하나로"
+      "one_liner": "메모 → 안내문 → 슬라이드, 대화 하나로",
+      "what": "Claude 대화에서 문서·슬라이드 파일을 만듦"
     },
     {
       "id": "AI-2026-10-CAT10-001",
@@ -6716,7 +6892,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🃏",
-      "one_liner": "내 수업 자료가 퀴즈·단어 카드로 변신"
+      "one_liner": "내 수업 자료가 퀴즈·단어 카드로 변신",
+      "what": "Gemini Notebook 내 자료로 퀴즈·암기 카드를 만듦"
     },
     {
       "id": "AI-2026-10-CAT05-001",
@@ -6754,7 +6931,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🎙️",
-      "one_liner": "대본에 감정 태그만 넣으면 실감 나는 음성"
+      "one_liner": "대본에 감정 태그만 넣으면 실감 나는 음성",
+      "what": "ElevenLabs 감정 태그를 받아 음성을 만듦"
     },
     {
       "id": "AI-2026-10-CAT04-001",
@@ -6792,7 +6970,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🖼️",
-      "one_liner": "템플릿 고르고 말로 고치는 수업 그림"
+      "one_liner": "템플릿 고르고 말로 고치는 수업 그림",
+      "what": "ChatGPT 그림 템플릿을 고르고 말로 편집함"
     },
     {
       "id": "AI-2026-10-CAT01-001",
@@ -6830,7 +7009,8 @@
       "total_minutes": 90,
       "notice": "",
       "emoji": "🧠",
-      "one_liner": "한 번 알려 주면 계속 기억하는 AI 비서"
+      "one_liner": "한 번 알려 주면 계속 기억하는 AI 비서",
+      "what": "Claude 업무 맥락을 대화가 바뀌어도 기억함"
     },
     {
       "id": "AI-2026-10-CAT01-002",
@@ -6868,7 +7048,8 @@
       "total_minutes": 80,
       "notice": "",
       "emoji": "🧩",
-      "one_liner": "글 대신 표·버튼·퀴즈로 답하는 ChatGPT"
+      "one_liner": "글 대신 표·버튼·퀴즈로 답하는 ChatGPT",
+      "what": "ChatGPT 표·버튼·퀴즈로 답을 보여 줌"
     },
     {
       "id": "AI-2026-10-CAT02-001",
@@ -6906,7 +7087,8 @@
       "total_minutes": 80,
       "notice": "",
       "emoji": "🪄",
-      "one_liner": "자주 쓰는 지시를 /명령 하나로"
+      "one_liner": "자주 쓰는 지시를 /명령 하나로",
+      "what": "Gemini 반복 지시를 저장해 불러 씀"
     }
   ]
 }

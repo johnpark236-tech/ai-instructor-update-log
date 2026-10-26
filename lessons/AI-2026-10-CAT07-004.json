@@ -71,7 +71,26 @@
       "API 키는 코드·채팅에 붙이지 않기",
       "개인정보 들어간 명단 넣지 않기",
       "지출 한도부터 걸고 실행하기"
-    ]
+    ],
+    "what": "Claude 구독 크레딧을 AI 앱 실험에 씀",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "여러 안내문을 하나씩 쓸 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "내 업무용 AI 프로그램을 시험할 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "사용 크레딧을 확인하며 시험할 수 있음"
+      }
+    ],
+    "for_whom": "AI로 업무 도구·코드를 만들려는 분"
   },
   "tool": "Claude",
   "feature": "Max·Team 월간 API 크레딧 (Monthly API credits) — Claude Platform API·Playground·Agent SDK용",

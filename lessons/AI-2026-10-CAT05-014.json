@@ -71,7 +71,26 @@
       "API 키 외부 공유 금지",
       "분당 요금 — 세션 꼭 종료",
       "개인정보·민감정보 말하지 않기"
-    ]
+    ],
+    "what": "Grok 음성 역할극 상대를 시험하게 함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "연습 상대를 구하는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "역할에 맞춰 소리 내어 대화할 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "말투와 난이도를 정할 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "Grok",
   "feature": "Grok Voice 3.0 — 말→말(Speech to Speech) 음성 모델, Voice Agent API·콘솔 음성 에이전트 플레이그라운드(지침·목소리·웹/X 검색·함수 호출), grok-voice-latest 자동 적용, Grok Bot 음성 모드",

@@ -71,7 +71,26 @@
       "학생 얼굴·실명 사진은 올리지 않기",
       "저작권 캐릭터·남의 로고 쓰지 않기",
       "날짜·장소·연락처는 직접 재확인"
-    ]
+    ],
+    "what": "Gemini 대화에서 Adobe 디자인을 불러 씀",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "디자인 앱으로 내용을 옮길 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "행사 전단을 다른 크기로 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "대화로 색과 문구를 고칠 수 있음"
+      }
+    ],
+    "for_whom": "수업·모임의 사진과 그림을 다루는 분"
   },
   "tool": "Gemini",
   "feature": "연결 앱(Connected Apps) — Adobe (Adobe for Google Gemini)",

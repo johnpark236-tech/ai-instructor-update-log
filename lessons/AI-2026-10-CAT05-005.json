@@ -71,7 +71,26 @@
       "가수·곡 제목·남의 가사 입력 금지",
       "무료는 'Eleven Music' 출처 표기",
       "무료 곡은 음원 사이트 유통 불가"
-    ]
+    ],
+    "what": "ElevenLabs 설명에 맞는 음악을 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "맞는 배경음악을 찾는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "분위기·길이에 맞춘 음악을 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "필요한 구간을 골라 편집할 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "ElevenLabs",
   "feature": "Eleven Music — Music v2.5 (ElevenMusic·ElevenCreative 음악 생성, 구간 편집)",

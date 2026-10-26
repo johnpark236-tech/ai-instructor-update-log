@@ -71,7 +71,26 @@
       "실습은 빈 폴더에서만 진행",
       "비밀번호·키 파일 폴더 금지",
       "크레딧 사용 기록 수시 확인"
-    ]
+    ],
+    "what": "Genspark 모델을 골라 쓰는 코딩 작업을 도움",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "코딩 초안을 직접 쓰는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "일의 난이도에 맞춰 모델을 쓸 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "사용 모델을 직접 고를 수 있음"
+      }
+    ],
+    "for_whom": "AI로 업무 도구·코드를 만들려는 분"
   },
   "tool": "Genspark",
   "feature": "GenCode(젠코드, Genspark 코딩 에이전트) — ① Genspark Super App(superapp.genspark.ai, macOS Apple Silicon·Windows .exe·Linux AppImage) GenCode 탭(없으면 탭 줄 + 로 추가) 또는 CLI(npm i -g @genspark/gencode → gencode login → gencode) ② 채팅 화면(Chat UI)·터미널 화면(Terminal UI) 기능 동일, 터미널 화면은 맥락 사용량·MCP 상태 표시 ③ 사이드바 Projects + 로 작업 폴더 추가(기본 위치 GensparkCode 폴더), Project actions → Reveal in file manager·Copy path·Remove from list(파일은 유지) ④ 모델 선택기(Search models…, MODEL·COST 배수): Claude·GPT·Gemini·DeepSeek·GLM·MiniMax·Kimi·Grok·Nemotron 9개 계열 ⑤ 개인·팀 Genspark 스킬·연결한 커넥터 사용, Import setup으로 Claude Code·Cursor 설정 가져오기 ⑥ 읽기·분석용·수정용 하위 에이전트 ⑦ CLI gencode run --format json·gencode models·--dir·--session·--model ⑧ Genspark 크레딧 차감(Free Quota 미적용, 크레딧 기록에 'GenCode' 표시), 별도 구독 없음 (2026-09-23 공개)",

@@ -62,7 +62,26 @@
       "주변 사람 동의 후 마이크 사용",
       "장소·시간은 원문과 재확인",
       "이동 중 귀에 대고 조작 금지"
-    ]
+    ],
+    "what": "Google 번역 휴대전화를 귀에 대고 번역을 들려줌",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "화면 번역을 계속 읽는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "이어폰 없이 외국어 뜻을 들을 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "다시 물어 중요한 뜻을 확인할 수 있음"
+      }
+    ],
+    "for_whom": "여행 중 외국어 안내를 듣고 싶은 분"
   },
   "tool": "Google Translate",
   "feature": "Live translate 듣기(Listening) 모드 — Android 휴대전화 수화부(earpiece)로 번역 음성 듣기, Gemini 3.5 Live Translate 적용",

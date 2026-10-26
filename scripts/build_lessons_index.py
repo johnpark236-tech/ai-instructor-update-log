@@ -44,6 +44,14 @@ def is_list(v, n=1, keys=None):
     return all(isinstance(x, str) and x.strip() for x in v)
 
 
+def one_emoji(value):
+    """이모지 하나(선택자·피부색·ZWJ 결합·국기 포함), 독립 이모지 둘은 거절."""
+    if not isinstance(value, str):
+        return False
+    unit = r"[\u2300-\u27ff\U0001f000-\U0001faff]\ufe0f?[\U0001f3fb-\U0001f3ff]?"
+    return bool(re.fullmatch(r"(?:[\U0001f1e6-\U0001f1ff]{2}|" + unit + r"(?:\u200d" + unit + r")*)", value))
+
+
 def check_step(errs, where, steps):
     if not is_list(steps, 1, {"title", "do", "expect"}):
         errs.append(f"{where}: 단계마다 title/do/expect 필요")
@@ -126,10 +134,21 @@ def check_lesson(path, d):
     short = lambda v, n: isinstance(v, str) and 0 < len(v) <= n
     need(e, short(g.get("emoji"), 4), "glance.emoji 필요 (이모지 1개)")
     need(e, short(g.get("one_liner"), 30), "glance.one_liner 30자 이내")
+    need(e, short(g.get("what"), 45), "glance.what 45자 이내")
+    need(e, short(g.get("for_whom"), 30), "glance.for_whom 30자 이내")
+    benefits = g.get("benefits")
+    valid_benefits = isinstance(benefits, list) and len(benefits) == 3 and all(
+        isinstance(b, dict) and one_emoji(b.get("icon")) and short(b.get("title"), 12)
+        and short(b.get("text"), 30) for b in benefits)
+    need(e, valid_benefits, "glance.benefits 정확히 3개 (icon 이모지 1개, title 12자, text 30자 이내)")
     cards = g.get("cards")
     need(e, isinstance(cards, list) and 3 <= len(cards) <= 4 and all(
         short(c.get("icon"), 4) and short(c.get("title"), 12) and short(c.get("text"), 25) for c in cards),
         "glance.cards 3~4개 (icon, title 12자, text 25자 이내)")
+    if valid_benefits and isinstance(cards, list):
+        card_titles = {c.get("title") for c in cards if isinstance(c, dict)}
+        need(e, not all(b["title"] in card_titles for b in benefits),
+             "glance.benefits 제목 3개 모두 cards에서 복사할 수 없음")
     dg = g.get("diagram") or {}
     nodes = dg.get("nodes")
     need(e, short(dg.get("title"), 30) and isinstance(nodes, list) and 3 <= len(nodes) <= 5 and all(
@@ -201,6 +220,7 @@ def main():
         item["notice"] = d.get("notice") or ""
         item["emoji"] = d["glance"]["emoji"]
         item["one_liner"] = d["glance"]["one_liner"]
+        item["what"] = d["glance"]["what"]
         lessons.append(item)
     res = check_releases(ids)
     if isinstance(res, list):
@@ -212,7 +232,7 @@ def main():
         print("\n".join(errors))
         sys.exit(1)
     lessons.sort(key=lambda x: (x["created_at"], x["id"]), reverse=True)
-    INDEX.write_text(json.dumps({"standard": "v2.3", "count": len(lessons), "lessons": lessons},
+    INDEX.write_text(json.dumps({"standard": "v2.4", "count": len(lessons), "lessons": lessons},
                                 ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     items = rdata.get("items", [])
     print(f"lessons.json 갱신: 교안 {len(lessons)}개 / 릴리즈 노트 {len(items)}건 "

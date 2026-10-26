@@ -71,7 +71,26 @@
       "차트 숫자는 원본과 대조할 것",
       "금융 차트는 투자 조언 아님",
       "개인·회사 기밀 CSV 업로드 주의"
-    ]
+    ],
+    "what": "Perplexity 대화 안에 눌러 보는 차트를 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "차트 도구로 자료를 옮길 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "값·구간을 직접 눌러 살필 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "설명과 시각 자료를 함께 비교함"
+      }
+    ],
+    "for_whom": "여러 자료를 읽고 정리해야 하는 분"
   },
   "tool": "Perplexity",
   "feature": "인라인 시각화(Inline visualizations, Computer) — 스레드 안 인터랙티브 차트·3D 개념 설명, TradingView Lightweight Charts 금융 차트(캔들·거래량·이동평균), CSV → 인터랙티브 차트",

@@ -71,7 +71,26 @@
       "보내기 전 수신자·내용 확인",
       "비밀번호는 Take over로 직접",
       "공개 장소 음성 채팅 주의"
-    ]
+    ],
+    "what": "Grok 휴대폰에서 Bot 작업을 이어 함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "PC로 돌아와 확인할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "이동 중에도 업무 초안을 확인함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "휴대폰에서 승인·거절할 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Grok",
   "feature": "Grok Bot 모바일 앱(Grok Bot for Mobile: iPhone·iPad·Android) — 데스크톱과 같은 Bot·대화·루틴·커넥터·클라우드 컴퓨터 동기화, Start dictation·Start voice chat(실시간 음성 채팅)·음성 메모 재생, 사진·파일 첨부·iPhone 공유 시트 Attach(Android는 텍스트만), Send Email·Send Message·Discard, 컴퓨터 화면 보기·Take over·I'm done, 루틴 Run history·Active, 통합 검색(Messages·Bots·Group Chats·Files·Routines), iOS 18·Android 9 이상",

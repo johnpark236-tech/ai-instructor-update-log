@@ -71,7 +71,26 @@
       "날짜·장소·금액은 원문과 대조",
       "개인정보 담긴 PDF는 올리지 않음",
       "타인 로고·사진 무단 사용 금지"
-    ]
+    ],
+    "what": "Adobe Acrobat PDF 내용을 전단·SNS 그림으로 바꿈",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "원문을 다시 입력하는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "같은 자료를 홍보 디자인에 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "문구와 색을 말로 고칠 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Adobe Acrobat",
   "feature": "Adobe Express AI Assistant로 문서에서 디자인 만들기(Create designs with Adobe Express in Acrobat) — PDF·PDF Spaces 내용으로 전단·SNS 게시물·뉴스레터 생성, 대화로 수정, 내려받기·공유",

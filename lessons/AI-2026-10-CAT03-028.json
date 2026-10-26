@@ -71,7 +71,26 @@
       "개인정보·내부 문서 넣지 않기",
       "형식은 처음에 신중히 고르기",
       "Rollback은 이후 변경 영구 삭제"
-    ]
+    ],
+    "what": "Genspark 요청에 맞는 디자인 문서를 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "문서 틀부터 꾸미는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "내용과 배치를 갖춘 초안을 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "고칠 부분만 골라 요청할 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Genspark",
   "feature": "AI Docs(AI 문서) — ① 홈 화면 아래 AI Docs 또는 사이드바 New → AI Docs ② 시작할 때 형식 선택: Rich Text(시각 편집기)·Markdown(일반 텍스트 편집기)은 직접 편집 가능, Web Doc·Word는 미리보기 전용, 내용이 생기면 형식 변경 불가(새 프로젝트로) ③ 프롬프트·수백 개 템플릿·이미지 업로드(디자인 분위기 분석)로 레이아웃·글꼴·구성 자동 생성 ④ 고치기: AI Edit(텍스트 선택 → 지시), Rich Text 전용 AI Rewrite·우클릭 AI Tools → AI Write, Manual Edit(Rich Text·Markdown), 표 등 요소 클릭해 지정 ⑤ 저장 버튼 없음·입력 멈추고 약 1초 뒤 자동 저장 ⑥ Save Point(왼쪽 위 버전 목록 → 미리보기 → Rollback to, 이후 변경·대화 기록 영구 삭제) ⑦ 오른쪽 위 View & Export: Export as Word Document·Export as PDF·Export as Markdown(Markdown 형식)·Open in separate browser·Make a Copy, Word·PDF·Markdown 내보내기는 Plus·Pro·Team 포함 ⑧ Share 권한 설정 후 링크 공유",

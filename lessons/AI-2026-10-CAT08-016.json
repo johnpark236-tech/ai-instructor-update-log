@@ -71,7 +71,26 @@
       "꼭 필요한 앱만 최소로 연결",
       "연결 앱은 모든 내 Bot이 같이 씀",
       "비밀번호는 채팅 말고 보안 입력창"
-    ]
+    ],
+    "what": "Grok Bot에 앱을 연결하고 결과를 보여 줌",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "앱마다 내용을 옮기는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "대화 안에서 앱 결과를 확인함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "연결할 앱과 권한을 고를 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Grok",
   "feature": "Grok Bot 앱 연결(Connect Apps)·대화 속 앱 카드(interactive card)·Bot 템플릿 추천 — Marketplace → Connect Apps 개편(카테고리 칩·Recommended for you·Bot templates, v0.67.0), Figma·Notion·Canva 앱 카드, 커넥터 링크로 플러그인 자동 설치, 설치 많은 순 정렬·설명 검색, QuickBooks Online 연결(v0.70.2), @ 커넥터 붙이기",

@@ -27,5 +27,59 @@
     "status",
     "reason",
     "sources"
-  ]
+  ],
+  "$defs": {
+    "lessonGlanceV24": {
+      "type": "object",
+      "description": "교안 파일의 glance 필드 정의. 최종 상태 응답 형식은 유지하며 build_lessons_index.py가 교안 파일에서 필수 검사함",
+      "properties": {
+        "what": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 45
+        },
+        "for_whom": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "benefits": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "icon": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              }
+            },
+            "required": [
+              "icon",
+              "title",
+              "text"
+            ]
+          }
+        }
+      },
+      "required": [
+        "what",
+        "benefits",
+        "for_whom"
+      ]
+    }
+  }
 }

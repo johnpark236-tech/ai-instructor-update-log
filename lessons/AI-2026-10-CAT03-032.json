@@ -71,7 +71,26 @@
       "공용 PC에는 설치하지 않기",
       "캡처 속 개인정보는 모자이크",
       "기록 한도 넘으면 오래된 것 삭제"
-    ]
+    ],
+    "what": "Genspark 복사한 기록을 모아 다시 붙여 줌",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "지운 내용을 다시 찾는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "예전 복사 내용을 다시 활용할 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "붙일 내용을 기록에서 고를 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Genspark",
   "feature": "GenClipboard(젠클립보드, 무료 클립보드 관리 앱) — ① genclipboard.ai에서 Mac·Windows·Linux 설치, Mac은 개인정보 보호 및 보안 → 손쉬운 사용(Accessibility) 허용·첫 캡처 때 화면 기록 허용 ② ⇧⌘V(Mac)·Ctrl+Shift+V(Windows·Linux)로 화면 아래 패널 → 검색·← →·1~9 또는 Enter 붙이기·Esc 닫기 ③ 텍스트·서식 텍스트·이미지·파일·URL·JSON 기록, 자동 중복 제거, 기본 최근 500개(Settings → Max Clipboard History) ④ ⌘P·Ctrl+P 고정(Pin, 자동 삭제 안 됨) ⑤ ⇧⌘A 캡처·주석(화살표·도형·글자·모자이크)·⇧⌘S 스크롤 캡처·⇧⌘R 영역 MP4 녹화(Windows·Linux는 Ctrl+Shift) ⑥ Settings → Translation: Genspark 계정 로그인 → Selection Translate(Replace·Copy 팝업)·Silent Translate(바로 바꾸기) 단축키 지정·First·Second Language, 이미지 번역(기기 내 OCR, Mac·Windows) ⑦ 선택형 동기화(종단 간 암호화, 텍스트·서식 텍스트만) ⑧ 비밀번호 관리자 복사 기본 미기록·클립보드 내용 원격 분석 제외 ⑨ 구독·크레딧 없이 무료 (도움말 2026-09-19 갱신)",

@@ -71,7 +71,26 @@
       "어느 답이든 사실은 원문 확인",
       "회사 기밀은 정책 범위 안에서만",
       "모델 전환은 관리자 설정 따름"
-    ]
+    ],
+    "what": "Copilot 같은 질문의 다른 답을 만들어 줌",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "질문을 다시 입력할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "모델별 답을 비교해 고를 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "좋은 부분을 골라 합칠 수 있음"
+      }
+    ],
+    "for_whom": "AI의 답과 사용 방식을 비교하는 분"
   },
   "tool": "Microsoft 365 Copilot",
   "feature": "응답 다시 생성(Regenerate response for alternative answers) — Copilot Chat 응답 끝 추가 옵션(More options) 메뉴: ① 다시 시도(Try Again) 새 답 받기 ② 모델 전환(Switch Model) 다른 AI 모델 답 받기, 프롬프트 다시 입력 없이 답 비교(웹)",

@@ -71,7 +71,26 @@
       "개인정보·기밀 파일 올리지 않기",
       "요약은 원문 파일과 대조",
       "기관 계정은 보안 정책 먼저 확인"
-    ]
+    ],
+    "what": "Copilot 흩어진 파일을 노트북에 모아 답함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "파일마다 따로 요약할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "여러 메모를 한 흐름으로 정리해 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "근거 자료와 결과를 비교할 수 있음"
+      }
+    ],
+    "for_whom": "여러 자료를 읽고 정리해야 하는 분"
   },
   "tool": "Microsoft 365 Copilot",
   "feature": "Copilot Notebooks — 참조 파일 확대(Markdown·TXT·RTF)·추천 산출물(Suggested artifacts)",

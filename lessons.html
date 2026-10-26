@@ -18,6 +18,7 @@ h2{font-size:22px;margin:34px 0 10px}h3{font-size:17px;margin:20px 0 8px;color:#
 .card{background:linear-gradient(180deg,#102039,#0c182a);border:1px solid #ffffff12;border-radius:16px;padding:16px;margin-bottom:12px}
 h2 small{color:var(--m);font-size:13px;font-weight:600;margin-left:6px}
 .glance{background:linear-gradient(160deg,#0f2742,#0b1626 60%);border:1px solid #23466a;border-radius:20px;padding:18px;margin:10px 0 6px}
+.gl-purpose{margin:14px 0 10px}.gl-purpose .ct{margin-bottom:4px}.gl-what{font-size:20px;font-weight:800;line-height:1.5;margin:0}.gl-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0 12px}.gl-benefit{min-width:0;background:#0b1728;border:1px solid #33597f;border-radius:12px;padding:12px}.gl-benefit h3{font-size:17px;margin:0 0 5px;color:#edf5ff}.gl-benefit p{font-size:16px;margin:0;color:#c9d6e6;line-height:1.55}.gl-for{font-size:15px;color:#d6e6f7;margin:8px 0}.gl-benefits-title{margin:12px 0 6px}.lesson-hero h1{font-size:clamp(22px,3vw,30px);line-height:1.25}.lesson-hero{padding:10px 0 4px}.glance .chips{margin:10px 0}.glance .gift{padding:9px 12px}@media(max-width:600px){.gl-benefits{grid-template-columns:minmax(0,1fr)}.gl-what{font-size:18px}.gl-benefit{padding:10px 12px}.lesson-hero h1{font-size:22px}}
 .gl-hero{display:flex;gap:14px;align-items:center}.gl-emoji{font-size:44px;line-height:1;flex:none;width:64px;height:64px;display:grid;place-items:center;background:#0b1728;border-radius:18px;border:1px solid #2b4e72}.gl-one{font-size:clamp(19px,3.4vw,26px);font-weight:900;line-height:1.35}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}.chips span{font-size:12.5px;background:#0b1728;border:1px solid #2b4e72;border-radius:999px;padding:4px 10px;color:#d6e6f7}
 .gift{display:flex;gap:12px;align-items:center;background:#0f2a1f;border:1px solid #2d6b4c;border-radius:14px;padding:12px 14px}.gi{font-size:28px}.gk{font-size:12px;color:var(--g);font-weight:800}.gv{font-weight:700;font-size:15px}
@@ -115,7 +116,7 @@ body{touch-action:pan-y pinch-zoom}
 <body>
 <header><div class="w nav"><div class="brand">AI 실습 교안</div><div class="fz" role="group" aria-label="글씨 크기"><span style="min-width:0;color:#bed0e8">글씨</span><button type="button" id="fzm" aria-label="글씨 작게">가−</button><span id="fzv" aria-live="polite">1/5</span><button type="button" id="fzp" aria-label="글씨 크게">가+</button></div><div class="links"><a class="on" href="./lessons.html">교안</a><a href="./releases.html">릴리즈 노트</a><a href="./index.html">TOP10</a></div></div></header>
 <main class="w" id="app"></main><div id="tip" role="tooltip"></div>
-<footer class="w">교안 작성 기준 v2.3 — 사실 정보는 공식 출처·확인일 표기. [확인 필요]·[미검증] 표시는 강의 전 실제 화면으로 확인.</footer>
+<footer class="w">교안 작성 기준 v2.4 — 사실 정보는 공식 출처·확인일 표기. [확인 필요]·[미검증] 표시는 강의 전 실제 화면으로 확인.</footer>
 <script src="./analytics-config.js"></script>
 <script src="./analytics.js"></script>
 <script src="./lesson-meta.js"></script>
@@ -251,19 +252,24 @@ async function lessonView(id){
   const meta=ordered().find(l=>l.id===L.id),isDone=!!getDone()[L.id],ins=view==='instructor',P=L.pricing,th=L.theory,pc=L.practice,wr=L.wrap,I=L.instructor,G=L.glance||null;
   const mn=L.minutes,tot=M.totalMinutes(L),ck=store.get('db:'+L.id)||[],allSteps=[...pc.follow,...pc.make_mine];
   const D=(title,body,open)=>`<details class="more"${open?' open':''}><summary>${title}</summary><div class="mb">${body}</div></details>`;
+  const learnerLv=L.learner_levels.map(x=>M.LEVEL[x]+x).join(' ');
+  const benefitReady=!!(G?.what&&Array.isArray(G.benefits)&&G.benefits.length===3&&G.benefits.every(b=>b&&b.title&&b.text));
   const lv=[...L.learner_levels.map(x=>M.LEVEL[x]+x),...L.instructor_levels.map(x=>M.LEVEL[x]+x)].join(' ');
   const bar=`<div class="bar"><a href="#">← 교안 목록</a><div class="btns"><div class="seg"><button data-v="learner" class="${ins?'':'on'}">학습자용</button><button data-v="instructor" class="${ins?'on':''}">강사용 완전본</button></div>
    <a class="btn pri dl" href="./downloads/${esc(L.id)}-learner.pptx" download="${esc(L.id)}-학습자용.pptx">⬇ PPT 학습자용</a><a class="btn pri dl" href="./downloads/${esc(L.id)}-instructor.pptx" download="${esc(L.id)}-강사용.pptx">⬇ PPT 강사용</a><a class="btn dl" href="./downloads/${esc(L.id)}-prompts.txt" download="${esc(L.id)}-prompts.txt">⬇ 프롬프트 모음</a></div></div>`;
   const kv=[['도구',`${L.company} ${L.tool}`],['기능',L.feature],['구분',`${M.KIND[L.type]}${M.isPast(L)?' · 지난 기능':''}`],['대상',lv],['결과물',L.outcome],['요금',`${M.ACCESS[P.access]} — ${P.summary}`],['시간',`${tot}분 (이론 ${mn.theory} · 실습 ${mn.practice} · 정리 ${mn.wrap})`],['출시',L.released]];
   const glance=G?`<section class="glance">
     <div class="gl-hero"><div class="gl-emoji">${esc(G.emoji)}</div><div class="gl-one">${esc(G.one_liner)}</div></div>
-    <div class="chips"><span>⏱ ${tot}분</span><span>💳 ${M.ACCESS[P.access]}</span><span>📅 출시 ${esc(L.released)}</span><span>🎯 ${esc(lv)}</span></div>
+    ${G.what?`<div class="gl-purpose"><div class="ct">이런 기능이에요</div><p class="gl-what">${esc(G.what)}</p></div>`:''}
+    ${benefitReady?`<div class="ct gl-benefits-title">이런 점이 좋아요 ${CN(G.benefits.length)}</div><div class="gl-benefits">${G.benefits.map(b=>`<article class="gl-benefit"><h3>${esc(b.icon)} ${esc(b.title)}</h3><p>${esc(b.text)}</p></article>`).join('')}</div>`:''}
+    ${G.for_whom?`<p class="gl-for"><b>이런 분께</b> ${esc(G.for_whom)}</p>`:''}
+    <div class="chips"><span>⏱ ${tot}분</span><span>💳 ${M.ACCESS[P.access]}</span><span>📅 출시 ${esc(L.released)}</span><span>🎯 ${esc(learnerLv)}</span></div>
     <div class="gift"><div class="gi">🎁</div><div><div class="gk">오늘 만들 작품 ${CN(Math.max(1,M.splitItems(L.outcome).items.length))}</div><div class="gv">${NX(L.outcome)}</div></div></div>
   </section>
   <div class="part"><b>PART 1</b><h2>📊 요약본 <small>표·그래프로 1분 파악</small></h2></div>
   <div class="sum">
     <div class="card full"><div class="ct">📌 핵심 요약 ${CN(kv.length)}</div><table class="kv"><tbody>${kv.map(([k,v],i)=>`<tr><th><b class="rn">${i+1})</b> ${k}</th><td>${NX(v)}</td></tr>`).join('')}</tbody></table></div>
-    <div class="card full"><div class="ct">🎯 기능 · 혜택 ${CN(G.cards.length)}</div><table class="fb"><thead><tr><th>기능</th><th>혜택</th></tr></thead><tbody>${G.cards.map((c,i)=>`<tr><td><b class="rn">${i+1})</b> ${esc(c.icon)} ${esc(c.title)}</td><td>${esc(c.text)}</td></tr>`).join('')}</tbody></table></div>
+    <div class="card full"><div class="ct">${benefitReady?'🧭 실습 흐름':'🎯 기능 · 혜택'} ${CN(G.cards.length)}</div><table class="fb"><thead><tr><th>${benefitReady?'단계':'기능'}</th><th>${benefitReady?'설명':'혜택'}</th></tr></thead><tbody>${G.cards.map((c,i)=>`<tr><td><b class="rn">${i+1})</b> ${esc(c.icon)} ${esc(c.title)}</td><td>${esc(c.text)}</td></tr>`).join('')}</tbody></table></div>
     ${priceChart(P)}${timeChart(mn,tot)}
     <div class="card full diag"><div class="dt">⚙️ ${esc(G.diagram.title)} ${CN(G.diagram.nodes.length)}</div><div class="flow">${G.diagram.nodes.map((nd,i)=>`${i?'<div class="arr" aria-hidden="true"></div>':''}<div class="node"><div class="ni">${esc(nd.icon)}</div><div class="nl">${i+1}) ${esc(nd.label)}</div></div>`).join('')}</div></div>
     <div class="card full"><div class="ct">🔄 Before → After</div><table class="ba2"><thead><tr><th class="b0">😐 ${esc(G.before_after.before.label)}</th><th class="b1">😀 ${esc(G.before_after.after.label)}</th></tr></thead><tbody><tr><td>${esc(G.before_after.before.text)}</td><td>${esc(G.before_after.after.text)}</td></tr></tbody></table></div>
@@ -285,8 +291,8 @@ async function lessonView(id){
     ${(I.pro_points||[]).length?D(`🧭 중·고급강사 응용 포인트 ${CN(I.pro_points.length)}`,UL(I.pro_points)):''}
     ${D(`✅ 강의 전날 체크리스트 ${CN(I.day_before.length)}`,I.day_before.map((c,i)=>`<label class="ck"><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}><span><b class="rn">${i+1})</b> ${esc(c)}</span></label>`).join(''),1)}</div>`;
   app.innerHTML=`${inAppBanner()}${bar}
-  <section class="hero" style="padding:16px 0 4px"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)}${isDone?' · ✅ 완료':''}</div>
-  <h1 style="font-size:clamp(22px,4vw,34px)">${kindB(L.type)}${pastB(L)}${accB(P.access)}${esc(L.title)}</h1><div class="hacts">${shareBtn(L.id)}${starBtn(L.id,!!getFav()[L.id])}</div></section>
+  <section class="hero lesson-hero"><div class="ey">${meta?`#${meta.no} · `:''}${esc(L.id)} · ${esc(L.version)}${isDone?' · ✅ 완료':''}</div>
+  <h1>${kindB(L.type)}${pastB(L)}${accB(P.access)}${esc(L.title)}</h1><div class="hacts">${shareBtn(L.id)}${starBtn(L.id,!!getFav()[L.id])}</div></section>
   ${L.notice?`<div class="call warn">⚠️ 변경 공지: ${esc(L.notice)}</div>`:''}
   ${glance}
 

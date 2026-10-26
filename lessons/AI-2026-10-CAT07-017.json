@@ -71,7 +71,26 @@
       "모르는 플러그인은 내용 확인 후 설치",
       "프로젝트 훅은 확인 후 신뢰",
       "스킬에 비밀번호·API 키 적지 말 것"
-    ]
+    ],
+    "what": "Grok 반복 점검을 스킬 명령으로 저장함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "긴 점검 지시를 다시 쓸 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "같은 기준의 점검을 반복해 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "필요한 스킬과 연결을 고를 수 있음"
+      }
+    ],
+    "for_whom": "AI로 업무 도구·코드를 만들려는 분"
   },
   "tool": "Grok",
   "feature": "Grok Build(터미널 코딩 에이전트 CLI) 스킬(Skills)·플러그인(Plugins)·마켓플레이스(Marketplace)·훅(Hooks) — ① 스킬 위치 ./.grok/skills/(저장소 루트까지 탐색)·~/.grok/skills/·플러그인 skills/·[skills] paths ② SKILL.md 머리말 name·description·when-to-use·paths·argument-hint·user-invocable·disable-model-invocation·metadata, /<스킬 이름> 호출 ③ 플러그인 = 스킬·에이전트·훅·MCP·LSP 묶음, ./.grok/plugins/·~/.grok/plugins/·--plugin-dir ④ /plugins·/hooks·/skills·/mcps 확장 창, /marketplace 탭에서 Install, [[marketplace.sources]] ⑤ 훅 ~/.grok/hooks/·프로젝트 .grok/hooks/(/hooks-trust) ⑥ Claude Code 마켓플레이스·플러그인·스킬·CLAUDE.md·.claude/rules/ + AGENTS.md·~/.agents/skills/ 호환 · v1.0.51(2026-10-09) 스킬 자동완성 즉시 반영·맨 앞 슬래시만 스킬 실행 [확인 필요]",

@@ -71,7 +71,26 @@
       "/rewind 는 파일을 실제로 되돌림",
       "커밋 안 한 변경은 복구 불가",
       "기록에 비밀번호·키 남기지 말 것"
-    ]
+    ],
+    "what": "Grok AI 작업 기록을 이어 하고 되돌림",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "지난 작업 맥락을 다시 찾는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "예전 시점부터 작업을 이어 할 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "기록을 골라 확인·보관할 수 있음"
+      }
+    ],
+    "for_whom": "AI로 업무 도구·코드를 만들려는 분"
   },
   "tool": "Grok",
   "feature": "Grok Build(터미널 코딩 에이전트 CLI) 세션(Sessions) — 대화·도구 실행·파일 스냅숏을 ~/.grok/sessions/ 에 폴더별 자동 저장: ① 이어 하기 /resume·grok --resume [ID·제목]·grok -c ② /fork [지시] 대화 복사(--worktree·--no-worktree) ③ /rewind·Esc Esc 프롬프트 시점으로 파일·대화 되돌리기 ④ /compact·/context·/session-info 맥락 관리 ⑤ Ctrl+T 할 일 목록(세션과 함께 저장) ⑥ /sessions·/rename·grok sessions list·search·delete·grok export <ID> [파일] Markdown 내보내기 · 2026-10-12~16 v1.0.54~v1.0.62 /resume <ID·제목> 바로 열기·단어 순서 무관 제목 검색·grok --resume <제목> 최신순 목록·비슷한 제목 제안·구분자 무시(fix-login-bug = Fix login bug)",

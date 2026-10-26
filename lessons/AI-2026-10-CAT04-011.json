@@ -71,7 +71,26 @@
       "다시 만들기·수정도 매번 크레딧 차감",
       "공개 링크는 원본·기록까지 열람 가능",
       "로고·인물 저작권·초상권 확인 후 사용"
-    ]
+    ],
+    "what": "Genspark 말로 디자인하고 화면에서 다듬음",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "빈 화면부터 꾸미는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "포스터·시안을 직접 만들 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "색과 간격을 직접 조절할 수 있음"
+      }
+    ],
+    "for_whom": "수업·모임의 사진과 그림을 다루는 분"
   },
   "tool": "Genspark",
   "feature": "Genspark Design(젠스파크 디자인) — 글로 만드는 포스터·프로토타입·웹사이트·슬라이드·영상·플립북, 캔버스 Tweaks·Edit·Comment·Draw 수정, 디자인 시스템(Design System), Figma·이미지·문서 첨부, Build it 실행형 웹, PNG·PSD·MP4·PPTX·PDF·ZIP 내보내기, 링크 공유(Viewer·Editor)",

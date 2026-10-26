@@ -71,7 +71,26 @@
       "학생·실존 인물 사진 올리지 않기",
       "유명 캐릭터·로고 흉내 요청 금지",
       "그림 속 글자 맞춤법 꼭 확인"
-    ]
+    ],
+    "what": "ChatGPT 그림 템플릿을 고르고 말로 편집함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "그림 구성을 처음 정하는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "목적에 맞는 수업 그림을 만들 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "선택한 부분을 고칠 수 있음"
+      }
+    ],
+    "for_whom": "수업·모임의 사진과 그림을 다루는 분"
   },
   "tool": "ChatGPT",
   "feature": "ChatGPT Images 2.5 (Templates · Select 편집 · Sketch · Prompt template 공유)",

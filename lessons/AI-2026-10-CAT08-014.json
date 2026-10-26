@@ -71,7 +71,26 @@
       "회사 계정은 관리자 허용 확인",
       "보내기·삭제는 승인 후 실행",
       "공용 PC는 연결 해제·로그아웃"
-    ]
+    ],
+    "what": "ChatGPT 여러 계정의 자료를 한 대화에 연결함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "계정을 오가며 비교할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "개인·업무 일정을 함께 살필 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "계정마다 다른 권한을 정할 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "ChatGPT",
   "feature": "플러그인 여러 계정 연결(Connect multiple accounts to plugins) — Gmail·Google Calendar·Google Contacts 등 한 플러그인에 개인·업무 계정 함께 연결, 설정 > 플러그인 '다른 계정 연결', 계정별 권한(Permissions: 항상 묻기·읽기 허용·저위험 허용), 요청에 계정 지정, 계정별 연결 해제",
