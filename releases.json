@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-26",
+  "updated_at": "2026-10-26T15:48:58+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "lightroom-2026-06-15-assisted-culling-ga",
+      "date": "2026-06-15",
+      "tool": "Adobe Lightroom",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Lightroom 선별 어시스트 정식 출시·Face View",
+      "summary": "① AI 사진 후보 선별 ② 인물별 눈 상태 분석 ③ 사용자 최종 검토",
+      "source": {
+        "title": "Adobe — 선별 어시스트 정식 출시와 Face View 발표",
+        "url": "https://blog.adobe.com/en/publish/2026/06/15/from-culling-to-compositing-new-creative-cloud-innovations-across-every-stage-of-your-workflow"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT04-019"
+    },
     {
       "id": "lightroom-2026-09-29-reflection-removal-improvement",
       "date": "2026-09-29",

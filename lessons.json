@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 181,
+  "count": 182,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-019",
+      "version": "v1.0",
+      "created_at": "2026-10-26T15:48:58+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Lightroom 선별 어시스트로 모임 사진 3장을 고르고 선택 이유 남기기",
+      "summary": "① AI 선별 기준 조절 ② 얼굴별 눈 상태 검토 ③ 사람이 고른 모임 사진 3장과 이유 기록",
+      "tool": "Adobe Lightroom",
+      "feature": "Assisted Culling 정식 출시 — Face View의 인물별 Eyes Open·Eye Sharpness 분석과 수동 선별",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-06-15",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-CRE"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "① 모임 사진 최종 후보 3장 ② 파일명과 선택 이유를 적은 기록지 1장",
+      "access": "paid",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "📷",
+      "one_liner": "AI 추천을 살펴 모임 사진 3장 고르기"
+    },
     {
       "id": "AI-2026-10-CAT04-018",
       "version": "v1.0",

@@ -1,0 +1,535 @@
+{
+  "id": "AI-2026-10-CAT04-019",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-26T15:48:58+09:00",
+  "checked": "2026-10-26",
+  "review_by": "2027-01-26",
+  "title": "Lightroom 선별 어시스트로 모임 사진 3장을 고르고 선택 이유 남기기",
+  "summary": "① AI 선별 기준 조절 ② 얼굴별 눈 상태 검토 ③ 사람이 고른 모임 사진 3장과 이유 기록",
+  "tool": "Adobe Lightroom",
+  "feature": "Assisted Culling 정식 출시 — Face View의 인물별 Eyes Open·Eye Sharpness 분석과 수동 선별",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-06-15",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-PUB",
+    "JOB-CRE"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 28,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Lightroom 유료 권한을 가진 본인 계정 + 최신 데스크톱 앱 설치 컴퓨터",
+    "촬영·AI 분석 동의를 받은 성인 모임 연습 사진 8장. 비슷한 구도·눈 감은 사진 포함",
+    "원본 별도 보관 + 큰 글씨 선택 이유 기록지"
+  ],
+  "outcome": "① 모임 사진 최종 후보 3장 ② 파일명과 선택 이유를 적은 기록지 1장",
+  "objectives": [
+    "선별 기준을 조절할 수 있다",
+    "얼굴별 눈 상태를 확인할 수 있다",
+    "AI 추천을 검토해 사진 3장을 고를 수 있다"
+  ],
+  "glance": {
+    "emoji": "📷",
+    "one_liner": "AI 추천을 살펴 모임 사진 3장 고르기",
+    "cards": [
+      {
+        "icon": "🔎",
+        "title": "AI 선별",
+        "text": "초점·눈 상태로 후보 좁히기"
+      },
+      {
+        "icon": "👀",
+        "title": "얼굴 확인",
+        "text": "인물별 눈 상태 직접 검토"
+      },
+      {
+        "icon": "✅",
+        "title": "내 결정",
+        "text": "사진 3장과 선택 이유 기록"
+      }
+    ],
+    "diagram": {
+      "title": "추천은 AI, 최종 선택은 사람",
+      "nodes": [
+        {
+          "icon": "📷",
+          "label": "사진 8장"
+        },
+        {
+          "icon": "🔎",
+          "label": "선별 기준"
+        },
+        {
+          "icon": "👀",
+          "label": "얼굴 검토"
+        },
+        {
+          "icon": "✅",
+          "label": "최종 3장"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "비슷한 모임 사진 8장을 하나씩 살펴보는 상태"
+      },
+      "after": {
+        "label": "After",
+        "text": "AI 후보 검토 후 사람이 고른 3장 + 이유 기록"
+      }
+    },
+    "cautions": [
+      "촬영·AI 분석 동의 확보",
+      "AI 거부는 삭제 명령 아님",
+      "점수를 사람 평가에 사용 금지"
+    ]
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "유료 데스크톱 실습. 무료 모바일 기본 편집으로 대체 불가",
+    "plans": [
+      {
+        "name": "Lightroom",
+        "price": "₩13,200/월(부가세 포함), 연간·매월 청구",
+        "features": [
+          "정식 데스크톱 Lightroom 포함",
+          "선별 어시스트 버튼 실습"
+        ]
+      },
+      {
+        "name": "포토그래피",
+        "price": "₩26,400/월(부가세 포함), 연간·매월 청구",
+        "features": [
+          "Lightroom·Lightroom Classic·Photoshop 포함",
+          "이번 수업은 Lightroom 데스크톱 사용"
+        ]
+      }
+    ],
+    "note": "2026-10-26 국내 공식 요금표 확인. 월 단위 무약정으로 해석 금지. 무료 체험 가입·새 결제 없이 확보한 본인 권한 사용. 별도 API·API 키 불필요",
+    "checked": "2026-10-26",
+    "sources": [
+      {
+        "title": "Adobe 대한민국 — Lightroom 가격 및 멤버십 플랜",
+        "url": "https://www.adobe.com/kr/products/photoshop-lightroom/plans.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-06-15",
+      "text": "선별 어시스트 정식 출시 + 인물별 눈 상태를 살피는 Face View 발표"
+    },
+    {
+      "date": "2026-10-26",
+      "text": "국내 현행 기능별 사용법·릴리스 정보·요금 재확인"
+    }
+  ],
+  "theory": {
+    "definition": "선별 어시스트(Assisted Culling)는 AI로 사진의 기술적 상태를 분석해 후보를 좁히는 정리 기능",
+    "analogy": "여러 장의 사진에서 흐린 컷을 먼저 찾아주는 보조 직원. 추억과 표정의 가치는 사람이 판단",
+    "comparison": {
+      "headers": [
+        "항목",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "검토 순서",
+          "사진 전체를 차례로 확인",
+          "AI 후보부터 검토"
+        ],
+        [
+          "단체 사진",
+          "전체 화면만 확인",
+          "얼굴별 눈 상태까지 확인"
+        ],
+        [
+          "최종 결정",
+          "사람이 선택",
+          "추천을 참고해 사람이 선택"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "선별과 편집의 차이",
+        "body": "좋은 후보를 찾는 기능. 흐린 사진을 선명하게 복원하는 기능과 구분"
+      },
+      {
+        "title": "Face View",
+        "body": "단체 사진 안의 인물을 개별 분석. 눈 뜬 상태와 눈 선명도 확인 보조"
+      },
+      {
+        "title": "기준과 최종 판단",
+        "body": "엄격한 기준은 후보를 줄일 수 있음. 의도한 배경 흐림이나 소중한 표정은 직접 검토"
+      }
+    ],
+    "can": [
+      "비슷한 사진 묶음의 검토 후보 좁히기",
+      "인물별 눈 상태 확인 보조",
+      "선별 상태 수동 변경"
+    ],
+    "cannot": [
+      "모든 얼굴·눈 상태 정확 판정 보장",
+      "사진 속 인물의 매력·가치 판단",
+      "초점이 나간 사진의 실제 세부 복원"
+    ],
+    "safety": [
+      "사진 속 성인의 촬영·AI 분석 동의 확보",
+      "아이·민감한 장소 사진 대신 허락된 연습 자료 사용",
+      "AI 거부 사진 자동 삭제 금지 + 원본 별도 보관",
+      "점수로 외모·건강·성격 평가 금지",
+      "수업 중 공개 링크·메신저 전송 없이 화면으로만 공유"
+    ]
+  },
+  "practice": {
+    "preview": "예시 기록: “모임01.jpg — 앞줄 두 사람 눈 확인” + “모임04.jpg — 얼굴 초점 확인” + “모임07.jpg — 자연스러운 표정”. 설명용 예시이며 실제 분석 결과 아님",
+    "follow": [
+      {
+        "title": "연습 앨범 열기",
+        "minutes": 4,
+        "do": "준비한 모임 연습 앨범 8장 열기 → 원본 별도 보관 확인 → 먼저 마음에 드는 한 장의 파일명 기록",
+        "prompt": "",
+        "expect": "Before 선택 1장",
+        "note": "삭제·외부 공유 없이 진행",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "설치한 Lightroom → 준비된 연습 앨범",
+          "kind": "app",
+          "note": "Lightroom 포함 유료 구독의 본인 Adobe ID 로그인 + 설치한 최신 데스크톱 앱. 무료 모바일 실습 경로 아님"
+        }
+      },
+      {
+        "title": "AI 선별 기준 적용",
+        "minutes": 5,
+        "do": "앨범 상단 선별 어시스트(Assisted Culling) → 컬링 → 선택에서 피사체 선명도·눈 뜬 상태 선택 → 분석 완료 대기",
+        "prompt": "",
+        "expect": "AI 추천 후보 확인",
+        "note": "[확인 필요] 국내 도움말의 지원 컬링·보조 선별·선별 어시스트 번역 혼재. 실제 버튼 명칭 사전 확인",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "연습 앨범 → 선별 어시스트 → 컬링 → 선택",
+          "kind": "app",
+          "note": "Lightroom 포함 유료 구독의 본인 Adobe ID 로그인 + 설치한 최신 데스크톱 앱. 무료 모바일 실습 경로 아님"
+        }
+      },
+      {
+        "title": "얼굴별 눈 상태 확인",
+        "minutes": 5,
+        "do": "추천 사진 한 장 선택 → 작업 영역 오른쪽 하단 정보 아이콘 → 선별 정보 → 얼굴 섹션에서 각 얼굴 선택 → 눈 상태와 실제 사진 비교",
+        "prompt": "",
+        "expect": "AI 점검과 내 관찰의 차이 한 가지",
+        "note": "점수를 사람의 외모 평가로 해석 금지",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "작업 영역 오른쪽 하단 정보 아이콘 → 선별 정보 → 얼굴",
+          "kind": "app",
+          "note": "Lightroom 포함 유료 구독의 본인 Adobe ID 로그인 + 설치한 최신 데스크톱 앱. 무료 모바일 실습 경로 아님"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "기준 바꾸어 후보 재검토",
+        "minutes": 5,
+        "do": "피사체 선명도 기준을 조금 낮춰 후보 변화 관찰 → 거부 사진도 살펴 소중한 표정이 빠졌는지 확인",
+        "prompt": "",
+        "expect": "내가 유지할 사진 후보",
+        "note": "삭제·외부 공유 없이 진행",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "선별 어시스트 → 선택 기준 슬라이더 → 검토의 선택·거부",
+          "kind": "app",
+          "note": "Lightroom 포함 유료 구독의 본인 Adobe ID 로그인 + 설치한 최신 데스크톱 앱. 무료 모바일 실습 경로 아님"
+        }
+      },
+      {
+        "title": "최종 사진 3장 결정",
+        "minutes": 5,
+        "do": "후보를 한 장씩 확대 → 눈·초점·표정 확인 → 이미지의 선택·거부 배지 → 필요에 따라 선택으로 표시 또는 거부로 표시 → 최종 3장의 파일명 기록",
+        "prompt": "",
+        "expect": "사람이 결정한 최종 3장",
+        "note": "일괄 삭제·앨범 제거 실행 금지",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "선별 어시스트 → 검토 → 사진별 선별 상태",
+          "kind": "app",
+          "note": "Lightroom 포함 유료 구독의 본인 Adobe ID 로그인 + 설치한 최신 데스크톱 앱. 무료 모바일 실습 경로 아님"
+        }
+      },
+      {
+        "title": "선택 이유 기록 완성",
+        "minutes": 4,
+        "do": "기록지에 최종 파일명 3개와 각각의 이유 한 줄 작성 → Before 선택과 달라진 이유 설명",
+        "prompt": "",
+        "expect": "After 사진 선택 기록지 1장",
+        "note": "28분 안에 완성. 공개 게시 불필요",
+        "input": {
+          "label": "종이 선택 기록지",
+          "url": null,
+          "location": "파일명·선택 이유·Before / After 비교 칸",
+          "kind": "manual",
+          "note": "로그인·요금 없음. AI 프롬프트 입력 아님"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "공통 앨범에서 사진 3장과 짧은 이유 기록"
+      },
+      {
+        "level": "중급",
+        "mission": "기준 두 가지를 바꾸어 후보 차이 설명"
+      },
+      {
+        "level": "고급",
+        "mission": "AI 추천과 다른 선택 한 장을 근거와 함께 설명"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "최종 후보 화면 제시 + 선택 이유 하나 낭독",
+    "quiz": [
+      {
+        "q": "AI가 거부로 분류한 사진은 어떻게 할까요?",
+        "options": [
+          "모두 즉시 삭제",
+          "직접 검토하고 보관 여부 결정",
+          "인터넷에 자동 게시",
+          "원본 덮어쓰기"
+        ],
+        "answer": 1,
+        "explain": "거부는 기준에 맞지 않는다는 추천 표시. 소중한 사진일 수 있어 사람의 재검토 필요"
+      },
+      {
+        "q": "Face View에서 확인하는 핵심 내용은 무엇인가요?",
+        "options": [
+          "사람의 성격",
+          "사진 판매 가격",
+          "인물별 눈 상태와 눈 선명도",
+          "촬영자의 비밀번호"
+        ],
+        "answer": 2,
+        "explain": "얼굴별 눈 상태를 확인하는 보조 기능. 사람의 가치 평가와 무관"
+      },
+      {
+        "q": "이번 실습의 올바른 이용 조건은 무엇인가요?",
+        "options": [
+          "무료 모바일만 있으면 같은 버튼 사용",
+          "API 키 구매 필수",
+          "다른 사람 계정 공유 필수",
+          "유료 권한이 있는 본인 데스크톱 Lightroom"
+        ],
+        "answer": 3,
+        "explain": "본인 유료 권한과 데스크톱 앱으로 진행. 새 결제와 API 키 불필요"
+      }
+    ],
+    "next": [
+      "선택한 사진의 구도 다듬기",
+      "공개 전 사진 속 개인정보 점검"
+    ],
+    "rubric": [
+      {
+        "criterion": "선택과 설명",
+        "high": "사진 3장 + 각각의 이유 + AI 한계 설명",
+        "mid": "도움을 받아 3장 선택",
+        "low": "후보 관찰만 완료"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~8분",
+        "content": "작품 예시·정식 출시·Before / After",
+        "note": "6월 출시일 유지"
+      },
+      {
+        "time": "8~18분",
+        "content": "요금·동의·선별과 복원의 차이",
+        "note": "사진 삭제 기능과 구분"
+      },
+      {
+        "time": "18~32분",
+        "content": "앨범 열기·AI 선별·얼굴 확인",
+        "note": "4분 + 5분 + 5분"
+      },
+      {
+        "time": "32~46분",
+        "content": "기준 조절·최종 선택·기록",
+        "note": "5분 + 5분 + 4분, 실습 합계 28분"
+      },
+      {
+        "time": "46~52분",
+        "content": "작품 설명·핵심 문제 3개·정리",
+        "note": "공개 전송 없이 종료"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "비슷한 모임 사진 중 어떤 사진을 남길지 고민되셨나요? 오늘은 AI 추천을 살피고 우리가 마지막 결정을 해 보겠습니다."
+      },
+      {
+        "label": "얼굴 검토",
+        "text": "숫자가 높다고 더 멋진 사람이란 뜻은 아닙니다. 눈이 잘 보이는 사진인지 확인하는 보조 정보입니다."
+      },
+      {
+        "label": "정리",
+        "text": "Before와 After에서 선택이 달라졌나요? AI가 놓친 소중한 표정을 찾았다면 그 이유를 적어 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "유료 권한·지원 컴퓨터 없음",
+        "response": "강사 캡처로 후보 선택 관찰. 직접 제작 완료로 처리하지 않고 기기 확보 후 보충"
+      },
+      {
+        "situation": "분석 지연",
+        "response": "사진 수를 줄여 한 번 재시도. 실패 시 준비한 추천 결과로 오류 찾기 진행"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "메뉴 없음",
+        "fix": "웹·모바일이 아닌 데스크톱인지 확인 + 업데이트·유료 로그인 점검"
+      },
+      {
+        "issue": "분석이 시작되지 않음",
+        "fix": "선택 기준 활성화 여부 확인"
+      },
+      {
+        "issue": "후보가 너무 적음",
+        "fix": "선명도 기준을 낮추고 거부 사진도 직접 검토"
+      },
+      {
+        "issue": "눈 판정이 이상함",
+        "fix": "얼굴 확대 후 직접 판단 + 선별 상태 수동 변경"
+      },
+      {
+        "issue": "원본 삭제 창 표시",
+        "fix": "취소 후 검토 화면 복귀. 기록지로 최종 후보만 관리"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국에서 이용 가능한가?",
+        "a": "국내 기능별 도움말·학습 자료·6월 릴리스 정보에서 직접 제공 안내 확인"
+      },
+      {
+        "q": "무료인가?",
+        "a": "이번 데스크톱 실습은 Lightroom 포함 유료 구독 필요"
+      },
+      {
+        "q": "사진을 자동으로 고치는가?",
+        "a": "선별 보조 기능. 선명도 복원과 다름"
+      },
+      {
+        "q": "추천을 바꿀 수 있는가?",
+        "a": "사진을 검토한 후 수동 선별 상태 변경 가능"
+      },
+      {
+        "q": "프롬프트가 필요한가?",
+        "a": "버튼·슬라이더 실습으로 명령문·API 키 불필요"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "큰 글씨 버튼 안내 + 공통 앨범 사용 + 한 기준씩 조절"
+      },
+      {
+        "level": "중급",
+        "guide": "선택 기준 변화와 최종 판단 근거 비교"
+      },
+      {
+        "level": "고급",
+        "guide": "오판 사례 기록 + AI 추천과 다른 선택 설명"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "눈·초점·표정 그림 카드 + 짧은 이유 문장 틀 제공"
+      }
+    ],
+    "pro_points": [
+      "추천 점수는 기술적 단서. 사람 평가 지표로 확장 금지",
+      "정식 출시는 2026-06-15. 작성일로 출시일 대체 금지"
+    ],
+    "day_before": [
+      "본인 유료 권한·최신 데스크톱·GPU 요구 사항 점검",
+      "국내 계정으로 연습 앨범의 선별·얼굴 패널·수동 변경 재현 후 캡처 준비",
+      "동의된 성인 사진 8장의 눈 감음·초점 차이 확인 + 원본 별도 보관",
+      "한국어 버튼 번역 혼재 확인 후 실제 화면에 맞는 인쇄물 준비",
+      "28분 실습 예행연습 + 장애용 캡처 + 큰 글씨 기록지 준비"
+    ]
+  },
+  "verification": [
+    "2026-10-26 lessons.json 181건 전체 제목·도구·기능 및 releases.json 비교. 반사 제거는 기존 교안, 선별 어시스트·Face View 교안 없음",
+    "최근 14일 공식 채널 탐색: Gemini Argon·Customize는 중복. Acrobat의 Express 연계는 기존 Express 이미지 편집과 범위 중첩으로 미선정. Google Workspace 목록 원문은 접근 오류",
+    "미연결 지난 기능은 Claude 금지·종료 공지·국내 제공 근거 불충분 등의 제약 확인. 선별 어시스트는 최근 6개월 공식 릴리스 추가 발굴 후보",
+    "회사 분포 Google 31·OpenAI 28·xAI 27·Adobe 9건 등 비교. 국내 개별 기능 안내와 작은 결과물 적합성으로 선정",
+    "작성 전 조건 통과: 대한민국 기능별 도움말 + 국내 AI 학습 자료 + 현행 국내 릴리스 + 유료 플랜 확인. 일반 한국어 지원만으로 기능 제공을 추정하지 않음",
+    "[미검증] 작성자 로그인·실행 없음. 강사 국내 계정 사전 재현 필요",
+    "[확인 필요] 지원 컬링·보조 선별·선별 어시스트가 공식 번역에 혼재. 실제 한국어 메뉴 명칭 수업 전 점검",
+    "제공된 main 복사본 사용. git fetch는 .git/FETCH_HEAD 쓰기 제한으로 실패하여 원격 최신 여부 재확인 불가",
+    "프롬프트 없는 버튼 실습. app·manual 입력처 명시. API·Claude·외부 메시지 전송 없음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe — 선별 어시스트 정식 출시와 Face View 발표",
+      "url": "https://blog.adobe.com/en/publish/2026/06/15/from-culling-to-compositing-new-creative-cloud-innovations-across-every-stage-of-your-workflow",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 데스크탑 릴리스 정보",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/introduction/release-notes.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — 지원 컬링으로 최고의 사진 선택하기",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/organize-photos/assisted-culling.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — AI 선별 어시스트 학습",
+      "url": "https://www.adobe.com/kr/learn/lightroom-cc/web/ai-assisted-culling-lightroom",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 가격 및 멤버십 플랜",
+      "url": "https://www.adobe.com/kr/products/photoshop-lightroom/plans.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 시스템 요구 사항",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/introduction/system-requirements.html",
+      "checked": "2026-10-26"
+    }
+  ]
+}
