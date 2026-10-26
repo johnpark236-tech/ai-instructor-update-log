@@ -1,7 +1,41 @@
 {
   "standard": "v2.3",
-  "count": 180,
+  "count": 181,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-018",
+      "version": "v1.0",
+      "created_at": "2026-10-26T10:34:18+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Lightroom 반사 제거 개선으로 유리창 너머 풍경 사진 한 장 다듬기",
+      "summary": "① Lightroom 9.6 반사 제거 개선 이해 ② 양·품질 조절 ③ 검토한 풍경 사진 1장 저장",
+      "tool": "Adobe Lightroom",
+      "feature": "Lightroom 9.6 Reflection Removal 개선 — 창문·유리·물 반사 제거의 얼룩·잔상 감소, 양·출력 품질 조절",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-09-29",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-CRE",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "중급강사"
+      ],
+      "outcome": "① 반사를 조절한 풍경 JPG 1장 ② Before / After 관찰·편집 사실을 적은 기록지",
+      "access": "paid",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "🪟",
+      "one_liner": "창문 반사를 줄여 풍경 사진 한 장 완성"
+    },
     {
       "id": "AI-2026-10-CAT12-002",
       "version": "v1.0",
