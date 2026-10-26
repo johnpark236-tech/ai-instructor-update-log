@@ -8,6 +8,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -26,6 +27,12 @@ jobs:
           else
             npx playwright install chromium
           fi
+      - name: Install Korean font for readable screenshots
+        run: |
+          mkdir -p "$HOME/.local/share/fonts"
+          curl --fail --location --retry 2 https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Korean/NotoSansCJKkr-Regular.otf --output "$HOME/.local/share/fonts/NotoSansCJKkr-Regular.otf"
+          fc-cache -f
+          fc-match :lang=ko
       - run: node tests/glance_v24.browser.cjs
       - run: node scripts/build_downloads.js
       - uses: actions/upload-artifact@v4
