@@ -1,0 +1,552 @@
+{
+  "id": "AI-2026-10-CAT04-020",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-26T22:48:10+09:00",
+  "checked": "2026-10-26",
+  "review_by": "2027-01-26",
+  "title": "Lightroom AI 먼지 제거로 풍경 사진의 센서 얼룩 지우고 비교 기록 만들기",
+  "summary": "① AI로 센서 먼지 얼룩 자동 제거 ② 오탐 검토 ③ Before / After 관찰 기록 완성",
+  "tool": "Adobe Lightroom",
+  "feature": "Dust Removal — 센서·렌즈 먼지 얼룩 자동 감지·제거와 지점별 새로 고침·삭제",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2025-10-28",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-CRE",
+    "JOB-EDU",
+    "JOB-MKT"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 18,
+    "practice": 28,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Lightroom 포함 유료 구독의 본인 Adobe ID",
+    "업데이트한 Lightroom 데스크톱 + 지원 컴퓨터",
+    "국내 공식 튜토리얼의 연습용 샘플 또는 사용 권한이 있는 센서 얼룩 풍경 사진",
+    "큰 글씨 관찰 기록지 + 원본 별도 보관"
+  ],
+  "outcome": "먼지 제거한 풍경 사진 1장 + Before / After 관찰 기록 1장",
+  "objectives": [
+    "센서 먼지와 장면 속 물체의 차이 구분 가능",
+    "AI 먼지 제거 적용과 오탐 수정 가능",
+    "Before / After 차이를 근거로 설명 가능"
+  ],
+  "glance": {
+    "emoji": "🧹",
+    "one_liner": "센서 먼지 얼룩을 AI로 지우고 검토",
+    "cards": [
+      {
+        "icon": "🔎",
+        "title": "자동 감지",
+        "text": "센서·렌즈 먼지 얼룩 찾기"
+      },
+      {
+        "icon": "🧹",
+        "title": "간단 적용",
+        "text": "먼지 패널에서 적용 선택"
+      },
+      {
+        "icon": "👀",
+        "title": "사람 검토",
+        "text": "지워진 작은 물체도 확인"
+      }
+    ],
+    "diagram": {
+      "title": "사진 확인부터 결과 검토까지",
+      "nodes": [
+        {
+          "icon": "🖼️",
+          "label": "사진 열기"
+        },
+        {
+          "icon": "🧹",
+          "label": "먼지 적용"
+        },
+        {
+          "icon": "👀",
+          "label": "오탐 검토"
+        },
+        {
+          "icon": "📝",
+          "label": "비교 기록"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "밝은 하늘에 센서 먼지 얼룩이 보이는 사진"
+      },
+      "after": {
+        "label": "After",
+        "text": "얼룩을 줄인 사진 + 사람이 확인한 관찰 기록"
+      }
+    },
+    "cautions": [
+      "원본 별도 보관",
+      "실제 물체 오탐 확인",
+      "샘플의 공개·상업 이용 금지"
+    ],
+    "what": "Lightroom 센서·렌즈 먼지 얼룩을 찾아 지움",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "얼룩 찾기 절감",
+        "text": "얼룩을 하나씩 찾는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "사진을 더 깨끗이",
+        "text": "사진의 먼지 얼룩을 줄일 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "잘못 지우면 취소",
+        "text": "잘못 지운 곳의 보정을 취소할 수 있음"
+      }
+    ],
+    "for_whom": "사진 속 먼지 얼룩을 정리하려는 분"
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "유료 Lightroom 데스크톱 버튼 실습. 무료 모바일 기본 편집과 구분",
+    "plans": [
+      {
+        "name": "Lightroom",
+        "price": "₩13,200/월(부가세 포함), 연간·매월 청구",
+        "features": [
+          "정식 데스크톱 Lightroom 포함",
+          "AI 먼지 제거 실습"
+        ]
+      },
+      {
+        "name": "포토그래피",
+        "price": "₩26,400/월(부가세 포함), 연간·매월 청구",
+        "features": [
+          "Lightroom·Lightroom Classic·Photoshop 포함",
+          "이번 수업은 Lightroom 데스크톱 사용"
+        ]
+      }
+    ],
+    "note": "2026-10-26 국내 공식 요금 확인. 연간 약정·매월 청구 조건. 본인 보유 권한 사용. 무료 체험 신규 가입·수업 중 결제 불필요. API 키 불필요",
+    "checked": "2026-10-26",
+    "sources": [
+      {
+        "title": "Adobe 대한민국 — Lightroom 가격 및 멤버십 플랜",
+        "url": "https://www.adobe.com/kr/products/photoshop-lightroom/plans.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-10-28",
+      "text": "Lightroom 9.0에 AI Dust Removal 공개. 국내 학습 자료도 같은 날짜 게시"
+    },
+    {
+      "date": "2026-10-26",
+      "text": "국내 기능별 도움말·학습 자료·현재 요금 재검증"
+    }
+  ],
+  "theory": {
+    "definition": "먼지 제거(Dust Removal)는 센서·렌즈 먼지 때문에 사진에 생긴 얼룩을 AI로 감지하고 제거하는 기능",
+    "analogy": "창문에 묻은 자국을 먼저 찾아주는 청소 도우미. 창밖의 새까지 자국으로 착각했는지는 사람이 확인",
+    "comparison": {
+      "headers": [
+        "항목",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "찾기",
+          "얼룩을 하나씩 탐색",
+          "AI 자동 감지 후 검토"
+        ],
+        [
+          "수정",
+          "직접 영역 선택",
+          "자동 제거 후 지점별 수정"
+        ],
+        [
+          "판단",
+          "원본만 확인",
+          "원본과 결과 비교 후 결정"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "센서 먼지",
+        "body": "촬영 장비의 먼지로 생긴 얼룩. 길 위 쓰레기나 피부 잡티와 구분"
+      },
+      {
+        "title": "지점별 수정",
+        "body": "제거 지점을 선택해 결과 새로 고침 또는 해당 보정 삭제 가능"
+      },
+      {
+        "title": "적용 순서",
+        "body": "국내 튜토리얼 권장 순서는 먼지 제거 후 마스크 작업. 기존 AI 마스크 재계산 가능성에 유의"
+      }
+    ],
+    "can": [
+      "먼지 얼룩 자동 탐지·제거",
+      "남은 지점을 수동으로 보완",
+      "잘못 지운 지점의 보정 취소"
+    ],
+    "cannot": [
+      "모든 얼룩의 완벽 제거 보장",
+      "카메라 센서의 실제 청소",
+      "장면 속 모든 쓰레기 자동 제거 보장"
+    ],
+    "safety": [
+      "원본 별도 보관 + 결과 확대 검토",
+      "Adobe 제공 Stock 샘플은 실습 전용. 공개 게시·판매 금지",
+      "본인 사진 또는 이용 허락된 자료만 사용",
+      "보도·증빙 사진은 수정 사실 표시 + 원본 유지",
+      "개인정보가 있는 사진·위치 정보 공개 금지"
+    ]
+  },
+  "practice": {
+    "preview": "설명용 예시: “Before: 하늘 오른쪽 흐린 점 2개” + “After: 점 감소, 새의 윤곽 유지” + “판단: 확대 확인 후 채택”. 실제 실행 결과 아님",
+    "follow": [
+      {
+        "title": "연습 사진과 원본 확인",
+        "minutes": 4,
+        "do": "준비된 센서 얼룩 사진 1장 열기 → 원본 보관 확인 → 밝은 하늘의 얼룩 위치를 기록지에 표시",
+        "prompt": "",
+        "expect": "Before 관찰 위치 2곳",
+        "note": "국내 공식 학습 페이지의 샘플 사용 가능. 연습 전용 이용 조건 준수",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "설치한 Lightroom → 준비된 연습 사진",
+          "kind": "app",
+          "note": "본인 Adobe ID + Lightroom 포함 유료 구독 + 최신 데스크톱 앱. 무료 모바일 경로 아님"
+        }
+      },
+      {
+        "title": "AI 먼지 제거 적용",
+        "minutes": 5,
+        "do": "제거 → 방해 요소 제거 → 먼지 펼치기 → 적용 선택 → 완료 대기",
+        "prompt": "",
+        "expect": "AI 제거 지점 표시",
+        "note": "삭제 대상은 원본 사진이 아닌 해당 보정 지점임",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "사진 → 제거 → 방해 요소 제거 → 먼지 → 적용",
+          "kind": "app",
+          "note": "본인 Adobe ID + Lightroom 포함 유료 구독 + 최신 데스크톱 앱. 무료 모바일 경로 아님"
+        }
+      },
+      {
+        "title": "확대하여 오탐 검토",
+        "minutes": 5,
+        "do": "원본 보기와 결과를 번갈아 확인 → 얼룩과 작은 실제 물체 구분 → 잘못 제거한 지점 선택 후 해당 보정 삭제",
+        "prompt": "",
+        "expect": "얼룩 개선 여부 + 보존할 물체 확인",
+        "note": "오탐이 없으면 수정하지 않고 관찰 결과만 기록",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "제거 → 먼지 → 이미지의 제거 지점",
+          "kind": "app",
+          "note": "본인 Adobe ID + Lightroom 포함 유료 구독 + 최신 데스크톱 앱. 무료 모바일 경로 아님"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "남은 얼룩 한 곳 다듬기",
+        "minutes": 5,
+        "do": "얼룩이 남았다면 제거 패널의 얼룩 시각화 선택 → 한계값 조절 → 크기를 맞춰 해당 위치 클릭 → 결과 검토",
+        "prompt": "",
+        "expect": "수정 또는 추가 수정 불필요 판단",
+        "note": "추가 얼룩이 없으면 지점 새로 고침 결과를 비교한 뒤 더 자연스러운 결과 선택",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "제거 → 얼룩 시각화 → 크기 → 사진의 해당 지점",
+          "kind": "app",
+          "note": "본인 Adobe ID + Lightroom 포함 유료 구독 + 최신 데스크톱 앱. 무료 모바일 경로 아님"
+        }
+      },
+      {
+        "title": "내 사진의 최종 결과 선택",
+        "minutes": 5,
+        "do": "사진 전체와 확대 화면을 오가며 무늬 반복·물체 손실 확인 → 문제 지점의 보정 취소 → 가장 자연스러운 상태 유지",
+        "prompt": "",
+        "expect": "먼지 제거한 사진 1장",
+        "note": "내 사진도 센서 얼룩이 없다면 공통 샘플로 검토 연습. 먼지 결과를 만들려고 실제 물체를 지우지 않을 것",
+        "input": {
+          "label": "Adobe Lightroom 데스크톱",
+          "url": null,
+          "location": "제거 → 이미지의 지점 선택 → 삭제 또는 새로 고침",
+          "kind": "app",
+          "note": "본인 Adobe ID + Lightroom 포함 유료 구독 + 최신 데스크톱 앱. 무료 모바일 경로 아님"
+        }
+      },
+      {
+        "title": "비교 기록 완성",
+        "minutes": 4,
+        "do": "기록지에 Before 얼룩 위치 + After 개선 내용 + 남은 한계 작성 → 짝에게 사진 화면과 판단 설명",
+        "prompt": "",
+        "expect": "사진 1장 + 관찰 기록 1장",
+        "note": "실습 합계 28분. 샘플 공개 게시·외부 전송 없음",
+        "input": {
+          "label": "종이 관찰 기록지",
+          "url": null,
+          "location": "Before / After / 남은 한계 칸",
+          "kind": "manual",
+          "note": "로그인·요금 없음. AI 프롬프트 입력 아님"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "공통 사진의 얼룩 두 곳을 비교 기록"
+      },
+      {
+        "level": "중급",
+        "mission": "자동 제거 후 수동 보완 여부를 이유와 함께 설명"
+      },
+      {
+        "level": "고급",
+        "mission": "사진 2장에서 오탐·누락 사례를 찾아 검토 기준 제안"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "사진 화면 제시 + 가장 달라진 위치 한 곳 설명",
+    "quiz": [
+      {
+        "q": "이번 AI 먼지 제거의 주된 대상은 무엇인가요?",
+        "options": [
+          "센서·렌즈 먼지로 생긴 사진 얼룩",
+          "컴퓨터 내부 먼지",
+          "사진 속 모든 사람",
+          "모든 피부 질환"
+        ],
+        "answer": 0,
+        "explain": "촬영 장비의 먼지 때문에 생긴 사진 얼룩을 다루는 기능. 실제 장비 청소 기능과 구분"
+      },
+      {
+        "q": "작은 새를 먼지로 오인해 지웠다면 어떻게 할까요?",
+        "options": [
+          "원본 삭제",
+          "해당 보정 지점을 선택해 삭제하고 새 보존 확인",
+          "사진을 바로 게시",
+          "결제를 추가 진행"
+        ],
+        "answer": 1,
+        "explain": "잘못된 보정만 취소한 뒤 원래 물체가 돌아왔는지 확인 필요"
+      },
+      {
+        "q": "Adobe 튜토리얼 샘플의 올바른 사용은 무엇인가요?",
+        "options": [
+          "광고에 판매",
+          "공개 사진집 배포",
+          "수업 연습용으로 사용",
+          "내 촬영물로 주장"
+        ],
+        "answer": 2,
+        "explain": "제공 Stock 샘플은 실습 전용. 공개·상업 이용 대신 수업 화면에서 결과 확인"
+      }
+    ],
+    "next": [
+      "내 촬영물의 공개 전 위치 정보 점검",
+      "먼지 제거 후 밝기·구도 다듬기"
+    ],
+    "rubric": [
+      {
+        "criterion": "결과 검토",
+        "high": "사진 수정 + 두 위치 비교 + 한계 설명",
+        "mid": "도움을 받아 적용·비교 완료",
+        "low": "적용 화면 관찰만 완료"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~8분",
+        "content": "작품 예시·출시·Before / After",
+        "note": "2025-10-28 원래 출시일 안내"
+      },
+      {
+        "time": "8~18분",
+        "content": "센서 얼룩·요금·샘플 이용 조건",
+        "note": "유료 데스크톱 구분"
+      },
+      {
+        "time": "18~32분",
+        "content": "사진 확인·AI 적용·오탐 검토",
+        "note": "4분 + 5분 + 5분"
+      },
+      {
+        "time": "32~46분",
+        "content": "남은 얼룩 보완·최종 선택·기록",
+        "note": "5분 + 5분 + 4분"
+      },
+      {
+        "time": "46~52분",
+        "content": "작품 설명·핵심 문제 3개",
+        "note": "외부 전송 없이 종료"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "하늘에 흐린 점이 찍힌 사진을 본 적 있으신가요? 오늘은 AI가 센서 얼룩을 찾게 하고 우리가 마지막으로 확인하겠습니다."
+      },
+      {
+        "label": "검토",
+        "text": "지워진 작은 점이 새일 수도 있습니다. 보정 지점만 취소한 뒤 원래 장면이 살아 있는지 확인해 주세요."
+      },
+      {
+        "label": "정리",
+        "text": "Before와 After의 같은 위치를 보세요. 무엇이 좋아졌고 무엇을 다시 확인했는지 한 줄로 적어 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "유료 권한·지원 기기 없음",
+        "response": "강사 캡처로 오탐 찾기 진행. 직접 실습 완료와 구분하고 기기 확보 후 보충"
+      },
+      {
+        "situation": "분석 실패·지연",
+        "response": "사진 한 장으로 재시도. 계속 실패하면 준비한 결과로 검토 연습"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "먼지 메뉴 없음",
+        "fix": "데스크톱 Lightroom인지 확인 + 업데이트·구독 로그인 점검"
+      },
+      {
+        "issue": "변화가 보이지 않음",
+        "fix": "얼룩 있는 공통 샘플로 교체 + 같은 위치 확대 비교"
+      },
+      {
+        "issue": "작은 물체 사라짐",
+        "fix": "해당 제거 지점 선택 후 보정 삭제"
+      },
+      {
+        "issue": "얼룩 일부 남음",
+        "fix": "얼룩 시각화로 위치 확인 + 크기 맞춰 수동 보완"
+      },
+      {
+        "issue": "삭제가 두려움",
+        "fix": "사진 삭제 메뉴를 닫고 제거 패널의 보정 지점 선택 여부 확인"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국에서 해당 기능 이용 가능한가?",
+        "a": "국내 기능별 도움말과 Adobe 대한민국 AI 먼지 제거 튜토리얼에서 직접 사용법 안내 확인"
+      },
+      {
+        "q": "무료인가?",
+        "a": "이번 실습은 Lightroom 포함 유료 구독의 데스크톱 앱 필요"
+      },
+      {
+        "q": "카메라가 깨끗해지는가?",
+        "a": "사진 속 얼룩 보정 기능. 실제 센서 청소와 무관"
+      },
+      {
+        "q": "프롬프트가 필요한가?",
+        "a": "버튼 실습. API 키·명령문 불필요"
+      },
+      {
+        "q": "샘플을 홍보 사진으로 써도 되는가?",
+        "a": "공식 제공 Stock 샘플은 실습 전용. 본인 권리 확보 사진 사용 필요"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "큰 글씨 버튼 안내 + 같은 사진 두 위치만 비교"
+      },
+      {
+        "level": "중급",
+        "guide": "수동 보완과 자동 결과 비교"
+      },
+      {
+        "level": "고급",
+        "guide": "오탐 사례와 검토 기준 제안"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "먼지·새 그림 카드 + Before / After 문장 틀 제공"
+      }
+    ],
+    "pro_points": [
+      "센서 얼룩 제거와 반사 제거·선별 어시스트는 별도 기능",
+      "원래 출시일 유지. 지난 기능 표시 대상"
+    ],
+    "day_before": [
+      "본인 유료 권한·최신 데스크톱·지원 기기 점검",
+      "국내 계정으로 먼지 적용·보정 취소·원본 비교 재현 후 캡처 준비",
+      "국내 튜토리얼 샘플 사전 준비 + 실습 전용 조건 안내",
+      "지울 얼룩과 보존할 물체가 보이는 확대 화면 준비",
+      "28분 예행연습 + 장애용 캡처 + 큰 글씨 기록지 준비"
+    ]
+  },
+  "verification": [
+    "2026-10-26 lessons.json 전체 182건 제목·도구·기능 및 releases.json 전체 비교. Dust Removal·센서 먼지 자동 제거 미작성 확인",
+    "최근 14일 Gemini Argon·Customize·Canva Craft는 기존 교안과 중복. Meta Muse Wonder는 API·개발 중심이며 국내 초급 버튼 실습 조건 근거 부족으로 미선정",
+    "미연결 지난 출시 목록 검토. Claude 금지 항목·종료 공지·미국 한정 금융 항목 제외. Runway 음성·Google 업무 에이전트 등은 이번 국내 조건 검증 우선 후보로 확정하지 않음",
+    "최근 12개월 공식 릴리스 추가 발굴: Lightroom 9.0 Dust Removal. 반사 제거·Assisted Culling 기존 교안과 대상·UI·결과 구분",
+    "회사 분포 Google 31·OpenAI 28·xAI 27·Adobe 10건 등 비교. 국내 개별 기능 학습 자료와 작은 작품 적합성으로 선정",
+    "작성 전 국내 기능별 문서·국내 실습 자료·Lightroom 플랜 확인 완료. 무료 모바일로 같은 실습 가능하다고 주장하지 않음",
+    "[미검증] 작성자 로그인·실행 없음. 강사 국내 계정 사전 재현 필요",
+    "[확인 필요] 앱 버전별 번역·원본 보기 아이콘 위치는 강의 전 실제 화면 점검",
+    "제공된 main 작업 복사본 사용. 원격 최신 동기화 재확인 없음",
+    "버튼·수기 실습으로 복붙 프롬프트 없음. app·manual 입력처 명시. API·Claude·외부 전송 없음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe — Lightroom 9.0 MAX 출시 안내",
+      "url": "https://community.adobe.com/announcements-678/what-s-new-in-lightroom-for-max-2025-908850",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — 사진에서 먼지 제거",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/edit-photos/remove-dust.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — AI 기반의 먼지 제거로 더욱 빠른 사진 편집",
+      "url": "https://www.adobe.com/kr/learn/lightroom-cc/web/ai-dust-removal-lightroom",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 가격 및 멤버십 플랜",
+      "url": "https://www.adobe.com/kr/products/photoshop-lightroom/plans.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 데스크탑 릴리스 정보",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/introduction/release-notes.html",
+      "checked": "2026-10-26"
+    }
+  ]
+}

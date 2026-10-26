@@ -1,7 +1,46 @@
 {
   "standard": "v2.4",
-  "count": 182,
+  "count": 183,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-020",
+      "version": "v1.0",
+      "created_at": "2026-10-26T22:48:10+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Lightroom AI 먼지 제거로 풍경 사진의 센서 얼룩 지우고 비교 기록 만들기",
+      "summary": "① AI로 센서 먼지 얼룩 자동 제거 ② 오탐 검토 ③ Before / After 관찰 기록 완성",
+      "tool": "Adobe Lightroom",
+      "feature": "Dust Removal — 센서·렌즈 먼지 얼룩 자동 감지·제거와 지점별 새로 고침·삭제",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2025-10-28",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-CRE",
+        "JOB-EDU",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "먼지 제거한 풍경 사진 1장 + Before / After 관찰 기록 1장",
+      "access": "paid",
+      "total_minutes": 52,
+      "notice": "",
+      "emoji": "🧹",
+      "one_liner": "센서 먼지 얼룩을 AI로 지우고 검토",
+      "what": "Lightroom 센서·렌즈 먼지 얼룩을 찾아 지움"
+    },
     {
       "id": "AI-2026-10-CAT04-019",
       "version": "v1.0",
