@@ -88,6 +88,28 @@ footer{padding:44px 0;color:#6f87a6;font-size:12px}
 @media print{details{display:block}details>*{display:block}body{background:#fff;color:#000}header,.tools,.tabs,.sync,.mk,.bar,footer,.cp{display:none}.card,.ins{background:#fff;border-color:#ccc}.ex,.qe{color:#060}.q .qe{display:block}}
 .practice-link{color:var(--a);text-decoration:underline;text-underline-offset:3px}.practice-link:focus-visible{outline:2px solid var(--a);outline-offset:4px}.practice-launch{display:flex;flex-wrap:wrap;gap:8px 14px;margin:10px 0;font-size:14px}.practice-launch a{padding:5px 0}
 .prompt-input{background:#10283a;border:1px solid #316070;border-radius:12px;padding:12px 14px;margin:12px 0}.input-label{font-size:13px;color:var(--m);margin-bottom:6px}.input-site{font-weight:800;font-size:17px;display:inline-block;padding:4px 0}.input-location{margin:7px 0;line-height:1.65}.input-note{color:var(--w);font-size:13px}.prompt-input small{color:var(--m)}
+
+/* 글씨 확대 시에도 본문의 실제 너비를 화면 안으로 유지 */
+html,body{max-width:100%;overflow-x:hidden;overscroll-behavior-x:none}
+@supports(overflow:clip){html,body{overflow-x:clip}}
+body{touch-action:pan-y pinch-zoom}
+#app{width:min(calc(1000px / var(--lesson-zoom,1)),calc((100% - 32px) / var(--lesson-zoom,1)));min-width:0;overflow-wrap:anywhere}
+@media(max-width:760px){
+  #app .rail{flex-wrap:wrap;overflow:visible}
+  #app .rail a{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+  #app .tw{overflow:visible}
+  #app .tw table,#app .tw table.wide{min-width:0;width:100%;table-layout:fixed}
+  #app th,#app td,#app table.nw1 td:first-child{min-width:0;white-space:normal;overflow-wrap:anywhere}
+  #app .plans,#app .grid2,#app .gcards,#app .sum{grid-template-columns:minmax(0,1fr)}
+  #app .tools input,#app .tools select{min-width:0;max-width:100%;flex-basis:100%}
+  #app .tab{min-width:0;overflow-wrap:anywhere}
+  #app .step .sh{flex-wrap:wrap}
+  #app .step .sh b{min-width:0;flex:1}
+  #app .gl-hero>*,#app .gift>*,#app .lrow>*{min-width:0}
+  #app .seg{max-width:100%;flex-wrap:wrap}
+  #app .seg button{min-width:0;white-space:normal}
+  #app img,#app video,#app canvas{max-width:100%;height:auto}
+}
 </style>
 </head>
 <body>
@@ -117,7 +139,7 @@ const store={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch
 view=store.get('view')||'learner';
 // 글씨 크기 5단계 (눈이 불편한 분용) — 교안·목록 내용 전체를 확대, 이 기기에 기억
 const FZ=[1,1.15,1.3,1.5,1.75];let fz=Math.min(4,Math.max(0,+store.get('fz')||0));
-function applyFz(){app.style.zoom=FZ[fz];document.getElementById('fzv').textContent=`${fz+1}/5`;document.getElementById('fzm').disabled=fz===0;document.getElementById('fzp').disabled=fz===4;store.set('fz',fz)}
+function applyFz(){app.style.setProperty('--lesson-zoom',FZ[fz]);app.style.zoom=FZ[fz];document.getElementById('fzv').textContent=`${fz+1}/5`;document.getElementById('fzm').disabled=fz===0;document.getElementById('fzp').disabled=fz===4;store.set('fz',fz)}
 document.getElementById('fzm').onclick=()=>{if(fz>0){fz--;applyFz()}};document.getElementById('fzp').onclick=()=>{if(fz<4){fz++;applyFz()}};applyFz();
 const kindB=t=>`<span class="kind ${t==='new'?'kn':'ku'}">${M.KIND[t]||''}</span>`;
 const pastB=L=>M.isPast(L)?'<span class="past">📚 지난 기능</span>':'';
