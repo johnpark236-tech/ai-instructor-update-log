@@ -67,7 +67,26 @@
       "학생 이름·성적은 슬라이드에 넣지 않기",
       "남이 준 스킬 파일은 내용 먼저 읽기",
       "결과 슬라이드는 반드시 눈으로 검토"
-    ]
+    ],
+    "what": "Copilot 반복 슬라이드 작업을 스킬로 실행함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "같은 서식을 반복 지정할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "어휘 슬라이드 형식을 일정하게 유지함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "내 작업을 스킬로 고쳐 쓸 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Microsoft 365 Copilot",
   "feature": "Copilot in PowerPoint 사용자 지정 스킬(Custom skills) — 스킬 만들기·녹화(Record Skill)·@이름 호출",

@@ -11,41 +11,115 @@
     "emoji": "🧅",
     "one_liner": "통짜 그림을 레이어로 나눠 다시 편집",
     "cards": [
-      {"icon": "🔤", "title": "글자 되살리기", "text": "그림 속 글자를 텍스트 상자로"},
-      {"icon": "🧩", "title": "물체 분리", "text": "요소마다 옮기기·크기·삭제"},
-      {"icon": "🖼️", "title": "배경 유지", "text": "배경은 뒤 레이어로 남음"},
-      {"icon": "🎟️", "title": "AI 사용량 차감", "text": "Premium 도구, 월 한도 안에서"}
+      {
+        "icon": "🔤",
+        "title": "글자 되살리기",
+        "text": "그림 속 글자를 텍스트 상자로"
+      },
+      {
+        "icon": "🧩",
+        "title": "물체 분리",
+        "text": "요소마다 옮기기·크기·삭제"
+      },
+      {
+        "icon": "🖼️",
+        "title": "배경 유지",
+        "text": "배경은 뒤 레이어로 남음"
+      },
+      {
+        "icon": "🎟️",
+        "title": "AI 사용량 차감",
+        "text": "Premium 도구, 월 한도 안에서"
+      }
     ],
     "diagram": {
       "title": "Magic Layers 작동 흐름",
       "nodes": [
-        {"icon": "🖼️", "label": "PNG·JPG 선택"},
-        {"icon": "🔍", "label": "AI가 구성 분석"},
-        {"icon": "🧅", "label": "레이어로 분리"},
-        {"icon": "✏️", "label": "글자·위치 수정"},
-        {"icon": "📤", "label": "새 파일 내보내기"}
+        {
+          "icon": "🖼️",
+          "label": "PNG·JPG 선택"
+        },
+        {
+          "icon": "🔍",
+          "label": "AI가 구성 분석"
+        },
+        {
+          "icon": "🧅",
+          "label": "레이어로 분리"
+        },
+        {
+          "icon": "✏️",
+          "label": "글자·위치 수정"
+        },
+        {
+          "icon": "📤",
+          "label": "새 파일 내보내기"
+        }
       ]
     },
     "before_after": {
-      "before": {"label": "오타 하나에 다시 생성", "text": "AI 포스터 날짜가 틀리면 프롬프트를 고쳐 처음부터 다시 그림, 디자인도 바뀜"},
-      "after": {"label": "그 글자만 고침", "text": "Magic Layers로 나눈 뒤 날짜 텍스트 상자만 수정, 나머지 디자인은 그대로"}
+      "before": {
+        "label": "오타 하나에 다시 생성",
+        "text": "AI 포스터 날짜가 틀리면 프롬프트를 고쳐 처음부터 다시 그림, 디자인도 바뀜"
+      },
+      "after": {
+        "label": "그 글자만 고침",
+        "text": "Magic Layers로 나눈 뒤 날짜 텍스트 상자만 수정, 나머지 디자인은 그대로"
+      }
     },
     "cautions": [
       "남의 저작물·로고 이미지는 쓰지 말 것",
       "분리된 글자 맞춤법·숫자 다시 확인",
       "실사 사진은 깔끔히 안 나뉠 수 있음"
-    ]
+    ],
+    "what": "Canva 통짜 그림을 편집 가능한 층으로 나눔",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "전체 디자인을 다시 만들 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "날짜·글자만 따로 바꿀 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "원래 그림과 비교하며 고칠 수 있음"
+      }
+    ],
+    "for_whom": "수업·모임의 사진과 그림을 다루는 분"
   },
   "tool": "Canva",
   "feature": "매직 레이어(Magic Layers) — 한 장짜리 PNG·JPG 이미지를 AI가 읽어 글자는 편집 가능한 텍스트 상자, 물체는 개별 요소, 배경은 뒤 레이어로 분리(Canva Design Model 기반), 홈 > Magic Layers > 미디어 선택 또는 편집기 이미지 선택 > 수정 > Magic Layers, 레이어별 이동·크기·삭제·효과·교체, 1쪽짜리 PNG·JPG·긴 변 5,000px 이하, Premium AI 도구(월 AI 사용량 차감), Gemini·ChatGPT 안 Canva 앱에서도 사용",
   "company": "Canva",
   "type": "update",
   "released": "2026-03-11",
-  "categories": ["CAT-04", "CAT-03"],
-  "jobs": ["JOB-MKT", "JOB-EDU", "JOB-CRE", "JOB-OFF"],
-  "learner_levels": ["초급", "중급"],
-  "instructor_levels": ["초보강사", "중급강사"],
-  "minutes": {"theory": 30, "practice": 50, "wrap": 10},
+  "categories": [
+    "CAT-04",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-MKT",
+    "JOB-EDU",
+    "JOB-CRE",
+    "JOB-OFF"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 30,
+    "practice": 50,
+    "wrap": 10
+  },
   "prerequisites": [
     "Canva 계정 — 웹 브라우저(Chrome 권장)로 canva.com 로그인, 무료(Free) 계정 가능",
     "AI 사용량: Magic Layers는 Premium AI 도구 → Free는 Standard·Premium 합쳐 월 최대 20회, Pro는 Premium 최대 200회(도움말 범위 표기) — 1인당 3~4회 사용 예상",
@@ -63,43 +137,123 @@
     "access": "freemium",
     "summary": "Magic Layers 전용 요금 없음 — Canva 요금제의 월 AI 사용량(AI usage)에서 Premium AI 도구로 차감. Free는 Standard·Premium 합쳐 월 최대 20회(매월 1일 UTC 0시 초기화), Pro·Teams는 Premium 최대 200회, Business·Enterprise는 최대 400회(결제일 초기화, 1인별 한도). 요금: Free US$0 · Pro 연 US$144(1인) · Business 연 US$250(1인당) · Enterprise 문의. K-12 교육기관·비영리는 대부분 프리미엄 기능 무료",
     "plans": [
-      {"name": "Free", "price": "US$0", "features": "Standard·Premium AI 도구 합쳐 월 최대 20회 + Magic Layers 사용 가능(사용량 차감) + Ultra AI 도구 불가"},
-      {"name": "Pro", "price": "US$144/년 (1인, 월 결제 가격 미확인)", "features": "Standard AI 도구는 사용량 미차감 + Premium 최대 200회 또는 Ultra 최대 20회 + Magic Resize 등 Pro 기능"},
-      {"name": "Business", "price": "US$250/년 (1인당)", "features": "Standard AI 무제한 + Premium 최대 400회 또는 Ultra 최대 40회 + AI Pass·추가 구매(top-up) 가능"},
-      {"name": "Enterprise", "price": "별도 문의", "features": "Premium 최대 400회 또는 Ultra 최대 40회 + 관리자 AI 도구 켜기·끄기"},
-      {"name": "Education·Nonprofit", "price": "자격 충족 시 무료", "features": "K-12 교육기관·비영리 대부분 프리미엄 기능 무료 + Education은 Premium 최대 200회"}
+      {
+        "name": "Free",
+        "price": "US$0",
+        "features": "Standard·Premium AI 도구 합쳐 월 최대 20회 + Magic Layers 사용 가능(사용량 차감) + Ultra AI 도구 불가"
+      },
+      {
+        "name": "Pro",
+        "price": "US$144/년 (1인, 월 결제 가격 미확인)",
+        "features": "Standard AI 도구는 사용량 미차감 + Premium 최대 200회 또는 Ultra 최대 20회 + Magic Resize 등 Pro 기능"
+      },
+      {
+        "name": "Business",
+        "price": "US$250/년 (1인당)",
+        "features": "Standard AI 무제한 + Premium 최대 400회 또는 Ultra 최대 40회 + AI Pass·추가 구매(top-up) 가능"
+      },
+      {
+        "name": "Enterprise",
+        "price": "별도 문의",
+        "features": "Premium 최대 400회 또는 Ultra 최대 40회 + 관리자 AI 도구 켜기·끄기"
+      },
+      {
+        "name": "Education·Nonprofit",
+        "price": "자격 충족 시 무료",
+        "features": "K-12 교육기관·비영리 대부분 프리미엄 기능 무료 + Education은 Premium 최대 200회"
+      }
     ],
     "note": "요금은 canva.com/pricing 미국 달러 연 결제 기준·세금 별도(2026-10-17 확인), 원화·월 결제 금액 미확인. AI 사용량 횟수는 도움말 'Understanding your AI usage'의 '최대' 범위 — 복잡한 작업일수록 더 많이 차감. 사용량 확인: 설정 > 결제(Billing) > AI 사용량",
     "checked": "2026-10-17",
     "sources": [
-      {"title": "Canva Pricing", "url": "https://www.canva.com/pricing/"},
-      {"title": "Canva Help Centre – Understanding your AI usage", "url": "https://www.canva.com/en_in/help/ai-access-variantb/"},
-      {"title": "Canva – Canva Pro", "url": "https://www.canva.com/pro/"}
+      {
+        "title": "Canva Pricing",
+        "url": "https://www.canva.com/pricing/"
+      },
+      {
+        "title": "Canva Help Centre – Understanding your AI usage",
+        "url": "https://www.canva.com/en_in/help/ai-access-variantb/"
+      },
+      {
+        "title": "Canva – Canva Pro",
+        "url": "https://www.canva.com/pro/"
+      }
     ]
   },
   "timeline": [
-    {"date": "2026-03-11", "text": "Magic Layers 공개 — 미국·영국·캐나다·호주 공개 베타로 시작, 전 세계 확대 예고 (Canva 뉴스룸, 날짜는 보조 근거: PetaPixel 2026-03-11 기사) [확인 필요: 정확한 공개일]"},
-    {"date": "2026-04", "text": "공개 후 첫 4주 동안 900만 회 넘게 사용, Gemini의 Canva 연결 앱·ChatGPT의 Canva 앱 안에서 Magic Layers 제공 시작 — 모든 사용자 대상 (Canva 뉴스룸) [확인 필요: 정확한 날짜]"},
-    {"date": "2026-04-17", "text": "Canva Create 2026에서 Canva AI 2.0 발표 — 레이어 단위로 고치는 '레이어드 오브젝트 인텔리전스(Layered object intelligence)'를 핵심 기능으로 소개 (Canva 뉴스룸, 날짜는 보조 근거: B&T)"},
-    {"date": "2026-10-17", "text": "도움말 기준 현황 — 홈·편집기 두 경로, PNG·JPG 1쪽·긴 변 5,000px 이하, Premium AI 도구로 월 AI 사용량 차감, 한국어 도움말 페이지 제공"}
+    {
+      "date": "2026-03-11",
+      "text": "Magic Layers 공개 — 미국·영국·캐나다·호주 공개 베타로 시작, 전 세계 확대 예고 (Canva 뉴스룸, 날짜는 보조 근거: PetaPixel 2026-03-11 기사) [확인 필요: 정확한 공개일]"
+    },
+    {
+      "date": "2026-04",
+      "text": "공개 후 첫 4주 동안 900만 회 넘게 사용, Gemini의 Canva 연결 앱·ChatGPT의 Canva 앱 안에서 Magic Layers 제공 시작 — 모든 사용자 대상 (Canva 뉴스룸) [확인 필요: 정확한 날짜]"
+    },
+    {
+      "date": "2026-04-17",
+      "text": "Canva Create 2026에서 Canva AI 2.0 발표 — 레이어 단위로 고치는 '레이어드 오브젝트 인텔리전스(Layered object intelligence)'를 핵심 기능으로 소개 (Canva 뉴스룸, 날짜는 보조 근거: B&T)"
+    },
+    {
+      "date": "2026-10-17",
+      "text": "도움말 기준 현황 — 홈·편집기 두 경로, PNG·JPG 1쪽·긴 변 5,000px 이하, Premium AI 도구로 월 AI 사용량 차감, 한국어 도움말 페이지 제공"
+    }
   ],
   "theory": {
     "definition": "매직 레이어(Magic Layers)는 한 장으로 합쳐진(평평한) 이미지를 Canva AI가 통째로 읽고, 글자·물체·배경을 알아봐 여러 겹의 편집 가능한 디자인으로 다시 쌓아 주는 기능임. 글자는 살아 있는 텍스트 상자로, 물체는 개별 요소로, 배경은 앞 요소 뒤에 남음. Canva Design Model 기반",
     "analogy": "한 장으로 구워 버린 '샌드위치 사진'을 다시 빵·햄·치즈로 하나씩 떼어 주는 기계. 떼어 낸 뒤에는 치즈만 바꾸거나 햄 위치만 옮길 수 있음. 단, 재료 경계가 흐린 실사 사진은 깔끔히 안 떨어질 수 있음",
     "comparison": {
-      "headers": ["구분", "AI로 다시 생성", "배경 제거", "Canva Magic Layers"],
+      "headers": [
+        "구분",
+        "AI로 다시 생성",
+        "배경 제거",
+        "Canva Magic Layers"
+      ],
       "rows": [
-        ["고치는 범위", "그림 전체가 다시 바뀜", "배경만 지움", "고르는 요소만 수정"],
-        ["글자 수정", "프롬프트로 다시 요청, 또 틀릴 수 있음", "불가", "텍스트 상자로 직접 수정"],
-        ["원래 디자인 유지", "어려움", "피사체만 유지", "배치·색 대부분 유지"],
-        ["잘 맞는 이미지", "아무 그림", "인물·상품 사진", "그래픽·일러스트·포스터"],
-        ["AI 사용량", "생성할 때마다", "도구별 상이", "Premium 도구로 차감"]
+        [
+          "고치는 범위",
+          "그림 전체가 다시 바뀜",
+          "배경만 지움",
+          "고르는 요소만 수정"
+        ],
+        [
+          "글자 수정",
+          "프롬프트로 다시 요청, 또 틀릴 수 있음",
+          "불가",
+          "텍스트 상자로 직접 수정"
+        ],
+        [
+          "원래 디자인 유지",
+          "어려움",
+          "피사체만 유지",
+          "배치·색 대부분 유지"
+        ],
+        [
+          "잘 맞는 이미지",
+          "아무 그림",
+          "인물·상품 사진",
+          "그래픽·일러스트·포스터"
+        ],
+        [
+          "AI 사용량",
+          "생성할 때마다",
+          "도구별 상이",
+          "Premium 도구로 차감"
+        ]
       ]
     },
     "concepts": [
-      {"title": "두 가지 시작 경로", "body": "① 홈 > Magic Layers > 미디어 선택 > 이미지 고르기 ② 편집기에서 업로드 > 이미지를 디자인에 넣고 선택 > 툴바 수정 > Magic Layers — 처리 대기 후 레이어를 골라 수정·이동·삭제 (한국어 도움말 버튼 이름 기준)"},
-      {"title": "잘 되는 이미지·안 되는 이미지", "body": "① 잘 됨: 그래픽 디자인·일러스트·스타일 있는 그림, 요소 경계가 뚜렷한 단순 디자인 ② 결과 들쭉날쭉: 실사 사진 ③ 미지원: PDF·벡터·여러 쪽 문서·라이선스 이미지(디즈니·해즈브로 등)·긴 변 5,000px 초과"},
-      {"title": "AI 사용량(AI usage) 구조", "body": "Canva AI 도구는 Standard·Premium·Ultra 3등급. Magic Layers는 Premium → Free는 월 최대 20회 안에서, Pro는 최대 200회 안에서 차감. 사용량은 설정 > 결제 > AI 사용량에서 확인, Free는 매월 1일(UTC) 초기화"}
+      {
+        "title": "두 가지 시작 경로",
+        "body": "① 홈 > Magic Layers > 미디어 선택 > 이미지 고르기 ② 편집기에서 업로드 > 이미지를 디자인에 넣고 선택 > 툴바 수정 > Magic Layers — 처리 대기 후 레이어를 골라 수정·이동·삭제 (한국어 도움말 버튼 이름 기준)"
+      },
+      {
+        "title": "잘 되는 이미지·안 되는 이미지",
+        "body": "① 잘 됨: 그래픽 디자인·일러스트·스타일 있는 그림, 요소 경계가 뚜렷한 단순 디자인 ② 결과 들쭉날쭉: 실사 사진 ③ 미지원: PDF·벡터·여러 쪽 문서·라이선스 이미지(디즈니·해즈브로 등)·긴 변 5,000px 초과"
+      },
+      {
+        "title": "AI 사용량(AI usage) 구조",
+        "body": "Canva AI 도구는 Standard·Premium·Ultra 3등급. Magic Layers는 Premium → Free는 월 최대 20회 안에서, Pro는 최대 200회 안에서 차감. 사용량은 설정 > 결제 > AI 사용량에서 확인, Free는 매월 1일(UTC) 초기화"
+      }
     ],
     "can": [
       "AI가 만든 포스터·카드뉴스 속 글자를 텍스트 상자로 되살려 오타·날짜 수정",
@@ -189,9 +343,18 @@
       }
     ],
     "challenges": [
-      {"level": "⭐", "mission": "같은 포스터를 이미지 생성 AI에 '날짜만 바꿔 다시 그려 줘'로 요청한 결과와 Magic Layers 수정본을 비교해 디자인이 얼마나 유지됐는지 1줄로 정리"},
-      {"level": "⭐⭐", "mission": "실사 사진 1장과 일러스트 1장에 각각 Magic Layers를 적용하고, 분리된 레이어 수·깔끔함을 표로 비교"},
-      {"level": "⭐⭐⭐", "mission": "Gemini 또는 ChatGPT에서 Canva 앱을 연결해 만든 이미지를 '@Canva' 로 편집 가능한 디자인으로 넘겨 보고, Canva에서 바로 Magic Layers를 쓴 경우와 단계·AI 사용량 차이를 정리 [확인 필요: 앱별 호출 방법]"}
+      {
+        "level": "⭐",
+        "mission": "같은 포스터를 이미지 생성 AI에 '날짜만 바꿔 다시 그려 줘'로 요청한 결과와 Magic Layers 수정본을 비교해 디자인이 얼마나 유지됐는지 1줄로 정리"
+      },
+      {
+        "level": "⭐⭐",
+        "mission": "실사 사진 1장과 일러스트 1장에 각각 Magic Layers를 적용하고, 분리된 레이어 수·깔끔함을 표로 비교"
+      },
+      {
+        "level": "⭐⭐⭐",
+        "mission": "Gemini 또는 ChatGPT에서 Canva 앱을 연결해 만든 이미지를 '@Canva' 로 편집 가능한 디자인으로 넘겨 보고, Canva에서 바로 Magic Layers를 쓴 경우와 단계·AI 사용량 차이를 정리 [확인 필요: 앱별 호출 방법]"
+      }
     ]
   },
   "wrap": {
@@ -232,9 +395,24 @@
       }
     ],
     "rubric": [
-      {"criterion": "레이어 분리 활용", "high": "글자 수정 + 요소 이동·삭제 모두 수행", "mid": "글자만 수정", "low": "Magic Layers 적용 실패 후 대안 없음"},
-      {"criterion": "결과물 완성도", "high": "내 행사 정보 반영 PNG + 비교판 완성", "mid": "수정본만 완성", "low": "원본과 차이 없음"},
-      {"criterion": "확인·윤리", "high": "숫자·날짜 대조 + 내 이미지만 사용 + 한계 기록", "mid": "대조만 함", "low": "남의 이미지 사용 또는 오타 방치"}
+      {
+        "criterion": "레이어 분리 활용",
+        "high": "글자 수정 + 요소 이동·삭제 모두 수행",
+        "mid": "글자만 수정",
+        "low": "Magic Layers 적용 실패 후 대안 없음"
+      },
+      {
+        "criterion": "결과물 완성도",
+        "high": "내 행사 정보 반영 PNG + 비교판 완성",
+        "mid": "수정본만 완성",
+        "low": "원본과 차이 없음"
+      },
+      {
+        "criterion": "확인·윤리",
+        "high": "숫자·날짜 대조 + 내 이미지만 사용 + 한계 기록",
+        "mid": "대조만 함",
+        "low": "남의 이미지 사용 또는 오타 방치"
+      }
     ],
     "next": [
       "Gemini 연결 앱으로 Adobe 도구 쓰기 (AI-2026-10-CAT04-004)",
@@ -245,47 +423,145 @@
   },
   "instructor": {
     "timetable": [
-      {"time": "00:00~00:10", "content": "도입 — 'AI 포스터 날짜 하나 틀렸을 때 어떻게 고치나요?' 질문, 비포/애프터 시연", "note": "다시 생성하면 디자인이 바뀌는 장면을 먼저 보여 주기"},
-      {"time": "00:10~00:30", "content": "이론 — Magic Layers 정의·비교표·지원 파일·AI 사용량·저작권", "note": "실사 사진 한계 예시 1장 준비"},
-      {"time": "00:30~00:58", "content": "따라 하기 1~4 — 이미지 준비·Magic Layers 실행·레이어 확인·글자 수정", "note": "처리 대기 중 레이어 개념 설명"},
-      {"time": "00:58~01:20", "content": "내 것 만들기 — 요소 이동·삭제, 내 행사 PNG, 비포/애프터 비교판", "note": "빠른 수강생은 도전과제 ⭐⭐"},
-      {"time": "01:20~01:30", "content": "정리 — 2인 발표·퀴즈 3문제·AI 사용량 확인법", "note": "설정 > 결제 > AI 사용량 함께 열어 보기"}
+      {
+        "time": "00:00~00:10",
+        "content": "도입 — 'AI 포스터 날짜 하나 틀렸을 때 어떻게 고치나요?' 질문, 비포/애프터 시연",
+        "note": "다시 생성하면 디자인이 바뀌는 장면을 먼저 보여 주기"
+      },
+      {
+        "time": "00:10~00:30",
+        "content": "이론 — Magic Layers 정의·비교표·지원 파일·AI 사용량·저작권",
+        "note": "실사 사진 한계 예시 1장 준비"
+      },
+      {
+        "time": "00:30~00:58",
+        "content": "따라 하기 1~4 — 이미지 준비·Magic Layers 실행·레이어 확인·글자 수정",
+        "note": "처리 대기 중 레이어 개념 설명"
+      },
+      {
+        "time": "00:58~01:20",
+        "content": "내 것 만들기 — 요소 이동·삭제, 내 행사 PNG, 비포/애프터 비교판",
+        "note": "빠른 수강생은 도전과제 ⭐⭐"
+      },
+      {
+        "time": "01:20~01:30",
+        "content": "정리 — 2인 발표·퀴즈 3문제·AI 사용량 확인법",
+        "note": "설정 > 결제 > AI 사용량 함께 열어 보기"
+      }
     ],
     "script": [
-      {"label": "도입", "text": "AI로 포스터를 멋지게 만들었는데 날짜가 틀렸어요. 다시 그려 달라고 하면 디자인이 통째로 바뀌죠. 오늘은 그림을 버리지 않고, 틀린 글자만 쏙 고치는 방법을 배웁니다."},
-      {"label": "핵심 개념", "text": "Magic Layers는 구워진 샌드위치 사진을 다시 빵, 햄, 치즈로 떼어 주는 기계라고 생각하시면 됩니다. 떼어 내면 치즈만 바꿀 수 있어요."},
-      {"label": "주의", "text": "남이 만든 포스터를 가져와서 이름만 바꿔 쓰는 건 안 됩니다. 내가 만들었거나 써도 된다고 허락받은 그림만 사용하세요."},
-      {"label": "마무리", "text": "다시 생성은 새 그림, Magic Layers는 같은 그림 고치기. 오늘 만든 비교판이 그 차이를 보여 줍니다."}
+      {
+        "label": "도입",
+        "text": "AI로 포스터를 멋지게 만들었는데 날짜가 틀렸어요. 다시 그려 달라고 하면 디자인이 통째로 바뀌죠. 오늘은 그림을 버리지 않고, 틀린 글자만 쏙 고치는 방법을 배웁니다."
+      },
+      {
+        "label": "핵심 개념",
+        "text": "Magic Layers는 구워진 샌드위치 사진을 다시 빵, 햄, 치즈로 떼어 주는 기계라고 생각하시면 됩니다. 떼어 내면 치즈만 바꿀 수 있어요."
+      },
+      {
+        "label": "주의",
+        "text": "남이 만든 포스터를 가져와서 이름만 바꿔 쓰는 건 안 됩니다. 내가 만들었거나 써도 된다고 허락받은 그림만 사용하세요."
+      },
+      {
+        "label": "마무리",
+        "text": "다시 생성은 새 그림, Magic Layers는 같은 그림 고치기. 오늘 만든 비교판이 그 차이를 보여 줍니다."
+      }
     ],
     "plan_b": [
-      {"situation": "홈에서 Magic Layers 메뉴가 안 보임", "response": "편집기 경로 사용: 업로드 → 이미지 선택 → 툴바 '수정' → Magic Layers, 그래도 없으면 지역·계정 미제공 가능성 → 강사 화면 시연"},
-      {"situation": "무료 계정 AI 사용량 소진", "response": "강사 계정으로 시연 + 수강생은 강사가 미리 나눈 디자인 사본(템플릿 링크)으로 글자 수정·이동 실습"},
-      {"situation": "이미지 생성 AI 사용이 어려움", "response": "강사 준비 포스터 PNG 3종 배포로 대체"},
-      {"situation": "글자가 텍스트 상자로 안 나뉨", "response": "글자가 크고 배경이 단순한 다른 이미지로 다시 시도, 안 되면 텍스트 도구로 새 글자 상자를 덮어 쓰기"},
-      {"situation": "기관 계정에서 AI 도구가 꺼져 있음", "response": "개인 무료 계정으로 로그인해 진행, 기관 관리자에게 Admin Panel AI 설정 문의 안내"}
+      {
+        "situation": "홈에서 Magic Layers 메뉴가 안 보임",
+        "response": "편집기 경로 사용: 업로드 → 이미지 선택 → 툴바 '수정' → Magic Layers, 그래도 없으면 지역·계정 미제공 가능성 → 강사 화면 시연"
+      },
+      {
+        "situation": "무료 계정 AI 사용량 소진",
+        "response": "강사 계정으로 시연 + 수강생은 강사가 미리 나눈 디자인 사본(템플릿 링크)으로 글자 수정·이동 실습"
+      },
+      {
+        "situation": "이미지 생성 AI 사용이 어려움",
+        "response": "강사 준비 포스터 PNG 3종 배포로 대체"
+      },
+      {
+        "situation": "글자가 텍스트 상자로 안 나뉨",
+        "response": "글자가 크고 배경이 단순한 다른 이미지로 다시 시도, 안 되면 텍스트 도구로 새 글자 상자를 덮어 쓰기"
+      },
+      {
+        "situation": "기관 계정에서 AI 도구가 꺼져 있음",
+        "response": "개인 무료 계정으로 로그인해 진행, 기관 관리자에게 Admin Panel AI 설정 문의 안내"
+      }
     ],
     "stuck": [
-      {"issue": "PDF 파일이 안 들어감", "fix": "PDF는 미지원 → PNG·JPG로 변환 후 업로드(도움말)"},
-      {"issue": "처리 후 요소가 몇 개로만 나뉨", "fix": "실사·복잡한 이미지일수록 분리가 약함 → 경계가 뚜렷한 그래픽 이미지 사용"},
-      {"issue": "'이미지가 너무 큼' 류 오류", "fix": "긴 변 5,000px 이하로 줄여 다시 업로드"},
-      {"issue": "요소를 옮긴 자리가 비어 보임", "fix": "배경 레이어 색 조정 또는 Canva 요소·도형으로 가리기"},
-      {"issue": "한글 글자가 깨지거나 다른 글꼴로 바뀜", "fix": "텍스트 상자 선택 → 한글 지원 글꼴로 바꾸기, 원본 글꼴 완전 복원은 기대하지 않기"}
+      {
+        "issue": "PDF 파일이 안 들어감",
+        "fix": "PDF는 미지원 → PNG·JPG로 변환 후 업로드(도움말)"
+      },
+      {
+        "issue": "처리 후 요소가 몇 개로만 나뉨",
+        "fix": "실사·복잡한 이미지일수록 분리가 약함 → 경계가 뚜렷한 그래픽 이미지 사용"
+      },
+      {
+        "issue": "'이미지가 너무 큼' 류 오류",
+        "fix": "긴 변 5,000px 이하로 줄여 다시 업로드"
+      },
+      {
+        "issue": "요소를 옮긴 자리가 비어 보임",
+        "fix": "배경 레이어 색 조정 또는 Canva 요소·도형으로 가리기"
+      },
+      {
+        "issue": "한글 글자가 깨지거나 다른 글꼴로 바뀜",
+        "fix": "텍스트 상자 선택 → 한글 지원 글꼴로 바꾸기, 원본 글꼴 완전 복원은 기대하지 않기"
+      }
     ],
     "faq": [
-      {"q": "무료로 쓸 수 있나요?", "a": "가능. 단 Premium AI 도구라 Free 월 AI 사용량(Standard·Premium 합쳐 최대 20회 범위)에서 차감, 매월 1일(UTC) 초기화"},
-      {"q": "한국에서도 되나요?", "a": "출시 때는 미국·영국·캐나다·호주 공개 베타, 이후 전 세계 확대 예고 + 한국어 도움말 페이지 있음 → 실제 메뉴 노출은 수업 전 확인 [확인 필요]"},
-      {"q": "사진에서 사람만 떼어 낼 수 있나요?", "a": "실사 사진은 결과가 들쭉날쭉. 사람·상품만 분리는 배경 제거 도구가 더 적합할 수 있음"},
-      {"q": "다른 사람이 보낸 포스터도 고칠 수 있나요?", "a": "기술적으로는 가능하지만 저작권·허락 문제 확인 필수. 라이선스 이미지(디즈니·해즈브로 등)는 지원 안 됨"},
-      {"q": "Magic Layers로 나눈 디자인을 다시 다른 크기로 바꿀 수 있나요?", "a": "레이어로 나뉜 디자인이라 요소 재배치가 쉬움. 크기 자동 변환(Magic Resize)은 Pro 기능"},
-      {"q": "ChatGPT·Gemini에서 바로 쓸 수 있나요?", "a": "Canva 뉴스룸 기준 Gemini의 Canva 연결 앱·ChatGPT의 Canva 앱에서 이미지를 '@Canva' 로 편집 가능한 디자인으로 바꿀 수 있음, Canva AI 사용량 차감 [확인 필요: 국내 화면]"}
+      {
+        "q": "무료로 쓸 수 있나요?",
+        "a": "가능. 단 Premium AI 도구라 Free 월 AI 사용량(Standard·Premium 합쳐 최대 20회 범위)에서 차감, 매월 1일(UTC) 초기화"
+      },
+      {
+        "q": "한국에서도 되나요?",
+        "a": "출시 때는 미국·영국·캐나다·호주 공개 베타, 이후 전 세계 확대 예고 + 한국어 도움말 페이지 있음 → 실제 메뉴 노출은 수업 전 확인 [확인 필요]"
+      },
+      {
+        "q": "사진에서 사람만 떼어 낼 수 있나요?",
+        "a": "실사 사진은 결과가 들쭉날쭉. 사람·상품만 분리는 배경 제거 도구가 더 적합할 수 있음"
+      },
+      {
+        "q": "다른 사람이 보낸 포스터도 고칠 수 있나요?",
+        "a": "기술적으로는 가능하지만 저작권·허락 문제 확인 필수. 라이선스 이미지(디즈니·해즈브로 등)는 지원 안 됨"
+      },
+      {
+        "q": "Magic Layers로 나눈 디자인을 다시 다른 크기로 바꿀 수 있나요?",
+        "a": "레이어로 나뉜 디자인이라 요소 재배치가 쉬움. 크기 자동 변환(Magic Resize)은 Pro 기능"
+      },
+      {
+        "q": "ChatGPT·Gemini에서 바로 쓸 수 있나요?",
+        "a": "Canva 뉴스룸 기준 Gemini의 Canva 연결 앱·ChatGPT의 Canva 앱에서 이미지를 '@Canva' 로 편집 가능한 디자인으로 바꿀 수 있음, Canva AI 사용량 차감 [확인 필요: 국내 화면]"
+      }
     ],
     "level_guide": [
-      {"level": "🟢 초급반", "guide": "강사 준비 포스터로 따라 하기 1~4만 진행, 날짜 글자 하나 바꾸기 성공이 목표"},
-      {"level": "🟡 중급반", "guide": "직접 생성한 포스터 + 내 것 만들기 전부 + 도전과제 ⭐"},
-      {"level": "🔴 고급반", "guide": "도전과제 ⭐⭐⭐ Gemini·ChatGPT 연결 경로 비교 + 팀 브랜드 템플릿에 맞춘 수정 규칙 정리"},
-      {"level": "시니어 (JOB-SEN)", "guide": "모임 안내문 이미지의 날짜·장소만 바꾸기, 글자 크게 키우기까지"},
-      {"level": "교사·강사 (JOB-EDU)", "guide": "수업 안내 포스터·학습지 그림의 문구 수정, 학생 얼굴 사진 사용 금지"},
-      {"level": "외국인·다문화 (JOB-GLB)", "guide": "영어 포스터를 한국어 문구로 바꾸는 활동 — 쉬운 한국어 행사 안내문 만들기"}
+      {
+        "level": "🟢 초급반",
+        "guide": "강사 준비 포스터로 따라 하기 1~4만 진행, 날짜 글자 하나 바꾸기 성공이 목표"
+      },
+      {
+        "level": "🟡 중급반",
+        "guide": "직접 생성한 포스터 + 내 것 만들기 전부 + 도전과제 ⭐"
+      },
+      {
+        "level": "🔴 고급반",
+        "guide": "도전과제 ⭐⭐⭐ Gemini·ChatGPT 연결 경로 비교 + 팀 브랜드 템플릿에 맞춘 수정 규칙 정리"
+      },
+      {
+        "level": "시니어 (JOB-SEN)",
+        "guide": "모임 안내문 이미지의 날짜·장소만 바꾸기, 글자 크게 키우기까지"
+      },
+      {
+        "level": "교사·강사 (JOB-EDU)",
+        "guide": "수업 안내 포스터·학습지 그림의 문구 수정, 학생 얼굴 사진 사용 금지"
+      },
+      {
+        "level": "외국인·다문화 (JOB-GLB)",
+        "guide": "영어 포스터를 한국어 문구로 바꾸는 활동 — 쉬운 한국어 행사 안내문 만들기"
+      }
     ],
     "pro_points": [
       "핵심 메시지: 다시 생성은 새 그림, Magic Layers는 같은 그림 고치기",
@@ -311,14 +587,50 @@
     "[확인 필요] Gemini·ChatGPT 안 Canva 앱 Magic Layers 국내 사용 가능 여부"
   ],
   "sources": [
-    {"title": "Canva Newsroom – Introducing Magic Layers, bringing creative control to AI content", "url": "https://www.canva.com/newsroom/news/magic-layers/", "checked": "2026-10-17"},
-    {"title": "Canva 도움말 센터(한국어) – Magic Layers로 이미지를 편집 가능한 레이어로 바꾸기", "url": "https://www.canva.com/ko_kr/help/editable-magic-layers-variantb/", "checked": "2026-10-17"},
-    {"title": "Canva Help Center – Turn images into editable layers with Magic Layers", "url": "https://www.canva.com/help/editable-magic-layers-variantb/", "checked": "2026-10-17"},
-    {"title": "Canva Newsroom – Make AI images your own: Magic Layers is now inside the world's biggest AI assistants", "url": "https://www.canva.com/newsroom/news/magic-layers-ai-assistants/", "checked": "2026-10-17"},
-    {"title": "Canva Newsroom – Introducing Canva AI 2.0: Reimagining how the world creates", "url": "https://www.canva.com/newsroom/news/canva-create-2026-ai/", "checked": "2026-10-17"},
-    {"title": "Canva Help Centre – Understanding your AI usage", "url": "https://www.canva.com/en_in/help/ai-access-variantb/", "checked": "2026-10-17"},
-    {"title": "Canva Pricing", "url": "https://www.canva.com/pricing/", "checked": "2026-10-17"},
-    {"title": "PetaPixel – Canva's New AI Tool Turns Flat Images Into Editable Layers (2026-03-11, 보조 근거)", "url": "https://petapixel.com/2026/03/11/canvas-new-ai-tool-turns-flat-images-into-editable-layers", "checked": "2026-10-17"},
-    {"title": "eCommerceNews Australia – Canva unveils Magic Layers (2026-03-12, 보조 근거)", "url": "https://ecommercenews.com.au/story/canva-unveils-magic-layers-to-turn-flat-images-editable", "checked": "2026-10-17"}
+    {
+      "title": "Canva Newsroom – Introducing Magic Layers, bringing creative control to AI content",
+      "url": "https://www.canva.com/newsroom/news/magic-layers/",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Canva 도움말 센터(한국어) – Magic Layers로 이미지를 편집 가능한 레이어로 바꾸기",
+      "url": "https://www.canva.com/ko_kr/help/editable-magic-layers-variantb/",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Canva Help Center – Turn images into editable layers with Magic Layers",
+      "url": "https://www.canva.com/help/editable-magic-layers-variantb/",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Canva Newsroom – Make AI images your own: Magic Layers is now inside the world's biggest AI assistants",
+      "url": "https://www.canva.com/newsroom/news/magic-layers-ai-assistants/",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Canva Newsroom – Introducing Canva AI 2.0: Reimagining how the world creates",
+      "url": "https://www.canva.com/newsroom/news/canva-create-2026-ai/",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Canva Help Centre – Understanding your AI usage",
+      "url": "https://www.canva.com/en_in/help/ai-access-variantb/",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "Canva Pricing",
+      "url": "https://www.canva.com/pricing/",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "PetaPixel – Canva's New AI Tool Turns Flat Images Into Editable Layers (2026-03-11, 보조 근거)",
+      "url": "https://petapixel.com/2026/03/11/canvas-new-ai-tool-turns-flat-images-into-editable-layers",
+      "checked": "2026-10-17"
+    },
+    {
+      "title": "eCommerceNews Australia – Canva unveils Magic Layers (2026-03-12, 보조 근거)",
+      "url": "https://ecommercenews.com.au/story/canva-unveils-magic-layers-to-turn-flat-images-editable",
+      "checked": "2026-10-17"
+    }
   ]
 }

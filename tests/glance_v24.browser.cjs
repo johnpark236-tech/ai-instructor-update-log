@@ -1,0 +1,32 @@
+// Real Chromium geometry + legacy fallback + mobile maximum text size.
+const {chromium}=require('playwright');
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),out=path.join(root,'docs/reports/glance-v24');
+const id='AI-2026-10-CAT04-019';
+(async()=>{
+ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return}try{res.setHeader('Content-Type',file.endsWith('.html')?'text/html; charset=utf-8':file.endsWith('.json')?'application/json':file.endsWith('.js')?'text/javascript':'application/octet-stream');res.end(fs.readFileSync(file))}catch{res.writeHead(404).end()}});
+ await new Promise(r=>server.listen(0,'127.0.0.1',r));
+ const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHANNEL?{channel:process.env.PLAYWRIGHT_CHANNEL}:{}),...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH,args:['--no-sandbox']}: {})});
+ const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const url=`http://127.0.0.1:${server.address().port}/lessons.html#${id}`;
+ const ready=async()=>page.locator('.gl-benefit').first().waitFor();
+ await page.setViewportSize({width:1280,height:900});await page.goto(url);await ready();
+ const desktop=await page.locator('.gl-benefit').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,bottom:r.bottom,width:r.width}}));
+ assert.equal(desktop.length,3);assert.ok(desktop.every(r=>r.bottom<=900),JSON.stringify(desktop));assert.equal(desktop[0].y,desktop[2].y);
+ assert.ok(await page.locator('.gl-purpose').isVisible());
+ assert.ok(!(await page.locator('.glance .chips').innerText()).includes('강사'));
+ await page.screenshot({path:path.join(out,'desktop-1280.png')});
+ await page.setViewportSize({width:400,height:860});await page.reload();await ready();
+ const mobile=await page.locator('.gl-benefit').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,width:r.width}}));
+ assert.ok(mobile[0].y<mobile[1].y&&mobile[1].y<mobile[2].y);assert.ok(mobile.every(r=>r.right<=401));
+ await page.screenshot({path:path.join(out,'mobile-400.png')});
+ for(let i=0;i<4;i++)await page.locator('#fzp').click();
+ const maximum=await page.evaluate(()=>({viewport:innerWidth,scroll:document.documentElement.scrollWidth,rects:[...document.querySelectorAll('.gl-benefit')].map(n=>{const r=n.getBoundingClientRect();return {x:r.x,right:r.right,width:r.width}})}));
+ assert.ok(maximum.scroll<=maximum.viewport,JSON.stringify(maximum));assert.ok(maximum.rects.every(r=>r.x>=0&&r.right<=401&&r.width>=200),JSON.stringify(maximum));
+ await page.screenshot({path:path.join(out,'mobile-400-max.png')});
+ await page.route('**/lessons/'+id+'.json*',async route=>{const d=JSON.parse(fs.readFileSync(path.join(root,'lessons',id+'.json')));delete d.glance.what;delete d.glance.benefits;delete d.glance.for_whom;await route.fulfill({json:d})});
+ await page.reload();await page.locator('.glance').waitFor();assert.equal(await page.locator('.gl-benefit').count(),0);assert.ok(await page.getByText('🎯 기능 · 혜택',{exact:false}).first().isVisible());assert.deepEqual(errors,[]);
+ fs.writeFileSync(path.join(out,'browser-results.json'),JSON.stringify({desktop,mobile,maximum,legacy:'PASS',pageErrors:errors},null,2));
+ console.log('PASS: desktop first viewport, mobile 1-column/max size, no horizontal overflow, legacy fields missing');
+ await browser.close();server.close();
+})().catch(e=>{console.error(e);process.exit(1)});

@@ -37,7 +37,7 @@
 ## 작성 절차
 1. 현재 `releases.json`, `lessons.json`, 최근 교안을 읽고 **기존 기능과 중복인지 조사**합니다.
 2. 공식 1차 출처의 신기능을 선정하고 필요한 경우 `releases.json`에 새 출시 항목 1개를 추가하거나 미연결 기존 항목에 `lesson_id`를 연결합니다.
-3. 이번 달/카테고리의 가장 큰 교안 일련번호 다음 ID(`AI-YYYY-MM-CATxx-NNN`)를 사용해 새 `lessons/<ID>.json` 1개만 작성합니다. 기존 v2.3의 모든 필드·구조를 유지합니다. `verification`은 배열입니다.
+3. 이번 달/카테고리의 가장 큰 교안 일련번호 다음 ID(`AI-YYYY-MM-CATxx-NNN`)를 사용해 새 `lessons/<ID>.json` 1개만 작성합니다. 기존 필드를 보존하고 v2.4의 모든 필드·구조를 유지합니다. `verification`은 배열입니다.
 4. `python scripts/build_lessons_index.py`로 스키마·문체를 검증하고 `lessons.json`을 다시 생성합니다. 실패하면 수정합니다.
 5. 수정 파일은 새 `lessons/<ID>.json`, `releases.json`, `lessons.json`만 남겨야 합니다.
 6. 교안의 무료/유료 및 단계별 실제 UI 제공 범위를 명확히 표시합니다. 완성 후 **커밋하지 않고 종료**합니다.
@@ -68,3 +68,11 @@
 
 - 비교 용어는 모든 제목·본문·실습·프롬프트·강사 멘트에서 `Before` / `After`로 표기함. 한글 음역 대신 영문 사용 (2026-10-25 John 요청)
 
+
+
+## v2.4 첫 화면 기능·혜택 필수
+- glance.what(45자), benefits 정확히 3개({icon 이모지 1개,title 12자,text 30자}), for_whom(30자)를 반드시 작성함
+- what은 도구 이름과 하는 일을 쉬운 우리말로 설명. 영어 기능명은 괄호 안 보조만 사용
+- benefits는 할 일이 아니라 얻는 것. 최소 1개 수고·시간 절감, 1개 결과의 질 또는 새 활용을 담음. 근거 없는 수치·과장·실습 결과물 금지
+- 기존 cards는 실습 흐름으로 유지. benefits 제목 3개 모두 cards와 같으면 반려
+- 기준 10-1장 개조식 문체. 근거는 공식 출처와 본문에 연결하며 `python -X utf8 scripts/build_lessons_index.py` 통과 필수

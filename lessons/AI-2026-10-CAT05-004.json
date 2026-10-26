@@ -67,7 +67,26 @@
       "녹음 전 참여자 동의 받기",
       "이름·연락처 말하는 녹음 금지",
       "무료는 상업적 이용 불가"
-    ]
+    ],
+    "what": "ElevenLabs 녹음을 화자별 대본·자막으로 바꿈",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "자막을 처음부터 입력할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "누가 한 말인지 나눠 볼 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "대본을 고쳐 자막 파일로 쓸 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "ElevenLabs",
   "feature": "Speech to Text (Scribe v2) — 받아쓰기·대본 편집기(Transcript Editor)·자막(Subtitles), 받아쓰기 수정 지시(transcript_edit, API)",

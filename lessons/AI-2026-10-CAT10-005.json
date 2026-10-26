@@ -71,7 +71,26 @@
       "학생 이름·사진은 넣지 않기",
       "큰 수정 전엔 사본 저장하기",
       "어휘·예문·숫자는 직접 확인"
-    ]
+    ],
+    "what": "ChatGPT PowerPoint 안에서 발표 자료를 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "메모를 슬라이드로 옮기는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "청중에 맞춰 발표 내용을 바꿀 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "고칠 슬라이드만 골라 요청할 수 있음"
+      }
+    ],
+    "for_whom": "학습·수업 준비에 AI를 활용하는 분"
   },
   "tool": "ChatGPT",
   "feature": "ChatGPT for PowerPoint (Microsoft PowerPoint용 ChatGPT 추가 기능)",

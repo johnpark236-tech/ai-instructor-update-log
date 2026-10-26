@@ -71,7 +71,26 @@
       "지침에 개인정보·비밀번호 넣지 않기",
       "삭제는 되돌릴 수 없음",
       "결과는 사람이 최종 확인"
-    ]
+    ],
+    "what": "Gemini 업무 앱에서 내 응답 규칙을 기억함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "앱마다 말투를 다시 지시할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "메일·문서의 응답 형식이 일정해짐"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "저장한 개인 지침을 관리할 수 있음"
+      }
+    ],
+    "for_whom": "같은 형식의 AI 요청을 반복하는 분"
   },
   "tool": "Gemini",
   "feature": "Gemini in Workspace 맞춤 지침(Custom instructions, Your instructions for Gemini in Workspace) — ① 대화로 저장(\"From now on, …\") ② Docs·Drive·Gmail·Slides 측면 패널 Menu > Settings > Personalization > Add·Save ③ Ask Gemini in Chat은 대화로만 추가·/settings로 켜기·끄기·삭제 ④ 앱 간 공유(Gmail에서 저장 → Docs·Slides 적용) ⑤ 답 아래 Sources > Personalization settings로 반영 확인 ⑥ 최대 1,000개·Delete all(10개 이상) ⑦ Gemini 앱 지침과 별도(동기화 안 됨)",

@@ -71,7 +71,26 @@
       "개인정보·내부 자료 넣지 않기",
       "높은 단계 ≠ 더 좋은 결과",
       "출처 링크 직접 열어 확인"
-    ]
+    ],
+    "what": "Perplexity 작업의 노력 수준·옆 대화를 조절함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "확인 질문에 작업을 끊는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "필요한 깊이로 결과를 받을 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "진행 중에도 별도 질문을 할 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Perplexity",
   "feature": "노력 모드(Effort mode, Light·Standard·High·Ultra) · 사이드 챗(Side Chat, /ask·/side·/btw) — Perplexity Computer 모델 자동 선택과 작업 중 읽기 전용 질문",

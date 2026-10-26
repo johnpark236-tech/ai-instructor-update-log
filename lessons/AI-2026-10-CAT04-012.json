@@ -71,7 +71,26 @@
       "Stealth 아니면 그림이 공개될 수 있음",
       "남의 작품·캐릭터 흉내 프롬프트 금지",
       "AI 생성 그림 표시 + 사람 검토"
-    ]
+    ],
+    "what": "Midjourney 고른 그림 취향을 새 그림에 반영함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "취향을 매번 길게 설명할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "내 취향의 그림체를 이어 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "취향 적용 여부를 고를 수 있음"
+      }
+    ],
+    "for_whom": "수업·모임의 사진과 그림을 다루는 분"
   },
   "tool": "Midjourney",
   "feature": "V8.2 기본 모델 · 개인화(Personalization) 프로필 — Personalize 페이지 그림 고르기·New Profile·Personalization 버튼/--p·프로필 코드(--p 코드)·--s로 반영 강도 조절",

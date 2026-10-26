@@ -71,7 +71,26 @@
       "@bot 답글도 공개 게시물임",
       "요청 문장에 개인정보 넣지 않음",
       "태그 1회마다 Bot 사용량 차감"
-    ]
+    ],
+    "what": "Grok X의 태그 요청을 Bot 작업으로 넘김",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "게시물을 따로 옮길 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "사진·스레드 내용을 후속 업무에 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "앱에서 결과와 승인을 확인할 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Grok",
   "feature": "Grok Bot X 태그(Tag @bot on X) — X 게시물·답글에 @bot 태그로 내 Grok Bot에게 작업 넘기기: ① X 계정 ↔ Grok 계정 연결(grok.com Settings → Account → 𝕏 Account Connect) ② 내가 만든 Bot 1개 이상 필요(공유받은 Bot 불가) ③ @bot은 X에 접수 확인 답글만, 작업·결과는 Grok Bot 앱 대화 ④ 내 글·답한 글·인용 글(사진 포함) 전달 ⑤ 동영상·GIF 포함 글·@grok 동시 태그는 무반응 ⑥ EU·영국·호주·아이슬란드·리히텐슈타인·노르웨이 미지원 ⑦ 태그 요청은 자동 시작·Bot 사용량 차감",

@@ -71,7 +71,26 @@
       "메일 내용이 AI 처리됨 — 민감 메일 주의",
       "자동·예약 스킬은 묻지 않고 발송 가능",
       "계정 삭제 후 구글·MS 쪽 권한도 해제"
-    ]
+    ],
+    "what": "Genspark 메일 분류·요약·답장 초안을 도움",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "답할 메일을 찾는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "내 말투에 맞춘 답장 초안을 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "내용을 검토한 뒤 보낼 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Genspark",
   "feature": "GenMail(젠메일) — AI 메일·캘린더 앱: Gmail·Outlook·IMAP(NAVER·Daum·Kakao 메일 등) 최대 20개 계정 연결, GenMail Agent 받은편지함 자동 분류·요약, AI Write 내 말투 답장 초안(Simplify·Professional·Friendly), 스킬(Morning Brief·Catch Me Up·Plan My Week 등), Email Brain 프로필 Fix, 예약 발송·발송 취소, 통합 캘린더",

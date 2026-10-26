@@ -66,6 +66,24 @@
     if (G) {
       let g = slide('⚡ 한눈에 보기');
       g.addText(`${G.emoji}  ${G.one_liner}`, { x: 0.55, y: 1.15, w: 12.2, h: 0.75, fontFace: FONT, fontSize: 26, bold: true, color: C.text, margin: 0 });
+      const benefitReady = !!(G.what && Array.isArray(G.benefits) && G.benefits.length === 3 && G.benefits.every(b => b && b.title && b.text));
+      if (benefitReady) {
+        g.addText('이런 기능이에요', {x:0.55,y:1.95,w:12.2,h:0.3,fontFace:FONT,fontSize:15,bold:true,color:C.cyan,margin:0});
+        g.addText(G.what, {x:0.55,y:2.3,w:12.2,h:0.75,fontFace:FONT,fontSize:22,bold:true,color:C.text,margin:0});
+        g.addText('이런 점이 좋아요', {x:0.55,y:3.1,w:12.2,h:0.3,fontFace:FONT,fontSize:15,bold:true,color:C.cyan,margin:0});
+        const bw=(12.2-0.5)/3;
+        G.benefits.forEach((b,i)=>{
+          const x=0.55+i*(bw+0.25);
+          g.addShape(pptx.ShapeType.roundRect,{x,y:3.55,w:bw,h:1.9,fill:{color:C.card},line:{color:C.line},rectRadius:0.12});
+          g.addText(b.icon+' '+b.title,{x:x+0.18,y:3.75,w:bw-0.36,h:0.5,fontFace:FONT,fontSize:20,bold:true,color:C.text,margin:0});
+          g.addText(b.text,{x:x+0.18,y:4.35,w:bw-0.36,h:0.85,fontFace:FONT,fontSize:17,color:C.sub,margin:0});
+        });
+        g.addText('이런 분께  '+G.for_whom,{x:0.55,y:5.7,w:12.2,h:0.5,fontFace:FONT,fontSize:18,bold:true,color:C.green,margin:0});
+        g.addText(`⏱ ${MT.totalMinutes(L)}분   💳 ${acc}   📅 출시 ${L.released}   🎯 ${L.learner_levels.map(x=>MT.LEVEL[x]+x).join(' ')}`,{x:0.55,y:6.45,w:12.2,h:0.4,fontFace:FONT,fontSize:13,color:C.sub,margin:0});
+        const flowSlide=slide('🧭 실습 흐름');
+        table(flowSlide,['단계','설명'],G.cards.map(c=>[c.icon+' '+c.title,c.text]),1.3,[4.1,8.1],18);
+        box(flowSlide,'🎁 오늘 만들 작품\n'+NT(L.outcome),0.55,5.1,12.2,1.5,C.greenBg,C.green,15,true);
+      } else {
       box(g, '🎁 오늘 만들 작품\n' + NT(L.outcome), 0.55, 1.95, 12.2, 1.4, C.greenBg, C.green, 13, true);
       const cn = G.cards.length, cw2 = (12.2 - 0.25 * (cn - 1)) / cn;
       G.cards.forEach((c, i) => {
@@ -76,6 +94,8 @@
         g.addText(c.text, { x: x + 0.15, y: 5.1, w: cw2 - 0.3, h: 1.0, fontFace: FONT, fontSize: 13, color: C.sub, align: 'center', valign: 'top', margin: 0 });
       });
       g.addText(`⏱ ${MT.totalMinutes(L)}분   💳 ${acc}   📅 출시 ${L.released}   🎯 ${MT.levelBadges(L).join(' ')}`, { x: 0.55, y: 6.35, w: 12.2, h: 0.45, fontFace: FONT, fontSize: 13, color: C.sub, margin: 0 });
+
+      }
 
       g = slide('🔄 ' + G.diagram.title);
       const nn = G.diagram.nodes.length, gap = 0.55, nw = (12.2 - gap * (nn - 1)) / nn;
@@ -105,8 +125,9 @@
       sm.addTable([[{ text: '항목', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }, { text: '내용', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }],
         ...kvRows.map((r, i) => r.map((c, j) => ({ text: j === 0 ? `${i + 1}) ${c}` : NT(c), options: { fill: { color: i % 2 ? 'FFFFFF' : C.card }, bold: j === 0 } })))],
         { x: 0.55, y: 1.2, w: 6.3, colW: [1.2, 5.1], fontFace: FONT, fontSize: 11, color: C.text, border: { type: 'solid', pt: 0.75, color: C.line }, valign: 'middle', margin: 0.06 });
-      sm.addTable([[{ text: '기능', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }, { text: '혜택', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }],
-        ...G.cards.map((c, i) => [{ text: `${i + 1}) ${c.icon} ${c.title}`, options: { bold: true, fill: { color: i % 2 ? 'FFFFFF' : C.card } } }, { text: c.text, options: { fill: { color: i % 2 ? 'FFFFFF' : C.card } } }])],
+      const benefits=Array.isArray(G.benefits)&&G.benefits.length===3?G.benefits:G.cards;
+      sm.addTable([[{ text: G.what?'좋아지는 점':'기능', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }, { text: G.what?'설명':'혜택', options: { bold: true, color: 'FFFFFF', fill: { color: C.cyan } } }],
+        ...benefits.map((c, i) => [{ text: `${i + 1}) ${c.icon} ${c.title}`, options: { bold: true, fill: { color: i % 2 ? 'FFFFFF' : C.card } } }, { text: c.text, options: { fill: { color: i % 2 ? 'FFFFFF' : C.card } } }])],
         { x: 7.1, y: 1.2, w: 5.65, colW: [2.25, 3.4], fontFace: FONT, fontSize: 13, color: C.text, border: { type: 'solid', pt: 0.75, color: C.line }, valign: 'middle', margin: 0.08 });
 
       sm = slide('📊 요약본 · 요금·시간 그래프');

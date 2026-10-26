@@ -71,7 +71,26 @@
       "비밀값은 읽기 전용 키만",
       "채널에는 공개해도 될 것만",
       "팀 기억 저장은 꼭 필요할 때만"
-    ]
+    ],
+    "what": "Grok 팀이 함께 쓰는 Bot을 출판함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "팀원마다 설정을 반복할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "같은 자료·지침으로 팀 도움을 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "관리자와 공유 범위를 정할 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Grok",
   "feature": "Grok Bot Team Bots(팀 공용 Bot, 공개 베타) — ① New chat → Create new Team Bot(Bot이 질문하며 설정 안내) 또는 개인 Bot Share → Publish to Team(Copy·Start fresh, 넘길 플러그인·기억·스킬·파일·루틴 선택) ② Bot 정보 창 Setup: Plugins(OAuth는 사람별 로그인, 키·토큰은 공유)·Secrets(이름·설명만 보임, 값 [REDACTED], 최대 25개·8~4,096바이트)·Skills(소유자·매니저만 팀 스킬 저장)·Files(.txt·.md·.csv·.json·.yaml, 파일당 256,000자) ③ 기억: 팀 기억(전원 공유, 저장 시 알림) + 사람별 비공개 메모 ④ Publish to team → 팀원은 New chat → Team Bots → Add → Start a chat·Copy link, 소유자도 팀원 대화 못 봄 ⑤ Unpublish(재출판 시 복구)·설명 140자·Managers(설정 변경 가능, 출판·삭제는 소유자만) ⑥ Bring to your team's Slack → 전용 Slack 앱, DM은 모두 응답·채널은 @멘션 스레드, Settings → General → Team Bots에서 Slack 계정 연결 ⑦ 사용량은 쓰는 팀원 몫 차감 ⑧ 관리자: 대시보드 Grok Bot → Team Bots → Manage Team Bots(All team·None·그룹 배포), 삭제는 복구 불가",

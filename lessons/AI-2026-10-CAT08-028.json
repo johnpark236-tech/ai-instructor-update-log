@@ -71,7 +71,26 @@
       "처음엔 Test Run으로만 시험",
       "발송·삭제 단계는 확인 후 켜기",
       "개인정보 메일 자동 전달 금지"
-    ]
+    ],
+    "what": "Genspark 조건을 설명해 반복 업무를 자동화함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "정해진 업무를 매번 시작할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "여러 앱을 잇는 업무 흐름을 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "자동화 조건과 결과를 확인할 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Genspark",
   "feature": "워크플로(Workflows, 노코드 AI 자동화) — ① 메인 메뉴 Workflow → New Custom Workflow 또는 템플릿 라이브러리 ② 왼쪽 채팅창에 자동화를 말로 설명 → AI가 트리거·실행 단계 구성, 대화로 계속 수정 ③ 트리거 1개: 예약(Schedule: 매일·매주·매월·30분마다 등 맞춤 간격, 종료일·시간대) 또는 메일(Email: Gmail·Outlook 새 메일, 계정 승인 필요) ④ 연결: Genspark AI 도구(웹·이미지·YouTube 검색)·Gmail/Outlook(검색·읽기·답장·전달)·Google Sheets/Drive/Docs·Slack/Microsoft Teams/LINE·Outlook Calendar·Salesforce·Stripe·GitHub·X 등 + 내가 만든 Custom Agent ⑤ Test Run(가짜 데이터, 실제 발송·변경 없음) → Turn On ⑥ View All: 켜기·끄기(Active·Stopped)·⋯ Configure·Test Run·Delete(복구 불가)·Share, My Workflows 실행 기록(상태·시각·소요 시간)·Pending Confirmation 검토 (AI Workspace 3.0 2026-03-12 · Advanced Workflows 2026-04-08)",

@@ -71,7 +71,26 @@
       "보내기·게시는 승인 필요로 설정",
       "테스트 실행 후 켜기",
       "연결 앱 권한은 최소로"
-    ]
+    ],
+    "what": "Manus 일정·메일 조건으로 업무를 자동 실행함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "정기 작업을 매번 시작할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "메일을 계기로 후속 작업을 받을 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "실행 결과와 승인을 확인할 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Manus",
   "feature": "자동화(Automations) — 일정(Schedule)·트리거 작업(Triggered task: Gmail·Outlook·Google Calendar·Notion·GitHub·Shopify·RSS·Webhook 등)·고급 자동화(Advanced automation, 베타), 테스트 실행·승인 설정·Updates 실행 기록",

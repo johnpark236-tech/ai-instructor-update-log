@@ -71,7 +71,26 @@
       "학생 이름·성적은 넣지 말 것",
       "게시 전 공개 범위 꼭 확인",
       "API 키는 Secrets에만 저장"
-    ]
+    ],
+    "what": "Grok 설명을 받아 작동하는 웹앱을 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "처음 코드를 쓰는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "내 수업용 퀴즈·도구를 만들 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "미리 보며 말로 고칠 수 있음"
+      }
+    ],
+    "for_whom": "AI로 업무 도구·코드를 만들려는 분"
   },
   "tool": "Grok",
   "feature": "Grok Build(그록 빌드, 빌드 모드 Build Mode) — 웹·iOS·Android 모든 요금제, 말로 웹사이트·앱·게임·대시보드 만들기, 대화창 미리보기·수정, grok.me 게시·공개 범위·내 도메인·Remix·GitHub 내보내기·Secrets·커넥터·앱 안 Grok API",

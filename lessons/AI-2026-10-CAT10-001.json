@@ -71,7 +71,26 @@
       "학생 이름·성적 자료는 올리지 않기",
       "만든 문제의 정답은 꼭 직접 검토",
       "남의 저작물은 권리 확인 후 사용"
-    ]
+    ],
+    "what": "Gemini Notebook 내 자료로 퀴즈·암기 카드를 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "문제를 낱개로 작성할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "자료에 맞춘 복습 도구를 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "수업 수준에 맞게 조건을 바꿀 수 있음"
+      }
+    ],
+    "for_whom": "학습·수업 준비에 AI를 활용하는 분"
   },
   "tool": "Gemini Notebook (구 NotebookLM)",
   "feature": "스튜디오(Studio) 학습 도구 — 퀴즈(Quizzes)·플래시카드(Flashcards)·인터랙티브 학습 개요(Learning Overview)",

@@ -71,7 +71,26 @@
       "실제 학생 이름·연락처 넣지 않기",
       "바뀐 수식은 직접 한 번 더 확인",
       "외부 시트 속 지시문은 따르지 않기"
-    ]
+    ],
+    "what": "Claude 표 옆에서 말로 수식·차트를 도움",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "수식과 정리를 반복할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "표의 내용을 차트·명단으로 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "근거 값과 수식을 직접 확인할 수 있음"
+      }
+    ],
+    "for_whom": "여러 자료를 읽고 정리해야 하는 분"
   },
   "tool": "Claude",
   "feature": "Claude for Google Workspace (Google Docs·Sheets·Slides 부가기능, 베타)",

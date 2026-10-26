@@ -71,7 +71,26 @@
       "모르는 MCP 서버는 설치 전 출처 확인",
       "API 키는 ${VAR} 환경 변수로 분리",
       "폴더 서버는 실습 폴더만 열어 줄 것"
-    ]
+    ],
+    "what": "Grok AI에 외부 읽기·작업 도구를 연결함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "자료를 직접 옮기는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "AI가 연결된 자료를 읽고 정리함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "도구 실행 권한을 확인할 수 있음"
+      }
+    ],
+    "for_whom": "AI로 업무 도구·코드를 만들려는 분"
   },
   "tool": "Grok",
   "feature": "Grok Build(터미널 코딩 에이전트 CLI) MCP 서버(MCP Servers) — ① grok mcp add <이름> -- <명령>(로컬 명령형)·--transport http <이름> <URL>(원격, OAuth 자동)·--header \"Authorization: Bearer ${API_TOKEN}\"(반복 가능) ② 도구 이름 <서버>__<도구> ③ grok mcp list·remove <이름>·doctor [이름](--json) ④ ~/.grok/config.toml [mcp_servers.<이름>] command·args·env·url·headers·startup_timeout_sec(기본 30)·tool_timeout_sec(기본 6000), ${VAR}·${VAR:-기본값} 확장 ⑤ OAuth 첫 사용 시 브라우저 로그인, 토큰 ~/.grok/mcp_credentials.json ⑥ --scope project → .grok/config.toml, 현재 폴더 → git 루트까지 탐색, 같은 이름은 프로젝트 우선 ⑦ /mcps 창 Space·r·i·a·x ⑧ ~/.claude.json·.cursor/mcp.json·.mcp.json 호환([compat.claude] mcps = false 로 끄기), grok inspect 출처 확인 ⑨ 오류 기록 ~/.grok/logs/mcp/<서버>.stderr.log · v1.0.45(2026-09-29) 토큰 파일 요청마다 재로드·v1.0.46(2026-09-30) MCP 점검·출처 표시 개선 [확인 필요]",

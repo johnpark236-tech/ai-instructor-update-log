@@ -71,7 +71,26 @@
       "남의 목소리는 동의 없이 복제 금지",
       "무료는 비상업용, 공개 시 출처 표기",
       "AI 음성임을 수강생에게 알리기"
-    ]
+    ],
+    "what": "ElevenLabs 감정 태그를 받아 음성을 만듦",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "장면마다 직접 녹음하는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "감정을 담은 대화 음성을 만들 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "들어 보고 표현을 바꿀 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "ElevenLabs",
   "feature": "Eleven v4 (Text to Speech · Audio Tags)",

@@ -71,7 +71,26 @@
       "@everyone 은 꼭 필요할 때만",
       "단계마다 담당 Bot 1개만",
       "외부 발송 승인은 1:1 대화에서"
-    ]
+    ],
+    "what": "Grok 여러 Bot을 모아 역할을 나눔",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "Bot마다 요청을 옮기는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "조사·작성·검토를 한 흐름으로 받음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "공유할 자료와 역할을 고를 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Grok",
   "feature": "Grok Bot 그룹 대화(Group chats)·Bot 간 핸드오프(Bot-to-Bot handoffs) — ① 사이드바 New → New chat에서 Bot 2~6개 선택 → 그룹 이름 수정 → 공동 목표·다음 담당 적기(모바일 + → New Group Chat), 멤버 나중에 수정 ② 그냥 쓰면 참여 Bot들이 응답할 Bot 결정, @ 로 한 Bot 지정, Reply로 그 Bot에게 답장, @everyone 은 전체 공지용 ③ 내 메시지에 첨부 가능·Bot 답에 파일·질문·폼 가능 ④ 승인 요청·비밀값·로그인 요청·메일/Slack 초안은 그룹에 표시 안 됨, Bot→그룹 핸드오프 메시지는 텍스트만 ⑤ Bot이 다른 Bot에게 비동기 메시지로 일 전달, 팀 관리자는 대시보드 Grok Bot 페이지에서 'Messaging Between Bots' 끄기 가능(기본 켜짐)",

@@ -71,7 +71,26 @@
       "AI 목소리임을 학습자에게 알림",
       "개인정보는 말하지 않기",
       "녹취 텍스트는 원문과 대조"
-    ]
+    ],
+    "what": "ChatGPT 한국어 음성으로 듣기 연습을 도움",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "듣기 대본을 직접 녹음할 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "목소리를 비교하며 듣기 자료로 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "소리를 듣고 알맞은 음성을 고를 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "ChatGPT",
   "feature": "ChatGPT Voice GPT-Live-1.1 새 음성 — 한국어 Live 음성(Haetsal·Hanul)·다국어 억양 개선, GPT-Live-1.1 Quip",

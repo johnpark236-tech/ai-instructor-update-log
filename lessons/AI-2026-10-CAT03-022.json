@@ -71,7 +71,26 @@
       "실습 파일엔 개인정보 넣지 않기",
       "AI 답변 사실·숫자 직접 확인",
       "공유 범위·권한 꼭 확인"
-    ]
+    ],
+    "what": "Google 문서 마크다운 문서를 서식대로 열어 줌",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "AI 문서의 서식을 다시 잡는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "제목·표를 유지한 채 문서를 편집함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "댓글로 동료와 검토할 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Google Docs",
   "feature": "Markdown(.md) 파일 기본 지원(Preview, edit and collaborate on Markdown files natively across Drive and Docs) — Drive 미리보기 Markdown·Preview 전환(제목·표·클릭 가능한 링크), 더블클릭 시 Docs Markdown Mode(.md 태그)로 변환 없이 편집, 공유·실시간 공동 편집·댓글 유지, 버전 기록 되돌리기, 스마트 칩·HTML 서식·글자색·강조·정렬은 제외, 관리자·사용자 설정 없음",

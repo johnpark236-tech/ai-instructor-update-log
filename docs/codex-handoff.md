@@ -70,7 +70,7 @@ Claude가 2026-10-09 ~ 10-24 매시간 작성 → **2026-10-24 Claude 예약 작
 
 ### 3-4. 데이터 형식 (기준 6장 표 그대로)
 - ID: `AI-YYYY-MM-CATxx-NNN` (해당 월·카테고리 다음 번호). `version` `v1.0`, `created_at` "YYYY-MM-DD HH:MM KST"
-- `glance` 필수·글자 수 제한: one_liner 30자, cards 3~4개(title 12·text 25자), diagram nodes 3~5개(label 12자), before_after(label 14·text 50자), cautions 3개(25자)
+- `glance` 필수·글자 수 제한: one_liner 30자, what 45자, benefits 정확히 3개(icon 이모지 1개·title 12자·text 30자), for_whom 30자, cards 3~4개(title 12·text 25자), diagram nodes 3~5개(label 12자), before_after(label 14·text 50자), cautions 3개(25자)
 - `pricing.access`: `free` / `freemium` / `paid`. **`plans[].price`에 실제 금액**("월 $20", "0원", "₩29,000") — 요약본 요금 그래프가 첫 금액을 읽음. 모르면 숫자 지어내지 말고 공식 안내 문구 그대로
 - `sources`, `pricing.sources`는 `{title,url}` 객체 배열. `verification`은 문자열 배열
 - `tool` 필드 표기 = AI 필터 버튼과 연결: "ChatGPT", "Claude", "Gemini", "Grok", "Genspark" 등 공식 표기. (필터는 `company`로 묶음: Google→Gemini, OpenAI→ChatGPT, Anthropic→Claude, Microsoft→Copilot, xAI→Grok)

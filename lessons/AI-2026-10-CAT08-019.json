@@ -71,7 +71,26 @@
       "편집 권한은 꼭 필요한 곳만",
       "트리거 켜기 전 Run 테스트",
       "크레딧 사용량 한도 설정"
-    ]
+    ],
+    "what": "Notion 공유 AI가 일정·사건에 맞춰 일함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "보고 작업을 매번 시작할 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "회의록을 후속 업무에 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "실행 조건과 접근 범위를 정할 수 있음"
+      }
+    ],
+    "for_whom": "되풀이되는 업무를 줄이고 싶은 분"
   },
   "tool": "Notion",
   "feature": "맞춤 에이전트(Custom Agents) — 백그라운드에서 트리거·일정대로 일하는 공유 AI 에이전트: ① 사이드바 Agents > + (AI 채팅으로 만들기·템플릿·Create blank) ② 트리거: 예약(일·주·월·년, 시간대)·Notion 이벤트(댓글 추가·DB에 페이지 추가·속성 변경·페이지 제거·AI 회의록 완료)·Slack(채널 메시지·이모지·멘션) ③ Settings 지시문(Instructions)·도구와 접근(Tools and access)·웹 접근·모델(Auto 권장) ④ Chat 탭 테스트·Run·Activity 실행 기록·Insights CSV·버전 기록 복원 ⑤ Share 권한(Full Access·Can Edit·Can View and Interact) ⑥ 2026-09-15 Notion 3.7 하위 에이전트(sub-agents)·회의 후 자동 실행·문서 안 삽입(Embed), Business·Enterprise, 2026-05-04부터 Notion 크레딧($10/1,000 크레딧) 사용",

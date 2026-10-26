@@ -71,7 +71,26 @@
       "학생 실명·사진은 자료에 넣지 않기",
       "그림·발음·사실 오류 꼭 확인하기",
       "남의 저작물은 허락 범위에서만"
-    ]
+    ],
+    "what": "Gemini Notebook 내 글을 해설 영상으로 바꿈",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "대본·화면을 따로 만드는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "수업 글을 영상 복습 자료로 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "형식과 그림체를 골라 만들 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "Gemini Notebook (구 NotebookLM)",
   "feature": "동영상 개요(Video Overview) — 설명형(Explainer)·짧은 영상(Short)·시네마틱(Cinematic) 형식, 그림체(Visual Style), 초점 프롬프트(Steering prompt)",

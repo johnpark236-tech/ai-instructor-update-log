@@ -71,7 +71,26 @@
       "개인정보·학생 정보는 붙여넣지 않기",
       "회사 PC는 기관 AI 지침 먼저 확인",
       "답은 원문과 대조해 사실 확인"
-    ]
+    ],
+    "what": "Gemini 단축키로 PC 어디서나 AI를 부름",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "브라우저로 창을 바꾸는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "하던 문서 작업에 AI 답을 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "필요할 때만 불러 쓸 수 있음"
+      }
+    ],
+    "for_whom": "일상·업무에서 AI 도움을 자주 받는 분"
   },
   "tool": "Gemini",
   "feature": "Gemini 앱 Windows용 데스크톱 앱 (Gemini for desktop)",

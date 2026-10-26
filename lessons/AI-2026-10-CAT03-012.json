@@ -71,7 +71,26 @@
       "변환 후 표·서식 원본과 대조",
       "개인정보 문서는 AI 요청 금지",
       "알파 버전 — 중요 파일은 사본"
-    ]
+    ],
+    "what": "Genspark 문서 변환·편집에 AI를 함께 씀",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "여러 문서 작업을 오가는 수고 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "변환한 문서를 편집해 활용할 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "필요한 형식의 파일로 저장할 수 있음"
+      }
+    ],
+    "for_whom": "문서·메일·발표를 자주 준비하는 분"
   },
   "tool": "Genspark",
   "feature": "GenOffice(젠오피스) — 무료 오픈소스 AI 오피스 데스크톱 앱(Docs·Sheets·Slides·PDF·HTML·Markdown), PDF→Word·Excel·PowerPoint 로컬 변환, 블록 단위 AI 수정·스냅샷·차이 보기, Genspark 크레딧 또는 BYOK",

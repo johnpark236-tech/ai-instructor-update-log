@@ -71,7 +71,26 @@
       "실존 인물 목소리 흉내 금지",
       "무료는 비상업·출처 표기 필요",
       "배경 소음은 알아들을 만큼만"
-    ]
+    ],
+    "what": "ElevenLabs AI 목소리에 환경 소리·효과를 더함",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "목소리 효과를 따로 편집할 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "전화·카페 상황의 듣기 자료로 활용함"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "효과를 듣고 강도를 고를 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "ElevenLabs",
   "feature": "Text to Speech 오디오 효과(Audio effects) — 필터(Filter)·배경 소음(Noise)·공간(Space)·거리(Distance), API audio_effects(필터·거리·환경 울림·배경 소음·Pan), Text to Dialogue 지원",

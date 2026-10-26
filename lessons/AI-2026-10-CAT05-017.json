@@ -71,7 +71,26 @@
       "얼굴 나온 영상은 본인 동의 받기",
       "타인 영상·영화 장면 사용 금지",
       "머리카락·빠른 동작 가장자리 확인"
-    ]
+    ],
+    "what": "Adobe Firefly 영상의 배경을 AI로 지움",
+    "benefits": [
+      {
+        "icon": "⏱",
+        "title": "반복 수고 절감",
+        "text": "배경을 손으로 따는 부담 줄어듦"
+      },
+      {
+        "icon": "✨",
+        "title": "이렇게 달라짐",
+        "text": "찍은 영상에 다른 배경을 쓸 수 있음"
+      },
+      {
+        "icon": "✋",
+        "title": "내가 선택·확인",
+        "text": "경계를 보며 결과를 확인할 수 있음"
+      }
+    ],
+    "for_whom": "수업·홍보용 음성·영상을 만드는 분"
   },
   "tool": "Adobe Firefly",
   "feature": "Firefly 동영상 편집기(Firefly video editor, 베타) 배경 제거(Remove background from video clips) — 타임라인 클립 배경 자동 제거, 속성 패널 토글·오른쪽 클릭 메뉴, 켜고 끄며 비교, MP4 내려받기",
