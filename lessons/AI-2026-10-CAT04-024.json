@@ -1,0 +1,549 @@
+{
+  "id": "AI-2026-10-CAT04-024",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-27T08:27:32+09:00",
+  "checked": "2026-10-26",
+  "review_by": "2027-01-26",
+  "title": "Firefly 정밀도 흐름으로 내 사진의 따뜻한 분위기 고르기",
+  "summary": "① 본인 사진의 분위기 변형 생성 ② 슬라이더로 후보 비교 ③ 선택 이유와 AI 편집 표시 기록",
+  "tool": "Adobe Firefly",
+  "feature": "정밀도 흐름(Precision Flow, beta) — 한 프롬프트의 이미지 베리에이션을 슬라이더로 탐색·선택하는 편집",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-04-15",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-EDU",
+    "JOB-MKT",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 17,
+    "practice": 27,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "컴퓨터 브라우저 + 인터넷 + 파일 업로드 기초",
+    "본인 Adobe ID + Firefly Standard 이상 유료 플랜 + 정밀도 흐름 접근 권한 사전 점검",
+    "본인 촬영 무지 화분 사진 한 장. 얼굴·주소·상표·문서 제외",
+    "종이 비교 기록지 + 펜. 로그인·사진 준비는 수업 전 완료"
+  ],
+  "outcome": "따뜻한 분위기로 AI 편집한 화분 사진 1개 + Before / After 선택 기록 1장",
+  "objectives": [
+    "정밀도 흐름에서 사진 분위기 변경 요청 가능",
+    "후보를 비교하고 선택 이유 설명 가능",
+    "원본 차이와 AI 편집 사실 기록 가능"
+  ],
+  "glance": {
+    "emoji": "🌤️",
+    "one_liner": "슬라이더로 사진 분위기 고르기",
+    "cards": [
+      {
+        "icon": "📷",
+        "title": "내 사진",
+        "text": "본인 촬영 화분 사진 한 장"
+      },
+      {
+        "icon": "🎚️",
+        "title": "후보 비교",
+        "text": "미묘한 변화와 큰 변화 대조"
+      },
+      {
+        "icon": "✍️",
+        "title": "선택 기록",
+        "text": "고른 이유 + AI 편집 표시"
+      }
+    ],
+    "diagram": {
+      "title": "사진에서 분위기 비교 작품까지",
+      "nodes": [
+        {
+          "icon": "📷",
+          "label": "사진 준비"
+        },
+        {
+          "icon": "✍️",
+          "label": "분위기 요청"
+        },
+        {
+          "icon": "🎚️",
+          "label": "후보 선택"
+        },
+        {
+          "icon": "👀",
+          "label": "차이 기록"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "원본 화분 사진"
+      },
+      "after": {
+        "label": "After",
+        "text": "따뜻한 분위기 후보 + 선택 이유"
+      }
+    },
+    "cautions": [
+      "본인 사진만 업로드",
+      "원래 색상·형태 변형 확인",
+      "생성 전 크레딧 확인"
+    ]
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "핵심 실습은 Firefly Standard 유료 경로. 무료 계정의 해당 기능 접근·횟수 보장 없음",
+    "plans": [
+      {
+        "name": "Firefly Standard — 개인 월별",
+        "price": "₩13,200/월(부가세 포함)",
+        "features": [
+          "월 2,000 생성 크레딧",
+          "파트너 생성형 AI 모델 이용",
+          "본 수업의 유료 기준 플랜"
+        ]
+      },
+      {
+        "name": "Firefly Pro — 개인 월별",
+        "price": "₩26,400/월(부가세 포함)",
+        "features": [
+          "월 4,000 생성 크레딧",
+          "기존 보유자용 대안. 중복 가입 불필요"
+        ]
+      }
+    ],
+    "note": "2026-10-26 국내 월별 요금 확인. 국내 파트너 표에 정밀도 흐름용 FLUX.2 klein 4B 및 한시 생성당 5크레딧 표기. 실제 기능 차감은 생성 버튼 표시기 확인 후 결정. 표준 이미지 무제한 문구를 파트너 모델에 적용 금지. 별도 BFL 계약·API 키 불필요. 수업 중 즉석 결제 대신 사전 권한 확보",
+    "checked": "2026-10-26",
+    "sources": [
+      {
+        "title": "Adobe 대한민국 — Firefly 플랜 비교",
+        "url": "https://www.adobe.com/kr/products/firefly/plans.html",
+        "checked": "2026-10-26"
+      },
+      {
+        "title": "Adobe 대한민국 — 파트너 모델과 크레딧",
+        "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html",
+        "checked": "2026-10-26"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-04-15",
+      "text": "미국 공식 발표에서 Precision Flow 이미지 편집 신규 도입 공개"
+    },
+    {
+      "date": "2026-04-16",
+      "text": "서울 공식 발표에서 정밀도 흐름과 AI 마크업 도입 안내"
+    },
+    {
+      "date": "2026-06-23",
+      "text": "국내 기능별 도움말 갱신일. 현재 beta 안내 유지"
+    },
+    {
+      "date": "2026-10-26",
+      "text": "국내 기능 경로 + 파트너 모델 권한 + 월별 요금 재확인"
+    }
+  ],
+  "theory": {
+    "definition": "정밀도 흐름(Precision Flow)은 한 요청의 여러 이미지 변형을 비교하는 AI 편집 기능. 국내 화면 도구명은 디테일 조절(beta). [실험 기능]",
+    "analogy": "사진에 여러 조명 필터를 대어 보고 마음에 드는 분위기를 고르는 진열대",
+    "comparison": {
+      "headers": [
+        "항목",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "자료",
+          "본인 촬영 원본",
+          "AI 편집 후보"
+        ],
+        [
+          "판단",
+          "기존 분위기 관찰",
+          "원하는 분위기와 원형 보존 대조"
+        ],
+        [
+          "표시",
+          "촬영 사진",
+          "AI 편집 사실 기록"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "요청과 선택",
+        "body": "만들고 싶은 분위기는 말로 요청. 최종 사용 여부는 본인이 판단"
+      },
+      {
+        "title": "변화와 왜곡",
+        "body": "따뜻한 느낌과 실제 화분 색상 변형을 구분. 판매 사진에 사용 시 실제 색상과 다른 표현 주의"
+      },
+      {
+        "title": "실험 기능과 비용",
+        "body": "베타의 화면·결과 변동 가능. 실행 전 권한·차감량 확인"
+      }
+    ],
+    "can": [
+      "한 사진의 분위기 후보 비교",
+      "원본과 편집 결과 차이 관찰",
+      "선택 이유를 한 문장으로 기록"
+    ],
+    "cannot": [
+      "실제 촬영 조명이나 날씨의 증명",
+      "화분 색상과 모양의 완벽한 보존 보장",
+      "무료 계정의 핵심 실습 보장"
+    ],
+    "safety": [
+      "본인 촬영 또는 AI 편집 허락을 받은 사진만 사용",
+      "얼굴·주소·명찰 등 개인정보 업로드 금지",
+      "AI 편집 표시 + 원본 별도 보관",
+      "판매 물품의 실제 색상·상태를 오인시키는 사용 금지",
+      "파트너 모델 이용 안내 검토. Adobe 자체 모델의 권리 설명을 일괄 적용 금지"
+    ]
+  },
+  "practice": {
+    "preview": "설명용 예상 작품: “따뜻한 화분” + “AI 편집 이미지” + “빛은 따뜻해졌으나 잎 모양 변화 확인” 기록. 실제 생성 결과 아님",
+    "follow": [
+      {
+        "title": "사진과 편집 도구 준비",
+        "minutes": 4,
+        "do": "Firefly 로그인 → 이미지 → 이미지 편집 → 본인 사진 업로드 → 디테일 조절(beta) → 전체 이미지 선택",
+        "prompt": "",
+        "expect": "원본 사진과 편집 도구",
+        "note": "접근 불가 시 Plan B 적용. 전체 이미지 기준으로 실습 범위 통일",
+        "input": {
+          "label": "Adobe Firefly 웹",
+          "url": "https://firefly.adobe.com/",
+          "location": "이미지 → 이미지 편집 → 디테일 조절(beta)",
+          "kind": "web",
+          "note": "본인 Adobe ID + Firefly Standard 이상 유료 권한 + 생성 크레딧 필요. 파트너 모델 첫 이용 안내 검토"
+        }
+      },
+      {
+        "title": "따뜻한 분위기 요청",
+        "minutes": 6,
+        "do": "아래 문장 입력 → 편집 강도 선택 → 생성 버튼 옆 크레딧 표시기 확인 → 생성 1회",
+        "prompt": "사진 전체를 부드럽고 따뜻한 오후 햇살이 드는 분위기로 바꿔 주세요. 화분과 잎의 모양은 가능한 한 유지해 주세요. 사람이나 글자는 추가하지 마세요.",
+        "expect": "분위기 변형 후보",
+        "note": "강사는 동일한 초기 강도로 시범. 연속 클릭 금지",
+        "input": {
+          "label": "Adobe Firefly 웹",
+          "url": "https://firefly.adobe.com/",
+          "location": "이미지 편집 → 디테일 조절(beta) → 프롬프트 필드",
+          "kind": "web",
+          "note": "본인 Adobe ID + Firefly Standard 이상 유료 권한 + 생성 크레딧 필요. 파트너 모델 첫 이용 안내 검토"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 취향의 후보 적용",
+        "minutes": 7,
+        "do": "필름스트립 미리보기와 슬라이더로 후보 비교 → 가장 마음에 드는 후보 적용",
+        "prompt": "",
+        "expect": "선택한 분위기의 사진",
+        "note": "추가 생성 없이 후보 탐색. 양 끝 후보를 먼저 비교",
+        "input": {
+          "label": "Adobe Firefly 웹",
+          "url": "https://firefly.adobe.com/",
+          "location": "디테일 조절 결과 → 필름스트립 / 슬라이더 → 적용",
+          "kind": "web",
+          "note": "본인 Adobe ID + Firefly Standard 이상 유료 권한 + 생성 크레딧 필요. 파트너 모델 첫 이용 안내 검토"
+        }
+      },
+      {
+        "title": "Before / After 작품 기록",
+        "minutes": 10,
+        "do": "원본과 선택 결과를 나란히 관찰 → 기록지에 작품명 + AI 편집 표시 + 달라진 점 + 사용 여부 작성 → 짝에게 화면 제시",
+        "prompt": "",
+        "expect": "편집 사진 1개 + 비교 기록 1장",
+        "note": "총 실습 27분. 다운로드 없이 결과 화면과 종이 기록으로 완료. 왜곡이 크면 미사용 판단도 인정",
+        "input": {
+          "label": "종이 비교 기록지",
+          "url": null,
+          "location": "작품명 / Before / After / AI 편집 / 사용 여부 칸",
+          "kind": "manual",
+          "note": "종이에 직접 작성. 로그인·요금 불필요"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "기본 프롬프트로 생성 후 원본과 다른 점 한 곳 표시"
+      },
+      {
+        "level": "중급",
+        "mission": "두 후보의 분위기와 형태 보존을 비교해 선택 근거 기록"
+      },
+      {
+        "level": "고급",
+        "mission": "추가 생성 없이 분위기·형태·사용 목적의 세 기준으로 후보 평가"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "선정 화면 + 선택 이유 + AI 편집 표시를 짝에게 설명",
+    "quiz": [
+      {
+        "q": "따뜻한 분위기로 바꾼 사진은 무엇인가요?",
+        "options": [
+          "실제 오후에 다시 촬영한 증거",
+          "AI가 편집한 이미지",
+          "원본과 완전히 같은 사진",
+          "색상이 항상 정확한 판매 사진"
+        ],
+        "answer": 1,
+        "explain": "분위기를 생성한 편집 결과임. 실제 촬영 사실과 구분하고 AI 편집 표시 필요"
+      },
+      {
+        "q": "후보를 고를 때 함께 확인할 것은 무엇인가요?",
+        "options": [
+          "잎과 화분의 모양이 달라졌는지",
+          "이웃의 비밀번호",
+          "다른 사람의 연락처",
+          "광고 조회수"
+        ],
+        "answer": 0,
+        "explain": "마음에 드는 빛과 원형 보존은 별개임. 원본을 옆에 두고 직접 확인할 것"
+      },
+      {
+        "q": "생성 버튼을 누르기 전 무엇을 확인하나요?",
+        "options": [
+          "계정을 친구에게 빌려줄지",
+          "모든 사진을 공개할지",
+          "차감 크레딧과 잔액",
+          "유료 API 키"
+        ],
+        "answer": 2,
+        "explain": "파트너 모델은 크레딧 사용 대상. 실행 화면의 비용을 먼저 확인하면 불필요한 반복 생성 예방 가능"
+      }
+    ],
+    "next": [
+      "본인 사진의 AI 편집 표시 연습",
+      "분위기와 사실성을 구분하는 이미지 평가"
+    ],
+    "rubric": [
+      {
+        "criterion": "후보 선택과 검토",
+        "high": "직접 생성 + 후보 비교 + 왜곡 기록 + AI 표시 완료",
+        "mid": "도움을 받아 선택과 기록 완료",
+        "low": "예시 관찰 완료. 직접 생성 보충 필요"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~7분",
+        "content": "작품 예시 + Before / After",
+        "note": "취향과 사실성 구분"
+      },
+      {
+        "time": "7~17분",
+        "content": "베타 + 권리 + 유료 조건",
+        "note": "표준 무제한과 파트너 차감 구분"
+      },
+      {
+        "time": "17~27분",
+        "content": "사진 준비 + 첫 생성",
+        "note": "4분 + 6분"
+      },
+      {
+        "time": "27~44분",
+        "content": "후보 적용 + 비교 기록",
+        "note": "7분 + 10분"
+      },
+      {
+        "time": "44~50분",
+        "content": "작품 공유 + 핵심 문제 3개",
+        "note": "AI 표시 확인"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "오늘은 내 화분 사진에 어울리는 따뜻한 분위기를 골라 봅니다. Before와 After를 보고 잎 모양이 달라지지 않았는지도 함께 살펴보세요."
+      },
+      {
+        "label": "입력",
+        "text": "입력하는 곳은 Firefly 웹의 디테일 조절 프롬프트 칸입니다. 생성하기 전에 차감 크레딧을 확인하세요."
+      },
+      {
+        "label": "검토",
+        "text": "멋진 사진이어도 실제 화분의 모습과 다를 수 있습니다. 마음에 드는 이유와 달라진 점을 하나씩 적고 AI 편집이라고 표시해 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "권한·크레딧 부족",
+        "response": "강사 사전 예시와 원본 인쇄물로 비교 기록. 직접 버튼 실습 미완료 표시 후 적격 본인 계정으로 보충. 계정 공유·즉석 결제 금지"
+      },
+      {
+        "situation": "네트워크·생성 지연",
+        "response": "연속 생성 중단 → 인쇄 후보 비교 → 복구 시 잔액 확인 후 한 번만 재시도"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "디테일 조절 없음",
+        "fix": "편집 탭·본인 플랜 확인. 해당 기능이 없으면 임의 도구 대체 없이 Plan B"
+      },
+      {
+        "issue": "사진 파일 누락",
+        "fix": "수업 전 준비한 화분 폴더에서 파일 이름 확인"
+      },
+      {
+        "issue": "영역 일부만 바뀜",
+        "fix": "다음 실행 전 전체 이미지 선택 여부 확인. 추가 비용 승인 없이 재생성 금지"
+      },
+      {
+        "issue": "잎 모양 왜곡",
+        "fix": "원본 대조 후 다른 후보 검토. 전부 부적합하면 미사용 기록"
+      },
+      {
+        "issue": "결제 안내 표시",
+        "fix": "실행 중단 후 본인 권한·잔액 확인. 강사 예시로 전환"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국에서 해당 기능 사용 가능한가?",
+        "a": "국내 공식 기능별 도움말에서 디테일 조절(beta) 경로 안내. 국내 파트너 표에서 해당 기능용 모델과 유료 권한 조건 확인"
+      },
+      {
+        "q": "무료 계정으로 가능한가?",
+        "a": "이번 핵심 실습은 Firefly Standard 이상 유료 기준. 무료 제공 횟수 미확정으로 직접 생성 보장 없음"
+      },
+      {
+        "q": "다른 회사 API에 가입해야 하는가?",
+        "a": "Firefly 웹 안에서 진행. 별도 BFL 계약·API 키 불필요"
+      },
+      {
+        "q": "슬라이더로 고르면 원본 모양이 보장되는가?",
+        "a": "보장 없음. 분위기와 형태를 따로 대조해 선택"
+      },
+      {
+        "q": "예시만 봐도 생성 완료인가?",
+        "a": "관찰 활동과 직접 버튼 실습을 구분. 예시 관찰만 한 경우 생성 보충 필요"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "브라우저 확대 + 큰 글씨 메뉴 카드 + 한 단계씩 함께 확인. 기본 프롬프트 유지"
+      },
+      {
+        "level": "중급",
+        "guide": "후보 두 개의 선택 근거를 서로 다른 기준으로 작성"
+      },
+      {
+        "level": "고급",
+        "guide": "재생성 없이 사용 목적별 적합성 평가표 작성"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "따뜻함·차가움 그림 카드 + 짧은 문장 틀 제공"
+      }
+    ],
+    "pro_points": [
+      "선택과 생성의 차이 설명",
+      "실제 색상 보존이 필요한 사진의 사용 제한 토론",
+      "beta 상태를 정식 출시로 소개 금지"
+    ],
+    "day_before": [
+      "국내 본인 계정에서 Standard 권한 + 디테일 조절(beta) + 전체 이미지 선택 확인",
+      "화분 사진으로 실제 생성·후보 적용 예행연습 + 화면 캡처 준비",
+      "현재 생성 표시기·크레딧 잔액·플랜 가격 재확인",
+      "본인 촬영 원본 + 강사 편집 후보 + 종이 기록지 인쇄",
+      "27분 실습 예행연습. 기능 미노출 학습자 보충 일정 준비"
+    ]
+  },
+  "verification": [
+    "2026-10-26 lessons.json 전체 186건의 제목·도구·기능 및 releases.json 전체 262건 비교. Precision Flow·정밀도 흐름·디테일 조절 일치 없음. 기존 FLUX.2 [pro] 참조 생성과 후보 슬라이더 편집 조작 구분",
+    "최근 14일 탐색: Notion 3.8 MCP·Canva Craft·Gemini Argon·Customize는 기존 교안과 중복. Workspace 10월 업데이트와 Microsoft 공식 발표·릴리스 검색 병행",
+    "Runway 10월 MCP 신규 모델·App Studio는 이번 탐색에서 개별 국내 제공·실습 조건 미확정으로 보류. Meta Muse Wonder 역시 국내 개별 이용 조건 미확정",
+    "미연결 지난 출시 44건 검토: Claude 사용 금지·종료 예고·미국 한정 Finances·기기 구매형·개발자 알파 제외. Sites 후속 기능은 기존 Pages·Space와 중첩. 나머지 개별 국내 제공·플랜 근거 미확정으로 보류",
+    "최근 6~12개월 공식 발표에서 2026-04-15 Precision Flow 발굴. 국내 4월 16일 보도자료와 현재 국내 개별 기능 문서 재검증 후 선정. 원 발표일 유지",
+    "회사 분포: Google 31·OpenAI 28·xAI 27·Adobe 13건 등 비교. 무료 접근성보다 국내 기능·요금 검증 가능성을 우선하여 유료 실습으로 선정",
+    "작성 전 국내 기능 도움말 + 파트너 모델표의 FLUX.2 klein 4B 및 권한 FAQ + 국내 Firefly Standard 월별 요금 확인. 일반 제품 판매나 한국어 지원만으로 기능 제공 추론하지 않음",
+    "[미검증] 로그인·실제 생성 미수행. 예시 작품은 예상 결과. 강사 전날 재현 필요",
+    "[확인 필요] 국내 도움말 제목 정밀도 흐름과 화면 도구명 디테일 조절(beta)의 번역 차이. 당일 화면 배치 사전 대조",
+    "제공된 main 복사본 0ad3d59 기준. git ls-remote origin refs/heads/main은 github.com DNS 오류로 실패하여 원격 최신 여부 재확인 불가",
+    "신규 프롬프트 입력처는 Firefly 웹으로 명시. 기존 교안·코드 수정·API 호출·외부 전송·커밋·푸시 없음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe — Firefly 신규 이미지 편집 기능 발표 (2026-04-15)",
+      "url": "https://news.adobe.com/news/downloads/pdfs/2026/04/04152026-adobeushersinanewera-3.pdf",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — 정밀도 흐름 도입 발표 (2026-04-16)",
+      "url": "https://news.adobe.com/ko/news/downloads/pdfs/2026/adobekr260416.pdf",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — 정밀도 흐름(beta)으로 이미지 편집하기",
+      "url": "https://helpx.adobe.com/kr/firefly/web/work-with-images/edit-images/use-precision-flow.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — 파트너 모델과 이용 조건",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Adobe 대한민국 — Firefly 플랜 비교",
+      "url": "https://www.adobe.com/kr/products/firefly/plans.html",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Notion — Notion 3.8: Context for your agents",
+      "url": "https://www.notion.com/releases/2026-10-13",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Canva — 공식 뉴스룸",
+      "url": "https://www.canva.com/newsroom/news/",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Google — Gemini 릴리스 노트",
+      "url": "https://gemini.google/release-notes/",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Runway — 공식 변경 기록",
+      "url": "https://runway.com/changelog",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Meta — Muse Wonder 발표",
+      "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+      "checked": "2026-10-26"
+    },
+    {
+      "title": "Google Workspace — 2026년 10월 업데이트",
+      "url": "https://workspaceupdates.googleblog.com/2026/10/",
+      "checked": "2026-10-26"
+    }
+  ]
+}

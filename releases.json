@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T15:48:58+09:00",
+  "updated_at": "2026-10-27T08:27:32+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3931,6 +3931,21 @@
       },
       "checked": "2026-10-26",
       "lesson_id": "AI-2026-10-CAT04-023"
+    },
+    {
+      "id": "adobe-firefly-2026-04-15-precision-flow",
+      "date": "2026-04-15",
+      "tool": "Adobe Firefly",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Firefly 정밀도 흐름(Precision Flow, beta) 이미지 편집",
+      "summary": "① 단일 프롬프트로 분위기 변형 생성 ② 슬라이더로 후보 탐색 ③ 결과 선택·적용",
+      "source": {
+        "title": "Adobe — Firefly Precision Flow 신규 도입 발표",
+        "url": "https://news.adobe.com/news/downloads/pdfs/2026/04/04152026-adobeushersinanewera-3.pdf"
+      },
+      "checked": "2026-10-26",
+      "lesson_id": "AI-2026-10-CAT04-024"
     }
   ]
 }

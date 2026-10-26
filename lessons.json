@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 186,
+  "count": 187,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-024",
+      "version": "v1.0",
+      "created_at": "2026-10-27T08:27:32+09:00",
+      "checked": "2026-10-26",
+      "review_by": "2027-01-26",
+      "title": "Firefly 정밀도 흐름으로 내 사진의 따뜻한 분위기 고르기",
+      "summary": "① 본인 사진의 분위기 변형 생성 ② 슬라이더로 후보 비교 ③ 선택 이유와 AI 편집 표시 기록",
+      "tool": "Adobe Firefly",
+      "feature": "정밀도 흐름(Precision Flow, beta) — 한 프롬프트의 이미지 베리에이션을 슬라이더로 탐색·선택하는 편집",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-04-15",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-MKT",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "따뜻한 분위기로 AI 편집한 화분 사진 1개 + Before / After 선택 기록 1장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🌤️",
+      "one_liner": "슬라이더로 사진 분위기 고르기"
+    },
     {
       "id": "AI-2026-10-CAT04-023",
       "version": "v1.0",
