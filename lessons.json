@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 194,
+  "count": 195,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-030",
+      "version": "v1.0",
+      "created_at": "2026-10-28T06:29:45+09:00",
+      "checked": "2026-10-27",
+      "review_by": "2027-01-27",
+      "title": "녹음 종료만으로 모임 요약 받기 — 자동 요약 검토 카드",
+      "summary": "자동 AI 요약 켜기 + 새 녹음 종료 후 생성 관찰 + 준비물·담당·기한 검토",
+      "tool": "네이버웍스 클로바노트",
+      "feature": "녹음 종료 후 자동 AI 요약 — 자동화 설정 ON/OFF와 새 녹음 종료에 따른 요약 자동 실행(Web·Mobile App)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-08-20",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-EDU",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "자동 요약 검토 카드 1장: Before/After 관찰 + 준비물·담당·기한 대조 + 설정 복원 기록",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "녹음 끝나면 요약 받고 핵심 검토"
+    },
     {
       "id": "AI-2026-10-CAT03-036",
       "version": "v1.0",
