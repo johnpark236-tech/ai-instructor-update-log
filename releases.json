@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T23:55:51+09:00",
+  "updated_at": "2026-10-28T01:54:28+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4021,6 +4021,21 @@
       },
       "checked": "2026-10-27",
       "lesson_id": "AI-2026-10-CAT04-029"
+    },
+    {
+      "id": "google-project-genie-2026-01-29",
+      "date": "2026-01-29",
+      "tool": "Project Genie",
+      "company": "Google",
+      "type": "update",
+      "title": "Project Genie 연구 프로토타입 공개",
+      "summary": "① 텍스트·이미지로 대화형 세계 생성 ② 키보드 탐험 ③ 탐험 영상 저장. 최초 미국 공개 후 5월 19일 한국 포함 확대",
+      "source": {
+        "title": "Google — Project Genie 최초 공개",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/"
+      },
+      "checked": "2026-10-27",
+      "lesson_id": "AI-2026-10-CAT05-028"
     }
   ]
 }
