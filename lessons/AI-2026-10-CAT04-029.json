@@ -1,0 +1,584 @@
+{
+  "id": "AI-2026-10-CAT04-029",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-27T23:55:51+09:00",
+  "checked": "2026-10-27",
+  "review_by": "2027-01-27",
+  "title": "Lightroom AI 선명 효과로 꽃 사진의 흐림을 줄이고 비교 카드 만들기",
+  "summary": "① Topaz 기반 AI 선명 효과 ② 꽃잎 디테일 관찰 ③ 보정 사진 + Before / After 카드",
+  "tool": "Adobe Lightroom",
+  "feature": "AI 선명 효과(AI Sharpen) — Lightroom 9.4의 Topaz 기반 흐림 감소·기본/강함 선택·새 이미지 생성",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-06-15",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-CRE",
+    "JOB-MKT",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 17,
+    "practice": 27,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Lightroom 데스크탑 9.4 이상 설치된 PC 또는 Mac. Classic·모바일·웹 제외",
+    "본인 개인용 Lightroom 또는 포토그래피 1TB 유료 권한 + 생성 크레딧 잔액 + 인터넷",
+    "직접 촬영한 약간 초점이 흐린 꽃 JPG 1장. 25메가픽셀 이하로 강사 사전 준비",
+    "원본 별도 복사 + 연습 결과 폴더 + 종이 관찰 카드"
+  ],
+  "outcome": "① 꽃_AI선명.jpg 1장 ② Before / After 관찰 카드 1장",
+  "objectives": [
+    "AI 선명 효과와 사진 확대의 목적을 구별할 수 있다",
+    "기본 강도로 보정한 꽃 사진을 원본과 대조할 수 있다",
+    "보정 한계와 AI 편집 사실을 카드에 기록할 수 있다"
+  ],
+  "glance": {
+    "emoji": "🌼",
+    "one_liner": "흐릿한 꽃 사진의 디테일 살펴보기",
+    "cards": [
+      {
+        "icon": "🔎",
+        "title": "AI 선명 효과",
+        "text": "Topaz로 흐림 감소"
+      },
+      {
+        "icon": "🎚️",
+        "title": "기본부터",
+        "text": "강도 선택 후 한 번 실행"
+      },
+      {
+        "icon": "📝",
+        "title": "관찰 카드",
+        "text": "Before / After 기록"
+      }
+    ],
+    "diagram": {
+      "title": "사진 한 장에서 관찰 카드까지",
+      "nodes": [
+        {
+          "icon": "🌼",
+          "label": "꽃 사진"
+        },
+        {
+          "icon": "🎚️",
+          "label": "기본 강도"
+        },
+        {
+          "icon": "✨",
+          "label": "AI 선명 효과"
+        },
+        {
+          "icon": "🔎",
+          "label": "원본 대조"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "꽃잎 경계가 약간 흐린 사진"
+      },
+      "after": {
+        "label": "After",
+        "text": "AI 보정 사진 + 경계·무늬 관찰 기록"
+      }
+    },
+    "cautions": [
+      "직접 촬영한 사진만 사용",
+      "크레딧 잔액 확인 후 실행",
+      "실제 디테일 복원 보장 없음"
+    ]
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "데스크탑 유료 구독 + 프리미엄 생성 권한 + 크레딧 필요. 무료 모바일만으로 핵심 실습 불가",
+    "plans": [
+      {
+        "name": "Lightroom",
+        "price": "₩13,200/월, 부가세 포함, 연간 계약·매월 청구",
+        "features": [
+          "데스크탑 Lightroom 포함",
+          "월 생성 크레딧 250개"
+        ]
+      },
+      {
+        "name": "포토그래피",
+        "price": "₩26,400/월, 부가세 포함, 연간 계약·매월 청구",
+        "features": [
+          "Lightroom + Photoshop 포함",
+          "월 생성 크레딧 1,000개"
+        ]
+      }
+    ],
+    "note": "2026-10-27 국내 개인용 요금표·크레딧 FAQ 확인. Lightroom·포토그래피 1TB는 표준 및 프리미엄 접근 포함. 해당 기능 도움말 기준 Topaz Sharpen은 최대 25메가픽셀 10크레딧, 25~56메가픽셀 20크레딧. 이번 실습은 25메가픽셀 이하 사진으로 1회만 실행하며 앱 표시 사용량 우선 확인. 조직 권한·체험 조건은 이번 범위 제외. 기존 유료 권한 사용, 현장 결제 제외",
+    "checked": "2026-10-27",
+    "sources": [
+      {
+        "title": "Adobe 대한민국 — Lightroom 가격 및 멤버십",
+        "url": "https://www.adobe.com/kr/products/photoshop-lightroom/plans.html"
+      },
+      {
+        "title": "Adobe 대한민국 — 생성 크레딧 FAQ",
+        "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html"
+      },
+      {
+        "title": "Adobe 대한민국 — AI 선명 효과 도움말",
+        "url": "https://helpx.adobe.com/kr/lightroom/desktop/edit-photos/enhance-images-with-generative-ai.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-06-15",
+      "text": "Adobe 공식 블로그에서 Lightroom의 Topaz AI Sharpen 공개. 해당 주 순차 출시 안내"
+    },
+    {
+      "date": "2026-06-18",
+      "text": "Lightroom 팀의 9.4 출시 공지와 국내 AI 선명 효과 도움말 게시"
+    },
+    {
+      "date": "2026-10-27",
+      "text": "국내 해당 기능 도움말 + 개인용 요금 + 프리미엄 접근 조건 재확인"
+    }
+  ],
+  "theory": {
+    "definition": "AI 선명 효과(AI Sharpen): Topaz 기반 생성형 AI로 약간 흐린 사진의 선명도를 개선하는 Lightroom 데스크탑 기능",
+    "analogy": "흐린 꽃잎 선을 보고 다시 다듬는 그림 작업. 촬영 당시의 정확한 무늬를 되찾았다는 보장 없음",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "작업",
+          "약간 흐린 꽃 사진",
+          "AI로 선명도를 보정한 사진"
+        ],
+        [
+          "검토",
+          "작은 화면에서 감상",
+          "같은 부분을 같은 배율로 대조"
+        ],
+        [
+          "기록",
+          "사진만 보관",
+          "보정 사진 + 관찰 카드"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "선명도와 크기",
+        "body": "AI 선명 효과는 흐림 감소 목적. 생성형 업스케일의 확대 실습과 구별"
+      },
+      {
+        "title": "기본과 강함",
+        "body": "기본은 균형 잡힌 강도. 강함은 더 강한 효과. 이번 핵심 실습은 기본 1회"
+      },
+      {
+        "title": "원본 대조",
+        "body": "꽃잎 경계 + 잎맥 + 배경의 부자연스러운 무늬 관찰. 개선이 적어도 관찰 기록 가능"
+      }
+    ],
+    "can": [
+      "약간 흐린 꽃 사진의 선명도 개선 시도",
+      "원본과 별도 생성 이미지 비교",
+      "기본·강함 옵션 선택"
+    ],
+    "cannot": [
+      "심하게 흔들린 모든 사진의 완벽한 복구 보장",
+      "원래 없던 세부 사항의 사실성 보장",
+      "이 수업 경로를 Lightroom Classic에 동일 적용"
+    ],
+    "safety": [
+      "본인이 촬영하거나 편집 허락받은 꽃 사진만 사용",
+      "얼굴·주소·차량 번호가 담긴 사진 제외",
+      "원본 별도 보관 + AI 선명 효과 적용 표시",
+      "증거·신분 확인·의료 판단용 세부 복원으로 사용 금지",
+      "크레딧 차감 확인 후 실행. 반복 실행 강요 금지"
+    ]
+  },
+  "practice": {
+    "preview": "수업용 가상 예시: “꽃잎을 자세히” + “Before: 꽃잎 경계가 흐림 / After: 경계가 또렷하나 잎맥 일부 어색함” + “AI 선명 효과 적용” 표시. 실제 생성 결과 아님",
+    "follow": [
+      {
+        "title": "꽃 사진과 원본 확인",
+        "minutes": 4,
+        "do": "Lightroom 데스크탑에서 준비한 꽃 JPG를 세부 사항 보기로 열기 → 흐린 꽃잎 한 곳 관찰",
+        "prompt": "",
+        "expect": "Before 관찰 지점 1곳",
+        "note": "[확인 필요] 파일 가져오기 위치는 버전별 강사 사전 확인",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "세부 사항 보기 → 연습 JPG",
+          "kind": "app",
+          "note": "본인 데스크탑 유료 권한 + 프리미엄 접근 + 잔여 생성 크레딧 + 로그인·인터넷 필요"
+        }
+      },
+      {
+        "title": "AI 선명 효과 열기",
+        "minutes": 4,
+        "do": "사진 위 마우스 오른쪽 클릭 → AI로 강화 → AI 선명 효과 선택",
+        "prompt": "",
+        "expect": "강도와 크레딧 대화 상자",
+        "note": "사진 → AI를 통한 향상 메뉴도 공식 안내 경로. 번역 표기 차이는 강사 사전 확인",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "사진 우클릭 → AI로 강화 → AI 선명 효과",
+          "kind": "app",
+          "note": "본인 데스크탑 유료 권한 + 프리미엄 접근 + 잔여 생성 크레딧 + 로그인·인터넷 필요"
+        }
+      },
+      {
+        "title": "기본 강도로 한 번 실행",
+        "minutes": 7,
+        "do": "기본 선택 → Topaz Denoise 적용 해제 상태 확인 → 크레딧 표시·잔액 확인 → 선명하게 선택 → 진행률 대기",
+        "prompt": "",
+        "expect": "원본 옆 또는 스택 안 생성 이미지",
+        "note": "이번 실습은 노이즈 제거 결합 제외. 스택 만들기는 선택 사항이며 클라우드에서만 지원. 부족한 잔액이면 실행 중단",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "AI 선명 효과 대화 상자 → 기본 → 선명하게",
+          "kind": "app",
+          "note": "본인 데스크탑 유료 권한 + 프리미엄 접근 + 잔여 생성 크레딧 + 로그인·인터넷 필요"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "같은 꽃잎을 확대 비교",
+        "minutes": 5,
+        "do": "원본과 생성 이미지를 번갈아 열기 → 같은 배율에서 꽃잎 경계·잎맥·배경 비교 → 내 선택 이유 결정",
+        "prompt": "",
+        "expect": "개선점 1개 + 어색한 점 또는 차이 없음 1개",
+        "note": "스택을 사용했다면 펼친 뒤 선택. 더 강하게 재생성하지 않고 현재 결과 관찰",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "필름스트립 → 원본 및 생성 이미지",
+          "kind": "app",
+          "note": "본인 데스크탑 유료 권한 + 프리미엄 접근 + 잔여 생성 크레딧 + 로그인·인터넷 필요"
+        }
+      },
+      {
+        "title": "내 보정 사진 저장",
+        "minutes": 4,
+        "do": "생성 이미지 선택 → 내보내기 → JPG → 연습 결과 폴더에 새 이름으로 저장 → 저장 파일 다시 열기",
+        "prompt": "",
+        "expect": "꽃_AI선명.jpg 1장",
+        "note": "[확인 필요] 내보내기 아이콘 위치는 수업 버전에서 사전 확인. 원본 덮어쓰기 제외",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "사진 내보내기 → JPG → 저장 위치",
+          "kind": "app",
+          "note": "본인 데스크탑 유료 권한 + 프리미엄 접근 + 잔여 생성 크레딧 + 로그인·인터넷 필요"
+        }
+      },
+      {
+        "title": "Before / After 카드 완성",
+        "minutes": 3,
+        "do": "종이에 작품명 + Before + After + 사용 판단 + AI 편집 표시 기록",
+        "prompt": "",
+        "expect": "나만의 관찰 카드 1장",
+        "note": "27분 실습 종료. 개선이 없으면 그대로 기록",
+        "input": {
+          "label": "종이 관찰 카드",
+          "url": null,
+          "location": "작품명 / Before / After / 사용 판단 / AI 편집 표시 칸",
+          "kind": "manual",
+          "note": "직접 손으로 기록. AI 입력 불필요"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "강사와 같은 꽃 사진에서 달라진 경계 한 곳 표시"
+      },
+      {
+        "level": "중급",
+        "mission": "잎맥·배경의 부자연스러움을 포함해 사용 판단 이유 기록"
+      },
+      {
+        "level": "고급",
+        "mission": "강함·노이즈 제거 옵션의 용도를 공식 도움말로 설명. 추가 생성 없이 비교 기준 설계"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "보정 사진 + Before / After 카드 + AI 편집의 한계 한 가지 공유",
+    "quiz": [
+      {
+        "q": "AI 선명 효과를 적용한 사진은 어떤 사진인가요?",
+        "options": [
+          "항상 정확한 원본 복원",
+          "AI로 선명도를 보정한 사진",
+          "촬영 날짜만 바뀐 사진",
+          "원본을 삭제한 사진"
+        ],
+        "answer": 1,
+        "explain": "AI가 세부 표현을 보정한 결과임. 실제 꽃잎 무늬와 같은지는 원본 대조 필요"
+      },
+      {
+        "q": "이번 실습에서 실행 전에 확인할 것은 무엇인가요?",
+        "options": [
+          "다른 사람 비밀번호",
+          "주소록 전체",
+          "기본 강도와 크레딧 잔액",
+          "결제 카드 번호"
+        ],
+        "answer": 2,
+        "explain": "유료 권한과 잔액 확인이 먼저임. 기본 1회 실행으로 시작하면 불필요한 차감 예방 가능"
+      },
+      {
+        "q": "Before / After를 올바르게 비교하는 방법은 무엇인가요?",
+        "options": [
+          "같은 꽃잎을 같은 배율로 비교",
+          "원본은 작게 결과는 크게 비교",
+          "결과만 보고 완벽하다고 판단",
+          "원본을 먼저 삭제"
+        ],
+        "answer": 0,
+        "explain": "같은 위치와 배율로 보면 달라진 점 파악이 쉬움. 부자연스러운 부분도 함께 관찰"
+      }
+    ],
+    "next": [
+      "사진 확대와 선명도 개선의 차이 알아보기",
+      "온라인 공개 전 AI 편집 표시 점검"
+    ],
+    "rubric": [
+      {
+        "criterion": "작품·판단",
+        "high": "보정 JPG + 관찰 카드 + 한계 설명 완성",
+        "mid": "도움을 받아 사진과 카드 완성",
+        "low": "관찰만 완료. 적격 계정에서 직접 실습 보충 필요"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~7분",
+        "content": "작품 예시 + Before / After",
+        "note": "같은 위치와 배율 강조"
+      },
+      {
+        "time": "7~17분",
+        "content": "AI 원리 + 요금 + 권리",
+        "note": "업스케일·Classic과 구별"
+      },
+      {
+        "time": "17~32분",
+        "content": "사진 열기 + 대화 상자 + 기본 실행",
+        "note": "4분 + 4분 + 7분"
+      },
+      {
+        "time": "32~44분",
+        "content": "비교 + JPG 저장 + 카드",
+        "note": "5분 + 4분 + 3분"
+      },
+      {
+        "time": "44~50분",
+        "content": "공유 + 핵심 문제 3개",
+        "note": "사실 복원 보장 없음 확인"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "오늘은 우리가 찍은 꽃 사진을 조금 더 선명하게 다듬겠습니다. 완벽하게 복원됐다고 판단하기 전에 같은 꽃잎을 함께 살펴보겠습니다."
+      },
+      {
+        "label": "실행",
+        "text": "기본을 고르고, 크레딧 잔액을 확인해 주세요. 오늘은 한 번만 실행합니다. 처리 중에는 버튼을 다시 누르지 마세요."
+      },
+      {
+        "label": "정리",
+        "text": "Before와 After에서 꽃잎 경계와 잎맥을 비교해 보세요. 차이가 없거나 이상한 부분을 찾았어도 좋은 관찰입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "유료 권한·크레딧 없음",
+        "response": "강사 인쇄 예시로 관찰 카드 작성. 직접 실행 미완료 표시 후 적격 계정에서 보충. 현장 결제·계정 공유 제외"
+      },
+      {
+        "situation": "처리 지연·네트워크 장애",
+        "response": "반복 클릭 중단 → 인쇄 예시 관찰 → 복구 후 생성 결과와 잔액 확인"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "AI 선명 효과 없음",
+        "fix": "Lightroom 데스크탑 9.4 이상 확인. Classic·무료 모바일과 구별"
+      },
+      {
+        "issue": "실행 버튼 비활성",
+        "fix": "로그인·개인 유료 권한·프리미엄 접근·잔액 점검. 해결 불가 시 Plan B"
+      },
+      {
+        "issue": "스택 때문에 원본이 안 보임",
+        "fix": "스택 펼치기 또는 원본 옆 생성 이미지 확인. 원본 삭제 금지"
+      },
+      {
+        "issue": "무늬가 부자연스러움",
+        "fix": "원본과 대조 후 부적합 이유 기록. 강함 반복 실행보다 결과 사용 보류"
+      },
+      {
+        "issue": "저장 파일을 찾지 못함",
+        "fix": "연습 결과 폴더·파일명 확인 후 저장 JPG 다시 열기"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 모바일로 따라갈 수 있는가?",
+        "a": "이번 핵심 실습은 데스크탑 유료 권한 필요. 무료 경로는 예시 관찰만 가능"
+      },
+      {
+        "q": "Topaz 별도 앱 구독이 필요한가?",
+        "a": "이번 경로는 Lightroom 내장 기능과 Adobe 생성 크레딧 사용. 별도 Topaz 앱 설치 실습 제외"
+      },
+      {
+        "q": "한국 제공 근거는?",
+        "a": "국내 해당 기능 도움말 + 국내 Lightroom 9.4 공식 공지 + 개인용 요금·프리미엄 접근 표 확인"
+      },
+      {
+        "q": "강함을 고르면 무조건 좋은가?",
+        "a": "강도가 높다고 정확성 보장 없음. 이번 기본 실습은 기본 1회 후 원본 대조"
+      },
+      {
+        "q": "사진 크기를 키우는 기능인가?",
+        "a": "흐림 감소 목적의 AI 선명 효과임. 생성형 업스케일의 배율 선택과 구별"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "큰 메뉴 카드 + 꽃잎 한 곳 표시 + 오른쪽 클릭 개별 안내"
+      },
+      {
+        "level": "중급",
+        "guide": "경계·잎맥·배경 세 기준으로 사용 판단 기록"
+      },
+      {
+        "level": "고급",
+        "guide": "증거용·감상용 사진의 AI 보정 허용 범위 비교"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "흐림·경계·선명 그림 낱말 카드 + Before / After 짧은 문장 틀"
+      }
+    ],
+    "pro_points": [
+      "과장된 복원 약속보다 결과 대조 지도",
+      "구독료와 생성 크레딧 차감 구별",
+      "추가 생성 횟수보다 관찰 근거 평가"
+    ],
+    "day_before": [
+      "국내 본인 계정의 데스크탑 버전·개인 유료 권한·프리미엄 접근·잔액 확인",
+      "권리 확보한 25메가픽셀 이하 꽃 JPG + 원본 별도 준비",
+      "기본 1회 실행·같은 배율 비교·JPG 저장을 27분 안에 리허설",
+      "우클릭 메뉴·내보내기 위치 사전 캡처 + Before / After 인쇄 예시 준비",
+      "실행 전후 크레딧 표시 확인. 장애 때 재실행보다 결과·차감 상태 먼저 확인"
+    ]
+  },
+  "verification": [
+    "2026-10-27 lessons.json 191건의 전체 제목·도구·기능 및 releases.json 267건 대조. AI Sharpen 독립 교안·출시 항목 없음. Photoshop Topaz Gigapixel 확대와 Lightroom 먼지 제거·반사 제거·선별·확장과 별개",
+    "최근 14일 Canva 뉴스룸·Gemini 릴리스·Runway 변경 기록·Microsoft 공식 검색 탐색. Craft·Argon·Customize 등 기존 교안 중복. Runway App Studio·Mirelo·BiRefNet·Fish Audio는 개별 국내 기능 조건 미확정으로 제외",
+    "미연결 지난 출시 44건 검토. Sites·음성·학습은 기존 범위 중첩, 미국 Finances·초기 접근 Muse·조직 에이전트는 국내 초급 실습 조건 불충분. Origin 마켓플레이스 원문은 API 기반 앱 개발 대상으로 이번 수업 제외. Claude 사용 금지 준수. Excel Show Changes 재선정 없음",
+    "회사 분포 Google 31·OpenAI 28·xAI 27·Genspark (MainFunc) 19·Adobe 18건 등 검토. 무료 접근성 고려 후 국내 기능·요금 근거가 명확한 지난 유료 기능 발굴",
+    "출시일은 6월 18일 팀 공지보다 이른 6월 15일 Adobe 공식 발표로 확정. 원래 공개일 유지. 기존 AI 제공 회사의 기능이므로 update",
+    "작성 전 국내 개별 기능 도움말·국내 9.4 공식 공지·요금표·크레딧 FAQ로 국내 데스크탑 및 개인용 프리미엄 접근 확인",
+    "[미검증] 서비스 로그인·실제 생성·저장 미수행. 공식 메뉴 기준 작성. [확인 필요] 버전별 가져오기·내보내기 위치와 번역 표기는 강사 사전 재현 필요",
+    "로컬 main 9c7b752 기준. git ls-remote origin refs/heads/main은 github.com DNS 오류로 실패. 원격 최신 여부 확인 불가",
+    "기존 교안 수정·API 호출·외부 알림·커밋·푸시 없음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe — 6월 15일 Creative Cloud 신기능 발표",
+      "url": "https://blog.adobe.com/en/publish/2026/06/15/from-culling-to-compositing-new-creative-cloud-innovations-across-every-stage-of-your-workflow",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe Lightroom 팀 — 9.4 출시 공지",
+      "url": "https://community.adobe.com/announcements-678/lightroom-v9-4-is-live-add-motion-with-generate-video-reduce-blur-with-ai-sharpen-cull-people-shots-faster-and-organize-with-custom-color-labels-1627064",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 국내 커뮤니티 담당자 — Lightroom 9.4 기능 출시 안내",
+      "url": "https://community.adobe.com/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD-410/%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%A3%B8-v9-4-%EC%B6%9C%EC%8B%9C-%EB%B9%84%EB%94%94%EC%98%A4-%EC%83%9D%EC%84%B1-%EB%B6%80%ED%84%B0-ai-%EC%84%A0%EB%AA%85%EB%8F%84-%EC%A1%B0%EC%A0%88-%EA%B9%8C%EC%A7%80-%EC%83%88%EB%A1%9C%EC%9B%8C%EC%A7%84-%EA%B8%B0%EB%8A%A5%EC%9D%84-%EB%A7%8C%EB%82%98%EB%B3%B4%EC%84%B8%EC%9A%94-1629153",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — AI 선명 효과 도움말",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/edit-photos/enhance-images-with-generative-ai.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 새 기능",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/introduction/whats-new.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 요금",
+      "url": "https://www.adobe.com/kr/products/photoshop-lightroom/plans.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 생성 크레딧 FAQ",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 사진 내보내기",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/save-share-and-export/save-share-photos.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Canva — 뉴스룸",
+      "url": "https://www.canva.com/newsroom/news/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Google — Gemini 릴리스",
+      "url": "https://gemini.google/release-notes/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Runway — 변경 기록",
+      "url": "https://runway.com/changelog",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Cursor — Origin App Marketplace",
+      "url": "https://cursor.com/changelog/origin-app-marketplace",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Meta — Muse Wonder 발표",
+      "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+      "checked": "2026-10-27"
+    }
+  ]
+}

@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 191,
+  "count": 192,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-029",
+      "version": "v1.0",
+      "created_at": "2026-10-27T23:55:51+09:00",
+      "checked": "2026-10-27",
+      "review_by": "2027-01-27",
+      "title": "Lightroom AI 선명 효과로 꽃 사진의 흐림을 줄이고 비교 카드 만들기",
+      "summary": "① Topaz 기반 AI 선명 효과 ② 꽃잎 디테일 관찰 ③ 보정 사진 + Before / After 카드",
+      "tool": "Adobe Lightroom",
+      "feature": "AI 선명 효과(AI Sharpen) — Lightroom 9.4의 Topaz 기반 흐림 감소·기본/강함 선택·새 이미지 생성",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-06-15",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-CRE",
+        "JOB-MKT",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 꽃_AI선명.jpg 1장 ② Before / After 관찰 카드 1장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🌼",
+      "one_liner": "흐릿한 꽃 사진의 디테일 살펴보기"
+    },
     {
       "id": "AI-2026-10-CAT04-028",
       "version": "v1.0",
