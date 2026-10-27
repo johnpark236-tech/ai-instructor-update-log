@@ -1,0 +1,587 @@
+{
+  "id": "AI-2026-10-CAT04-027",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-27T14:27:32+09:00",
+  "checked": "2026-10-27",
+  "review_by": "2027-01-27",
+  "title": "Photoshop 가장자리 향상으로 털 인형 사진의 색 테두리 다듬기",
+  "summary": "① 배경 제거 후 남은 색 테두리 보정 ② 내 배경색 선택 ③ Before / After 비교 카드 작성",
+  "tool": "Adobe Photoshop",
+  "feature": "가장자리 향상(Enhance Edge) — AI로 레이어 마스크 경계의 잔여 배경색을 제거하는 생성형 보정",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-08-31",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-EDU",
+    "JOB-CRE",
+    "JOB-MKT"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 17,
+    "practice": 27,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "업데이트한 Photoshop 데스크탑 27.11 이상 + 마우스 + 인터넷",
+    "본인 개인용 Photoshop 데스크탑 유료 권한 + 생성 크레딧 잔액 20개 이상",
+    "강사가 직접 촬영한 털 인형 JPG 1장. 인형과 대비되는 파란 배경 사용",
+    "파일 열기·레이어 클릭 기초 + 큰 글씨 비교 카드. 설치·로그인은 수업 전 완료"
+  ],
+  "outcome": "털 인형 배경 합성 PSD 1개 + Before / After 비교 카드 1장",
+  "objectives": [
+    "배경 제거 후 색 테두리를 찾을 수 있다",
+    "마스크에 가장자리 향상을 적용할 수 있다",
+    "보정 결과와 원본의 차이를 설명할 수 있다"
+  ],
+  "glance": {
+    "emoji": "🧸",
+    "one_liner": "인형 털에 남은 파란 테두리 다듬기",
+    "cards": [
+      {
+        "icon": "✂️",
+        "title": "배경 제거",
+        "text": "인형만 남기는 마스크 만들기"
+      },
+      {
+        "icon": "✨",
+        "title": "테두리 보정",
+        "text": "가장자리 향상 한 번 실행"
+      },
+      {
+        "icon": "🔎",
+        "title": "결과 비교",
+        "text": "털 모양과 색 번짐 확인"
+      }
+    ],
+    "diagram": {
+      "title": "배경 제거에서 색 테두리 보정까지",
+      "nodes": [
+        {
+          "icon": "📷",
+          "label": "사진 열기"
+        },
+        {
+          "icon": "✂️",
+          "label": "배경 제거"
+        },
+        {
+          "icon": "✨",
+          "label": "가장자리 향상"
+        },
+        {
+          "icon": "🔎",
+          "label": "결과 검토"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "배경 제거 후 털 주변에 남은 파란색"
+      },
+      "after": {
+        "label": "After",
+        "text": "색 테두리를 다듬은 인형 + 비교 기록"
+      }
+    },
+    "cautions": [
+      "실행마다 20크레딧 사용",
+      "원본 사진 별도 보관",
+      "털 디테일 손실 여부 확인"
+    ]
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "직접 실습은 개인용 Photoshop 데스크탑 유료 권한 기준. 무료 계정은 예시 관찰만 가능",
+    "plans": [
+      {
+        "name": "Photoshop — 개인용 단일 앱",
+        "price": "₩30,800/월(부가세 포함), 연간 약정·매월 청구",
+        "features": [
+          "데스크탑 Photoshop 포함",
+          "신규 구독 월 25 생성 크레딧. 잔액 20개 이상일 때 핵심 보정 1회 가능"
+        ]
+      },
+      {
+        "name": "포토그래피 — 개인용 1TB",
+        "price": "₩26,400/월(부가세 포함), 연간 약정·매월 청구",
+        "features": [
+          "데스크탑 Photoshop + Lightroom",
+          "공식 FAQ의 월 1,000 생성 크레딧 기준"
+        ]
+      }
+    ],
+    "note": "2026-10-27 국내 요금표·FAQ·해당 기능 도움말 확인. 가장자리 향상은 실행마다 20크레딧. 수업에서는 1회만 실행하며 배경색 변경에는 재실행 불필요. 무료 체험 횟수에 의존하지 않음. Firefly Pro의 웹·모바일 권한만으로 데스크탑 실습 불가. 조직 계약은 관리자 권한·계약 조건 별도 확인",
+    "checked": "2026-10-27",
+    "sources": [
+      {
+        "title": "Adobe 대한민국 — 레이어 마스크 가장자리 다듬기",
+        "url": "https://helpx.adobe.com/kr/photoshop/desktop/create-masks/layer-masks/use-enhance-edge-to-refine-masks.html",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Adobe 대한민국 — Photoshop 가격 및 멤버십 플랜",
+        "url": "https://www.adobe.com/kr/products/photoshop/plans.html",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Adobe 대한민국 — 생성 크레딧 FAQ",
+        "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+        "checked": "2026-10-27"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-08-31",
+      "text": "Photoshop 팀에서 Enhance Edge 공개 베타 최초 발표. 출시일 기준"
+    },
+    {
+      "date": "2026-10-05",
+      "text": "Photoshop 팀이 9월 27.11 정식 릴리스의 가장자리 향상 안내 게시. 국내 기능 도움말도 같은 날짜 갱신"
+    },
+    {
+      "date": "2026-10-27",
+      "text": "국내 기능 안내·개인용 요금·현재 조작 경로 재검증"
+    }
+  ],
+  "theory": {
+    "definition": "가장자리 향상(Enhance Edge): 배경 제거 뒤 마스크 경계에 남은 색을 AI로 다듬는 생성형 기능",
+    "analogy": "가위로 오린 털 인형 둘레에 남은 파란 종이 가루를 정리하는 작업에 비유",
+    "comparison": {
+      "headers": [
+        "항목",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "관찰 지점",
+          "배경 제거 직후의 털 경계",
+          "AI 보정 뒤 같은 위치"
+        ],
+        [
+          "사용자 판단",
+          "남은 배경색 확인",
+          "색 번짐 감소와 디테일 손실 함께 확인"
+        ],
+        [
+          "배경 선택",
+          "강사가 정한 연습 배경",
+          "내가 고른 단색 배경"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "레이어 마스크",
+        "body": "사진에서 보일 부분과 숨길 부분을 정하는 가림막. 이미지 칸과 마스크 칸 구별"
+      },
+      {
+        "title": "색 테두리",
+        "body": "피사체 둘레에 남은 원래 배경색. 밝기·색 대비가 큰 배경에서 관찰하기 쉬움"
+      },
+      {
+        "title": "한 번 실행 후 검토",
+        "body": "보정 횟수와 품질은 별개. 확대 관찰 후 사용할 결과를 사람이 선택"
+      }
+    ],
+    "can": [
+      "배경 제거 뒤 색 번짐 보정",
+      "단색 배경 위에서 경계 비교",
+      "털 주변의 보정 적합성 검토"
+    ],
+    "cannot": [
+      "모든 털의 완전 보존 보장",
+      "흐린 사진의 실제 디테일 복원 증명",
+      "무료 웹 계정에서 동일 데스크탑 기능 제공 보장"
+    ],
+    "safety": [
+      "직접 촬영하거나 편집 허락받은 사진 사용",
+      "사람 얼굴·주소·상표가 없는 연습 자료 선택",
+      "원본 별도 보관 + AI 편집 사실 표시",
+      "제품 사진으로 사용할 때 실제 털·재질과 달라진 부분 검토",
+      "온라인 처리에 동의 가능한 비민감 자료만 사용"
+    ]
+  },
+  "practice": {
+    "preview": "예상 작품: “크림색 배경의 털 인형” + “Before: 파란 테두리 / After: 색 번짐 감소 여부” 기록 + “AI 편집” 표시. 실제 생성 결과 아님",
+    "follow": [
+      {
+        "title": "사진 열고 배경 제거",
+        "minutes": 5,
+        "do": "파일 → 열기 → 인형 JPG 선택 → 이미지 레이어 선택 → 상황별 작업 표시줄의 배경 제거",
+        "prompt": "",
+        "expect": "인형을 남기는 레이어 마스크",
+        "note": "원본 JPG는 그대로 보관. 글 프롬프트 없이 버튼 조작",
+        "input": {
+          "label": "Adobe Photoshop 데스크탑 앱",
+          "url": null,
+          "location": "파일 → 열기 → 이미지 레이어 → 상황별 작업 표시줄 → 배경 제거",
+          "kind": "app",
+          "note": "본인 개인용 데스크탑 유료 권한 + 인터넷. 가장자리 향상 실행 전 잔액 20개 이상 확인"
+        }
+      },
+      {
+        "title": "비교용 단색 배경 넣기",
+        "minutes": 5,
+        "do": "조정 메뉴 → 단색 → 크림색 선택 → 색상 채우기 레이어를 마스크가 있는 이미지 아래로 이동 → 털 둘레 관찰",
+        "prompt": "",
+        "expect": "파란 테두리를 관찰할 비교 배경",
+        "note": "색 변화가 작을 때는 강사 준비 확대 예시와 함께 확인",
+        "input": {
+          "label": "Adobe Photoshop 데스크탑 앱",
+          "url": null,
+          "location": "조정 메뉴 → 단색 → 색상 피커 / 레이어 패널",
+          "kind": "app",
+          "note": "본인 개인용 데스크탑 유료 권한 + 인터넷. 가장자리 향상 실행 전 잔액 20개 이상 확인"
+        }
+      },
+      {
+        "title": "가장자리 향상 한 번 적용",
+        "minutes": 7,
+        "do": "계정 또는 생성 크레딧 사용량 패널에서 잔액 확인 → 레이어 마스크 선택 → 상황별 작업 표시줄의 가장자리 향상 → 완료 메시지 대기",
+        "prompt": "",
+        "expect": "잔여 배경색을 다듬은 결과",
+        "note": "20크레딧 1회 사용. 실행 직전 Before 화면을 기억하고 완료 후 같은 부분 비교. 연속 클릭 금지",
+        "input": {
+          "label": "Adobe Photoshop 데스크탑 앱",
+          "url": null,
+          "location": "레이어 패널 → 마스크 → 상황별 작업 표시줄 → 가장자리 향상",
+          "kind": "app",
+          "note": "본인 개인용 데스크탑 유료 권한 + 인터넷. 가장자리 향상 실행 전 잔액 20개 이상 확인"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 배경색 선택하고 결과 검토",
+        "minutes": 5,
+        "do": "단색 채우기 레이어의 색상 칸을 열어 원하는 밝은 색 선택 → 보정 결과의 털 둘레 관찰 → 원본 사진과 모양 대조",
+        "prompt": "",
+        "expect": "내 배경색의 인형 합성 이미지",
+        "note": "가장자리 향상 재실행 없이 진행. 색 번짐과 함께 털 손실 여부 확인",
+        "input": {
+          "label": "Adobe Photoshop 데스크탑 앱",
+          "url": null,
+          "location": "레이어 패널 → 단색 채우기 레이어 색상 칸",
+          "kind": "app",
+          "note": "본인 개인용 데스크탑 유료 권한 + 인터넷. 가장자리 향상 실행 전 잔액 20개 이상 확인"
+        }
+      },
+      {
+        "title": "작품과 비교 카드 보관",
+        "minutes": 3,
+        "do": "파일 → 다른 이름으로 저장 → 새 이름의 PSD 보관",
+        "prompt": "",
+        "expect": "레이어를 유지한 PSD 1개",
+        "note": "저장 위치는 본인이 찾을 수 있는 연습 폴더. 원본 덮어쓰기 금지",
+        "input": {
+          "label": "Adobe Photoshop 데스크탑 앱",
+          "url": null,
+          "location": "파일 → 다른 이름으로 저장 → PSD 선택",
+          "kind": "app",
+          "note": "본인 개인용 데스크탑 유료 권한 + 인터넷. 가장자리 향상 실행 전 잔액 20개 이상 확인"
+        }
+      },
+      {
+        "title": "Before / After 카드 작성",
+        "minutes": 2,
+        "do": "종이에 Before의 색 테두리 + After의 변화 + 내가 고른 배경색 + AI 편집 표시 기록",
+        "prompt": "",
+        "expect": "Before / After 비교 카드 1장",
+        "note": "총 실습 27분. 효과가 작거나 털이 손상된 경우도 관찰 결과로 기록",
+        "input": {
+          "label": "종이 비교 카드",
+          "url": null,
+          "location": "작품명 / Before / After / 배경색 / AI 편집 칸",
+          "kind": "manual",
+          "note": "종이에 직접 기록"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "강사와 같은 색으로 보정 1회 후 털 경계 한 곳 기록"
+      },
+      {
+        "level": "중급",
+        "mission": "크레딧 재사용 없이 밝은 배경 두 가지를 비교하고 한 색 선택"
+      },
+      {
+        "level": "고급",
+        "mission": "색 번짐 감소와 디테일 손실을 따로 평가하여 사용 적합성 판정"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "작품 화면 + 배경색 선택 이유 + 보정 효과와 한계 한 가지씩 공유",
+    "quiz": [
+      {
+        "q": "가장자리 향상은 무엇을 다듬는 기능인가요?",
+        "options": [
+          "사진의 촬영 날짜",
+          "마스크 경계에 남은 배경색",
+          "파일 이름",
+          "모든 글자의 맞춤법"
+        ],
+        "answer": 1,
+        "explain": "오려낸 털 둘레의 잔여 색을 다듬는 기능임. 사진 전체의 사실성을 보장하는 기능은 아님"
+      },
+      {
+        "q": "가장자리 향상을 여러 번 누르기 전에 확인할 것은 무엇인가요?",
+        "options": [
+          "친구의 비밀번호",
+          "휴대폰 벨소리",
+          "생성 크레딧 잔액과 현재 결과",
+          "다른 사람의 결제 카드"
+        ],
+        "answer": 2,
+        "explain": "실행할 때마다 20크레딧 사용. 한 번 실행한 결과부터 확인하면 불필요한 사용 방지 가능"
+      },
+      {
+        "q": "보정 뒤 털이 일부 사라진 것 같으면 어떻게 하나요?",
+        "options": [
+          "원본과 비교하고 사용 적합성을 판단한다",
+          "원본을 삭제한다",
+          "항상 완벽하다고 발표한다",
+          "확인 없이 제품 사진으로 올린다"
+        ],
+        "answer": 0,
+        "explain": "색 테두리 감소만큼 털의 모양도 중요함. 원본과 대조하여 부적합 판단도 기록"
+      }
+    ],
+    "next": [
+      "레이어 마스크의 보이기·숨기기 원리",
+      "AI 편집 이미지의 사실성 판단"
+    ],
+    "rubric": [
+      {
+        "criterion": "보정과 검토",
+        "high": "보정 1회 + 배경색 선택 + 원본 대조 + 비교 카드 완성",
+        "mid": "강사 도움으로 보정과 카드 완성",
+        "low": "예시 관찰 완료. 직접 버튼 실습 보충 필요"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~7분",
+        "content": "작품 예시 + Before / After",
+        "note": "파란 테두리를 큰 화면으로 제시"
+      },
+      {
+        "time": "7~17분",
+        "content": "마스크 원리 + 유료 조건 + 사진 권리",
+        "note": "사진 칸과 마스크 칸 그림으로 구별"
+      },
+      {
+        "time": "17~34분",
+        "content": "배경 제거 + 단색 배경 + 핵심 보정",
+        "note": "5분 + 5분 + 7분"
+      },
+      {
+        "time": "34~44분",
+        "content": "내 배경색 + PSD 저장 + 비교 카드",
+        "note": "5분 + 3분 + 2분"
+      },
+      {
+        "time": "44~50분",
+        "content": "공유 + 핵심 문제 3개",
+        "note": "효과가 작은 결과도 관찰 내용으로 인정"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "오늘은 털 인형을 오린 뒤 남은 파란색 테두리를 다듬습니다. 색은 줄었는지, 털은 자연스럽게 남았는지 두 가지를 함께 보겠습니다."
+      },
+      {
+        "label": "조작",
+        "text": "사진 칸 옆의 마스크 칸을 눌러 주세요. 가장자리 향상은 한 번만 실행합니다. 누를 때마다 20크레딧을 쓰니 완료 메시지가 나올 때까지 기다려 주세요."
+      },
+      {
+        "label": "정리",
+        "text": "내가 고른 배경 위에서 인형이 자연스러운지 살펴보세요. 결과가 마음에 들지 않으면 그 이유를 카드에 적어도 훌륭한 관찰입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "유료 권한·크레딧 부족",
+        "response": "강사 사전 예시 인쇄물로 비교 카드 작성. 직접 실습 미완료 표시 후 적격 본인 계정으로 보충. 계정 공유·현장 결제 제외"
+      },
+      {
+        "situation": "인터넷 장애·처리 지연",
+        "response": "반복 클릭 중단 → 확대 인쇄 예시로 관찰 → 복구 후 잔액과 완료 상태 확인 뒤 재개"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "가장자리 향상이 보이지 않음",
+        "fix": "데스크탑 버전·레이어 마스크 선택·상황별 작업 표시줄 확인. 웹·모바일 화면이면 데스크탑으로 이동. 계속 미노출 시 Plan B"
+      },
+      {
+        "issue": "버튼 비활성",
+        "fix": "인터넷 연결과 본인 유료 권한 확인. 민감 파일 업로드나 계정 공유로 우회 금지"
+      },
+      {
+        "issue": "색 테두리가 잘 보이지 않음",
+        "fix": "인형과 배경의 대비 확인 → 밝은 단색으로 비교 → 강사 확대 예시 활용"
+      },
+      {
+        "issue": "털 디테일 손실",
+        "fix": "원본과 확대 대조 → 부적합 지점 카드 기록. 추가 생성보다 강사 확인 우선"
+      },
+      {
+        "issue": "추가 결제·크레딧 부족 안내",
+        "fix": "실행 중단 → 잔액 확인 → Plan B. 즉석 유료 가입 제외"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국 제공 근거는?",
+        "a": "국내 새 기능 안내의 27.11 가장자리 향상 + 국내 해당 기능 도움말의 조작·차감 안내 확인. 제품 판매나 한국어 지원만으로 판단하지 않음"
+      },
+      {
+        "q": "무료 계정으로 같은 실습이 가능한가?",
+        "a": "핵심 기능은 데스크탑 유료 권한 기준. 무료 계정은 예시 관찰만 진행하며 직접 실습으로 계산하지 않음"
+      },
+      {
+        "q": "글 요청문을 어디에 붙이는가?",
+        "a": "이번 실습은 글 요청문 없이 앱 버튼으로 진행. AI 채팅창 입력 불필요"
+      },
+      {
+        "q": "배경색만 바꿔도 다시 20크레딧인가?",
+        "a": "이번 구성은 단색 채우기 레이어를 직접 수정하는 단계. 가장자리 향상 재실행은 별도 20크레딧이므로 제외"
+      },
+      {
+        "q": "항상 털이 완벽하게 남는가?",
+        "a": "완벽 보존 보장 없음. 색 번짐 감소와 털 손실을 함께 확인하고 부적합 결과도 기록"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "큰 글씨 메뉴 카드 + 사진 칸·마스크 칸 색 테두리 안내 + 강사와 같은 파일로 한 번만 보정"
+      },
+      {
+        "level": "중급",
+        "guide": "추가 생성 없이 배경색 두 가지 비교 후 한 색 선택"
+      },
+      {
+        "level": "고급",
+        "guide": "털 경계의 색·형태를 별도 기준으로 평가하고 사용 여부 판단"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "털·배경·가장자리 그림 낱말 카드 + 짧은 관찰 문장 틀 제공"
+      }
+    ],
+    "pro_points": [
+      "일반 배경 제거와 생성형 가장자리 보정 구별",
+      "기존 빠른 선택 도구의 같은 이름 옵션과 혼동 방지",
+      "색 번짐 감소와 디테일 보존을 별도 평가"
+    ],
+    "day_before": [
+      "국내 개인용 본인 계정에서 데스크탑 27.11 이상·기능 노출·잔액 확인",
+      "직접 촬영한 인형 사진의 대비·권리·비민감 여부 점검",
+      "한 번 보정 전후 20크레딧 차감과 결과 재현",
+      "사진 칸·마스크 칸·상황별 작업 표시줄 사전 캡처 + 확대 인쇄 예시 준비",
+      "PSD 별도 저장·파일 열림·27분 실습 리허설"
+    ]
+  },
+  "verification": [
+    "2026-10-27 lessons.json 189건 전체 제목·도구·기능 및 releases.json 265건 대조. Enhance Edge·가장자리 향상·마스크 가장자리·잔여 배경색 일치 항목 없음. Harmonize의 조명 합성·Rotate Object의 방향 변환과 별도 기능",
+    "회사 분포 Google 31·OpenAI 28·xAI 27·Genspark (MainFunc) 19·Adobe 16건 등 검토. 무료 접근성과 활용도 및 개별 국내 제공 근거를 함께 판단",
+    "최근 14일 Canva 뉴스룸·Gemini 릴리스·Runway 변경 기록·Workspace 10월 기록 탐색. Craft·Argon·Skills 등 기존 교안과 중복. Runway App Studio·MCP 추가 모델은 국내 해당 기능 이용 조건 미확정으로 미선정",
+    "미연결 지난 출시 44건 검토. Playground는 미국 성인 한정. Muse Wonder는 API·Muse Code 우선이며 일반 Muse 제공 예정. Claude 사용 금지·하드웨어·개발자 알파·기존 Sites/음성/학습 기능 중첩 또는 개별 국내 조건 부족 항목 제외. Excel Copilot Show Changes 재선정 없음",
+    "지난 공식 기록에서 2026-08-31 최초 베타 공개 확인. released 날짜 유지. 정식판은 9월 27.11 릴리스로 현재 안내되며 10월 5일 게시일을 실제 배포 첫날로 단정하지 않음. 기존 Adobe AI 서비스 기능이므로 update",
+    "작성 전 국내 해당 기능 전용 문서에서 데스크탑 경로·실행당 20크레딧 확인. 국내 개인용 요금표·FAQ에서 데스크탑 권한과 표준·프리미엄 접근 확인. 무료·조직 권한을 개인용 권한으로 대체하지 않음",
+    "[미검증] 로그인·실제 버튼 실행·저장 미수행. 국내 공식 기능 안내 기준 작성. [확인 필요] 한국어 도움말에서 가장자리 향상·가장자리 다듬기 명칭 혼용으로 수업 계정의 실제 버튼 표기 사전 확인",
+    "로컬 main 35d6a56 기준. git ls-remote의 github.com DNS 오류로 원격 main 최신 여부 확인 불가",
+    "기존 lessons/*.json 수정 없음. API 호출·외부 전송·커밋·푸시 없음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe Photoshop 팀 — Enhance Edge 최초 공개 베타 발표",
+      "url": "https://community.adobe.com/announcements-698/we-are-happy-to-introduce-enhance-edge-is-available-in-beta-1639707",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe Photoshop 팀 — 27.11 정식 릴리스 안내",
+      "url": "https://community.adobe.com/announcements-710/photoshop-27-11-enhance-edge-gpt-image-2-and-more-1642528/index1.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 데스크탑 Photoshop의 새로운 기능",
+      "url": "https://helpx.adobe.com/kr/photoshop/desktop/whats-new/whats-new-in-adobe-photoshop-on-desktop.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 레이어 마스크 가장자리 다듬기",
+      "url": "https://helpx.adobe.com/kr/photoshop/desktop/create-masks/layer-masks/use-enhance-edge-to-refine-masks.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe — Use Enhance edge to refine masks",
+      "url": "https://helpx.adobe.com/photoshop/desktop/create-masks/layer-masks/use-enhance-edge-to-refine-masks.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — Photoshop 가격 및 멤버십 플랜",
+      "url": "https://www.adobe.com/kr/products/photoshop/plans.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 생성 크레딧 FAQ",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Canva — 뉴스룸",
+      "url": "https://www.canva.com/newsroom/news/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Google — Gemini 릴리스 노트",
+      "url": "https://gemini.google/release-notes/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Runway — 제품 변경 기록",
+      "url": "https://runway.com/changelog",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Google Workspace — 2026년 10월 업데이트",
+      "url": "https://workspaceupdates.googleblog.com/2026/10",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Meta — Muse Wonder 제공 경로",
+      "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Google — Playground 미국 이용 조건",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+      "checked": "2026-10-27"
+    }
+  ]
+}

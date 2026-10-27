@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 189,
+  "count": 190,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-027",
+      "version": "v1.0",
+      "created_at": "2026-10-27T14:27:32+09:00",
+      "checked": "2026-10-27",
+      "review_by": "2027-01-27",
+      "title": "Photoshop 가장자리 향상으로 털 인형 사진의 색 테두리 다듬기",
+      "summary": "① 배경 제거 후 남은 색 테두리 보정 ② 내 배경색 선택 ③ Before / After 비교 카드 작성",
+      "tool": "Adobe Photoshop",
+      "feature": "가장자리 향상(Enhance Edge) — AI로 레이어 마스크 경계의 잔여 배경색을 제거하는 생성형 보정",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-08-31",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "털 인형 배경 합성 PSD 1개 + Before / After 비교 카드 1장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🧸",
+      "one_liner": "인형 털에 남은 파란 테두리 다듬기"
+    },
     {
       "id": "AI-2026-10-CAT04-026",
       "version": "v1.0",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T11:25:16+09:00",
+  "updated_at": "2026-10-27T14:27:32+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3976,6 +3976,21 @@
       },
       "checked": "2026-10-27",
       "lesson_id": "AI-2026-10-CAT04-026"
+    },
+    {
+      "id": "photoshop-2026-08-31-enhance-edge",
+      "date": "2026-08-31",
+      "tool": "Adobe Photoshop",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Photoshop 가장자리 향상(Enhance Edge) 공개 베타",
+      "summary": "① AI 마스크 경계 보정 ② 잔여 배경색 제거 ③ 현재 정식 데스크탑 도움말로 재검증",
+      "source": {
+        "title": "Adobe Photoshop 팀 — Enhance Edge 최초 공개 베타 발표",
+        "url": "https://community.adobe.com/announcements-698/we-are-happy-to-introduce-enhance-edge-is-available-in-beta-1639707"
+      },
+      "checked": "2026-10-27",
+      "lesson_id": "AI-2026-10-CAT04-027"
     }
   ]
 }
