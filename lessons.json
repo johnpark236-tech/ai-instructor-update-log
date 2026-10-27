@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 195,
+  "count": 196,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-037",
+      "version": "v1.0",
+      "created_at": "2026-10-28T08:19:13+09:00",
+      "checked": "2026-10-27",
+      "review_by": "2027-01-27",
+      "title": "클로바노트 나만의 템플릿으로 모임 할 일 요약 만들기",
+      "summary": "① 원하는 항목을 템플릿으로 저장 ② 담당·기한 중심 요약 생성 ③ 원문 대조",
+      "tool": "네이버웍스 클로바노트",
+      "feature": "나만의 AI 요약 템플릿 — 원하는 제목·내용 지침 저장 후 선택하여 요약 생성",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-08-20",
+      "categories": [
+        "CAT-03",
+        "CAT-02"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "모임 할 일 요약 검토지 1장: ① 내 템플릿 ② 생성 요약 ③ 담당·기한 대조",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📋",
+      "one_liner": "내가 정한 항목으로 모임 요약"
+    },
     {
       "id": "AI-2026-10-CAT08-030",
       "version": "v1.0",
