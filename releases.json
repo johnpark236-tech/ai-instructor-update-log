@@ -3946,6 +3946,21 @@
       },
       "checked": "2026-10-26",
       "lesson_id": "AI-2026-10-CAT04-024"
+    },
+    {
+      "id": "firefly-2026-04-15-ai-markup",
+      "date": "2026-04-15",
+      "tool": "Adobe Firefly",
+      "company": "Adobe",
+      "type": "update",
+      "title": "AI Markup — 이미지 위 위치 지정 편집",
+      "summary": "텍스트·브러시·영역 표시와 요청을 결합하는 이미지 편집",
+      "source": {
+        "title": "Adobe — AI Markup 출시 발표",
+        "url": "https://news.adobe.com/news/downloads/pdfs/2026/04/04152026-adobeushersinanewera-3.pdf"
+      },
+      "checked": "2026-10-27",
+      "lesson_id": "AI-2026-10-CAT04-025"
     }
   ]
 }

@@ -1,0 +1,528 @@
+{
+  "id": "AI-2026-10-CAT04-025",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-27T09:00:00+09:00",
+  "checked": "2026-10-27",
+  "review_by": "2027-01-27",
+  "title": "Firefly AI 마크업으로 찻잔 색을 바꾸고 Before / After 카드 만들기",
+  "summary": "① 사진 위 편집 위치 지정 ② 찻잔 색상 변경 ③ AI 편집 비교 카드 작성",
+  "tool": "Adobe Firefly",
+  "feature": "AI Markup(마크업) — 이미지 위 텍스트·브러시·영역 표시를 결합하는 위치 지정 AI 편집",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-04-15",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-EDU",
+    "JOB-MKT",
+    "JOB-PUB"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 17,
+    "practice": 27,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "PC 브라우저 + 본인 Adobe ID",
+    "Firefly Standard 이상 유료 권한 + 생성 크레딧",
+    "본인 촬영 찻잔 사진 1장. 얼굴·주소 제외",
+    "종이 비교 기록지 + 필기구"
+  ],
+  "outcome": "찻잔 색상 편집 사진 1개 + Before / After 비교 기록 1장",
+  "objectives": [
+    "편집 위치와 요청을 연결할 수 있다",
+    "찻잔 색상 변경 결과를 원본과 비교할 수 있다",
+    "AI 편집 표시와 사용 판단을 기록할 수 있다"
+  ],
+  "glance": {
+    "emoji": "🖍️",
+    "one_liner": "사진 위에 표시하고 찻잔 색 바꾸기",
+    "cards": [
+      {
+        "icon": "📷",
+        "title": "내 사진",
+        "text": "본인 촬영 찻잔 한 장"
+      },
+      {
+        "icon": "🖍️",
+        "title": "위치 지정",
+        "text": "찻잔 위에 요청 상자 놓기"
+      },
+      {
+        "icon": "🔎",
+        "title": "결과 검토",
+        "text": "색상과 주변 변형 대조"
+      }
+    ],
+    "diagram": {
+      "title": "표시와 요청을 함께 전달",
+      "nodes": [
+        {
+          "icon": "📷",
+          "label": "사진 준비"
+        },
+        {
+          "icon": "🖍️",
+          "label": "위치 표시"
+        },
+        {
+          "icon": "🎨",
+          "label": "색 변경"
+        },
+        {
+          "icon": "🔎",
+          "label": "원본 대조"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "촬영한 찻잔의 원래 색"
+      },
+      "after": {
+        "label": "After",
+        "text": "AI로 바꾼 찻잔 색 + 편집 사실 기록"
+      }
+    },
+    "cautions": [
+      "본인 사진만 사용",
+      "판매용 실제 색상 오인 주의",
+      "생성 전 크레딧 확인"
+    ]
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "핵심 버튼 실습은 Firefly Standard 이상 유료 기준. 무료 이용은 관찰·기록 경로",
+    "plans": [
+      {
+        "name": "Firefly Standard — 개인 월별",
+        "price": "₩13,200/월(부가세 포함)",
+        "features": [
+          "월 2,000 생성 크레딧",
+          "파트너 생성형 AI 모델 이용",
+          "본 수업의 유료 기준 플랜"
+        ]
+      },
+      {
+        "name": "Firefly Pro — 개인 월별",
+        "price": "₩26,400/월(부가세 포함)",
+        "features": [
+          "월 4,000 생성 크레딧",
+          "기존 보유자용 대안. 중복 가입 불필요"
+        ]
+      }
+    ],
+    "note": "2026-10-27 국내 월별 요금 확인. 모델별 차감량은 실행 화면에서 확인. 무료 일일 생성 안내는 있으나 마크업별 무료 횟수 미확정. 별도 파트너 계약·API 키 불필요",
+    "checked": "2026-10-27",
+    "sources": [
+      {
+        "title": "Adobe 대한민국 — Firefly 플랜 비교",
+        "url": "https://www.adobe.com/kr/products/firefly/plans.html",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Adobe 대한민국 — 파트너 모델과 크레딧",
+        "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html",
+        "checked": "2026-10-27"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-04-15",
+      "text": "AI Markup 공개 및 Firefly 플랜 고객 대상 제공 시작"
+    },
+    {
+      "date": "2026-04-16",
+      "text": "국내 공식 발표에서 AI 마크업 도입 안내"
+    },
+    {
+      "date": "2026-10-27",
+      "text": "국내 개별 기능 도움말 + 요금 + 이용 조건 재검증"
+    }
+  ],
+  "theory": {
+    "definition": "AI 마크업(AI Markup)은 사진 위 표시와 글을 결합하는 생성형 편집 기능",
+    "analogy": "수선할 옷의 위치에 요청 메모를 붙이는 방식",
+    "comparison": {
+      "headers": [
+        "항목",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "지시",
+          "글로 위치 설명",
+          "사진 위 요청 위치 표시"
+        ],
+        [
+          "색상",
+          "촬영 당시 색",
+          "AI 편집 색"
+        ],
+        [
+          "검토",
+          "원본 보관",
+          "주변 변형과 색상 대조"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "위치",
+        "body": "요청 상자를 대상 가까이에 배치"
+      },
+      {
+        "title": "요청",
+        "body": "한 번에 변경 한 가지로 제한"
+      },
+      {
+        "title": "검토",
+        "body": "대상 밖 변형까지 원본과 대조"
+      }
+    ],
+    "can": [
+      "편집할 위치 표시",
+      "글로 색상 변경 요청",
+      "원본과 결과 비교"
+    ],
+    "cannot": [
+      "대상 밖 완벽한 보존 보장",
+      "실제 물건 색상의 증명",
+      "무료 계정의 핵심 실습 보장"
+    ],
+    "safety": [
+      "본인 촬영 또는 편집 허락 사진만 사용",
+      "개인정보와 타인 얼굴 업로드 금지",
+      "AI 편집 표시 + 원본 별도 보관",
+      "판매 사진에서 실제 색상 오인 유발 금지",
+      "파트너 모델 안내 검토 후 진행"
+    ]
+  },
+  "practice": {
+    "preview": "예상 작품: “파란 찻잔” + “AI 편집 이미지” + “손잡이 모양 보존 확인” 기록. 실제 생성 결과 아님",
+    "follow": [
+      {
+        "title": "사진 열기",
+        "minutes": 4,
+        "do": "Firefly → 이미지 → 이미지 편집 → 본인 사진 업로드 → 마크업 선택",
+        "prompt": "",
+        "expect": "원본 사진",
+        "note": "",
+        "input": {
+          "label": "Adobe Firefly 웹",
+          "url": "https://firefly.adobe.com/",
+          "location": "이미지 → 이미지 편집 → 마크업",
+          "kind": "web",
+          "note": "본인 Adobe ID + Firefly Standard 이상 유료 권한 + 크레딧 필요"
+        }
+      },
+      {
+        "title": "찻잔에 요청 붙이기",
+        "minutes": 7,
+        "do": "텍스트 옵션 → 찻잔 위치에 상자 배치 → 아래 요청 입력 → 모델 선택 → 차감 표시 확인 → 생성 1회",
+        "prompt": "이 찻잔의 색을 파란색으로 바꿔 주세요. 손잡이 모양과 배경은 가능한 한 유지해 주세요.",
+        "expect": "색상 편집 후보",
+        "note": "강사 사전 확인 모델 사용. 색상 이름의 색조 선택 가능",
+        "input": {
+          "label": "Adobe Firefly 웹",
+          "url": "https://firefly.adobe.com/",
+          "location": "마크업 → 텍스트 → 찻잔 위 요청 상자",
+          "kind": "web",
+          "note": "본인 Adobe ID + Firefly Standard 이상 유료 권한 + 크레딧 필요"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 색상으로 한 번 조정",
+        "minutes": 7,
+        "do": "원본을 다시 열어 마크업 선택 → 찻잔 위 텍스트 상자 → 원하는 색으로 요청 수정 → 비용 확인 후 생성",
+        "prompt": "이 찻잔의 색을 초록색으로 바꿔 주세요. 손잡이 모양과 배경은 가능한 한 유지해 주세요.",
+        "expect": "내 취향 색상 후보",
+        "note": "초록색을 원하는 색 한 가지로 변경. 누적 생성 2회 이내",
+        "input": {
+          "label": "Adobe Firefly 웹",
+          "url": "https://firefly.adobe.com/",
+          "location": "마크업 → 텍스트 → 찻잔 위 요청 상자",
+          "kind": "web",
+          "note": "본인 Adobe ID + Firefly Standard 이상 유료 권한 + 크레딧 필요"
+        }
+      },
+      {
+        "title": "비교 카드 완성",
+        "minutes": 9,
+        "do": "결과 화면과 원본 대조 → 작품명 + Before / After + AI 편집 표시 + 사용 여부 기록",
+        "prompt": "",
+        "expect": "편집 사진 1개 + 비교 기록 1장",
+        "note": "총 실습 27분. 다운로드 없이 화면과 기록지로 완료",
+        "input": {
+          "label": "종이 비교 기록지",
+          "url": null,
+          "location": "작품명 / Before / After / AI 편집 / 사용 여부 칸",
+          "kind": "manual",
+          "note": "직접 기록. 요금 불필요"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "기본 요청 한 번으로 색상 변화 기록"
+      },
+      {
+        "level": "중급",
+        "mission": "내 색상 요청 후 손잡이와 배경 변화 각각 대조"
+      },
+      {
+        "level": "고급",
+        "mission": "같은 비용 한도 안에서 텍스트 방식과 영역 지정 방식의 차이 관찰"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "선정 화면 + 선택 이유 + AI 편집 표시를 짝에게 설명",
+    "quiz": [
+      {
+        "q": "마크업의 요청 상자는 어디에 놓나요?",
+        "options": [
+          "편집할 찻잔 가까이",
+          "브라우저 주소창",
+          "다른 앱의 검색창",
+          "종이 뒷면"
+        ],
+        "answer": 0,
+        "explain": "바꿀 대상 가까이에 놓아 위치 전달. 글과 위치를 함께 활용하는 방식"
+      },
+      {
+        "q": "파란 찻잔 결과를 확인할 때 무엇을 함께 보나요?",
+        "options": [
+          "좋아요 수",
+          "손잡이와 배경의 변형",
+          "계정 비밀번호",
+          "다른 사람 연락처"
+        ],
+        "answer": 1,
+        "explain": "원하는 색상 외 주변도 변할 수 있음. 원본과 함께 비교할 것"
+      },
+      {
+        "q": "편집 사진을 소개할 때 알맞은 표시는 무엇인가요?",
+        "options": [
+          "실제 제품 색상 보증",
+          "다시 촬영한 원본",
+          "AI 편집 이미지",
+          "변경 없는 증거 사진"
+        ],
+        "answer": 2,
+        "explain": "AI로 바꾼 색상임을 표시. 실제 물건의 색상과 구분 필요"
+      }
+    ],
+    "next": [
+      "사진 위 영역 지정 실습",
+      "이미지 변경 사실을 알리는 문구 작성"
+    ],
+    "rubric": [
+      {
+        "criterion": "후보 선택과 검토",
+        "high": "직접 생성 + 후보 비교 + 왜곡 기록 + AI 표시 완료",
+        "mid": "도움을 받아 선택과 기록 완료",
+        "low": "예시 관찰 완료. 직접 생성 보충 필요"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~7분",
+        "content": "작품 예시 + Before / After",
+        "note": "취향과 사실성 구분"
+      },
+      {
+        "time": "7~17분",
+        "content": "위치 표시 + 원본 보관 + 유료 조건",
+        "note": "표준 무제한과 파트너 차감 구분"
+      },
+      {
+        "time": "17~28분",
+        "content": "사진 준비 + 첫 생성",
+        "note": "4분 + 7분"
+      },
+      {
+        "time": "28~44분",
+        "content": "내 색상 조정 + 비교 기록",
+        "note": "7분 + 9분"
+      },
+      {
+        "time": "44~50분",
+        "content": "작품 공유 + 핵심 문제 3개",
+        "note": "AI 표시 확인"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "오늘은 내 찻잔 사진 위에 요청 메모를 붙여 색을 바꿉니다. Before와 After에서 손잡이와 배경도 함께 살펴보세요."
+      },
+      {
+        "label": "입력",
+        "text": "Firefly 마크업의 텍스트 상자를 찻잔 가까이 놓고 요청을 적습니다. 생성 전에 비용 표시를 확인하세요."
+      },
+      {
+        "label": "검토",
+        "text": "내가 원하는 색이 나왔어도 실제 찻잔 색은 아닙니다. AI 편집 표시와 달라진 점을 기록해 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "권한·크레딧 부족",
+        "response": "강사 사전 예시와 원본 인쇄물로 비교 기록. 직접 버튼 실습 미완료 표시 후 적격 본인 계정으로 보충. 계정 공유·즉석 결제 금지"
+      },
+      {
+        "situation": "네트워크·생성 지연",
+        "response": "연속 생성 중단 → 인쇄 후보 비교 → 복구 시 잔액 확인 후 한 번만 재시도"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "마크업 없음",
+        "fix": "이미지 편집 탭과 본인 권한 확인. 미노출 시 Plan B"
+      },
+      {
+        "issue": "상자 위치 오류",
+        "fix": "대상 가까이 다시 배치"
+      },
+      {
+        "issue": "사진 파일 없음",
+        "fix": "사전 준비 찻잔 사진 폴더 확인"
+      },
+      {
+        "issue": "배경까지 변형",
+        "fix": "원본 대조 후 미사용 판단 기록. 무한 재생성 금지"
+      },
+      {
+        "issue": "결제 안내",
+        "fix": "중단 후 플랜·잔액 확인. 관찰 경로로 전환"
+      }
+    ],
+    "faq": [
+      {
+        "q": "한국에서 기능 제공 근거는?",
+        "a": "국내 AI 마크업 도입 발표 + 현재 기능별 한국 도움말에서 조작 경로 확인"
+      },
+      {
+        "q": "무료로 전부 실습 가능한가?",
+        "a": "마크업 무료 횟수 미확정. 본 수업 직접 생성은 Standard 이상 유료 기준"
+      },
+      {
+        "q": "API 키가 필요한가?",
+        "a": "Firefly 웹에서 진행. 별도 키 불필요"
+      },
+      {
+        "q": "원본과 같은 모양 보장인가?",
+        "a": "보장 없음. 손잡이와 주변 대조 필수"
+      },
+      {
+        "q": "사진 전체 색을 바꾸는 기능인가?",
+        "a": "표시한 위치와 요청으로 편집 의도 전달. 주변 변화도 발생 가능"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "브라우저 확대 + 큰 글씨 메뉴 카드 + 한 단계씩 함께 확인. 기본 프롬프트 유지"
+      },
+      {
+        "level": "중급",
+        "guide": "후보 두 개의 선택 근거를 서로 다른 기준으로 작성"
+      },
+      {
+        "level": "고급",
+        "guide": "재생성 없이 사용 목적별 적합성 평가표 작성"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "따뜻함·차가움 그림 카드 + 짧은 문장 틀 제공"
+      }
+    ],
+    "pro_points": [
+      "위치 지시와 결과 보존의 차이 설명",
+      "판매 물품 색상 왜곡 위험 토론",
+      "계정별 실제 모델 목록 사전 확인"
+    ],
+    "day_before": [
+      "본인 국내 계정에서 마크업 + 텍스트 상자 + 모델 목록 확인",
+      "찻잔 사진으로 생성 2회 예행연습 + 화면 캡처 준비",
+      "요금·모델별 차감량·크레딧 잔액 재확인",
+      "원본 + 강사 결과 + 큰 글씨 기록지 준비",
+      "27분 실습 리허설. 미노출 학습자 보충 일정 마련"
+    ]
+  },
+  "verification": [
+    "2026-10-27 기존 lessons.json 187건 전체 제목·도구·기능 및 releases.json 263건 대조. AI Markup·마크업 일치 없음. Precision Flow의 후보 슬라이더 선택과 사진 위 위치 지정 조작 구분",
+    "최근 14일 Canva 공식 뉴스룸·Gemini 릴리스·Runway 변경 기록 확인. Craft·Argon은 중복. Runway App Studio·MCP 추가 모델은 개별 국내 제공 근거 미확정으로 제외",
+    "미연결 지난 출시 44건 검토. Claude 금지·미국 한정 Finances·종료 공지·하드웨어·개발자 알파 제외. Sites·받아쓰기·음성 후속은 기존 교안과 중첩. 나머지는 개별 국내 기능·조건 근거 부족으로 보류",
+    "최근 6~12개월 공식 발표에서 2026-04-15 AI Markup 선정. 발표일을 작성일로 변경하지 않음. Adobe는 기존 AI 회사이므로 update",
+    "국내 기능별 도움말과 국내 도입 발표로 해당 기능 제공 확인 후 작성. 공식 출시 문서의 Firefly 플랜 조건과 현재 국내 Standard 요금 재검증",
+    "회사 분포 Google 31·OpenAI 28·xAI 27·Adobe 14건 등 비교. 무료 접근성보다 개별 기능 국내 근거와 실습 가능성 우선",
+    "[미검증] 로그인·생성 미수행. 모델별 실제 결과와 화면 배치는 강사 전날 재현 필요",
+    "제공 main 복사본 256474f 기준. 원격 main 조회는 github.com DNS 오류로 실패. 원격 최신 여부 추가 확인 불가",
+    "기존 교안 변경 없음. API 호출·외부 전송·커밋·푸시 없음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe — AI Markup 출시 발표",
+      "url": "https://news.adobe.com/news/downloads/pdfs/2026/04/04152026-adobeushersinanewera-3.pdf",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — AI 마크업 도입 발표",
+      "url": "https://news.adobe.com/ko/news/downloads/pdfs/2026/adobekr260416.pdf",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 마크업으로 이미지 편집하기",
+      "url": "https://helpx.adobe.com/kr/firefly/web/work-with-images/edit-images/use-ai-markup.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — Firefly 플랜",
+      "url": "https://www.adobe.com/kr/products/firefly/plans.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 파트너 모델 이용 조건",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Canva — 뉴스룸",
+      "url": "https://www.canva.com/newsroom/news/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Google — Gemini 릴리스 노트",
+      "url": "https://gemini.google/release-notes/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Runway — 변경 기록",
+      "url": "https://runway.com/changelog",
+      "checked": "2026-10-27"
+    }
+  ]
+}
