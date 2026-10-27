@@ -1,0 +1,571 @@
+{
+  "id": "AI-2026-10-CAT04-028",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-27T17:23:25+09:00",
+  "checked": "2026-10-27",
+  "review_by": "2027-01-27",
+  "title": "Lightroom 생성형 확장으로 찻잔 사진의 여백을 넓히고 비교 카드 만들기",
+  "summary": "① 찻잔 사진의 오른쪽 여백 생성 ② 후보 검토 ③ Before / After 관찰 기록",
+  "tool": "Adobe Lightroom",
+  "feature": "생성형 확장(Generative Expand) — 데스크탑 9.5의 Firefly Fill & Expand로 사진 테두리 밖 배경 생성",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-08-04",
+  "categories": [
+    "CAT-04"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-MKT",
+    "JOB-EDU",
+    "JOB-CRE"
+  ],
+  "learner_levels": [
+    "초급",
+    "중급"
+  ],
+  "instructor_levels": [
+    "초보강사",
+    "중급강사"
+  ],
+  "minutes": {
+    "theory": 17,
+    "practice": 27,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Lightroom 데스크탑 9.5 이상 설치된 PC 또는 Mac. Classic·웹 화면과 구별",
+    "본인 명의 데스크탑 포함 유료 구독 + 인터넷 + 사용 가능한 생성 크레딧",
+    "직접 촬영한 찻잔 JPG 1장. 오른쪽 배경이 단순하고 글자·사람·주소가 없는 사진",
+    "원본 보관 폴더 + 연습 결과 폴더 + 종이 관찰 카드"
+  ],
+  "outcome": "오른쪽 여백을 넓힌 찻잔 JPG 1개 + Before / After 관찰 카드 1장",
+  "objectives": [
+    "일반 자르기와 AI 여백 생성의 차이를 구별할 수 있다",
+    "생성 후보를 비교하여 적합한 배경을 선택할 수 있다",
+    "추가된 배경을 AI 편집으로 표시하고 한계를 기록할 수 있다"
+  ],
+  "glance": {
+    "emoji": "↔️",
+    "one_liner": "찻잔 사진 밖에 여백 만들기",
+    "cards": [
+      {
+        "icon": "☕",
+        "title": "사진 한 장",
+        "text": "직접 찍은 찻잔 JPG"
+      },
+      {
+        "icon": "↔️",
+        "title": "여백 확장",
+        "text": "오른쪽 배경 조금 넓히기"
+      },
+      {
+        "icon": "🔎",
+        "title": "사람이 선택",
+        "text": "후보 비교 + AI 편집 표시"
+      }
+    ],
+    "diagram": {
+      "title": "원본에서 내 사진 작품까지",
+      "nodes": [
+        {
+          "icon": "📷",
+          "label": "원본 사진"
+        },
+        {
+          "icon": "↔️",
+          "label": "경계 넓히기"
+        },
+        {
+          "icon": "✨",
+          "label": "배경 생성"
+        },
+        {
+          "icon": "🔎",
+          "label": "검토·보관"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "찻잔 오른쪽이 좁아 답답한 사진"
+      },
+      "after": {
+        "label": "After",
+        "text": "배경 여백을 넓힌 사진 + AI 편집 관찰 카드"
+      }
+    },
+    "cautions": [
+      "생성 배경은 실제 풍경 아님",
+      "원본 별도 보관",
+      "추가 생성 전 잔액 확인"
+    ]
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "데스크탑 유료 권한 필요. 무료 모바일 설치만으로 이번 실습 권한 충족 불가",
+    "plans": [
+      {
+        "name": "Lightroom",
+        "price": "₩13,200/월, 부가세 포함, 연간 계약·매월 청구",
+        "features": [
+          "데스크탑 Lightroom 포함",
+          "월 생성 크레딧 250개"
+        ]
+      },
+      {
+        "name": "포토그래피",
+        "price": "₩26,400/월, 부가세 포함, 연간 계약·매월 청구",
+        "features": [
+          "Lightroom + Photoshop 포함",
+          "월 생성 크레딧 1,000개"
+        ]
+      }
+    ],
+    "note": "2026-10-27 국내 개인용 공식 요금표 확인. Firefly 방식은 크레딧 사용. 정확한 실행당 차감량은 앱의 크레딧 아이콘에서 확인하며 임의 수치 미기재. 내용 인식 채우기는 크레딧 미사용 방식이나 핵심 Firefly 실습의 대체 완료로 계산하지 않음. 조직 계정은 관리자 할당 별도 확인. 체험·현장 결제 없이 기존 유료 권한으로 진행",
+    "checked": "2026-10-27",
+    "sources": [
+      {
+        "title": "Adobe 대한민국 — Lightroom 가격 및 멤버십",
+        "url": "https://www.adobe.com/kr/products/photoshop-lightroom/plans.html"
+      },
+      {
+        "title": "Adobe 대한민국 — 생성 크레딧 FAQ",
+        "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-08-04",
+      "text": "Adobe Lightroom 팀의 데스크탑 9.5 출시 공지: 생성형 확장 도입"
+    },
+    {
+      "date": "2026-10-27",
+      "text": "국내 기능 도움말·릴리스 정보·개인용 요금표 재확인. 원래 출시일 유지"
+    }
+  ],
+  "theory": {
+    "definition": "생성형 확장(Generative Expand): 사진 바깥에 새 배경을 합성하여 구도를 조정하는 AI 편집",
+    "analogy": "좁은 액자를 넓히고 빈 부분을 상상 그림으로 채우는 작업. 실제로 찍힌 부분과 새로 그린 부분 구별 필요",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "화면 구성",
+          "찻잔 옆 여백 부족",
+          "찻잔 옆 배경 추가"
+        ],
+        [
+          "사실성",
+          "촬영한 장면",
+          "원본 + AI가 만든 영역"
+        ],
+        [
+          "학습 결과",
+          "사진만 보관",
+          "편집 사진 + 관찰 기록"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "자르기와 확장",
+        "body": "자르기는 화면 범위 조절, 생성형 확장은 사진 밖 콘텐츠 추가"
+      },
+      {
+        "title": "방법 선택",
+        "body": "이번 핵심 실습은 Firefly Fill & Expand. 내용 인식 채우기와 구별"
+      },
+      {
+        "title": "검토 책임",
+        "body": "자연스러움과 사실은 별개. 컵 테두리·탁자 무늬·그림자 관찰"
+      }
+    ],
+    "can": [
+      "좁은 사진에 배경 여유 추가",
+      "생성 후보 중 사용할 결과 선택",
+      "구도 변경에 따른 전달 느낌 비교"
+    ],
+    "cannot": [
+      "사진 밖 실제 물체의 정확한 복원 보장",
+      "어떤 사진에서도 자연스러운 결과 보장",
+      "이번 경로를 Lightroom Classic·웹에 그대로 적용"
+    ],
+    "safety": [
+      "직접 촬영하거나 편집 허락받은 사진만 사용",
+      "가족 얼굴·주소·문서가 담긴 사진 제외",
+      "원본 파일 별도 보관 + AI로 배경 확장 표시",
+      "제품 판매 사진은 실제 크기·구성 오해 여부 점검",
+      "기록·증거·보도용 사진의 사실 장면처럼 제시 금지"
+    ]
+  },
+  "practice": {
+    "preview": "수업용 가상 예시: “찻잔 곁의 여유” + “Before: 오른쪽이 좁음 / After: 탁자 배경 추가” + “AI로 배경 확장” 표시. 실제 실행 결과 아님",
+    "follow": [
+      {
+        "title": "연습 사진 열기",
+        "minutes": 4,
+        "do": "Lightroom 데스크탑에서 연습 JPG 열기 → 원본의 오른쪽 여백 관찰",
+        "prompt": "",
+        "expect": "편집 전 사진 확인",
+        "note": "파일 가져오기·열기 경로는 수업 계정에서 강사 사전 확인. 원본 덮어쓰기 제외",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "사진 보기 → 연습 JPG",
+          "kind": "app",
+          "note": "본인 Lightroom 데스크탑 유료 권한 + 로그인 + 인터넷. Firefly 실행 전 크레딧 잔액 확인"
+        }
+      },
+      {
+        "title": "오른쪽 경계 조금 넓히기",
+        "minutes": 5,
+        "do": "자르기, 회전, 도형 패널 → 확장 활성화 → 필요 시 종횡비 잠금 해제 → 오른쪽 경계만 조금 바깥으로 드래그",
+        "prompt": "",
+        "expect": "새로 채울 빈 공간",
+        "note": "큰 폭 대신 작은 폭으로 시작. 찻잔 자체의 크기 변경 제외",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "자르기, 회전, 도형 → 확장 활성화",
+          "kind": "app",
+          "note": "본인 Lightroom 데스크탑 유료 권한 + 로그인 + 인터넷. Firefly 실행 전 크레딧 잔액 확인"
+        }
+      },
+      {
+        "title": "Firefly로 한 번 생성",
+        "minutes": 6,
+        "do": "생성형 확장 패널 → 방법 → Firefly Fill & Expand → 크레딧 아이콘 확인 → 생성 → 처리 완료 대기",
+        "prompt": "",
+        "expect": "선택할 생성 후보",
+        "note": "글 요청문 없이 버튼 조작. 잔액 부족이면 중단. 더 생성하기는 이번 기본 실습에서 제외",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "생성형 확장 → 방법 → Firefly Fill & Expand → 생성",
+          "kind": "app",
+          "note": "본인 Lightroom 데스크탑 유료 권한 + 로그인 + 인터넷. Firefly 실행 전 크레딧 잔액 확인"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 마음에 드는 후보 고르기",
+        "minutes": 5,
+        "do": "화살표로 후보 비교 → 찻잔 손잡이·탁자 무늬·그림자 확대 관찰 → 원하는 후보 선택 → 유지",
+        "prompt": "",
+        "expect": "내가 고른 여백 확장 사진",
+        "note": "자연스러운 후보가 없으면 부적합 이유 기록. 반복 생성 강요 금지",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "생성형 확장 → 후보 화살표 → 유지",
+          "kind": "app",
+          "note": "본인 Lightroom 데스크탑 유료 권한 + 로그인 + 인터넷. Firefly 실행 전 크레딧 잔액 확인"
+        }
+      },
+      {
+        "title": "사진 내보내기",
+        "minutes": 4,
+        "do": "내보내기 또는 공유 아이콘 → JPG 형식 → 연습 결과 폴더 → 새 파일명으로 저장",
+        "prompt": "",
+        "expect": "찻잔_여백_AI.jpg 1개",
+        "note": "[확인 필요] 버전별 아이콘 위치는 사전 리허설에서 확인. 결과를 다시 열어 저장 성공 확인",
+        "input": {
+          "label": "Adobe Lightroom 데스크탑 앱",
+          "url": null,
+          "location": "사진 보기 → 내보내기 → JPG → 저장 위치",
+          "kind": "app",
+          "note": "본인 Lightroom 데스크탑 유료 권한 + 로그인 + 인터넷. Firefly 실행 전 크레딧 잔액 확인"
+        }
+      },
+      {
+        "title": "Before / After 카드 기록",
+        "minutes": 3,
+        "do": "종이에 작품명 + Before + After + 선택 이유 + AI 편집 표시 작성",
+        "prompt": "",
+        "expect": "관찰 카드 1장",
+        "note": "실습 합계 27분. 사진 밖의 실제 모습은 알 수 없다는 점 포함",
+        "input": {
+          "label": "종이 관찰 카드",
+          "url": null,
+          "location": "작품명 / Before / After / 선택 이유 / AI 편집 표시 칸",
+          "kind": "manual",
+          "note": "손으로 직접 기록. AI 채팅창 입력 불필요"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "강사와 같은 사진으로 생성 1회 후 달라진 곳 한 가지 표시"
+      },
+      {
+        "level": "중급",
+        "mission": "추가 생성 없이 후보의 장단점 두 가지씩 기록"
+      },
+      {
+        "level": "고급",
+        "mission": "사진 사용 목적별로 생성 배경 허용 여부 판단"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "내 사진 + 후보 선택 이유 + 생성된 영역 한 곳 공유",
+    "quiz": [
+      {
+        "q": "사진 바깥에 추가된 배경은 무엇인가요?",
+        "options": [
+          "카메라가 숨겨 놓은 정확한 원본",
+          "AI가 새로 만든 콘텐츠",
+          "항상 실제 촬영 장소",
+          "사진의 촬영 날짜"
+        ],
+        "answer": 1,
+        "explain": "사진 밖 장면을 정확히 되찾은 것으로 단정 불가. 새로 만든 배경으로 이해"
+      },
+      {
+        "q": "추가 생성 버튼을 누르기 전에 무엇을 살펴볼까요?",
+        "options": [
+          "친구 비밀번호",
+          "결제 카드 번호",
+          "현재 후보와 크레딧 잔액",
+          "주소록 전체"
+        ],
+        "answer": 2,
+        "explain": "현재 후보부터 살펴보면 불필요한 재생성 방지 가능. Firefly 방식은 크레딧 사용"
+      },
+      {
+        "q": "완성 사진을 나눌 때 적절한 설명은 무엇인가요?",
+        "options": [
+          "AI로 배경을 확장한 사진",
+          "손대지 않은 원본 사진",
+          "실제 장소를 완벽히 복원한 사진",
+          "AI 편집 여부를 알 수 없는 사진"
+        ],
+        "answer": 0,
+        "explain": "편집 사실을 밝히면 다른 사람의 오해 예방 가능. 원본도 따로 보관"
+      }
+    ],
+    "next": [
+      "실제 촬영 사진과 AI 합성 사진의 용도 구별",
+      "이미지 공개 시 개인정보·권리 점검"
+    ],
+    "rubric": [
+      {
+        "criterion": "작품과 관찰",
+        "high": "JPG + 비교 카드 + 생성 영역 설명 완성",
+        "mid": "도움을 받아 작품과 카드 완성",
+        "low": "관찰만 완료. 직접 실행 보충 필요"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~7분",
+        "content": "예시 작품 + Before / After",
+        "note": "추가 배경과 원본 구별"
+      },
+      {
+        "time": "7~17분",
+        "content": "원리 + 요금 + 사진 권리",
+        "note": "Classic과 데스크탑 Lightroom 구별"
+      },
+      {
+        "time": "17~32분",
+        "content": "사진 열기 + 경계 확장 + 생성",
+        "note": "4분 + 5분 + 6분"
+      },
+      {
+        "time": "32~44분",
+        "content": "후보 선택 + 내보내기 + 카드",
+        "note": "5분 + 4분 + 3분"
+      },
+      {
+        "time": "44~50분",
+        "content": "작품 공유 + 핵심 문제 3개",
+        "note": "사진이 자연스러워도 사실 복원은 아님"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "오늘은 직접 찍은 찻잔 사진의 오른쪽 여백을 넓혀 보겠습니다. 사진 밖은 AI가 새로 그린 부분입니다. 실제 탁자가 어떻게 생겼는지 되찾는 작업은 아닙니다."
+      },
+      {
+        "label": "실행",
+        "text": "오른쪽 선만 조금 움직여 주세요. 방법에서 Firefly Fill & Expand를 고르고, 잔액을 확인한 다음 생성은 한 번만 누릅니다."
+      },
+      {
+        "label": "정리",
+        "text": "Before와 After를 보고 무엇이 달라졌는지 적어 보세요. 자연스럽지 않은 곳을 발견했다면 그 관찰도 좋은 결과입니다."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "유료 권한·크레딧 부족",
+        "response": "강사 사전 인쇄 예시로 후보 비교와 카드 기록. 직접 실습 미완료 표시 후 적격 계정으로 보충. 현장 결제·계정 공유 제외"
+      },
+      {
+        "situation": "처리 지연·인터넷 장애",
+        "response": "반복 생성 중단 → 인쇄 예시 관찰 → 복구 후 완료 상태·잔액 확인"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "확장 활성화가 안 보임",
+        "fix": "Lightroom 데스크탑 9.5 이상인지 확인. Classic·웹 화면과 구별 후 강사 점검"
+      },
+      {
+        "issue": "경계가 한꺼번에 움직임",
+        "fix": "종횡비 잠금 상태 확인 후 오른쪽 경계만 소폭 조절"
+      },
+      {
+        "issue": "원하는 방법을 선택하지 못함",
+        "fix": "Firefly 권한·로그인·인터넷 점검 후 미해결 시 Plan B"
+      },
+      {
+        "issue": "탁자 무늬나 찻잔이 이상함",
+        "fix": "후보를 비교하고 원본 대조. 부적합 이유 카드 기록"
+      },
+      {
+        "issue": "저장 파일을 찾지 못함",
+        "fix": "연습 결과 폴더와 파일명 확인 후 JPG 다시 열기"
+      }
+    ],
+    "faq": [
+      {
+        "q": "무료 모바일 앱으로 가능한가?",
+        "a": "이번 수업은 데스크탑 유료 구독 기준. 무료 앱 설치를 핵심 기능 권한으로 간주하지 않음"
+      },
+      {
+        "q": "프롬프트를 어디에 붙이는가?",
+        "a": "이번 실습은 글 요청문 없이 Lightroom 버튼으로 진행"
+      },
+      {
+        "q": "한국 제공 근거는?",
+        "a": "국내 해당 기능 전용 도움말과 9.5 새 기능 안내 확인. 국내 개인용 요금표로 데스크탑 구독 조건 대조"
+      },
+      {
+        "q": "내용 인식 채우기를 선택해도 되는가?",
+        "a": "다른 방법임. 이번 평가의 Firefly 실행 완료로 계산하지 않음"
+      },
+      {
+        "q": "실제 탁자의 모습이 복원되는가?",
+        "a": "복원 보장 없음. 사진 밖은 생성 콘텐츠로 표시"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·40~60대",
+        "guide": "큰 메뉴 카드 + 강사와 같은 사진 + 경계 한 곳만 드래그"
+      },
+      {
+        "level": "중급",
+        "guide": "후보 선택 이유를 빛·무늬 기준으로 구분"
+      },
+      {
+        "level": "고급",
+        "guide": "홍보용·기록용 사용 적합성 비교"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "여백·경계·원본 그림 낱말 카드 + 짧은 관찰 문장 틀"
+      }
+    ],
+    "pro_points": [
+      "실제 촬영 영역과 생성 영역의 출처 구별",
+      "자연스러운 외관과 사실성의 차이 강조",
+      "추가 생성 횟수보다 검토 품질 평가"
+    ],
+    "day_before": [
+      "국내 본인 계정에서 데스크탑 유료 권한·9.5 이상·버튼·잔액 확인",
+      "찻잔 JPG 권리·개인정보 확인 + 원본 별도 복사",
+      "경계 드래그·생성·유지·JPG 저장을 27분 안에 리허설",
+      "생성 전후 차감량 확인. 수업 자료에 임의 크레딧 수치 삽입 금지",
+      "[확인 필요] 사진 열기·내보내기 아이콘 위치 사전 캡처 + 확대 인쇄 후보 준비"
+    ]
+  },
+  "verification": [
+    "2026-10-27 lessons.json 190건의 전체 제목·도구·기능과 releases.json 266건 목록 대조. 생성형 확장·Generative Expand 독립 교안 없음. Lightroom 먼지·반사 제거·선별 및 Photoshop 업스케일·하모나이즈와 별도 기능",
+    "회사 분포 Google 31·OpenAI 28·xAI 27·Genspark (MainFunc) 19·Adobe 17건 등 검토. 무료 접근성도 고려했으나 개별 기능 국내 제공 근거가 명확한 유료 후보 선정",
+    "최근 14일 Canva 뉴스룸·Gemini 릴리스·Runway 변경 기록 및 Microsoft 공식 검색 결과 탐색. Craft·Argon·Customize 등 중복. Runway App Studio·Mirelo·BiRefNet·Fish Audio는 개별 국내 조건 미확정으로 제외",
+    "미연결 지난 출시 44건 검토: Claude 관련은 사용 금지, Finances·Playground 등은 기존 검증 기록의 미국 제한을 재검증하기 전 미선정, Sites·음성·학습 도구는 기존 교안과 중첩, 하드웨어·개발자 알파·조직 기능은 국내 초급 실습 조건 불충분. Excel Copilot Show Changes 재선정 없음",
+    "지난 공식 릴리스 추가 탐색으로 Lightroom 9.5 발굴. 2026-08-04 담당 팀 공지로 출시일 확인. 9월 재안내일을 최초 출시일로 사용하지 않음. 기존 AI 제공 회사의 기능이므로 update",
+    "작성 전 국내 생성형 확장 전용 도움말·9.5 기능 안내·개인용 요금표·크레딧 FAQ로 이용 조건 확인. 모바일 무료·Classic·조직 계정으로 권한 확대 추정 없음",
+    "[미검증] 로그인·실제 생성·파일 저장 미수행. 공식 버튼 경로 기준 설계. [확인 필요] 버전별 파일 열기·내보내기 위치는 강사 사전 재현 필요",
+    "로컬 main 4cca971 기준. git ls-remote origin refs/heads/main은 github.com DNS 오류로 실패하여 원격 main 최신 여부 확인 불가",
+    "기존 교안 수정·API 호출·외부 알림·커밋·푸시 없음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe Lightroom 팀 — 9.5 출시 공지",
+      "url": "https://community.adobe.com/announcements-678/lightroom-v9-5-is-live-generative-expand-precision-masking-and-faster-photo-editing-1635108",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 새 기능",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/introduction/whats-new.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 생성형 확장으로 사진 확장",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/edit-photos/extend-photos-with-generative-expand.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe — Extend photos with Generative Expand",
+      "url": "https://helpx.adobe.com/lightroom/desktop/edit-photos/extend-photos-with-generative-expand.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe Learn — Reframe your photos with Generative Expand",
+      "url": "https://www.adobe.com/learn/lightroom-cc/web/generative-expand-photo",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 가격 및 멤버십",
+      "url": "https://www.adobe.com/kr/products/photoshop-lightroom/plans.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 생성 크레딧 FAQ",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — 사진 내보내기 및 공유",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/save-share-and-export/save-share-photos.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Adobe 대한민국 — Lightroom 데스크탑 릴리스 정보",
+      "url": "https://helpx.adobe.com/kr/lightroom/desktop/introduction/release-notes.html",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Canva — 뉴스룸",
+      "url": "https://www.canva.com/newsroom/news/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Google — Gemini 릴리스 노트",
+      "url": "https://gemini.google/release-notes/",
+      "checked": "2026-10-27"
+    },
+    {
+      "title": "Runway — 변경 기록",
+      "url": "https://runway.com/changelog",
+      "checked": "2026-10-27"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T14:27:32+09:00",
+  "updated_at": "2026-10-27T17:23:25+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3991,6 +3991,21 @@
       },
       "checked": "2026-10-27",
       "lesson_id": "AI-2026-10-CAT04-027"
+    },
+    {
+      "id": "lightroom-2026-08-04-generative-expand",
+      "date": "2026-08-04",
+      "tool": "Adobe Lightroom",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Lightroom 9.5 생성형 확장",
+      "summary": "① 사진 테두리 밖 배경 생성 ② Firefly 후보 선택 ③ 구도 조정",
+      "source": {
+        "title": "Adobe Lightroom 팀 — 9.5 출시 공지",
+        "url": "https://community.adobe.com/announcements-678/lightroom-v9-5-is-live-generative-expand-precision-masking-and-faster-photo-editing-1635108"
+      },
+      "checked": "2026-10-27",
+      "lesson_id": "AI-2026-10-CAT04-028"
     }
   ]
 }
