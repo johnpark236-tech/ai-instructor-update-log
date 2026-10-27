@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 188,
+  "count": 189,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-026",
+      "version": "v1.0",
+      "created_at": "2026-10-27T11:25:16+09:00",
+      "checked": "2026-10-27",
+      "review_by": "2027-01-27",
+      "title": "Photoshop 오브젝트 회전으로 장난감 자동차의 새 각도 이미지 만들기",
+      "summary": "① 사진 속 물체의 방향 조정 ② 같은 레이어 재편집 ③ Before / After 관찰 카드 작성",
+      "tool": "Adobe Photoshop",
+      "feature": "오브젝트 회전(Rotate Object) — 사진의 픽셀 레이어를 회전 가능한 3D 오브젝트로 변환하고 방향·기울기 조정",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-03-12",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-CRE",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "장난감 자동차 새 각도 이미지 1개 + Before / After 관찰 카드 1장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🚗",
+      "one_liner": "사진 속 자동차를 다른 각도로 돌리기"
+    },
     {
       "id": "AI-2026-10-CAT04-025",
       "version": "v1.0",

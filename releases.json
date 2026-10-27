@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T08:27:32+09:00",
+  "updated_at": "2026-10-27T11:25:16+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -3961,6 +3961,21 @@
       },
       "checked": "2026-10-27",
       "lesson_id": "AI-2026-10-CAT04-025"
+    },
+    {
+      "id": "photoshop-2026-03-12-rotate-object",
+      "date": "2026-03-12",
+      "tool": "Adobe Photoshop",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Photoshop 오브젝트 회전 최초 공개 베타",
+      "summary": "① 사진 속 물체의 3차원 회전 ② 방향·기울기 조정 ③ 완료 후 전체 해상도 렌더링",
+      "source": {
+        "title": "Adobe Photoshop 팀 — Rotate Object 최초 공개 베타 발표",
+        "url": "https://community.adobe.com/announcements-698/rotate-object-is-now-available-in-beta-1553466/index1.html"
+      },
+      "checked": "2026-10-27",
+      "lesson_id": "AI-2026-10-CAT04-026"
     }
   ]
 }
