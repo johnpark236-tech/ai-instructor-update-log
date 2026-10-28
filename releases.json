@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-29T00:47:46+09:00",
+  "updated_at": "2026-10-29T04:49:43+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "samsung-2026-02-25-call-screening",
+      "date": "2026-02-25",
+      "tool": "Samsung Galaxy AI — 통화 스크리닝",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "title": "Galaxy S26 통화 스크리닝 — AI 이름·용건 확인 후 직접 통화",
+      "summary": "① 수신 시 AI 대리 응답 ② 이름·용건 텍스트 확인 ③ 직접 통화 전환. 국내 S26 공식 사용법·한국어·기본 무료 조건 확인",
+      "source": {
+        "title": "삼성전자, 3세대 AI폰 갤럭시 S26 시리즈 공개",
+        "url": "https://news.samsung.com/kr/삼성전자-3세대-ai폰-갤럭시-s26-시리즈-공개"
+      },
+      "checked": "2026-10-28",
+      "lesson_id": "AI-2026-10-CAT01-014"
+    },
     {
       "id": "samsung-2026-02-25-creative-studio",
       "date": "2026-02-25",
