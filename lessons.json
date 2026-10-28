@@ -1,7 +1,43 @@
 {
   "standard": "v2.3",
-  "count": 198,
+  "count": 199,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-032",
+      "version": "v1.0",
+      "created_at": "2026-10-28T17:59:14+09:00",
+      "checked": "2026-10-28",
+      "review_by": "2027-01-28",
+      "title": "갤럭시 S26 포토 어시스트로 찻잔 사진에 꽃을 더하고 비교 기록 만들기",
+      "summary": "① 내 사진을 텍스트로 편집 ② 계속 편집으로 색 변경 ③ 원본과 비교 후 사본 저장",
+      "tool": "Samsung Galaxy AI — 포토 어시스트",
+      "feature": "Photo Assist — Galaxy S26 텍스트 기반 만들기·계속 편집·다른 파일로 저장",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "released": "2026-02-25",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 꽃을 추가한 창작 찻잔 사진 사본 1장 ② Before / After 변화·오류 검토지 1장",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🌼",
+      "one_liner": "내 찻잔 사진에 말로 꽃 더하기"
+    },
     {
       "id": "AI-2026-10-CAT04-031",
       "version": "v1.0",

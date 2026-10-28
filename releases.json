@@ -4111,6 +4111,21 @@
       },
       "checked": "2026-10-27",
       "lesson_id": "AI-2026-10-CAT03-037"
+    },
+    {
+      "id": "samsung-2026-02-25-photo-assist-text",
+      "date": "2026-02-25",
+      "tool": "Samsung Galaxy AI — 포토 어시스트",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "title": "Galaxy S26 Photo Assist — 텍스트 기반 사진 편집·계속 편집",
+      "summary": "① 문장으로 사진 수정 ② 연속 편집 ③ 사본 저장. 국내 S26 기본 기능·계정·네트워크 조건",
+      "source": {
+        "title": "삼성전자, 3세대 AI폰 ‘갤럭시 S26 시리즈’ 공개",
+        "url": "https://news.samsung.com/kr/삼성전자-3세대-ai폰-갤럭시-s26-시리즈-공개"
+      },
+      "checked": "2026-10-28",
+      "lesson_id": "AI-2026-10-CAT04-032"
     }
   ]
 }
