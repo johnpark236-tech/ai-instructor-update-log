@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-28T04:56:44+09:00",
+  "updated_at": "2026-10-28T09:43:22+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "illustrator-2026-06-24-ai-assistant-public-beta",
+      "date": "2026-06-24",
+      "tool": "Adobe Illustrator(Beta)",
+      "company": "Adobe",
+      "type": "update",
+      "title": "Illustrator 앱 내 AI 어시스턴트 공개 베타",
+      "summary": "① 열린 문서 구조 분석 ② 여러 아트보드의 문구 일괄 수정 ③ 구독자 공개 베타·AI 크레딧 조건",
+      "source": {
+        "title": "Adobe 코리아 — Illustrator 등 앱 내 AI 어시스턴트 공개 베타 발표",
+        "url": "https://blog.adobe.com/ko/publish/2026/06/24/adobe-firefly-introduces-new-agentic-capabilities-and-an-upgraded-creative-ai-studio-built-for-the-way-you-work"
+      },
+      "checked": "2026-10-28",
+      "lesson_id": "AI-2026-10-CAT04-030"
+    },
     {
       "id": "lightroom-2026-06-15-assisted-culling-ga",
       "date": "2026-06-15",

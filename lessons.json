@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 196,
+  "count": 197,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-030",
+      "version": "v1.0",
+      "created_at": "2026-10-28T09:43:22+09:00",
+      "checked": "2026-10-28",
+      "review_by": "2027-01-28",
+      "title": "Illustrator AI 어시스턴트로 두 안내 카드의 문구를 한 번에 고치기",
+      "summary": "① 앱 내 AI 어시스턴트로 문구 일괄 수정 ② 날짜·모양 대조 ③ 안내 카드 파일 저장",
+      "tool": "Adobe Illustrator(Beta)",
+      "feature": "AI Assistant 공개 베타 — 열린 문서의 여러 아트보드에 걸친 텍스트 업데이트",
+      "company": "Adobe",
+      "type": "update",
+      "released": "2026-06-24",
+      "categories": [
+        "CAT-04",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-MKT",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "가상 독서 모임 안내 카드 파일 1개: ① 제목을 바꾼 아트보드 2개 ② 날짜·모양 대조 기록",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🪧",
+      "one_liner": "두 카드의 문구를 대화로 일괄 수정"
+    },
     {
       "id": "AI-2026-10-CAT03-037",
       "version": "v1.0",

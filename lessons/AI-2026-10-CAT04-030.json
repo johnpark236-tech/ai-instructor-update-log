@@ -1,0 +1,551 @@
+{
+  "id": "AI-2026-10-CAT04-030",
+  "version": "v1.0",
+  "stage": "standard",
+  "created_at": "2026-10-28T09:43:22+09:00",
+  "checked": "2026-10-28",
+  "review_by": "2027-01-28",
+  "title": "Illustrator AI 어시스턴트로 두 안내 카드의 문구를 한 번에 고치기",
+  "summary": "① 앱 내 AI 어시스턴트로 문구 일괄 수정 ② 날짜·모양 대조 ③ 안내 카드 파일 저장",
+  "tool": "Adobe Illustrator(Beta)",
+  "feature": "AI Assistant 공개 베타 — 열린 문서의 여러 아트보드에 걸친 텍스트 업데이트",
+  "company": "Adobe",
+  "type": "update",
+  "released": "2026-06-24",
+  "categories": [
+    "CAT-04",
+    "CAT-03"
+  ],
+  "jobs": [
+    "JOB-SEN",
+    "JOB-PUB",
+    "JOB-MKT",
+    "JOB-EDU"
+  ],
+  "learner_levels": [
+    "초급"
+  ],
+  "instructor_levels": [
+    "중급강사",
+    "고급강사"
+  ],
+  "minutes": {
+    "theory": 17,
+    "practice": 27,
+    "wrap": 6
+  },
+  "prerequisites": [
+    "Illustrator 개인 유료 구독 + 최신 Illustrator(Beta) 설치 + Adobe 로그인 + 인터넷 + 잔여 AI 크레딧 필요. 조직 계정은 관리자 베타 허용 별도 확인",
+    "마우스 선택·복사·문자 입력 경험 + 개인 연습 폴더 + 종이",
+    "베타 앱 설치·로그인·패널 표시 확인은 수업 전 완료",
+    "실제 행사 대신 가상 모임 사용. 카드에 전화번호·주소 입력 제외"
+  ],
+  "outcome": "가상 독서 모임 안내 카드 파일 1개: ① 제목을 바꾼 아트보드 2개 ② 날짜·모양 대조 기록",
+  "objectives": [
+    "열린 문서의 수정 범위를 정할 수 있다",
+    "AI 어시스턴트로 두 카드의 문구를 고칠 수 있다",
+    "원문과 결과의 날짜·배치를 대조할 수 있다"
+  ],
+  "glance": {
+    "emoji": "🪧",
+    "one_liner": "두 카드의 문구를 대화로 일괄 수정",
+    "cards": [
+      {
+        "icon": "💬",
+        "title": "앱 안에서",
+        "text": "베타 앱 AI 패널에 요청"
+      },
+      {
+        "icon": "🗂️",
+        "title": "한 문서",
+        "text": "두 아트보드의 글자 수정"
+      },
+      {
+        "icon": "🔎",
+        "title": "직접 검토",
+        "text": "날짜·위치 유지 여부 대조"
+      }
+    ],
+    "diagram": {
+      "title": "원본에서 검토본까지",
+      "nodes": [
+        {
+          "icon": "📝",
+          "label": "카드 준비"
+        },
+        {
+          "icon": "💬",
+          "label": "수정 요청"
+        },
+        {
+          "icon": "🔎",
+          "label": "두 장 대조"
+        },
+        {
+          "icon": "💾",
+          "label": "검토본 저장"
+        }
+      ]
+    },
+    "before_after": {
+      "before": {
+        "label": "Before",
+        "text": "두 카드에 같은 제목이 있으나 각각 수정 필요"
+      },
+      "after": {
+        "label": "After",
+        "text": "한 번의 요청으로 두 제목 수정 후 날짜·배치 확인"
+      }
+    },
+    "cautions": [
+      "베타 앱·유료 계정 필요",
+      "개인정보 없는 가상 문구 사용",
+      "자동 편집 후 두 장 모두 검토"
+    ]
+  },
+  "pricing": {
+    "access": "paid",
+    "summary": "실습은 Illustrator 유료 구독자의 공개 베타 경로 사용",
+    "plans": [
+      {
+        "name": "Illustrator 개인 플랜",
+        "price": "₩34,900/월, 부가세 포함, 연간 약정·매월 청구",
+        "features": [
+          "국내 공식 요금 페이지의 현재 표시가",
+          "Creative Cloud 앱에서 Illustrator(Beta) 설치 후 실습",
+          "AI 작업은 잔여 크레딧 범위에서 사용"
+        ]
+      },
+      {
+        "name": "무료 Adobe 계정만 보유",
+        "price": "계정 생성 무료",
+        "features": [
+          "이 교안의 데스크탑 베타 실습 경로로 안내하지 않음",
+          "공개 베타 이용은 Creative Cloud 앱 구독자 대상"
+        ]
+      }
+    ],
+    "note": "2026-10-28 공식 원문 표시가 확인. 검색 요약의 과거 ₩30,800과 구분. 연간 약정 상품을 월 단위 무약정으로 오인 금지. 2026-10-01부터 일부 AI 어시스턴트 작업에 크레딧 사용. 작업별 소모량은 완료 후 크레딧 아이콘에서 확인하며 고정 횟수 보장 불가. 무료 사용자 안내 문구만으로 무료 데스크탑 라이선스 보장 불가",
+    "checked": "2026-10-28",
+    "sources": [
+      {
+        "title": "Illustrator 플랜 비교 — 한국 공식 요금",
+        "url": "https://www.adobe.com/kr/products/illustrator/plans.html"
+      },
+      {
+        "title": "데스크탑용 Adobe Illustrator(Beta) 개요",
+        "url": "https://helpx.adobe.com/kr/illustrator/desktop/new-features/illustrator-beta-overview.html"
+      },
+      {
+        "title": "Adobe Illustrator(beta)에서 AI 어시스턴트 시작하기",
+        "url": "https://helpx.adobe.com/kr/illustrator/desktop/use-ai-assistant/about-using-ai-assistant-in-illustrator.html"
+      },
+      {
+        "title": "생성 크레딧 FAQ",
+        "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-06-24",
+      "text": "Adobe 코리아 공식 발표에서 Illustrator 앱 내 AI 어시스턴트 공개 베타 제공 안내"
+    },
+    {
+      "date": "2026-10-01",
+      "text": "현재 도움말에 명시된 유료 플랜의 일부 AI 작업 크레딧 사용 시작일"
+    },
+    {
+      "date": "2026-10-28",
+      "text": "국내 베타 대상·요금·프롬프트 입력 경로 재확인. 지난 기능으로 작성"
+    }
+  ],
+  "theory": {
+    "definition": "AI 어시스턴트(AI Assistant): 현재 열린 Illustrator 문서의 구조를 읽고 편집 요청을 수행하는 대화형 도구 [실험 기능]",
+    "analogy": "한 파일의 여러 안내 카드를 살펴보며 같은 문구를 고치는 편집 보조자",
+    "comparison": {
+      "headers": [
+        "구분",
+        "Before",
+        "After"
+      ],
+      "rows": [
+        [
+          "요청 방식",
+          "각 카드의 글자를 직접 선택",
+          "대화로 수정 대상과 유지 조건 지정"
+        ],
+        [
+          "검토 기준",
+          "수동 편집 결과 대조",
+          "AI 편집 결과도 동일하게 대조"
+        ],
+        [
+          "작업 범위",
+          "열어 둔 안내 카드 파일",
+          "같은 파일의 두 아트보드"
+        ]
+      ]
+    },
+    "concepts": [
+      {
+        "title": "아트보드(Artboard)",
+        "body": "한 문서 안의 개별 작업 면. 이번 실습은 카드 두 장을 두 작업 면에 배치"
+      },
+      {
+        "title": "변경 대상과 유지 조건",
+        "body": "바꿀 제목을 정확히 지정 + 날짜·글자 크기·위치 유지 요청"
+      },
+      {
+        "title": "베타와 검토",
+        "body": "시험 제공 기능이므로 오류 가능. 완료 메시지만으로 성공 판정 금지"
+      }
+    ],
+    "can": [
+      "열린 파일의 여러 아트보드에 걸친 문구 업데이트",
+      "요청한 편집 후 화면과 원본의 차이 확인"
+    ],
+    "cannot": [
+      "여러 Illustrator 파일이나 다른 앱을 넘나드는 작업",
+      "실제 행사 날짜의 진위 확인",
+      "문구·서식 유지의 완전한 성공 보장"
+    ],
+    "safety": [
+      "실제 회원 명단·전화번호·기관 비밀 입력 제외",
+      "원본 별도 저장 후 연습용 사본에서 편집",
+      "두 카드의 날짜·문구·배치를 사람이 최종 대조",
+      "베타 결과의 상업적 사용 가능 여부와 면책은 별개. 본 실습은 수업 연습용으로 한정"
+    ]
+  },
+  "practice": {
+    "preview": "예시 결과: ① 카드 A 제목: 가을 책모임 ② 카드 B 제목: 가을 책모임 ③ 두 카드 모두 11월 10일 오후 2시 유지. 실제 생성 결과의 동일성 보장 없음",
+    "follow": [
+      {
+        "title": "Before 두 카드 준비",
+        "minutes": 5,
+        "do": "새 문서에 작은 아트보드 두 개 준비. 문자 도구로 각 면에 제목 독서 모임 + 날짜 11월 10일 오후 2시 입력. 원본.ai 저장 후 다른 이름의 연습.ai 사본 저장",
+        "prompt": "",
+        "expect": "같은 제목·날짜가 있는 카드 두 장",
+        "note": "글꼴은 기기에 설치된 한글 글꼴 사용. 크기·위치가 서로 달라도 무방. 원본 준비가 어려우면 강사의 마우스 시연을 따라 직접 입력",
+        "input": {
+          "label": "Adobe Illustrator(Beta)",
+          "url": null,
+          "location": "문서 캔버스 → 문자 도구로 각 아트보드의 텍스트 입력",
+          "kind": "app",
+          "note": "Illustrator 개인 유료 구독 + 최신 Illustrator(Beta) 설치 + Adobe 로그인 + 인터넷 + 잔여 AI 크레딧 필요. 조직 계정은 관리자 베타 허용 별도 확인"
+        }
+      },
+      {
+        "title": "AI 패널에서 수정 계획 확인",
+        "minutes": 4,
+        "do": "상단 애플리케이션 표시줄 → AI 어시스턴트 선택 → 아래 요청 입력 → Enter 또는 보내기. 제안이 제목 두 곳만 대상으로 하는지 확인",
+        "prompt": "이 문서의 두 아트보드에서 제목 \"독서 모임\"을 \"가을 책모임\"으로 바꾸려고 합니다. 날짜 \"11월 10일 오후 2시\", 글꼴, 크기, 색상, 위치는 그대로 둘 계획입니다. 아직 수정하지 말고 대상과 유지할 조건만 알려 주세요.",
+        "expect": "두 제목과 유지 조건을 담은 검토용 응답",
+        "note": "계획만 요청해도 편집이 실행되면 원본과 대조 후 실행 취소. AI 답변은 검토 대상",
+        "input": {
+          "label": "Adobe Illustrator(Beta)",
+          "url": null,
+          "location": "상단 애플리케이션 표시줄 → AI 어시스턴트 패널 → 프롬프트 필드",
+          "kind": "app",
+          "note": "Illustrator 개인 유료 구독 + 최신 Illustrator(Beta) 설치 + Adobe 로그인 + 인터넷 + 잔여 AI 크레딧 필요. 조직 계정은 관리자 베타 허용 별도 확인"
+        }
+      },
+      {
+        "title": "After 두 제목 수정",
+        "minutes": 5,
+        "do": "계획 범위를 검토한 뒤 편집 요청 전송. 추가 질문은 제목 두 곳만 변경하도록 답변. 완료까지 같은 글자 수동 편집 중지",
+        "prompt": "현재 열린 문서의 두 아트보드에서 제목 \"독서 모임\"만 \"가을 책모임\"으로 바꿔 주세요. 날짜 \"11월 10일 오후 2시\"와 글꼴, 크기, 색상, 위치, 다른 내용은 바꾸지 마세요. 변경한 항목을 알려 주세요.",
+        "expect": "두 카드 제목의 수정 결과",
+        "note": "한 곳만 변경되면 그 사실 기록 후 남은 아트보드를 지정하여 재요청. 추가 작업은 크레딧 확인 후 진행",
+        "input": {
+          "label": "Adobe Illustrator(Beta)",
+          "url": null,
+          "location": "AI 어시스턴트 패널 → 같은 채팅의 프롬프트 필드",
+          "kind": "app",
+          "note": "Illustrator 개인 유료 구독 + 최신 Illustrator(Beta) 설치 + Adobe 로그인 + 인터넷 + 잔여 AI 크레딧 필요. 조직 계정은 관리자 베타 허용 별도 확인"
+        }
+      },
+      {
+        "title": "두 장 모두 대조",
+        "minutes": 3,
+        "do": "원본과 연습 파일을 번갈아 보기. 종이에 카드 A·B 각각의 제목 수정 여부 + 날짜 유지 여부 + 배치 변화 여부 기록",
+        "prompt": "",
+        "expect": "Before / After 대조 기록",
+        "note": "AI가 바뀌었다고 말해도 화면에서 두 장 모두 확인",
+        "input": {
+          "label": "종이 검토지",
+          "url": null,
+          "location": "종이 검토지 → 카드 A / 카드 B / 제목 / 날짜 / 배치 칸",
+          "kind": "manual",
+          "note": "손으로 기록. 앱에 전송 없음"
+        }
+      }
+    ],
+    "make_mine": [
+      {
+        "title": "내 모임 이름 적용",
+        "minutes": 5,
+        "do": "아래 별빛 책모임을 본인이 정한 가상 이름으로 바꿔 전송. 두 카드 제목·날짜 확인. 실패 시 한 번만 보충 요청 후 미완료 표시",
+        "prompt": "두 아트보드의 제목 \"가을 책모임\"을 \"별빛 책모임\"으로 바꿔 주세요. 날짜 \"11월 10일 오후 2시\"와 글꼴, 크기, 색상, 위치는 그대로 유지해 주세요. 제목 이외의 내용은 수정하지 마세요.",
+        "expect": "내 가상 모임 제목을 담은 카드 두 장",
+        "note": "예시는 연습용 가상 모임. 공식 한국어 도움말의 자연어 입력 경로 기준이며 문구별 성공률은 미검증",
+        "input": {
+          "label": "Adobe Illustrator(Beta)",
+          "url": null,
+          "location": "AI 어시스턴트 패널 → 같은 채팅의 프롬프트 필드",
+          "kind": "app",
+          "note": "Illustrator 개인 유료 구독 + 최신 Illustrator(Beta) 설치 + Adobe 로그인 + 인터넷 + 잔여 AI 크레딧 필요. 조직 계정은 관리자 베타 허용 별도 확인"
+        }
+      },
+      {
+        "title": "내 파일과 검토 기록 완성",
+        "minutes": 5,
+        "do": "연습 파일을 검토본.ai로 다른 이름 저장. 두 아트보드가 있는지 다시 열어 확인. 종이에 최종 제목 + 날짜 유지 판정 + 고친 오류 기록",
+        "prompt": "",
+        "expect": "안내 카드 파일 1개 + 검토 기록",
+        "note": "저장 대화상자의 로컬·클라우드 선택은 설치 환경에 따라 다름 [확인 필요]. 수업에서는 개인 연습 폴더 사용. 외부 발송 없음",
+        "input": {
+          "label": "Adobe Illustrator(Beta)",
+          "url": null,
+          "location": "Illustrator(Beta) → 파일 → 다른 이름으로 저장",
+          "kind": "app",
+          "note": "Illustrator 개인 유료 구독 + 최신 Illustrator(Beta) 설치 + Adobe 로그인 + 인터넷 + 잔여 AI 크레딧 필요. 조직 계정은 관리자 베타 허용 별도 확인"
+        }
+      }
+    ],
+    "challenges": [
+      {
+        "level": "초급",
+        "mission": "한글 제목 두 곳의 동일성에 집중. 강사와 함께 날짜에 밑줄"
+      },
+      {
+        "level": "중급",
+        "mission": "제목을 더 짧게 바꾸고 줄바꿈·배치 변화 여부 확인"
+      },
+      {
+        "level": "고급",
+        "mission": "원본 사본에서 카드 한 장만 바꾸는 요청과 전체 변경 요청의 범위 차이 기록"
+      }
+    ]
+  },
+  "wrap": {
+    "share": "내 모임 제목 하나 + 사람이 찾아 고친 오류 하나 구두 공유",
+    "quiz": [
+      {
+        "q": "이 교안의 프롬프트는 어디에 입력하나요?",
+        "options": [
+          "Firefly 웹 홈",
+          "Illustrator(Beta)의 AI 어시스턴트 패널",
+          "종이 검토지에만 입력",
+          "이메일 수신자 칸"
+        ],
+        "answer": 1,
+        "explain": "현재 열린 카드 파일을 다루는 앱 내 AI 패널이 입력처임. Firefly 웹의 별도 어시스턴트와 구분"
+      },
+      {
+        "q": "AI가 편집을 끝냈다면 무엇을 확인해야 하나요?",
+        "options": [
+          "첫 카드만 확인",
+          "답변만 믿고 종료",
+          "두 카드의 제목·날짜·배치 대조",
+          "즉시 실제 모임에 발송"
+        ],
+        "answer": 2,
+        "explain": "한 곳이 빠지거나 날짜까지 달라질 수 있음. 두 카드의 화면을 직접 확인"
+      },
+      {
+        "q": "무료 Adobe 계정만 있으면 이 실습이 보장되나요?",
+        "options": [
+          "항상 가능",
+          "모든 베타 앱이 무제한 무료",
+          "유료 API 키가 반드시 필요",
+          "이 교안은 구독자의 공개 베타 경로를 사용"
+        ],
+        "answer": 3,
+        "explain": "무료 계정 생성과 데스크탑 베타 이용 조건은 별개임. 구독·베타 설치·남은 크레딧 확인 필요"
+      }
+    ],
+    "next": [
+      "변경할 내용과 유지할 조건을 분리한 요청 연습",
+      "베타 결과를 실제 배포물에 쓰기 전 검토 기준 마련"
+    ],
+    "rubric": [
+      {
+        "criterion": "수정 범위",
+        "high": "두 제목 수정 + 다른 문구 유지",
+        "mid": "한 제목만 수정 후 누락 기록",
+        "low": "수정 대상 구분 필요"
+      },
+      {
+        "criterion": "사람의 검토",
+        "high": "두 카드 날짜·배치 대조 기록",
+        "mid": "두 카드 제목만 확인",
+        "low": "완료 메시지만 확인"
+      }
+    ]
+  },
+  "instructor": {
+    "timetable": [
+      {
+        "time": "0~17분",
+        "content": "베타·요금·현재 문서 범위 설명 + Before 시연",
+        "note": "계정 준비는 사전 완료"
+      },
+      {
+        "time": "17~34분",
+        "content": "카드 준비 → 계획 → 제목 수정 → 두 장 대조",
+        "note": "AI 작업 중 동일 오브젝트 편집 중지"
+      },
+      {
+        "time": "34~44분",
+        "content": "내 이름 적용 + 파일 저장",
+        "note": "27분 안에 작은 작품 완성"
+      },
+      {
+        "time": "44~50분",
+        "content": "검토 기록 공유 + 핵심 문제 3개",
+        "note": "정답보다 판정 근거 확인"
+      }
+    ],
+    "script": [
+      {
+        "label": "도입",
+        "text": "오늘은 작은 안내 카드 두 장의 같은 제목을 말로 고쳐 봅니다. AI가 끝났다고 말해도 날짜와 위치는 우리가 확인합니다."
+      },
+      {
+        "label": "입력처",
+        "text": "브라우저가 아니라 Illustrator 베타 앱 상단에서 AI 어시스턴트를 열어 주세요. 지금 연습 파일이 열려 있는지도 확인해 주세요."
+      },
+      {
+        "label": "검토",
+        "text": "Before와 After를 번갈아 보세요. 제목 두 곳이 모두 바뀌었나요? 날짜가 그대로인 것도 확인해 주세요."
+      }
+    ],
+    "plan_b": [
+      {
+        "situation": "베타 설치·권한 문제",
+        "response": "사전 캡처로 수정 범위 찾기 진행. 실제 AI 편집 미완료 표시 후 권한 해결 뒤 보충 실습"
+      },
+      {
+        "situation": "크레딧 소진·서비스 지연",
+        "response": "추가 결제 유도 없이 중지. 강사 예시의 오류 찾기와 손으로 수정 요청 작성. AI 실행 완료로 평가 금지"
+      }
+    ],
+    "stuck": [
+      {
+        "issue": "AI 패널 없음",
+        "fix": "정식 앱과 베타 앱 구분 → 최신 베타·로그인 확인 → 조직은 관리자 허용 확인"
+      },
+      {
+        "issue": "문서를 찾지 못함",
+        "fix": "연습.ai가 활성 문서인지 확인. 다른 파일을 넘나드는 요청 제외"
+      },
+      {
+        "issue": "한 카드만 수정",
+        "fix": "아트보드 이름·남은 원문 지정하여 요청. 추가 사용 전 크레딧 확인"
+      },
+      {
+        "issue": "날짜·배치도 변경",
+        "fix": "편집 메뉴의 실행 취소로 직전 변경 복구 후 원본 대조. 유지 조건을 좁혀 재요청"
+      },
+      {
+        "issue": "완료가 늦거나 응답 중단",
+        "fix": "같은 대상의 수동 편집 중지 후 상태 확인. 반복 전송 대신 사전 캡처 검토로 전환"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Firefly 웹 어시스턴트와 같은 화면인가요?",
+        "a": "별도 화면임. 이 교안은 Illustrator(Beta) 앱 안의 패널만 사용"
+      },
+      {
+        "q": "무료 계정만으로 가능한가요?",
+        "a": "본 수업은 유료 Illustrator 구독 경로로 설계. 무료 계정만의 실습 보장 없음"
+      },
+      {
+        "q": "크레딧은 얼마나 필요한가요?",
+        "a": "작업마다 다름. 일부 AI 작업은 크레딧 사용. 사전 예행으로 예상 소비와 잔량 확인"
+      },
+      {
+        "q": "다른 파일도 함께 고칠 수 있나요?",
+        "a": "현재 도움말은 여러 문서 간 작업 미지원. 이번 실습은 한 파일의 두 아트보드"
+      },
+      {
+        "q": "한글 요청도 그대로 성공하나요?",
+        "a": "국내 도움말의 자연어 입력 안내 기준. 예제 문구의 실제 성공은 미검증이므로 전날 동일 문구로 예행 필요"
+      }
+    ],
+    "level_guide": [
+      {
+        "level": "초급·시니어",
+        "guide": "한글 제목 두 곳만 변경. 큰 화면 확대 + 제목·날짜를 색 대신 밑줄로 구분"
+      },
+      {
+        "level": "중급",
+        "guide": "변경 범위와 유지 조건을 본인 문장으로 짧게 작성"
+      },
+      {
+        "level": "고급",
+        "guide": "카드 하나만 변경하는 대조 실험. 성공·실패와 추가 소모량 기록"
+      },
+      {
+        "level": "다문화·한국어 학습자",
+        "guide": "독서 모임→책모임처럼 짧은 명사 사용. 날짜를 바꾸지 않는 조건부터 확인"
+      }
+    ],
+    "pro_points": [
+      "한 문서 내 편집을 보여 주는 앱 에이전트 사례",
+      "도구의 완료 보고와 실제 화면 검토를 분리하여 평가",
+      "단순 편집은 수동이 더 빠를 수 있으므로 자동화 이점 과장 금지"
+    ],
+    "day_before": [
+      "국내 본인 계정에서 최신 베타 설치·AI 패널·잔여 크레딧 확인",
+      "두 카드 준비부터 저장까지 27분 내 예행. 한국어 요청 반영 여부 확인",
+      "상단 AI 패널·프롬프트 칸·Before / After 화면 캡처 준비",
+      "실습별 실제 소비량 기록. 수강생 추가 결제 없는 분량 조정",
+      "원본 보존·저장 폴더·실행 취소 방법 확인. 계정 실패자는 보충 대상으로 표시"
+    ]
+  },
+  "verification": [
+    "2026-10-28 lessons.json 전체 196건의 제목·도구·기능 및 releases.json 대조. Firefly 웹 AI Assistant 교안은 있으나 Illustrator 앱 내 현재 문서 일괄 텍스트 편집 교안 없음",
+    "최근 14일 탐색: Canva Craft·ChatGPT Slides·Locked chats·GPT-Live 새 음성은 기작성. iCloud 연결·Terra는 개별 국내 기능·계정 조건의 추가 확인이 필요하여 이번 버튼 실습 주제로 보류. Adobe·Google·Runway 공식 채널도 열람",
+    "미연결 지난 출시 검토: Sites 제한 해제·URL 변경은 기존 Sites 주제와 겹침. 미국 한정 Finances·Playground·Muse, 초대형 Cue, 조직형 Gemini agent·Cursor 검토 봇은 국내 초급 개인 실습의 접근성 근거가 더 약한 후보. Claude 및 API·MCP 의존 경로는 이번 수업 제한으로 제외. 미연결 목록만으로 국내 제공 추정하지 않음",
+    "최근 6개월 공식 문서 추가 탐색으로 2026-06-24 Illustrator 앱 내 AI 어시스턴트 공개 베타 선정. 국내 공식 발표 + 현재 국내 베타 개요의 구독자 누구나 대상 안내 + 기능별 국내 사용 도움말로 이용 조건 확인",
+    "2026-10-28 공식 요금 원문 ₩34,900/월 확인. 검색 요약에 남은 과거 가격을 채택하지 않음. 연간 약정·부가세 포함 명시",
+    "[미검증] 로그인 후 실제 프롬프트 실행·한국어 문구별 정확도·작업별 크레딧 소비는 직접 재현하지 못함. 국내 제공·구독자 공개 베타 대상과 앱 입력처는 공식 근거로 별도 확인",
+    "[확인 필요] 설치 환경별 저장 대화상자·패널 번역 표기. 강의 전날 화면 재확인. 무료 계정만의 기능 개방을 전제로 구성하지 않음"
+  ],
+  "notice": "",
+  "sources": [
+    {
+      "title": "Adobe 코리아 — Illustrator 등 앱 내 AI 어시스턴트 공개 베타 발표",
+      "url": "https://blog.adobe.com/ko/publish/2026/06/24/adobe-firefly-introduces-new-agentic-capabilities-and-an-upgraded-creative-ai-studio-built-for-the-way-you-work",
+      "checked": "2026-10-28"
+    },
+    {
+      "title": "데스크탑용 Adobe Illustrator(Beta) 개요",
+      "url": "https://helpx.adobe.com/kr/illustrator/desktop/new-features/illustrator-beta-overview.html",
+      "checked": "2026-10-28"
+    },
+    {
+      "title": "Adobe Illustrator(beta)에서 AI 어시스턴트 시작하기",
+      "url": "https://helpx.adobe.com/kr/illustrator/desktop/use-ai-assistant/about-using-ai-assistant-in-illustrator.html",
+      "checked": "2026-10-28"
+    },
+    {
+      "title": "Illustrator(beta)에서 AI 어시스턴트를 사용하여 제작 작업을 완료하세요.",
+      "url": "https://helpx.adobe.com/kr/illustrator/desktop/use-ai-assistant/automate-tasks-using-ai-assistant.html",
+      "checked": "2026-10-28"
+    },
+    {
+      "title": "Illustrator 플랜 비교 — 한국 공식 요금",
+      "url": "https://www.adobe.com/kr/products/illustrator/plans.html",
+      "checked": "2026-10-28"
+    },
+    {
+      "title": "생성 크레딧 FAQ",
+      "url": "https://helpx.adobe.com/kr/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+      "checked": "2026-10-28"
+    }
+  ]
+}
