@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 200,
+  "count": 201,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-038",
+      "version": "v1.0",
+      "created_at": "2026-10-29T00:47:46+09:00",
+      "checked": "2026-10-28",
+      "review_by": "2027-01-28",
+      "title": "갤럭시 S26 AI 문서 스캔으로 모임 안내문을 다듬어 PDF 만들기",
+      "summary": "① 종이 안내문의 AI 보정 확인 ② 원문 날짜·숫자 대조 ③ 두 쪽 PDF와 검수표 완성",
+      "tool": "Samsung Galaxy AI — 문서 스캔",
+      "feature": "Document Scanner — Galaxy S26 AI 평탄화·방해 요소 제거·멀티 스캔·PDF 저장",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "released": "2026-02-25",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "모임 안내 PDF 1개(2쪽) + 검수표 1장: ① 제목·날짜·준비물 대조 ② Before / After 관찰 ③ 재촬영 여부",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📄",
+      "one_liner": "종이 두 장을 읽기 쉬운 PDF로"
+    },
     {
       "id": "AI-2026-10-CAT05-029",
       "version": "v1.0",

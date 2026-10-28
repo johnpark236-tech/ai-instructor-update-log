@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T23:23:45+09:00",
+  "updated_at": "2026-10-29T00:47:46+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4141,6 +4141,21 @@
       },
       "checked": "2026-10-28",
       "lesson_id": "AI-2026-10-CAT05-029"
+    },
+    {
+      "id": "samsung-2026-02-25-s26-document-scanner",
+      "date": "2026-02-25",
+      "tool": "Samsung Galaxy AI — 문서 스캔",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "title": "Galaxy S26 AI 문서 스캔 — 평탄화·방해 요소 제거·여러 쪽 PDF",
+      "summary": "① AI 문서 보정 ② 멀티 스캔 ③ PDF 저장. 국내 제품 안내·공식 카메라 백과사전으로 현재 제공 재검증",
+      "source": {
+        "title": "삼성전자, 3세대 AI폰 갤럭시 S26 시리즈 공개",
+        "url": "https://news.samsung.com/kr/삼성전자-3세대-ai폰-갤럭시-s26-시리즈-공개"
+      },
+      "checked": "2026-10-28",
+      "lesson_id": "AI-2026-10-CAT03-038"
     }
   ]
 }
