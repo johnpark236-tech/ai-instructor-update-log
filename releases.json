@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T11:26:45+09:00",
+  "updated_at": "2026-10-28T23:23:45+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4126,6 +4126,21 @@
       },
       "checked": "2026-10-28",
       "lesson_id": "AI-2026-10-CAT04-032"
+    },
+    {
+      "id": "samsung-2026-02-25-s26-realtime-audio-eraser",
+      "date": "2026-02-25",
+      "tool": "Samsung Galaxy AI — 오디오 지우개",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "title": "Galaxy S26 오디오 지우개 — 스트리밍 재생 중 실시간 소음 조절",
+      "summary": "① 빠른 설정창에서 활성화 ② 강도·음성을 또렷하게 조절. 국내 공식 도움말 2월 26일·상세 소개 4월 16일",
+      "source": {
+        "title": "갤럭시 S26 시리즈의 향상된 오디오 지우개 기능",
+        "url": "https://news.samsung.com/kr/더욱-빠르게-실시간으로-듣고-싶은-소리만-선명하게"
+      },
+      "checked": "2026-10-28",
+      "lesson_id": "AI-2026-10-CAT05-029"
     }
   ]
 }
