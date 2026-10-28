@@ -1,7 +1,43 @@
 {
   "standard": "v2.3",
-  "count": 197,
+  "count": 198,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT04-031",
+      "version": "v1.0",
+      "created_at": "2026-10-28T11:26:45+09:00",
+      "checked": "2026-10-28",
+      "review_by": "2027-01-28",
+      "title": "갤럭시 크리에이티브 스튜디오로 내 그림을 스티커 세트로 만들기",
+      "summary": "① 손으로 그린 가상 꽃 캐릭터를 AI 스티커로 변환 ② 짧은 말로 수정 ③ 삼성 키보드용 세트 저장",
+      "tool": "Samsung Galaxy AI — 크리에이티브 스튜디오",
+      "feature": "Creative Studio — 스케치와 텍스트로 스티커 생성·대화형 수정·스티커 세트 생성 및 삼성 키보드 저장",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "released": "2026-02-25",
+      "categories": [
+        "CAT-04"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-CRE"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "내 꽃 캐릭터 스티커 세트 1개 + Before / After 검토 기록",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🌼",
+      "one_liner": "내 꽃 그림을 삼성 키보드 스티커로"
+    },
     {
       "id": "AI-2026-10-CAT04-030",
       "version": "v1.0",

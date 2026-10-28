@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-28T09:43:22+09:00",
+  "updated_at": "2026-10-28T11:26:45+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "samsung-2026-02-25-creative-studio",
+      "date": "2026-02-25",
+      "tool": "Samsung Galaxy AI — 크리에이티브 스튜디오",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "title": "Galaxy S26 Creative Studio — 스케치·텍스트 기반 스티커 세트",
+      "summary": "① 스케치·이미지·텍스트 창작 ② 스티커 수정·세트 생성 ③ 삼성 키보드 저장. 국내 S26 기본 기능·계정·네트워크 조건",
+      "source": {
+        "title": "삼성전자, 3세대 AI폰 ‘갤럭시 S26 시리즈’ 공개",
+        "url": "https://news.samsung.com/kr/삼성전자-3세대-ai폰-갤럭시-s26-시리즈-공개"
+      },
+      "checked": "2026-10-28",
+      "lesson_id": "AI-2026-10-CAT04-031"
+    },
     {
       "id": "illustrator-2026-06-24-ai-assistant-public-beta",
       "date": "2026-06-24",
