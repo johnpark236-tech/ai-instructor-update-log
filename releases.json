@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-29T04:49:43+09:00",
+  "updated_at": "2026-10-29T09:26:06+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "naver-clovanote-2026-04-09-speaker-identification",
+      "date": "2026-04-09",
+      "tool": "네이버웍스 클로바노트",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "클로바노트 화자 자동 식별 — 주소록 지정 후 다음 회의 발언자 식별",
+      "summary": "① 목소리와 주소록 연결 ② 다음 기록의 자동 이름 표시 ③ 오류 수정. 국내 일반 조직용 Business·Business Plus·Enterprise 지원, 관리자 ON 필요. 개인 무료·Lite·Team 제외. Business 30일 체험은 기관 사전 준비",
+      "source": {
+        "title": "비즈니스용 클로바노트, 화자 자동 식별 기능 출시",
+        "url": "https://naver.worksmobile.com/blog/clovanote-speaker-identification/"
+      },
+      "checked": "2026-10-29",
+      "lesson_id": "AI-2026-10-CAT03-039"
+    },
     {
       "id": "samsung-2026-02-25-call-screening",
       "date": "2026-02-25",

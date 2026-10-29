@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 202,
+  "count": 203,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-039",
+      "version": "v1.0",
+      "created_at": "2026-10-29T09:26:06+09:00",
+      "checked": "2026-10-29",
+      "review_by": "2027-01-29",
+      "title": "클로바노트 화자 자동 식별로 누가 말했는지 확인하고 모임 발언 검토 카드 만들기",
+      "summary": "① 강사 음성을 주소록 참석자와 연결 ② 다음 기록의 AI 이름 표시 대조 ③ 내 화자 검토 카드 완성",
+      "tool": "네이버웍스 클로바노트",
+      "feature": "화자 자동 식별 — 주소록 참석자 지정으로 목소리 학습 후 다음 회의의 발언자 자동 식별·오류 수정",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-04-09",
+      "categories": [
+        "CAT-03",
+        "CAT-09"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "모임 발언 검토 카드 1장: ① A의 참석자 지정 기록 ② B의 자동 표시·청취 대조 ③ 오류 시 수정 여부와 보호 원칙",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🎙️",
+      "one_liner": "목소리의 주인을 확인하는 검토 카드"
+    },
     {
       "id": "AI-2026-10-CAT01-014",
       "version": "v1.0",
