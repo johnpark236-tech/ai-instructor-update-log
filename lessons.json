@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 205,
+  "count": 206,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-041",
+      "version": "v1.0",
+      "created_at": "2026-10-30T04:18:20+09:00",
+      "checked": "2026-10-29",
+      "review_by": "2027-01-29",
+      "title": "Gemini 채팅 속 PDF를 직접 고쳐 모임 안내문 한 장 만들기",
+      "summary": "① 채팅에서 PDF 미리보기 ② 직접 입력으로 제목 수정 ③ 선택한 문장만 AI로 다듬어 안내문 완성",
+      "tool": "Gemini",
+      "feature": "채팅 내 파일 미리보기·직접 편집 — PDF 전체 화면 입력 + 텍스트 선택 후 AI 부분 수정",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-29",
+      "categories": [
+        "CAT-03",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-EDU",
+        "JOB-MKT"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "직접 제목을 고치고 AI로 한 문장을 다듬은 모임 안내 PDF 한 장 + Before / After 검토 기록",
+      "access": "freemium",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📄",
+      "one_liner": "PDF를 보며 직접 고치고 AI로 다듬기"
+    },
     {
       "id": "AI-2026-10-CAT01-015",
       "version": "v1.0",

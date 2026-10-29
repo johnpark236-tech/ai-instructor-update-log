@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-29T15:23:48+09:00",
+  "updated_at": "2026-10-30T04:18:20+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "gemini-2026-10-29-inline-file-editing",
+      "date": "2026-10-29",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "Gemini 채팅 내 파일 미리보기·직접 편집·AI 부분 수정",
+      "summary": "① 생성 PDF 미리보기 ② 전체 화면 직접 입력 ③ 선택 텍스트 AI 수정. 지원 지역·언어의 모든 사용자 대상",
+      "source": {
+        "title": "Edit and preview documents directly in Gemini — 2026-10-29",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/"
+      },
+      "checked": "2026-10-29",
+      "lesson_id": "AI-2026-10-CAT03-041"
+    },
     {
       "id": "samsung-2026-02-26-s26-now-brief",
       "date": "2026-02-26",
