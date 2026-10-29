@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 206,
+  "count": 207,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-031",
+      "version": "v1.0",
+      "created_at": "2026-10-30T08:33:30+09:00",
+      "checked": "2026-10-29",
+      "review_by": "2027-01-29",
+      "title": "Now nudge로 문자 속 약속을 확인해 내 일정 카드 만들기",
+      "summary": "① 수신 문자에서 일정 추가 제안 확인 ② 날짜·시간 대조 ③ 내 캘린더 일정 한 건 저장",
+      "tool": "Samsung Galaxy AI — Now nudge",
+      "feature": "Now nudge — 메시지 맥락에 따른 일정 추가 제안·캘린더 연결",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "released": "2026-02-26",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-EDU",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "문자 내용과 대조하여 저장한 연습용 캘린더 일정 한 건 + Before / After 검토 카드",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📅",
+      "one_liner": "문자 속 약속을 내 일정으로 옮기기"
+    },
     {
       "id": "AI-2026-10-CAT03-041",
       "version": "v1.0",

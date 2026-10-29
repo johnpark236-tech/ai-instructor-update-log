@@ -4231,6 +4231,21 @@
       },
       "checked": "2026-10-29",
       "lesson_id": "AI-2026-10-CAT03-040"
+    },
+    {
+      "id": "samsung-2026-02-26-now-nudge",
+      "date": "2026-02-26",
+      "tool": "Samsung Galaxy AI — Now nudge",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "title": "Galaxy S26 Now nudge — 화면 맥락에 따른 다음 동작 제안",
+      "summary": "① 수신 메시지의 일정 추가 제안 ② 캘린더 연결 후 사용자 확인·저장. 국내 S26 한국어 사용법 확인",
+      "source": {
+        "title": "삼성전자, 3세대 AI폰 갤럭시 S26 시리즈 공개",
+        "url": "https://news.samsung.com/kr/삼성전자-3세대-ai폰-갤럭시-s26-시리즈-공개"
+      },
+      "checked": "2026-10-29",
+      "lesson_id": "AI-2026-10-CAT08-031"
     }
   ]
 }
