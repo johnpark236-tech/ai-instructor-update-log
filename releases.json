@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T09:26:06+09:00",
+  "updated_at": "2026-10-29T15:23:48+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4186,6 +4186,21 @@
       },
       "checked": "2026-10-28",
       "lesson_id": "AI-2026-10-CAT03-038"
+    },
+    {
+      "id": "naverworks-2025-11-27-ai-document-translation",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 드라이브",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "AI 문서 번역 — 언어 선택·번역본 내려받기·드라이브 저장",
+      "summary": "① 문서 파일 번역 ② 결과 저장. 국내 코어·AI 스튜디오 이용 조건 확인. 번역 한시 무료는 기본 구독료와 별개",
+      "source": {
+        "title": "네이버웍스 코어 2025년 11월27일 정기 업데이트",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-10-29",
+      "lesson_id": "AI-2026-10-CAT03-040"
     }
   ]
 }

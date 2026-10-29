@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 203,
+  "count": 204,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-040",
+      "version": "v1.0",
+      "created_at": "2026-10-29T15:23:48+09:00",
+      "checked": "2026-10-29",
+      "review_by": "2027-01-29",
+      "title": "네이버웍스 AI 문서 번역으로 영어 모임 안내문과 검토 카드 만들기",
+      "summary": "① 안내문 파일을 영어로 번역 ② 날짜·시간·준비물 대조 ③ 번역본과 내 검토 카드 보관",
+      "tool": "네이버웍스 드라이브",
+      "feature": "AI 문서 번역 — 문서뷰어에서 번역 언어 선택·번역본 내려받기·드라이브 저장",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-GLB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "영어 모임 안내 묶음 1개: ① 번역본 파일 ② 날짜·시간·준비물 검토 카드",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🌐",
+      "one_liner": "모임 안내문을 영어로 바꾸고 대조하기"
+    },
     {
       "id": "AI-2026-10-CAT03-039",
       "version": "v1.0",
