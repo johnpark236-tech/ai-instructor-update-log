@@ -1,7 +1,43 @@
 {
   "standard": "v2.3",
-  "count": 204,
+  "count": 205,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT01-015",
+      "version": "v1.0",
+      "created_at": "2026-10-29T22:35:03+09:00",
+      "checked": "2026-10-29",
+      "review_by": "2027-01-29",
+      "title": "갤럭시 S26 Now brief로 내 하루 브리핑 설정과 점검 카드 만들기",
+      "summary": "① 보고 싶은 콘텐츠 선택 ② 홈 위젯으로 브리핑 열기 ③ 표시 정보와 미표시 정보 기록",
+      "tool": "Samsung Galaxy AI — Now brief",
+      "feature": "Galaxy S26 Now brief 향상 — 일정 기반 리마인더·개인화 브리핑, 콘텐츠 선택과 위젯 실행",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "released": "2026-02-26",
+      "categories": [
+        "CAT-01",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 내 콘텐츠 설정과 Now brief 홈 위젯 ② Before / After 점검 카드 한 장",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🌤️",
+      "one_liner": "내 하루 브리핑을 고르고 확인"
+    },
     {
       "id": "AI-2026-10-CAT03-040",
       "version": "v1.0",

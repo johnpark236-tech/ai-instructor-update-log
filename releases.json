@@ -3,6 +3,21 @@
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
+      "id": "samsung-2026-02-26-s26-now-brief",
+      "date": "2026-02-26",
+      "tool": "Samsung Galaxy AI — Now brief",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "title": "Galaxy S26 Now brief 개인화·일정 리마인드 향상",
+      "summary": "일정 기반 리마인드 등 맞춤 브리핑 향상. 콘텐츠 선택·위젯 실행으로 수업 구성",
+      "source": {
+        "title": "삼성전자, 3세대 AI폰 갤럭시 S26 시리즈 공개",
+        "url": "https://news.samsung.com/kr/삼성전자-3세대-ai폰-갤럭시-s26-시리즈-공개"
+      },
+      "checked": "2026-10-29",
+      "lesson_id": "AI-2026-10-CAT01-015"
+    },
+    {
       "id": "naver-clovanote-2026-04-09-speaker-identification",
       "date": "2026-04-09",
       "tool": "네이버웍스 클로바노트",
