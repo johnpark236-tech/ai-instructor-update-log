@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 208,
+  "count": 209,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-016",
+      "version": "v1.0",
+      "created_at": "2026-10-30T18:16:17+09:00",
+      "checked": "2026-10-30",
+      "review_by": "2027-01-30",
+      "title": "AI 스튜디오에서 연습 메일함만 골라 검색하고 근거 확인 카드 만들기",
+      "summary": "① 메일함 직접 선택 ② 같은 질문으로 검색 범위 비교 ③ 원문 근거 확인 카드 완성",
+      "tool": "네이버웍스 AI 스튜디오",
+      "feature": "WORKS 데이터 검색 — 모바일에서 개별 메일함을 직접 선택하여 AI 답변의 검색 범위 지정",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-10-15",
+      "categories": [
+        "CAT-06",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "선택 메일함 + 검색 답변 + 원문 확인을 담은 비교 카드 한 장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📬",
+      "one_liner": "메일함을 골라 검색 근거 비교하기"
+    },
     {
       "id": "AI-2026-10-CAT06-015",
       "version": "v1.0",

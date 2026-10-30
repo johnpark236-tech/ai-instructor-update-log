@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-30T04:18:20+09:00",
+  "updated_at": "2026-10-30T18:16:17+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "naverworks-2026-10-15-aistudio-mail-search-scope",
+      "date": "2026-10-15",
+      "tool": "네이버웍스 AI 스튜디오",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "AI 스튜디오 개별 메일함 검색 범위 지정",
+      "summary": "① 메일함 직접 선택 ② 선택 범위 내 AI 검색. AI 스튜디오와 메일 포함 코어 계약·권한 필요",
+      "source": {
+        "title": "네이버웍스 AI스튜디오 비정기 업데이트 — 2026년 10월 15일",
+        "url": "https://naver.worksmobile.com/release-notes/aistudio_20261015/"
+      },
+      "checked": "2026-10-30",
+      "lesson_id": "AI-2026-10-CAT06-016"
+    },
     {
       "id": "naverworks-2026-10-15-aistudio-chat-attachments",
       "date": "2026-10-15",
