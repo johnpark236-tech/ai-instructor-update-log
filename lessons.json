@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 207,
+  "count": 208,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-015",
+      "version": "v1.0",
+      "created_at": "2026-10-30T11:58:41+09:00",
+      "checked": "2026-10-30",
+      "review_by": "2027-01-30",
+      "title": "네이버웍스 AI 스튜디오에 안내 파일을 첨부해 모임 준비 확인 카드 만들기",
+      "summary": "① 안내 파일 첨부 ② 문서 근거 질문 ③ 원문과 대조한 준비 카드 완성",
+      "tool": "네이버웍스 AI 스튜디오",
+      "feature": "채팅 파일 업로드·첨부 문서 내 검색 — 로컬 문서를 대화에 첨부하여 요약·추가 질문",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-10-15",
+      "categories": [
+        "CAT-06",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-EDU",
+        "JOB-OFF"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "파일 원문과 대조한 모임 준비 확인 카드 한 장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📎",
+      "one_liner": "안내 파일을 읽고 모임 준비 카드 만들기"
+    },
     {
       "id": "AI-2026-10-CAT08-031",
       "version": "v1.0",

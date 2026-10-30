@@ -3,6 +3,21 @@
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
+      "id": "naverworks-2026-10-15-aistudio-chat-attachments",
+      "date": "2026-10-15",
+      "tool": "네이버웍스 AI 스튜디오",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "AI 스튜디오 채팅 파일 첨부·문서 내 검색",
+      "summary": "① 로컬 문서 첨부 ② 문서 질문·요약 ③ 후속 질문. 국내 민간용 계약·권한 필요",
+      "source": {
+        "title": "네이버웍스 AI스튜디오 비정기 업데이트 — 2026년 10월 15일",
+        "url": "https://naver.worksmobile.com/release-notes/aistudio_20261015/"
+      },
+      "checked": "2026-10-30",
+      "lesson_id": "AI-2026-10-CAT06-015"
+    },
+    {
       "id": "gemini-2026-10-29-inline-file-editing",
       "date": "2026-10-29",
       "tool": "Gemini",
