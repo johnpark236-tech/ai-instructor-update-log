@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 212,
+  "count": 213,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT06-017",
+      "version": "v1.0",
+      "created_at": "2026-10-31T05:27:57+09:00",
+      "checked": "2026-10-30",
+      "review_by": "2027-01-30",
+      "title": "네이버웍스 활동 내역 AI 요약으로 모임 인수인계 카드 만들기",
+      "summary": "① 요약 기간 선택 ② 활동 기록과 AI 요약 대조 ③ 확인한 변경 사항을 인수인계 카드로 정리",
+      "tool": "네이버웍스 프로젝트",
+      "feature": "프로젝트 활동 내역 AI 요약 — 기간을 선택하여 업무·프로젝트 변경 이력 요약",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-07-23",
+      "categories": [
+        "CAT-06",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "선택 기간 + 확인한 변경 사항 + 원문 근거를 담은 모임 인수인계 카드 한 장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🗂️",
+      "one_liner": "변경 이력을 짧은 인수인계 카드로"
+    },
     {
       "id": "AI-2026-10-CAT08-032",
       "version": "v1.0",

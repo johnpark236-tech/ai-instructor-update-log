@@ -4321,6 +4321,21 @@
       },
       "checked": "2026-10-30",
       "lesson_id": "AI-2026-10-CAT08-032"
+    },
+    {
+      "id": "naverworks-2026-07-23-project-activity-ai-summary",
+      "date": "2026-07-23",
+      "tool": "네이버웍스 프로젝트",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "프로젝트 활동 내역 AI 요약",
+      "summary": "기간 선택으로 프로젝트 업무·변경 이력 요약. 민간용 코어 대상 플랜 + AI 스튜디오 필요",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2026년 7월 23일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20260723/"
+      },
+      "checked": "2026-10-30",
+      "lesson_id": "AI-2026-10-CAT06-017"
     }
   ]
 }
