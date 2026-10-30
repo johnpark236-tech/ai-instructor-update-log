@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 211,
+  "count": 212,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-032",
+      "version": "v1.0",
+      "created_at": "2026-10-31T01:49:55+09:00",
+      "checked": "2026-10-30",
+      "review_by": "2027-01-30",
+      "title": "네이버웍스 AI 하위 업무 추천으로 독서 모임 준비 목록 만들기",
+      "summary": "① 상위 업무에서 AI 추천 실행 ② 불필요한 후보 제외 ③ 선택한 하위 업무와 검토 카드 완성",
+      "tool": "네이버웍스 프로젝트",
+      "feature": "AI 하위 업무 추천 — 상위 업무 정보로 후보 추천·선택 후 하위 업무 일괄 생성",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-07-23",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 독서 모임 준비 하위 업무 목록 1개 ② 선택·제외 이유를 적은 검토 카드 한 장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📋",
+      "one_liner": "모임 준비를 작은 업무로 나누기"
+    },
     {
       "id": "AI-2026-10-CAT03-042",
       "version": "v1.0",

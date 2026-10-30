@@ -4306,6 +4306,21 @@
       },
       "checked": "2026-10-30",
       "lesson_id": "AI-2026-10-CAT03-042"
+    },
+    {
+      "id": "naverworks-2026-07-23-ai-subtasks",
+      "date": "2026-07-23",
+      "tool": "네이버웍스 프로젝트",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "AI 하위 업무 추천",
+      "summary": "상위 업무 정보 기반 후보 추천 + 선택한 항목만 하위 업무로 생성. 민간용 코어 Standard·Standard Plus 및 AI 스튜디오 필요",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2026년 7월 23일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20260723/"
+      },
+      "checked": "2026-10-30",
+      "lesson_id": "AI-2026-10-CAT08-032"
     }
   ]
 }
