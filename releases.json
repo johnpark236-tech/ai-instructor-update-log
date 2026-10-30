@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-30T18:16:17+09:00",
+  "updated_at": "2026-10-30",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "gemini-2026-10-28-immersive-explorations",
+      "date": "2026-10-28",
+      "tool": "Gemini",
+      "company": "Google",
+      "type": "update",
+      "title": "몰입형 탐색 라이브러리",
+      "summary": "준비된 주제의 층별 시각 탐색 + 라벨 선택",
+      "source": {
+        "title": "Immersive explorations now available in the Gemini app",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/immersive-explorations-now-available-in-the-Gemini-app.html"
+      },
+      "checked": "2026-10-30",
+      "lesson_id": "AI-2026-10-CAT10-008"
+    },
     {
       "id": "naverworks-2026-10-15-aistudio-mail-search-scope",
       "date": "2026-10-15",

@@ -1,7 +1,42 @@
 {
   "standard": "v2.3",
-  "count": 209,
+  "count": 210,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT10-008",
+      "version": "v1.0",
+      "created_at": "2026-10-30T19:24:05+09:00",
+      "checked": "2026-10-30",
+      "review_by": "2027-01-30",
+      "title": "Gemini 몰입형 탐색으로 내 관찰 카드 한 장 만들기",
+      "summary": "그림의 라벨을 눌러 구조 관찰 + 내 말로 탐색 카드 작성",
+      "tool": "Gemini",
+      "feature": "Immersive explorations — 준비된 주제의 라벨·레이어를 선택하는 시각 탐색 라이브러리",
+      "company": "Google",
+      "type": "update",
+      "released": "2026-10-28",
+      "categories": [
+        "CAT-10"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "내 탐색 카드 한 장: ① 선택 경로 ② 관찰 두 줄 ③ 남은 질문 한 개",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🔎",
+      "one_liner": "눌러서 관찰하고 내 카드 완성"
+    },
     {
       "id": "AI-2026-10-CAT06-016",
       "version": "v1.0",
