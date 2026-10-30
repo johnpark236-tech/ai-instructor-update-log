@@ -4291,6 +4291,21 @@
       },
       "checked": "2026-10-29",
       "lesson_id": "AI-2026-10-CAT08-031"
+    },
+    {
+      "id": "naverworks-2025-11-27-ai-reply",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 메일",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "AI 추천 답장 — 받은 메일 기반 회신 후보 선택",
+      "summary": "① 수신 본문 기반 답장 제안 ② PC 웹 후보 선택. 국내 AI 스튜디오 신청 및 메일 코어 조건 재확인",
+      "source": {
+        "title": "네이버웍스 코어 2025년 11월 27일 정기 업데이트",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-10-30",
+      "lesson_id": "AI-2026-10-CAT03-042"
     }
   ]
 }

@@ -1,7 +1,43 @@
 {
   "standard": "v2.3",
-  "count": 210,
+  "count": 211,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-042",
+      "version": "v1.0",
+      "created_at": "2026-10-31T01:00:00+09:00",
+      "checked": "2026-10-30",
+      "review_by": "2027-01-30",
+      "title": "네이버웍스 AI 추천 답장으로 모임 회신 초안과 검토 카드 만들기",
+      "summary": "① 받은 메일의 답장 제안 선택 ② 사실과 내 참석 의사 대조 ③ 미발송 답장 초안 완성",
+      "tool": "네이버웍스 메일",
+      "feature": "AI 추천 답장 — 수신 메일 본문을 바탕으로 답장 후보 제안·선택",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 미발송 모임 답장 초안 1통 ② 사실·참석 의사 검토 카드 한 장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📨",
+      "one_liner": "추천 답장을 고르고 내 의사로 수정"
+    },
     {
       "id": "AI-2026-10-CAT10-008",
       "version": "v1.0",
