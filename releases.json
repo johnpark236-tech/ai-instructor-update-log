@@ -4336,6 +4336,21 @@
       },
       "checked": "2026-10-30",
       "lesson_id": "AI-2026-10-CAT06-017"
+    },
+    {
+      "id": "naverworks-2026-07-23-task-comment-ai-summary",
+      "date": "2026-07-23",
+      "tool": "네이버웍스 프로젝트",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "프로젝트 AI 업무 / 댓글 요약",
+      "summary": "업무 정보·전체 댓글 종합 요약과 전체·개별 댓글 요약 신규 제공. 코어 Standard 또는 Standard Plus + AI 스튜디오 필요, 민간용 대상",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2026년 7월 23일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20260723/"
+      },
+      "checked": "2026-10-30",
+      "lesson_id": "AI-2026-10-CAT03-043"
     }
   ]
 }

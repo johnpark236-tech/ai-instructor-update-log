@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 213,
+  "count": 214,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-043",
+      "version": "v1.0",
+      "created_at": "2026-10-31T06:41:54+09:00",
+      "checked": "2026-10-30",
+      "review_by": "2027-01-30",
+      "title": "네이버웍스 업무·댓글 AI 요약으로 모임 결정·보류표 만들기",
+      "summary": "① 업무 요약과 댓글 요약 실행 ② 본문·댓글과 대조 ③ 결정·보류를 나눈 표 완성",
+      "tool": "네이버웍스 프로젝트",
+      "feature": "AI 업무 / 댓글 요약 — 업무 정보와 전체 댓글 종합 요약·전체 및 개별 댓글 요약",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-07-23",
+      "categories": [
+        "CAT-03",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 확인한 결정 ② 보류 중인 제안 ③ 원문 근거를 담은 모임 결정·보류표 한 장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📝",
+      "one_liner": "긴 업무와 댓글을 결정·보류표로"
+    },
     {
       "id": "AI-2026-10-CAT06-017",
       "version": "v1.0",
