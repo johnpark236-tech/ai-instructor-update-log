@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 216,
+  "count": 217,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-046",
+      "version": "v1.0",
+      "created_at": "2026-10-31T14:44:14+09:00",
+      "checked": "2026-10-31",
+      "review_by": "2027-01-31",
+      "title": "게시판 AI 제목 추천으로 독서 모임 안내 제목과 선택 카드 만들기",
+      "summary": "① 본문에 맞는 제목 후보 비교 ② 과장 없는 제목 선택 ③ 선택 이유 기록",
+      "tool": "네이버웍스 게시판",
+      "feature": "AI 제목 추천 — 본문 텍스트 기반 제목 후보 제안·선택·적용(PC 웹)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "독서 모임 안내 제목 1개 + Before / After 선택 카드 1장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🏷️",
+      "one_liner": "본문을 읽고 제목 고르기"
+    },
     {
       "id": "AI-2026-10-CAT03-045",
       "version": "v1.0",

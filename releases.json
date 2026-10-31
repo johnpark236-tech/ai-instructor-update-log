@@ -4381,6 +4381,21 @@
       },
       "checked": "2026-10-31",
       "lesson_id": "AI-2026-10-CAT03-045"
+    },
+    {
+      "id": "naverworks-2025-11-27-board-ai-title",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 게시판",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "게시판 AI 제목 추천(PC 웹)",
+      "summary": "본문 텍스트 기반 제목 후보 제안 + 선택·적용",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2025년 11월 27일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-10-31",
+      "lesson_id": "AI-2026-10-CAT03-046"
     }
   ]
 }
