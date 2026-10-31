@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 218,
+  "count": 219,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-034",
+      "version": "v1.0",
+      "created_at": "2026-10-31T20:21:06+09:00",
+      "checked": "2026-10-31",
+      "review_by": "2027-01-31",
+      "title": "메일 AI 할 일 추천으로 모임 준비 요청 검토표 만들기",
+      "summary": "① 메일 속 요청을 할 일 후보로 추출 ② 원문과 대조하여 실행 전 검토표 완성",
+      "tool": "네이버웍스 메일",
+      "feature": "AI 할 일 추천 — 메일 본문 기반 작업 후보 추천·할 일 수정 화면 연결(PC 웹)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "모임 준비 요청 검토표 1장 — ① 해야 할 행동 ② 원문 근거 ③ 누락·추가 판단",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "☑️",
+      "one_liner": "메일 속 요청을 내 준비표로"
+    },
     {
       "id": "AI-2026-10-CAT08-033",
       "version": "v1.0",
