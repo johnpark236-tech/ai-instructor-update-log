@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 215,
+  "count": 216,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-045",
+      "version": "v1.0",
+      "created_at": "2026-10-31T10:46:18+09:00",
+      "checked": "2026-10-31",
+      "review_by": "2027-01-31",
+      "title": "네이버웍스 AI 쓰기 보조로 모임 안내 메일 초안 다듬기",
+      "summary": "새 메일 초안 생성 + 선택 문장의 어조·길이 수정 + 사실 확인 카드 완성",
+      "tool": "네이버웍스 메일",
+      "feature": "AI 쓰기 보조 — 새 메일 초안 생성·선택 영역 수정·어조 및 길이 편집·본문 삽입",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-SEN",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "모임 안내 메일 초안 1개 + Before / After 검토 카드 1장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "✉️",
+      "one_liner": "모임 안내를 쓰고 말투 다듬기"
+    },
     {
       "id": "AI-2026-10-CAT03-044",
       "version": "v1.0",

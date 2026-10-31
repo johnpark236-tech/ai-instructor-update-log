@@ -4366,6 +4366,21 @@
       },
       "checked": "2026-10-31",
       "lesson_id": "AI-2026-10-CAT03-044"
+    },
+    {
+      "id": "naverworks-2025-11-27-mail-ai-writing",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 메일",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "메일 AI 쓰기 보조 — 초안·부분 수정·본문 삽입",
+      "summary": "초안 요청 + 선택 영역 수정 + 원하는 결과 본문 삽입",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2025년 11월 27일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-10-31",
+      "lesson_id": "AI-2026-10-CAT03-045"
     }
   ]
 }
