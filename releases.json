@@ -4441,6 +4441,21 @@
       },
       "checked": "2026-10-31",
       "lesson_id": "AI-2026-10-CAT03-047"
+    },
+    {
+      "id": "naverworks-2025-11-27-calendar-suggest-time",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 캘린더",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "일정 시간 추천 — 참석자 근무·빈 시간 기준",
+      "summary": "① 참석자 빈 시간 기반 후보 추천 ② 모두 가능한 시간만 보기",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2025년 11월 27일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-10-31",
+      "lesson_id": "AI-2026-10-CAT08-035"
     }
   ]
 }

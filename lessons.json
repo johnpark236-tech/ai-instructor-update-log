@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 220,
+  "count": 221,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-035",
+      "version": "v1.0",
+      "created_at": "2026-11-01T04:31:25+09:00",
+      "checked": "2026-10-31",
+      "review_by": "2027-01-31",
+      "title": "네이버웍스 일정 시간 추천으로 모임 시간 후보표 만들기",
+      "summary": "① 참석자 빈 시간 기반 후보 확인 ② 모두 가능한 시간과 충돌 시간 비교 ③ 내 모임 후보표 완성",
+      "tool": "네이버웍스 캘린더",
+      "feature": "일정 시간 추천 — 참석자 근무 시간·빈 시간 기반 추천, 모두 가능한 시간만 보기(PC 웹)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "모임 시간 후보표 1장 — ① 추천 날짜·시각 ② 모임 소요 시간 ③ 참석자 충돌 여부 ④ 최종 확인할 내용",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🗓️",
+      "one_liner": "여럿의 빈 시간을 모임 후보표로"
+    },
     {
       "id": "AI-2026-10-CAT03-047",
       "version": "v1.0",
