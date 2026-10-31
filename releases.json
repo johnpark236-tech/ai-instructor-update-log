@@ -4396,6 +4396,21 @@
       },
       "checked": "2026-10-31",
       "lesson_id": "AI-2026-10-CAT03-046"
+    },
+    {
+      "id": "naverworks-2025-11-27-mail-ai-event-recommend",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 메일",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "메일 AI 일정 추천",
+      "summary": "① 메일 본문에서 일정 후보 추천 ② 일정 수정 화면 연결(PC 웹·AI 스튜디오 필요)",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2025년 11월 27일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-10-31",
+      "lesson_id": "AI-2026-10-CAT08-033"
     }
   ]
 }

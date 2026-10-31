@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 217,
+  "count": 218,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT08-033",
+      "version": "v1.0",
+      "created_at": "2026-10-31T17:45:01+09:00",
+      "checked": "2026-10-31",
+      "review_by": "2027-01-31",
+      "title": "메일 AI 일정 추천으로 독서 모임 일정 검토 카드 만들기",
+      "summary": "① 메일에서 일정 후보 추출 ② 날짜·시간·장소 원문 대조 ③ 수정한 일정 카드 완성",
+      "tool": "네이버웍스 메일",
+      "feature": "AI 일정 추천 — 수신 메일 본문에서 일정 후보 추천·일정 수정 화면 연결(PC 웹)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-08",
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "독서 모임 일정 카드 1장 + 원문 대조 기록",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📅",
+      "one_liner": "메일 속 약속을 검토 카드로"
+    },
     {
       "id": "AI-2026-10-CAT03-046",
       "version": "v1.0",
