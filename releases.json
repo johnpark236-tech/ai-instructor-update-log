@@ -4426,6 +4426,21 @@
       },
       "checked": "2026-10-31",
       "lesson_id": "AI-2026-10-CAT08-034"
+    },
+    {
+      "id": "naverworks-2025-11-27-mail-body-ai-summary",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 메일",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "메일 본문 AI 요약",
+      "summary": "메일 본문의 요점·할 일 요약 확인 + 복사",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2025년 11월 27일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-10-31",
+      "lesson_id": "AI-2026-10-CAT03-047"
     }
   ]
 }
