@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 214,
+  "count": 215,
   "lessons": [
+    {
+      "id": "AI-2026-10-CAT03-044",
+      "version": "v1.0",
+      "created_at": "2026-10-31T09:02:59+09:00",
+      "checked": "2026-10-31",
+      "review_by": "2027-01-31",
+      "title": "네이버웍스 메일 첨부 AI 요약으로 짧은 요약과 원문 확인표 만들기",
+      "summary": "① 받은 메일의 첨부 문서 AI 요약 ② 길이·형식 변경 ③ 원문과 대조한 준비 확인표 완성",
+      "tool": "네이버웍스 메일·문서 뷰어",
+      "feature": "메일 첨부 문서 AI 요약 — 문서 뷰어에서 핵심 요약·길이 및 형식 선택·복사",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-07-23",
+      "categories": [
+        "CAT-03",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-EDU",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "① 짧게·목록형 요약 기록 ② 길게·문장형과 비교한 원문 확인표 한 장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📎",
+      "one_liner": "첨부 안내문을 요약하고 원문으로 확인"
+    },
     {
       "id": "AI-2026-10-CAT03-043",
       "version": "v1.0",

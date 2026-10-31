@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30",
+  "updated_at": "2026-10-31",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4351,6 +4351,21 @@
       },
       "checked": "2026-10-30",
       "lesson_id": "AI-2026-10-CAT03-043"
+    },
+    {
+      "id": "naverworks-2026-07-23-mail-attachment-ai-summary",
+      "date": "2026-07-23",
+      "tool": "네이버웍스 메일·문서 뷰어",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "메일 첨부 문서의 뷰어 AI 요약",
+      "summary": "메일 첨부 문서의 AI 핵심 요약 추가. 현재 문서 뷰어에서 길이·형식 선택과 복사 지원. AI 스튜디오 신청 필요, 민간용 수업 대상",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2026년 7월 23일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20260723/"
+      },
+      "checked": "2026-10-31",
+      "lesson_id": "AI-2026-10-CAT03-044"
     }
   ]
 }
