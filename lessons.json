@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 221,
+  "count": 222,
   "lessons": [
+    {
+      "id": "AI-2026-11-CAT08-001",
+      "version": "v1.0",
+      "created_at": "2026-11-01T07:44:51+09:00",
+      "checked": "2026-10-31",
+      "review_by": "2027-01-31",
+      "title": "네이버웍스 AI어시스턴트 만들기로 내 모임 안내 도우미 설정·시험하기",
+      "summary": "① 설명으로 역할 초안 생성 ② 답변 규칙 직접 보완 ③ 대화 미리보기로 규칙 준수 시험",
+      "tool": "네이버웍스 AI 스튜디오",
+      "feature": "AI어시스턴트 만들기 — 설명 기반 기본·상세 정보 자동 생성 및 대화 미리보기",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-08",
+        "CAT-02"
+      ],
+      "jobs": [
+        "JOB-EDU",
+        "JOB-PUB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "모임 안내 도우미 설정 카드 1장(① 역할 ② 답변 규칙 ③ 미리보기 시험 결과)",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🤖",
+      "one_liner": "내 규칙으로 안내 도우미 시험하기"
+    },
     {
       "id": "AI-2026-10-CAT08-035",
       "version": "v1.0",

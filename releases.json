@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31",
+  "updated_at": "2026-11-01T07:44:51+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4456,6 +4456,21 @@
       },
       "checked": "2026-10-31",
       "lesson_id": "AI-2026-10-CAT08-035"
+    },
+    {
+      "id": "naverworks-2025-11-27-ai-assistant-create",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 AI 스튜디오",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "AI 스튜디오 맞춤 AI어시스턴트 생성",
+      "summary": "① 역할·규칙 설정 ② 설명으로 초안 생성 ③ 대화 미리보기",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2025년 11월 27일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-10-31",
+      "lesson_id": "AI-2026-11-CAT08-001"
     }
   ]
 }
