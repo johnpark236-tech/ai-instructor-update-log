@@ -1,7 +1,45 @@
 {
   "standard": "v2.3",
-  "count": 224,
+  "count": 225,
   "lessons": [
+    {
+      "id": "AI-2026-11-CAT03-001",
+      "version": "v1.0",
+      "created_at": "2026-11-02T01:19:25+09:00",
+      "checked": "2026-11-01",
+      "review_by": "2027-02-01",
+      "title": "읽지 않은 메시지 AI 요약으로 모임 따라잡기 카드 만들기",
+      "summary": "① 가상 모임방의 미열람 대화 요약 ② 원문과 결정·미정 대조 ③ 내 준비 행동을 적은 카드 완성",
+      "tool": "네이버웍스 메시지",
+      "feature": "AI로 읽지 않은 메시지 요약 — 미열람 30건 이상인 메시지방의 요약·결과 복사(PC 웹)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-04-09",
+      "categories": [
+        "CAT-03",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "모임 따라잡기 카드 1장 — ① 확인된 결정 ② 미정 사항 ③ 원문 근거 ④ 내 다음 행동",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📨",
+      "one_liner": "놓친 대화를 요약하고 내 준비 카드 완성"
+    },
     {
       "id": "AI-2026-11-CAT06-001",
       "version": "v1.0",

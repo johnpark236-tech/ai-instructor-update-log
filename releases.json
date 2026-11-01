@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T18:36:23+09:00",
+  "updated_at": "2026-11-02T01:19:25+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4501,6 +4501,21 @@
       },
       "checked": "2026-11-01",
       "lesson_id": "AI-2026-11-CAT06-001"
+    },
+    {
+      "id": "naverworks-2026-04-09-unread-message-summary",
+      "date": "2026-04-09",
+      "tool": "네이버웍스 메시지",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "AI 읽지 않은 메시지 요약 — 미열람 30건 이상",
+      "summary": "① 메시지방 미열람 대화 요약 ② 결과 복사. AI 스튜디오 구매 필요",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2026년 4월 9일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20260409/"
+      },
+      "checked": "2026-11-01",
+      "lesson_id": "AI-2026-11-CAT03-001"
     }
   ]
 }
