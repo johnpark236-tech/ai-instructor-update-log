@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T07:44:51+09:00",
+  "updated_at": "2026-11-01T11:32:10+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4471,6 +4471,21 @@
       },
       "checked": "2026-10-31",
       "lesson_id": "AI-2026-11-CAT08-001"
+    },
+    {
+      "id": "naverworks-2026-05-14-timeline",
+      "date": "2026-05-14",
+      "tool": "네이버웍스 AI 스튜디오",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "타임라인 — 메시지 기반 업무 정리·할 일 추천",
+      "summary": "① 메시지 업무 기록 자동 정리 ② 정리할 메시지방 선택 ③ 출처 확인 후 타임라인 기반 대화",
+      "source": {
+        "title": "네이버웍스 AI스튜디오 비정기 업데이트 — 2026년 5월 14일",
+        "url": "https://naver.worksmobile.com/release-notes/aistudio_20260514/"
+      },
+      "checked": "2026-11-01",
+      "lesson_id": "AI-2026-11-CAT08-002"
     }
   ]
 }

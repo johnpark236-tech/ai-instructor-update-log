@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 222,
+  "count": 223,
   "lessons": [
+    {
+      "id": "AI-2026-11-CAT08-002",
+      "version": "v1.0",
+      "created_at": "2026-11-01T11:32:10+09:00",
+      "checked": "2026-11-01",
+      "review_by": "2027-02-01",
+      "title": "네이버웍스 타임라인으로 가상 모임 대화를 살펴 준비 확인 카드 만들기",
+      "summary": "① 정리할 메시지방 직접 선택 ② 날짜별 AI 업무 정리와 원문 대조 ③ 후속 질문으로 준비 확인 카드 완성",
+      "tool": "네이버웍스 AI 스튜디오",
+      "feature": "타임라인 — 메시지 기반 업무·할 일 자동 정리, 메시지방 범위 설정·출처 확인·타임라인 기반 대화",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-05-14",
+      "categories": [
+        "CAT-08",
+        "CAT-06"
+      ],
+      "jobs": [
+        "JOB-OFF",
+        "JOB-PUB",
+        "JOB-SEN"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "모임 준비 확인 카드 1장(① 확인한 업무 ② 원문 근거 ③ 다음 행동·미정 사항)",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🗓️",
+      "one_liner": "대화 속 할 일을 원문으로 확인하기"
+    },
     {
       "id": "AI-2026-11-CAT08-001",
       "version": "v1.0",
