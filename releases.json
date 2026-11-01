@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T11:32:10+09:00",
+  "updated_at": "2026-11-01T18:36:23+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4486,6 +4486,21 @@
       },
       "checked": "2026-11-01",
       "lesson_id": "AI-2026-11-CAT08-002"
+    },
+    {
+      "id": "samsung-browser-2026-03-25-windows-ai",
+      "date": "2026-03-25",
+      "tool": "Samsung Browser for Windows",
+      "company": "Samsung Electronics",
+      "type": "update",
+      "title": "Windows 브라우저 AI 기능 도입 — 무엇이든 물어보기",
+      "summary": "① 페이지 맥락 기반 대화 ② 여러 탭 이해 ③ 한국·미국 AI 제공",
+      "source": {
+        "title": "Samsung Browser — Release Note (Windows)",
+        "url": "https://developer.samsung.com/browser/release-note/windows-release-note.html"
+      },
+      "checked": "2026-11-01",
+      "lesson_id": "AI-2026-11-CAT06-001"
     }
   ]
 }
