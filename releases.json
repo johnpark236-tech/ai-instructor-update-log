@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T15:08:28+09:00",
+  "updated_at": "2026-11-02T17:03:53+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4561,6 +4561,21 @@
       },
       "checked": "2026-11-02",
       "lesson_id": "AI-2026-11-CAT06-002"
+    },
+    {
+      "id": "naverworks-2025-11-27-board-ai-writing",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 게시판",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "게시판 AI 쓰기 보조 — 본문 초안·선택 영역 수정·삽입",
+      "summary": "① 조건 기반 본문 초안 ② 선택 문장 수정 ③ 결과 본문 삽입. 일반 기업용 코어 + AI 스튜디오 신청 필요",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2025년 11월 27일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-11-02",
+      "lesson_id": "AI-2026-11-CAT03-003"
     }
   ]
 }

@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 228,
+  "count": 229,
   "lessons": [
+    {
+      "id": "AI-2026-11-CAT03-003",
+      "version": "v1.0",
+      "created_at": "2026-11-02T17:03:53+09:00",
+      "checked": "2026-11-02",
+      "review_by": "2027-02-02",
+      "title": "게시판 AI 쓰기 보조로 가상 독서 모임 안내문 초안 만들고 다듬기",
+      "summary": "① 조건으로 게시글 초안 생성 ② 선택 문장만 수정 ③ 빠진 정보를 확인한 안내문 한 장 완성",
+      "tool": "네이버웍스 게시판",
+      "feature": "AI 쓰기 보조 — 새 게시글 초안 생성·선택 영역 수정·본문 삽입(PC 웹)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "가상 독서 모임 안내문 1장 — ① 모임 목적 ② 시간·장소 미정 표시 ③ 준비물 ④ 수정 전후 문장",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📝",
+      "one_liner": "빈 게시글을 작은 모임 안내문으로"
+    },
     {
       "id": "AI-2026-11-CAT06-002",
       "version": "v1.0",
