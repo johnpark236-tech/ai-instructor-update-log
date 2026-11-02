@@ -1,7 +1,46 @@
 {
   "standard": "v2.3",
-  "count": 229,
+  "count": 230,
   "lessons": [
+    {
+      "id": "AI-2026-11-CAT06-003",
+      "version": "v1.0",
+      "created_at": "2026-11-03T00:58:06+09:00",
+      "checked": "2026-11-02",
+      "review_by": "2027-02-02",
+      "title": "AI어시스턴트 배경지식에 안내 파일을 등록해 내 모임 문답 카드 만들기",
+      "summary": "① 배경지식에 가상 안내 파일 등록 ② 미리보기에서 근거 질문 ③ 원문과 대조한 문답 카드 완성",
+      "tool": "네이버웍스 AI 스튜디오",
+      "feature": "AI어시스턴트 배경지식 — 로컬 파일 등록·저장 방식 선택·등록 자료 기반 미리보기 질문(PC 웹)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2025-11-27",
+      "categories": [
+        "CAT-06",
+        "CAT-08"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-OFF",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급",
+        "중급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "모임 문답 카드 1장 — ① 등록 파일명 ② 준비물 답변과 근거 문장 ③ 미정 정보 답변 ④ 원문 일치 여부",
+      "access": "paid",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "📚",
+      "one_liner": "등록한 안내 자료로 모임 문답 만들기"
+    },
     {
       "id": "AI-2026-11-CAT03-003",
       "version": "v1.0",

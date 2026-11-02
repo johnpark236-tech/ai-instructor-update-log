@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T17:03:53+09:00",
+  "updated_at": "2026-11-03T00:58:06+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
     {
@@ -4576,6 +4576,21 @@
       },
       "checked": "2026-11-02",
       "lesson_id": "AI-2026-11-CAT03-003"
+    },
+    {
+      "id": "naverworks-2025-11-27-assistant-background-files",
+      "date": "2025-11-27",
+      "tool": "네이버웍스 AI 스튜디오",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "AI어시스턴트 배경지식 파일 등록",
+      "summary": "① 설정의 배경지식에 로컬 자료 등록 ② 등록 자료 기반 질문. AI 스튜디오 Standard 계정·권한·잔여량 필요",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2025년 11월 27일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20251127/"
+      },
+      "checked": "2026-11-02",
+      "lesson_id": "AI-2026-11-CAT06-003"
     }
   ]
 }
