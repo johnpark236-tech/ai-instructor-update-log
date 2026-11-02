@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-11-02T01:19:25+09:00",
+  "updated_at": "2026-11-02T10:01:34+09:00",
   "note": "공식 릴리스 노트에서 확인한 AI 신규 출시·신기능 기록. 교안이 있으면 lesson_id로 연결.",
   "items": [
+    {
+      "id": "siri-2026-10-26-korean",
+      "date": "2026-10-26",
+      "tool": "Siri AI",
+      "company": "Apple",
+      "type": "update",
+      "title": "Siri AI 한국어 지원 확대",
+      "summary": "OS 27.2의 Siri AI 베타에 한국어 추가. 지원 기기·언어 설정·일일 사용 제한 적용",
+      "source": {
+        "title": "Siri AI, 오늘부터 한국어로 이용 가능",
+        "url": "https://www.apple.com/kr/newsroom/2026/10/siri-ai-is-available-today-in-more-languages/"
+      },
+      "checked": "2026-11-02",
+      "lesson_id": "AI-2026-11-CAT01-001"
+    },
     {
       "id": "gemini-2026-10-28-immersive-explorations",
       "date": "2026-10-28",

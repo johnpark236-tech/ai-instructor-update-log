@@ -1,6 +1,6 @@
 {
   "standard": "v2.3",
-  "count": 226,
+  "count": 227,
   "lessons": [
     {
       "id": "AI-2026-11-CAT03-001",
@@ -39,6 +39,41 @@
       "notice": "",
       "emoji": "📨",
       "one_liner": "놓친 대화를 요약하고 내 준비 카드 완성"
+    },
+    {
+      "id": "AI-2026-11-CAT01-001",
+      "version": "v1.0",
+      "created_at": "2026-11-02 10:01 KST",
+      "checked": "2026-11-02",
+      "review_by": "2027-02-02",
+      "title": "한국어 Siri AI와 후속 대화로 내 모임 준비 카드 만들기",
+      "summary": "Siri AI 한국어 지원 활용 ① 가상 모임 조건 전달 ② 같은 대화에서 쉬운 표현으로 수정 ③ 준비 카드 직접 기록",
+      "tool": "Siri AI",
+      "feature": "Siri AI 한국어 지원 — iOS 27.2의 대화형 답변·후속 질문·전용 Siri 앱의 대화 다시 보기",
+      "company": "Apple",
+      "type": "update",
+      "released": "2026-10-26",
+      "categories": [
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-PUB",
+        "JOB-EDU"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "내 모임 준비 카드 1장: ① 안내문 3줄 ② 준비물 3개 ③ 내가 확인한 조건 3개",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🗣️",
+      "one_liner": "한국어 대화로 내 모임 준비 카드 완성"
     },
     {
       "id": "AI-2026-11-CAT03-002",
