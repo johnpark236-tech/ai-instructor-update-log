@@ -1,7 +1,44 @@
 {
   "standard": "v2.3",
-  "count": 227,
+  "count": 228,
   "lessons": [
+    {
+      "id": "AI-2026-11-CAT06-002",
+      "version": "v1.0",
+      "created_at": "2026-11-02T15:08:28+09:00",
+      "checked": "2026-11-02",
+      "review_by": "2027-02-02",
+      "title": "네이버 AI탭 후속 질문으로 천안 나들이 후보와 확인 카드 만들기",
+      "summary": "① 조건을 넣어 장소 탐색 ② 후속 질문으로 후보 좁히기 ③ 원문을 대조한 나들이 확인 카드 완성",
+      "tool": "네이버 AI탭",
+      "feature": "AI탭 정식 출시 — 전체 사용자 대상 PC·모바일 대화형 검색, 장소 탐색과 후속 질문",
+      "company": "NAVER",
+      "type": "update",
+      "released": "2026-06-26",
+      "categories": [
+        "CAT-06",
+        "CAT-01"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-EDU",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사",
+        "고급강사"
+      ],
+      "outcome": "나들이 확인 카드 1장 — ① 내 조건 ② 후보 장소 1곳 ③ 원문 링크와 확인일 ④ 추가 확인할 점",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🧭",
+      "one_liner": "대화로 후보를 좁히고 원문 확인"
+    },
     {
       "id": "AI-2026-11-CAT03-001",
       "version": "v1.0",
