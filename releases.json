@@ -4516,6 +4516,21 @@
       },
       "checked": "2026-11-01",
       "lesson_id": "AI-2026-11-CAT03-001"
+    },
+    {
+      "id": "naverworks-2026-07-23-nepali-translation",
+      "date": "2026-07-23",
+      "tool": "네이버웍스 메시지",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "title": "한국어↔네팔어 서비스 번역 추가",
+      "summary": "국내 민간용 코어 PC 웹·PC 앱·모바일에 한국어·일본어·중국어(번체)↔네팔어 번역 추가. 교안은 한국어 PC 웹의 수신 메시지 번역 경로",
+      "source": {
+        "title": "네이버웍스 코어 정기 업데이트 — 2026년 7월 23일",
+        "url": "https://naver.worksmobile.com/release-notes/core_20260723/"
+      },
+      "checked": "2026-11-02",
+      "lesson_id": "AI-2026-11-CAT03-002"
     }
   ]
 }

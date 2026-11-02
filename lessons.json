@@ -1,6 +1,6 @@
 {
   "standard": "v2.3",
-  "count": 225,
+  "count": 226,
   "lessons": [
     {
       "id": "AI-2026-11-CAT03-001",
@@ -39,6 +39,41 @@
       "notice": "",
       "emoji": "📨",
       "one_liner": "놓친 대화를 요약하고 내 준비 카드 완성"
+    },
+    {
+      "id": "AI-2026-11-CAT03-002",
+      "version": "v1.0",
+      "created_at": "2026-11-02 09:00 KST",
+      "checked": "2026-11-02",
+      "review_by": "2027-02-02",
+      "title": "네팔어 메시지를 한국어로 읽고 모임 안내 번역 확인 카드 만들기",
+      "summary": "한국어↔네팔어 번역 추가 활용 ① 수신 메시지의 번역 버튼 실행 ② 숫자·준비물 대조 ③ 사람이 확인할 점 기록",
+      "tool": "네이버웍스 메시지",
+      "feature": "서비스 번역 언어 추가 — 한국어↔네팔어 메시지 번역(PC 웹)",
+      "company": "NAVER Cloud",
+      "type": "update",
+      "released": "2026-07-23",
+      "categories": [
+        "CAT-03"
+      ],
+      "jobs": [
+        "JOB-SEN",
+        "JOB-GLB",
+        "JOB-PUB"
+      ],
+      "learner_levels": [
+        "초급"
+      ],
+      "instructor_levels": [
+        "초보강사",
+        "중급강사"
+      ],
+      "outcome": "번역 확인 카드 1장: ① 네팔어 원문 2개 ② 한국어 AI 번역 ③ 숫자 대조 ④ 사람에게 확인할 점",
+      "access": "free",
+      "total_minutes": 50,
+      "notice": "",
+      "emoji": "🌐",
+      "one_liner": "네팔어 모임 안내를 한국어로 확인"
     },
     {
       "id": "AI-2026-11-CAT06-001",
